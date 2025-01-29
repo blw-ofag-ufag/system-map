@@ -1,0 +1,29 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix systemmap: <https://agriculture.ld.admin.ch/foag/system-map#> .
+
+systemmap:SYS001 a systemmap:CLS002 ;
+    rdfs:label "Agrarpolitisches Informationssystem"@de ;
+    systemmap:PRP008 systemmap:ORG001 ;
+    systemmap:PRP101 "AGIS"@de .
+
+systemmap:INF001 a systemmap:CLS003 ;
+    rdfs:label "Landwirtschaftliche Nutzflächen"@de ;
+    rdfs:comment "Die landwirtschaftlichen Nutzflächen enthalten Informationen zu Koodinaten, Flächenausdehnung und landwirtschaftlicher Hauptkultur von Flächen in der Schweiz, zu welchen Direktzahlungen bezogen werden."@de .
+
+systemmap:ORG001 a systemmap:CLS008 ;
+    rdfs:label "Bundesamt für Landwirtschaft"@de,
+        "Federal Office for Agriculture"@en ;
+    systemmap:PRP101 "BLW"@de,
+        "FOAG"@en .
+
+systemmap:ORG002 a systemmap:CLS008 ;
+    rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de ;
+    systemmap:PRP001 systemmap:ORG001 ;
+    systemmap:PRP101 "DBDD"@de .
+
+systemmap:ORG003 a systemmap:CLS008 ;
+    rdfs:label "Fachbereich Agrarinformationssysteme"@de ;
+    systemmap:PRP001 systemmap:ORG002 ;
+    systemmap:PRP007 systemmap:SYS001 ;
+    systemmap:PRP101 "FBAIS"@de .
+

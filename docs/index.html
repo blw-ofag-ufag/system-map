@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vis Network | Node Styles | Groups</title>
+    <style>
+        body {
+            background-color: #ffffff; /* White background */
+            color: black; /* Black text */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #mynetwork {
+            width: 90vw;
+            height: 90vh;
+            border: 1px solid #ddd;
+            background-color: #ffffff; /* White background */
+        }
+        #tooltip {
+            position: absolute;
+            visibility: hidden;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            border-radius: 8px;
+            padding: 8px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            text-align: left;
+            z-index: 10;
+        }
+    </style>
+    <script type="text/javascript" src="vis-network.min.js"></script>
+</head>
+<body>
+    <div id="mynetwork"></div>
+    <div id="tooltip"></div>
+    <script type="text/javascript">
+        var nodes = new vis.DataSet([
+            { id: 0, label: "FOAG", group: 'Organization', description: "Federal Office for Agriculture" },
+            { id: 1, label: "DBDD", group: 'Organization', description: "Digitalization and Data Management" },
+            { id: 2, label: "FBAIS", group: 'Organization', description: "FB Agricultural Information Systems" },
+            { id: 3, label: "AGIS", group: 'System', description: "Agrarpolitisches Informationssystem" },
+            { id: 4, label: "Phone", group: 'Information', description: "Phone numbers of farmers" },
+            { id: 5, label: "Area", group: 'Information', description: "Agricultural area in Switzerland and their crops." },
+            { id: 6, label: "Workers", group: 'Information', description: "Agricultural workers." }
+        ]);
+
+        var edges = new vis.DataSet([
+            { from: 1, to: 0, label: "suborganization of", description: "Organization X is a suborganization of Y" },
+            { from: 2, to: 1, label: "suborganization of", description: "Organization X is a suborganization of Y" },
+            { from: 2, to: 3, label: "operates", description: "Indicates that organization X operates system Y." },
+            { from: 3, to: 4, label: "contains", description: "Indicates that system X contains the information unit Y." },
+            { from: 3, to: 5, label: "contains", description: "Indicates that system X contains the information unit Y." },
+            { from: 3, to: 6, label: "contains", description: "Indicates that system X contains the information unit Y." }
+        ]);
+
+        var container = document.getElementById("mynetwork");
+        var data = { nodes: nodes, edges: edges };
+
+        var options = {
+            nodes: {
+                shape: "box",
+                size: 20,
+                font: { size: 20, color: "#000000" },
+                borderWidth: 2
+            },
+            edges: {
+                width: 2,
+                smooth: false,
+                font: { color: "#000000", size: 14 }
+            },
+            groups: {
+                Organization: { color: { background: "#87CEEB", border: "#4682B4" } },
+                System: { color: { background: "#90EE90", border: "#008000" } },
+                Information: { color: { background: "#FF6347", border: "#B22222" } }
+            },
+            interaction: {
+                hover: true,
+                navigationButtons: true,
+                tooltipDelay: 50,
+                hoverConnectedEdges: true,
+                selectable: true
+            },
+            physics: {
+                enabled: false
+            },
+            manipulation: {
+                enabled: false
+            }
+        };
+
+        var network = new vis.Network(container, data, options);
+        var tooltip = document.getElementById('tooltip');
+
+        network.on("hoverNode", function (params) {
+            var node = nodes.get(params.node);
+            tooltip.innerHTML = `<b>${node.label}</b><br>${node.description}`;
+            tooltip.style.visibility = 'visible';
+        });
+
+        network.on("blurNode", function () {
+            tooltip.style.visibility = 'hidden';
+        });
+
+        network.on("hoverEdge", function (params) {
+            var edge = edges.get(params.edge);
+            tooltip.innerHTML = `<b>${edge.label}</b><br>${edge.description}`;
+            tooltip.style.visibility = 'visible';
+        });
+
+        network.on("blurEdge", function () {
+            tooltip.style.visibility = 'hidden';
+        });
+
+        network.on("mousemove", function (params) {
+            tooltip.style.top = params.event.pageY + 10 + 'px';
+            tooltip.style.left = params.event.pageX + 10 + 'px';
+        });
+    </script>
+</body>
+</html>

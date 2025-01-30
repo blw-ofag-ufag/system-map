@@ -4,7 +4,7 @@
 systemmap:SYS001 a systemmap:CLS002 ;
     rdfs:label "Agrarpolitisches Informationssystem"@de ;
     systemmap:PRP008 systemmap:ORG001 ;
-    systemmap:PRP101 "AGIS"@de .
+    systemmap:PRP102 "AGIS"@de .
 
 systemmap:INF001 a systemmap:CLS003 ;
     rdfs:label "Landwirtschaftliche Nutzflächen"@de ;

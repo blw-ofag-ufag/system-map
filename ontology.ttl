@@ -135,6 +135,8 @@ systemmap:PRP007 a owl:ObjectProperty ;
 systemmap:PRP008 a owl:ObjectProperty ;
     rdfs:label "wird betrieben von"@de,
         "is operated by"@en ;
+    rdfs:domain systemmap:CLS002 ;
+    rdfs:range systemmap:CLS001 ;
     owl:inverseOf systemmap:PRP007 .
 
 systemmap:PRP011 a owl:ObjectProperty ;

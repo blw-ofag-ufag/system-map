@@ -28,6 +28,7 @@ systemmap:SYS004 a systemmap:CLS002 ;
 systemmap:SYS005 a systemmap:CLS002 ;
     rdfs:label "CePa"@de ;
     rdfs:comment "CePa ist eine IT-Anwendung für die digitale Verwaltung von Verfahren und Korrespondenz im Rahmen des Pflanzenpassesystems sowie der amtlichen Zertifizierung von Vermehrungsmaterial. Sie optimiert Zertifizierungsabläufe und stellt die Einhaltung pflanzengesundheitlicher Vorschriften sicher. Auf diese Weise wird die Rückverfolgbarkeit und Qualitätskontrolle von Pflanzenmaterial unterstützt."@de ;
+    systemmap:PRP008 systemmap:ORG031 ;
     systemmap:PRP102 "CePa"@de .
 
 systemmap:SYS006 a systemmap:CLS002 ;
@@ -38,7 +39,8 @@ systemmap:SYS006 a systemmap:CLS002 ;
 
 systemmap:SYS007 a systemmap:CLS002 ;
     rdfs:label "eKontingente"@de ;
-    rdfs:comment "eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können. Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet."@de .
+    rdfs:comment "eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können. Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet."@de ;
+    systemmap:PRP008 systemmap:ORG040 .
 
 systemmap:SYS008 a systemmap:CLS002 ;
     rdfs:label "Meine Agrardatenfreigabe"@de ;
@@ -49,6 +51,7 @@ systemmap:SYS008 a systemmap:CLS002 ;
 systemmap:SYS009 a systemmap:CLS002 ;
     rdfs:label "Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft"@de ;
     rdfs:comment "Das Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft (PGREL-NIS) macht Daten des Aktionsplans zur Vielfalt der Kulturpflanzen öffentlich zugänglich. Es bietet einen Überblick und Zugriff auf Informationen zu Pflanzengenetischen Ressourcen. Damit trägt es zur Erhaltung und Förderung pflanzengenetischer Vielfalt bei."@de ;
+    systemmap:PRP008 systemmap:ORG030 ;
     systemmap:PRP102 "PGREL-NIS"@de .
 
 systemmap:INF001 a systemmap:CLS003 ;
@@ -147,4 +150,20 @@ systemmap:ORG021 a systemmap:CLS008 ;
     rdfs:comment "Der Fachbereich Direktzahlungsgrundlagen ist zuständig für die Umsetzung und Weiterentwicklung des Direktzahlungssystems im Bereich der  Versorgungssicherheit, der Kulturlandschaft, der Übergangsbeiträge, der landwirtschaftlichen Zonen und Gebiete, der Landwirtschaftlichen Begriffe sowie der Anerkennung von Betrieben und Betriebsformen."@de ;
     systemmap:PRP001 systemmap:ORG006 ;
     systemmap:PRP101 "FBDG"@de .
+
+systemmap:ORG030 a systemmap:CLS008 ;
+    rdfs:label "Fachbereich Genetische Ressourcen und Technologien"@de ;
+    systemmap:PRP001 systemmap:ORG005 ;
+    systemmap:PRP101 "FBGRT"@de .
+
+systemmap:ORG031 a systemmap:CLS008 ;
+    rdfs:label "Fachbereich Pflanzengesundheit"@de ;
+    rdfs:comment "Die Aufgabe des Fachbereiches Pflanzengesundheit (FBPG) ist es, die Einschleppung und Ausbreitung von (geregelten) besonders gefährlichen Schädlingen und Krankheiten von Pflanzen zu vermeiden. Dies ist wichtig, um wirtschaftliche, soziale und ökologische Schäden zu vermeiden. Der Eidgenössische Pflanzenschutzdienst (EPSD), der vom Fachbereich gemeinsam mit der Sektion Waldschutz und Waldgesundheit des Bundesamts für Umwelt (BAFU) geführt wird, ist für die Umsetzung dieser Aufgabe auf nationaler Ebene zuständig."@de ;
+    systemmap:PRP001 systemmap:ORG005 ;
+    systemmap:PRP101 "FBPG"@de .
+
+systemmap:ORG040 a systemmap:CLS008 ;
+    rdfs:label "Fachbereich Ein- und Ausfuhr"@de ;
+    systemmap:PRP001 systemmap:ORG007 ;
+    systemmap:PRP101 "FBEA"@de .
 

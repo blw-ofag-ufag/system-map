@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>LINDAS System Map</title>
+  <title>FOAG System Map</title>
+  <!-- Load Google Font-->¨
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <!-- Vis Network -->
   <script src="https://unpkg.com/vis-network@9.1.2/standalone/umd/vis-network.min.js"></script>
   <style>
@@ -17,6 +19,14 @@
       width: 100%;
       height: 100%;
       box-sizing: border-box;
+    }
+    .vis-tooltip {
+      background: #ffffff !important; /* Dark background */
+      padding: 8px 12px !important;
+      border-radius: 3px !important;
+      font-family: "Poppins", sans-serif !important; /* Use Google Font */
+      font-size: 14px !important;
+      word-wrap: break-word !important;
     }
   </style>
 </head>
@@ -38,6 +48,7 @@ function htmlTitle(htmlString) {
 // 2) Define the SPARQL queries
 //    (Adjust them as needed; these are the user-provided queries.)
 // -------------------------------------------------------------------
+const lang = "de";
 const NODE_QUERY = `
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -49,14 +60,14 @@ WHERE {
     ?group rdfs:subClassOf* ?supergroup .
     VALUES ?supergroup { systemmap:CLS001 systemmap:CLS002 systemmap:CLS003 }
     ?id rdfs:label ?label .
-    FILTER(LANG(?label) = "de")
+    FILTER(LANG(?label) = "${lang}")
     OPTIONAL {
       ?id rdfs:comment ?comment .
-      FILTER(LANG(?comment) = "de")
+      FILTER(LANG(?comment) = "${lang}")
     }
     OPTIONAL {
       ?id ?hasAbbreviation ?abbreviation .
-      FILTER(LANG(?abbreviation) = "de")
+      FILTER(LANG(?abbreviation) = "${lang}")
       VALUES ?hasAbbreviation { systemmap:PRP101 systemmap:PRP102 }
     }
   }
@@ -72,10 +83,10 @@ WHERE {
     ?from ?property ?to .
     ?property a owl:ObjectProperty .
     ?property rdfs:label ?label .
-    FILTER(LANG(?label)="de")
+    FILTER(LANG(?label)="${lang}")
     OPTIONAL {
         ?property rdfs:comment ?comment .
-        FILTER(LANG(?comment)="de")
+        FILTER(LANG(?comment)="${lang}")
     }
   }
 }
@@ -176,14 +187,13 @@ async function init() {
 
   const options = {
     nodes: {
-      widthConstraint: { minimum: 100, maximum: 200 }, // Increase box width
-      heightConstraint: { minimum: 20, maximum: 30 },  // Increase box height
+      widthConstraint: { minimum: 200, maximum: 200 }, // Increase box width
+      heightConstraint: { minimum: 30, maximum: 30 },  // Increase box height
       shape: "box",
-      font: { color: "#000000", multi: "html" }  // Set node label color (black)
+      font: { color: "#000000", face: "Poppins", multi: "html" }
     },
     edges: {
-      width: 1,
-      smooth: { type: "dynamic" },
+      font: {face: "Poppins"},
       arrows: {
         to: { enabled: true },
         from: { enabled: false }
@@ -195,12 +205,11 @@ async function init() {
           background: "#000000",  // light blue
           border: "#000000"
         },
-        font: { color: "#FFFFFF" } // Font color for group nodes,
-    
+        font: { color: "#FFFFFF" },
       },
       Information: {
         color: {
-          background: "#DDDDDD",  // light green
+          background: "#A6C6DE",
           border: "#000000"
         }
       },
@@ -209,7 +218,7 @@ async function init() {
       }
     },
     interaction: {
-      hover: true,      // Show HTML tooltips on hover
+      hover: true,
       dragNodes: true,  // Allow manual rearranging
       zoomView: true,
       dragView: true
@@ -219,8 +228,8 @@ async function init() {
       barnesHut: {
         gravitationalConstant: -2000, // Increase repulsion
         centralGravity: 0.2,
-        springLength: 200,  // Increase the default edge length
-        springConstant: 0.01
+        springLength: 300,  // Increase the default edge length
+        springConstant: 0.05
       },
       stabilization: { iterations: 1000 }
     }

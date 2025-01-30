@@ -208,6 +208,7 @@ ns1:SYS004 a ns1:CLS002 ;
 ns1:SYS005 a ns1:CLS002 ;
     rdfs:label "CePa"@de ;
     rdfs:comment "CePa ist eine IT-Anwendung für die digitale Verwaltung von Verfahren und Korrespondenz im Rahmen des Pflanzenpassesystems sowie der amtlichen Zertifizierung von Vermehrungsmaterial. Sie optimiert Zertifizierungsabläufe und stellt die Einhaltung pflanzengesundheitlicher Vorschriften sicher. Auf diese Weise wird die Rückverfolgbarkeit und Qualitätskontrolle von Pflanzenmaterial unterstützt."@de ;
+    ns1:PRP008 ns1:ORG031 ;
     ns1:PRP102 "CePa"@de .
 
 ns1:SYS006 a ns1:CLS002 ;
@@ -218,7 +219,8 @@ ns1:SYS006 a ns1:CLS002 ;
 
 ns1:SYS007 a ns1:CLS002 ;
     rdfs:label "eKontingente"@de ;
-    rdfs:comment "eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können. Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet."@de .
+    rdfs:comment "eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können. Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet."@de ;
+    ns1:PRP008 ns1:ORG040 .
 
 ns1:SYS008 a ns1:CLS002 ;
     rdfs:label "Meine Agrardatenfreigabe"@de ;
@@ -228,7 +230,8 @@ ns1:SYS008 a ns1:CLS002 ;
 
 ns1:SYS009 a ns1:CLS002 ;
     rdfs:label "Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft"@de ;
-    rdfs:comment "PGREL-NIS macht Daten des Aktionsplans zur Vielfalt der Kulturpflanzen öffentlich zugänglich. Es bietet einen Überblick und Zugriff auf Informationen zu Pflanzengenetischen Ressourcen. Damit trägt es zur Erhaltung und Förderung pflanzengenetischer Vielfalt bei."@de ;
+    rdfs:comment "Das Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft (PGREL-NIS) macht Daten des Aktionsplans zur Vielfalt der Kulturpflanzen öffentlich zugänglich. Es bietet einen Überblick und Zugriff auf Informationen zu Pflanzengenetischen Ressourcen. Damit trägt es zur Erhaltung und Förderung pflanzengenetischer Vielfalt bei."@de ;
+    ns1:PRP008 ns1:ORG030 ;
     ns1:PRP102 "PGREL-NIS"@de .
 
 ns1:INF001 a ns1:CLS003 ;
@@ -326,5 +329,21 @@ ns1:ORG021 a ns1:CLS008 ;
     rdfs:label "Fachbereich Direktzahlungsgrundlagen"@de ;
     rdfs:comment "Der Fachbereich Direktzahlungsgrundlagen ist zuständig für die Umsetzung und Weiterentwicklung des Direktzahlungssystems im Bereich der  Versorgungssicherheit, der Kulturlandschaft, der Übergangsbeiträge, der landwirtschaftlichen Zonen und Gebiete, der Landwirtschaftlichen Begriffe sowie der Anerkennung von Betrieben und Betriebsformen."@de ;
     ns1:PRP001 ns1:ORG006 ;
-    ns1:PRP101 "FBDP"@de .
+    ns1:PRP101 "FBDG"@de .
+
+ns1:ORG030 a ns1:CLS008 ;
+    rdfs:label "Fachbereich Genetische Ressourcen und Technologien"@de ;
+    ns1:PRP001 ns1:ORG005 ;
+    ns1:PRP101 "FBGRT"@de .
+
+ns1:ORG031 a ns1:CLS008 ;
+    rdfs:label "Fachbereich Pflanzengesundheit"@de ;
+    rdfs:comment "Die Aufgabe des Fachbereiches Pflanzengesundheit (FBPG) ist es, die Einschleppung und Ausbreitung von (geregelten) besonders gefährlichen Schädlingen und Krankheiten von Pflanzen zu vermeiden. Dies ist wichtig, um wirtschaftliche, soziale und ökologische Schäden zu vermeiden. Der Eidgenössische Pflanzenschutzdienst (EPSD), der vom Fachbereich gemeinsam mit der Sektion Waldschutz und Waldgesundheit des Bundesamts für Umwelt (BAFU) geführt wird, ist für die Umsetzung dieser Aufgabe auf nationaler Ebene zuständig."@de ;
+    ns1:PRP001 ns1:ORG005 ;
+    ns1:PRP101 "FBPG"@de .
+
+ns1:ORG040 a ns1:CLS008 ;
+    rdfs:label "Fachbereich Ein- und Ausfuhr"@de ;
+    ns1:PRP001 ns1:ORG007 ;
+    ns1:PRP101 "FBEA"@de .
 

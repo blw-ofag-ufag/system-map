@@ -2,5 +2,5 @@
 
 # SPARQL queries
 
-- [Array of nodes]()
-- [List of property URI, label and comment.](https://s.zazuko.com/BvkiYw)
+- [Get nodes from LINDAS](https://s.zazuko.com/gmh9NR)
+- [Get edges from LINDAS](https://s.zazuko.com/LhqshW)

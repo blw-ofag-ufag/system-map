@@ -80,6 +80,7 @@ systemmap:PRP001 a owl:ObjectProperty,
         owl:TransitiveProperty ;
     rdfs:label "ist Teil von"@de,
         "is a part of"@en ;
+    rdfs:comment "Zeigt an, dass die (Teil-)Organisation ein Teil von einer (Über-)Organisation Y ist."@de ;
     rdfs:domain systemmap:CLS001 ;
     rdfs:range systemmap:CLS001 .
 
@@ -135,6 +136,7 @@ systemmap:PRP007 a owl:ObjectProperty ;
 systemmap:PRP008 a owl:ObjectProperty ;
     rdfs:label "wird betrieben von"@de,
         "is operated by"@en ;
+    rdfs:comment "Gibt an, dass ein IT-System X durch eine Organisation Y betrieben wird; i.e. dass die Organisation Y für den Betrieb von System X zuständig ist."@de ;
     rdfs:domain systemmap:CLS002 ;
     rdfs:range systemmap:CLS001 ;
     owl:inverseOf systemmap:PRP007 .

@@ -2,28 +2,149 @@
 @prefix systemmap: <https://agriculture.ld.admin.ch/foag/system-map#> .
 
 systemmap:SYS001 a systemmap:CLS002 ;
+    rdfs:label "Acontrol"@de ;
+    rdfs:comment "Acontrol ist das Informationssystem des BLW, das für die Planung, Erfassung und Verwaltung landwirtschaftlicher Inspektionen eingesetzt wird. Es vereinfacht die Kontrollprozesse durch eine zentrale Plattform für Dateneingabe und -abfrage. Auf diese Weise wird eine effiziente Überwachung und Einhaltung landwirtschaftlicher Standards gewährleistet."@de ;
+    systemmap:PRP008 systemmap:ORG021 ;
+    systemmap:PRP102 "Acontrol"@de .
+
+systemmap:SYS002 a systemmap:CLS002 ;
+    rdfs:label "Agate"@de ;
+    rdfs:comment "Agate ist ein Online-Portal, das den Zugriff auf verschiedene landwirtschaftliche Anwendungen mit nur einem Login ermöglicht. Es erleichtert den Datenaustausch im Agrar- und Ernährungsbereich und erhöht so den Benutzerkomfort. Durch diesen zentralisierten Zugangspunkt werden Verwaltungsprozesse für alle Beteiligten vereinfacht."@de ;
+    systemmap:PRP008 systemmap:ORG014 ;
+    systemmap:PRP102 "Agate"@de .
+
+systemmap:SYS003 a systemmap:CLS002 ;
     rdfs:label "Agrarpolitisches Informationssystem"@de ;
-    systemmap:PRP008 systemmap:ORG001 ;
+    rdfs:comment "AGIS fungiert als zentrale Datendrehscheibe, in der die von den Kantonen erhobenen landwirtschaftlichen Daten validiert und zu einem gesamtschweizerischen Datenbestand aggregiert werden. Das System sorgt für Konsistenz und Genauigkeit bei der Erfassung von landwirtschaftlichen Daten. Es unterstützt fundierte Entscheidungsprozesse auf Bundesebene."@de ;
+    systemmap:PRP008 systemmap:ORG010 ;
     systemmap:PRP102 "AGIS"@de .
 
+systemmap:SYS004 a systemmap:CLS002 ;
+    rdfs:label "Astat"@de ;
+    rdfs:comment "Astat ist das Business-Intelligence-System des BLW. Es stellt Analyse- und Reporting-Funktionen bereit, um datengestützte Entscheidungen zu ermöglichen. Dadurch wird die Überwachung und Bewertung agrarpolitischer Massnahmen vereinfacht."@de ;
+    systemmap:PRP008 systemmap:ORG016 ;
+    systemmap:PRP102 "Astat"@de .
+
+systemmap:SYS005 a systemmap:CLS002 ;
+    rdfs:label "CePa"@de ;
+    rdfs:comment "CePa ist eine IT-Anwendung für die digitale Verwaltung von Verfahren und Korrespondenz im Rahmen des Pflanzenpassesystems sowie der amtlichen Zertifizierung von Vermehrungsmaterial. Sie optimiert Zertifizierungsabläufe und stellt die Einhaltung pflanzengesundheitlicher Vorschriften sicher. Auf diese Weise wird die Rückverfolgbarkeit und Qualitätskontrolle von Pflanzenmaterial unterstützt."@de ;
+    systemmap:PRP102 "CePa"@de .
+
+systemmap:SYS006 a systemmap:CLS002 ;
+    rdfs:label "digiFLUX"@de ;
+    rdfs:comment "digiFLUX ist eine Webanwendung, die zur Umsetzung der Meldepflicht für den Handel und die Anwendung von Pflanzenschutzmitteln sowie für den Handel mit Nährstoffen entwickelt wurde. Sie ermöglicht den Akteuren eine einheitliche Schnittstelle zur Eingabe aller erforderlichen Angaben. Dadurch wird Transparenz und Einhaltung gesetzlicher Vorschriften im Agrarbereich gewährleistet."@de ;
+    systemmap:PRP008 systemmap:ORG020 ;
+    systemmap:PRP102 "digiFLUX"@de .
+
+systemmap:SYS007 a systemmap:CLS002 ;
+    rdfs:label "eKontingente"@de ;
+    rdfs:comment "eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können. Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet."@de .
+
+systemmap:SYS008 a systemmap:CLS002 ;
+    rdfs:label "Meine Agrardatenfreigabe"@de ;
+    rdfs:comment "Meine Agrardatenfreigabe vereinfacht den Datenaustausch zwischen Betrieben und Datenempfängern wie zum Beispiel Labelorganisationen. Sie bietet eine Plattform zur Verwaltung von Zugriffsberechtigungen und Datenfreigabevereinbarungen. Damit wird die Zusammenarbeit und Datenweitergabe im Agrarsektor transparenter gestaltet."@de ;
+    systemmap:PRP008 systemmap:ORG011 ;
+    systemmap:PRP102 "MAF"@de .
+
+systemmap:SYS009 a systemmap:CLS002 ;
+    rdfs:label "Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft"@de ;
+    rdfs:comment "Das Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft (PGREL-NIS) macht Daten des Aktionsplans zur Vielfalt der Kulturpflanzen öffentlich zugänglich. Es bietet einen Überblick und Zugriff auf Informationen zu Pflanzengenetischen Ressourcen. Damit trägt es zur Erhaltung und Förderung pflanzengenetischer Vielfalt bei."@de ;
+    systemmap:PRP102 "PGREL-NIS"@de .
+
 systemmap:INF001 a systemmap:CLS003 ;
-    rdfs:label "Landwirtschaftliche Nutzflächen"@de ;
-    rdfs:comment "Die landwirtschaftlichen Nutzflächen enthalten Informationen zu Koodinaten, Flächenausdehnung und landwirtschaftlicher Hauptkultur von Flächen in der Schweiz, zu welchen Direktzahlungen bezogen werden."@de .
+    rdfs:label "Kontaktangaben von Bewirtschaftenden"@de ;
+    rdfs:comment "Informationen zu Kontaktangaben von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de ;
+    systemmap:PRP012 systemmap:SYS003 .
 
 systemmap:ORG001 a systemmap:CLS008 ;
     rdfs:label "Bundesamt für Landwirtschaft"@de,
         "Federal Office for Agriculture"@en ;
+    rdfs:comment "Das Bundesamt für Landwirtschaft (BLW) ist das Kompetenzzentrum des Bundes für alle Kernfragen im Zusammenhang mit dem Agrarsektor."@de,
+        "The Federal Office for Agriculture (FOAG) is the Confederation's competence centre for all core issues relating to the agricultural sector."@en ;
     systemmap:PRP101 "BLW"@de,
         "FOAG"@en .
 
 systemmap:ORG002 a systemmap:CLS008 ;
+    rdfs:label "Direktion"@de ;
+    rdfs:comment "Die Direktion verantwortet die strategische Führung und Koordination der Schweizer Agrarpolitik. Zudem ist die Direktion für die Kommunikation und Öffentlichkeitsarbeit in den drei Amtssprachen zuständig."@de ;
+    systemmap:PRP001 systemmap:ORG001 ;
+    systemmap:PRP101 "DR"@de .
+
+systemmap:ORG003 a systemmap:CLS008 ;
     rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de ;
+    rdfs:comment "Der Direktionsbereich Digitalisierung und Datenmanagement setzt sich dafür ein, dass die digitale Transformation und das Datenmanagement in der Land- und Ernährungswirtschaft ziel- und zukunftsgerichtet gefördert werden."@de ;
     systemmap:PRP001 systemmap:ORG001 ;
     systemmap:PRP101 "DBDD"@de .
 
-systemmap:ORG003 a systemmap:CLS008 ;
+systemmap:ORG004 a systemmap:CLS008 ;
+    rdfs:label "Direktionsbereich Recht, Ressourcen und Integrale Sicherheit"@de ;
+    rdfs:comment "Der Direktionsbereich Recht, Ressourcen und Integrale Sicherheit sichert die rechtliche Konformität der verschiedenen BLW-Massnahmen und ist insbesondere für die personellen Massnahmen des Amtes verantwortlich."@de ;
+    systemmap:PRP001 systemmap:ORG001 ;
+    systemmap:PRP101 "DBRRIS"@de .
+
+systemmap:ORG005 a systemmap:CLS008 ;
+    rdfs:label "Direktionsbereich Produktionsgrundlagen, natürliche Ressourcen und Forschung"@de ;
+    rdfs:comment "Widerstandsfähige Produktions- und Ökosysteme stehen im Zentrum des Direktionsbereichs Produktionsgrundlagen, natürliche Ressourcen und Forschung. So ist er unter anderem dafür zuständig, dass Pflanzen nachhaltig geschützt und Tiere optimal ernährt werden können. Desweitern fördert dieser Bereich verschiedene Forschungs- und Beratungsprojekte in der Schweiz, aber auch international."@de ;
+    systemmap:PRP001 systemmap:ORG001 ;
+    systemmap:PRP101 "DBPRF"@de .
+
+systemmap:ORG006 a systemmap:CLS008 ;
+    rdfs:label "Direktionsbereich Direktzahlungen und Ländliche Entwicklung"@de ;
+    rdfs:comment "Die Landwirte und Landwirtinnen erbringen verschiedene Leistungen für die Allgemeinheit und werden deshalb mit finanziellen Beiträgen unterstützt. Dafür ist der Direktionsbereich Direktzahlungen und Ländliche Entwicklung zuständig. Er setzt sich zudem für die Vitalität des ländlichen Raums ein."@de ;
+    systemmap:PRP001 systemmap:ORG001 ;
+    systemmap:PRP101 "DBDLE"@de .
+
+systemmap:ORG007 a systemmap:CLS008 ;
+    rdfs:label "Direktionsbereich Märkte und Internationales"@de ;
+    rdfs:comment "Der Direktionsbereich Märkte und Internationales setzt sich dafür ein, dass die Landwirtschaft aus dem Verkauf ihrer Produkte eine möglichst hohe Wertschöpfung erzielen kann. Selbsthilfemassnahmen, Innovation und Vermarktung der verschiedenen Branchen werden unterstützt. Zudem engagiert sich dieser Direktionsbereich in internationalen Organisationen wie der UNO-Ernährungsorganisation FAO oder der Welthandelsorganisation WTO."@de ;
+    systemmap:PRP001 systemmap:ORG001 ;
+    systemmap:PRP101 "DBMI"@de .
+
+systemmap:ORG010 a systemmap:CLS008 ;
     rdfs:label "Fachbereich Agrarinformationssysteme"@de ;
-    systemmap:PRP001 systemmap:ORG002 ;
-    systemmap:PRP007 systemmap:SYS001 ;
+    rdfs:comment "Der Fachbereich Agrarinformationssysteme ist die zentrale Drehscheibe für Agrardaten. Er ist zuständig für das Portal Agate – den Online-Schalter für die Landwirtschaft – sowie für die zentralen Informationssysteme. Er setzt die fachlichen Vorgaben in technische Lösungen um und gewährleisten eine hohe Datenqualität. Dabei setzen wir auf medienbruchfreie, digitale Prozesse und Standards. FBAIS bietet Schnittstellen an für den Bezug und die Weitergabe der Daten an andere Bundesämter und auch an Dritte ausserhalb der Verwaltung."@de ;
+    systemmap:PRP001 systemmap:ORG003 ;
     systemmap:PRP101 "FBAIS"@de .
+
+systemmap:ORG011 a systemmap:CLS008 ;
+    rdfs:label "Kompetenzzentrum für die digitale Transformation"@de ;
+    systemmap:PRP001 systemmap:ORG003 ;
+    systemmap:PRP101 "GRKDT"@de .
+
+systemmap:ORG012 a systemmap:CLS008 ;
+    rdfs:label "Fachbereich Marktanalyse"@de ;
+    systemmap:PRP001 systemmap:ORG003 ;
+    systemmap:PRP101 "FBMA"@de .
+
+systemmap:ORG013 a systemmap:CLS008 ;
+    rdfs:label "Fachbereich Marktanalyse"@de ;
+    systemmap:PRP001 systemmap:ORG003 ;
+    systemmap:PRP101 "FBMA"@de .
+
+systemmap:ORG014 a systemmap:CLS008 ;
+    rdfs:label "Fachbereich Informatikführung"@de ;
+    systemmap:PRP001 systemmap:ORG003 ;
+    systemmap:PRP101 "FBIF"@de .
+
+systemmap:ORG015 a systemmap:CLS008 ;
+    rdfs:label "Gruppe GEVER Services"@de ;
+    systemmap:PRP001 systemmap:ORG003 ;
+    systemmap:PRP101 "GRGS"@de .
+
+systemmap:ORG016 a systemmap:CLS008 ;
+    rdfs:label "Gruppe Business Intelligence"@de ;
+    systemmap:PRP001 systemmap:ORG003 ;
+    systemmap:PRP101 "GRBI"@de .
+
+systemmap:ORG020 a systemmap:CLS008 ;
+    rdfs:label "Fachbereich Direktzahlungsprogramme"@de ;
+    rdfs:comment "Der Fachbereich ist für die Umsetzung von Direktzahlungsprogrammen in den Bereichen Umwelt, Tierwohl und Landschaft verantwortlich. Dabei wird die Umsetzung durch Unterstützung der kantonalen Stellen sichergestellt und die Oberaufsicht über den kantonalen Vollzug wahrgenommen. Zudem erfolgt eine kontinuierliche Weiterentwicklung des ökologischen Leistungsnachweises (ÖLN) sowie der Massnahmen zur Förderung von Tierwohl, Biodiversität, Ressourceneffizienz, Produktionssystemen und Landschaftsqualität. Die Koordination mit anderen Regelbereichen, darunter die Biodiversitätsstrategie, der Biolandbau sowie Energie- und Klimaschutzfragen, ist ebenso Bestandteil der Tätigkeiten. Darüber hinaus werden Schnittstellen zur Gesetzgebung in den Bereichen Tier-, Gewässer-, Umwelt-, Natur- und Heimatschutz gepflegt. Im technischen Bereich erfolgt die Bereitstellung und Nutzung der EDV-Applikation Hofdüngerflüsse (HODUFLU) für Betriebs- und Datenauswertungen. Zudem werden Vorgaben zur Kürzung von Direktzahlungen nach den geltenden Verordnungen umgesetzt. Die Bearbeitung von Stellungnahmen zu Parlamentsvorstössen, Beschwerdefällen und Bundesratsgeschäften gehört ebenfalls zu den Aufgaben. Ergänzend werden Öffentlichkeitsarbeit sowie die Information und Einbindung relevanter Akteure wahrgenommen. Die Mitwirkung in Begleitgruppen sowie die Beteiligung an Forschungsfragen und Evaluationen runden das Aufgabengebiet ab."@de ;
+    systemmap:PRP001 systemmap:ORG006 ;
+    systemmap:PRP101 "FBDP"@de .
+
+systemmap:ORG021 a systemmap:CLS008 ;
+    rdfs:label "Fachbereich Direktzahlungsgrundlagen"@de ;
+    rdfs:comment "Der Fachbereich Direktzahlungsgrundlagen ist zuständig für die Umsetzung und Weiterentwicklung des Direktzahlungssystems im Bereich der  Versorgungssicherheit, der Kulturlandschaft, der Übergangsbeiträge, der landwirtschaftlichen Zonen und Gebiete, der Landwirtschaftlichen Begriffe sowie der Anerkennung von Betrieben und Betriebsformen."@de ;
+    systemmap:PRP001 systemmap:ORG006 ;
+    systemmap:PRP101 "FBDG"@de .
 

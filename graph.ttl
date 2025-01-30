@@ -1,10 +1,179 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://agriculture.ld.admin.ch/foag/system-map#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix systemmap: <https://agriculture.ld.admin.ch/foag/system-map#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-systemmap: a owl:Ontology ;
+ns1:CLS001 a owl:Class ;
+    rdfs:label "Organisation"@de,
+        "Organization"@en ;
+    rdfs:comment "Eine (juristische) Einheit wie ein Unternehmen, eine Behörde oder eine Non-Profit-Organisation oder eine Untereinheit einer solchen."@de,
+        "A (legal) entity such as a company, agency or non-profit organization, or a subunit of such an entity."@en .
+
+ns1:CLS002 a owl:Class ;
+    rdfs:label "IT-System"@de,
+        "IT system"@en ;
+    rdfs:comment "Jedes IT-System (im abstrakten Sinne) mit einer oder mehreren Datenbanken. Beispiele für solche Systeme sind AGIS, das BI-System ASTAT des BLW oder die kantonalen IT-Systeme für die Landwirtschaft."@de,
+        "Any IT system (in a abstracted sense) with one or many databases. Examples for such systems would be AGIS, the FOAG BI system ASTAT, or the cantonal agricultural IT systems."@en .
+
+ns1:CLS003 a owl:Class ;
+    rdfs:label "Informationseinheit"@de,
+        "Information unit"@en ;
+    rdfs:comment "Eine Information in einem IT-System. Das kann wirklich alles Mögliche sein."@de,
+        "A piece of information in an IT system. Could be anything, really."@en .
+
+ns1:CLS004 a owl:Class ;
+    rdfs:label "Informationseinheit mit Personendaten"@de,
+        "Information unit containing personal data"@en ;
+    rdfs:seeAlso <https://www.fedlex.admin.ch/eli/oc/2022/491/de#art_5> ;
+    rdfs:subClassOf ns1:CLS003 .
+
+ns1:CLS005 a owl:Class ;
+    rdfs:label "Informationseinheit mit besonders schützenswerten Personendaten"@de,
+        "Information unit containing sensitive personal data"@en ;
+    rdfs:seeAlso <https://www.fedlex.admin.ch/eli/oc/2022/491/de#art_5> ;
+    rdfs:subClassOf ns1:CLS004 .
+
+ns1:CLS006 a owl:Class ;
+    rdfs:label "Öffentlich-rechtliche Organisation"@de,
+        "Public-sector organization"@en ;
+    rdfs:subClassOf ns1:CLS001 .
+
+ns1:CLS007 a owl:Class ;
+    rdfs:label "Privatrechtliche Organisation"@de,
+        "Private-sector organization"@en ;
+    rdfs:subClassOf ns1:CLS001 .
+
+ns1:CLS008 a owl:Class ;
+    rdfs:label "Organisation des Bundes"@de,
+        "Federal organization"@en ;
+    rdfs:subClassOf ns1:CLS006 .
+
+ns1:CLS009 a owl:Class ;
+    rdfs:label "Kantonale Organisation"@de,
+        "Cantonal organization"@en ;
+    rdfs:subClassOf ns1:CLS006 .
+
+ns1:CLS010 a owl:Class ;
+    rdfs:label "Landwirtschaftsamt eines Kantons"@de,
+        "Cantonal agricultural office"@en ;
+    rdfs:subClassOf ns1:CLS009 .
+
+ns1:CLS011 a owl:Class ;
+    rdfs:label "Kantonale Beratungsstelle"@de,
+        "Cantonal advice center"@en ;
+    rdfs:subClassOf ns1:CLS009 .
+
+ns1:PRP101 a owl:DatatypeProperty ;
+    rdfs:label "Organisationsabkürzung"@de,
+        "Organization abbreviation"@en ;
+    rdfs:domain ns1:CLS001 ;
+    rdfs:range xsd:string .
+
+ns1:PRP102 a owl:DatatypeProperty ;
+    rdfs:label "Abkürzung des IT-Systems"@de,
+        "System abbreviation"@en ;
+    rdfs:domain ns1:CLS002 ;
+    rdfs:range xsd:string .
+
+ns1:PRP001 a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "ist Teil von"@de,
+        "is a part of"@en ;
+    rdfs:comment "Zeigt an, dass die (Teil-)Organisation ein Teil von einer (Über-)Organisation Y ist."@de ;
+    rdfs:domain ns1:CLS001 ;
+    rdfs:range ns1:CLS001 .
+
+ns1:PRP002 a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "beinhaltet Suborganisation"@de,
+        "contains Suborganization"@en ;
+    rdfs:domain ns1:CLS001 ;
+    rdfs:range ns1:CLS001 ;
+    owl:inverseOf ns1:PRP001 .
+
+ns1:PRP003 a owl:ObjectProperty ;
+    rdfs:label "hat Mitgliederorganisationen"@de,
+        "has memeber organizations"@en ;
+    rdfs:comment "Gibt an, dass eine Organisation X eine andere Organisation Y als Mitgliedsorganisation hat. Diese Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formelle Vereinigungen darzustellen, bei denen Organisationen als Mitglieder teilnehmen. Informelle Beziehungen gehören nicht dazu."@de,
+        "Indicates that an organization X has another organization Y as a member organization. This relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en ;
+    rdfs:domain ns1:CLS001 ;
+    rdfs:range ns1:CLS001 ;
+    owl:inverseOf ns1:PRP004 .
+
+ns1:PRP004 a owl:ObjectProperty ;
+    rdfs:label "ist eine Mitgliedsorganisation von"@de,
+        "is a member organization of"@en ;
+    rdfs:comment "Gibt an, dass eine Organisation X eine Mitgliedsorganisation einer anderen Organisation Y ist. Die Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formelle Vereinigungen darzustellen, bei denen Organisationen als Mitglieder teilnehmen. Informelle Beziehungen gehören nicht dazu."@de,
+        "Indicates that an organization X is a member organization of another organization Y. The relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en ;
+    rdfs:domain ns1:CLS001 ;
+    rdfs:range ns1:CLS001 ;
+    owl:inverseOf ns1:PRP003 .
+
+ns1:PRP005 a owl:ObjectProperty ;
+    rdfs:label "ist (teilweise) in Besitz von"@de,
+        "is (partially) owned by"@en ;
+    rdfs:domain ns1:CLS001 ;
+    rdfs:range ns1:CLS001 ;
+    owl:inverseOf ns1:PRP006 .
+
+ns1:PRP006 a owl:ObjectProperty ;
+    rdfs:label "besitzt (teilweise)"@de,
+        "(partially) owns"@en ;
+    rdfs:domain ns1:CLS001 ;
+    rdfs:range ns1:CLS001 ;
+    owl:inverseOf ns1:PRP005 .
+
+ns1:PRP007 a owl:ObjectProperty ;
+    rdfs:label "betreibt"@de,
+        "operates"@en ;
+    rdfs:comment "Diese Beziehung zeigt an, dass Organisation X für das Betriebssystem Y verantwortlich ist. Wenn Organisation Y den Betrieb eines Systems X an einen Dienstleister Z auslagert, verwenden Sie weiterhin diese Betriebsbeziehung zwischen X und Y, da sie eher die Verantwortlichkeit als den technischen Betrieb widerspiegelt. Die Beziehung ist auf niedrigstmöglicher Organisationsebene zu verwenden."@de,
+        "This relationship indicates that organization X is in charge of operating system Y. If organization Y outsources the operation of a system X to a service provider Z, still use this operating relationship between X and Y since it reflects responsability rather than technical operation. Also, use this on the lowest organizational level possible."@en ;
+    rdfs:domain ns1:CLS001 ;
+    rdfs:range ns1:CLS002 ;
+    owl:inverseOf ns1:PRP008 .
+
+ns1:PRP008 a owl:ObjectProperty ;
+    rdfs:label "wird betrieben von"@de,
+        "is operated by"@en ;
+    rdfs:comment "Gibt an, dass ein IT-System X durch eine Organisation Y betrieben wird; i.e. dass die Organisation Y für den Betrieb von System X zuständig ist."@de ;
+    rdfs:domain ns1:CLS002 ;
+    rdfs:range ns1:CLS001 ;
+    owl:inverseOf ns1:PRP007 .
+
+ns1:PRP011 a owl:ObjectProperty ;
+    rdfs:label "beinhaltet"@de,
+        "contains"@en ;
+    rdfs:comment "Gibt an, dass ein IT-System X die Informationseinheit Y enthält. Beispielsweise enthält AGIS Informationen über landwirtschaftliche Flächen in der Schweiz."@de,
+        "Indicates that an IT system X contains the information unit Y. For example, AGIS contains information about farming area in Switzerland."@en ;
+    rdfs:domain ns1:CLS002 ;
+    rdfs:range ns1:CLS003 ;
+    owl:inverseOf ns1:PRP012 .
+
+ns1:PRP012 a owl:ObjectProperty ;
+    rdfs:label "ist beinhaltet in"@de,
+        "is contained in"@en ;
+    rdfs:comment "Gibt an, dass eine Informationseinheit X im IT-System Y enthalten ist. Beispielsweise sind Informationen über landwirtschaftliche Flächen in der Schweiz in AGIS enthalten."@de,
+        "Indicates that an information unit X is contained in the IT system Y. For example, information about farming area in Switzerland is contained in AGIS."@en ;
+    rdfs:domain ns1:CLS003 ;
+    rdfs:range ns1:CLS002 ;
+    owl:inverseOf ns1:PRP011 .
+
+ns1:PRP013 a owl:ObjectProperty ;
+    rdfs:label "leitet ab von"@de,
+        "derives"@en ;
+    rdfs:domain ns1:CLS003 ;
+    rdfs:range ns1:CLS003 ;
+    owl:inverseOf ns1:PRP014 .
+
+ns1:PRP014 a owl:ObjectProperty ;
+    rdfs:label "ist abgeleitet von"@de,
+        "is derived from"@en ;
+    rdfs:domain ns1:CLS003 ;
+    rdfs:range ns1:CLS003 ;
+    owl:inverseOf ns1:PRP013 .
+
+ns1: a owl:Ontology ;
     dcterms:creator "Federal Office for Agriculture" ;
     dcterms:description "Eine Ontologie zur Modellierung von Organisationen, IT-Systemen und Daten für das Schweizer Bundesamt für Landwirtschaft (FOAG)."@de,
         "An ontology to model organizations, IT systems and data for the Swiss Federal Office for Agriculture FOAG."@en ;
@@ -12,205 +181,150 @@ systemmap: a owl:Ontology ;
         "DigiAgriFoodCH System Map"@en ;
     owl:versionInfo "0.2.2" .
 
-systemmap:CLS005 a owl:Class ;
-    rdfs:label "Informationseinheit mit besonders schützenswerten Personendaten"@de,
-        "Information unit containing sensitive personal data"@en ;
-    rdfs:seeAlso <https://www.fedlex.admin.ch/eli/oc/2022/491/de#art_5> ;
-    rdfs:subClassOf systemmap:CLS004 .
+ns1:SYS001 a ns1:CLS002 ;
+    rdfs:label "Acontrol"@de ;
+    rdfs:comment "Acontrol ist das Informationssystem des BLW, das für die Planung, Erfassung und Verwaltung landwirtschaftlicher Inspektionen eingesetzt wird. Es vereinfacht die Kontrollprozesse durch eine zentrale Plattform für Dateneingabe und -abfrage. Auf diese Weise wird eine effiziente Überwachung und Einhaltung landwirtschaftlicher Standards gewährleistet."@de ;
+    ns1:PRP008 ns1:ORG021 ;
+    ns1:PRP102 "Acontrol"@de .
 
-systemmap:CLS007 a owl:Class ;
-    rdfs:label "Privatrechtliche Organisation"@de,
-        "Private-sector organization"@en ;
-    rdfs:subClassOf systemmap:CLS001 .
+ns1:SYS002 a ns1:CLS002 ;
+    rdfs:label "Agate"@de ;
+    rdfs:comment "Agate ist ein Online-Portal, das den Zugriff auf verschiedene landwirtschaftliche Anwendungen mit nur einem Login ermöglicht. Es erleichtert den Datenaustausch im Agrar- und Ernährungsbereich und erhöht so den Benutzerkomfort. Durch diesen zentralisierten Zugangspunkt werden Verwaltungsprozesse für alle Beteiligten vereinfacht."@de ;
+    ns1:PRP008 ns1:ORG014 ;
+    ns1:PRP102 "Agate"@de .
 
-systemmap:CLS010 a owl:Class ;
-    rdfs:label "Landwirtschaftsamt eines Kantons"@de,
-        "Cantonal agricultural office"@en ;
-    rdfs:subClassOf systemmap:CLS009 .
-
-systemmap:CLS011 a owl:Class ;
-    rdfs:label "Kantonale Beratungsstelle"@de,
-        "Cantonal advice center"@en ;
-    rdfs:subClassOf systemmap:CLS009 .
-
-systemmap:INF001 a systemmap:CLS003 ;
-    rdfs:label "Landwirtschaftliche Nutzflächen"@de ;
-    rdfs:comment "Die landwirtschaftlichen Nutzflächen enthalten Informationen zu Koodinaten, Flächenausdehnung und landwirtschaftlicher Hauptkultur von Flächen in der Schweiz, zu welchen Direktzahlungen bezogen werden."@de .
-
-systemmap:PRP002 a owl:ObjectProperty,
-        owl:TransitiveProperty ;
-    rdfs:label "beinhaltet Suborganisation"@de,
-        "contains Suborganization"@en ;
-    rdfs:domain systemmap:CLS001 ;
-    rdfs:range systemmap:CLS001 ;
-    owl:inverseOf systemmap:PRP001 .
-
-systemmap:PRP101 a owl:DatatypeProperty ;
-    rdfs:label "Organisationsabkürzung"@de,
-        "Organization abbreviation"@en ;
-    rdfs:domain systemmap:CLS001 ;
-    rdfs:range xsd:string .
-
-systemmap:PRP102 a owl:DatatypeProperty ;
-    rdfs:label "Abkürzung des IT-Systems"@de,
-        "System abbreviation"@en ;
-    rdfs:domain systemmap:CLS002 ;
-    rdfs:range xsd:string .
-
-systemmap:CLS004 a owl:Class ;
-    rdfs:label "Informationseinheit mit Personendaten"@de,
-        "Information unit containing personal data"@en ;
-    rdfs:seeAlso <https://www.fedlex.admin.ch/eli/oc/2022/491/de#art_5> ;
-    rdfs:subClassOf systemmap:CLS003 .
-
-systemmap:PRP001 a owl:ObjectProperty,
-        owl:TransitiveProperty ;
-    rdfs:label "ist Teil von"@de,
-        "is a part of"@en ;
-    rdfs:domain systemmap:CLS001 ;
-    rdfs:range systemmap:CLS001 .
-
-systemmap:PRP003 a owl:ObjectProperty ;
-    rdfs:label "hat Mitgliederorganisationen"@de,
-        "has memeber organizations"@en ;
-    rdfs:comment "Gibt an, dass eine Organisation X eine andere Organisation Y als Mitgliedsorganisation hat. Diese Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formelle Vereinigungen darzustellen, bei denen Organisationen als Mitglieder teilnehmen. Informelle Beziehungen gehören nicht dazu."@de,
-        "Indicates that an organization X has another organization Y as a member organization. This relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en ;
-    rdfs:domain systemmap:CLS001 ;
-    rdfs:range systemmap:CLS001 ;
-    owl:inverseOf systemmap:PRP004 .
-
-systemmap:PRP004 a owl:ObjectProperty ;
-    rdfs:label "ist eine Mitgliedsorganisation von"@de,
-        "is a member organization of"@en ;
-    rdfs:comment "Gibt an, dass eine Organisation X eine Mitgliedsorganisation einer anderen Organisation Y ist. Die Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formelle Vereinigungen darzustellen, bei denen Organisationen als Mitglieder teilnehmen. Informelle Beziehungen gehören nicht dazu."@de,
-        "Indicates that an organization X is a member organization of another organization Y. The relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en ;
-    rdfs:domain systemmap:CLS001 ;
-    rdfs:range systemmap:CLS001 ;
-    owl:inverseOf systemmap:PRP003 .
-
-systemmap:PRP005 a owl:ObjectProperty ;
-    rdfs:label "ist (teilweise) in Besitz von"@de,
-        "is (partially) owned by"@en ;
-    rdfs:domain systemmap:CLS001 ;
-    rdfs:range systemmap:CLS001 ;
-    owl:inverseOf systemmap:PRP006 .
-
-systemmap:PRP006 a owl:ObjectProperty ;
-    rdfs:label "besitzt (teilweise)"@de,
-        "(partially) owns"@en ;
-    rdfs:domain systemmap:CLS001 ;
-    rdfs:range systemmap:CLS001 ;
-    owl:inverseOf systemmap:PRP005 .
-
-systemmap:PRP007 a owl:ObjectProperty ;
-    rdfs:label "betreibt"@de,
-        "operates"@en ;
-    rdfs:comment "Diese Beziehung zeigt an, dass Organisation X für das Betriebssystem Y verantwortlich ist. Wenn Organisation Y den Betrieb eines Systems X an einen Dienstleister Z auslagert, verwenden Sie weiterhin diese Betriebsbeziehung zwischen X und Y, da sie eher die Verantwortlichkeit als den technischen Betrieb widerspiegelt. Die Beziehung ist auf niedrigstmöglicher Organisationsebene zu verwenden."@de,
-        "This relationship indicates that organization X is in charge of operating system Y. If organization Y outsources the operation of a system X to a service provider Z, still use this operating relationship between X and Y since it reflects responsability rather than technical operation. Also, use this on the lowest organizational level possible."@en ;
-    rdfs:domain systemmap:CLS001 ;
-    rdfs:range systemmap:CLS002 ;
-    owl:inverseOf systemmap:PRP008 .
-
-systemmap:PRP008 a owl:ObjectProperty ;
-    rdfs:label "wird betrieben von"@de,
-        "is operated by"@en ;
-    rdfs:domain systemmap:CLS002 ;
-    rdfs:range systemmap:CLS001 ;
-    owl:inverseOf systemmap:PRP007 .
-
-systemmap:PRP011 a owl:ObjectProperty ;
-    rdfs:label "beinhaltet"@de,
-        "contains"@en ;
-    rdfs:comment "Gibt an, dass ein IT-System X die Informationseinheit Y enthält. Beispielsweise enthält AGIS Informationen über landwirtschaftliche Flächen in der Schweiz."@de,
-        "Indicates that an IT system X contains the information unit Y. For example, AGIS contains information about farming area in Switzerland."@en ;
-    rdfs:domain systemmap:CLS002 ;
-    rdfs:range systemmap:CLS003 ;
-    owl:inverseOf systemmap:PRP012 .
-
-systemmap:PRP012 a owl:ObjectProperty ;
-    rdfs:label "ist beinhaltet in"@de,
-        "is contained in"@en ;
-    rdfs:comment "Gibt an, dass eine Informationseinheit X im IT-System Y enthalten ist. Beispielsweise sind Informationen über landwirtschaftliche Flächen in der Schweiz in AGIS enthalten."@de,
-        "Indicates that an information unit X is contained in the IT system Y. For example, information about farming area in Switzerland is contained in AGIS."@en ;
-    rdfs:domain systemmap:CLS003 ;
-    rdfs:range systemmap:CLS002 ;
-    owl:inverseOf systemmap:PRP011 .
-
-systemmap:PRP013 a owl:ObjectProperty ;
-    rdfs:label "leitet ab von"@de,
-        "derives"@en ;
-    rdfs:domain systemmap:CLS003 ;
-    rdfs:range systemmap:CLS003 ;
-    owl:inverseOf systemmap:PRP014 .
-
-systemmap:PRP014 a owl:ObjectProperty ;
-    rdfs:label "ist abgeleitet von"@de,
-        "is derived from"@en ;
-    rdfs:domain systemmap:CLS003 ;
-    rdfs:range systemmap:CLS003 ;
-    owl:inverseOf systemmap:PRP013 .
-
-systemmap:CLS006 a owl:Class ;
-    rdfs:label "Öffentlich-rechtliche Organisation"@de,
-        "Public-sector organization"@en ;
-    rdfs:subClassOf systemmap:CLS001 .
-
-systemmap:CLS009 a owl:Class ;
-    rdfs:label "Kantonale Organisation"@de,
-        "Cantonal organization"@en ;
-    rdfs:subClassOf systemmap:CLS006 .
-
-systemmap:ORG002 a systemmap:CLS001,
-        systemmap:CLS008 ;
-    rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de ;
-    systemmap:PRP001 systemmap:ORG001 ;
-    systemmap:PRP002 systemmap:ORG003 ;
-    systemmap:PRP101 "DBDD"@de .
-
-systemmap:SYS001 a systemmap:CLS002 ;
+ns1:SYS003 a ns1:CLS002 ;
     rdfs:label "Agrarpolitisches Informationssystem"@de ;
-    systemmap:PRP008 systemmap:ORG001,
-        systemmap:ORG003 ;
-    systemmap:PRP102 "AGIS"@de .
+    rdfs:comment "AGIS fungiert als zentrale Datendrehscheibe, in der die von den Kantonen erhobenen landwirtschaftlichen Daten validiert und zu einem gesamtschweizerischen Datenbestand aggregiert werden. Das System sorgt für Konsistenz und Genauigkeit bei der Erfassung von landwirtschaftlichen Daten. Es unterstützt fundierte Entscheidungsprozesse auf Bundesebene."@de ;
+    ns1:PRP008 ns1:ORG010 ;
+    ns1:PRP102 "AGIS"@de .
 
-systemmap:CLS008 a owl:Class ;
-    rdfs:label "Organisation des Bundes"@de,
-        "Federal organization"@en ;
-    rdfs:subClassOf systemmap:CLS006 .
+ns1:SYS004 a ns1:CLS002 ;
+    rdfs:label "Astat"@de ;
+    rdfs:comment "Astat ist das Business-Intelligence-System des BLW. Es stellt Analyse- und Reporting-Funktionen bereit, um datengestützte Entscheidungen zu ermöglichen. Dadurch wird die Überwachung und Bewertung agrarpolitischer Massnahmen vereinfacht."@de ;
+    ns1:PRP008 ns1:ORG016 ;
+    ns1:PRP102 "Astat"@de .
 
-systemmap:ORG001 a systemmap:CLS001,
-        systemmap:CLS008 ;
+ns1:SYS005 a ns1:CLS002 ;
+    rdfs:label "CePa"@de ;
+    rdfs:comment "CePa ist eine IT-Anwendung für die digitale Verwaltung von Verfahren und Korrespondenz im Rahmen des Pflanzenpassesystems sowie der amtlichen Zertifizierung von Vermehrungsmaterial. Sie optimiert Zertifizierungsabläufe und stellt die Einhaltung pflanzengesundheitlicher Vorschriften sicher. Auf diese Weise wird die Rückverfolgbarkeit und Qualitätskontrolle von Pflanzenmaterial unterstützt."@de ;
+    ns1:PRP102 "CePa"@de .
+
+ns1:SYS006 a ns1:CLS002 ;
+    rdfs:label "digiFLUX"@de ;
+    rdfs:comment "digiFLUX ist eine Webanwendung, die zur Umsetzung der Meldepflicht für den Handel und die Anwendung von Pflanzenschutzmitteln sowie für den Handel mit Nährstoffen entwickelt wurde. Sie ermöglicht den Akteuren eine einheitliche Schnittstelle zur Eingabe aller erforderlichen Angaben. Dadurch wird Transparenz und Einhaltung gesetzlicher Vorschriften im Agrarbereich gewährleistet."@de ;
+    ns1:PRP008 ns1:ORG020 ;
+    ns1:PRP102 "digiFLUX"@de .
+
+ns1:SYS007 a ns1:CLS002 ;
+    rdfs:label "eKontingente"@de ;
+    rdfs:comment "eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können. Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet."@de .
+
+ns1:SYS008 a ns1:CLS002 ;
+    rdfs:label "Meine Agrardatenfreigabe"@de ;
+    rdfs:comment "Meine Agrardatenfreigabe vereinfacht den Datenaustausch zwischen Betrieben und Datenempfängern wie zum Beispiel Labelorganisationen. Sie bietet eine Plattform zur Verwaltung von Zugriffsberechtigungen und Datenfreigabevereinbarungen. Damit wird die Zusammenarbeit und Datenweitergabe im Agrarsektor transparenter gestaltet."@de ;
+    ns1:PRP008 ns1:ORG011 ;
+    ns1:PRP102 "MAF"@de .
+
+ns1:SYS009 a ns1:CLS002 ;
+    rdfs:label "Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft"@de ;
+    rdfs:comment "PGREL-NIS macht Daten des Aktionsplans zur Vielfalt der Kulturpflanzen öffentlich zugänglich. Es bietet einen Überblick und Zugriff auf Informationen zu Pflanzengenetischen Ressourcen. Damit trägt es zur Erhaltung und Förderung pflanzengenetischer Vielfalt bei."@de ;
+    ns1:PRP102 "PGREL-NIS"@de .
+
+ns1:INF001 a ns1:CLS003 ;
+    rdfs:label "Kontaktangaben von Bewirtschaftenden"@de ;
+    rdfs:comment "Informationen zu Kontaktangaben von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de ;
+    ns1:PRP012 ns1:SYS003 .
+
+ns1:ORG001 a ns1:CLS008 ;
     rdfs:label "Bundesamt für Landwirtschaft"@de,
         "Federal Office for Agriculture"@en ;
-    systemmap:PRP002 systemmap:ORG002,
-        systemmap:ORG003 ;
-    systemmap:PRP007 systemmap:SYS001 ;
-    systemmap:PRP101 "BLW"@de,
+    rdfs:comment "Das Bundesamt für Landwirtschaft (BLW) ist das Kompetenzzentrum des Bundes für alle Kernfragen im Zusammenhang mit dem Agrarsektor."@de,
+        "The Federal Office for Agriculture (FOAG) is the Confederation's competence centre for all core issues relating to the agricultural sector."@en ;
+    ns1:PRP101 "BLW"@de,
         "FOAG"@en .
 
-systemmap:ORG003 a systemmap:CLS001,
-        systemmap:CLS008 ;
+ns1:ORG002 a ns1:CLS008 ;
+    rdfs:label "Direktion"@de ;
+    rdfs:comment "Die Direktion verantwortet die strategische Führung und Koordination der Schweizer Agrarpolitik. Zudem ist die Direktion für die Kommunikation und Öffentlichkeitsarbeit in den drei Amtssprachen zuständig."@de ;
+    ns1:PRP001 ns1:ORG001 ;
+    ns1:PRP101 "DR"@de .
+
+ns1:ORG003 a ns1:CLS008 ;
+    rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de ;
+    rdfs:comment "Der Direktionsbereich Digitalisierung und Datenmanagement setzt sich dafür ein, dass die digitale Transformation und das Datenmanagement in der Land- und Ernährungswirtschaft ziel- und zukunftsgerichtet gefördert werden."@de ;
+    ns1:PRP001 ns1:ORG001 ;
+    ns1:PRP101 "DBDD"@de .
+
+ns1:ORG004 a ns1:CLS008 ;
+    rdfs:label "Direktionsbereich Recht, Ressourcen und Integrale Sicherheit"@de ;
+    rdfs:comment "Der Direktionsbereich Recht, Ressourcen und Integrale Sicherheit sichert die rechtliche Konformität der verschiedenen BLW-Massnahmen und ist insbesondere für die personellen Massnahmen des Amtes verantwortlich."@de ;
+    ns1:PRP001 ns1:ORG001 ;
+    ns1:PRP101 "DBRRIS"@de .
+
+ns1:ORG005 a ns1:CLS008 ;
+    rdfs:label "Direktionsbereich Produktionsgrundlagen, natürliche Ressourcen und Forschung"@de ;
+    rdfs:comment "Widerstandsfähige Produktions- und Ökosysteme stehen im Zentrum des Direktionsbereichs Produktionsgrundlagen, natürliche Ressourcen und Forschung. So ist er unter anderem dafür zuständig, dass Pflanzen nachhaltig geschützt und Tiere optimal ernährt werden können. Desweitern fördert dieser Bereich verschiedene Forschungs- und Beratungsprojekte in der Schweiz, aber auch international."@de ;
+    ns1:PRP001 ns1:ORG001 ;
+    ns1:PRP101 "DBPRF"@de .
+
+ns1:ORG006 a ns1:CLS008 ;
+    rdfs:label "Direktionsbereich Direktzahlungen und Ländliche Entwicklung"@de ;
+    rdfs:comment "Die Landwirte und Landwirtinnen erbringen verschiedene Leistungen für die Allgemeinheit und werden deshalb mit finanziellen Beiträgen unterstützt. Dafür ist der Direktionsbereich Direktzahlungen und Ländliche Entwicklung zuständig. Er setzt sich zudem für die Vitalität des ländlichen Raums ein."@de ;
+    ns1:PRP001 ns1:ORG001 ;
+    ns1:PRP101 "DBDLE"@de .
+
+ns1:ORG007 a ns1:CLS008 ;
+    rdfs:label "Direktionsbereich Märkte und Internationales"@de ;
+    rdfs:comment "Der Direktionsbereich Märkte und Internationales setzt sich dafür ein, dass die Landwirtschaft aus dem Verkauf ihrer Produkte eine möglichst hohe Wertschöpfung erzielen kann. Selbsthilfemassnahmen, Innovation und Vermarktung der verschiedenen Branchen werden unterstützt. Zudem engagiert sich dieser Direktionsbereich in internationalen Organisationen wie der UNO-Ernährungsorganisation FAO oder der Welthandelsorganisation WTO."@de ;
+    ns1:PRP001 ns1:ORG001 ;
+    ns1:PRP101 "DBMI"@de .
+
+ns1:ORG010 a ns1:CLS008 ;
     rdfs:label "Fachbereich Agrarinformationssysteme"@de ;
-    systemmap:PRP001 systemmap:ORG001,
-        systemmap:ORG002 ;
-    systemmap:PRP007 systemmap:SYS001 ;
-    systemmap:PRP101 "FBAIS"@de .
+    rdfs:comment "Der Fachbereich Agrarinformationssysteme ist die zentrale Drehscheibe für Agrardaten. Er ist zuständig für das Portal Agate – den Online-Schalter für die Landwirtschaft – sowie für die zentralen Informationssysteme. Er setzt die fachlichen Vorgaben in technische Lösungen um und gewährleisten eine hohe Datenqualität. Dabei setzen wir auf medienbruchfreie, digitale Prozesse und Standards. FBAIS bietet Schnittstellen an für den Bezug und die Weitergabe der Daten an andere Bundesämter und auch an Dritte ausserhalb der Verwaltung."@de ;
+    ns1:PRP001 ns1:ORG003 ;
+    ns1:PRP101 "FBAIS"@de .
 
-systemmap:CLS002 a owl:Class ;
-    rdfs:label "IT-System"@de,
-        "IT system"@en ;
-    rdfs:comment "Jedes IT-System (im abstrakten Sinne) mit einer oder mehreren Datenbanken. Beispiele für solche Systeme sind AGIS, das BI-System ASTAT des BLW oder die kantonalen IT-Systeme für die Landwirtschaft."@de,
-        "Any IT system (in a abstracted sense) with one or many databases. Examples for such systems would be AGIS, the FOAG BI system ASTAT, or the cantonal agricultural IT systems."@en .
+ns1:ORG011 a ns1:CLS008 ;
+    rdfs:label "Kompetenzzentrum für die digitale Transformation"@de ;
+    ns1:PRP001 ns1:ORG003 ;
+    ns1:PRP101 "GRKDT"@de .
 
-systemmap:CLS003 a owl:Class ;
-    rdfs:label "Informationseinheit"@de,
-        "Information unit"@en ;
-    rdfs:comment "Eine Information in einem IT-System. Das kann wirklich alles Mögliche sein."@de,
-        "A piece of information in an IT system. Could be anything, really."@en .
+ns1:ORG012 a ns1:CLS008 ;
+    rdfs:label "Fachbereich Marktanalyse"@de ;
+    ns1:PRP001 ns1:ORG003 ;
+    ns1:PRP101 "FBMA"@de .
 
-systemmap:CLS001 a owl:Class ;
-    rdfs:label "Organisation"@de,
-        "Organization"@en ;
-    rdfs:comment "Eine (juristische) Einheit wie ein Unternehmen, eine Behörde oder eine Non-Profit-Organisation oder eine Untereinheit einer solchen."@de,
-        "A (legal) entity such as a company, agency or non-profit organization, or a subunit of such an entity."@en .
+ns1:ORG013 a ns1:CLS008 ;
+    rdfs:label "Fachbereich Marktanalyse"@de ;
+    ns1:PRP001 ns1:ORG003 ;
+    ns1:PRP101 "FBMA"@de .
+
+ns1:ORG014 a ns1:CLS008 ;
+    rdfs:label "Fachbereich Informatikführung"@de ;
+    ns1:PRP001 ns1:ORG003 ;
+    ns1:PRP101 "FBIF"@de .
+
+ns1:ORG015 a ns1:CLS008 ;
+    rdfs:label "Gruppe GEVER Services"@de ;
+    ns1:PRP001 ns1:ORG003 ;
+    ns1:PRP101 "GRGS"@de .
+
+ns1:ORG016 a ns1:CLS008 ;
+    rdfs:label "Gruppe Business Intelligence"@de ;
+    ns1:PRP001 ns1:ORG003 ;
+    ns1:PRP101 "GRBI"@de .
+
+ns1:ORG020 a ns1:CLS008 ;
+    rdfs:label "Fachbereich Direktzahlungsprogramme"@de ;
+    rdfs:comment "Der Fachbereich ist für die Umsetzung von Direktzahlungsprogrammen in den Bereichen Umwelt, Tierwohl und Landschaft verantwortlich. Dabei wird die Umsetzung durch Unterstützung der kantonalen Stellen sichergestellt und die Oberaufsicht über den kantonalen Vollzug wahrgenommen. Zudem erfolgt eine kontinuierliche Weiterentwicklung des ökologischen Leistungsnachweises (ÖLN) sowie der Massnahmen zur Förderung von Tierwohl, Biodiversität, Ressourceneffizienz, Produktionssystemen und Landschaftsqualität. Die Koordination mit anderen Regelbereichen, darunter die Biodiversitätsstrategie, der Biolandbau sowie Energie- und Klimaschutzfragen, ist ebenso Bestandteil der Tätigkeiten. Darüber hinaus werden Schnittstellen zur Gesetzgebung in den Bereichen Tier-, Gewässer-, Umwelt-, Natur- und Heimatschutz gepflegt. Im technischen Bereich erfolgt die Bereitstellung und Nutzung der EDV-Applikation Hofdüngerflüsse (HODUFLU) für Betriebs- und Datenauswertungen. Zudem werden Vorgaben zur Kürzung von Direktzahlungen nach den geltenden Verordnungen umgesetzt. Die Bearbeitung von Stellungnahmen zu Parlamentsvorstössen, Beschwerdefällen und Bundesratsgeschäften gehört ebenfalls zu den Aufgaben. Ergänzend werden Öffentlichkeitsarbeit sowie die Information und Einbindung relevanter Akteure wahrgenommen. Die Mitwirkung in Begleitgruppen sowie die Beteiligung an Forschungsfragen und Evaluationen runden das Aufgabengebiet ab."@de ;
+    ns1:PRP001 ns1:ORG006 ;
+    ns1:PRP101 "FBDP"@de .
+
+ns1:ORG021 a ns1:CLS008 ;
+    rdfs:label "Fachbereich Direktzahlungsgrundlagen"@de ;
+    rdfs:comment "Der Fachbereich Direktzahlungsgrundlagen ist zuständig für die Umsetzung und Weiterentwicklung des Direktzahlungssystems im Bereich der  Versorgungssicherheit, der Kulturlandschaft, der Übergangsbeiträge, der landwirtschaftlichen Zonen und Gebiete, der Landwirtschaftlichen Begriffe sowie der Anerkennung von Betrieben und Betriebsformen."@de ;
+    ns1:PRP001 ns1:ORG006 ;
+    ns1:PRP101 "FBDP"@de .
 

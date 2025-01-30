@@ -1,123 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Vis Network | Node Styles | Groups</title>
-    <style>
-        body {
-            background-color: #ffffff; /* White background */
-            color: black; /* Black text */
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        #mynetwork {
-            width: 90vw;
-            height: 90vh;
-            border: 1px solid #ddd;
-            background-color: #ffffff; /* White background */
-        }
-        #tooltip {
-            position: absolute;
-            visibility: hidden;
-            background: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            border-radius: 8px;
-            padding: 8px;
-            font-size: 14px;
-            font-family: Arial, sans-serif;
-            text-align: left;
-            z-index: 10;
-        }
-    </style>
-    <script type="text/javascript" src="vis-network.min.js"></script>
+  <meta charset="UTF-8">
+  <title>LINDAS System Map</title>
+  <!-- Vis Network -->
+  <script src="https://unpkg.com/vis-network@9.1.2/standalone/umd/vis-network.min.js"></script>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    #network {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 <body>
-    <div id="mynetwork"></div>
-    <div id="tooltip"></div>
-    <script type="text/javascript">
-        var nodes = new vis.DataSet([
-            { id: 0, label: "FOAG", group: 'Organization', description: "Federal Office for Agriculture" },
-            { id: 1, label: "DBDD", group: 'Organization', description: "Digitalization and Data Management" },
-            { id: 2, label: "FBAIS", group: 'Organization', description: "FB Agricultural Information Systems" },
-            { id: 3, label: "AGIS", group: 'System', description: "Agrarpolitisches Informationssystem" },
-            { id: 4, label: "Phone", group: 'Information', description: "Phone numbers of farmers" },
-            { id: 5, label: "Area", group: 'Information', description: "Agricultural area in Switzerland and their crops." },
-            { id: 6, label: "Workers", group: 'Information', description: "Agricultural workers." }
-        ]);
 
-        var edges = new vis.DataSet([
-            { from: 1, to: 0, label: "suborganization of", description: "Organization X is a suborganization of Y" },
-            { from: 2, to: 1, label: "suborganization of", description: "Organization X is a suborganization of Y" },
-            { from: 2, to: 3, label: "operates", description: "Indicates that organization X operates system Y." },
-            { from: 3, to: 4, label: "contains", description: "Indicates that system X contains the information unit Y." },
-            { from: 3, to: 5, label: "contains", description: "Indicates that system X contains the information unit Y." },
-            { from: 3, to: 6, label: "contains", description: "Indicates that system X contains the information unit Y." }
-        ]);
+<div id="network"></div>
 
-        var container = document.getElementById("mynetwork");
-        var data = { nodes: nodes, edges: edges };
+<script>
+// -------------------------------------------------------------------
+// 1) Helper function to create HTML tooltips for Vis
+// -------------------------------------------------------------------
+function htmlTitle(htmlString) {
+  const container = document.createElement("div");
+  container.innerHTML = htmlString;
+  return container;
+}
 
-        var options = {
-            nodes: {
-                shape: "box",
-                size: 20,
-                font: { size: 20, color: "#000000" },
-                borderWidth: 2
-            },
-            edges: {
-                width: 2,
-                smooth: false,
-                font: { color: "#000000", size: 14 }
-            },
-            groups: {
-                Organization: { color: { background: "#87CEEB", border: "#4682B4" } },
-                System: { color: { background: "#90EE90", border: "#008000" } },
-                Information: { color: { background: "#FF6347", border: "#B22222" } }
-            },
-            interaction: {
-                hover: true,
-                navigationButtons: true,
-                tooltipDelay: 50,
-                hoverConnectedEdges: true,
-                selectable: true
-            },
-            physics: {
-                enabled: false
-            },
-            manipulation: {
-                enabled: false
-            }
-        };
+// -------------------------------------------------------------------
+// 2) Define the SPARQL queries
+//    (Adjust them as needed; these are the user-provided queries.)
+// -------------------------------------------------------------------
+const NODE_QUERY = `
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map#>
+SELECT ?id ?group ?label ?comment ?abbreviation
+WHERE {
+  GRAPH <https://lindas.admin.ch/foag/ontologies> {
+    ?id a ?group .
+    ?group rdfs:subClassOf* ?supergroup .
+    VALUES ?supergroup { systemmap:CLS001 systemmap:CLS002 systemmap:CLS003 }
+    ?id rdfs:label ?label .
+    FILTER(LANG(?label) = "de")
+    OPTIONAL {
+      ?id rdfs:comment ?comment .
+      FILTER(LANG(?comment) = "de")
+    }
+    OPTIONAL {
+      ?id ?hasAbbreviation ?abbreviation .
+      FILTER(LANG(?abbreviation) = "de")
+      VALUES ?hasAbbreviation { systemmap:PRP101 systemmap:PRP102 }
+    }
+  }
+}
+`;
 
-        var network = new vis.Network(container, data, options);
-        var tooltip = document.getElementById('tooltip');
+const EDGE_QUERY = `
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT (?property AS ?id) ?from ?to ?label ?comment
+WHERE {
+  GRAPH <https://lindas.admin.ch/foag/ontologies> {
+    ?from ?property ?to .
+    ?property a owl:ObjectProperty .
+    ?property rdfs:label ?label .
+    FILTER(LANG(?label)="de")
+    OPTIONAL {
+        ?property rdfs:comment ?comment .
+        FILTER(LANG(?comment)="de")
+    }
+  }
+}
+`;
 
-        network.on("hoverNode", function (params) {
-            var node = nodes.get(params.node);
-            tooltip.innerHTML = `<b>${node.label}</b><br>${node.description}`;
-            tooltip.style.visibility = 'visible';
-        });
+// -------------------------------------------------------------------
+// 3) Fetch data from LINDAS
+// -------------------------------------------------------------------
+const ENDPOINT = "https://test.lindas.admin.ch/query";
 
-        network.on("blurNode", function () {
-            tooltip.style.visibility = 'hidden';
-        });
+async function getSparqlData(query) {
+  const url = `${ENDPOINT}?query=${encodeURIComponent(query)}`;
+  const response = await fetch(url, {
+    headers: { "Accept": "application/sparql-results+json" }
+  });
+  return response.json();
+}
 
-        network.on("hoverEdge", function (params) {
-            var edge = edges.get(params.edge);
-            tooltip.innerHTML = `<b>${edge.label}</b><br>${edge.description}`;
-            tooltip.style.visibility = 'visible';
-        });
+// Map the IRIs for classes onto simpler group names:
+function mapClassIriToGroup(iri) {
+  // Adjust these mappings if your IRIs differ
+  switch (iri) {
+    case "https://agriculture.ld.admin.ch/foag/system-map#CLS001":
+      return "Organization";
+    case "https://agriculture.ld.admin.ch/foag/system-map#CLS002":
+      return "System";
+    case "https://agriculture.ld.admin.ch/foag/system-map#CLS003":
+      return "Information";
+    default:
+      return "Other";
+  }
+}
 
-        network.on("blurEdge", function () {
-            tooltip.style.visibility = 'hidden';
-        });
+// -------------------------------------------------------------------
+// 4) Build the Vis `nodes` and `edges` from the fetched data
+// -------------------------------------------------------------------
+async function init() {
+  // Fetch node and edge data
+  const nodesJson = await getSparqlData(NODE_QUERY);
+  const edgesJson = await getSparqlData(EDGE_QUERY);
 
-        network.on("mousemove", function (params) {
-            tooltip.style.top = params.event.pageY + 10 + 'px';
-            tooltip.style.left = params.event.pageX + 10 + 'px';
-        });
-    </script>
+  // Function to insert line breaks every N characters
+  const insertLineBreaks = (text, maxLineLength = 75) => {
+    return text.replace(new RegExp(`(.{1,${maxLineLength}})(\\s|$)`, 'g'), "$1<br>");
+  };
+
+  // Parse node results
+  const nodes = nodesJson.results.bindings.map(row => {
+    const iri = row.id.value;
+    const groupIri = row.group.value;
+    const label = row.label.value;
+    const comment = row.comment ? row.comment.value : "";
+    const abbreviation = row.abbreviation ? row.abbreviation.value : "";
+
+    const groupName = mapClassIriToGroup(groupIri);
+    const displayLabel = abbreviation || label;
+
+    const header = insertLineBreaks(`${label} ${abbreviation ? `(${abbreviation})` : ""}`);
+
+    return {
+      id: iri,        // or you could hash this if needed
+      label: label,
+      group: groupName,
+      title: htmlTitle(`
+      <tt><a href='${iri}'>${iri}</a></tt>
+      <h3>${header}</h3>
+      ${insertLineBreaks(comment)}
+    `)
+    };
+  });
+
+  // Parse edge results
+  const edges = edgesJson.results.bindings.map(row => {
+    const iri = row.id.value;
+    const from = row.from.value;
+    const to = row.to.value;
+    const propertyLabel = row.label.value;
+    const propertyComment = row.comment ? row.comment.value : "";
+
+    return {
+      from: from,
+      to: to,
+      label: propertyLabel,
+      title: htmlTitle(`
+        <tt><a href='${iri}'>${iri}</a></tt>
+        <h3>${propertyLabel}</h3>
+        ${propertyComment ? `${insertLineBreaks(propertyComment)}` : ""}
+      `)
+    };
+
+  });
+
+  // -------------------------------------------------------------------
+  // 5) Render the network
+  // -------------------------------------------------------------------
+  const container = document.getElementById("network");
+  const data = { nodes, edges };
+
+  const options = {
+    nodes: {
+      widthConstraint: { minimum: 100, maximum: 200 }, // Increase box width
+      heightConstraint: { minimum: 20, maximum: 30 },  // Increase box height
+      shape: "box",
+      font: { color: "#000000", multi: "html" }  // Set node label color (black)
+    },
+    edges: {
+      width: 1,
+      smooth: { type: "dynamic" },
+      arrows: {
+        to: { enabled: true },
+        from: { enabled: false }
+      }
+    },
+    groups: {
+      System: {
+        color: {
+          background: "#000000",  // light blue
+          border: "#000000"
+        },
+        font: { color: "#FFFFFF" } // Font color for group nodes,
+    
+      },
+      Information: {
+        color: {
+          background: "#DDDDDD",  // light green
+          border: "#000000"
+        }
+      },
+      Other: {
+        color: { background: "#FFFFFF", border: "#000000" }
+      }
+    },
+    interaction: {
+      hover: true,      // Show HTML tooltips on hover
+      dragNodes: true,  // Allow manual rearranging
+      zoomView: true,
+      dragView: true
+    },
+    physics: {
+      enabled: true,
+      barnesHut: {
+        gravitationalConstant: -2000, // Increase repulsion
+        centralGravity: 0.2,
+        springLength: 200,  // Increase the default edge length
+        springConstant: 0.01
+      },
+      stabilization: { iterations: 1000 }
+    }
+
+  };
+
+  const network = new vis.Network(container, data, options);
+
+  network.fit();
+}
+
+// Kick it off
+init();
+</script>
 </body>
 </html>

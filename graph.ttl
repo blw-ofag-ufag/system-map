@@ -259,6 +259,7 @@ ns1:SYS020 a ns1:CLS002 ;
 ns1:SYS021 a ns1:CLS002 ;
     rdfs:label "Datenbank Milch"@de ;
     rdfs:comment "Die Datenbank Milch (dbmilch.ch) ist eine Webapplikation der TSM Treuhand GmbH. Sie ist die Online-Plattform der Akteure der Schweizer Milchwirtschaft. Die von der Bedag Solutions AG entwickelte Lösung kann von den kantonalen Veterinär- und Landwirtschaftsämtern oder auch anderen Organisationen in Verbindung mit Acontrol genutzt werden."@de ;
+    ns1:PRP008 ns1:ORG100 ;
     ns1:PRP102 "dbmilch"@de .
 
 ns1:SYS022 a ns1:CLS002 ;
@@ -269,6 +270,10 @@ ns1:INF001 a ns1:CLS003 ;
     rdfs:label "Kontaktangaben von Bewirtschaftenden"@de ;
     rdfs:comment "Informationen zu Kontaktangaben von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de ;
     ns1:PRP012 ns1:SYS003 .
+
+ns1:ORG100 a ns1:CLS007 ;
+    rdfs:label "TSM Treuhand GmbH"@de ;
+    rdfs:comment "Die TSM Treuhand GmbH erfüllt unterschiedliche öffentlich- und privatrechtliche Aufträge in der Agrar- und Lebensmittelbranche. TSM steht für Treuhand, Statistik und Management. Die Haupttätigkeit der TSM besteht in der Verwaltung der Datenbank dbmilch.ch. Zudem werden weitere Aufträge im Bereich Treuhand, Fondsverwaltungen, Statistiken und Exportkontrollen durchgeführt. Der Hauptauftraggeber der TSM ist das Bundesamt für Landwirtschaft (BLW)."@de .
 
 ns1:ORG001 a ns1:CLS008 ;
     rdfs:label "Bundesamt für Landwirtschaft"@de,

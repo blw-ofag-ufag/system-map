@@ -173,6 +173,12 @@ systemmap:PRP014 a owl:ObjectProperty ;
     rdfs:range systemmap:CLS003 ;
     owl:inverseOf systemmap:PRP013 .
 
+systemmap:PRP015 a owl:ObjectProperty ;
+    rdfs:label "hat Zugriffsrechte auf"@de,
+        "has access rights to"@en ;
+    rdfs:domain systemmap:CLS001 ;
+    rdfs:range systemmap:CLS003 .
+
 systemmap: a owl:Ontology ;
     dcterms:creator "Federal Office for Agriculture" ;
     dcterms:description "Eine Ontologie zur Modellierung von Organisationen, IT-Systemen und Daten für das Schweizer Bundesamt für Landwirtschaft (FOAG)."@de,

@@ -48,7 +48,9 @@ function htmlTitle(htmlString) {
 // 2) Define the SPARQL queries
 //    (Adjust them as needed; these are the user-provided queries.)
 // -------------------------------------------------------------------
+
 const lang = "de";
+
 const NODE_QUERY = `
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -133,6 +135,16 @@ async function init() {
     return text.replace(new RegExp(`(.{1,${maxLineLength}})(\\s|$)`, 'g'), "$1<br>");
   };
 
+  const shortenLabel = (label, abbreviation) => {
+    if (label.length <= 40) {
+        return label;
+    }
+    if (abbreviation) {
+        return `<b>${abbreviation}</b>`;
+    }
+    return label.substring(0, 40) + "...";
+  };
+
   // Parse node results
   const nodes = nodesJson.results.bindings.map(row => {
     const iri = row.id.value;
@@ -148,7 +160,7 @@ async function init() {
 
     return {
       id: iri,        // or you could hash this if needed
-      label: label,
+      label: shortenLabel(label, abbreviation),
       group: groupName,
       title: htmlTitle(`
       <tt><a href='${iri}'>${iri}</a></tt>

@@ -20,10 +20,10 @@ systemmap:SYS003 a systemmap:CLS002 ;
     systemmap:PRP102 "AGIS"@de .
 
 systemmap:SYS004 a systemmap:CLS002 ;
-    rdfs:label "Astat"@de ;
-    rdfs:comment "Astat ist das Business-Intelligence-System des BLW. Es stellt Analyse- und Reporting-Funktionen bereit, um datengestützte Entscheidungen zu ermöglichen. Dadurch wird die Überwachung und Bewertung agrarpolitischer Massnahmen vereinfacht."@de ;
+    rdfs:label "Business-Intelligence-System"@de ;
+    rdfs:comment "ASTAT ist das Business-Intelligence-System des BLW. Es stellt Analyse- und Reporting-Funktionen bereit, um datengestützte Entscheidungen zu ermöglichen. Dadurch wird die Überwachung und Bewertung agrarpolitischer Massnahmen vereinfacht."@de ;
     systemmap:PRP008 systemmap:ORG016 ;
-    systemmap:PRP102 "Astat"@de .
+    systemmap:PRP102 "ASTAT"@de .
 
 systemmap:SYS005 a systemmap:CLS002 ;
     rdfs:label "CePa"@de ;
@@ -53,6 +53,31 @@ systemmap:SYS009 a systemmap:CLS002 ;
     rdfs:comment "Das Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft (PGREL-NIS) macht Daten des Aktionsplans zur Vielfalt der Kulturpflanzen öffentlich zugänglich. Es bietet einen Überblick und Zugriff auf Informationen zu Pflanzengenetischen Ressourcen. Damit trägt es zur Erhaltung und Förderung pflanzengenetischer Vielfalt bei."@de ;
     systemmap:PRP008 systemmap:ORG030 ;
     systemmap:PRP102 "PGREL-NIS"@de .
+
+systemmap:SYS010 a systemmap:CLS002 ;
+    rdfs:label "HODUFLU"@de ;
+    rdfs:comment "HODUFLU ist ein Internetprogramm zur einheitlichen Verwaltung von Hof- und Recyclingdüngerverschiebungen in der Landwirtschaft. Auf dieser Seite finden Sie Zugang zur Anwendung und nützliche Dokumente wie das Benutzerhandbuch für HODUFLU."@de ;
+    systemmap:PRP008 systemmap:ORG020 .
+
+systemmap:SYS020 a systemmap:CLS002 ;
+    rdfs:label "Tierverkehrsdatenbank"@de,
+        "Banque de données sur le trafic des animaux"@fr,
+        "Banca dati sul traffico di animali"@it ;
+    rdfs:comment "Die Tierverkehrsdatenbank (TVD) ist ein schweizerisches System zur Registrierung und Nachverfolgung von Nutztieren, wie Rinder, Schweine, Schafe, Ziegen und in Gehege gehaltenes Wild. Dies ist u.a. ein wichtiger Beitrag für die Lebensmittelsicherheit und zu der Eindämmung von Tierseuchen. Dank einem zweckmässigen Erfassungssystem werden in der Datenbank Informationen wie Geburts-, Bewegungs- und Schlachtdaten sowie Halterwechsel erfasst."@de,
+        "La banque de données sur le trafic des animaux (BDTA) est un système suisse d’enregistrement et de suivi des animaux de rente, tels que les bovins, les porcs, les ovins, les caprins ou le gibier détenu en enclos. Ce système contribue notamment à la sécurité des denrées alimentaires et à l’enraiement des épizooties. Le système de saisie judicieux permet d’enregistrer des informations relatives à la naissance, aux déplacements et à l’abattage des animaux de rente ou encore aux changements de propriétaires."@fr,
+        "La Banca dati sul traffico di animali (BDTA) è un sistema svizzero per la registrazione e la tracciabilità di animali da reddito come bovini, suini, ovini, caprini e selvaggina allevata in recinti. Tale sistema contribuisce in modo significativo anche alla sicurezza alimentare e al contenimento delle epizoozie. Grazie a un sistema di registrazione mirato, nella BDTA vengono registrati i dati relativi alla nascita, agli spostamenti, alla macellazione e al cambiamento del detentore."@it ;
+    systemmap:PRP102 "TVD"@de,
+        "BDTA"@fr,
+        "BDTA"@it .
+
+systemmap:SYS021 a systemmap:CLS002 ;
+    rdfs:label "Datenbank Milch"@de ;
+    rdfs:comment "Die Datenbank Milch (dbmilch.ch) ist eine Webapplikation der TSM Treuhand GmbH. Sie ist die Online-Plattform der Akteure der Schweizer Milchwirtschaft. Die von der Bedag Solutions AG entwickelte Lösung kann von den kantonalen Veterinär- und Landwirtschaftsämtern oder auch anderen Organisationen in Verbindung mit Acontrol genutzt werden."@de ;
+    systemmap:PRP102 "dbmilch"@de .
+
+systemmap:SYS022 a systemmap:CLS002 ;
+    rdfs:label "ACmobile"@de ;
+    rdfs:comment "ACmobile ist eine plattformunabhängige, mobile Lösung für die elektronische Erfassung von Kontrollergebnissen und Massnahmen."@de .
 
 systemmap:INF001 a systemmap:CLS003 ;
     rdfs:label "Kontaktangaben von Bewirtschaftenden"@de ;

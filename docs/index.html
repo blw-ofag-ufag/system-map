@@ -3,30 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <title>FOAG System Map</title>
-  <!-- Load Google Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-    rel="stylesheet"
-  />
-  <!-- Our custom CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Vis Network -->
   <script src="https://unpkg.com/vis-network@9.1.2/standalone/umd/vis-network.min.js"></script>
-
-  <!-- Our SPARQL queries & data fetch functions -->
   <script src="query.js"></script>
-
-  <!-- Our main logic (BFS highlight, color blending, info panel, etc.) -->
   <script src="main.js"></script>
 </head>
 <body>
-
-  <!-- The network container -->
   <div id="network"></div>
-
-  <!-- Info panel in the top-right corner -->
   <div id="infoPanel" class="info-panel hidden"></div>
-
+  <div id="legend" class="legend"></div>
 </body>
 </html>

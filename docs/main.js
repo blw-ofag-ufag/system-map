@@ -76,6 +76,7 @@ async function init() {
     // 1) Fetch node & edge data from your queries (defined in query.js)
     const nodesJson = await getSparqlData(NODE_QUERY);
     const edgesJson = await getSparqlData(EDGE_QUERY);
+    const classesJson = await getSparqlData(CLASS_QUERY);
 
     // 2) Parse them into Vis-friendly arrays
     const nodes = nodesJson.results.bindings.map(row => {
@@ -309,6 +310,46 @@ async function init() {
         // hide the info panel
         hideNodeInfo();
     });
+
+    function buildLegend(classRows) {
+    // Grab the legend <div>
+    const legendEl = document.getElementById("legend");
+    
+    // We'll accumulate HTML
+    let html = "";
+    
+    classRows.forEach(row => {
+        // Each row: row.iri.value, row.label.value, row.comment.value, etc.
+        const iri = row.iri.value;
+        const label = row.label.value;
+        const comment = row.comment.value || "";
+    
+        // Convert IRI to group name using the same function you use for nodes
+        const groupName = mapClassIriToGroup(iri);
+    
+        // Look up the color in your groupColors map
+        // Make sure it's the same `groupColors` used to color your nodes
+        const c = groupColors[groupName];
+        // If it's not recognized, fallback to groupColors.Other
+        const color = c || groupColors.Other;
+    
+        // We'll show a color box + label. Optionally also show comment.
+        html += `
+        <div class="legend-item">
+            <div class="legend-swatch" style="background: ${color.background}; border-color: ${color.border}"></div>
+            <div>
+            <strong>${label}</strong>
+            <br>
+            <small>${comment}</small>
+            </div>
+        </div>
+        `;
+    });
+    
+    legendEl.innerHTML = html;
+    }      
+
+    buildLegend(classesJson.results.bindings);
 }
 
 // Kick off init() once page loads

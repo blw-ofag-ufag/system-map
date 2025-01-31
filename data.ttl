@@ -59,6 +59,12 @@ systemmap:SYS010 a systemmap:CLS002 ;
     rdfs:comment "HODUFLU ist ein Internetprogramm zur einheitlichen Verwaltung von Hof- und Recyclingdüngerverschiebungen in der Landwirtschaft. Auf dieser Seite finden Sie Zugang zur Anwendung und nützliche Dokumente wie das Benutzerhandbuch für HODUFLU."@de ;
     systemmap:PRP008 systemmap:ORG020 .
 
+systemmap:SYS011 a systemmap:CLS002 ;
+    rdfs:label "Protection Variété"@de ;
+    rdfs:comment "ProVar bedeutet Sortenschutz (protection variété) und ist die Datenbank zur Verwaltung aller wichtigen Informationen zu den Sortenarten von Pflanzen. Das Sortenschutzrecht regelt den gewerblichen Schutz neuer Pflanzenzüchtungen sowie deren gewerbsmässiger Nutzung."@de ;
+    systemmap:PRP008 systemmap:ORG032 ;
+    systemmap:PRP102 "ProVar"@de .
+
 systemmap:SYS020 a systemmap:CLS002 ;
     rdfs:label "Tierverkehrsdatenbank"@de,
         "Banque de données sur le trafic des animaux"@fr,
@@ -86,10 +92,42 @@ systemmap:SYS023 a systemmap:CLS002 ;
     rdfs:comment "Barto ist eine digitale Plattform für die Landwirtschaft, die eine effiziente Betriebsführung, Dokumentation und Analyse von Betriebsdaten ermöglicht. Sie integriert verschiedene agronomische und administrative Funktionen und bietet Landwirtinnen und Landwirten eine zentrale Lösung für die Verwaltung ihres Betriebs. Barto wird von der Barto AG betrieben und arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen."@de ;
     systemmap:PRP008 systemmap:ORG102 .
 
+systemmap:SYS024 a systemmap:CLS002 ;
+    rdfs:label "Pflanzensorten-Datenbank"@de,
+        "Plant Variety Database"@en ;
+    rdfs:comment "Die PLUTO-Datenbank enthält Informationen über Pflanzenarten und -sorten von UPOV-Mitgliedern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD). Die PLUTO-Datenbank bietet ein Suchinstrument für Sortenbezeichnungen, um die Unterscheidbarkeit neuer Sorten sicherzustellen."@de ;
+    systemmap:PRP008 systemmap:ORG200 ;
+    systemmap:PRP102 "PLUTO"@de,
+        "PLUTO"@en,
+        "PLUTO"@fr,
+        "PLUTO"@it .
+
 systemmap:INF001 a systemmap:CLS003 ;
     rdfs:label "Kontaktangaben von Bewirtschaftenden"@de ;
     rdfs:comment "Informationen zu Kontaktangaben von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de ;
     systemmap:PRP012 systemmap:SYS003 .
+
+systemmap:INF010 a systemmap:CLS003 ;
+    rdfs:label "Nationaler Sortenkatalog"@de ;
+    rdfs:comment "Katalog von anerkannten landwirtschaftlich genutzten Pflanzensorten in der Schweiz. Die Informationen dazu werden von den Züchtern erfasst."@de ;
+    systemmap:PRP012 systemmap:SYS011 ;
+    systemmap:PRP014 systemmap:INF012 .
+
+systemmap:INF011 a systemmap:CLS003 ;
+    rdfs:label "Kundeninformationen"@de ;
+    rdfs:comment "Kontaktaddressen der Züchter, welche Informationen zu den Sorten an ProVar geben."@de ;
+    systemmap:PRP012 systemmap:SYS011 .
+
+systemmap:INF012 a systemmap:CLS003 ;
+    rdfs:label "Globale Pflanzenliste"@de ;
+    rdfs:comment "Liste aller möglichen Pflanzenarten mit entsprechenden Pflanzenarten-Codes. UPOV verwendet ein spezifisches Codesystem, um Pflanzenarten und -gattungen eindeutig zu identifizieren. Diese sogenannten UPOV-Codes bestehen in der Regel aus fünf Buchstaben für die Gattung und drei Buchstaben für die Art, zum Beispiel steht 'PRUNU_ARM' für <i>Prunus armeniaca</i> (Aprikose). Dieses System erleichtert die Klassifizierung und den Informationsaustausch über Pflanzensorten."@de ;
+    systemmap:PRP012 systemmap:SYS024 .
+
+systemmap:INF013 a systemmap:CLS003 ;
+    rdfs:label "Globaler Sortenkatalog"@de ;
+    rdfs:comment "Informationen zu Pflanzensorten aus UPOV-Mitgliedsländern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD). Diese Sortenliste dient als zentrales Register für Sortenbezeichnungen und unterstützt bei der Überprüfung der Unterscheidbarkeit neuer Sorten."@de ;
+    systemmap:PRP012 systemmap:SYS024 ;
+    systemmap:PRP014 systemmap:INF010 .
 
 systemmap:ORG100 a systemmap:CLS007 ;
     rdfs:label "TSM Treuhand GmbH"@de ;
@@ -107,6 +145,11 @@ systemmap:ORG102 a systemmap:CLS007 ;
 systemmap:ORG103 a systemmap:CLS007 ;
     rdfs:label "Fenaco Genossenschaft"@de ;
     rdfs:comment "Die Fenaco Genossenschaft ist ein schweizerisches Agrarunternehmen, das die Landwirtinnen und Landwirte dabei unterstützt, ihre Betriebe wirtschaftlich erfolgreich zu führen. Sie ist in den Bereichen Agrarhandel, Lebensmittelproduktion, Detailhandel und Energie tätig. Fenaco ist Eigentümerin von Marken wie Landi, Volg, Agrola und diverse Lebensmittelproduzenten. Die Genossenschaft gehört Schweizer Landwirten und hat ihren Hauptsitz in Bern."@de .
+
+systemmap:ORG200 a systemmap:CLS007 ;
+    rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de ;
+    rdfs:comment "Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz. Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen."@de ;
+    systemmap:PRP101 "UPOV"@de .
 
 systemmap:ORG001 a systemmap:CLS008 ;
     rdfs:label "Bundesamt für Landwirtschaft"@de,
@@ -210,6 +253,12 @@ systemmap:ORG031 a systemmap:CLS008 ;
     rdfs:comment "Die Aufgabe des Fachbereiches Pflanzengesundheit (FBPG) ist es, die Einschleppung und Ausbreitung von (geregelten) besonders gefährlichen Schädlingen und Krankheiten von Pflanzen zu vermeiden. Dies ist wichtig, um wirtschaftliche, soziale und ökologische Schäden zu vermeiden. Der Eidgenössische Pflanzenschutzdienst (EPSD), der vom Fachbereich gemeinsam mit der Sektion Waldschutz und Waldgesundheit des Bundesamts für Umwelt (BAFU) geführt wird, ist für die Umsetzung dieser Aufgabe auf nationaler Ebene zuständig."@de ;
     systemmap:PRP001 systemmap:ORG005 ;
     systemmap:PRP101 "FBPG"@de .
+
+systemmap:ORG032 a systemmap:CLS008 ;
+    rdfs:label "Fachbereich nachhaltiger Pflanzenschutz und Sorten"@de ;
+    rdfs:comment "Der Fachbereich nachhaltiger Pflanzenschutz und Sorten (FB NPS) sorgt für den Schutz der Kulturen, den Vollzug des Saatgutrechtes und den Sortenschutz. Dabei werden sowohl präventive als auch direkte Pflanzenschutzmassnahmen angewendet, um hochwertige Lebensmittel zu produzieren. Zudem ist das BLW für die Weiterentwicklung der Verordnungen zu Vermehrungsmaterial, den Nationalen Sortenkatalog und den Vollzug der Bestimmungen in Zusammenarbeit mit Agroscope verantwortlich."@de ;
+    systemmap:PRP001 systemmap:ORG005 ;
+    systemmap:PRP101 "FBNPS"@de .
 
 systemmap:ORG040 a systemmap:CLS008 ;
     rdfs:label "Fachbereich Ein- und Ausfuhr"@de ;

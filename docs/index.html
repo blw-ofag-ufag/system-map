@@ -238,12 +238,14 @@ async function init() {
     physics: {
       enabled: true,
       barnesHut: {
-        gravitationalConstant: -500, // Increase repulsion
-        centralGravity: 0.01,
-        springLength: 500,  // Increase the default edge length
-        springConstant: 0.01
+        gravitationalConstant: -3000, // Increase repulsion
+        centralGravity: 0.03,
+        springLength: 200,  // Increase the default edge length
+        springConstant: 0.05
       },
-      stabilization: { iterations: 500 }
+      stabilization: {
+        iterations: 1000
+      }
     }
 
   };

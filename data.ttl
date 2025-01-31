@@ -66,6 +66,7 @@ systemmap:SYS020 a systemmap:CLS002 ;
     rdfs:comment "Die Tierverkehrsdatenbank (TVD) ist ein schweizerisches System zur Registrierung und Nachverfolgung von Nutztieren, wie Rinder, Schweine, Schafe, Ziegen und in Gehege gehaltenes Wild. Dies ist u.a. ein wichtiger Beitrag für die Lebensmittelsicherheit und zu der Eindämmung von Tierseuchen. Dank einem zweckmässigen Erfassungssystem werden in der Datenbank Informationen wie Geburts-, Bewegungs- und Schlachtdaten sowie Halterwechsel erfasst."@de,
         "La banque de données sur le trafic des animaux (BDTA) est un système suisse d’enregistrement et de suivi des animaux de rente, tels que les bovins, les porcs, les ovins, les caprins ou le gibier détenu en enclos. Ce système contribue notamment à la sécurité des denrées alimentaires et à l’enraiement des épizooties. Le système de saisie judicieux permet d’enregistrer des informations relatives à la naissance, aux déplacements et à l’abattage des animaux de rente ou encore aux changements de propriétaires."@fr,
         "La Banca dati sul traffico di animali (BDTA) è un sistema svizzero per la registrazione e la tracciabilità di animali da reddito come bovini, suini, ovini, caprini e selvaggina allevata in recinti. Tale sistema contribuisce in modo significativo anche alla sicurezza alimentare e al contenimento delle epizoozie. Grazie a un sistema di registrazione mirato, nella BDTA vengono registrati i dati relativi alla nascita, agli spostamenti, alla macellazione e al cambiamento del detentore."@it ;
+    systemmap:PRP008 systemmap:ORG101 ;
     systemmap:PRP102 "TVD"@de,
         "BDTA"@fr,
         "BDTA"@it .
@@ -80,6 +81,11 @@ systemmap:SYS022 a systemmap:CLS002 ;
     rdfs:label "ACmobile"@de ;
     rdfs:comment "ACmobile ist eine plattformunabhängige, mobile Lösung für die elektronische Erfassung von Kontrollergebnissen und Massnahmen."@de .
 
+systemmap:SYS023 a systemmap:CLS002 ;
+    rdfs:label "Barto"@de ;
+    rdfs:comment "Barto ist eine digitale Plattform für die Landwirtschaft, die eine effiziente Betriebsführung, Dokumentation und Analyse von Betriebsdaten ermöglicht. Sie integriert verschiedene agronomische und administrative Funktionen und bietet Landwirtinnen und Landwirten eine zentrale Lösung für die Verwaltung ihres Betriebs. Barto wird von der Barto AG betrieben und arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen."@de ;
+    systemmap:PRP008 systemmap:ORG102 .
+
 systemmap:INF001 a systemmap:CLS003 ;
     rdfs:label "Kontaktangaben von Bewirtschaftenden"@de ;
     rdfs:comment "Informationen zu Kontaktangaben von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de ;
@@ -88,6 +94,19 @@ systemmap:INF001 a systemmap:CLS003 ;
 systemmap:ORG100 a systemmap:CLS007 ;
     rdfs:label "TSM Treuhand GmbH"@de ;
     rdfs:comment "Die TSM Treuhand GmbH erfüllt unterschiedliche öffentlich- und privatrechtliche Aufträge in der Agrar- und Lebensmittelbranche. TSM steht für Treuhand, Statistik und Management. Die Haupttätigkeit der TSM besteht in der Verwaltung der Datenbank dbmilch.ch. Zudem werden weitere Aufträge im Bereich Treuhand, Fondsverwaltungen, Statistiken und Exportkontrollen durchgeführt. Der Hauptauftraggeber der TSM ist das Bundesamt für Landwirtschaft (BLW)."@de .
+
+systemmap:ORG101 a systemmap:CLS007 ;
+    rdfs:label "Identitas AG"@de ;
+    rdfs:comment "Die Identitas AG entwickelt und betreibt Informationssysteme für die Tierverkehrsdatenbank der Schweiz. Sie stellt Lösungen für die Rückverfolgbarkeit von Tieren, Tiergesundheit und Lebensmittelsicherheit bereit. Als IT-Dienstleister für Bund, Kantone und private Akteure bietet Identitas AG digitale Services zur Erfassung, Verarbeitung und Analyse von Tier- und Betriebsdaten an. Das Unternehmen hat seinen Sitz in Bern."@de .
+
+systemmap:ORG102 a systemmap:CLS007 ;
+    rdfs:label "Barto AG"@de ;
+    rdfs:comment "Die Barto AG entwickelt und betreibt eine digitale Plattform für die Landwirtschaft. Sie bietet Landwirtinnen und Landwirten eine zentrale Lösung zur Betriebsführung, Dokumentation und Analyse von Betriebsdaten. Die Plattform integriert verschiedene agronomische und administrative Funktionen und ermöglicht eine effiziente Verwaltung von Ressourcen. Barto AG arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen. Der Sitz des Unternehmens befindet sich in der Schweiz."@de ;
+    systemmap:PRP005 systemmap:ORG103 .
+
+systemmap:ORG103 a systemmap:CLS007 ;
+    rdfs:label "Fenaco Genossenschaft"@de ;
+    rdfs:comment "Die Fenaco Genossenschaft ist ein schweizerisches Agrarunternehmen, das die Landwirtinnen und Landwirte dabei unterstützt, ihre Betriebe wirtschaftlich erfolgreich zu führen. Sie ist in den Bereichen Agrarhandel, Lebensmittelproduktion, Detailhandel und Energie tätig. Fenaco ist Eigentümerin von Marken wie Landi, Volg, Agrola und diverse Lebensmittelproduzenten. Die Genossenschaft gehört Schweizer Landwirten und hat ihren Hauptsitz in Bern."@de .
 
 systemmap:ORG001 a systemmap:CLS008 ;
     rdfs:label "Bundesamt für Landwirtschaft"@de,
@@ -196,4 +215,10 @@ systemmap:ORG040 a systemmap:CLS008 ;
     rdfs:label "Fachbereich Ein- und Ausfuhr"@de ;
     systemmap:PRP001 systemmap:ORG007 ;
     systemmap:PRP101 "FBEA"@de .
+
+systemmap:ORG041 a systemmap:CLS008 ;
+    rdfs:label "Fachbereich Tierische Produkte und Tierzucht"@de ;
+    rdfs:comment "Die Mitgestaltung der agrarpolitischen Rahmenbedingungen und deren Weiterentwicklung im Bereich der tierischen Produkte und der Tierzucht gehören zu den Kernaufgaben des FBTT. Weiter stellt er den reibungslosen und korrekten Vollzug der einschlägigen Bestimmungen des Landwirtschaftsgesetzes und folgender Bundesratsverordnungen sicher: Milchpreisstützungsverordnung, Schlachtviehverordnung, Eierverordnung, Verordnung über die Identitas AG und die Tierverkehrsdatenbank, Entsorgungsbeitragsverordnung, Landwirtschaftliche Deklarationsverordnung, Höchstbestandesverordnung, Verordnung über die Branchen- und Produzentenorganisationen, Schafwollverordnung und Tierzuchtverordnung."@de ;
+    systemmap:PRP001 systemmap:ORG007 ;
+    systemmap:PRP101 "FBTT"@de .
 

@@ -160,23 +160,24 @@ ns1:PRP012 a owl:ObjectProperty ;
     owl:inverseOf ns1:PRP011 .
 
 ns1:PRP013 a owl:ObjectProperty ;
-    rdfs:label "leitet ab von"@de,
-        "derives"@en ;
+    rdfs:label "informiert"@de,
+        "informs"@en ;
     rdfs:domain ns1:CLS003 ;
     rdfs:range ns1:CLS003 ;
     owl:inverseOf ns1:PRP014 .
 
 ns1:PRP014 a owl:ObjectProperty ;
-    rdfs:label "bezieht Informationen von"@de,
+    rdfs:label "erhält Informationen von"@de,
         "gets information from"@en ;
-    rdfs:comment "Zeigt an, dass eine Informationseinheit von einer anderen abgeleitet ist. Diese Beziehung wird gebraucht, um Informationsflüsse darzustellen. Diese müssen nicht zwingen (durch eine API oder Ähnliches) formalisiert sein." ;
+    rdfs:comment "Zeigt an, dass eine Informationseinheit X von einer anderen Informationseinheit Y abgeleitet ist. Diese Beziehung wird gebraucht, um Informationsflüsse darzustellen. Diese müssen nicht zwingen (durch eine API oder Ähnliches) formalisiert sein." ;
     rdfs:domain ns1:CLS003 ;
     rdfs:range ns1:CLS003 ;
     owl:inverseOf ns1:PRP013 .
 
 ns1:PRP015 a owl:ObjectProperty ;
-    rdfs:label "hat Zugriffsrechte auf"@de,
-        "has access rights to"@en ;
+    rdfs:label "hat Zugriff auf"@de,
+        "has access to"@en ;
+    rdfs:comment "Zeigt an, dass eine Organisation X die Rechte zum Zugriff auf die Informationseinheit Y hat."@de ;
     rdfs:domain ns1:CLS001 ;
     rdfs:range ns1:CLS003 .
 
@@ -332,6 +333,31 @@ ns1:INF021 a ns1:CLS003 ;
     rdfs:comment "Kontaktdaten der Milchverarbeiter wie Adressen oder Identifikationsnummern."@de ;
     ns1:PRP012 ns1:SYS021 .
 
+ns1:INF022 a ns1:CLS003 ;
+    rdfs:label "Daten zur Milchproduktion"@de ;
+    rdfs:comment "Monatliche Produktionsmengen (in kg) der im Vormonat gelieferten Kuh- und Büffelmilch von allen Milchproduzenten. Das BLW benötigt diese Information für die Ausrichtung der Zulage für Verkehrsmilch."@de ;
+    ns1:PRP012 ns1:SYS021 .
+
+ns1:INF023 a ns1:CLS003 ;
+    rdfs:label "Daten zur Milchverwertung"@de ;
+    rdfs:comment "Diese Daten sind essenziell für die Berechnung und Auszahlung von Zulagen für verkäste Milch sowie für die Fütterung ohne Silage durch das Bundesamt für Landwirtschaft (BLW)."@de ;
+    ns1:PRP012 ns1:SYS021 .
+
+ns1:INF024 a ns1:CLS003 ;
+    rdfs:label "Resultate der Milchprüfung"@de ;
+    rdfs:comment "Ergebnisse der öffentlich-rechtlichen Milchprüfung. Bei der öffentlich-rechtlichen Milchprüfung wird die Kuhmilch zweimal monatlich auf die Prüfmerkmale Keimzahl, somatische Zellen und Hemmstoffe untersucht. Hygienisch ungenügende Resultate haben Beanstandungen und bei länger andauernden Hygienemängeln eine amtliche Milchliefersperre zur Folge. Die Ergebnisse der Milchprüfung werden über die Plattform dbmilch.ch an berechtigte Kreise bereitgestellt."@de ;
+    ns1:PRP012 ns1:SYS021 .
+
+ns1:INF025 a ns1:CLS003 ;
+    rdfs:label "Daten zur Milchsegmentierung"@de ;
+    rdfs:comment "Daten zur Segmentierung der Milchverwertung gemäß dem BOM1-Reglement."@de ;
+    ns1:PRP012 ns1:SYS021 .
+
+ns1:INF026 a ns1:CLS003 ;
+    rdfs:label "Milchstatistik"@de ;
+    rdfs:comment "Monatliche Statistiken und Mehrjahresvergleiche, die Angaben über die produzierte Milch und deren Verarbeitung in verschiedene Produktgruppen enthalten"@de ;
+    ns1:PRP012 ns1:SYS021 .
+
 ns1:ORG100 a ns1:CLS007 ;
     rdfs:label "TSM Treuhand GmbH"@de ;
     rdfs:comment "Die TSM Treuhand GmbH erfüllt unterschiedliche öffentlich- und privatrechtliche Aufträge in der Agrar- und Lebensmittelbranche. TSM steht für Treuhand, Statistik und Management. Die Haupttätigkeit der TSM besteht in der Verwaltung der Datenbank dbmilch.ch. Zudem werden weitere Aufträge im Bereich Treuhand, Fondsverwaltungen, Statistiken und Exportkontrollen durchgeführt. Der Hauptauftraggeber der TSM ist das Bundesamt für Landwirtschaft (BLW)."@de .
@@ -467,5 +493,9 @@ ns1:ORG041 a ns1:CLS008 ;
     rdfs:label "Fachbereich Tierische Produkte und Tierzucht"@de ;
     rdfs:comment "Die Mitgestaltung der agrarpolitischen Rahmenbedingungen und deren Weiterentwicklung im Bereich der tierischen Produkte und der Tierzucht gehören zu den Kernaufgaben des FBTT. Weiter stellt er den reibungslosen und korrekten Vollzug der einschlägigen Bestimmungen des Landwirtschaftsgesetzes und folgender Bundesratsverordnungen sicher: Milchpreisstützungsverordnung, Schlachtviehverordnung, Eierverordnung, Verordnung über die Identitas AG und die Tierverkehrsdatenbank, Entsorgungsbeitragsverordnung, Landwirtschaftliche Deklarationsverordnung, Höchstbestandesverordnung, Verordnung über die Branchen- und Produzentenorganisationen, Schafwollverordnung und Tierzuchtverordnung."@de ;
     ns1:PRP001 ns1:ORG007 ;
+    ns1:PRP015 ns1:INF020,
+        ns1:INF021,
+        ns1:INF022,
+        ns1:INF023 ;
     ns1:PRP101 "FBTT"@de .
 

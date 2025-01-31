@@ -145,6 +145,31 @@ systemmap:INF021 a systemmap:CLS003 ;
     rdfs:comment "Kontaktdaten der Milchverarbeiter wie Adressen oder Identifikationsnummern."@de ;
     systemmap:PRP012 systemmap:SYS021 .
 
+systemmap:INF022 a systemmap:CLS003 ;
+    rdfs:label "Daten zur Milchproduktion"@de ;
+    rdfs:comment "Monatliche Produktionsmengen (in kg) der im Vormonat gelieferten Kuh- und Büffelmilch von allen Milchproduzenten. Das BLW benötigt diese Information für die Ausrichtung der Zulage für Verkehrsmilch."@de ;
+    systemmap:PRP012 systemmap:SYS021 .
+
+systemmap:INF023 a systemmap:CLS003 ;
+    rdfs:label "Daten zur Milchverwertung"@de ;
+    rdfs:comment "Diese Daten sind essenziell für die Berechnung und Auszahlung von Zulagen für verkäste Milch sowie für die Fütterung ohne Silage durch das Bundesamt für Landwirtschaft (BLW)."@de ;
+    systemmap:PRP012 systemmap:SYS021 .
+
+systemmap:INF024 a systemmap:CLS003 ;
+    rdfs:label "Resultate der Milchprüfung"@de ;
+    rdfs:comment "Ergebnisse der öffentlich-rechtlichen Milchprüfung. Bei der öffentlich-rechtlichen Milchprüfung wird die Kuhmilch zweimal monatlich auf die Prüfmerkmale Keimzahl, somatische Zellen und Hemmstoffe untersucht. Hygienisch ungenügende Resultate haben Beanstandungen und bei länger andauernden Hygienemängeln eine amtliche Milchliefersperre zur Folge. Die Ergebnisse der Milchprüfung werden über die Plattform dbmilch.ch an berechtigte Kreise bereitgestellt."@de ;
+    systemmap:PRP012 systemmap:SYS021 .
+
+systemmap:INF025 a systemmap:CLS003 ;
+    rdfs:label "Daten zur Milchsegmentierung"@de ;
+    rdfs:comment "Daten zur Segmentierung der Milchverwertung gemäß dem BOM1-Reglement."@de ;
+    systemmap:PRP012 systemmap:SYS021 .
+
+systemmap:INF026 a systemmap:CLS003 ;
+    rdfs:label "Milchstatistik"@de ;
+    rdfs:comment "Monatliche Statistiken und Mehrjahresvergleiche, die Angaben über die produzierte Milch und deren Verarbeitung in verschiedene Produktgruppen enthalten"@de ;
+    systemmap:PRP012 systemmap:SYS021 .
+
 systemmap:ORG100 a systemmap:CLS007 ;
     rdfs:label "TSM Treuhand GmbH"@de ;
     rdfs:comment "Die TSM Treuhand GmbH erfüllt unterschiedliche öffentlich- und privatrechtliche Aufträge in der Agrar- und Lebensmittelbranche. TSM steht für Treuhand, Statistik und Management. Die Haupttätigkeit der TSM besteht in der Verwaltung der Datenbank dbmilch.ch. Zudem werden weitere Aufträge im Bereich Treuhand, Fondsverwaltungen, Statistiken und Exportkontrollen durchgeführt. Der Hauptauftraggeber der TSM ist das Bundesamt für Landwirtschaft (BLW)."@de .
@@ -280,5 +305,9 @@ systemmap:ORG041 a systemmap:CLS008 ;
     rdfs:label "Fachbereich Tierische Produkte und Tierzucht"@de ;
     rdfs:comment "Die Mitgestaltung der agrarpolitischen Rahmenbedingungen und deren Weiterentwicklung im Bereich der tierischen Produkte und der Tierzucht gehören zu den Kernaufgaben des FBTT. Weiter stellt er den reibungslosen und korrekten Vollzug der einschlägigen Bestimmungen des Landwirtschaftsgesetzes und folgender Bundesratsverordnungen sicher: Milchpreisstützungsverordnung, Schlachtviehverordnung, Eierverordnung, Verordnung über die Identitas AG und die Tierverkehrsdatenbank, Entsorgungsbeitragsverordnung, Landwirtschaftliche Deklarationsverordnung, Höchstbestandesverordnung, Verordnung über die Branchen- und Produzentenorganisationen, Schafwollverordnung und Tierzuchtverordnung."@de ;
     systemmap:PRP001 systemmap:ORG007 ;
+    systemmap:PRP015 systemmap:INF020,
+        systemmap:INF021,
+        systemmap:INF022,
+        systemmap:INF023 ;
     systemmap:PRP101 "FBTT"@de .
 

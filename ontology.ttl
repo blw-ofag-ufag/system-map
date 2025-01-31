@@ -160,23 +160,24 @@ systemmap:PRP012 a owl:ObjectProperty ;
     owl:inverseOf systemmap:PRP011 .
 
 systemmap:PRP013 a owl:ObjectProperty ;
-    rdfs:label "leitet ab von"@de,
-        "derives"@en ;
+    rdfs:label "informiert"@de,
+        "informs"@en ;
     rdfs:domain systemmap:CLS003 ;
     rdfs:range systemmap:CLS003 ;
     owl:inverseOf systemmap:PRP014 .
 
 systemmap:PRP014 a owl:ObjectProperty ;
-    rdfs:label "bezieht Informationen von"@de,
+    rdfs:label "erhält Informationen von"@de,
         "gets information from"@en ;
-    rdfs:comment "Zeigt an, dass eine Informationseinheit von einer anderen abgeleitet ist. Diese Beziehung wird gebraucht, um Informationsflüsse darzustellen. Diese müssen nicht zwingen (durch eine API oder Ähnliches) formalisiert sein." ;
+    rdfs:comment "Zeigt an, dass eine Informationseinheit X von einer anderen Informationseinheit Y abgeleitet ist. Diese Beziehung wird gebraucht, um Informationsflüsse darzustellen. Diese müssen nicht zwingen (durch eine API oder Ähnliches) formalisiert sein." ;
     rdfs:domain systemmap:CLS003 ;
     rdfs:range systemmap:CLS003 ;
     owl:inverseOf systemmap:PRP013 .
 
 systemmap:PRP015 a owl:ObjectProperty ;
-    rdfs:label "hat Zugriffsrechte auf"@de,
-        "has access rights to"@en ;
+    rdfs:label "hat Zugriff auf"@de,
+        "has access to"@en ;
+    rdfs:comment "Zeigt an, dass eine Organisation X die Rechte zum Zugriff auf die Informationseinheit Y hat."@de ;
     rdfs:domain systemmap:CLS001 ;
     rdfs:range systemmap:CLS003 .
 

@@ -1,5 +1,11 @@
+// Function to get query parameters from URL
+function getQueryParam(name, defaultValue) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name) || defaultValue;
+}
+
 // language code used in the queries
-window.lang = "de";
+window.lang = getQueryParam("lang", "de");
 
 // set SPARQL endpoint
 window.ENDPOINT = "https://test.lindas.admin.ch/query";

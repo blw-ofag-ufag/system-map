@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>FOAG System Map</title>
-  <!-- Load Google Font-->¨
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Load Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
   <!-- Vis Network -->
-  <script src="https://unpkg.com/vis-network@9.1.2/standalone/umd/vis-network.min.js"></script>
+  <script
+    src="https://unpkg.com/vis-network@9.1.2/standalone/umd/vis-network.min.js"
+  ></script>
   <style>
-    html, body {
+    html,
+    body {
       width: 100%;
       height: 100%;
       margin: 0;
@@ -21,7 +27,7 @@
       box-sizing: border-box;
     }
     .vis-tooltip {
-      background: #ffffff !important; /* Dark background */
+      background: #ffffff !important; /* White background */
       padding: 8px 12px !important;
       border-radius: 3px !important;
       font-family: "Poppins", sans-serif !important; /* Use Google Font */
@@ -31,7 +37,6 @@
   </style>
 </head>
 <body>
-
 <div id="network"></div>
 
 <script>
@@ -45,71 +50,68 @@ function htmlTitle(htmlString) {
 }
 
 // -------------------------------------------------------------------
-// 2) Define the SPARQL queries
-//    (Adjust them as needed; these are the user-provided queries.)
+// 2) Example SPARQL queries (adjust to your use-case):
 // -------------------------------------------------------------------
-
 const lang = "de";
 
 const NODE_QUERY = `
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map#>
-SELECT ?id ?group ?label ?comment ?abbreviation
-WHERE {
-  GRAPH <https://lindas.admin.ch/foag/ontologies> {
-    ?id a ?group .
-    ?group rdfs:subClassOf* ?supergroup .
-    VALUES ?supergroup { systemmap:CLS001 systemmap:CLS002 systemmap:CLS003 }
-    ?id rdfs:label ?label .
-    FILTER(LANG(?label) = "${lang}")
-    OPTIONAL {
-      ?id rdfs:comment ?comment .
-      FILTER(LANG(?comment) = "${lang}")
-    }
-    OPTIONAL {
-      ?id ?hasAbbreviation ?abbreviation .
-      FILTER(LANG(?abbreviation) = "${lang}")
-      VALUES ?hasAbbreviation { systemmap:PRP101 systemmap:PRP102 }
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  PREFIX owl: <http://www.w3.org/2002/07/owl#>
+  PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map#>
+  SELECT ?id ?group ?label ?comment ?abbreviation
+  WHERE {
+    GRAPH <https://lindas.admin.ch/foag/ontologies> {
+      ?id a ?group .
+      ?group rdfs:subClassOf* ?supergroup .
+      VALUES ?supergroup { systemmap:CLS001 systemmap:CLS002 systemmap:CLS003 }
+      ?id rdfs:label ?label .
+      FILTER(LANG(?label) = "${lang}")
+      OPTIONAL {
+        ?id rdfs:comment ?comment .
+        FILTER(LANG(?comment) = "${lang}")
+      }
+      OPTIONAL {
+        ?id ?hasAbbreviation ?abbreviation .
+        FILTER(LANG(?abbreviation) = "${lang}")
+        VALUES ?hasAbbreviation { systemmap:PRP101 systemmap:PRP102 }
+      }
     }
   }
-}
 `;
 
 const EDGE_QUERY = `
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-SELECT (?property AS ?id) ?from ?to ?label ?comment
-WHERE {
-  GRAPH <https://lindas.admin.ch/foag/ontologies> {
-    ?from ?property ?to .
-    ?property a owl:ObjectProperty .
-    ?property rdfs:label ?label .
-    FILTER(LANG(?label)="${lang}")
-    OPTIONAL {
-        ?property rdfs:comment ?comment .
-        FILTER(LANG(?comment)="${lang}")
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  PREFIX owl: <http://www.w3.org/2002/07/owl#>
+  SELECT (?property AS ?id) ?from ?to ?label ?comment
+  WHERE {
+    GRAPH <https://lindas.admin.ch/foag/ontologies> {
+      ?from ?property ?to .
+      ?property a owl:ObjectProperty .
+      ?property rdfs:label ?label .
+      FILTER(LANG(?label)="${lang}")
+      OPTIONAL {
+          ?property rdfs:comment ?comment .
+          FILTER(LANG(?comment)="${lang}")
+      }
     }
   }
-}
 `;
 
 // -------------------------------------------------------------------
-// 3) Fetch data from LINDAS
+// 3) Fetch SPARQL data from LINDAS
 // -------------------------------------------------------------------
 const ENDPOINT = "https://test.lindas.admin.ch/query";
 
 async function getSparqlData(query) {
   const url = `${ENDPOINT}?query=${encodeURIComponent(query)}`;
   const response = await fetch(url, {
-    headers: { "Accept": "application/sparql-results+json" }
+    headers: { Accept: "application/sparql-results+json" },
   });
   return response.json();
 }
 
-// Map the IRIs for classes onto simpler group names:
+// Map the IRIs for classes onto simpler group names
 function mapClassIriToGroup(iri) {
-  // Adjust these mappings if your IRIs differ
   switch (iri) {
     case "https://agriculture.ld.admin.ch/foag/system-map#CLS001":
       return "Organization";
@@ -130,23 +132,23 @@ async function init() {
   const nodesJson = await getSparqlData(NODE_QUERY);
   const edgesJson = await getSparqlData(EDGE_QUERY);
 
-  // Function to insert line breaks every N characters
-  const insertLineBreaks = (text, maxLineLength = 75) => {
-    return text.replace(new RegExp(`(.{1,${maxLineLength}})(\\s|$)`, 'g'), "$1<br>");
-  };
+  // Helper to insert line breaks every N characters
+  function insertLineBreaks(text, maxLineLength = 75) {
+    return text.replace(
+      new RegExp(`(.{1,${maxLineLength}})(\\s|$)`, "g"),
+      "$1<br>"
+    );
+  }
 
-  const shortenLabel = (label, abbreviation) => {
-    if (label.length <= 40) {
-        return label;
-    }
-    if (abbreviation) {
-        return `<b>${abbreviation}</b>`;
-    }
+  // Optional: shorten label if it's too long
+  function shortenLabel(label, abbreviation) {
+    if (label.length <= 40) return label;
+    if (abbreviation) return abbreviation; // prefer abbreviation if present
     return label.substring(0, 40) + "...";
-  };
+  }
 
   // Parse node results
-  const nodes = nodesJson.results.bindings.map(row => {
+  const nodes = nodesJson.results.bindings.map((row) => {
     const iri = row.id.value;
     const groupIri = row.group.value;
     const label = row.label.value;
@@ -154,24 +156,24 @@ async function init() {
     const abbreviation = row.abbreviation ? row.abbreviation.value : "";
 
     const groupName = mapClassIriToGroup(groupIri);
-    const displayLabel = abbreviation || label;
-
-    const header = insertLineBreaks(`${label} ${abbreviation ? `(${abbreviation})` : ""}`);
+    const header = insertLineBreaks(
+      `${label} ${abbreviation ? `(${abbreviation})` : ""}`
+    );
 
     return {
-      id: iri,        // or you could hash this if needed
-      label: shortenLabel(label, abbreviation),
+      id: iri,
+      label: `<b>${shortenLabel(label, abbreviation)}</b>`,
       group: groupName,
       title: htmlTitle(`
-      <tt><a href='${iri}'>${iri}</a></tt>
-      <h3>${header}</h3>
-      ${insertLineBreaks(comment)}
-    `)
+        <tt><a href='${iri}' target='_blank'>${iri}</a></tt>
+        <h3>${header}</h3>
+        ${insertLineBreaks(comment)}
+      `),
     };
   });
 
   // Parse edge results
-  const edges = edgesJson.results.bindings.map(row => {
+  const edges = edgesJson.results.bindings.map((row) => {
     const iri = row.id.value;
     const from = row.from.value;
     const to = row.to.value;
@@ -179,83 +181,222 @@ async function init() {
     const propertyComment = row.comment ? row.comment.value : "";
 
     return {
-      from: from,
-      to: to,
+      from,
+      to,
       label: propertyLabel,
       title: htmlTitle(`
-        <tt><a href='${iri}'>${iri}</a></tt>
+        <tt><a href='${iri}' target='_blank'>${iri}</a></tt>
         <h3>${propertyLabel}</h3>
         ${propertyComment ? `${insertLineBreaks(propertyComment)}` : ""}
-      `)
+      `),
     };
-
   });
 
+  // Put nodes & edges into DataSets for dynamic updates
+  const nodesDataset = new vis.DataSet(nodes);
+  const edgesDataset = new vis.DataSet(edges);
+
   // -------------------------------------------------------------------
-  // 5) Render the network
+  // 5) Create the network (keep your old settings)
   // -------------------------------------------------------------------
   const container = document.getElementById("network");
-  const data = { nodes, edges };
+  const data = { nodes: nodesDataset, edges: edgesDataset };
 
   const options = {
     nodes: {
-      widthConstraint: { minimum: 200, maximum: 200 }, // Increase box width
-      heightConstraint: { minimum: 30, maximum: 30 },  // Increase box height
+      widthConstraint: { minimum: 150, maximum: 150 },
+      heightConstraint: { minimum: 50, maximum: 50 },
       shape: "box",
-      font: { color: "#000000", face: "Poppins", multi: "html" }
+      font: { color: "#000000", face: "Poppins", multi: "html" },
+      chosen: {
+        node: function (values, id, selected, hovering) {
+          if (hovering) {
+            values.color = "#F4BF01";
+          }
+        },
+      },
     },
     edges: {
-      font: {face: "Poppins"},
+      width: 1,
+      selectionWidth: 1,
+      font: { face: "Poppins" },
+      chosen: false,
       arrows: {
         to: { enabled: true },
-        from: { enabled: false }
-      }
+        from: { enabled: false },
+      },
     },
     groups: {
       System: {
-        color: {
-          background: "#000000",  // light blue
-          border: "#000000"
-        },
+        color: { background: "#000000", border: "#000000" },
         font: { color: "#FFFFFF" },
       },
       Information: {
-        color: {
-          background: "#A6C6DE",
-          border: "#000000"
-        }
+        color: { background: "#A6C6DE", border: "#000000" },
       },
       Other: {
-        color: { background: "#FFFFFF", border: "#000000" }
-      }
+        color: { background: "#FFFFFF", border: "#000000" },
+      },
+      // You may also define Organization if needed:
+      Organization: {
+        color: { background: "#E0E0E0", border: "#000000" },
+      },
     },
     interaction: {
-      hover: true,
-      dragNodes: true,  // Allow manual rearranging
+      hover: true,             // must enable hover
+      dragNodes: true,
+      hoverConnectedEdges: true,
+      selectConnectedEdges: false,
       zoomView: true,
-      dragView: true
+      dragView: true,
     },
     physics: {
       enabled: true,
       barnesHut: {
-        gravitationalConstant: -3000, // Increase repulsion
+        gravitationalConstant: -3000,
         centralGravity: 0.03,
-        springLength: 200,  // Increase the default edge length
-        springConstant: 0.05
+        springLength: 250,
+        springConstant: 0.05,
       },
       stabilization: {
-        iterations: 1000
-      }
-    }
-
+        iterations: 1000,
+      },
+    },
   };
 
   const network = new vis.Network(container, data, options);
-
   network.fit();
+
+  // -------------------------------------------------------------------
+  // 6) Distance-based color blending
+  // -------------------------------------------------------------------
+
+  // 6a) We define a map of group => (original background/border/font).
+  //     If your real data has more complex color logic, adapt as needed.
+  const groupColors = {
+    Organization: { background: "#E0E0E0", border: "#000000", font: "#000000" },
+    System:       { background: "#000000", border: "#000000", font: "#FFFFFF" },
+    Information:  { background: "#A6C6DE", border: "#000000", font: "#000000" },
+    Other:        { background: "#FFFFFF", border: "#000000", font: "#000000" },
+  };
+
+  // 6b) Store each node’s *original* color + font so we can blend/restore
+  const originalStyles = {};
+  nodes.forEach((n) => {
+    const c = groupColors[n.group] || groupColors.Other;
+    originalStyles[n.id] = {
+      background: c.background,
+      border: c.border,
+      fontColor: c.font,
+    };
+  });
+
+  // 6c) Define a color-blending helper
+  function blendHexColors(c1, c2, ratio) {
+    // strip "#"
+    c1 = c1.replace("#", "");
+    c2 = c2.replace("#", "");
+    const r1 = parseInt(c1.substring(0, 2), 16);
+    const g1 = parseInt(c1.substring(2, 4), 16);
+    const b1 = parseInt(c1.substring(4, 6), 16);
+
+    const r2 = parseInt(c2.substring(0, 2), 16);
+    const g2 = parseInt(c2.substring(2, 4), 16);
+    const b2 = parseInt(c2.substring(4, 6), 16);
+
+    const r = Math.round(r1 + ratio * (r2 - r1));
+    const g = Math.round(g1 + ratio * (g2 - g1));
+    const b = Math.round(b1 + ratio * (b2 - b1));
+
+    // convert back to hex
+    return (
+      "#" +
+      [r, g, b]
+        .map((val) => val.toString(16).padStart(2, "0"))
+        .join("")
+    );
+  }
+
+  // 6d) BFS function returning { nodeId: distance } up to 2 hops
+  function getDistancesUpToTwoHops(startId) {
+    const distMap = {};
+    distMap[startId] = 0;
+    const queue = [startId];
+
+    while (queue.length > 0) {
+      const current = queue.shift();
+      const currentDist = distMap[current];
+      if (currentDist < 2) {
+        // get neighbors
+        const neighbors = network.getConnectedNodes(current);
+        neighbors.forEach((nbr) => {
+          if (distMap[nbr] === undefined) {
+            distMap[nbr] = currentDist + 1;
+            queue.push(nbr);
+          }
+        });
+      }
+    }
+    return distMap;
+  }
+
+  // 6e) On hoverNode: blend colors based on BFS distance
+  network.on("hoverNode", (params) => {
+    const hoveredId = params.node;
+    const distMap = getDistancesUpToTwoHops(hoveredId);
+
+    // We build an array of updates
+    const updates = nodes.map((node) => {
+      const dist = distMap[node.id];
+      let ratio = 1; // default => fully dim
+      if (dist === 0 || dist === 1) {
+        ratio = 0; // no dim
+      } else if (dist === 2) {
+        ratio = 0.5; // partial dim
+      }
+      // else dist>2 => ratio=1 => fully dim
+
+      const { background, border, fontColor } = originalStyles[node.id];
+      // We blend each channel with the "dim color"
+      const dimBG = "#EEEEEE";
+      const dimBorder = "#CCCCCC";
+      const dimFont = "#999999";
+
+      const blendedBG = blendHexColors(background, dimBG, ratio);
+      const blendedBorder = blendHexColors(border, dimBorder, ratio);
+      const blendedFont = blendHexColors(fontColor, dimFont, ratio);
+
+      return {
+        id: node.id,
+        color: {
+          background: blendedBG,
+          border: blendedBorder,
+        },
+        font: {
+          color: blendedFont,
+        },
+      };
+    });
+
+    // Apply those updates
+    nodesDataset.update(updates);
+  });
+
+  // 6f) On blurNode: restore everything
+  network.on("blurNode", () => {
+    const restoreArray = nodes.map((node) => {
+      const { background, border, fontColor } = originalStyles[node.id];
+      return {
+        id: node.id,
+        color: { background, border },
+        font: { color: fontColor },
+      };
+    });
+    nodesDataset.update(restoreArray);
+  });
 }
 
-// Kick it off
+// Kick things off
 init();
 </script>
 </body>

@@ -6,199 +6,297 @@
 
 ns1:CLS001 a owl:Class ;
     rdfs:label "Organisation"@de,
-        "Organization"@en ;
+        "Organization"@en,
+        "Organisation"@fr,
+        "Organizzazione"@it ;
     rdfs:comment "Eine (juristische) Einheit wie ein Unternehmen, eine Behörde oder eine Non-Profit-Organisation oder eine Untereinheit einer solchen."@de,
-        "A (legal) entity such as a company, agency or non-profit organization, or a subunit of such an entity."@en .
+        "A (legal) entity such as a company, agency or non-profit organization, or a subunit of such an entity."@en,
+        "Une entité (juridique) telle qu'une entreprise, une agence ou une organisation à but non lucratif, ou une sous-unité d'une telle entité."@fr,
+        "Un'entità (giuridica) come un'azienda, un'agenzia o un'organizzazione senza scopo di lucro, o una sotto-unità di tale entità."@it .
 
 ns1:CLS002 a owl:Class ;
     rdfs:label "IT-System"@de,
-        "IT system"@en ;
+        "IT system"@en,
+        "Système informatique"@fr,
+        "Sistema IT"@it ;
     rdfs:comment "Jedes IT-System (im abstrakten Sinne) mit einer oder mehreren Datenbanken. Beispiele für solche Systeme sind AGIS, das BI-System ASTAT des BLW oder die kantonalen IT-Systeme für die Landwirtschaft."@de,
-        "Any IT system (in a abstracted sense) with one or many databases. Examples for such systems would be AGIS, the FOAG BI system ASTAT, or the cantonal agricultural IT systems."@en .
+        "Any IT system (in an abstracted sense) with one or many databases. Examples for such systems would be AGIS, the FOAG BI system ASTAT, or the cantonal agricultural IT systems."@en,
+        "Tout système informatique (dans un sens abstrait) avec une ou plusieurs bases de données. Des exemples de tels systèmes sont AGIS, le système BI ASTAT de l'OFAG ou les systèmes informatiques cantonaux pour l'agriculture."@fr,
+        "Qualsiasi sistema IT (in senso astratto) con uno o più database. Esempi di tali sistemi sono AGIS, il sistema BI ASTAT dell'UFAG o i sistemi IT cantonali per l'agricoltura."@it .
 
 ns1:CLS003 a owl:Class ;
     rdfs:label "Informationseinheit"@de,
-        "Information unit"@en ;
+        "Information unit"@en,
+        "Unité d'information"@fr,
+        "Unità di informazione"@it ;
     rdfs:comment "Eine Information in einem IT-System. Das kann wirklich alles Mögliche sein."@de,
-        "A piece of information in an IT system. Could be anything, really."@en .
+        "A piece of information in an IT system. Could be anything, really."@en,
+        "Une information dans un système informatique. Cela peut vraiment être n'importe quoi."@fr,
+        "Un'informazione in un sistema IT. Potrebbe essere qualsiasi cosa."@it .
 
 ns1:CLS004 a owl:Class ;
     rdfs:label "Informationseinheit mit Personendaten"@de,
-        "Information unit containing personal data"@en ;
+        "Information unit containing personal data"@en,
+        "Unité d'information contenant des données personnelles"@fr,
+        "Unità di informazione contenente dati personali"@it ;
     rdfs:seeAlso <https://www.fedlex.admin.ch/eli/oc/2022/491/de#art_5> ;
     rdfs:subClassOf ns1:CLS003 .
 
 ns1:CLS005 a owl:Class ;
     rdfs:label "Informationseinheit mit besonders schützenswerten Personendaten"@de,
-        "Information unit containing sensitive personal data"@en ;
+        "Information unit containing sensitive personal data"@en,
+        "Unité d'information contenant des données personnelles sensibles"@fr,
+        "Unità di informazione contenente dati personali sensibili"@it ;
     rdfs:seeAlso <https://www.fedlex.admin.ch/eli/oc/2022/491/de#art_5> ;
     rdfs:subClassOf ns1:CLS004 .
 
 ns1:CLS006 a owl:Class ;
     rdfs:label "Öffentlich-rechtliche Organisation"@de,
-        "Public-sector organization"@en ;
+        "Public-sector organization"@en,
+        "Organisation de droit public"@fr,
+        "Organizzazione di diritto pubblico"@it ;
     rdfs:subClassOf ns1:CLS001 .
 
 ns1:CLS007 a owl:Class ;
     rdfs:label "Privatrechtliche Organisation"@de,
-        "Private-sector organization"@en ;
+        "Private-sector organization"@en,
+        "Organisation de droit privé"@fr,
+        "Organizzazione di diritto privato"@it ;
     rdfs:subClassOf ns1:CLS001 .
 
 ns1:CLS008 a owl:Class ;
     rdfs:label "Organisation des Bundes"@de,
-        "Federal organization"@en ;
+        "Federal organization"@en,
+        "Organisation fédérale"@fr,
+        "Organizzazione federale"@it ;
     rdfs:subClassOf ns1:CLS006 .
 
 ns1:CLS009 a owl:Class ;
     rdfs:label "Kantonale Organisation"@de,
-        "Cantonal organization"@en ;
+        "Cantonal organization"@en,
+        "Organisation cantonale"@fr,
+        "Organizzazione cantonale"@it ;
     rdfs:subClassOf ns1:CLS006 .
 
 ns1:CLS010 a owl:Class ;
     rdfs:label "Landwirtschaftsamt eines Kantons"@de,
-        "Cantonal agricultural office"@en ;
+        "Cantonal agricultural office"@en,
+        "Office agricole cantonal"@fr,
+        "Ufficio agricolo cantonale"@it ;
     rdfs:subClassOf ns1:CLS009 .
 
 ns1:CLS011 a owl:Class ;
     rdfs:label "Kantonale Beratungsstelle"@de,
-        "Cantonal advice center"@en ;
+        "Cantonal advice center"@en,
+        "Centre de conseil cantonal"@fr,
+        "Centro di consulenza cantonale"@it ;
     rdfs:subClassOf ns1:CLS009 .
 
 ns1:PRP101 a owl:DatatypeProperty ;
     rdfs:label "Organisationsabkürzung"@de,
-        "Organization abbreviation"@en ;
+        "Organization abbreviation"@en,
+        "Abréviation de l'organisation"@fr,
+        "Abbreviazione dell'organizzazione"@it ;
     rdfs:domain ns1:CLS001 ;
     rdfs:range xsd:string .
 
 ns1:PRP102 a owl:DatatypeProperty ;
     rdfs:label "Abkürzung des IT-Systems"@de,
-        "System abbreviation"@en ;
+        "System abbreviation"@en,
+        "Abréviation du système"@fr,
+        "Abbreviazione del sistema"@it ;
     rdfs:domain ns1:CLS002 ;
     rdfs:range xsd:string .
 
 ns1:PRP001 a owl:ObjectProperty,
         owl:TransitiveProperty ;
     rdfs:label "ist Teil von"@de,
-        "is a part of"@en ;
-    rdfs:comment "Zeigt an, dass die (Teil-)Organisation ein Teil von einer (Über-)Organisation Y ist."@de ;
+        "is a part of"@en,
+        "fait partie de"@fr,
+        "fa parte di"@it ;
+    rdfs:comment "Zeigt an, dass die (Teil-)Organisation ein Teil von einer (Über-)Organisation Y ist."@de,
+        "Indicates that the (sub-)organization is part of a (parent) organization Y."@en,
+        "Indique que l'(sous-)organisation fait partie d'une (organisation parent) Y."@fr,
+        "Indica che l'(sotto-)organizzazione fa parte di un'(organizzazione madre) Y."@it ;
     rdfs:domain ns1:CLS001 ;
     rdfs:range ns1:CLS001 .
 
 ns1:PRP002 a owl:ObjectProperty,
         owl:TransitiveProperty ;
     rdfs:label "beinhaltet Suborganisation"@de,
-        "contains Suborganization"@en ;
+        "contains suborganization"@en,
+        "contient une sous-organisation"@fr,
+        "contiene un'organizzazione subordinata"@it ;
     rdfs:domain ns1:CLS001 ;
     rdfs:range ns1:CLS001 ;
     owl:inverseOf ns1:PRP001 .
 
 ns1:PRP003 a owl:ObjectProperty ;
     rdfs:label "hat Mitgliederorganisationen"@de,
-        "has memeber organizations"@en ;
-    rdfs:comment "Gibt an, dass eine Organisation X eine andere Organisation Y als Mitgliedsorganisation hat. Diese Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formelle Vereinigungen darzustellen, bei denen Organisationen als Mitglieder teilnehmen. Informelle Beziehungen gehören nicht dazu."@de,
-        "Indicates that an organization X has another organization Y as a member organization. This relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en ;
+        "has member organizations"@en,
+        "a des organisations membres"@fr,
+        "ha organizzazioni membri"@it ;
+    rdfs:comment "Gibt an, dass eine Organisation X eine andere Organisation Y als Mitgliedsorganisation hat. Diese Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formellen Vereinigungen darstellen, bei denen Organisationen als Mitglieder teilnehmen. Informelle Beziehungen gehören nicht dazu."@de,
+        "Indicates that an organization X has another organization Y as a member organization. This relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en,
+        "Indique qu'une organisation X a une autre organisation Y comme organisation membre. Cette relation est utilisée pour représenter les adhésions à des organisations sectorielles, des associations professionnelles ou d'autres associations formelles dans lesquelles les organisations participent en tant que membres. Les relations informelles ne sont pas incluses."@fr,
+        "Indica che un'organizzazione X ha un'altra organizzazione Y come organizzazione membro. Questa relazione viene utilizzata per rappresentare l'appartenenza a organizzazioni di settore, associazioni professionali o altre associazioni formali in cui le organizzazioni partecipano come membri. Le relazioni informali non sono incluse."@it ;
     rdfs:domain ns1:CLS001 ;
     rdfs:range ns1:CLS001 ;
     owl:inverseOf ns1:PRP004 .
 
 ns1:PRP004 a owl:ObjectProperty ;
     rdfs:label "ist eine Mitgliedsorganisation von"@de,
-        "is a member organization of"@en ;
-    rdfs:comment "Gibt an, dass eine Organisation X eine Mitgliedsorganisation einer anderen Organisation Y ist. Die Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formelle Vereinigungen darzustellen, bei denen Organisationen als Mitglieder teilnehmen. Informelle Beziehungen gehören nicht dazu."@de,
-        "Indicates that an organization X is a member organization of another organization Y. The relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en ;
+        "is a member organization of"@en,
+        "est une organisation membre de"@fr,
+        "è un'organizzazione membro di"@it ;
+    rdfs:comment "Gibt an, dass eine Organisation X eine Mitgliedsorganisation einer anderen Organisation Y ist. Die Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formellen Vereinigungen darstellen, bei denen Organisationen als Mitglieder teilnehmen. Informelle Beziehungen gehören nicht dazu."@de,
+        "Indicates that an organization X is a member organization of another organization Y. The relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en,
+        "Indique qu'une organisation X est une organisation membre d'une autre organisation Y. La relation est utilisée pour représenter les adhésions à des organisations sectorielles, des associations professionnelles ou d'autres associations formelles dans lesquelles les organisations participent en tant que membres. Les relations informelles ne sont pas incluses."@fr,
+        "Indica che un'organizzazione X è un'organizzazione membro di un'altra organizzazione Y. La relazione viene utilizzata per rappresentare l'appartenenza a organizzazioni di settore, associazioni professionali o altre associazioni formali in cui le organizzazioni partecipano come membri. Le relazioni informali non sono incluse."@it ;
     rdfs:domain ns1:CLS001 ;
     rdfs:range ns1:CLS001 ;
     owl:inverseOf ns1:PRP003 .
 
 ns1:PRP005 a owl:ObjectProperty ;
     rdfs:label "ist (teilweise) in Besitz von"@de,
-        "is (partially) owned by"@en ;
+        "is (partially) owned by"@en,
+        "est (partiellement) détenu par"@fr,
+        "è (parzialmente) di proprietà di"@it ;
     rdfs:domain ns1:CLS001 ;
     rdfs:range ns1:CLS001 ;
     owl:inverseOf ns1:PRP006 .
 
 ns1:PRP006 a owl:ObjectProperty ;
     rdfs:label "besitzt (teilweise)"@de,
-        "(partially) owns"@en ;
+        "(partially) owns"@en,
+        "possède (partiellement)"@fr,
+        "possiede (parzialmente)"@it ;
     rdfs:domain ns1:CLS001 ;
     rdfs:range ns1:CLS001 ;
     owl:inverseOf ns1:PRP005 .
 
 ns1:PRP007 a owl:ObjectProperty ;
     rdfs:label "betreibt"@de,
-        "operates"@en ;
+        "operates"@en,
+        "exploite"@fr,
+        "gestisce"@it ;
     rdfs:comment "Diese Beziehung zeigt an, dass Organisation X für das Betriebssystem Y verantwortlich ist. Wenn Organisation Y den Betrieb eines Systems X an einen Dienstleister Z auslagert, verwenden Sie weiterhin diese Betriebsbeziehung zwischen X und Y, da sie eher die Verantwortlichkeit als den technischen Betrieb widerspiegelt. Die Beziehung ist auf niedrigstmöglicher Organisationsebene zu verwenden."@de,
-        "This relationship indicates that organization X is in charge of operating system Y. If organization Y outsources the operation of a system X to a service provider Z, still use this operating relationship between X and Y since it reflects responsability rather than technical operation. Also, use this on the lowest organizational level possible."@en ;
+        "This relationship indicates that organization X is in charge of operating system Y. If organization Y outsources the operation of a system X to a service provider Z, still use this operating relationship between X and Y since it reflects responsibility rather than technical operation. Also, use this on the lowest organizational level possible."@en,
+        "Cette relation indique que l'organisation X est responsable de l'exploitation du système Y. Si l'organisation Y externalise l'exploitation d'un système X à un prestataire de services Z, utilisez toujours cette relation d'exploitation entre X et Y, car elle reflète la responsabilité plutôt que l'exploitation technique. Utilisez cette relation au niveau organisationnel le plus bas possible."@fr,
+        "Questa relazione indica che l'organizzazione X è responsabile della gestione del sistema Y. Se l'organizzazione Y esternalizza la gestione di un sistema X a un fornitore di servizi Z, continua a utilizzare questa relazione operativa tra X e Y, poiché riflette la responsabilità piuttosto che l'operazione tecnica. Inoltre, usa questa relazione al livello organizzativo più basso possibile."@it ;
     rdfs:domain ns1:CLS001 ;
     rdfs:range ns1:CLS002 ;
     owl:inverseOf ns1:PRP008 .
 
 ns1:PRP008 a owl:ObjectProperty ;
     rdfs:label "wird betrieben von"@de,
-        "is operated by"@en ;
-    rdfs:comment "Gibt an, dass ein IT-System X durch eine Organisation Y betrieben wird; i.e. dass die Organisation Y für den Betrieb von System X zuständig ist."@de ;
+        "is operated by"@en,
+        "est exploité par"@fr,
+        "è gestito da"@it ;
+    rdfs:comment "Gibt an, dass ein IT-System X durch eine Organisation Y betrieben wird; i.e. dass die Organisation Y für den Betrieb von System X zuständig ist."@de,
+        "Indicates that an IT system X is operated by an organization Y; i.e., that organization Y is responsible for operating system X."@en,
+        "Indique qu'un système informatique X est exploité par une organisation Y, c'est-à-dire que l'organisation Y est responsable de l'exploitation du système X."@fr,
+        "Indica che un sistema IT X è gestito da un'organizzazione Y, ovvero che l'organizzazione Y è responsabile della gestione del sistema X."@it ;
     rdfs:domain ns1:CLS002 ;
     rdfs:range ns1:CLS001 ;
     owl:inverseOf ns1:PRP007 .
 
 ns1:PRP011 a owl:ObjectProperty ;
     rdfs:label "beinhaltet"@de,
-        "contains"@en ;
+        "contains"@en,
+        "contient"@fr,
+        "contiene"@it ;
     rdfs:comment "Gibt an, dass ein IT-System X die Informationseinheit Y enthält. Beispielsweise enthält AGIS Informationen über landwirtschaftliche Flächen in der Schweiz."@de,
-        "Indicates that an IT system X contains the information unit Y. For example, AGIS contains information about farming area in Switzerland."@en ;
+        "Indicates that an IT system X contains the information unit Y. For example, AGIS contains information about farming areas in Switzerland."@en,
+        "Indique qu'un système informatique X contient l'unité d'information Y. Par exemple, AGIS contient des informations sur les surfaces agricoles en Suisse."@fr,
+        "Indica che un sistema IT X contiene l'unità di informazione Y. Ad esempio, AGIS contiene informazioni sulle superfici agricole in Svizzera."@it ;
     rdfs:domain ns1:CLS002 ;
     rdfs:range ns1:CLS003 ;
     owl:inverseOf ns1:PRP012 .
 
 ns1:PRP012 a owl:ObjectProperty ;
     rdfs:label "ist beinhaltet in"@de,
-        "is contained in"@en ;
+        "is contained in"@en,
+        "est contenu dans"@fr,
+        "è contenuto in"@it ;
     rdfs:comment "Gibt an, dass eine Informationseinheit X im IT-System Y enthalten ist. Beispielsweise sind Informationen über landwirtschaftliche Flächen in der Schweiz in AGIS enthalten."@de,
-        "Indicates that an information unit X is contained in the IT system Y. For example, information about farming area in Switzerland is contained in AGIS."@en ;
+        "Indicates that an information unit X is contained in the IT system Y. For example, information about farming areas in Switzerland is contained in AGIS."@en,
+        "Indique qu'une unité d'information X est contenue dans le système informatique Y. Par exemple, les informations sur les surfaces agricoles en Suisse sont contenues dans AGIS."@fr,
+        "Indica che un'unità di informazione X è contenuta nel sistema IT Y. Ad esempio, le informazioni sulle superfici agricole in Svizzera sono contenute in AGIS."@it ;
     rdfs:domain ns1:CLS003 ;
     rdfs:range ns1:CLS002 ;
     owl:inverseOf ns1:PRP011 .
 
 ns1:PRP013 a owl:ObjectProperty ;
     rdfs:label "informiert"@de,
-        "informs"@en ;
+        "informs"@en,
+        "informe"@fr,
+        "informa"@it ;
     rdfs:domain ns1:CLS003 ;
     rdfs:range ns1:CLS003 ;
     owl:inverseOf ns1:PRP014 .
 
 ns1:PRP014 a owl:ObjectProperty ;
     rdfs:label "erhält Informationen von"@de,
-        "gets information from"@en ;
-    rdfs:comment "Zeigt an, dass eine Informationseinheit X von einer anderen Informationseinheit Y abgeleitet ist. Diese Beziehung wird gebraucht, um Informationsflüsse darzustellen. Diese müssen nicht zwingen (durch eine API oder Ähnliches) formalisiert sein." ;
+        "gets information from"@en,
+        "obtient des informations de"@fr,
+        "ottiene informazioni da"@it ;
+    rdfs:comment "Zeigt an, dass eine Informationseinheit X von einer anderen Informationseinheit Y abgeleitet ist. Diese Beziehung wird gebraucht, um Informationsflüsse darzustellen. Diese müssen nicht zwingend (durch eine API oder Ähnliches) formalisiert sein."@de,
+        "Indicates that an information unit X is derived from another information unit Y. This relationship is used to represent information flows. These do not necessarily have to be formalized (through an API or similar means)."@en,
+        "Indique qu'une unité d'information X est dérivée d'une autre unité d'information Y. Cette relation est utilisée pour représenter les flux d'information. Ceux-ci ne doivent pas nécessairement être formalisés (par une API ou un moyen similaire)."@fr,
+        "Indica che un'unità di informazione X è derivata da un'altra unità di informazione Y. Questa relazione viene utilizzata per rappresentare i flussi di informazioni. Questi non devono necessariamente essere formalizzati (tramite un'API o mezzi simili)."@it ;
     rdfs:domain ns1:CLS003 ;
     rdfs:range ns1:CLS003 ;
     owl:inverseOf ns1:PRP013 .
 
 ns1:PRP015 a owl:ObjectProperty ;
     rdfs:label "hat Zugriff auf"@de,
-        "has access to"@en ;
-    rdfs:comment "Zeigt an, dass eine Organisation X die Rechte zum Zugriff auf die Informationseinheit Y hat."@de ;
+        "has access to"@en,
+        "a accès à"@fr,
+        "ha accesso a"@it ;
+    rdfs:comment "Zeigt an, dass eine Organisation X die Rechte zum Zugriff auf die Informationseinheit Y hat."@de,
+        "Indicates that an organization X has the rights to access the information unit Y."@en,
+        "Indique qu'une organisation X a le droit d'accéder à l'unité d'information Y."@fr,
+        "Indica che un'organizzazione X ha il diritto di accedere all'unità di informazione Y."@it ;
     rdfs:domain ns1:CLS001 ;
     rdfs:range ns1:CLS003 .
 
 ns1: a owl:Ontology ;
     dcterms:creator "Federal Office for Agriculture" ;
     dcterms:description "Eine Ontologie zur Modellierung von Organisationen, IT-Systemen und Daten für das Schweizer Bundesamt für Landwirtschaft (FOAG)."@de,
-        "An ontology to model organizations, IT systems and data for the Swiss Federal Office for Agriculture FOAG."@en ;
+        "An ontology to model organizations, IT systems and data for the Swiss Federal Office for Agriculture FOAG."@en,
+        "Une ontologie pour modéliser les organisations, les systèmes informatiques et les données pour l'Office fédéral de l'agriculture (OFAG) suisse."@fr,
+        "Un'ontologia per modellare le organizzazioni, i sistemi IT e i dati per l'Ufficio federale dell'agricoltura (UFAG) svizzero."@it ;
     dcterms:title "DigiAgriFoodCH Systemlandkarte"@de,
-        "DigiAgriFoodCH System Map"@en ;
-    owl:versionInfo "0.2.2" .
+        "DigiAgriFoodCH System Map"@en,
+        "Carte du système DigiAgriFoodCH"@fr,
+        "Mappa del sistema DigiAgriFoodCH"@it ;
+    owl:versionInfo "0.3.0" .
 
 ns1:ORG200 a ns1:CLS001 ;
-    rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de ;
-    rdfs:comment "Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz. Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen."@de ;
-    ns1:PRP101 "UPOV"@de .
+    rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
+        "International Union for the Protection of New Varieties of Plants"@en,
+        "Union internationale pour la protection des obtentions végétales"@fr,
+        "Unione internazionale per la protezione delle nuove varietà vegetali"@it ;
+    rdfs:comment "Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz. Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen."@de,
+        "The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland. It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society."@en,
+        "L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse. Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société."@fr,
+        "L'Unione internazionale per la protezione delle nuove varietà vegetali (UPOV) è un'organizzazione intergovernativa con sede a Ginevra, in Svizzera. È stata fondata nel 1961 e mira a promuovere un sistema efficace per la protezione del miglioramento genetico delle piante, al fine di sostenere lo sviluppo di nuove varietà vegetali a beneficio della società."@it ;
+    ns1:PRP101 "UPOV"@de,
+        "UPOV"@en,
+        "UPOV"@fr,
+        "UPOV"@it .
 
 ns1:SYS001 a ns1:CLS002 ;
-    rdfs:label "Acontrol"@de ;
-    rdfs:comment "Acontrol ist das Informationssystem des BLW, das für die Planung, Erfassung und Verwaltung landwirtschaftlicher Inspektionen eingesetzt wird. Es vereinfacht die Kontrollprozesse durch eine zentrale Plattform für Dateneingabe und -abfrage. Auf diese Weise wird eine effiziente Überwachung und Einhaltung landwirtschaftlicher Standards gewährleistet."@de ;
-    ns1:PRP008 ns1:ORG021 ;
-    ns1:PRP102 "Acontrol"@de .
+    rdfs:label "Acontrol"@de,
+        "Acontrol"@en,
+        "Acontrol"@fr,
+        "Acontrol"@it ;
+    rdfs:comment "Acontrol ist das Informationssystem des BLW, das für die Planung, Erfassung und Verwaltung landwirtschaftlicher Inspektionen eingesetzt wird. Es vereinfacht die Kontrollprozesse durch eine zentrale Plattform für Dateneingabe und -abfrage. Auf diese Weise wird eine effiziente Überwachung und Einhaltung landwirtschaftlicher Standards gewährleistet."@de,
+        "Acontrol is the information system of the FOAG, used for the planning, recording, and management of agricultural inspections. It simplifies control processes through a central platform for data entry and retrieval. This ensures efficient monitoring and compliance with agricultural standards."@en,
+        "Acontrol est le système d'information de l'OFAG, utilisé pour la planification, l'enregistrement et la gestion des inspections agricoles. Il simplifie les processus de contrôle grâce à une plateforme centrale pour la saisie et la consultation des données. Cela permet d'assurer une surveillance efficace et le respect des normes agricoles."@fr,
+        "Acontrol è il sistema informativo dell'UFAG, utilizzato per la pianificazione, la registrazione e la gestione delle ispezioni agricole. Semplifica i processi di controllo attraverso una piattaforma centrale per l'inserimento e il recupero dei dati. In questo modo, garantisce un monitoraggio efficiente e il rispetto degli standard agricoli."@it ;
+    ns1:PRP008 ns1:ORG021 .
 
 ns1:SYS002 a ns1:CLS002 ;
     rdfs:label "Agate"@de ;

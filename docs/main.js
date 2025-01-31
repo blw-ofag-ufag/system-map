@@ -138,7 +138,8 @@ async function init() {
             chosen: {
                 node: function(values, id, selected, hovering) {
                     if (hovering) {
-                        values.color = "#F4BF01";
+                        values.borderWidth = 3;; // Set border thickness on hover
+                        values.borderColor = "#000000"; // Yellow border on hover
                     }
                 }
             }
@@ -160,33 +161,10 @@ async function init() {
             }
         },
         groups: {
-            System: {
-                color: {
-                    background: "#000000",
-                    border: "#000000"
-                },
-                font: {
-                    color: "#FFFFFF"
-                }
-            },
-            Information: {
-                color: {
-                    background: "#A6C6DE",
-                    border: "#000000"
-                }
-            },
-            Other: {
-                color: {
-                    background: "#FFFFFF",
-                    border: "#000000"
-                }
-            },
-            Organization: {
-                color: {
-                    background: "#E0E0E0",
-                    border: "#000000"
-                }
-            }
+            System:      {  color: { background: "#FF7F51", border: "#000000" }, font: { color: "#000000" } },
+            Information: {  color: { background: "#ADB6C4", border: "#000000" }, font: { color: "#000000" } },
+            Organization: { color: { background: "#383743", border: "#000000" }, font: { color: "#FFFFFF" } },
+            Other: {        color: { background: "#383743", border: "#000000" }, font: { color: "#FFFFFF" } },
         },
         interaction: {
             hover: true,
@@ -216,25 +194,10 @@ async function init() {
     // 5) The BFS highlight color-blending
     //    Map group => original background/border/font
     const groupColors = {
-        Organization: {
-            background: "#E0E0E0",
-            border: "#000000",
-            font: "#000000"
-        },
-        System: {
-            background: "#000000",
-            border: "#000000",
-            font: "#FFFFFF"
-        },
-        Information: {
-            background: "#A6C6DE",
-            border: "#000000",
-            font: "#000000"
-        },
-        Other: {
-            background: "#FFFFFF",
-            border: "#000000",
-            font: "#000000"
+        System: {       background: "#FF7F51", border: "#000000", font: "#000000" },
+        Information: {  background: "#ADB6C4", border: "#000000", font: "#000000" },
+        Organization: { background: "#383743", border: "#000000", font: "#FFFFFF" },
+        Other: {        background: "#383743", border: "#000000", font: "#FFFFFF"
         }
     };
 

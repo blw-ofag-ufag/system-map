@@ -55,6 +55,22 @@ window.EDGE_QUERY = `
   }
 `;
 
+// query top class names and comments
+window.CLASS_QUERY = `
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  PREFIX owl: <http://www.w3.org/2002/07/owl#>
+  SELECT ?iri ?label ?comment
+  WHERE {
+    GRAPH <https://lindas.admin.ch/foag/ontologies> {
+      ?iri a owl:Class .
+      ?iri rdfs:label ?label .
+      ?iri rdfs:comment ?comment .    
+      FILTER(LANG(?label) = "${lang}" && LANG(?comment) = "${lang}")
+      FILTER NOT EXISTS { ?iri rdfs:subClassOf ?superclass }
+    }
+  }
+`;
+
 // fetch SPARQL data from the LINDAS endpoint
 window.getSparqlData = async function(query) {
   const url = `${ENDPOINT}?query=${encodeURIComponent(query)}`;

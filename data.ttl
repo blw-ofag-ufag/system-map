@@ -27,34 +27,71 @@ systemmap:SYS001 a systemmap:CLS002 ;
     systemmap:PRP008 systemmap:ORG021 .
 
 systemmap:SYS002 a systemmap:CLS002 ;
-    rdfs:label "Agate"@de ;
-    rdfs:comment "Agate ist ein Online-Portal, das den Zugriff auf verschiedene landwirtschaftliche Anwendungen mit nur einem Login ermöglicht. Es erleichtert den Datenaustausch im Agrar- und Ernährungsbereich und erhöht so den Benutzerkomfort. Durch diesen zentralisierten Zugangspunkt werden Verwaltungsprozesse für alle Beteiligten vereinfacht."@de ;
-    systemmap:PRP008 systemmap:ORG014 ;
-    systemmap:PRP102 "Agate"@de .
+    rdfs:label "Agate"@de,
+        "Agate"@en,
+        "Agate"@fr,
+        "Agate"@it ;
+    rdfs:comment "Agate ist ein Online-Portal, das den Zugriff auf verschiedene landwirtschaftliche Anwendungen mit nur einem Login ermöglicht. Es erleichtert den Datenaustausch im Agrar- und Ernährungsbereich und erhöht so den Benutzerkomfort. Durch diesen zentralisierten Zugangspunkt werden Verwaltungsprozesse für alle Beteiligten vereinfacht."@de,
+        "Agate is an online portal that allows access to various agricultural applications with just one login. It facilitates data exchange in the agricultural and food sector, thereby increasing user convenience. This centralized access point simplifies administrative processes for all stakeholders."@en,
+        "Agate est un portail en ligne qui permet d'accéder à diverses applications agricoles avec un seul identifiant. Il facilite l'échange de données dans le secteur agricole et alimentaire, augmentant ainsi le confort des utilisateurs. Ce point d'accès centralisé simplifie les processus administratifs pour toutes les parties prenantes."@fr,
+        "Agate è un portale online che consente l'accesso a diverse applicazioni agricole con un solo login. Facilita lo scambio di dati nel settore agricolo e alimentare, aumentando così la comodità per gli utenti. Questo punto di accesso centralizzato semplifica i processi amministrativi per tutte le parti interessate."@it ;
+    systemmap:PRP008 systemmap:ORG014 .
 
 systemmap:SYS003 a systemmap:CLS002 ;
-    rdfs:label "Agrarpolitisches Informationssystem"@de ;
-    rdfs:comment "AGIS fungiert als zentrale Datendrehscheibe, in der die von den Kantonen erhobenen landwirtschaftlichen Daten validiert und zu einem gesamtschweizerischen Datenbestand aggregiert werden. Das System sorgt für Konsistenz und Genauigkeit bei der Erfassung von landwirtschaftlichen Daten. Es unterstützt fundierte Entscheidungsprozesse auf Bundesebene."@de ;
+    rdfs:label "Agrarpolitisches Informationssystem"@de,
+        "Agricultural Policy Information System"@en,
+        "Système d'information sur la politique agricole"@fr,
+        "Sistema informativo di politica agricola"@it ;
+    rdfs:comment "AGIS fungiert als zentrale Datendrehscheibe, in der die von den Kantonen erhobenen landwirtschaftlichen Daten validiert und zu einem gesamtschweizerischen Datenbestand aggregiert werden. Das System sorgt für Konsistenz und Genauigkeit bei der Erfassung von landwirtschaftlichen Daten. Es unterstützt fundierte Entscheidungsprozesse auf Bundesebene."@de,
+        "AGIS serves as a central data hub where agricultural data collected by the cantons is validated and aggregated into a nationwide dataset. The system ensures consistency and accuracy in the collection of agricultural data. It supports well-founded decision-making processes at the federal level."@en,
+        "SIPA sert de plaque tournante centrale des données, où les données agricoles collectées par les cantons sont validées et agrégées dans un ensemble de données à l'échelle nationale. Le système garantit la cohérence et la précision dans la collecte des données agricoles. Il soutient des processus décisionnels éclairés au niveau fédéral."@fr,
+        "AGIS funge da hub centrale per i dati, dove i dati agricoli raccolti dai cantoni vengono convalidati e aggregati in un insieme di dati a livello nazionale. Il sistema garantisce coerenza e accuratezza nella raccolta dei dati agricoli. Supporta processi decisionali ben fondati a livello federale."@it ;
     systemmap:PRP008 systemmap:ORG010 ;
-    systemmap:PRP102 "AGIS"@de .
+    systemmap:PRP102 "AGIS"@de,
+        "AGIS"@en,
+        "SIPA"@fr,
+        "AGIS"@it .
 
 systemmap:SYS004 a systemmap:CLS002 ;
-    rdfs:label "Business-Intelligence-System"@de ;
-    rdfs:comment "ASTAT ist das Business-Intelligence-System des BLW. Es stellt Analyse- und Reporting-Funktionen bereit, um datengestützte Entscheidungen zu ermöglichen. Dadurch wird die Überwachung und Bewertung agrarpolitischer Massnahmen vereinfacht."@de ;
+    rdfs:label "Business-Intelligence-System"@de,
+        "Business Intelligence System"@en,
+        "Système de Business Intelligence"@fr,
+        "Sistema di Business Intelligence"@it ;
+    rdfs:comment "ASTAT ist das Business-Intelligence-System des BLW. Es stellt Analyse- und Reporting-Funktionen bereit, um datengestützte Entscheidungen zu ermöglichen. Dadurch wird die Überwachung und Bewertung agrarpolitischer Massnahmen vereinfacht."@de,
+        "ASTAT is the Business Intelligence system of the BLW. It provides analysis and reporting functions to enable data-driven decision-making. This simplifies the monitoring and evaluation of agricultural policy measures."@en,
+        "ASTAT est le système de Business Intelligence de l'OFAG. Il fournit des fonctions d'analyse et de reporting pour permettre une prise de décision basée sur les données. Cela simplifie la surveillance et l'évaluation des mesures de politique agricole."@fr,
+        "ASTAT è il sistema di Business Intelligence dell'UFAG. Fornisce funzioni di analisi e reporting per consentire decisioni basate sui dati. Ciò semplifica il monitoraggio e la valutazione delle misure di politica agricola."@it ;
     systemmap:PRP008 systemmap:ORG016 ;
-    systemmap:PRP102 "ASTAT"@de .
+    systemmap:PRP102 "ASTAT"@de,
+        "ASTAT"@en,
+        "ASTAT"@fr,
+        "ASTAT"@it .
 
 systemmap:SYS005 a systemmap:CLS002 ;
-    rdfs:label "CePa"@de ;
-    rdfs:comment "CePa ist eine IT-Anwendung für die digitale Verwaltung von Verfahren und Korrespondenz im Rahmen des Pflanzenpassesystems sowie der amtlichen Zertifizierung von Vermehrungsmaterial. Sie optimiert Zertifizierungsabläufe und stellt die Einhaltung pflanzengesundheitlicher Vorschriften sicher. Auf diese Weise wird die Rückverfolgbarkeit und Qualitätskontrolle von Pflanzenmaterial unterstützt."@de ;
+    rdfs:label "CePa"@de,
+        "CePa"@en,
+        "CePa"@fr,
+        "CePa"@it ;
+    rdfs:comment "CePa ist eine IT-Anwendung für die digitale Verwaltung von Verfahren und Korrespondenz im Rahmen des Pflanzenpassesystems sowie der amtlichen Zertifizierung von Vermehrungsmaterial. Sie optimiert Zertifizierungsabläufe und stellt die Einhaltung pflanzengesundheitlicher Vorschriften sicher. Auf diese Weise wird die Rückverfolgbarkeit und Qualitätskontrolle von Pflanzenmaterial unterstützt."@de,
+        "CePa is an IT application for the digital management of procedures and correspondence within the framework of the plant passport system and the official certification of propagation material. It optimizes certification processes and ensures compliance with plant health regulations. In this way, it supports traceability and quality control of plant material."@en,
+        "CePa est une application informatique pour la gestion numérique des procédures et de la correspondance dans le cadre du système de passeport phytosanitaire ainsi que de la certification officielle du matériel de multiplication. Elle optimise les processus de certification et garantit le respect des réglementations phytosanitaires. De cette manière, elle soutient la traçabilité et le contrôle de la qualité du matériel végétal."@fr,
+        "CePa è un'applicazione IT per la gestione digitale delle procedure e della corrispondenza nell'ambito del sistema del passaporto delle piante e della certificazione ufficiale del materiale di propagazione. Ottimizza i processi di certificazione e garantisce il rispetto delle normative fitosanitarie. In questo modo, supporta la tracciabilità e il controllo della qualità del materiale vegetale."@it ;
     systemmap:PRP008 systemmap:ORG031 ;
-    systemmap:PRP102 "CePa"@de .
+    systemmap:PRP102 "CePa"@de,
+        "CePa"@en,
+        "CePa"@fr,
+        "CePa"@it .
 
 systemmap:SYS006 a systemmap:CLS002 ;
-    rdfs:label "digiFLUX"@de ;
-    rdfs:comment "digiFLUX ist eine Webanwendung, die zur Umsetzung der Meldepflicht für den Handel und die Anwendung von Pflanzenschutzmitteln sowie für den Handel mit Nährstoffen entwickelt wurde. Sie ermöglicht den Akteuren eine einheitliche Schnittstelle zur Eingabe aller erforderlichen Angaben. Dadurch wird Transparenz und Einhaltung gesetzlicher Vorschriften im Agrarbereich gewährleistet."@de ;
-    systemmap:PRP008 systemmap:ORG020 ;
-    systemmap:PRP102 "digiFLUX"@de .
+    rdfs:label "digiFLUX"@de,
+        "digiFLUX"@en,
+        "digiFLUX"@fr,
+        "digiFLUX"@it ;
+    rdfs:comment "digiFLUX ist eine Webanwendung, die zur Umsetzung der Meldepflicht für den Handel und die Anwendung von Pflanzenschutzmitteln sowie für den Handel mit Nährstoffen entwickelt wurde. Sie ermöglicht den Akteuren eine einheitliche Schnittstelle zur Eingabe aller erforderlichen Angaben. Dadurch wird Transparenz und Einhaltung gesetzlicher Vorschriften im Agrarbereich gewährleistet."@de,
+        "digiFLUX is a web application developed to implement the reporting obligation for the trade and use of plant protection products as well as for the trade of nutrients. It provides stakeholders with a unified interface for entering all required information. This ensures transparency and compliance with legal regulations in the agricultural sector."@en,
+        "digiFLUX est une application web développée pour mettre en œuvre l'obligation de déclaration du commerce et de l'utilisation des produits phytosanitaires ainsi que du commerce des nutriments. Elle offre aux acteurs une interface unifiée pour saisir toutes les informations requises. Cela garantit la transparence et le respect des réglementations légales dans le secteur agricole."@fr,
+        "digiFLUX è un'applicazione web sviluppata per attuare l'obbligo di segnalazione per il commercio e l'uso dei prodotti fitosanitari nonché per il commercio di nutrienti. Fornisce agli operatori un'interfaccia unificata per l'inserimento di tutte le informazioni richieste. Ciò garantisce trasparenza e conformità alle normative legali nel settore agricolo."@it ;
+    systemmap:PRP008 systemmap:ORG020 .
 
 systemmap:SYS007 a systemmap:CLS002 ;
     rdfs:label "eKontingente"@de ;
@@ -113,8 +150,13 @@ systemmap:SYS023 a systemmap:CLS002 ;
 
 systemmap:SYS024 a systemmap:CLS002 ;
     rdfs:label "Pflanzensorten-Datenbank"@de,
-        "Plant Variety Database"@en ;
-    rdfs:comment "Die PLUTO-Datenbank enthält Informationen über Pflanzenarten und -sorten von UPOV-Mitgliedern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD). Die PLUTO-Datenbank bietet ein Suchinstrument für Sortenbezeichnungen, um die Unterscheidbarkeit neuer Sorten sicherzustellen."@de ;
+        "Plant Variety Database"@en,
+        "Base de données des variétés de plantes"@fr,
+        "Database delle varietà vegetali"@it ;
+    rdfs:comment "Die PLUTO-Datenbank enthält Informationen über Pflanzenarten und -sorten von UPOV-Mitgliedern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD). Die PLUTO-Datenbank bietet ein Suchinstrument für Sortenbezeichnungen, um die Unterscheidbarkeit neuer Sorten sicherzustellen."@de,
+        "The PLUTO database contains information on plant species and varieties from UPOV members as well as the Organisation for Economic Co-operation and Development (OECD). The PLUTO database provides a search tool for variety denominations to ensure the distinctness of new varieties."@en,
+        "La base de données PLUTO contient des informations sur les espèces et variétés de plantes des membres de l'UPOV ainsi que de l'Organisation de coopération et de développement économiques (OCDE). La base de données PLUTO offre un outil de recherche pour les dénominations variétales afin d'assurer la distinction des nouvelles variétés."@fr,
+        "Il database PLUTO contiene informazioni sulle specie e varietà vegetali dei membri dell'UPOV e dell'Organizzazione per la cooperazione e lo sviluppo economico (OCSE). Il database PLUTO fornisce uno strumento di ricerca per le denominazioni varietali al fine di garantire la distinzione delle nuove varietà."@it ;
     systemmap:PRP008 systemmap:ORG200 ;
     systemmap:PRP102 "PLUTO"@de,
         "PLUTO"@en,
@@ -122,29 +164,59 @@ systemmap:SYS024 a systemmap:CLS002 ;
         "PLUTO"@it .
 
 systemmap:INF001 a systemmap:CLS003 ;
-    rdfs:label "Kontaktdaten Bewirtschaftenden"@de ;
-    rdfs:comment "Informationen zu Kontaktdaten von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de ;
+    rdfs:label "Kontaktdaten Bewirtschaftenden"@de,
+        "Contact details of farm managers"@en,
+        "Coordonnées des exploitants agricoles"@fr,
+        "Dati di contatto dei gestori agricoli"@it ;
+    rdfs:comment "Informationen zu Kontaktdaten von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de,
+        "Information on the contact details of farm managers, such as email addresses or phone numbers."@en,
+        "Informations sur les coordonnées des exploitants agricoles, telles que les adresses e-mail ou les numéros de téléphone."@fr,
+        "Informazioni sui dati di contatto dei gestori agricoli, come indirizzi e-mail o numeri di telefono."@it ;
     systemmap:PRP012 systemmap:SYS003 .
 
 systemmap:INF010 a systemmap:CLS003 ;
-    rdfs:label "Nationaler Sortenkatalog"@de ;
-    rdfs:comment "Katalog von anerkannten landwirtschaftlich genutzten Pflanzensorten in der Schweiz. Die Informationen dazu werden von den Züchtern erfasst."@de ;
+    rdfs:label "Nationaler Sortenkatalog"@de,
+        "National variety catalog"@en,
+        "Catalogue national des variétés"@fr,
+        "Catalogo nazionale delle varietà"@it ;
+    rdfs:comment "Katalog von anerkannten landwirtschaftlich genutzten Pflanzensorten in der Schweiz. Die Informationen dazu werden von den Züchtern erfasst."@de,
+        "Catalog of recognized agricultural plant varieties used in Switzerland. The information is recorded by breeders."@en,
+        "Catalogue des variétés de plantes agricoles reconnues utilisées en Suisse. Les informations sont enregistrées par les sélectionneurs."@fr,
+        "Catalogo delle varietà di piante agricole riconosciute utilizzate in Svizzera. Le informazioni sono registrate dai selezionatori."@it ;
     systemmap:PRP012 systemmap:SYS011 ;
     systemmap:PRP014 systemmap:INF012 .
 
 systemmap:INF011 a systemmap:CLS003 ;
-    rdfs:label "Kontaktdaten Züchter"@de ;
-    rdfs:comment "Kontaktdaten der Züchter, welche Informationen zu den Sorten an ProVar geben."@de ;
+    rdfs:label "Kontaktdaten Züchter"@de,
+        "Contact details of breeders"@en,
+        "Coordonnées des sélectionneurs"@fr,
+        "Dati di contatto dei selezionatori"@it ;
+    rdfs:comment "Kontaktdaten der Züchter, welche Informationen zu den Sorten an ProVar geben."@de,
+        "Contact details of breeders who provide information about the varieties to ProVar."@en,
+        "Coordonnées des sélectionneurs qui fournissent des informations sur les variétés à ProVar."@fr,
+        "Dati di contatto dei selezionatori che forniscono informazioni sulle varietà a ProVar."@it ;
     systemmap:PRP012 systemmap:SYS011 .
 
 systemmap:INF012 a systemmap:CLS003 ;
-    rdfs:label "Globale Pflanzenliste"@de ;
-    rdfs:comment "Liste aller möglichen Pflanzenarten mit entsprechenden Pflanzenarten-Codes. UPOV verwendet ein spezifisches Codesystem, um Pflanzenarten und -gattungen eindeutig zu identifizieren. Diese sogenannten UPOV-Codes bestehen in der Regel aus fünf Buchstaben für die Gattung und drei Buchstaben für die Art, zum Beispiel steht <tt>PRUNU_ARM</tt> für <i>Prunus armeniaca</i> (Aprikose). Dieses System erleichtert die Klassifizierung und den Informationsaustausch über Pflanzensorten."@de ;
+    rdfs:label "Globale Pflanzenliste"@de,
+        "Global plant list"@en,
+        "Liste globale des plantes"@fr,
+        "Elenco globale delle piante"@it ;
+    rdfs:comment "Liste aller möglichen Pflanzenarten mit entsprechenden Pflanzenarten-Codes. UPOV verwendet ein spezifisches Codesystem, um Pflanzenarten und -gattungen eindeutig zu identifizieren. Diese sogenannten UPOV-Codes bestehen in der Regel aus fünf Buchstaben für die Gattung und drei Buchstaben für die Art, zum Beispiel steht <tt>PRUNU_ARM</tt> für <i>Prunus armeniaca</i> (Aprikose). Dieses System erleichtert die Klassifizierung und den Informationsaustausch über Pflanzensorten."@de,
+        "List of all possible plant species with corresponding plant species codes. UPOV uses a specific coding system to uniquely identify plant species and genera. These so-called UPOV codes usually consist of five letters for the genus and three letters for the species. For example, <tt>PRUNU_ARM</tt> stands for <i>Prunus armeniaca</i> (apricot). This system facilitates the classification and exchange of information on plant varieties."@en,
+        "Liste de toutes les espèces végétales possibles avec les codes d'espèces correspondants. L'UPOV utilise un système de codage spécifique pour identifier de manière unique les espèces et genres de plantes. Ces codes UPOV se composent généralement de cinq lettres pour le genre et de trois lettres pour l'espèce. Par exemple, <tt>PRUNU_ARM</tt> représente <i>Prunus armeniaca</i> (abricot). Ce système facilite la classification et l'échange d'informations sur les variétés de plantes."@fr,
+        "Elenco di tutte le possibili specie vegetali con i relativi codici di specie. L'UPOV utilizza un sistema di codifica specifico per identificare in modo univoco le specie e i generi di piante. Questi cosiddetti codici UPOV sono generalmente composti da cinque lettere per il genere e tre lettere per la specie. Ad esempio, <tt>PRUNU_ARM</tt> rappresenta <i>Prunus armeniaca</i> (albicocco). Questo sistema facilita la classificazione e lo scambio di informazioni sulle varietà vegetali."@it ;
     systemmap:PRP012 systemmap:SYS024 .
 
 systemmap:INF013 a systemmap:CLS003 ;
-    rdfs:label "Globaler Sortenkatalog"@de ;
-    rdfs:comment "Informationen zu Pflanzensorten aus UPOV-Mitgliedsländern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD). Diese Sortenliste dient als zentrales Register für Sortenbezeichnungen und unterstützt bei der Überprüfung der Unterscheidbarkeit neuer Sorten."@de ;
+    rdfs:label "Globaler Sortenkatalog"@de,
+        "Global variety catalog"@en,
+        "Catalogue mondial des variétés"@fr,
+        "Catalogo globale delle varietà"@it ;
+    rdfs:comment "Informationen zu Pflanzensorten aus UPOV-Mitgliedsländern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD). Diese Sortenliste dient als zentrales Register für Sortenbezeichnungen und unterstützt bei der Überprüfung der Unterscheidbarkeit neuer Sorten."@de,
+        "Information on plant varieties from UPOV member countries as well as the Organisation for Economic Co-operation and Development (OECD). This variety list serves as a central register for variety denominations and supports the verification of the distinctness of new varieties."@en,
+        "Informations sur les variétés végétales des pays membres de l'UPOV ainsi que de l'Organisation de coopération et de développement économiques (OCDE). Cette liste de variétés sert de registre central pour les dénominations de variétés et aide à vérifier la distinction des nouvelles variétés."@fr,
+        "Informazioni sulle varietà vegetali provenienti dai paesi membri dell'UPOV e dall'Organizzazione per la cooperazione e lo sviluppo economico (OCSE). Questo elenco di varietà funge da registro centrale per le denominazioni varietali e supporta la verifica della distinzione delle nuove varietà."@it ;
     systemmap:PRP012 systemmap:SYS024 ;
     systemmap:PRP014 systemmap:INF010 .
 
@@ -203,29 +275,47 @@ systemmap:ORG103 a systemmap:CLS007 ;
 
 systemmap:ORG001 a systemmap:CLS008 ;
     rdfs:label "Bundesamt für Landwirtschaft"@de,
-        "Federal Office for Agriculture"@en ;
+        "Federal Office for Agriculture"@en,
+        "Office fédéral de l'agriculture"@fr,
+        "Ufficio federale dell'agricoltura"@it ;
     rdfs:comment "Das Bundesamt für Landwirtschaft (BLW) ist das Kompetenzzentrum des Bundes für alle Kernfragen im Zusammenhang mit dem Agrarsektor."@de,
-        "The Federal Office for Agriculture (FOAG) is the Confederation's competence centre for all core issues relating to the agricultural sector."@en ;
+        "The Federal Office for Agriculture (FOAG) is the Confederation's competence centre for all core issues relating to the agricultural sector."@en,
+        "L'Office fédéral de l'agriculture (OFAG) est le centre de compétence de la Confédération pour toutes les questions essentielles liées au secteur agricole."@fr,
+        "L'Ufficio federale dell'agricoltura (UFAG) è il centro di competenza della Confederazione per tutte le questioni fondamentali relative al settore agricolo."@it ;
     systemmap:PRP101 "BLW"@de,
-        "FOAG"@en .
-
-systemmap:ORG002 a systemmap:CLS008 ;
-    rdfs:label "Direktion"@de ;
-    rdfs:comment "Die Direktion verantwortet die strategische Führung und Koordination der Schweizer Agrarpolitik. Zudem ist die Direktion für die Kommunikation und Öffentlichkeitsarbeit in den drei Amtssprachen zuständig."@de ;
-    systemmap:PRP001 systemmap:ORG001 ;
-    systemmap:PRP101 "DR"@de .
+        "FOAG"@en,
+        "OFAG"@fr,
+        "UFAG"@it .
 
 systemmap:ORG003 a systemmap:CLS008 ;
-    rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de ;
-    rdfs:comment "Der Direktionsbereich Digitalisierung und Datenmanagement setzt sich dafür ein, dass die digitale Transformation und das Datenmanagement in der Land- und Ernährungswirtschaft ziel- und zukunftsgerichtet gefördert werden."@de ;
+    rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de,
+        "Directorate for Digitalization and Data Management"@en,
+        "Direction de la numérisation et de la gestion des données"@fr,
+        "Direzione per la digitalizzazione e la gestione dei dati"@it ;
+    rdfs:comment "Der Direktionsbereich Digitalisierung und Datenmanagement setzt sich dafür ein, dass die digitale Transformation und das Datenmanagement in der Land- und Ernährungswirtschaft ziel- und zukunftsgerichtet gefördert werden."@de,
+        "The Directorate for Digitalization and Data Management is committed to ensuring that digital transformation and data management in the agricultural and food sector are promoted in a goal-oriented and forward-looking manner."@en,
+        "La Direction de la numérisation et de la gestion des données s'engage à ce que la transformation numérique et la gestion des données dans le secteur agricole et alimentaire soient encouragées de manière ciblée et tournée vers l'avenir."@fr,
+        "La Direzione per la digitalizzazione e la gestione dei dati si impegna a garantire che la trasformazione digitale e la gestione dei dati nel settore agricolo e alimentare siano promosse in modo mirato e orientato al futuro."@it ;
     systemmap:PRP001 systemmap:ORG001 ;
-    systemmap:PRP101 "DBDD"@de .
+    systemmap:PRP101 "DBDD"@de,
+        "DBDD"@en,
+        "DBDD"@fr,
+        "DBDD"@it .
 
 systemmap:ORG004 a systemmap:CLS008 ;
-    rdfs:label "Direktionsbereich Recht, Ressourcen und Integrale Sicherheit"@de ;
-    rdfs:comment "Der Direktionsbereich Recht, Ressourcen und Integrale Sicherheit sichert die rechtliche Konformität der verschiedenen BLW-Massnahmen und ist insbesondere für die personellen Massnahmen des Amtes verantwortlich."@de ;
+    rdfs:label "Direktionsbereich Recht, Ressourcen und Integrale Sicherheit"@de,
+        "Directorate for Law, Resources, and Integral Security"@en,
+        "Direction du droit, des ressources et de la sécurité intégrale"@fr,
+        "Direzione per il diritto, le risorse e la sicurezza integrale"@it ;
+    rdfs:comment "Der Direktionsbereich Recht, Ressourcen und Integrale Sicherheit sichert die rechtliche Konformität der verschiedenen BLW-Massnahmen und ist insbesondere für die personellen Massnahmen des Amtes verantwortlich."@de,
+        "The Directorate for Law, Resources, and Integral Security ensures the legal compliance of various BLW measures and is particularly responsible for the office’s personnel measures."@en,
+        "La Direction du droit, des ressources et de la sécurité intégrale garantit la conformité juridique des différentes mesures de l'OFAG et est notamment responsable des mesures en matière de personnel du bureau."@fr,
+        "La Direzione per il diritto, le risorse e la sicurezza integrale garantisce la conformità legale delle varie misure dell'UFAG ed è in particolare responsabile delle misure relative al personale dell'ufficio."@it ;
     systemmap:PRP001 systemmap:ORG001 ;
-    systemmap:PRP101 "DBRRIS"@de .
+    systemmap:PRP101 "DBRRIS"@de,
+        "DBRRIS"@en,
+        "DBRRIS"@fr,
+        "DBRRIS"@it .
 
 systemmap:ORG005 a systemmap:CLS008 ;
     rdfs:label "Direktionsbereich Produktionsgrundlagen, natürliche Ressourcen und Forschung"@de ;
@@ -246,10 +336,19 @@ systemmap:ORG007 a systemmap:CLS008 ;
     systemmap:PRP101 "DBMI"@de .
 
 systemmap:ORG010 a systemmap:CLS008 ;
-    rdfs:label "Fachbereich Agrarinformationssysteme"@de ;
-    rdfs:comment "Der Fachbereich Agrarinformationssysteme ist die zentrale Drehscheibe für Agrardaten. Er ist zuständig für das Portal Agate – den Online-Schalter für die Landwirtschaft – sowie für die zentralen Informationssysteme. Er setzt die fachlichen Vorgaben in technische Lösungen um und gewährleisten eine hohe Datenqualität. Dabei setzen wir auf medienbruchfreie, digitale Prozesse und Standards. FBAIS bietet Schnittstellen an für den Bezug und die Weitergabe der Daten an andere Bundesämter und auch an Dritte ausserhalb der Verwaltung."@de ;
+    rdfs:label "Fachbereich Agrarinformationssysteme"@de,
+        "Agricultural Information Systems Division"@en,
+        "Unité des systèmes d'information agricole"@fr,
+        "Divisione dei sistemi informativi agricoli"@it ;
+    rdfs:comment "Der Fachbereich Agrarinformationssysteme ist die zentrale Drehscheibe für Agrardaten. Er ist zuständig für das Portal Agate – den Online-Schalter für die Landwirtschaft – sowie für die zentralen Informationssysteme. Er setzt die fachlichen Vorgaben in technische Lösungen um und gewährleistet eine hohe Datenqualität. Dabei setzen wir auf medienbruchfreie, digitale Prozesse und Standards. FBAIS bietet Schnittstellen an für den Bezug und die Weitergabe der Daten an andere Bundesämter und auch an Dritte ausserhalb der Verwaltung."@de,
+        "The Agricultural Information Systems Division is the central hub for agricultural data. It is responsible for the Agate portal – the online gateway for agriculture – as well as for central information systems. It implements professional requirements into technical solutions and ensures high data quality. We rely on seamless, digital processes and standards. FBAIS provides interfaces for retrieving and sharing data with other federal offices and third parties outside the administration."@en,
+        "L'Unité des systèmes d'information agricole est la plaque tournante centrale des données agricoles. Elle est responsable du portail Agate – la plateforme en ligne pour l'agriculture – ainsi que des systèmes d'information centraux. Elle met en œuvre les exigences professionnelles en solutions techniques et garantit une haute qualité des données. Nous misons sur des processus et des standards numériques sans rupture. FBAIS propose des interfaces pour l'accès et la transmission des données à d'autres offices fédéraux ainsi qu'à des tiers en dehors de l'administration."@fr,
+        "La Divisione dei sistemi informativi agricoli è il punto di riferimento centrale per i dati agricoli. È responsabile del portale Agate – lo sportello online per l'agricoltura – e dei sistemi informativi centrali. Implementa i requisiti professionali in soluzioni tecniche e garantisce un'elevata qualità dei dati. Puntiamo su processi e standard digitali senza interruzioni. FBAIS fornisce interfacce per l'accesso e la condivisione dei dati con altri uffici federali e con terzi al di fuori dell'amministrazione."@it ;
     systemmap:PRP001 systemmap:ORG003 ;
-    systemmap:PRP101 "FBAIS"@de .
+    systemmap:PRP101 "FBAIS"@de,
+        "FBAIS"@en,
+        "FBAIS"@fr,
+        "FBAIS"@it .
 
 systemmap:ORG011 a systemmap:CLS008 ;
     rdfs:label "Kompetenzzentrum für die digitale Transformation"@de ;

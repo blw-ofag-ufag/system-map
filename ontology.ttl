@@ -19,10 +19,10 @@ systemmap:CLS002 a owl:Class ;
         "IT system"@en,
         "Système informatique"@fr,
         "Sistema IT"@it ;
-    rdfs:comment "Jedes IT-System (im abstrakten Sinne) mit einer oder mehreren Datenbanken. Beispiele für solche Systeme sind AGIS, das BI-System ASTAT des BLW oder die kantonalen IT-Systeme für die Landwirtschaft."@de,
-        "Any IT system (in an abstracted sense) with one or many databases. Examples for such systems would be AGIS, the FOAG BI system ASTAT, or the cantonal agricultural IT systems."@en,
-        "Tout système informatique (dans un sens abstrait) avec une ou plusieurs bases de données. Des exemples de tels systèmes sont AGIS, le système BI ASTAT de l'OFAG ou les systèmes informatiques cantonaux pour l'agriculture."@fr,
-        "Qualsiasi sistema IT (in senso astratto) con uno o più database. Esempi di tali sistemi sono AGIS, il sistema BI ASTAT dell'UFAG o i sistemi IT cantonali per l'agricoltura."@it .
+    rdfs:comment "Jedes IT-System (im abstrakten Sinne), oft mit einer oder mehreren dazugehörigen Datenbanken."@de,
+        "Any IT system (in an abstract sense), often with one or more associated databases."@en,
+        "Tout système informatique (dans un sens abstrait), souvent avec une ou plusieurs bases de données associées."@fr,
+        "Qualsiasi sistema IT (in senso astratto), spesso con uno o più database associati."@it .
 
 systemmap:CLS003 a owl:Class ;
     rdfs:label "Informationseinheit"@de,

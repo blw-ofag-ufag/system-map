@@ -167,8 +167,9 @@ systemmap:PRP013 a owl:ObjectProperty ;
     owl:inverseOf systemmap:PRP014 .
 
 systemmap:PRP014 a owl:ObjectProperty ;
-    rdfs:label "ist abgeleitet von"@de,
-        "is derived from"@en ;
+    rdfs:label "bezieht Informationen von"@de,
+        "gets information from"@en ;
+    rdfs:comment "Zeigt an, dass eine Informationseinheit von einer anderen abgeleitet ist. Diese Beziehung wird gebraucht, um Informationsflüsse darzustellen. Diese müssen nicht zwingen (durch eine API oder Ähnliches) formalisiert sein." ;
     rdfs:domain systemmap:CLS003 ;
     rdfs:range systemmap:CLS003 ;
     owl:inverseOf systemmap:PRP013 .

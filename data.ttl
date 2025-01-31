@@ -1,6 +1,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/foag/system-map#> .
 
+systemmap:ORG200 a systemmap:CLS001 ;
+    rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de ;
+    rdfs:comment "Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz. Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen."@de ;
+    systemmap:PRP101 "UPOV"@de .
+
 systemmap:SYS001 a systemmap:CLS002 ;
     rdfs:label "Acontrol"@de ;
     rdfs:comment "Acontrol ist das Informationssystem des BLW, das für die Planung, Erfassung und Verwaltung landwirtschaftlicher Inspektionen eingesetzt wird. Es vereinfacht die Kontrollprozesse durch eine zentrale Plattform für Dateneingabe und -abfrage. Auf diese Weise wird eine effiziente Überwachung und Einhaltung landwirtschaftlicher Standards gewährleistet."@de ;
@@ -103,8 +108,8 @@ systemmap:SYS024 a systemmap:CLS002 ;
         "PLUTO"@it .
 
 systemmap:INF001 a systemmap:CLS003 ;
-    rdfs:label "Kontaktangaben von Bewirtschaftenden"@de ;
-    rdfs:comment "Informationen zu Kontaktangaben von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de ;
+    rdfs:label "Kontaktdaten Bewirtschaftenden"@de ;
+    rdfs:comment "Informationen zu Kontaktdaten von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de ;
     systemmap:PRP012 systemmap:SYS003 .
 
 systemmap:INF010 a systemmap:CLS003 ;
@@ -114,13 +119,13 @@ systemmap:INF010 a systemmap:CLS003 ;
     systemmap:PRP014 systemmap:INF012 .
 
 systemmap:INF011 a systemmap:CLS003 ;
-    rdfs:label "Kundeninformationen"@de ;
-    rdfs:comment "Kontaktaddressen der Züchter, welche Informationen zu den Sorten an ProVar geben."@de ;
+    rdfs:label "Kontaktdaten Züchter"@de ;
+    rdfs:comment "Kontaktdaten der Züchter, welche Informationen zu den Sorten an ProVar geben."@de ;
     systemmap:PRP012 systemmap:SYS011 .
 
 systemmap:INF012 a systemmap:CLS003 ;
     rdfs:label "Globale Pflanzenliste"@de ;
-    rdfs:comment "Liste aller möglichen Pflanzenarten mit entsprechenden Pflanzenarten-Codes. UPOV verwendet ein spezifisches Codesystem, um Pflanzenarten und -gattungen eindeutig zu identifizieren. Diese sogenannten UPOV-Codes bestehen in der Regel aus fünf Buchstaben für die Gattung und drei Buchstaben für die Art, zum Beispiel steht 'PRUNU_ARM' für <i>Prunus armeniaca</i> (Aprikose). Dieses System erleichtert die Klassifizierung und den Informationsaustausch über Pflanzensorten."@de ;
+    rdfs:comment "Liste aller möglichen Pflanzenarten mit entsprechenden Pflanzenarten-Codes. UPOV verwendet ein spezifisches Codesystem, um Pflanzenarten und -gattungen eindeutig zu identifizieren. Diese sogenannten UPOV-Codes bestehen in der Regel aus fünf Buchstaben für die Gattung und drei Buchstaben für die Art, zum Beispiel steht <tt>PRUNU_ARM</tt> für <i>Prunus armeniaca</i> (Aprikose). Dieses System erleichtert die Klassifizierung und den Informationsaustausch über Pflanzensorten."@de ;
     systemmap:PRP012 systemmap:SYS024 .
 
 systemmap:INF013 a systemmap:CLS003 ;
@@ -128,6 +133,17 @@ systemmap:INF013 a systemmap:CLS003 ;
     rdfs:comment "Informationen zu Pflanzensorten aus UPOV-Mitgliedsländern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD). Diese Sortenliste dient als zentrales Register für Sortenbezeichnungen und unterstützt bei der Überprüfung der Unterscheidbarkeit neuer Sorten."@de ;
     systemmap:PRP012 systemmap:SYS024 ;
     systemmap:PRP014 systemmap:INF010 .
+
+systemmap:INF020 a systemmap:CLS003 ;
+    rdfs:label "Kontaktdaten Milchproduzenten"@de ;
+    rdfs:comment "Kontaktdaten der Milchproduzenten wie Adressen, TVD-Nummer, AGIS-Nummer des Betriebs, AGIS Nummer des Bewirtschaftenden und Zahlungsinformationen für die Ausbezahlung der Zulage für verkäste Milch und die Zulage für Fütterung ohne Silage. Wenn möglich, werden diese Kontaktdaten aus AGIS bezogen."@de ;
+    systemmap:PRP012 systemmap:SYS021 ;
+    systemmap:PRP014 systemmap:INF001 .
+
+systemmap:INF021 a systemmap:CLS003 ;
+    rdfs:label "Kontaktdaten Milchverarbeiter"@de ;
+    rdfs:comment "Kontaktdaten der Milchverarbeiter wie Adressen oder Identifikationsnummern."@de ;
+    systemmap:PRP012 systemmap:SYS021 .
 
 systemmap:ORG100 a systemmap:CLS007 ;
     rdfs:label "TSM Treuhand GmbH"@de ;
@@ -145,11 +161,6 @@ systemmap:ORG102 a systemmap:CLS007 ;
 systemmap:ORG103 a systemmap:CLS007 ;
     rdfs:label "Fenaco Genossenschaft"@de ;
     rdfs:comment "Die Fenaco Genossenschaft ist ein schweizerisches Agrarunternehmen, das die Landwirtinnen und Landwirte dabei unterstützt, ihre Betriebe wirtschaftlich erfolgreich zu führen. Sie ist in den Bereichen Agrarhandel, Lebensmittelproduktion, Detailhandel und Energie tätig. Fenaco ist Eigentümerin von Marken wie Landi, Volg, Agrola und diverse Lebensmittelproduzenten. Die Genossenschaft gehört Schweizer Landwirten und hat ihren Hauptsitz in Bern."@de .
-
-systemmap:ORG200 a systemmap:CLS007 ;
-    rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de ;
-    rdfs:comment "Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz. Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen."@de ;
-    systemmap:PRP101 "UPOV"@de .
 
 systemmap:ORG001 a systemmap:CLS008 ;
     rdfs:label "Bundesamt für Landwirtschaft"@de,

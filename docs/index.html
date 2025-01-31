@@ -142,6 +142,7 @@ async function init() {
 
   // Optional: shorten label if it's too long
   function shortenLabel(label, abbreviation) {
+    if (label.length + abbreviation.length <= 40) return label + " " + (abbreviation ? `(${abbreviation})` : "");
     if (label.length <= 40) return label;
     if (abbreviation) return abbreviation; // prefer abbreviation if present
     return label.substring(0, 40) + "...";
@@ -274,10 +275,10 @@ async function init() {
   // 6a) We define a map of group => (original background/border/font).
   //     If your real data has more complex color logic, adapt as needed.
   const groupColors = {
-    Organization: { background: "#E0E0E0", border: "#000000", font: "#000000" },
+    Organization: { background: "#BF5F6F", border: "#000000", font: "#000000" },
     System:       { background: "#000000", border: "#000000", font: "#FFFFFF" },
     Information:  { background: "#A6C6DE", border: "#000000", font: "#000000" },
-    Other:        { background: "#FFFFFF", border: "#000000", font: "#000000" },
+    Other:        { background: "#BF5F6F", border: "#000000", font: "#000000" },
   };
 
   // 6b) Store each node’s *original* color + font so we can blend/restore
@@ -358,9 +359,9 @@ async function init() {
 
       const { background, border, fontColor } = originalStyles[node.id];
       // We blend each channel with the "dim color"
-      const dimBG = "#EEEEEE";
-      const dimBorder = "#CCCCCC";
-      const dimFont = "#999999";
+      const dimBG = "#F0F0F0";
+      const dimBorder = "#EEEEEE";
+      const dimFont = "#CCCCCC";
 
       const blendedBG = blendHexColors(background, dimBG, ratio);
       const blendedBorder = blendHexColors(border, dimBorder, ratio);

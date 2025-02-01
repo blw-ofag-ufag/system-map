@@ -71,6 +71,18 @@ window.CLASS_QUERY = `
   }
 `;
 
+// query the ontology title
+window.TITLE_QUERY = `
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT ?title
+WHERE {
+  GRAPH <https://lindas.admin.ch/foag/ontologies> {
+    <https://agriculture.ld.admin.ch/foag/system-map#> dcterms:title ?title .
+    FILTER(LANG(?title)="${lang}")
+  }
+}
+`;
+
 // fetch SPARQL data from the LINDAS endpoint
 window.getSparqlData = async function(query) {
   const url = `${ENDPOINT}?query=${encodeURIComponent(query)}`;

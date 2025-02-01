@@ -73,6 +73,25 @@ function blendHexColors(c1, c2, ratio) {
  * Build the network and set up the BFS highlight + info panel
  */
 async function init() {
+
+    async function fetchAndDisplayTitle() {
+        try {
+            const titleJson = await getSparqlData(TITLE_QUERY);
+            // Assuming the first binding contains the title
+            const title = titleJson.results.bindings[0]?.title.value;
+            if (title) {
+            const titleEl = document.getElementById("systemmapTitle");
+            titleEl.textContent = title;
+            } else {
+            console.warn("No title found in SPARQL response.");
+            }
+        } catch (error) {
+            console.error("Error fetching title:", error);
+        }
+    }
+
+    await fetchAndDisplayTitle();
+    
     // 1) Fetch node & edge data from your queries (defined in query.js)
     const nodesJson = await getSparqlData(NODE_QUERY);
     const edgesJson = await getSparqlData(EDGE_QUERY);

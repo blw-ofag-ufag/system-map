@@ -141,15 +141,9 @@ async function init() {
     // Keep your old physics/layout/chosen styles
     const options = {
         nodes: {
-            widthConstraint: {
-                minimum: 150,
-                maximum: 150
-            },
-            heightConstraint: {
-                minimum: 50,
-                maximum: 50
-            },
             shape: "box",
+            widthConstraint: 150,
+            heightConstraint: 50,
             font: {
                 color: "#000000",
                 face: "Poppins",

@@ -9,3 +9,27 @@ Explore the ontology of this graph [here](https://service.tib.eu/webvowl/#iri=ht
 - [Get nodes from LINDAS](https://s.zazuko.com/gmh9NR)
 - [Get edges from LINDAS](https://s.zazuko.com/3wDcscR)
 - [A list of information units](https://s.zazuko.com/2XsfNRB) and their classification according to the data protection act.
+
+# 🆙 Guide to upload the turtle files to LINDAS
+
+In order to upload a graph (as a turtle `.ttl` file) to the linked data service LINDAS, use the following cURL command:
+
+```curl
+curl \
+  --user lindas-foag:mySuperStrongPassword \
+  -X POST \
+  -H "Content-Type: text/turtle" \
+  --data-binary @graph/plant-protection.ttl \
+  "https://stardog-test.cluster.ldbar.ch/lindas?graph=https://lindas.admin.ch/foag/ontologies"
+```
+
+Replace `mySuperStrongPassword` with the actual password. Of course, `graph/plant-protection.ttl` could be set to another turtle file and `https://lindas.admin.ch/foag/ontologies` to another target graph.
+
+*If* data that was already uploaded was changed, clear the existing graph before posting. (Otherwise, stardog creates duplicate nodes for the changes.) To clear the graph, run:
+
+```curl
+curl \
+  --user lindas-foag:mySuperStrongPassword \
+  -X DELETE \
+  "https://stardog-test.cluster.ldbar.ch/lindas?graph=https://lindas.admin.ch/foag/ontologies"
+```

@@ -73,6 +73,25 @@ function blendHexColors(c1, c2, ratio) {
  * Build the network and set up the BFS highlight + info panel
  */
 async function init() {
+
+    async function fetchAndDisplayTitle() {
+        try {
+            const titleJson = await getSparqlData(TITLE_QUERY);
+            // Assuming the first binding contains the title
+            const title = titleJson.results.bindings[0]?.title.value;
+            if (title) {
+            const titleEl = document.getElementById("systemmapTitle");
+            titleEl.textContent = title;
+            } else {
+            console.warn("No title found in SPARQL response.");
+            }
+        } catch (error) {
+            console.error("Error fetching title:", error);
+        }
+    }
+
+    await fetchAndDisplayTitle();
+    
     // 1) Fetch node & edge data from your queries (defined in query.js)
     const nodesJson = await getSparqlData(NODE_QUERY);
     const edgesJson = await getSparqlData(EDGE_QUERY);
@@ -122,15 +141,9 @@ async function init() {
     // Keep your old physics/layout/chosen styles
     const options = {
         nodes: {
-            widthConstraint: {
-                minimum: 150,
-                maximum: 150
-            },
-            heightConstraint: {
-                minimum: 50,
-                maximum: 50
-            },
             shape: "box",
+            widthConstraint: 150,
+            heightConstraint: 50,
             font: {
                 color: "#000000",
                 face: "Poppins",
@@ -244,27 +257,23 @@ async function init() {
     // 7) Hover => BFS highlight + show panel
     network.on("hoverNode", (params) => {
         const hoveredId = params.node;
-
-        // BFS up to 2 hops
+    
+        // BFS up to 2 hops for nodes
         const distMap = getDistancesUpToTwoHops(network, hoveredId);
-
-        // Determine color blends
+    
+        // Update node colors (existing code)
         const updates = nodes.map(node => {
             const dist = distMap[node.id];
-            let ratio = 1; // default => fully dim
+            let ratio = 1; // default: fully dimmed
             if (dist === 0 || dist === 1) {
-                ratio = 0; // no dim
+                ratio = 0; // no dimming for nearby nodes
             } else if (dist === 2) {
-                ratio = 0.5; // partial dim
+                ratio = 0.5; // partially dimmed
             }
-            const {
-                background,
-                border,
-                fontColor
-            } = originalStyles[node.id];
-            const dimBG = "#F0F0F0";
+            const { background, border, fontColor } = originalStyles[node.id];
+            const dimBG = "#F8F8F8";
             const dimBorder = "#EEEEEE";
-            const dimFont = "#CCCCCC";
+            const dimFont = "#EEEEEE";
             return {
                 id: node.id,
                 color: {
@@ -277,39 +286,69 @@ async function init() {
             };
         });
         nodesDataset.update(updates);
-
-        // Show the info panel for hovered node
+    
+        // Update edge labels based on the positions of their endpoints.
+        // Helper: compute a ratio for a given node id.
+        const computeRatio = (nodeId) => {
+            const dist = distMap[nodeId];
+            if (dist === 0 || dist === 1) return 0;
+            if (dist === 2) return 0.5;
+            return 1; // not in the BFS range → fully dim
+        };
+    
+        // For each edge, take the maximum ratio of its endpoints.
+        const edgeUpdates = edgesDataset.get().map(edge => {
+            const ratioFrom = computeRatio(edge.from);
+            const ratioTo = computeRatio(edge.to);
+            const ratioEdge = Math.max(ratioFrom, ratioTo);
+    
+            // Original edge font color (assumed) and the dim color.
+            const originalEdgeFontColor = "#000000";
+            const dimEdgeFontColor = "#CCCCCC";
+    
+            return {
+                id: edge.id,
+                font: {
+                    color: blendHexColors(originalEdgeFontColor, dimEdgeFontColor, ratioEdge)
+                }
+            };
+        });
+        edgesDataset.update(edgeUpdates);
+    
+        // Show the info panel for the hovered node (existing code)
         const hoveredNodeData = nodesDataset.get(hoveredId);
         if (hoveredNodeData && hoveredNodeData.data) {
             showNodeInfo(hoveredNodeData);
         }
-    });
+    });    
 
-    // 8) Blur => restore colors + hide panel
+    // Blur => restore colors + hide panel
     network.on("blurNode", () => {
-        // restore all
+        // Restore node styles (existing code)
         const restoreArray = nodes.map(node => {
-            const {
-                background,
-                border,
-                fontColor
-            } = originalStyles[node.id];
+            const { background, border, fontColor } = originalStyles[node.id];
             return {
                 id: node.id,
-                color: {
-                    background,
-                    border
-                },
-                font: {
-                    color: fontColor
-                }
+                color: { background, border },
+                font: { color: fontColor }
             };
         });
         nodesDataset.update(restoreArray);
-
-        // hide the info panel
+    
+        // Restore edge labels to the original font color
+        const edgeRestore = edgesDataset.get().map(edge => {
+            return {
+                id: edge.id,
+                font: {
+                    color: "#000000" // Original edge label color
+                }
+            };
+        });
+        edgesDataset.update(edgeRestore);
+    
+        // Hide the info panel (existing code)
         hideNodeInfo();
-    });
+    });    
 
     function buildLegend(classRows) {
     // Grab the legend <div>

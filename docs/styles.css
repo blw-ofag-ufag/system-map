@@ -1,25 +1,23 @@
-html,
-body {
+html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
-
 /* The container for the Vis network */
 #network {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
 }
-
 /* The custom info panel in the top-right corner */
 .info-panel {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 500px; /* Adjust as you like */
+  width: 500px;
+ /* Adjust as you like */
   min-height: 50px;
   padding: 8px 12px;
   background: #ffffff;
@@ -27,43 +25,58 @@ body {
   border-radius: 6px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  pointer-events: none; /* So you can still drag the graph behind it */
+  pointer-events: none;
+ /* So you can still drag the graph behind it */
 }
-
 /* Hidden by default */
 .info-panel.hidden {
   display: none;
 }
-
 /* Legend container at bottom-left */
 .legend {
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-    /* background: rgba(255, 255, 255, 0.8); */
-    background: #ffffff;
-    padding: 8px 12px;
-    border-radius: 6px;
-    /* border: 1px solid #ccc;*/
-    border: 1px solid #000000;
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    max-width: 300px;  /* so it doesn’t stretch too far */
-  }
-  
-  /* Each legend item: a color box + label text */
-  .legend-item {
-    display: flex;
-    align-items: top;
-    margin-bottom: 6px; /* small spacing */
-  }
-  
-  .legend-swatch {
-    width: 32px;
-    height: 12px;
-    border: 1px solid #000;
-    border-radius: 3px;
-    margin-right: 6px;
-    flex-shrink: 0; /* so the box doesn’t shrink */
-    margin-top: 3px; /* Move it down */
-  }
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+ /* background: rgba(255, 255, 255, 0.8);
+  */
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+ /* border: 1px solid #ccc;
+ */
+  border: 1px solid #000000;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  max-width: 300px;
+ /* so it doesn’t stretch too far */
+}
+/* Each legend item: a color box + label text */
+.legend-item {
+  display: flex;
+  align-items: top;
+  margin-bottom: 6px;
+ /* small spacing */
+}
+.legend-swatch {
+  width: 32px;
+  height: 12px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  margin-right: 6px;
+  flex-shrink: 0;
+ /* so the box doesn’t shrink */
+  margin-top: 3px;
+ /* Move it down */
+}
+.systemmap-title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+ /* Adjust size as needed */
+  z-index: 100;
+ /* Ensure it sits on top of other elements */
+}

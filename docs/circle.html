@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Visualizing RDF Objects and Edges with Custom Aesthetics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Center the SVG on the page */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+    }
+
+    /* Node styling: larger font, light grey by default */
+    .node {
+      font-family: "Poppins", sans-serif;
+      font-size: 12px;
+      fill: #666;
+      cursor: default;
+    }
+    /* On hover or when flagged, the node text becomes black and bolder */
+    .node:hover,
+    .node--source,
+    .node--target {
+      fill: #FFF;
+    }
+
+    /* Link styling: light grey and thin by default */
+    .link {
+      stroke: #666;
+      stroke-opacity: 0.4;
+      stroke-width: 1px;
+      fill: none;
+      pointer-events: none;
+    }
+    /* On hover or when flagged, links become black, thicker and fully opaque */
+    .link:hover,
+    .link--source,
+    .link--target {
+      stroke: #FFF;
+      stroke-opacity: 1;
+      stroke-width: 2px;
+    }
+    /* Container for text elements */
+    #textContainer {
+      text-align: left;
+      margin-right: 20px; /* Space between text and graphic */
+    }
+    #textContainer h1 {
+      color: #FFF;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 24px;
+    }
+    #textContainer p {
+      color: #FFF;
+      margin: 5px 0 0 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+    <div id="textContainer">
+      <h1>DigiAgriFoodCH<br>Systemlandkarte</h1>
+      <p>Eine neue Art, <i>Daten</i> zu visualisieren.</p>
+    </div>
+
+    <!-- Load D3.js v4 -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    
+    <script>
+    // Aesthetic parameters: smaller overall diameter and radius.
+    var diameter = 900,
+        radius = diameter / 2,
+        innerRadius = radius - 300; // decrease inner radius for a tighter circle
+
+    // Create a radial cluster layout.
+    var cluster = d3.cluster()
+        .size([360, innerRadius]);
+
+    // Define a radial line generator for bundled links.
+    var line = d3.radialLine()
+        .curve(d3.curveBundle.beta(0.85))
+        .radius(function(d) { return d.y; })
+        .angle(function(d) { return d.x / 180 * Math.PI; });
+
+    // Create the main SVG element and center it.
+    var svg = d3.select("body").append("svg")
+        .attr("width", diameter)
+        .attr("height", diameter)
+      .append("g")
+        .attr("transform", "translate(" + radius + "," + radius + ")");
+
+    // Global selections for links and nodes.
+    var link = svg.append("g").selectAll(".link"),
+        node = svg.append("g").selectAll(".node");
+
+    // SPARQL endpoint.
+    var endpoint = "https://test.lindas.admin.ch/query";
+
+    // Query for nodes: Retrieve objects of the specified classes with a German label.
+    var nodesQuery = `
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map#>
+SELECT ?id ?group ?label ?comment ?abbreviation
+WHERE {
+  GRAPH <https://lindas.admin.ch/foag/ontologies> {
+    ?id a ?group .
+    VALUES ?group { systemmap:CLS001 systemmap:CLS002 systemmap:CLS003 systemmap:CLS004 systemmap:CLS005 systemmap:CLS006 systemmap:CLS007 systemmap:CLS008 systemmap:CLS009 systemmap:CLS010 systemmap:CLS011 }
+    ?id rdfs:label ?label .
+    FILTER(LANG(?label)="de")
+  }
+}
+    `;
+
+    // Query for edges: Retrieve all triples between nodes in the same set.
+    var edgesQuery = `
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map#>
+SELECT ?subject ?predicate ?object
+WHERE {
+  GRAPH <https://lindas.admin.ch/foag/ontologies> {
+    ?subject ?predicate ?object .
+    ?subject a ?group .
+    VALUES ?group { systemmap:CLS001 systemmap:CLS002 systemmap:CLS003 systemmap:CLS004 systemmap:CLS005 systemmap:CLS006 systemmap:CLS007 systemmap:CLS008 systemmap:CLS009 systemmap:CLS010 systemmap:CLS011 }
+    ?subject rdfs:label ?sLabel .
+    FILTER(LANG(?sLabel)="de")
+    ?object a ?group2 .
+    VALUES ?group2 { systemmap:CLS001 systemmap:CLS002 systemmap:CLS003 systemmap:CLS004 systemmap:CLS005 systemmap:CLS006 systemmap:CLS007 systemmap:CLS008 systemmap:CLS009 systemmap:CLS010 systemmap:CLS011 }
+    ?object rdfs:label ?oLabel .
+    FILTER(LANG(?oLabel)="de")
+  }
+}
+    `;
+
+    // Helper: Extract the local name from a URI.
+    function localName(uri) {
+      var hash = uri.lastIndexOf("#");
+      if (hash !== -1) return uri.substring(hash + 1);
+      var slash = uri.lastIndexOf("/");
+      return uri.substring(slash + 1);
+    }
+
+    // Helper function to fetch SPARQL JSON with the proper Accept header.
+    function getSparqlJSON(url) {
+      return new Promise(function(resolve, reject) {
+        d3.request(url)
+          .header("Accept", "application/sparql-results+json")
+          .get(function(error, response) {
+            if (error) {
+              reject(error);
+            } else {
+              try {
+                resolve(JSON.parse(response.response));
+              } catch(e) {
+                reject(e);
+              }
+            }
+          });
+      });
+    }
+
+    // Build full URLs for the queries.
+    var nodesURL = endpoint + "?query=" + encodeURIComponent(nodesQuery);
+    var edgesURL = endpoint + "?query=" + encodeURIComponent(edgesQuery);
+
+    // Fetch nodes and edges concurrently.
+    Promise.all([
+      getSparqlJSON(nodesURL),
+      getSparqlJSON(edgesURL)
+    ]).then(function(results) {
+      var nodesResult = results[0];
+      var edgesResult = results[1];
+
+      // Process nodes: Create an array of node objects.
+      var flatNodes = nodesResult.results.bindings.map(function(d) {
+        return {
+          id: d.id.value,
+          group: d.group.value,
+          label: d.label.value,
+          comment: d.comment ? d.comment.value : "",
+          abbreviation: d.abbreviation ? d.abbreviation.value : "",
+          // Construct a dot-separated name for the hierarchy (e.g., "CLS001.DeutscherLabel")
+          name: localName(d.group.value) + "." + d.label.value,
+          imports: []  // To later hold edges (target node names)
+        };
+      });
+
+      // Create a lookup for nodes by their RDF id.
+      var nodesById = {};
+      flatNodes.forEach(function(n) { nodesById[n.id] = n; });
+
+      // Process edges.
+      var edges = edgesResult.results.bindings.map(function(d) {
+        return {
+          subject: d.subject.value,
+          predicate: d.predicate.value,
+          object: d.object.value
+        };
+      });
+
+      // For each edge, if both endpoints are in our node set, record the relationship.
+      edges.forEach(function(edge) {
+        if (nodesById[edge.subject] && nodesById[edge.object]) {
+          // Record the target node's "name" in the source node's imports.
+          nodesById[edge.subject].imports.push(nodesById[edge.object].name);
+        }
+      });
+
+      // Build a hierarchy from the flat nodes.
+      var root = packageHierarchy(flatNodes)
+                  .sum(function(d) { return 1; });
+
+      // Compute the layout.
+      cluster(root);
+
+      // Create links between nodes based on the "imports" relationships.
+      var links = packageImports(root.leaves());
+
+      // Render links and assign the selection to the global variable "link".
+      link = link.data(links)
+        .enter().append("path")
+          .each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
+          .attr("class", "link")
+          .attr("d", line);
+
+      // Render nodes and assign the selection to the global variable "node".
+      node = node.data(root.leaves())
+        .enter().append("text")
+          .attr("class", "node")
+          .attr("dy", "0.31em")
+          .attr("transform", function(d) {
+            return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" +
+                   (d.x < 180 ? "" : "rotate(180)");
+          })
+          .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+          .text(function(d) {
+            // Truncate labels longer than 50 characters.
+            return d.data.label.length > 45 ? d.data.label.substr(0, 42) + "..." : d.data.label;
+          })
+          .on("mouseover", mouseovered)
+          .on("mouseout", mouseouted);
+    }).catch(function(error) {
+      console.error("Error loading SPARQL data:", error);
+    });
+
+    // Highlight edges and nodes connected to the hovered node.
+    function mouseovered(d) {
+      // Clear previous highlighting.
+      node.each(function(n) { n.target = n.source = false; });
+
+      link
+          .classed("link--target", function(l) {
+            if (l.target === d) return l.source.source = true;
+          })
+          .classed("link--source", function(l) {
+            if (l.source === d) return l.target.target = true;
+          })
+        .filter(function(l) { return l.target === d || l.source === d; })
+          .raise();
+
+      node
+          .classed("node--target", function(n) { return n.target; })
+          .classed("node--source", function(n) { return n.source; });
+    }
+
+    // Remove highlighting on mouseout.
+    function mouseouted(d) {
+      link
+          .classed("link--target", false)
+          .classed("link--source", false);
+
+      node
+          .classed("node--target", false)
+          .classed("node--source", false);
+    }
+
+    // Build a hierarchy from a flat array of objects.
+    // Each object must have a "name" property where a dot (".") separates the parent from the child.
+    function packageHierarchy(classes) {
+      var map = {};
+
+      function find(name, data) {
+        var node = map[name], i;
+        if (!node) {
+          node = map[name] = data || { name: name, children: [] };
+          if (name.length) {
+            i = name.lastIndexOf(".");
+            var parentName = name.substring(0, i);
+            node.parent = find(parentName);
+            node.parent.children.push(node);
+            node.key = name.substring(i + 1);
+          }
+        }
+        return node;
+      }
+
+      classes.forEach(function(d) {
+        find(d.name, d);
+      });
+
+      // Return the root of the hierarchy.
+      return d3.hierarchy(map[""]);
+    }
+
+    // Create a list of link paths between nodes based on their "imports" arrays.
+    function packageImports(nodes) {
+      var map = {},
+          imports = [];
+
+      // Build a map from node name to node.
+      nodes.forEach(function(d) {
+        map[d.data.name] = d;
+      });
+
+      // For each node, for every import, create a link path.
+      nodes.forEach(function(d) {
+        if (d.data.imports) {
+          d.data.imports.forEach(function(i) {
+            if (map[i]) {
+              imports.push(map[d.data.name].path(map[i]));
+            }
+          });
+        }
+      });
+
+      return imports;
+    }
+  </script>
+</body>
+</html>

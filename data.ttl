@@ -134,10 +134,19 @@ systemmap:SYS020 a systemmap:CLS002 ;
         "BDTA"@it .
 
 systemmap:SYS021 a systemmap:CLS002 ;
-    rdfs:label "Datenbank Milch"@de ;
-    rdfs:comment "Die Datenbank Milch (dbmilch.ch) ist eine Webapplikation der TSM Treuhand GmbH. Sie ist die Online-Plattform der Akteure der Schweizer Milchwirtschaft. Die von der Bedag Solutions AG entwickelte Lösung kann von den kantonalen Veterinär- und Landwirtschaftsämtern oder auch anderen Organisationen in Verbindung mit Acontrol genutzt werden."@de ;
+    rdfs:label "Datenbank Milch"@de,
+        "Milk Database"@en,
+        "Base de données lait"@fr,
+        "Database latte"@it ;
+    rdfs:comment "Die Datenbank Milch (dbmilch.ch) ist eine Webapplikation der TSM Treuhand GmbH. Sie ist die Online-Plattform der Akteure der Schweizer Milchwirtschaft. Die von der Bedag Solutions AG entwickelte Lösung kann von den kantonalen Veterinär- und Landwirtschaftsämtern oder auch anderen Organisationen in Verbindung mit Acontrol genutzt werden."@de,
+        "The Milk Database (dbmilch.ch) is a web application of TSM Treuhand GmbH. It is the online platform for actors in the Swiss dairy industry. The solution developed by Bedag Solutions AG can be used by cantonal veterinary and agricultural offices or other organizations in conjunction with Acontrol."@en,
+        "La base de données lait (dbmilch.ch) est une application web de TSM Treuhand GmbH. Elle est la plateforme en ligne des acteurs de l'industrie laitière suisse. La solution développée par Bedag Solutions AG peut être utilisée par les offices vétérinaires et agricoles cantonaux ou par d'autres organisations en lien avec Acontrol."@fr,
+        "La database latte (dbmilch.ch) è un'applicazione web di TSM Treuhand GmbH. È la piattaforma online per gli attori dell'industria lattiero-casearia svizzera. La soluzione sviluppata da Bedag Solutions AG può essere utilizzata dagli uffici veterinari e agricoli cantonali o da altre organizzazioni in combinazione con Acontrol."@it ;
     systemmap:PRP008 systemmap:ORG100 ;
-    systemmap:PRP102 "dbmilch"@de .
+    systemmap:PRP102 "dbmilch"@de,
+        "dbmilch"@en,
+        "dbmilch"@fr,
+        "dbmilch"@it .
 
 systemmap:SYS022 a systemmap:CLS002 ;
     rdfs:label "ACmobile"@de ;
@@ -221,57 +230,123 @@ systemmap:INF013 a systemmap:CLS003 ;
     systemmap:PRP014 systemmap:INF010 .
 
 systemmap:INF020 a systemmap:CLS003 ;
-    rdfs:label "Kontaktdaten Milchproduzenten"@de ;
-    rdfs:comment "Kontaktdaten der Milchproduzenten wie Adressen, TVD-Nummer, AGIS-Nummer des Betriebs, AGIS Nummer des Bewirtschaftenden und Zahlungsinformationen für die Ausbezahlung der Zulage für verkäste Milch und die Zulage für Fütterung ohne Silage. Wenn möglich, werden diese Kontaktdaten aus AGIS bezogen."@de ;
+    rdfs:label "Kontaktdaten Milchproduzenten"@de,
+        "Contact details of milk producers"@en,
+        "Coordonnées des producteurs de lait"@fr,
+        "Dati di contatto dei produttori di latte"@it ;
+    rdfs:comment "Kontaktdaten der Milchproduzenten wie Adressen, TVD-Nummer, AGIS-Nummer des Betriebs, AGIS Nummer des Bewirtschaftenden und Zahlungsinformationen für die Ausbezahlung der Zulage für verkäste Milch und die Zulage für Fütterung ohne Silage. Wenn möglich, werden diese Kontaktdaten aus AGIS bezogen."@de,
+        "Contact details of milk producers, such as addresses, TVD number, AGIS number of the farm, AGIS number of the operator, and payment information for the subsidy for cheesed milk and the subsidy for feeding without silage. If possible, these contact details are obtained from AGIS."@en,
+        "Coordonnées des producteurs de lait, telles que les adresses, le numéro TVD, le numéro AGIS de l'exploitation, le numéro AGIS de l'exploitant et les informations de paiement pour la subvention pour le lait transformé en fromage et la subvention pour l'alimentation sans ensilage. Si possible, ces coordonnées sont obtenues auprès d'AGIS."@fr,
+        "Dati di contatto dei produttori di latte, come indirizzi, numero TVD, numero AGIS dell'azienda, numero AGIS del gestore e informazioni di pagamento per il sussidio per il latte trasformato in formaggio e il sussidio per l'alimentazione senza insilato. Se possibile, questi dati di contatto vengono ottenuti da AGIS."@it ;
     systemmap:PRP012 systemmap:SYS021 ;
     systemmap:PRP014 systemmap:INF001 .
 
 systemmap:INF021 a systemmap:CLS003 ;
-    rdfs:label "Kontaktdaten Milchverarbeiter"@de ;
-    rdfs:comment "Kontaktdaten der Milchverarbeiter wie Adressen oder Identifikationsnummern."@de ;
+    rdfs:label "Kontaktdaten Milchverarbeiter"@de,
+        "Contact details of milk processors"@en,
+        "Coordonnées des transformateurs de lait"@fr,
+        "Dati di contatto dei trasformatori di latte"@it ;
+    rdfs:comment "Kontaktdaten der Milchverarbeiter wie Adressen oder Identifikationsnummern."@de,
+        "Contact details of milk processors, such as addresses or identification numbers."@en,
+        "Coordonnées des transformateurs de lait, telles que les adresses ou les numéros d'identification."@fr,
+        "Dati di contatto dei trasformatori di latte, come indirizzi o numeri di identificazione."@it ;
     systemmap:PRP012 systemmap:SYS021 .
 
 systemmap:INF022 a systemmap:CLS003 ;
-    rdfs:label "Daten zur Milchproduktion"@de ;
-    rdfs:comment "Monatliche Produktionsmengen (in kg) der im Vormonat gelieferten Kuh- und Büffelmilch von allen Milchproduzenten. Das BLW benötigt diese Information für die Ausrichtung der Zulage für Verkehrsmilch."@de ;
+    rdfs:label "Daten zur Milchproduktion"@de,
+        "Data on milk production"@en,
+        "Données sur la production laitière"@fr,
+        "Dati sulla produzione di latte"@it ;
+    rdfs:comment "Monatliche Produktionsmengen (in kg) der im Vormonat gelieferten Kuh- und Büffelmilch von allen Milchproduzenten. Das BLW benötigt diese Information für die Ausrichtung der Zulage für Verkehrsmilch."@de,
+        "Monthly production quantities (in kg) of cow and buffalo milk delivered in the previous month by all milk producers. The BLW requires this information for the allocation of the subsidy for market milk."@en,
+        "Quantités de production mensuelles (en kg) du lait de vache et de bufflonne livré le mois précédent par tous les producteurs de lait. L'OFAG a besoin de ces informations pour l'octroi de la subvention pour le lait de consommation."@fr,
+        "Quantità di produzione mensili (in kg) del latte di mucca e bufala consegnato nel mese precedente da tutti i produttori di latte. L'UFAG necessita di queste informazioni per l'assegnazione del sussidio per il latte di consumo."@it ;
     systemmap:PRP012 systemmap:SYS021 .
 
 systemmap:INF023 a systemmap:CLS003 ;
-    rdfs:label "Daten zur Milchverwertung"@de ;
-    rdfs:comment "Diese Daten sind essenziell für die Berechnung und Auszahlung von Zulagen für verkäste Milch sowie für die Fütterung ohne Silage durch das Bundesamt für Landwirtschaft (BLW)."@de ;
+    rdfs:label "Daten zur Milchverwertung"@de,
+        "Data on milk utilization"@en,
+        "Données sur la valorisation du lait"@fr,
+        "Dati sull'utilizzo del latte"@it ;
+    rdfs:comment "Diese Daten sind essenziell für die Berechnung und Auszahlung von Zulagen für verkäste Milch sowie für die Fütterung ohne Silage durch das Bundesamt für Landwirtschaft (BLW)."@de,
+        "These data are essential for the calculation and payment of subsidies for cheesed milk as well as for feeding without silage by the Federal Office for Agriculture (BLW)."@en,
+        "Ces données sont essentielles pour le calcul et le paiement des subventions pour le lait transformé en fromage ainsi que pour l'alimentation sans ensilage par l'Office fédéral de l'agriculture (OFAG)."@fr,
+        "Questi dati sono essenziali per il calcolo e il pagamento dei sussidi per il latte trasformato in formaggio e per l'alimentazione senza insilato da parte dell'Ufficio federale dell'agricoltura (UFAG)."@it ;
     systemmap:PRP012 systemmap:SYS021 .
 
 systemmap:INF024 a systemmap:CLS003 ;
-    rdfs:label "Resultate der Milchprüfung"@de ;
-    rdfs:comment "Ergebnisse der öffentlich-rechtlichen Milchprüfung. Bei der öffentlich-rechtlichen Milchprüfung wird die Kuhmilch zweimal monatlich auf die Prüfmerkmale Keimzahl, somatische Zellen und Hemmstoffe untersucht. Hygienisch ungenügende Resultate haben Beanstandungen und bei länger andauernden Hygienemängeln eine amtliche Milchliefersperre zur Folge. Die Ergebnisse der Milchprüfung werden über die Plattform dbmilch.ch an berechtigte Kreise bereitgestellt."@de ;
+    rdfs:label "Resultate der Milchprüfung"@de,
+        "Results of milk testing"@en,
+        "Résultats du contrôle du lait"@fr,
+        "Risultati del controllo del latte"@it ;
+    rdfs:comment "Ergebnisse der öffentlich-rechtlichen Milchprüfung. Bei der öffentlich-rechtlichen Milchprüfung wird die Kuhmilch zweimal monatlich auf die Prüfmerkmale Keimzahl, somatische Zellen und Hemmstoffe untersucht. Hygienisch ungenügende Resultate haben Beanstandungen und bei länger andauernden Hygienemängeln eine amtliche Milchliefersperre zur Folge. Die Ergebnisse der Milchprüfung werden über die Plattform dbmilch.ch an berechtigte Kreise bereitgestellt."@de,
+        "Results of the public milk testing. In public milk testing, cow’s milk is examined twice a month for the parameters germ count, somatic cells, and inhibitors. Hygienically insufficient results lead to complaints and, in case of prolonged hygiene deficiencies, an official milk delivery ban. The results of the milk testing are made available to authorized parties via the platform dbmilch.ch."@en,
+        "Résultats du contrôle public du lait. Lors du contrôle public du lait, le lait de vache est analysé deux fois par mois pour les paramètres suivants : nombre de germes, cellules somatiques et inhibiteurs. Des résultats hygiéniques insuffisants entraînent des réclamations et, en cas de carences hygiéniques prolongées, une interdiction officielle de livraison de lait. Les résultats du contrôle du lait sont mis à disposition des cercles autorisés via la plateforme dbmilch.ch."@fr,
+        "Risultati del controllo pubblico del latte. Nel controllo pubblico del latte, il latte di mucca viene analizzato due volte al mese per i seguenti parametri: conta dei germi, cellule somatiche e inibitori. Risultati igienicamente insufficienti comportano reclami e, in caso di carenze igieniche prolungate, un divieto ufficiale di consegna del latte. I risultati del controllo del latte sono resi disponibili ai soggetti autorizzati tramite la piattaforma dbmilch.ch."@it ;
     systemmap:PRP012 systemmap:SYS021 .
 
 systemmap:INF025 a systemmap:CLS003 ;
-    rdfs:label "Daten zur Milchsegmentierung"@de ;
-    rdfs:comment "Daten zur Segmentierung der Milchverwertung gemäß dem BOM1-Reglement."@de ;
+    rdfs:label "Daten zur Milchsegmentierung"@de,
+        "Data on milk segmentation"@en,
+        "Données sur la segmentation du lait"@fr,
+        "Dati sulla segmentazione del latte"@it ;
+    rdfs:comment "Daten zur Segmentierung der Milchverwertung gemäß dem BOM1-Reglement."@de,
+        "Data on the segmentation of milk utilization according to the BOM1 regulation."@en,
+        "Données sur la segmentation de la valorisation du lait selon le règlement BOM1."@fr,
+        "Dati sulla segmentazione dell'utilizzo del latte secondo il regolamento BOM1."@it ;
     systemmap:PRP012 systemmap:SYS021 .
 
 systemmap:INF026 a systemmap:CLS003 ;
-    rdfs:label "Milchstatistik"@de ;
-    rdfs:comment "Monatliche Statistiken und Mehrjahresvergleiche, die Angaben über die produzierte Milch und deren Verarbeitung in verschiedene Produktgruppen enthalten"@de ;
+    rdfs:label "Milchstatistik"@de,
+        "Milk statistics"@en,
+        "Statistiques du lait"@fr,
+        "Statistiche del latte"@it ;
+    rdfs:comment "Monatliche Statistiken und Mehrjahresvergleiche, die Angaben über die produzierte Milch und deren Verarbeitung in verschiedene Produktgruppen enthalten."@de,
+        "Monthly statistics and multi-year comparisons containing information on the milk produced and its processing into different product groups."@en,
+        "Statistiques mensuelles et comparaisons pluriannuelles contenant des informations sur le lait produit et sa transformation en différentes catégories de produits."@fr,
+        "Statistiche mensili e confronti pluriennali contenenti informazioni sul latte prodotto e sulla sua trasformazione in diverse categorie di prodotti."@it ;
     systemmap:PRP012 systemmap:SYS021 .
 
 systemmap:ORG100 a systemmap:CLS007 ;
-    rdfs:label "TSM Treuhand GmbH"@de ;
-    rdfs:comment "Die TSM Treuhand GmbH erfüllt unterschiedliche öffentlich- und privatrechtliche Aufträge in der Agrar- und Lebensmittelbranche. TSM steht für Treuhand, Statistik und Management. Die Haupttätigkeit der TSM besteht in der Verwaltung der Datenbank dbmilch.ch. Zudem werden weitere Aufträge im Bereich Treuhand, Fondsverwaltungen, Statistiken und Exportkontrollen durchgeführt. Der Hauptauftraggeber der TSM ist das Bundesamt für Landwirtschaft (BLW)."@de .
+    rdfs:label "TSM Treuhand GmbH"@de,
+        "TSM Treuhand LLC"@en,
+        "TSM Treuhand GmbH"@fr,
+        "TSM Fiduciaria S. a g. l."@it ;
+    rdfs:comment "Die TSM Treuhand GmbH erfüllt unterschiedliche öffentlich- und privatrechtliche Aufträge in der Agrar- und Lebensmittelbranche. TSM steht für Treuhand, Statistik und Management. Die Haupttätigkeit der TSM besteht in der Verwaltung der Datenbank dbmilch.ch. Zudem werden weitere Aufträge im Bereich Treuhand, Fondsverwaltungen, Statistiken und Exportkontrollen durchgeführt. Der Hauptauftraggeber der TSM ist das Bundesamt für Landwirtschaft (BLW)."@de,
+        "TSM Treuhand LLC carries out various public and private law mandates in the agricultural and food sector. TSM stands for Trust, Statistics, and Management. The main activity of TSM is the management of the dbmilch.ch database. In addition, further assignments in the areas of fiduciary services, fund management, statistics, and export controls are carried out. The main client of TSM is the Federal Office for Agriculture (BLW)."@en,
+        "TSM Fiduciaire S. à r. l. remplit divers mandats de droit public et privé dans le secteur agricole et alimentaire. TSM signifie Fiduciaire, Statistique et Management. L'activité principale de TSM est la gestion de la base de données dbmilch.ch. En outre, d'autres missions sont effectuées dans les domaines de la fiducie, de la gestion de fonds, des statistiques et des contrôles à l'exportation. Le principal client de TSM est l'Office fédéral de l'agriculture (OFAG)."@fr,
+        "TSM Treuhand GmbH svolge diversi mandati di diritto pubblico e privato nel settore agricolo e alimentare. TSM sta per Fiduciario, Statistica e Management. L'attività principale di TSM è la gestione del database dbmilch.ch. Inoltre, vengono svolti altri incarichi nei settori della fiduciaria, della gestione dei fondi, delle statistiche e dei controlli all'esportazione. Il principale committente di TSM è l'Ufficio federale dell'agricoltura (UFAG)."@it .
 
 systemmap:ORG101 a systemmap:CLS007 ;
-    rdfs:label "Identitas AG"@de ;
-    rdfs:comment "Die Identitas AG entwickelt und betreibt Informationssysteme für die Tierverkehrsdatenbank der Schweiz. Sie stellt Lösungen für die Rückverfolgbarkeit von Tieren, Tiergesundheit und Lebensmittelsicherheit bereit. Als IT-Dienstleister für Bund, Kantone und private Akteure bietet Identitas AG digitale Services zur Erfassung, Verarbeitung und Analyse von Tier- und Betriebsdaten an. Das Unternehmen hat seinen Sitz in Bern."@de .
+    rdfs:label "Identitas AG"@de,
+        "Identitas AG"@en,
+        "Identitas AG"@fr,
+        "Identitas AG"@it ;
+    rdfs:comment "Die Identitas AG entwickelt und betreibt Informationssysteme für die Tierverkehrsdatenbank der Schweiz. Sie stellt Lösungen für die Rückverfolgbarkeit von Tieren, Tiergesundheit und Lebensmittelsicherheit bereit. Als IT-Dienstleister für Bund, Kantone und private Akteure bietet Identitas AG digitale Services zur Erfassung, Verarbeitung und Analyse von Tier- und Betriebsdaten an. Das Unternehmen hat seinen Sitz in Bern."@de,
+        "Identitas AG develops and operates information systems for Switzerland's animal traffic database. It provides solutions for animal traceability, animal health, and food safety. As an IT service provider for the federal government, cantons, and private actors, Identitas AG offers digital services for recording, processing, and analyzing animal and farm data. The company is based in Bern."@en,
+        "Identitas AG développe et exploite des systèmes d'information pour la base de données du trafic des animaux en Suisse. Elle propose des solutions pour la traçabilité des animaux, la santé animale et la sécurité alimentaire. En tant que prestataire de services informatiques pour la Confédération, les cantons et les acteurs privés, Identitas AG fournit des services numériques pour la saisie, le traitement et l'analyse des données animales et agricoles. L'entreprise est basée à Berne."@fr,
+        "Identitas AG sviluppa e gestisce sistemi informativi per la banca dati del traffico degli animali in Svizzera. Fornisce soluzioni per la tracciabilità degli animali, la salute animale e la sicurezza alimentare. In qualità di fornitore di servizi IT per la Confederazione, i cantoni e gli attori privati, Identitas AG offre servizi digitali per la registrazione, l'elaborazione e l'analisi dei dati sugli animali e sulle aziende agricole. L'azienda ha sede a Berna."@it .
 
 systemmap:ORG102 a systemmap:CLS007 ;
-    rdfs:label "Barto AG"@de ;
-    rdfs:comment "Die Barto AG entwickelt und betreibt eine digitale Plattform für die Landwirtschaft. Sie bietet Landwirtinnen und Landwirten eine zentrale Lösung zur Betriebsführung, Dokumentation und Analyse von Betriebsdaten. Die Plattform integriert verschiedene agronomische und administrative Funktionen und ermöglicht eine effiziente Verwaltung von Ressourcen. Barto AG arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen. Der Sitz des Unternehmens befindet sich in der Schweiz."@de ;
+    rdfs:label "Barto AG"@de,
+        "Barto AG"@en,
+        "Barto AG"@fr,
+        "Barto AG"@it ;
+    rdfs:comment "Die Barto AG entwickelt und betreibt eine digitale Plattform für die Landwirtschaft. Sie bietet Landwirtinnen und Landwirten eine zentrale Lösung zur Betriebsführung, Dokumentation und Analyse von Betriebsdaten. Die Plattform integriert verschiedene agronomische und administrative Funktionen und ermöglicht eine effiziente Verwaltung von Ressourcen. Barto AG arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen. Der Sitz des Unternehmens befindet sich in der Schweiz."@de,
+        "Barto AG develops and operates a digital platform for agriculture. It provides farmers with a central solution for farm management, documentation, and analysis of operational data. The platform integrates various agronomic and administrative functions and enables efficient resource management. Barto AG collaborates with partners in the agricultural sector to provide innovative digital solutions. The company is based in Switzerland."@en,
+        "Barto AG développe et exploite une plateforme numérique pour l'agriculture. Elle offre aux agriculteurs une solution centrale pour la gestion des exploitations, la documentation et l'analyse des données d'exploitation. La plateforme intègre diverses fonctions agronomiques et administratives et permet une gestion efficace des ressources. Barto AG collabore avec des partenaires du secteur agricole pour proposer des solutions numériques innovantes. L'entreprise est basée en Suisse."@fr,
+        "Barto AG sviluppa e gestisce una piattaforma digitale per l'agricoltura. Fornisce agli agricoltori una soluzione centrale per la gestione aziendale, la documentazione e l'analisi dei dati operativi. La piattaforma integra varie funzioni agronomiche e amministrative e consente una gestione efficiente delle risorse. Barto AG collabora con partner del settore agricolo per fornire soluzioni digitali innovative. L'azienda ha sede in Svizzera."@it ;
     systemmap:PRP005 systemmap:ORG103 .
 
 systemmap:ORG103 a systemmap:CLS007 ;
-    rdfs:label "Fenaco Genossenschaft"@de ;
-    rdfs:comment "Die Fenaco Genossenschaft ist ein schweizerisches Agrarunternehmen, das die Landwirtinnen und Landwirte dabei unterstützt, ihre Betriebe wirtschaftlich erfolgreich zu führen. Sie ist in den Bereichen Agrarhandel, Lebensmittelproduktion, Detailhandel und Energie tätig. Fenaco ist Eigentümerin von Marken wie Landi, Volg, Agrola und diverse Lebensmittelproduzenten. Die Genossenschaft gehört Schweizer Landwirten und hat ihren Hauptsitz in Bern."@de .
+    rdfs:label "Fenaco Genossenschaft"@de,
+        "Fenaco Cooperative"@en,
+        "Coopérative Fenaco"@fr,
+        "Cooperativa Fenaco"@it ;
+    rdfs:comment "Die Fenaco Genossenschaft ist ein schweizerisches Agrarunternehmen, das die Landwirtinnen und Landwirte dabei unterstützt, ihre Betriebe wirtschaftlich erfolgreich zu führen. Sie ist in den Bereichen Agrarhandel, Lebensmittelproduktion, Detailhandel und Energie tätig. Fenaco ist Eigentümerin von Marken wie Landi, Volg, Agrola und diverse Lebensmittelproduzenten. Die Genossenschaft gehört Schweizer Landwirten und hat ihren Hauptsitz in Bern."@de,
+        "The Fenaco Cooperative is a Swiss agricultural company that supports farmers in running their businesses successfully. It operates in the areas of agricultural trade, food production, retail, and energy. Fenaco owns brands such as Landi, Volg, Agrola, and various food producers. The cooperative is owned by Swiss farmers and is headquartered in Bern."@en,
+        "La coopérative Fenaco est une entreprise agricole suisse qui aide les agriculteurs à gérer leurs exploitations avec succès. Elle est active dans les domaines du commerce agricole, de la production alimentaire, du commerce de détail et de l'énergie. Fenaco possède des marques telles que Landi, Volg, Agrola et divers producteurs alimentaires. La coopérative appartient aux agriculteurs suisses et son siège est à Berne."@fr,
+        "La cooperativa Fenaco è un'azienda agricola svizzera che supporta gli agricoltori nella gestione economica delle loro aziende. Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia. Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari. La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna."@it .
 
 systemmap:ORG001 a systemmap:CLS008 ;
     rdfs:label "Bundesamt für Landwirtschaft"@de,
@@ -290,8 +365,8 @@ systemmap:ORG001 a systemmap:CLS008 ;
 systemmap:ORG003 a systemmap:CLS008 ;
     rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de,
         "Directorate for Digitalization and Data Management"@en,
-        "Direction de la numérisation et de la gestion des données"@fr,
-        "Direzione per la digitalizzazione e la gestione dei dati"@it ;
+        "Unité de direction Transition numérique et gestion des données"@fr,
+        "Unità di direzione Digitalizzazione e gestione dei dati"@it ;
     rdfs:comment "Der Direktionsbereich Digitalisierung und Datenmanagement setzt sich dafür ein, dass die digitale Transformation und das Datenmanagement in der Land- und Ernährungswirtschaft ziel- und zukunftsgerichtet gefördert werden."@de,
         "The Directorate for Digitalization and Data Management is committed to ensuring that digital transformation and data management in the agricultural and food sector are promoted in a goal-oriented and forward-looking manner."@en,
         "La Direction de la numérisation et de la gestion des données s'engage à ce que la transformation numérique et la gestion des données dans le secteur agricole et alimentaire soient encouragées de manière ciblée et tournée vers l'avenir."@fr,
@@ -305,8 +380,8 @@ systemmap:ORG003 a systemmap:CLS008 ;
 systemmap:ORG004 a systemmap:CLS008 ;
     rdfs:label "Direktionsbereich Recht, Ressourcen und Integrale Sicherheit"@de,
         "Directorate for Law, Resources, and Integral Security"@en,
-        "Direction du droit, des ressources et de la sécurité intégrale"@fr,
-        "Direzione per il diritto, le risorse e la sicurezza integrale"@it ;
+        "Unité de direction Droit, ressources internes et sécurité intégrale"@fr,
+        "Unità di direzione Digitalizzazione e gestione dei dati"@it ;
     rdfs:comment "Der Direktionsbereich Recht, Ressourcen und Integrale Sicherheit sichert die rechtliche Konformität der verschiedenen BLW-Massnahmen und ist insbesondere für die personellen Massnahmen des Amtes verantwortlich."@de,
         "The Directorate for Law, Resources, and Integral Security ensures the legal compliance of various BLW measures and is particularly responsible for the office’s personnel measures."@en,
         "La Direction du droit, des ressources et de la sécurité intégrale garantit la conformité juridique des différentes mesures de l'OFAG et est notamment responsable des mesures en matière de personnel du bureau."@fr,
@@ -318,28 +393,49 @@ systemmap:ORG004 a systemmap:CLS008 ;
         "DBRRIS"@it .
 
 systemmap:ORG005 a systemmap:CLS008 ;
-    rdfs:label "Direktionsbereich Produktionsgrundlagen, natürliche Ressourcen und Forschung"@de ;
-    rdfs:comment "Widerstandsfähige Produktions- und Ökosysteme stehen im Zentrum des Direktionsbereichs Produktionsgrundlagen, natürliche Ressourcen und Forschung. So ist er unter anderem dafür zuständig, dass Pflanzen nachhaltig geschützt und Tiere optimal ernährt werden können. Desweitern fördert dieser Bereich verschiedene Forschungs- und Beratungsprojekte in der Schweiz, aber auch international."@de ;
+    rdfs:label "Direktionsbereich Produktionsgrundlagen, natürliche Ressourcen und Forschung"@de,
+        "Directorate for Production Resources, Natural Resources and Research"@en,
+        "Unité de direction Bases de production, ressources naturelles et recherche"@fr,
+        "Unità di direzione Basi di produzione, risorse naturali e ricerca"@it ;
+    rdfs:comment "Widerstandsfähige Produktions- und Ökosysteme stehen im Zentrum des Direktionsbereichs Produktionsgrundlagen, natürliche Ressourcen und Forschung. So ist er unter anderem dafür zuständig, dass Pflanzen nachhaltig geschützt und Tiere optimal ernährt werden können. Desweitern fördert dieser Bereich verschiedene Forschungs- und Beratungsprojekte in der Schweiz, aber auch international."@de,
+        "Resilient production and ecosystem systems are at the center of the Directorate for Production Resources, Natural Resources and Research. Among other things, it is responsible for ensuring that plants are sustainably protected and animals are optimally fed. Furthermore, this directorate promotes various research and advisory projects in Switzerland and internationally."@en,
+        "Les systèmes de production et les écosystèmes résilients sont au cœur de la Direction des bases de production, des ressources naturelles et de la recherche. Elle est notamment chargée de garantir que les plantes soient protégées durablement et que les animaux soient nourris de manière optimale. De plus, cette direction soutient divers projets de recherche et de conseil en Suisse et à l'international."@fr,
+        "I sistemi produttivi e gli ecosistemi resilienti sono al centro della Direzione delle basi produttive, delle risorse naturali e della ricerca. Tra le altre cose, è responsabile della protezione sostenibile delle piante e dell'alimentazione ottimale degli animali. Inoltre, questa direzione promuove vari progetti di ricerca e consulenza in Svizzera e a livello internazionale."@it ;
     systemmap:PRP001 systemmap:ORG001 ;
-    systemmap:PRP101 "DBPRF"@de .
+    systemmap:PRP101 "DBPRF"@de,
+        "DBPRF"@en,
+        "DBPRF"@fr,
+        "DBPRF"@it .
 
 systemmap:ORG006 a systemmap:CLS008 ;
-    rdfs:label "Direktionsbereich Direktzahlungen und Ländliche Entwicklung"@de ;
-    rdfs:comment "Die Landwirte und Landwirtinnen erbringen verschiedene Leistungen für die Allgemeinheit und werden deshalb mit finanziellen Beiträgen unterstützt. Dafür ist der Direktionsbereich Direktzahlungen und Ländliche Entwicklung zuständig. Er setzt sich zudem für die Vitalität des ländlichen Raums ein."@de ;
+    rdfs:label "Direktionsbereich Direktzahlungen und Ländliche Entwicklung"@de,
+        "Directorate for Direct Payments and Rural Development"@en,
+        "Unité de direction Paiements directs et développement rural"@fr,
+        "Unità di direzione Pagamenti diretti e sviluppo rurale"@it ;
+    rdfs:comment "Die Landwirte und Landwirtinnen erbringen verschiedene Leistungen für die Allgemeinheit und werden deshalb mit finanziellen Beiträgen unterstützt. Dafür ist der Direktionsbereich Direktzahlungen und Ländliche Entwicklung zuständig. Er setzt sich zudem für die Vitalität des ländlichen Raums ein."@de,
+        "Farmers provide various services for the general public and are therefore supported with financial contributions. The Directorate for Direct Payments and Rural Development is responsible for this. It also works to ensure the vitality of rural areas."@en,
+        "Les agriculteurs fournissent divers services à la collectivité et sont donc soutenus par des contributions financières. La Direction des paiements directs et du développement rural en est responsable. Elle s'engage également pour la vitalité des zones rurales."@fr,
+        "Gli agricoltori forniscono vari servizi alla collettività e sono quindi sostenuti con contributi finanziari. La Direzione dei pagamenti diretti e dello sviluppo rurale è responsabile di questo. Inoltre, si impegna per la vitalità delle aree rurali."@it ;
     systemmap:PRP001 systemmap:ORG001 ;
     systemmap:PRP101 "DBDLE"@de .
 
 systemmap:ORG007 a systemmap:CLS008 ;
-    rdfs:label "Direktionsbereich Märkte und Internationales"@de ;
-    rdfs:comment "Der Direktionsbereich Märkte und Internationales setzt sich dafür ein, dass die Landwirtschaft aus dem Verkauf ihrer Produkte eine möglichst hohe Wertschöpfung erzielen kann. Selbsthilfemassnahmen, Innovation und Vermarktung der verschiedenen Branchen werden unterstützt. Zudem engagiert sich dieser Direktionsbereich in internationalen Organisationen wie der UNO-Ernährungsorganisation FAO oder der Welthandelsorganisation WTO."@de ;
+    rdfs:label "Direktionsbereich Märkte und Internationales"@de,
+        "Directorate for Markets and International Affairs"@en,
+        "Unité de direction Marchés et affaires internationales"@fr,
+        "Unità di direzione Mercati e affari internazionali"@it ;
+    rdfs:comment "Der Direktionsbereich Märkte und Internationales setzt sich dafür ein, dass die Landwirtschaft aus dem Verkauf ihrer Produkte eine möglichst hohe Wertschöpfung erzielen kann. Selbsthilfemassnahmen, Innovation und Vermarktung der verschiedenen Branchen werden unterstützt. Zudem engagiert sich dieser Direktionsbereich in internationalen Organisationen wie der UNO-Ernährungsorganisation FAO oder der Welthandelsorganisation WTO."@de,
+        "The Directorate for Markets and International Affairs works to ensure that agriculture achieves the highest possible added value from the sale of its products. It supports self-help measures, innovation, and the marketing of various sectors. Additionally, this directorate is involved in international organizations such as the UN Food and Agriculture Organization (FAO) and the World Trade Organization (WTO)."@en,
+        "La Direction des marchés et des affaires internationales s'efforce de garantir que l'agriculture tire la plus grande valeur ajoutée possible de la vente de ses produits. Elle soutient les mesures d'auto-assistance, l'innovation et la commercialisation des différentes filières. De plus, cette direction est impliquée dans des organisations internationales telles que l'Organisation des Nations unies pour l'alimentation et l'agriculture (FAO) et l'Organisation mondiale du commerce (OMC)."@fr,
+        "La Direzione dei mercati e degli affari internazionali si adopera affinché l'agricoltura ottenga il massimo valore aggiunto possibile dalla vendita dei suoi prodotti. Sostiene misure di auto-aiuto, innovazione e commercializzazione nei vari settori. Inoltre, questa direzione è coinvolta in organizzazioni internazionali come l'Organizzazione delle Nazioni Unite per l'alimentazione e l'agricoltura (FAO) e l'Organizzazione mondiale del commercio (OMC)."@it ;
     systemmap:PRP001 systemmap:ORG001 ;
     systemmap:PRP101 "DBMI"@de .
 
 systemmap:ORG010 a systemmap:CLS008 ;
     rdfs:label "Fachbereich Agrarinformationssysteme"@de,
         "Agricultural Information Systems Division"@en,
-        "Unité des systèmes d'information agricole"@fr,
-        "Divisione dei sistemi informativi agricoli"@it ;
+        "Secteur d'information sur l'agriculture"@fr,
+        "Settore Sistemi d’informazione sull’agricoltura"@it ;
     rdfs:comment "Der Fachbereich Agrarinformationssysteme ist die zentrale Drehscheibe für Agrardaten. Er ist zuständig für das Portal Agate – den Online-Schalter für die Landwirtschaft – sowie für die zentralen Informationssysteme. Er setzt die fachlichen Vorgaben in technische Lösungen um und gewährleistet eine hohe Datenqualität. Dabei setzen wir auf medienbruchfreie, digitale Prozesse und Standards. FBAIS bietet Schnittstellen an für den Bezug und die Weitergabe der Daten an andere Bundesämter und auch an Dritte ausserhalb der Verwaltung."@de,
         "The Agricultural Information Systems Division is the central hub for agricultural data. It is responsible for the Agate portal – the online gateway for agriculture – as well as for central information systems. It implements professional requirements into technical solutions and ensures high data quality. We rely on seamless, digital processes and standards. FBAIS provides interfaces for retrieving and sharing data with other federal offices and third parties outside the administration."@en,
         "L'Unité des systèmes d'information agricole est la plaque tournante centrale des données agricoles. Elle est responsable du portail Agate – la plateforme en ligne pour l'agriculture – ainsi que des systèmes d'information centraux. Elle met en œuvre les exigences professionnelles en solutions techniques et garantit une haute qualité des données. Nous misons sur des processus et des standards numériques sans rupture. FBAIS propose des interfaces pour l'accès et la transmission des données à d'autres offices fédéraux ainsi qu'à des tiers en dehors de l'administration."@fr,
@@ -415,12 +511,21 @@ systemmap:ORG040 a systemmap:CLS008 ;
     systemmap:PRP101 "FBEA"@de .
 
 systemmap:ORG041 a systemmap:CLS008 ;
-    rdfs:label "Fachbereich Tierische Produkte und Tierzucht"@de ;
-    rdfs:comment "Die Mitgestaltung der agrarpolitischen Rahmenbedingungen und deren Weiterentwicklung im Bereich der tierischen Produkte und der Tierzucht gehören zu den Kernaufgaben des FBTT. Weiter stellt er den reibungslosen und korrekten Vollzug der einschlägigen Bestimmungen des Landwirtschaftsgesetzes und folgender Bundesratsverordnungen sicher: Milchpreisstützungsverordnung, Schlachtviehverordnung, Eierverordnung, Verordnung über die Identitas AG und die Tierverkehrsdatenbank, Entsorgungsbeitragsverordnung, Landwirtschaftliche Deklarationsverordnung, Höchstbestandesverordnung, Verordnung über die Branchen- und Produzentenorganisationen, Schafwollverordnung und Tierzuchtverordnung."@de ;
+    rdfs:label "Fachbereich Tierische Produkte und Tierzucht"@de,
+        "Sector Animal Products and Breeding"@en,
+        "Secteur Produits animaux et élevage"@fr,
+        "Settore Prodotti animali e allevamento"@it ;
+    rdfs:comment "Die Mitgestaltung der agrarpolitischen Rahmenbedingungen und deren Weiterentwicklung im Bereich der tierischen Produkte und der Tierzucht gehören zu den Kernaufgaben des FBTT. Weiter stellt er den reibungslosen und korrekten Vollzug der einschlägigen Bestimmungen des Landwirtschaftsgesetzes und folgender Bundesratsverordnungen sicher: Milchpreisstützungsverordnung, Schlachtviehverordnung, Eierverordnung, Verordnung über die Identitas AG und die Tierverkehrsdatenbank, Entsorgungsbeitragsverordnung, Landwirtschaftliche Deklarationsverordnung, Höchstbestandesverordnung, Verordnung über die Branchen- und Produzentenorganisationen, Schafwollverordnung und Tierzuchtverordnung."@de,
+        "The design and further development of agricultural policy framework conditions in the field of animal products and breeding are among the core tasks of the SPAE. Furthermore, it ensures the smooth and correct implementation of the relevant provisions of the Agricultural Act and the following Federal Council ordinances: Milk Price Support Ordinance, Slaughter Livestock Ordinance, Egg Ordinance, Ordinance on Identitas AG and the Animal Traffic Database, Disposal Contribution Ordinance, Agricultural Declaration Ordinance, Maximum Stock Ordinance, Ordinance on Sector and Producer Organizations, Sheep Wool Ordinance, and Breeding Ordinance."@en,
+        "La conception et le développement des cadres politiques agricoles dans le domaine des produits animaux et de l'élevage font partie des missions principales du SPAE. Il veille également à la mise en œuvre correcte et sans heurts des dispositions pertinentes de la loi agricole et des ordonnances suivantes du Conseil fédéral : Ordonnance sur le soutien des prix du lait, Ordonnance sur le bétail de boucherie, Ordonnance sur les œufs, Ordonnance sur Identitas AG et la base de données sur le trafic des animaux, Ordonnance sur la contribution à l'élimination, Ordonnance sur la déclaration agricole, Ordonnance sur le nombre maximal d'animaux, Ordonnance sur les organisations de filières et de producteurs, Ordonnance sur la laine de mouton et Ordonnance sur l'élevage."@fr,
+        "La progettazione e lo sviluppo del quadro politico agricolo nel settore dei prodotti animali e dell'allevamento sono tra i compiti principali dello SPAA. Inoltre, garantisce l'attuazione fluida e corretta delle disposizioni pertinenti della legge sull'agricoltura e delle seguenti ordinanze del Consiglio federale: Ordinanza sul sostegno del prezzo del latte, Ordinanza sul bestiame da macello, Ordinanza sulle uova, Ordinanza su Identitas AG e la banca dati sul traffico degli animali, Ordinanza sul contributo per lo smaltimento, Ordinanza sulla dichiarazione agricola, Ordinanza sul numero massimo di capi, Ordinanza sulle organizzazioni di settore e di produttori, Ordinanza sulla lana di pecora e Ordinanza sulla selezione degli animali."@it ;
     systemmap:PRP001 systemmap:ORG007 ;
     systemmap:PRP015 systemmap:INF020,
         systemmap:INF021,
         systemmap:INF022,
         systemmap:INF023 ;
-    systemmap:PRP101 "FBTT"@de .
+    systemmap:PRP101 "FBTT"@de,
+        "FBTT"@en,
+        "SPAE"@fr,
+        "SPAA"@it .
 

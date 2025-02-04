@@ -2,6 +2,7 @@
 @prefix ns1: <https://agriculture.ld.admin.ch/foag/system-map#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ns1:CLS001 a owl:Class ;
@@ -107,29 +108,6 @@ ns1:PRP102 a owl:DatatypeProperty ;
         "Abbreviazione del sistema"@it ;
     rdfs:domain ns1:CLS002 ;
     rdfs:range xsd:string .
-
-ns1:PRP001 a owl:ObjectProperty,
-        owl:TransitiveProperty ;
-    rdfs:label "ist Teil von"@de,
-        "is a part of"@en,
-        "fait partie de"@fr,
-        "fa parte di"@it ;
-    rdfs:comment "Zeigt an, dass die (Teil-)Organisation ein Teil von einer (Über-)Organisation Y ist."@de,
-        "Indicates that the (sub-)organization is part of a (parent) organization Y."@en,
-        "Indique que l'(sous-)organisation fait partie d'une (organisation parent) Y."@fr,
-        "Indica che l'(sotto-)organizzazione fa parte di un'(organizzazione madre) Y."@it ;
-    rdfs:domain ns1:CLS001 ;
-    rdfs:range ns1:CLS001 .
-
-ns1:PRP002 a owl:ObjectProperty,
-        owl:TransitiveProperty ;
-    rdfs:label "beinhaltet Suborganisation"@de,
-        "contains suborganization"@en,
-        "contient une sous-organisation"@fr,
-        "contiene un'organizzazione subordinata"@it ;
-    rdfs:domain ns1:CLS001 ;
-    rdfs:range ns1:CLS001 ;
-    owl:inverseOf ns1:PRP001 .
 
 ns1:PRP003 a owl:ObjectProperty ;
     rdfs:label "hat Mitgliederorganisationen"@de,
@@ -260,6 +238,29 @@ ns1:PRP015 a owl:ObjectProperty ;
         "Indica che un'organizzazione X ha il diritto di accedere all'unità di informazione Y."@it ;
     rdfs:domain ns1:CLS001 ;
     rdfs:range ns1:CLS003 .
+
+schema:parentOrganization a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "ist Teil von"@de,
+        "is a part of"@en,
+        "fait partie de"@fr,
+        "fa parte di"@it ;
+    rdfs:comment "Zeigt an, dass die (Teil-)Organisation ein Teil von einer (Über-)Organisation Y ist."@de,
+        "Indicates that the (sub-)organization is part of a (parent) organization Y."@en,
+        "Indique que l'(sous-)organisation fait partie d'une (organisation parent) Y."@fr,
+        "Indica che l'(sotto-)organizzazione fa parte di un'(organizzazione madre) Y."@it ;
+    rdfs:domain ns1:CLS001 ;
+    rdfs:range ns1:CLS001 .
+
+schema:subOrganization a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "beinhaltet Suborganisation"@de,
+        "contains suborganization"@en,
+        "contient une sous-organisation"@fr,
+        "contiene un'organizzazione subordinata"@it ;
+    rdfs:domain ns1:CLS001 ;
+    rdfs:range ns1:CLS001 ;
+    owl:inverseOf schema:parentOrganization .
 
 ns1: a owl:Ontology ;
     dcterms:creator "Federal Office for Agriculture" ;
@@ -687,11 +688,11 @@ ns1:ORG003 a ns1:CLS008 ;
         "The Directorate for Digitalization and Data Management is committed to ensuring that digital transformation and data management in the agricultural and food sector are promoted in a goal-oriented and forward-looking manner."@en,
         "La Direction de la numérisation et de la gestion des données s'engage à ce que la transformation numérique et la gestion des données dans le secteur agricole et alimentaire soient encouragées de manière ciblée et tournée vers l'avenir."@fr,
         "La Direzione per la digitalizzazione e la gestione dei dati si impegna a garantire che la trasformazione digitale e la gestione dei dati nel settore agricolo e alimentare siano promosse in modo mirato e orientato al futuro."@it ;
-    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008654> ;
     ns1:PRP101 "DBDD"@de,
         "DBDD"@en,
         "DBDD"@fr,
-        "DBDD"@it .
+        "DBDD"@it ;
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/10008654> .
 
 ns1:ORG004 a ns1:CLS008 ;
     rdfs:label "Direktionsbereich Recht, Ressourcen und Integrale Sicherheit"@de,
@@ -702,11 +703,11 @@ ns1:ORG004 a ns1:CLS008 ;
         "The Directorate for Law, Resources, and Integral Security ensures the legal compliance of various BLW measures and is particularly responsible for the office’s personnel measures."@en,
         "La Direction du droit, des ressources et de la sécurité intégrale garantit la conformité juridique des différentes mesures de l'OFAG et est notamment responsable des mesures en matière de personnel du bureau."@fr,
         "La Direzione per il diritto, le risorse e la sicurezza integrale garantisce la conformità legale delle varie misure dell'UFAG ed è in particolare responsabile delle misure relative al personale dell'ufficio."@it ;
-    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008654> ;
     ns1:PRP101 "DBRRIS"@de,
         "DBRRIS"@en,
         "DBRRIS"@fr,
-        "DBRRIS"@it .
+        "DBRRIS"@it ;
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/10008654> .
 
 ns1:ORG005 a ns1:CLS008 ;
     rdfs:label "Direktionsbereich Produktionsgrundlagen, natürliche Ressourcen und Forschung"@de,
@@ -717,11 +718,11 @@ ns1:ORG005 a ns1:CLS008 ;
         "Resilient production and ecosystem systems are at the center of the Directorate for Production Resources, Natural Resources and Research. Among other things, it is responsible for ensuring that plants are sustainably protected and animals are optimally fed. Furthermore, this directorate promotes various research and advisory projects in Switzerland and internationally."@en,
         "Les systèmes de production et les écosystèmes résilients sont au cœur de la Direction des bases de production, des ressources naturelles et de la recherche. Elle est notamment chargée de garantir que les plantes soient protégées durablement et que les animaux soient nourris de manière optimale. De plus, cette direction soutient divers projets de recherche et de conseil en Suisse et à l'international."@fr,
         "I sistemi produttivi e gli ecosistemi resilienti sono al centro della Direzione delle basi produttive, delle risorse naturali e della ricerca. Tra le altre cose, è responsabile della protezione sostenibile delle piante e dell'alimentazione ottimale degli animali. Inoltre, questa direzione promuove vari progetti di ricerca e consulenza in Svizzera e a livello internazionale."@it ;
-    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008654> ;
     ns1:PRP101 "DBPRF"@de,
         "DBPRF"@en,
         "DBPRF"@fr,
-        "DBPRF"@it .
+        "DBPRF"@it ;
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/10008654> .
 
 ns1:ORG006 a ns1:CLS008 ;
     rdfs:label "Direktionsbereich Direktzahlungen und Ländliche Entwicklung"@de,
@@ -732,8 +733,8 @@ ns1:ORG006 a ns1:CLS008 ;
         "Farmers provide various services for the general public and are therefore supported with financial contributions. The Directorate for Direct Payments and Rural Development is responsible for this. It also works to ensure the vitality of rural areas."@en,
         "Les agriculteurs fournissent divers services à la collectivité et sont donc soutenus par des contributions financières. La Direction des paiements directs et du développement rural en est responsable. Elle s'engage également pour la vitalité des zones rurales."@fr,
         "Gli agricoltori forniscono vari servizi alla collettività e sono quindi sostenuti con contributi finanziari. La Direzione dei pagamenti diretti e dello sviluppo rurale è responsabile di questo. Inoltre, si impegna per la vitalità delle aree rurali."@it ;
-    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008654> ;
-    ns1:PRP101 "DBDLE"@de .
+    ns1:PRP101 "DBDLE"@de ;
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/10008654> .
 
 ns1:ORG007 a ns1:CLS008 ;
     rdfs:label "Direktionsbereich Märkte und Internationales"@de,
@@ -744,8 +745,8 @@ ns1:ORG007 a ns1:CLS008 ;
         "The Directorate for Markets and International Affairs works to ensure that agriculture achieves the highest possible added value from the sale of its products. It supports self-help measures, innovation, and the marketing of various sectors. Additionally, this directorate is involved in international organizations such as the UN Food and Agriculture Organization (FAO) and the World Trade Organization (WTO)."@en,
         "La Direction des marchés et des affaires internationales s'efforce de garantir que l'agriculture tire la plus grande valeur ajoutée possible de la vente de ses produits. Elle soutient les mesures d'auto-assistance, l'innovation et la commercialisation des différentes filières. De plus, cette direction est impliquée dans des organisations internationales telles que l'Organisation des Nations unies pour l'alimentation et l'agriculture (FAO) et l'Organisation mondiale du commerce (OMC)."@fr,
         "La Direzione dei mercati e degli affari internazionali si adopera affinché l'agricoltura ottenga il massimo valore aggiunto possibile dalla vendita dei suoi prodotti. Sostiene misure di auto-aiuto, innovazione e commercializzazione nei vari settori. Inoltre, questa direzione è coinvolta in organizzazioni internazionali come l'Organizzazione delle Nazioni Unite per l'alimentazione e l'agricoltura (FAO) e l'Organizzazione mondiale del commercio (OMC)."@it ;
-    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008654> ;
-    ns1:PRP101 "DBMI"@de .
+    ns1:PRP101 "DBMI"@de ;
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/10008654> .
 
 ns1:ORG010 a ns1:CLS008 ;
     rdfs:label "Fachbereich Agrarinformationssysteme"@de,
@@ -756,70 +757,70 @@ ns1:ORG010 a ns1:CLS008 ;
         "The Agricultural Information Systems Division is the central hub for agricultural data. It is responsible for the Agate portal – the online gateway for agriculture – as well as for central information systems. It implements professional requirements into technical solutions and ensures high data quality. We rely on seamless, digital processes and standards. FBAIS provides interfaces for retrieving and sharing data with other federal offices and third parties outside the administration."@en,
         "L'Unité des systèmes d'information agricole est la plaque tournante centrale des données agricoles. Elle est responsable du portail Agate – la plateforme en ligne pour l'agriculture – ainsi que des systèmes d'information centraux. Elle met en œuvre les exigences professionnelles en solutions techniques et garantit une haute qualité des données. Nous misons sur des processus et des standards numériques sans rupture. FBAIS propose des interfaces pour l'accès et la transmission des données à d'autres offices fédéraux ainsi qu'à des tiers en dehors de l'administration."@fr,
         "La Divisione dei sistemi informativi agricoli è il punto di riferimento centrale per i dati agricoli. È responsabile del portale Agate – lo sportello online per l'agricoltura – e dei sistemi informativi centrali. Implementa i requisiti professionali in soluzioni tecniche e garantisce un'elevata qualità dei dati. Puntiamo su processi e standard digitali senza interruzioni. FBAIS fornisce interfacce per l'accesso e la condivisione dei dati con altri uffici federali e con terzi al di fuori dell'amministrazione."@it ;
-    ns1:PRP001 ns1:ORG003 ;
     ns1:PRP101 "FBAIS"@de,
         "FBAIS"@en,
         "FBAIS"@fr,
-        "FBAIS"@it .
+        "FBAIS"@it ;
+    schema:parentOrganization ns1:ORG003 .
 
 ns1:ORG011 a ns1:CLS008 ;
     rdfs:label "Kompetenzzentrum für die digitale Transformation"@de ;
-    ns1:PRP001 ns1:ORG003 ;
-    ns1:PRP101 "GRKDT"@de .
+    ns1:PRP101 "GRKDT"@de ;
+    schema:parentOrganization ns1:ORG003 .
 
 ns1:ORG012 a ns1:CLS008 ;
     rdfs:label "Fachbereich Marktanalyse"@de ;
-    ns1:PRP001 ns1:ORG003 ;
-    ns1:PRP101 "FBMA"@de .
+    ns1:PRP101 "FBMA"@de ;
+    schema:parentOrganization ns1:ORG003 .
 
 ns1:ORG013 a ns1:CLS008 ;
     rdfs:label "Gruppe Business Intelligence"@de ;
-    ns1:PRP001 ns1:ORG003 ;
-    ns1:PRP101 "GRBI"@de .
+    ns1:PRP101 "GRBI"@de ;
+    schema:parentOrganization ns1:ORG003 .
 
 ns1:ORG014 a ns1:CLS008 ;
     rdfs:label "Fachbereich Informatikführung"@de ;
-    ns1:PRP001 ns1:ORG003 ;
-    ns1:PRP101 "FBIF"@de .
+    ns1:PRP101 "FBIF"@de ;
+    schema:parentOrganization ns1:ORG003 .
 
 ns1:ORG015 a ns1:CLS008 ;
     rdfs:label "Gruppe GEVER Services"@de ;
-    ns1:PRP001 ns1:ORG003 ;
-    ns1:PRP101 "GRGS"@de .
+    ns1:PRP101 "GRGS"@de ;
+    schema:parentOrganization ns1:ORG003 .
 
 ns1:ORG020 a ns1:CLS008 ;
     rdfs:label "Fachbereich Direktzahlungsprogramme"@de ;
     rdfs:comment "Der Fachbereich ist für die Umsetzung von Direktzahlungsprogrammen in den Bereichen Umwelt, Tierwohl und Landschaft verantwortlich. Dabei wird die Umsetzung durch Unterstützung der kantonalen Stellen sichergestellt und die Oberaufsicht über den kantonalen Vollzug wahrgenommen. Zudem erfolgt eine kontinuierliche Weiterentwicklung des ökologischen Leistungsnachweises (ÖLN) sowie der Massnahmen zur Förderung von Tierwohl, Biodiversität, Ressourceneffizienz, Produktionssystemen und Landschaftsqualität. Die Koordination mit anderen Regelbereichen, darunter die Biodiversitätsstrategie, der Biolandbau sowie Energie- und Klimaschutzfragen, ist ebenso Bestandteil der Tätigkeiten. Darüber hinaus werden Schnittstellen zur Gesetzgebung in den Bereichen Tier-, Gewässer-, Umwelt-, Natur- und Heimatschutz gepflegt. Im technischen Bereich erfolgt die Bereitstellung und Nutzung der EDV-Applikation Hofdüngerflüsse (HODUFLU) für Betriebs- und Datenauswertungen. Zudem werden Vorgaben zur Kürzung von Direktzahlungen nach den geltenden Verordnungen umgesetzt. Die Bearbeitung von Stellungnahmen zu Parlamentsvorstössen, Beschwerdefällen und Bundesratsgeschäften gehört ebenfalls zu den Aufgaben. Ergänzend werden Öffentlichkeitsarbeit sowie die Information und Einbindung relevanter Akteure wahrgenommen. Die Mitwirkung in Begleitgruppen sowie die Beteiligung an Forschungsfragen und Evaluationen runden das Aufgabengebiet ab."@de ;
-    ns1:PRP001 ns1:ORG006 ;
-    ns1:PRP101 "FBDP"@de .
+    ns1:PRP101 "FBDP"@de ;
+    schema:parentOrganization ns1:ORG006 .
 
 ns1:ORG021 a ns1:CLS008 ;
     rdfs:label "Fachbereich Direktzahlungsgrundlagen"@de ;
     rdfs:comment "Der Fachbereich Direktzahlungsgrundlagen ist zuständig für die Umsetzung und Weiterentwicklung des Direktzahlungssystems im Bereich der  Versorgungssicherheit, der Kulturlandschaft, der Übergangsbeiträge, der landwirtschaftlichen Zonen und Gebiete, der Landwirtschaftlichen Begriffe sowie der Anerkennung von Betrieben und Betriebsformen."@de ;
-    ns1:PRP001 ns1:ORG006 ;
-    ns1:PRP101 "FBDG"@de .
+    ns1:PRP101 "FBDG"@de ;
+    schema:parentOrganization ns1:ORG006 .
 
 ns1:ORG030 a ns1:CLS008 ;
     rdfs:label "Fachbereich Genetische Ressourcen und Technologien"@de ;
-    ns1:PRP001 ns1:ORG005 ;
-    ns1:PRP101 "FBGRT"@de .
+    ns1:PRP101 "FBGRT"@de ;
+    schema:parentOrganization ns1:ORG005 .
 
 ns1:ORG031 a ns1:CLS008 ;
     rdfs:label "Fachbereich Pflanzengesundheit"@de ;
     rdfs:comment "Die Aufgabe des Fachbereiches Pflanzengesundheit (FBPG) ist es, die Einschleppung und Ausbreitung von (geregelten) besonders gefährlichen Schädlingen und Krankheiten von Pflanzen zu vermeiden. Dies ist wichtig, um wirtschaftliche, soziale und ökologische Schäden zu vermeiden. Der Eidgenössische Pflanzenschutzdienst (EPSD), der vom Fachbereich gemeinsam mit der Sektion Waldschutz und Waldgesundheit des Bundesamts für Umwelt (BAFU) geführt wird, ist für die Umsetzung dieser Aufgabe auf nationaler Ebene zuständig."@de ;
-    ns1:PRP001 ns1:ORG005 ;
-    ns1:PRP101 "FBPG"@de .
+    ns1:PRP101 "FBPG"@de ;
+    schema:parentOrganization ns1:ORG005 .
 
 ns1:ORG032 a ns1:CLS008 ;
     rdfs:label "Fachbereich nachhaltiger Pflanzenschutz und Sorten"@de ;
     rdfs:comment "Der Fachbereich nachhaltiger Pflanzenschutz und Sorten (FB NPS) sorgt für den Schutz der Kulturen, den Vollzug des Saatgutrechtes und den Sortenschutz. Dabei werden sowohl präventive als auch direkte Pflanzenschutzmassnahmen angewendet, um hochwertige Lebensmittel zu produzieren. Zudem ist das BLW für die Weiterentwicklung der Verordnungen zu Vermehrungsmaterial, den Nationalen Sortenkatalog und den Vollzug der Bestimmungen in Zusammenarbeit mit Agroscope verantwortlich."@de ;
-    ns1:PRP001 ns1:ORG005 ;
-    ns1:PRP101 "FBNPS"@de .
+    ns1:PRP101 "FBNPS"@de ;
+    schema:parentOrganization ns1:ORG005 .
 
 ns1:ORG040 a ns1:CLS008 ;
     rdfs:label "Fachbereich Ein- und Ausfuhr"@de ;
-    ns1:PRP001 ns1:ORG007 ;
-    ns1:PRP101 "FBEA"@de .
+    ns1:PRP101 "FBEA"@de ;
+    schema:parentOrganization ns1:ORG007 .
 
 ns1:ORG041 a ns1:CLS008 ;
     rdfs:label "Fachbereich Tierische Produkte und Tierzucht"@de,
@@ -830,7 +831,6 @@ ns1:ORG041 a ns1:CLS008 ;
         "The design and further development of agricultural policy framework conditions in the field of animal products and breeding are among the core tasks of the SPAE. Furthermore, it ensures the smooth and correct implementation of the relevant provisions of the Agricultural Act and the following Federal Council ordinances: Milk Price Support Ordinance, Slaughter Livestock Ordinance, Egg Ordinance, Ordinance on Identitas AG and the Animal Traffic Database, Disposal Contribution Ordinance, Agricultural Declaration Ordinance, Maximum Stock Ordinance, Ordinance on Sector and Producer Organizations, Sheep Wool Ordinance, and Breeding Ordinance."@en,
         "La conception et le développement des cadres politiques agricoles dans le domaine des produits animaux et de l'élevage font partie des missions principales du SPAE. Il veille également à la mise en œuvre correcte et sans heurts des dispositions pertinentes de la loi agricole et des ordonnances suivantes du Conseil fédéral : Ordonnance sur le soutien des prix du lait, Ordonnance sur le bétail de boucherie, Ordonnance sur les œufs, Ordonnance sur Identitas AG et la base de données sur le trafic des animaux, Ordonnance sur la contribution à l'élimination, Ordonnance sur la déclaration agricole, Ordonnance sur le nombre maximal d'animaux, Ordonnance sur les organisations de filières et de producteurs, Ordonnance sur la laine de mouton et Ordonnance sur l'élevage."@fr,
         "La progettazione e lo sviluppo del quadro politico agricolo nel settore dei prodotti animali e dell'allevamento sono tra i compiti principali dello SPAA. Inoltre, garantisce l'attuazione fluida e corretta delle disposizioni pertinenti della legge sull'agricoltura e delle seguenti ordinanze del Consiglio federale: Ordinanza sul sostegno del prezzo del latte, Ordinanza sul bestiame da macello, Ordinanza sulle uova, Ordinanza su Identitas AG e la banca dati sul traffico degli animali, Ordinanza sul contributo per lo smaltimento, Ordinanza sulla dichiarazione agricola, Ordinanza sul numero massimo di capi, Ordinanza sulle organizzazioni di settore e di produttori, Ordinanza sulla lana di pecora e Ordinanza sulla selezione degli animali."@it ;
-    ns1:PRP001 ns1:ORG007 ;
     ns1:PRP015 ns1:INF020,
         ns1:INF021,
         ns1:INF022,
@@ -838,23 +838,24 @@ ns1:ORG041 a ns1:CLS008 ;
     ns1:PRP101 "FBTT"@de,
         "FBTT"@en,
         "SPAE"@fr,
-        "SPAA"@it .
+        "SPAA"@it ;
+    schema:parentOrganization ns1:ORG007 .
 
 ns1:ORG201 a ns1:CLS008 ;
     rdfs:label "Wissensgrundlagen"@de ;
-    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008671> .
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/10008671> .
 
 ns1:ORG202 a ns1:CLS008 ;
     rdfs:label "Tiergesundheit und Tierschutz"@de ;
-    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008671> .
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/10008671> .
 
 ns1:ORG203 a ns1:CLS008 ;
     rdfs:label "Lebensmittel und Ernährung"@de ;
-    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008671> .
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/10008671> .
 
 ns1:ORG204 a ns1:CLS008 ;
     rdfs:label "Zulassungsstelle Pflanzenschutzmittel"@de ;
-    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008671> .
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/10008671> .
 
 <https://register.ld.admin.ch/staatskalender/organization/10008654> a ns1:CLS008 ;
     rdfs:label "Bundesamt für Landwirtschaft"@de,

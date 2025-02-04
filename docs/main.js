@@ -239,7 +239,7 @@ async function init() {
             abbreviation,
             comment
         } = nodeData.data;
-        let html = `<code>${iri}</code>`;
+        let html = `<a href='${iri}' target='blank'><small><code>${iri}</code></small></a>`;
         html += `<h3>${fullLabel}`;
         if (abbreviation) {
             html += ` (${abbreviation})`;

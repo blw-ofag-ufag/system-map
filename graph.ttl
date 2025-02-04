@@ -840,6 +840,22 @@ ns1:ORG041 a ns1:CLS008 ;
         "SPAE"@fr,
         "SPAA"@it .
 
+ns1:ORG201 a ns1:CLS008 ;
+    rdfs:label "Wissensgrundlagen"@de ;
+    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008671> .
+
+ns1:ORG202 a ns1:CLS008 ;
+    rdfs:label "Tiergesundheit und Tierschutz"@de ;
+    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008671> .
+
+ns1:ORG203 a ns1:CLS008 ;
+    rdfs:label "Lebensmittel und Ernährung"@de ;
+    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008671> .
+
+ns1:ORG204 a ns1:CLS008 ;
+    rdfs:label "Zulassungsstelle Pflanzenschutzmittel"@de ;
+    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008671> .
+
 <https://register.ld.admin.ch/staatskalender/organization/10008654> a ns1:CLS008 ;
     rdfs:label "Bundesamt für Landwirtschaft"@de,
         "Federal Office for Agriculture"@en,
@@ -865,8 +881,13 @@ ns1:ORG041 a ns1:CLS008 ;
         "OFDF"@fr,
         "UDSC"@it .
 
+<https://register.ld.admin.ch/staatskalender/organization/10008671> a ns1:CLS008 ;
+    rdfs:label "Bundesamt für Lebensmittelsicherheit und Veterinärwesen"@de ;
+    rdfs:comment "Hauptaufgabe des BLV ist es, die Gesundheit und das Wohlbefinden von Mensch und Tier aktiv zu fördern. Die Hauptpfeiler dafür sind beim Menschen Lebensmittelsicherheit und gesunde Ernährung und beim Tier Tierschutz und Tiergesundheit."@de ;
+    ns1:PRP101 "BLV"@de .
+
 <https://register.ld.admin.ch/staatskalender/organization/10008742> a ns1:CLS008 ;
     rdfs:label "Bundesamt für Statistik"@de ;
-    rdfs:comment "Als nationales Kompetenzzentrum der öffentlichen Statistik ist das Bundesamt für Statistik (BFS) der zentrale Knotenpunkt im Datennökosystem der Schweiz. Es unter­stützt und stärkt die gesamte öffentliche Verwaltung im Umgang mit Daten."@de ;
+    rdfs:comment "Als nationales Kompetenzzentrum der öffentlichen Statistik ist das Bundesamt für Statistik (BFS) der zentrale Knotenpunkt im Datennökosystem der Schweiz. Es unterstützt und stärkt die gesamte öffentliche Verwaltung im Umgang mit Daten."@de ;
     ns1:PRP101 "BFS"@de .
 

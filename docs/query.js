@@ -101,6 +101,22 @@ window.mapClassIriToGroup = function(iri) {
       return "System";
     case "https://agriculture.ld.admin.ch/foag/system-map#CLS003":
       return "Information";
+    case "https://agriculture.ld.admin.ch/foag/system-map#CLS004":
+      return "Information";
+    case "https://agriculture.ld.admin.ch/foag/system-map#CLS005":
+      return "Information";
+    case "https://agriculture.ld.admin.ch/foag/system-map#CLS006":
+      return "Organization";
+    case "https://agriculture.ld.admin.ch/foag/system-map#CLS007":
+      return "Organization";
+    case "https://agriculture.ld.admin.ch/foag/system-map#CLS008":
+      return "Organization";
+    case "https://agriculture.ld.admin.ch/foag/system-map#CLS009":
+      return "Organization";
+    case "https://agriculture.ld.admin.ch/foag/system-map#CLS010":
+      return "Organization";
+    case "https://agriculture.ld.admin.ch/foag/system-map#CLS011":
+      return "Organization";
     default:
       return "Other";
   }

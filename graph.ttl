@@ -333,7 +333,7 @@ ns1:SYS004 a ns1:CLS002 ;
         "ASTAT is the Business Intelligence system of the BLW. It provides analysis and reporting functions to enable data-driven decision-making. This simplifies the monitoring and evaluation of agricultural policy measures."@en,
         "ASTAT est le système de Business Intelligence de l'OFAG. Il fournit des fonctions d'analyse et de reporting pour permettre une prise de décision basée sur les données. Cela simplifie la surveillance et l'évaluation des mesures de politique agricole."@fr,
         "ASTAT è il sistema di Business Intelligence dell'UFAG. Fornisce funzioni di analisi e reporting per consentire decisioni basate sui dati. Ciò semplifica il monitoraggio e la valutazione delle misure di politica agricola."@it ;
-    ns1:PRP008 ns1:ORG016 ;
+    ns1:PRP008 ns1:ORG013 ;
     ns1:PRP102 "ASTAT"@de,
         "ASTAT"@en,
         "ASTAT"@fr,
@@ -444,16 +444,32 @@ ns1:SYS024 a ns1:CLS002 ;
         "PLUTO"@fr,
         "PLUTO"@it .
 
-ns1:INF001 a ns1:CLS003 ;
-    rdfs:label "Kontaktdaten Bewirtschaftenden"@de,
-        "Contact details of farm managers"@en,
-        "Coordonnées des exploitants agricoles"@fr,
-        "Dati di contatto dei gestori agricoli"@it ;
-    rdfs:comment "Informationen zu Kontaktdaten von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de,
-        "Information on the contact details of farm managers, such as email addresses or phone numbers."@en,
-        "Informations sur les coordonnées des exploitants agricoles, telles que les adresses e-mail ou les numéros de téléphone."@fr,
-        "Informazioni sui dati di contatto dei gestori agricoli, come indirizzi e-mail o numeri di telefono."@it ;
-    ns1:PRP012 ns1:SYS003 .
+ns1:SYS025 a ns1:CLS002 ;
+    rdfs:label "Betriebs- und Unternehmensregister"@de ;
+    rdfs:comment "Das Betriebs- und Unternehmensregister (BUR) umfasst alle Unternehmen und Betriebe des privaten und öffentlichen Rechts, die in der Schweiz domiziliert sind und eine wirtschaftliche Tätigkeit ausüben. Das BUR dient dem BFS als Adressregister für die statistischen Erhebungen bei Unternehmen und Arbeitsstätten. Auch andere Ämter der Bundesverwaltung und zahlreiche Kantone verwenden das BUR zu statistischen oder administrativen Zwecken."@de ;
+    ns1:PRP008 <https://register.ld.admin.ch/staatskalender/organization/10008742> ;
+    ns1:PRP102 "BUR"@de .
+
+ns1:SYS026 a ns1:CLS002 ;
+    rdfs:label "e-Deklaration"@de,
+        "e-declaration"@en,
+        "e-déclaration"@fr,
+        "e-dichiarazione"@it ;
+    rdfs:comment "e-dec ist das elektronische Zollanmeldesystem der Schweiz, das Unternehmen ermöglicht, Waren für Import, Export und Transit elektronisch zu deklarieren. Dank seines modularen Aufbaus optimiert es die Zollprozesse, was zu Kosteneinsparungen und höherer Effizienz führt. Besonders hervorzuheben ist, dass e-dec mehrere Kommunikationsstandards unterstützt und jede Zollanmeldung bis zu 99'999 Tarifpositionen enthalten kann."@de,
+        "e-dec is Switzerland's electronic customs declaration system that enables companies to declare goods for import, export, and transit electronically. Designed with a modular structure, it streamlines customs processes, leading to cost savings and increased efficiency. Notably, e-dec supports multiple communication standards and allows each customs declaration to include up to 99'999 tariff headings."@en,
+        "e-dec est le système électronique de déclaration en douane de la Suisse, permettant aux entreprises de déclarer électroniquement les marchandises à l'importation, à l'exportation et en transit. Conçu avec une structure modulaire, il optimise les processus douaniers, entraînant des économies de coûts et une efficacité accrue. Notamment, e-dec prend en charge plusieurs normes de communication et permet à chaque déclaration en douane d'inclure jusqu'à 99'999 positions tarifaires."@fr,
+        "e-dec è il sistema elettronico di dichiarazione doganale della Svizzera che consente alle aziende di dichiarare elettronicamente le merci per l'importazione, l'esportazione e il transito. Progettato con una struttura modulare, ottimizza i processi doganali, portando a risparmi sui costi e a una maggiore efficienza. In particolare, e-dec supporta diversi standard di comunicazione e consente a ogni dichiarazione doganale di includere fino a 99'999 voci tariffarie."@it ;
+    ns1:PRP008 <https://register.ld.admin.ch/staatskalender/organization/10008659> ;
+    ns1:PRP102 "e-dec"@de,
+        "e-dec"@en,
+        "e-dec"@fr,
+        "e-dec"@it .
+
+ns1:INF003 a ns1:CLS003 ;
+    rdfs:label "Informationen zu Flächen und Kulturen"@de ;
+    rdfs:comment "Daten zu Grössen und Ort der Flächen (nur als Koordinaten ohne Polygone), landwirtschaftlichen Hauptkulturen und Betriebszugehörigkeit der Flächen."@de ;
+    ns1:PRP012 ns1:SYS003 ;
+    ns1:PRP013 ns1:INF030 .
 
 ns1:INF010 a ns1:CLS003 ;
     rdfs:label "Nationaler Sortenkatalog"@de,
@@ -466,17 +482,6 @@ ns1:INF010 a ns1:CLS003 ;
         "Catalogo delle varietà di piante agricole riconosciute utilizzate in Svizzera. Le informazioni sono registrate dai selezionatori."@it ;
     ns1:PRP012 ns1:SYS011 ;
     ns1:PRP014 ns1:INF012 .
-
-ns1:INF011 a ns1:CLS003 ;
-    rdfs:label "Kontaktdaten Züchter"@de,
-        "Contact details of breeders"@en,
-        "Coordonnées des sélectionneurs"@fr,
-        "Dati di contatto dei selezionatori"@it ;
-    rdfs:comment "Kontaktdaten der Züchter, welche Informationen zu den Sorten an ProVar geben."@de,
-        "Contact details of breeders who provide information about the varieties to ProVar."@en,
-        "Coordonnées des sélectionneurs qui fournissent des informations sur les variétés à ProVar."@fr,
-        "Dati di contatto dei selezionatori che forniscono informazioni sulle varietà a ProVar."@it ;
-    ns1:PRP012 ns1:SYS011 .
 
 ns1:INF012 a ns1:CLS003 ;
     rdfs:label "Globale Pflanzenliste"@de,
@@ -501,29 +506,6 @@ ns1:INF013 a ns1:CLS003 ;
     ns1:PRP012 ns1:SYS024 ;
     ns1:PRP014 ns1:INF010 .
 
-ns1:INF020 a ns1:CLS003 ;
-    rdfs:label "Kontaktdaten Milchproduzenten"@de,
-        "Contact details of milk producers"@en,
-        "Coordonnées des producteurs de lait"@fr,
-        "Dati di contatto dei produttori di latte"@it ;
-    rdfs:comment "Kontaktdaten der Milchproduzenten wie Adressen, TVD-Nummer, AGIS-Nummer des Betriebs, AGIS Nummer des Bewirtschaftenden und Zahlungsinformationen für die Ausbezahlung der Zulage für verkäste Milch und die Zulage für Fütterung ohne Silage. Wenn möglich, werden diese Kontaktdaten aus AGIS bezogen."@de,
-        "Contact details of milk producers, such as addresses, TVD number, AGIS number of the farm, AGIS number of the operator, and payment information for the subsidy for cheesed milk and the subsidy for feeding without silage. If possible, these contact details are obtained from AGIS."@en,
-        "Coordonnées des producteurs de lait, telles que les adresses, le numéro TVD, le numéro AGIS de l'exploitation, le numéro AGIS de l'exploitant et les informations de paiement pour la subvention pour le lait transformé en fromage et la subvention pour l'alimentation sans ensilage. Si possible, ces coordonnées sont obtenues auprès d'AGIS."@fr,
-        "Dati di contatto dei produttori di latte, come indirizzi, numero TVD, numero AGIS dell'azienda, numero AGIS del gestore e informazioni di pagamento per il sussidio per il latte trasformato in formaggio e il sussidio per l'alimentazione senza insilato. Se possibile, questi dati di contatto vengono ottenuti da AGIS."@it ;
-    ns1:PRP012 ns1:SYS021 ;
-    ns1:PRP014 ns1:INF001 .
-
-ns1:INF021 a ns1:CLS003 ;
-    rdfs:label "Kontaktdaten Milchverarbeiter"@de,
-        "Contact details of milk processors"@en,
-        "Coordonnées des transformateurs de lait"@fr,
-        "Dati di contatto dei trasformatori di latte"@it ;
-    rdfs:comment "Kontaktdaten der Milchverarbeiter wie Adressen oder Identifikationsnummern."@de,
-        "Contact details of milk processors, such as addresses or identification numbers."@en,
-        "Coordonnées des transformateurs de lait, telles que les adresses ou les numéros d'identification."@fr,
-        "Dati di contatto dei trasformatori di latte, come indirizzi o numeri di identificazione."@it ;
-    ns1:PRP012 ns1:SYS021 .
-
 ns1:INF022 a ns1:CLS003 ;
     rdfs:label "Daten zur Milchproduktion"@de,
         "Data on milk production"@en,
@@ -546,17 +528,6 @@ ns1:INF023 a ns1:CLS003 ;
         "Questi dati sono essenziali per il calcolo e il pagamento dei sussidi per il latte trasformato in formaggio e per l'alimentazione senza insilato da parte dell'Ufficio federale dell'agricoltura (UFAG)."@it ;
     ns1:PRP012 ns1:SYS021 .
 
-ns1:INF024 a ns1:CLS003 ;
-    rdfs:label "Resultate der Milchprüfung"@de,
-        "Results of milk testing"@en,
-        "Résultats du contrôle du lait"@fr,
-        "Risultati del controllo del latte"@it ;
-    rdfs:comment "Ergebnisse der öffentlich-rechtlichen Milchprüfung. Bei der öffentlich-rechtlichen Milchprüfung wird die Kuhmilch zweimal monatlich auf die Prüfmerkmale Keimzahl, somatische Zellen und Hemmstoffe untersucht. Hygienisch ungenügende Resultate haben Beanstandungen und bei länger andauernden Hygienemängeln eine amtliche Milchliefersperre zur Folge. Die Ergebnisse der Milchprüfung werden über die Plattform dbmilch.ch an berechtigte Kreise bereitgestellt."@de,
-        "Results of the public milk testing. In public milk testing, cow’s milk is examined twice a month for the parameters germ count, somatic cells, and inhibitors. Hygienically insufficient results lead to complaints and, in case of prolonged hygiene deficiencies, an official milk delivery ban. The results of the milk testing are made available to authorized parties via the platform dbmilch.ch."@en,
-        "Résultats du contrôle public du lait. Lors du contrôle public du lait, le lait de vache est analysé deux fois par mois pour les paramètres suivants : nombre de germes, cellules somatiques et inhibiteurs. Des résultats hygiéniques insuffisants entraînent des réclamations et, en cas de carences hygiéniques prolongées, une interdiction officielle de livraison de lait. Les résultats du contrôle du lait sont mis à disposition des cercles autorisés via la plateforme dbmilch.ch."@fr,
-        "Risultati del controllo pubblico del latte. Nel controllo pubblico del latte, il latte di mucca viene analizzato due volte al mese per i seguenti parametri: conta dei germi, cellule somatiche e inibitori. Risultati igienicamente insufficienti comportano reclami e, in caso di carenze igieniche prolungate, un divieto ufficiale di consegna del latte. I risultati del controllo del latte sono resi disponibili ai soggetti autorizzati tramite la piattaforma dbmilch.ch."@it ;
-    ns1:PRP012 ns1:SYS021 .
-
 ns1:INF025 a ns1:CLS003 ;
     rdfs:label "Daten zur Milchsegmentierung"@de,
         "Data on milk segmentation"@en,
@@ -577,6 +548,93 @@ ns1:INF026 a ns1:CLS003 ;
         "Monthly statistics and multi-year comparisons containing information on the milk produced and its processing into different product groups."@en,
         "Statistiques mensuelles et comparaisons pluriannuelles contenant des informations sur le lait produit et sa transformation en différentes catégories de produits."@fr,
         "Statistiche mensili e confronti pluriennali contenenti informazioni sul latte prodotto e sulla sua trasformazione in diverse categorie di prodotti."@it ;
+    ns1:PRP012 ns1:SYS021 .
+
+ns1:INF028 a ns1:CLS003 ;
+    rdfs:label "Details zu Unternehmen"@de ;
+    rdfs:comment "Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit, Grundkapital der Aktiengesellschaften, Umsatzzahlen, Datum des Eintrags oder der Löschung im Handelsregister, Datum der Bekanntgabe der Gründung oder Schliessung eines Unternehmens oder Betriebs."@de ;
+    ns1:PRP012 ns1:SYS025 .
+
+ns1:INF001 a ns1:CLS004 ;
+    rdfs:label "Kontaktdaten Bewirtschaftenden"@de,
+        "Contact details of farm managers"@en,
+        "Coordonnées des exploitants agricoles"@fr,
+        "Dati di contatto dei gestori agricoli"@it ;
+    rdfs:comment "Informationen zu Kontaktdaten von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de,
+        "Information on the contact details of farm managers, such as email addresses or phone numbers."@en,
+        "Informations sur les coordonnées des exploitants agricoles, telles que les adresses e-mail ou les numéros de téléphone."@fr,
+        "Informazioni sui dati di contatto dei gestori agricoli, come indirizzi e-mail o numeri di telefono."@it ;
+    ns1:PRP012 ns1:SYS003 .
+
+ns1:INF002 a ns1:CLS004 ;
+    rdfs:label "Informationen zu Betriebsleitenden"@de ;
+    rdfs:comment "Beruf und Alter der Betriebsleiterin bzw. des Betriebsleiters."@de ;
+    ns1:PRP012 ns1:SYS003 ;
+    ns1:PRP013 ns1:INF030 .
+
+ns1:INF011 a ns1:CLS004 ;
+    rdfs:label "Kontaktdaten Züchter"@de,
+        "Contact details of breeders"@en,
+        "Coordonnées des sélectionneurs"@fr,
+        "Dati di contatto dei selezionatori"@it ;
+    rdfs:comment "Kontaktdaten der Züchter, welche Informationen zu den Sorten an ProVar geben."@de,
+        "Contact details of breeders who provide information about the varieties to ProVar."@en,
+        "Coordonnées des sélectionneurs qui fournissent des informations sur les variétés à ProVar."@fr,
+        "Dati di contatto dei selezionatori che forniscono informazioni sulle varietà a ProVar."@it ;
+    ns1:PRP012 ns1:SYS011 .
+
+ns1:INF020 a ns1:CLS004 ;
+    rdfs:label "Kontaktdaten Milchproduzenten"@de,
+        "Contact details of milk producers"@en,
+        "Coordonnées des producteurs de lait"@fr,
+        "Dati di contatto dei produttori di latte"@it ;
+    rdfs:comment "Kontaktdaten der Milchproduzenten wie Adressen, TVD-Nummer, AGIS-Nummer des Betriebs, AGIS Nummer des Bewirtschaftenden und Zahlungsinformationen für die Ausbezahlung der Zulage für verkäste Milch und die Zulage für Fütterung ohne Silage. Wenn möglich, werden diese Kontaktdaten aus AGIS bezogen."@de,
+        "Contact details of milk producers, such as addresses, TVD number, AGIS number of the farm, AGIS number of the operator, and payment information for the subsidy for cheesed milk and the subsidy for feeding without silage. If possible, these contact details are obtained from AGIS."@en,
+        "Coordonnées des producteurs de lait, telles que les adresses, le numéro TVD, le numéro AGIS de l'exploitation, le numéro AGIS de l'exploitant et les informations de paiement pour la subvention pour le lait transformé en fromage et la subvention pour l'alimentation sans ensilage. Si possible, ces coordonnées sont obtenues auprès d'AGIS."@fr,
+        "Dati di contatto dei produttori di latte, come indirizzi, numero TVD, numero AGIS dell'azienda, numero AGIS del gestore e informazioni di pagamento per il sussidio per il latte trasformato in formaggio e il sussidio per l'alimentazione senza insilato. Se possibile, questi dati di contatto vengono ottenuti da AGIS."@it ;
+    ns1:PRP012 ns1:SYS021 ;
+    ns1:PRP014 ns1:INF001 .
+
+ns1:INF021 a ns1:CLS004 ;
+    rdfs:label "Kontaktdaten Milchverarbeiter"@de,
+        "Contact details of milk processors"@en,
+        "Coordonnées des transformateurs de lait"@fr,
+        "Dati di contatto dei trasformatori di latte"@it ;
+    rdfs:comment "Kontaktdaten der Milchverarbeiter wie Adressen oder Identifikationsnummern."@de,
+        "Contact details of milk processors, such as addresses or identification numbers."@en,
+        "Coordonnées des transformateurs de lait, telles que les adresses ou les numéros d'identification."@fr,
+        "Dati di contatto dei trasformatori di latte, come indirizzi o numeri di identificazione."@it ;
+    ns1:PRP012 ns1:SYS021 .
+
+ns1:INF027 a ns1:CLS004 ;
+    rdfs:label "Stammdaten und Identifikatoren"@de ;
+    rdfs:comment "Name und Adresse des Unternehmens oder Betriebs, Gemeindenummern, BUR-Nummer (nichtsprechende 8-stellige Identifikationsnummer), Unternehmens-Identifikationsnummer (UID), Art der wirtschaftlichen Tätigkeit (NOGA), Rechtsform des Unternehmens."@de ;
+    ns1:PRP012 ns1:SYS025 .
+
+ns1:INF029 a ns1:CLS004 ;
+    rdfs:label "Informationen zu Forstbetrieben"@de ;
+    rdfs:comment "Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit."@de ;
+    ns1:PRP012 ns1:SYS025 .
+
+ns1:INF030 a ns1:CLS004 ;
+    rdfs:label "Informationen zu Landwirtschaftsbetrieben"@de ;
+    rdfs:comment "Zahl der Grossvieheinheiten, Angaben über die Bodennutzung, den Beruf und das Alter des Betriebsleiters/der Betriebsleiterin."@de ;
+    ns1:PRP012 ns1:SYS025 .
+
+ns1:INF031 a ns1:CLS004 ;
+    rdfs:label "Pflanzenschutzmittel-Importe"@de ;
+    rdfs:comment "Daten zu jedem Import von Pflanzenschutzmitteln mit UID und Namen des Importeurs, Datum des Imports, Importmenge, Warenbezeichnung (Freitext) sowie Zustelladresse."@de ;
+    ns1:PRP012 ns1:SYS026 .
+
+ns1:INF024 a ns1:CLS005 ;
+    rdfs:label "Resultate der Milchprüfung"@de,
+        "Results of milk testing"@en,
+        "Résultats du contrôle du lait"@fr,
+        "Risultati del controllo del latte"@it ;
+    rdfs:comment "Ergebnisse der öffentlich-rechtlichen Milchprüfung. Bei der öffentlich-rechtlichen Milchprüfung wird die Kuhmilch zweimal monatlich auf die Prüfmerkmale Keimzahl, somatische Zellen und Hemmstoffe untersucht. Hygienisch ungenügende Resultate haben Beanstandungen und bei länger andauernden Hygienemängeln eine amtliche Milchliefersperre zur Folge. Die Ergebnisse der Milchprüfung werden über die Plattform dbmilch.ch an berechtigte Kreise bereitgestellt."@de,
+        "Results of the public milk testing. In public milk testing, cow’s milk is examined twice a month for the parameters germ count, somatic cells, and inhibitors. Hygienically insufficient results lead to complaints and, in case of prolonged hygiene deficiencies, an official milk delivery ban. The results of the milk testing are made available to authorized parties via the platform dbmilch.ch."@en,
+        "Résultats du contrôle public du lait. Lors du contrôle public du lait, le lait de vache est analysé deux fois par mois pour les paramètres suivants : nombre de germes, cellules somatiques et inhibiteurs. Des résultats hygiéniques insuffisants entraînent des réclamations et, en cas de carences hygiéniques prolongées, une interdiction officielle de livraison de lait. Les résultats du contrôle du lait sont mis à disposition des cercles autorisés via la plateforme dbmilch.ch."@fr,
+        "Risultati del controllo pubblico del latte. Nel controllo pubblico del latte, il latte di mucca viene analizzato due volte al mese per i seguenti parametri: conta dei germi, cellule somatiche e inibitori. Risultati igienicamente insufficienti comportano reclami e, in caso di carenze igieniche prolungate, un divieto ufficiale di consegna del latte. I risultati del controllo del latte sono resi disponibili ai soggetti autorizzati tramite la piattaforma dbmilch.ch."@it ;
     ns1:PRP012 ns1:SYS021 .
 
 ns1:ORG100 a ns1:CLS007 ;
@@ -620,20 +678,6 @@ ns1:ORG103 a ns1:CLS007 ;
         "La coopérative Fenaco est une entreprise agricole suisse qui aide les agriculteurs à gérer leurs exploitations avec succès. Elle est active dans les domaines du commerce agricole, de la production alimentaire, du commerce de détail et de l'énergie. Fenaco possède des marques telles que Landi, Volg, Agrola et divers producteurs alimentaires. La coopérative appartient aux agriculteurs suisses et son siège est à Berne."@fr,
         "La cooperativa Fenaco è un'azienda agricola svizzera che supporta gli agricoltori nella gestione economica delle loro aziende. Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia. Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari. La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna."@it .
 
-ns1:ORG001 a ns1:CLS008 ;
-    rdfs:label "Bundesamt für Landwirtschaft"@de,
-        "Federal Office for Agriculture"@en,
-        "Office fédéral de l'agriculture"@fr,
-        "Ufficio federale dell'agricoltura"@it ;
-    rdfs:comment "Das Bundesamt für Landwirtschaft (BLW) ist das Kompetenzzentrum des Bundes für alle Kernfragen im Zusammenhang mit dem Agrarsektor."@de,
-        "The Federal Office for Agriculture (FOAG) is the Confederation's competence centre for all core issues relating to the agricultural sector."@en,
-        "L'Office fédéral de l'agriculture (OFAG) est le centre de compétence de la Confédération pour toutes les questions essentielles liées au secteur agricole."@fr,
-        "L'Ufficio federale dell'agricoltura (UFAG) è il centro di competenza della Confederazione per tutte le questioni fondamentali relative al settore agricolo."@it ;
-    ns1:PRP101 "BLW"@de,
-        "FOAG"@en,
-        "OFAG"@fr,
-        "UFAG"@it .
-
 ns1:ORG003 a ns1:CLS008 ;
     rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de,
         "Directorate for Digitalization and Data Management"@en,
@@ -643,7 +687,7 @@ ns1:ORG003 a ns1:CLS008 ;
         "The Directorate for Digitalization and Data Management is committed to ensuring that digital transformation and data management in the agricultural and food sector are promoted in a goal-oriented and forward-looking manner."@en,
         "La Direction de la numérisation et de la gestion des données s'engage à ce que la transformation numérique et la gestion des données dans le secteur agricole et alimentaire soient encouragées de manière ciblée et tournée vers l'avenir."@fr,
         "La Direzione per la digitalizzazione e la gestione dei dati si impegna a garantire che la trasformazione digitale e la gestione dei dati nel settore agricolo e alimentare siano promosse in modo mirato e orientato al futuro."@it ;
-    ns1:PRP001 ns1:ORG001 ;
+    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008654> ;
     ns1:PRP101 "DBDD"@de,
         "DBDD"@en,
         "DBDD"@fr,
@@ -658,7 +702,7 @@ ns1:ORG004 a ns1:CLS008 ;
         "The Directorate for Law, Resources, and Integral Security ensures the legal compliance of various BLW measures and is particularly responsible for the office’s personnel measures."@en,
         "La Direction du droit, des ressources et de la sécurité intégrale garantit la conformité juridique des différentes mesures de l'OFAG et est notamment responsable des mesures en matière de personnel du bureau."@fr,
         "La Direzione per il diritto, le risorse e la sicurezza integrale garantisce la conformità legale delle varie misure dell'UFAG ed è in particolare responsabile delle misure relative al personale dell'ufficio."@it ;
-    ns1:PRP001 ns1:ORG001 ;
+    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008654> ;
     ns1:PRP101 "DBRRIS"@de,
         "DBRRIS"@en,
         "DBRRIS"@fr,
@@ -673,7 +717,7 @@ ns1:ORG005 a ns1:CLS008 ;
         "Resilient production and ecosystem systems are at the center of the Directorate for Production Resources, Natural Resources and Research. Among other things, it is responsible for ensuring that plants are sustainably protected and animals are optimally fed. Furthermore, this directorate promotes various research and advisory projects in Switzerland and internationally."@en,
         "Les systèmes de production et les écosystèmes résilients sont au cœur de la Direction des bases de production, des ressources naturelles et de la recherche. Elle est notamment chargée de garantir que les plantes soient protégées durablement et que les animaux soient nourris de manière optimale. De plus, cette direction soutient divers projets de recherche et de conseil en Suisse et à l'international."@fr,
         "I sistemi produttivi e gli ecosistemi resilienti sono al centro della Direzione delle basi produttive, delle risorse naturali e della ricerca. Tra le altre cose, è responsabile della protezione sostenibile delle piante e dell'alimentazione ottimale degli animali. Inoltre, questa direzione promuove vari progetti di ricerca e consulenza in Svizzera e a livello internazionale."@it ;
-    ns1:PRP001 ns1:ORG001 ;
+    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008654> ;
     ns1:PRP101 "DBPRF"@de,
         "DBPRF"@en,
         "DBPRF"@fr,
@@ -688,7 +732,7 @@ ns1:ORG006 a ns1:CLS008 ;
         "Farmers provide various services for the general public and are therefore supported with financial contributions. The Directorate for Direct Payments and Rural Development is responsible for this. It also works to ensure the vitality of rural areas."@en,
         "Les agriculteurs fournissent divers services à la collectivité et sont donc soutenus par des contributions financières. La Direction des paiements directs et du développement rural en est responsable. Elle s'engage également pour la vitalité des zones rurales."@fr,
         "Gli agricoltori forniscono vari servizi alla collettività e sono quindi sostenuti con contributi finanziari. La Direzione dei pagamenti diretti e dello sviluppo rurale è responsabile di questo. Inoltre, si impegna per la vitalità delle aree rurali."@it ;
-    ns1:PRP001 ns1:ORG001 ;
+    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008654> ;
     ns1:PRP101 "DBDLE"@de .
 
 ns1:ORG007 a ns1:CLS008 ;
@@ -700,7 +744,7 @@ ns1:ORG007 a ns1:CLS008 ;
         "The Directorate for Markets and International Affairs works to ensure that agriculture achieves the highest possible added value from the sale of its products. It supports self-help measures, innovation, and the marketing of various sectors. Additionally, this directorate is involved in international organizations such as the UN Food and Agriculture Organization (FAO) and the World Trade Organization (WTO)."@en,
         "La Direction des marchés et des affaires internationales s'efforce de garantir que l'agriculture tire la plus grande valeur ajoutée possible de la vente de ses produits. Elle soutient les mesures d'auto-assistance, l'innovation et la commercialisation des différentes filières. De plus, cette direction est impliquée dans des organisations internationales telles que l'Organisation des Nations unies pour l'alimentation et l'agriculture (FAO) et l'Organisation mondiale du commerce (OMC)."@fr,
         "La Direzione dei mercati e degli affari internazionali si adopera affinché l'agricoltura ottenga il massimo valore aggiunto possibile dalla vendita dei suoi prodotti. Sostiene misure di auto-aiuto, innovazione e commercializzazione nei vari settori. Inoltre, questa direzione è coinvolta in organizzazioni internazionali come l'Organizzazione delle Nazioni Unite per l'alimentazione e l'agricoltura (FAO) e l'Organizzazione mondiale del commercio (OMC)."@it ;
-    ns1:PRP001 ns1:ORG001 ;
+    ns1:PRP001 <https://register.ld.admin.ch/staatskalender/organization/10008654> ;
     ns1:PRP101 "DBMI"@de .
 
 ns1:ORG010 a ns1:CLS008 ;
@@ -729,9 +773,9 @@ ns1:ORG012 a ns1:CLS008 ;
     ns1:PRP101 "FBMA"@de .
 
 ns1:ORG013 a ns1:CLS008 ;
-    rdfs:label "Fachbereich Marktanalyse"@de ;
+    rdfs:label "Gruppe Business Intelligence"@de ;
     ns1:PRP001 ns1:ORG003 ;
-    ns1:PRP101 "FBMA"@de .
+    ns1:PRP101 "GRBI"@de .
 
 ns1:ORG014 a ns1:CLS008 ;
     rdfs:label "Fachbereich Informatikführung"@de ;
@@ -742,11 +786,6 @@ ns1:ORG015 a ns1:CLS008 ;
     rdfs:label "Gruppe GEVER Services"@de ;
     ns1:PRP001 ns1:ORG003 ;
     ns1:PRP101 "GRGS"@de .
-
-ns1:ORG016 a ns1:CLS008 ;
-    rdfs:label "Gruppe Business Intelligence"@de ;
-    ns1:PRP001 ns1:ORG003 ;
-    ns1:PRP101 "GRBI"@de .
 
 ns1:ORG020 a ns1:CLS008 ;
     rdfs:label "Fachbereich Direktzahlungsprogramme"@de ;
@@ -800,4 +839,34 @@ ns1:ORG041 a ns1:CLS008 ;
         "FBTT"@en,
         "SPAE"@fr,
         "SPAA"@it .
+
+<https://register.ld.admin.ch/staatskalender/organization/10008654> a ns1:CLS008 ;
+    rdfs:label "Bundesamt für Landwirtschaft"@de,
+        "Federal Office for Agriculture"@en,
+        "Office fédéral de l'agriculture"@fr,
+        "Ufficio federale dell'agricoltura"@it ;
+    rdfs:comment "Das Bundesamt für Landwirtschaft (BLW) ist das Kompetenzzentrum des Bundes für alle Kernfragen im Zusammenhang mit dem Agrarsektor."@de,
+        "The Federal Office for Agriculture (FOAG) is the Confederation's competence centre for all core issues relating to the agricultural sector."@en,
+        "L'Office fédéral de l'agriculture (OFAG) est le centre de compétence de la Confédération pour toutes les questions essentielles liées au secteur agricole."@fr,
+        "L'Ufficio federale dell'agricoltura (UFAG) è il centro di competenza della Confederazione per tutte le questioni fondamentali relative al settore agricolo."@it ;
+    ns1:PRP101 "BLW"@de,
+        "FOAG"@en,
+        "OFAG"@fr,
+        "UFAG"@it .
+
+<https://register.ld.admin.ch/staatskalender/organization/10008659> a ns1:CLS008 ;
+    rdfs:label "Bundesamt für Zoll und Grenzsicherheit"@de,
+        "Federal Office for Customs and Border Security"@en,
+        "Office fédéral de la douane et de la sécurité des frontières"@fr,
+        "Ufficio federale della dogana e della sicurezza dei confini"@it ;
+    rdfs:comment "Das Bundesamt für Zoll und Grenzsicherheit ist mit über 4000 Mitarbeitenden die grösste Verwaltungseinheit des Finanzdepartements. Hier finden Sie die Mitglieder der Geschäftsleitung."@de ;
+    ns1:PRP101 "BAZG"@de,
+        "FOCBS"@en,
+        "OFDF"@fr,
+        "UDSC"@it .
+
+<https://register.ld.admin.ch/staatskalender/organization/10008742> a ns1:CLS008 ;
+    rdfs:label "Bundesamt für Statistik"@de ;
+    rdfs:comment "Als nationales Kompetenzzentrum der öffentlichen Statistik ist das Bundesamt für Statistik (BFS) der zentrale Knotenpunkt im Datennökosystem der Schweiz. Es unter­stützt und stärkt die gesamte öffentliche Verwaltung im Umgang mit Daten."@de ;
+    ns1:PRP101 "BFS"@de .
 

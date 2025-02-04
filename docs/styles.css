@@ -32,6 +32,11 @@ html, body {
 .info-panel.hidden {
   display: none;
 }
+/* Fixed on selection */
+.info-panel.fixed {
+  pointer-events: auto;
+}
+
 /* Legend container at bottom-left */
 .legend {
   position: absolute;

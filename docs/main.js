@@ -74,6 +74,9 @@ function blendHexColors(c1, c2, ratio) {
  */
 async function init() {
 
+    // Track if a node is pinned (i.e. clicked) so that the info panel remains fixed.
+    let pinnedNodeId = null;
+
     async function fetchAndDisplayTitle() {
         try {
             const titleJson = await getSparqlData(TITLE_QUERY);
@@ -252,6 +255,8 @@ async function init() {
     function hideNodeInfo() {
         infoPanel.classList.add("hidden");
         infoPanel.innerHTML = "";
+        // Ensure the info panel is not fixed anymore
+        infoPanel.classList.remove("fixed");
     }
 
     // 7) Hover => BFS highlight + show panel
@@ -315,10 +320,12 @@ async function init() {
         });
         edgesDataset.update(edgeUpdates);
     
-        // Show the info panel for the hovered node (existing code)
-        const hoveredNodeData = nodesDataset.get(hoveredId);
-        if (hoveredNodeData && hoveredNodeData.data) {
-            showNodeInfo(hoveredNodeData);
+        // Show the info panel if no node is pinned
+        if (!pinnedNodeId) {
+            const hoveredNodeData = nodesDataset.get(hoveredId);
+            if (hoveredNodeData && hoveredNodeData.data) {
+                showNodeInfo(hoveredNodeData);
+            }
         }
     });    
 
@@ -335,20 +342,38 @@ async function init() {
         });
         nodesDataset.update(restoreArray);
     
-        // Restore edge labels to the original font color
-        const edgeRestore = edgesDataset.get().map(edge => {
-            return {
-                id: edge.id,
-                font: {
-                    color: "#000000" // Original edge label color
-                }
-            };
-        });
+        // Restore edge label color (existing code)
+        const edgeRestore = edgesDataset.get().map(edge => ({
+            id: edge.id,
+            font: { color: "#000000" }
+        }));
         edgesDataset.update(edgeRestore);
     
-        // Hide the info panel (existing code)
-        hideNodeInfo();
-    });    
+        // Only hide the info panel if no node is pinned
+        if (!pinnedNodeId) {
+            hideNodeInfo();
+        }
+    });
+    
+    network.on("click", (params) => {
+        if (params.nodes.length > 0) {
+            // A node was clicked—pin its info.
+            pinnedNodeId = params.nodes[0];
+            const nodeData = nodesDataset.get(pinnedNodeId);
+            if (nodeData && nodeData.data) {
+                showNodeInfo(nodeData);
+            }
+            // Add the "fixed" class so that pointer events are enabled
+            infoPanel.classList.add("fixed");
+        } else {
+            // Clicked on empty space—unpin and hide the info panel.
+            pinnedNodeId = null;
+            hideNodeInfo();
+            // Remove the "fixed" class to restore the original behavior.
+            infoPanel.classList.remove("fixed");
+        }
+    });
+    
 
     function buildLegend(classRows) {
     // Grab the legend <div>

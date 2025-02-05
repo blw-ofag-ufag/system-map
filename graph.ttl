@@ -5,16 +5,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ns1:CLS001 a owl:Class ;
-    rdfs:label "Organisation"@de,
-        "Organization"@en,
-        "Organisation"@fr,
-        "Organizzazione"@it ;
-    rdfs:comment "Eine (juristische) Einheit wie ein Unternehmen, eine Behörde oder eine Non-Profit-Organisation oder eine Untereinheit einer solchen."@de,
-        "A (legal) entity such as a company, agency or non-profit organization, or a subunit of such an entity."@en,
-        "Une entité (juridique) telle qu'une entreprise, une agence ou une organisation à but non lucratif, ou une sous-unité d'une telle entité."@fr,
-        "Un'entità (giuridica) come un'azienda, un'agenzia o un'organizzazione senza scopo di lucro, o una sotto-unità di tale entità."@it .
-
 ns1:CLS003 a owl:Class ;
     rdfs:label "Informationseinheit"@de,
         "Information unit"@en,
@@ -46,14 +36,14 @@ ns1:CLS006 a owl:Class ;
         "Public-sector organization"@en,
         "Organisation de droit public"@fr,
         "Organizzazione di diritto pubblico"@it ;
-    rdfs:subClassOf ns1:CLS001 .
+    rdfs:subClassOf schema:Organization .
 
 ns1:CLS007 a owl:Class ;
     rdfs:label "Privatrechtliche Organisation"@de,
         "Private-sector organization"@en,
         "Organisation de droit privé"@fr,
         "Organizzazione di diritto privato"@it ;
-    rdfs:subClassOf ns1:CLS001 .
+    rdfs:subClassOf schema:Organization .
 
 ns1:CLS008 a owl:Class ;
     rdfs:label "Organisation des Bundes"@de,
@@ -83,6 +73,16 @@ ns1:CLS011 a owl:Class ;
         "Centro di consulenza cantonale"@it ;
     rdfs:subClassOf ns1:CLS009 .
 
+schema:Organization a owl:Class ;
+    rdfs:label "Organisation"@de,
+        "Organization"@en,
+        "Organisation"@fr,
+        "Organizzazione"@it ;
+    rdfs:comment "Eine (juristische) Einheit wie ein Unternehmen, eine Behörde oder eine Non-Profit-Organisation oder eine Untereinheit einer solchen."@de,
+        "A (legal) entity such as a company, agency or non-profit organization, or a subunit of such an entity."@en,
+        "Une entité (juridique) telle qu'une entreprise, une agence ou une organisation à but non lucratif, ou une sous-unité d'une telle entité."@fr,
+        "Un'entità (giuridica) come un'azienda, un'agenzia o un'organizzazione senza scopo di lucro, o una sotto-unità di tale entità."@it .
+
 schema:SoftwareApplication a owl:Class ;
     rdfs:label "IT-System"@de,
         "IT system"@en,
@@ -98,7 +98,7 @@ ns1:PRP101 a owl:DatatypeProperty ;
         "Organization abbreviation"@en,
         "Abréviation de l'organisation"@fr,
         "Abbreviazione dell'organizzazione"@it ;
-    rdfs:domain ns1:CLS001 ;
+    rdfs:domain schema:Organization ;
     rdfs:range xsd:string .
 
 ns1:PRP102 a owl:DatatypeProperty ;
@@ -114,8 +114,8 @@ ns1:PRP005 a owl:ObjectProperty ;
         "is (partially) owned by"@en,
         "est (partiellement) détenu par"@fr,
         "è (parzialmente) di proprietà di"@it ;
-    rdfs:domain ns1:CLS001 ;
-    rdfs:range ns1:CLS001 ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Organization ;
     owl:inverseOf ns1:PRP006 .
 
 ns1:PRP006 a owl:ObjectProperty ;
@@ -123,8 +123,8 @@ ns1:PRP006 a owl:ObjectProperty ;
         "(partially) owns"@en,
         "possède (partiellement)"@fr,
         "possiede (parzialmente)"@it ;
-    rdfs:domain ns1:CLS001 ;
-    rdfs:range ns1:CLS001 ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Organization ;
     owl:inverseOf ns1:PRP005 .
 
 ns1:PRP007 a owl:ObjectProperty ;
@@ -136,7 +136,7 @@ ns1:PRP007 a owl:ObjectProperty ;
         "This relationship indicates that organization X is in charge of operating system Y. If organization Y outsources the operation of a system X to a service provider Z, still use this operating relationship between X and Y since it reflects responsibility rather than technical operation. Also, use this on the lowest organizational level possible."@en,
         "Cette relation indique que l'organisation X est responsable de l'exploitation du système Y. Si l'organisation Y externalise l'exploitation d'un système X à un prestataire de services Z, utilisez toujours cette relation d'exploitation entre X et Y, car elle reflète la responsabilité plutôt que l'exploitation technique. Utilisez cette relation au niveau organisationnel le plus bas possible."@fr,
         "Questa relazione indica che l'organizzazione X è responsabile della gestione del sistema Y. Se l'organizzazione Y esternalizza la gestione di un sistema X a un fornitore di servizi Z, continua a utilizzare questa relazione operativa tra X e Y, poiché riflette la responsabilità piuttosto che l'operazione tecnica. Inoltre, usa questa relazione al livello organizzativo più basso possibile."@it ;
-    rdfs:domain ns1:CLS001 ;
+    rdfs:domain schema:Organization ;
     rdfs:range schema:SoftwareApplication ;
     owl:inverseOf ns1:PRP008 .
 
@@ -150,7 +150,7 @@ ns1:PRP008 a owl:ObjectProperty ;
         "Indique qu'un système informatique X est exploité par une organisation Y, c'est-à-dire que l'organisation Y est responsable de l'exploitation du système X."@fr,
         "Indica che un sistema IT X è gestito da un'organizzazione Y, ovvero che l'organizzazione Y è responsabile della gestione del sistema X."@it ;
     rdfs:domain schema:SoftwareApplication ;
-    rdfs:range ns1:CLS001 ;
+    rdfs:range schema:Organization ;
     owl:inverseOf ns1:PRP007 .
 
 ns1:PRP011 a owl:ObjectProperty ;
@@ -210,7 +210,7 @@ ns1:PRP015 a owl:ObjectProperty ;
         "Indicates that an organization X has the rights to access the information unit Y."@en,
         "Indique qu'une organisation X a le droit d'accéder à l'unité d'information Y."@fr,
         "Indica che un'organizzazione X ha il diritto di accedere all'unità di informazione Y."@it ;
-    rdfs:domain ns1:CLS001 ;
+    rdfs:domain schema:Organization ;
     rdfs:range ns1:CLS003 .
 
 schema:member a owl:ObjectProperty ;
@@ -222,8 +222,8 @@ schema:member a owl:ObjectProperty ;
         "Indicates that an organization X has another organization Y as a member organization. This relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en,
         "Indique qu'une organisation X a une autre organisation Y comme organisation membre. Cette relation est utilisée pour représenter les adhésions à des organisations sectorielles, des associations professionnelles ou d'autres associations formelles dans lesquelles les organisations participent en tant que membres. Les relations informelles ne sont pas incluses."@fr,
         "Indica che un'organizzazione X ha un'altra organizzazione Y come organizzazione membro. Questa relazione viene utilizzata per rappresentare l'appartenenza a organizzazioni di settore, associazioni professionali o altre associazioni formali in cui le organizzazioni partecipano come membri. Le relazioni informali non sono incluse."@it ;
-    rdfs:domain ns1:CLS001 ;
-    rdfs:range ns1:CLS001 ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Organization ;
     owl:inverseOf schema:memberOf .
 
 schema:memberOf a owl:ObjectProperty ;
@@ -235,8 +235,8 @@ schema:memberOf a owl:ObjectProperty ;
         "Indicates that an organization X is a member organization of another organization Y. The relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en,
         "Indique qu'une organisation X est une organisation membre d'une autre organisation Y. La relation est utilisée pour représenter les adhésions à des organisations sectorielles, des associations professionnelles ou d'autres associations formelles dans lesquelles les organisations participent en tant que membres. Les relations informelles ne sont pas incluses."@fr,
         "Indica che un'organizzazione X è un'organizzazione membro di un'altra organizzazione Y. La relazione viene utilizzata per rappresentare l'appartenenza a organizzazioni di settore, associazioni professionali o altre associazioni formali in cui le organizzazioni partecipano come membri. Le relazioni informali non sono incluse."@it ;
-    rdfs:domain ns1:CLS001 ;
-    rdfs:range ns1:CLS001 ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Organization ;
     owl:inverseOf schema:member .
 
 schema:parentOrganization a owl:ObjectProperty,
@@ -249,8 +249,8 @@ schema:parentOrganization a owl:ObjectProperty,
         "Indicates that the (sub-)organization is part of a (parent) organization Y."@en,
         "Indique que l'(sous-)organisation fait partie d'une (organisation parent) Y."@fr,
         "Indica che l'(sotto-)organizzazione fa parte di un'(organizzazione madre) Y."@it ;
-    rdfs:domain ns1:CLS001 ;
-    rdfs:range ns1:CLS001 .
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Organization .
 
 schema:subOrganization a owl:ObjectProperty,
         owl:TransitiveProperty ;
@@ -258,8 +258,8 @@ schema:subOrganization a owl:ObjectProperty,
         "contains suborganization"@en,
         "contient une sous-organisation"@fr,
         "contiene un'organizzazione subordinata"@it ;
-    rdfs:domain ns1:CLS001 ;
-    rdfs:range ns1:CLS001 ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Organization ;
     owl:inverseOf schema:parentOrganization .
 
 ns1: a owl:Ontology ;
@@ -273,20 +273,6 @@ ns1: a owl:Ontology ;
         "Carte du système DigiAgriFoodCH"@fr,
         "Mappa del sistema DigiAgriFoodCH"@it ;
     owl:versionInfo "0.3.0" .
-
-ns1:ORG200 a ns1:CLS001 ;
-    rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
-        "International Union for the Protection of New Varieties of Plants"@en,
-        "Union internationale pour la protection des obtentions végétales"@fr,
-        "Unione internazionale per la protezione delle nuove varietà vegetali"@it ;
-    rdfs:comment "Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz. Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen."@de,
-        "The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland. It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society."@en,
-        "L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse. Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société."@fr,
-        "L'Unione internazionale per la protezione delle nuove varietà vegetali (UPOV) è un'organizzazione intergovernativa con sede a Ginevra, in Svizzera. È stata fondata nel 1961 e mira a promuovere un sistema efficace per la protezione del miglioramento genetico delle piante, al fine di sostenere lo sviluppo di nuove varietà vegetali a beneficio della società."@it ;
-    ns1:PRP101 "UPOV"@de,
-        "UPOV"@en,
-        "UPOV"@fr,
-        "UPOV"@it .
 
 ns1:INF003 a ns1:CLS003 ;
     rdfs:label "Informationen zu Flächen und Kulturen"@de ;
@@ -743,6 +729,20 @@ ns1:ORG204 a ns1:CLS008 ;
     rdfs:label "Bundesamt für Statistik"@de ;
     rdfs:comment "Als nationales Kompetenzzentrum der öffentlichen Statistik ist das Bundesamt für Statistik (BFS) der zentrale Knotenpunkt im Datennökosystem der Schweiz. Es unterstützt und stärkt die gesamte öffentliche Verwaltung im Umgang mit Daten."@de ;
     ns1:PRP101 "BFS"@de .
+
+ns1:ORG200 a schema:Organization ;
+    rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
+        "International Union for the Protection of New Varieties of Plants"@en,
+        "Union internationale pour la protection des obtentions végétales"@fr,
+        "Unione internazionale per la protezione delle nuove varietà vegetali"@it ;
+    rdfs:comment "Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz. Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen."@de,
+        "The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland. It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society."@en,
+        "L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse. Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société."@fr,
+        "L'Unione internazionale per la protezione delle nuove varietà vegetali (UPOV) è un'organizzazione intergovernativa con sede a Ginevra, in Svizzera. È stata fondata nel 1961 e mira a promuovere un sistema efficace per la protezione del miglioramento genetico delle piante, al fine di sostenere lo sviluppo di nuove varietà vegetali a beneficio della società."@it ;
+    ns1:PRP101 "UPOV"@de,
+        "UPOV"@en,
+        "UPOV"@fr,
+        "UPOV"@it .
 
 ns1:SYS001 a schema:SoftwareApplication ;
     rdfs:label "Acontrol"@de,

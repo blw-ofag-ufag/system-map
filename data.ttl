@@ -3,20 +3,6 @@
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/foag/system-map#> .
 
-systemmap:ORG200 a systemmap:CLS001 ;
-    rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
-        "International Union for the Protection of New Varieties of Plants"@en,
-        "Union internationale pour la protection des obtentions végétales"@fr,
-        "Unione internazionale per la protezione delle nuove varietà vegetali"@it ;
-    rdfs:comment "Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz. Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen."@de,
-        "The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland. It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society."@en,
-        "L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse. Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société."@fr,
-        "L'Unione internazionale per la protezione delle nuove varietà vegetali (UPOV) è un'organizzazione intergovernativa con sede a Ginevra, in Svizzera. È stata fondata nel 1961 e mira a promuovere un sistema efficace per la protezione del miglioramento genetico delle piante, al fine di sostenere lo sviluppo di nuove varietà vegetali a beneficio della società."@it ;
-    systemmap:PRP101 "UPOV"@de,
-        "UPOV"@en,
-        "UPOV"@fr,
-        "UPOV"@it .
-
 systemmap:INF003 a systemmap:CLS003 ;
     rdfs:label "Informationen zu Flächen und Kulturen"@de ;
     rdfs:comment "Daten zu Grössen und Ort der Flächen (nur als Koordinaten ohne Polygone), landwirtschaftlichen Hauptkulturen und Betriebszugehörigkeit der Flächen."@de ;
@@ -472,6 +458,20 @@ staatskalender:10008742 a systemmap:CLS008 ;
     rdfs:label "Bundesamt für Statistik"@de ;
     rdfs:comment "Als nationales Kompetenzzentrum der öffentlichen Statistik ist das Bundesamt für Statistik (BFS) der zentrale Knotenpunkt im Datennökosystem der Schweiz. Es unterstützt und stärkt die gesamte öffentliche Verwaltung im Umgang mit Daten."@de ;
     systemmap:PRP101 "BFS"@de .
+
+systemmap:ORG200 a schema:Organization ;
+    rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
+        "International Union for the Protection of New Varieties of Plants"@en,
+        "Union internationale pour la protection des obtentions végétales"@fr,
+        "Unione internazionale per la protezione delle nuove varietà vegetali"@it ;
+    rdfs:comment "Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz. Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen."@de,
+        "The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland. It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society."@en,
+        "L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse. Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société."@fr,
+        "L'Unione internazionale per la protezione delle nuove varietà vegetali (UPOV) è un'organizzazione intergovernativa con sede a Ginevra, in Svizzera. È stata fondata nel 1961 e mira a promuovere un sistema efficace per la protezione del miglioramento genetico delle piante, al fine di sostenere lo sviluppo di nuove varietà vegetali a beneficio della società."@it ;
+    systemmap:PRP101 "UPOV"@de,
+        "UPOV"@en,
+        "UPOV"@fr,
+        "UPOV"@it .
 
 systemmap:SYS001 a schema:SoftwareApplication ;
     rdfs:label "Acontrol"@de,

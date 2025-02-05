@@ -5,16 +5,6 @@
 @prefix systemmap: <https://agriculture.ld.admin.ch/foag/system-map#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-systemmap:CLS001 a owl:Class ;
-    rdfs:label "Organisation"@de,
-        "Organization"@en,
-        "Organisation"@fr,
-        "Organizzazione"@it ;
-    rdfs:comment "Eine (juristische) Einheit wie ein Unternehmen, eine Behörde oder eine Non-Profit-Organisation oder eine Untereinheit einer solchen."@de,
-        "A (legal) entity such as a company, agency or non-profit organization, or a subunit of such an entity."@en,
-        "Une entité (juridique) telle qu'une entreprise, une agence ou une organisation à but non lucratif, ou une sous-unité d'une telle entité."@fr,
-        "Un'entità (giuridica) come un'azienda, un'agenzia o un'organizzazione senza scopo di lucro, o una sotto-unità di tale entità."@it .
-
 systemmap:CLS003 a owl:Class ;
     rdfs:label "Informationseinheit"@de,
         "Information unit"@en,
@@ -46,14 +36,14 @@ systemmap:CLS006 a owl:Class ;
         "Public-sector organization"@en,
         "Organisation de droit public"@fr,
         "Organizzazione di diritto pubblico"@it ;
-    rdfs:subClassOf systemmap:CLS001 .
+    rdfs:subClassOf schema:Organization .
 
 systemmap:CLS007 a owl:Class ;
     rdfs:label "Privatrechtliche Organisation"@de,
         "Private-sector organization"@en,
         "Organisation de droit privé"@fr,
         "Organizzazione di diritto privato"@it ;
-    rdfs:subClassOf systemmap:CLS001 .
+    rdfs:subClassOf schema:Organization .
 
 systemmap:CLS008 a owl:Class ;
     rdfs:label "Organisation des Bundes"@de,
@@ -83,6 +73,16 @@ systemmap:CLS011 a owl:Class ;
         "Centro di consulenza cantonale"@it ;
     rdfs:subClassOf systemmap:CLS009 .
 
+schema:Organization a owl:Class ;
+    rdfs:label "Organisation"@de,
+        "Organization"@en,
+        "Organisation"@fr,
+        "Organizzazione"@it ;
+    rdfs:comment "Eine (juristische) Einheit wie ein Unternehmen, eine Behörde oder eine Non-Profit-Organisation oder eine Untereinheit einer solchen."@de,
+        "A (legal) entity such as a company, agency or non-profit organization, or a subunit of such an entity."@en,
+        "Une entité (juridique) telle qu'une entreprise, une agence ou une organisation à but non lucratif, ou une sous-unité d'une telle entité."@fr,
+        "Un'entità (giuridica) come un'azienda, un'agenzia o un'organizzazione senza scopo di lucro, o una sotto-unità di tale entità."@it .
+
 schema:SoftwareApplication a owl:Class ;
     rdfs:label "IT-System"@de,
         "IT system"@en,
@@ -98,7 +98,7 @@ systemmap:PRP101 a owl:DatatypeProperty ;
         "Organization abbreviation"@en,
         "Abréviation de l'organisation"@fr,
         "Abbreviazione dell'organizzazione"@it ;
-    rdfs:domain systemmap:CLS001 ;
+    rdfs:domain schema:Organization ;
     rdfs:range xsd:string .
 
 systemmap:PRP102 a owl:DatatypeProperty ;
@@ -114,8 +114,8 @@ systemmap:PRP005 a owl:ObjectProperty ;
         "is (partially) owned by"@en,
         "est (partiellement) détenu par"@fr,
         "è (parzialmente) di proprietà di"@it ;
-    rdfs:domain systemmap:CLS001 ;
-    rdfs:range systemmap:CLS001 ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Organization ;
     owl:inverseOf systemmap:PRP006 .
 
 systemmap:PRP006 a owl:ObjectProperty ;
@@ -123,8 +123,8 @@ systemmap:PRP006 a owl:ObjectProperty ;
         "(partially) owns"@en,
         "possède (partiellement)"@fr,
         "possiede (parzialmente)"@it ;
-    rdfs:domain systemmap:CLS001 ;
-    rdfs:range systemmap:CLS001 ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Organization ;
     owl:inverseOf systemmap:PRP005 .
 
 systemmap:PRP007 a owl:ObjectProperty ;
@@ -136,7 +136,7 @@ systemmap:PRP007 a owl:ObjectProperty ;
         "This relationship indicates that organization X is in charge of operating system Y. If organization Y outsources the operation of a system X to a service provider Z, still use this operating relationship between X and Y since it reflects responsibility rather than technical operation. Also, use this on the lowest organizational level possible."@en,
         "Cette relation indique que l'organisation X est responsable de l'exploitation du système Y. Si l'organisation Y externalise l'exploitation d'un système X à un prestataire de services Z, utilisez toujours cette relation d'exploitation entre X et Y, car elle reflète la responsabilité plutôt que l'exploitation technique. Utilisez cette relation au niveau organisationnel le plus bas possible."@fr,
         "Questa relazione indica che l'organizzazione X è responsabile della gestione del sistema Y. Se l'organizzazione Y esternalizza la gestione di un sistema X a un fornitore di servizi Z, continua a utilizzare questa relazione operativa tra X e Y, poiché riflette la responsabilità piuttosto che l'operazione tecnica. Inoltre, usa questa relazione al livello organizzativo più basso possibile."@it ;
-    rdfs:domain systemmap:CLS001 ;
+    rdfs:domain schema:Organization ;
     rdfs:range schema:SoftwareApplication ;
     owl:inverseOf systemmap:PRP008 .
 
@@ -150,7 +150,7 @@ systemmap:PRP008 a owl:ObjectProperty ;
         "Indique qu'un système informatique X est exploité par une organisation Y, c'est-à-dire que l'organisation Y est responsable de l'exploitation du système X."@fr,
         "Indica che un sistema IT X è gestito da un'organizzazione Y, ovvero che l'organizzazione Y è responsabile della gestione del sistema X."@it ;
     rdfs:domain schema:SoftwareApplication ;
-    rdfs:range systemmap:CLS001 ;
+    rdfs:range schema:Organization ;
     owl:inverseOf systemmap:PRP007 .
 
 systemmap:PRP011 a owl:ObjectProperty ;
@@ -210,7 +210,7 @@ systemmap:PRP015 a owl:ObjectProperty ;
         "Indicates that an organization X has the rights to access the information unit Y."@en,
         "Indique qu'une organisation X a le droit d'accéder à l'unité d'information Y."@fr,
         "Indica che un'organizzazione X ha il diritto di accedere all'unità di informazione Y."@it ;
-    rdfs:domain systemmap:CLS001 ;
+    rdfs:domain schema:Organization ;
     rdfs:range systemmap:CLS003 .
 
 schema:member a owl:ObjectProperty ;
@@ -222,8 +222,8 @@ schema:member a owl:ObjectProperty ;
         "Indicates that an organization X has another organization Y as a member organization. This relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en,
         "Indique qu'une organisation X a une autre organisation Y comme organisation membre. Cette relation est utilisée pour représenter les adhésions à des organisations sectorielles, des associations professionnelles ou d'autres associations formelles dans lesquelles les organisations participent en tant que membres. Les relations informelles ne sont pas incluses."@fr,
         "Indica che un'organizzazione X ha un'altra organizzazione Y come organizzazione membro. Questa relazione viene utilizzata per rappresentare l'appartenenza a organizzazioni di settore, associazioni professionali o altre associazioni formali in cui le organizzazioni partecipano come membri. Le relazioni informali non sono incluse."@it ;
-    rdfs:domain systemmap:CLS001 ;
-    rdfs:range systemmap:CLS001 ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Organization ;
     owl:inverseOf schema:memberOf .
 
 schema:memberOf a owl:ObjectProperty ;
@@ -235,8 +235,8 @@ schema:memberOf a owl:ObjectProperty ;
         "Indicates that an organization X is a member organization of another organization Y. The relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en,
         "Indique qu'une organisation X est une organisation membre d'une autre organisation Y. La relation est utilisée pour représenter les adhésions à des organisations sectorielles, des associations professionnelles ou d'autres associations formelles dans lesquelles les organisations participent en tant que membres. Les relations informelles ne sont pas incluses."@fr,
         "Indica che un'organizzazione X è un'organizzazione membro di un'altra organizzazione Y. La relazione viene utilizzata per rappresentare l'appartenenza a organizzazioni di settore, associazioni professionali o altre associazioni formali in cui le organizzazioni partecipano come membri. Le relazioni informali non sono incluse."@it ;
-    rdfs:domain systemmap:CLS001 ;
-    rdfs:range systemmap:CLS001 ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Organization ;
     owl:inverseOf schema:member .
 
 schema:parentOrganization a owl:ObjectProperty,
@@ -249,8 +249,8 @@ schema:parentOrganization a owl:ObjectProperty,
         "Indicates that the (sub-)organization is part of a (parent) organization Y."@en,
         "Indique que l'(sous-)organisation fait partie d'une (organisation parent) Y."@fr,
         "Indica che l'(sotto-)organizzazione fa parte di un'(organizzazione madre) Y."@it ;
-    rdfs:domain systemmap:CLS001 ;
-    rdfs:range systemmap:CLS001 .
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Organization .
 
 schema:subOrganization a owl:ObjectProperty,
         owl:TransitiveProperty ;
@@ -258,8 +258,8 @@ schema:subOrganization a owl:ObjectProperty,
         "contains suborganization"@en,
         "contient une sous-organisation"@fr,
         "contiene un'organizzazione subordinata"@it ;
-    rdfs:domain systemmap:CLS001 ;
-    rdfs:range systemmap:CLS001 ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Organization ;
     owl:inverseOf schema:parentOrganization .
 
 systemmap: a owl:Ontology ;

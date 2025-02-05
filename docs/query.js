@@ -21,7 +21,7 @@ window.NODE_QUERY = `
     GRAPH <https://lindas.admin.ch/foag/ontologies> {
       ?id a ?group .
       ?group rdfs:subClassOf* ?supergroup .
-      VALUES ?supergroup { systemmap:CLS001 schema:SoftwareApplication systemmap:CLS003 }
+      VALUES ?supergroup { schema:Organization schema:SoftwareApplication systemmap:CLS003 }
       OPTIONAL {
         ?id rdfs:label ?label .
         FILTER(LANG(?label) = "${lang}")

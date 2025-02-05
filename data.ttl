@@ -246,7 +246,7 @@ systemmap:ORG103 a systemmap:CLS007 ;
         "La coopérative Fenaco est une entreprise agricole suisse qui aide les agriculteurs à gérer leurs exploitations avec succès. Elle est active dans les domaines du commerce agricole, de la production alimentaire, du commerce de détail et de l'énergie. Fenaco possède des marques telles que Landi, Volg, Agrola et divers producteurs alimentaires. La coopérative appartient aux agriculteurs suisses et son siège est à Berne."@fr,
         "La cooperativa Fenaco è un'azienda agricola svizzera che supporta gli agricoltori nella gestione economica delle loro aziende. Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia. Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari. La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna."@it .
 
-systemmap:ORG003 a systemmap:CLS008 ;
+staatskalender:20034677 a systemmap:CLS008 ;
     rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de,
         "Directorate for Digitalization and Data Management"@en,
         "Unité de direction Transition numérique et gestion des données"@fr,
@@ -259,7 +259,7 @@ systemmap:ORG003 a systemmap:CLS008 ;
         "DBDD"@en,
         "DBDD"@fr,
         "DBDD"@it ;
-    schema:parentOrganization staatskalender:10008654 .
+    schema:parentOrganization staatskalender:10003196 .
 
 systemmap:ORG004 a systemmap:CLS008 ;
     rdfs:label "Direktionsbereich Recht, Ressourcen und Integrale Sicherheit"@de,
@@ -274,7 +274,7 @@ systemmap:ORG004 a systemmap:CLS008 ;
         "DBRRIS"@en,
         "DBRRIS"@fr,
         "DBRRIS"@it ;
-    schema:parentOrganization staatskalender:10008654 .
+    schema:parentOrganization staatskalender:10003196 .
 
 systemmap:ORG005 a systemmap:CLS008 ;
     rdfs:label "Direktionsbereich Produktionsgrundlagen, natürliche Ressourcen und Forschung"@de,
@@ -289,7 +289,7 @@ systemmap:ORG005 a systemmap:CLS008 ;
         "DBPRF"@en,
         "DBPRF"@fr,
         "DBPRF"@it ;
-    schema:parentOrganization staatskalender:10008654 .
+    schema:parentOrganization staatskalender:10003196 .
 
 systemmap:ORG006 a systemmap:CLS008 ;
     rdfs:label "Direktionsbereich Direktzahlungen und Ländliche Entwicklung"@de,
@@ -301,7 +301,7 @@ systemmap:ORG006 a systemmap:CLS008 ;
         "Les agriculteurs fournissent divers services à la collectivité et sont donc soutenus par des contributions financières. La Direction des paiements directs et du développement rural en est responsable. Elle s'engage également pour la vitalité des zones rurales."@fr,
         "Gli agricoltori forniscono vari servizi alla collettività e sono quindi sostenuti con contributi finanziari. La Direzione dei pagamenti diretti e dello sviluppo rurale è responsabile di questo. Inoltre, si impegna per la vitalità delle aree rurali."@it ;
     systemmap:PRP101 "DBDLE"@de ;
-    schema:parentOrganization staatskalender:10008654 .
+    schema:parentOrganization staatskalender:10003196 .
 
 systemmap:ORG007 a systemmap:CLS008 ;
     rdfs:label "Direktionsbereich Märkte und Internationales"@de,
@@ -313,9 +313,9 @@ systemmap:ORG007 a systemmap:CLS008 ;
         "La Direction des marchés et des affaires internationales s'efforce de garantir que l'agriculture tire la plus grande valeur ajoutée possible de la vente de ses produits. Elle soutient les mesures d'auto-assistance, l'innovation et la commercialisation des différentes filières. De plus, cette direction est impliquée dans des organisations internationales telles que l'Organisation des Nations unies pour l'alimentation et l'agriculture (FAO) et l'Organisation mondiale du commerce (OMC)."@fr,
         "La Direzione dei mercati e degli affari internazionali si adopera affinché l'agricoltura ottenga il massimo valore aggiunto possibile dalla vendita dei suoi prodotti. Sostiene misure di auto-aiuto, innovazione e commercializzazione nei vari settori. Inoltre, questa direzione è coinvolta in organizzazioni internazionali come l'Organizzazione delle Nazioni Unite per l'alimentazione e l'agricoltura (FAO) e l'Organizzazione mondiale del commercio (OMC)."@it ;
     systemmap:PRP101 "DBMI"@de ;
-    schema:parentOrganization staatskalender:10008654 .
+    schema:parentOrganization staatskalender:10003196 .
 
-systemmap:ORG010 a systemmap:CLS008 ;
+staatskalender:10003229 a systemmap:CLS008 ;
     rdfs:label "Fachbereich Agrarinformationssysteme"@de,
         "Agricultural Information Systems Division"@en,
         "Secteur d'information sur l'agriculture"@fr,
@@ -328,32 +328,32 @@ systemmap:ORG010 a systemmap:CLS008 ;
         "FBAIS"@en,
         "FBAIS"@fr,
         "FBAIS"@it ;
-    schema:parentOrganization systemmap:ORG003 .
+    schema:parentOrganization staatskalender:20034677 .
 
-systemmap:ORG011 a systemmap:CLS008 ;
+staatskalender:20051820 a systemmap:CLS008 ;
     rdfs:label "Kompetenzzentrum für die digitale Transformation"@de ;
     systemmap:PRP101 "GRKDT"@de ;
-    schema:parentOrganization systemmap:ORG003 .
+    schema:parentOrganization staatskalender:20034677 .
 
 systemmap:ORG012 a systemmap:CLS008 ;
     rdfs:label "Fachbereich Marktanalyse"@de ;
     systemmap:PRP101 "FBMA"@de ;
-    schema:parentOrganization systemmap:ORG003 .
+    schema:parentOrganization staatskalender:20034677 .
 
-systemmap:ORG013 a systemmap:CLS008 ;
+staatskalender:20045226 a systemmap:CLS008 ;
     rdfs:label "Gruppe Business Intelligence"@de ;
     systemmap:PRP101 "GRBI"@de ;
-    schema:parentOrganization systemmap:ORG003 .
+    schema:parentOrganization staatskalender:20034677 .
 
 systemmap:ORG014 a systemmap:CLS008 ;
     rdfs:label "Fachbereich Informatikführung"@de ;
     systemmap:PRP101 "FBIF"@de ;
-    schema:parentOrganization systemmap:ORG003 .
+    schema:parentOrganization staatskalender:20034677 .
 
 systemmap:ORG015 a systemmap:CLS008 ;
     rdfs:label "Gruppe GEVER Services"@de ;
     systemmap:PRP101 "GRGS"@de ;
-    schema:parentOrganization systemmap:ORG003 .
+    schema:parentOrganization staatskalender:20034677 .
 
 systemmap:ORG020 a systemmap:CLS008 ;
     rdfs:label "Fachbereich Direktzahlungsprogramme"@de ;
@@ -438,6 +438,14 @@ staatskalender:10008654 a systemmap:CLS008 ;
         "OFAG"@fr,
         "UFAG"@it .
 
+staatskalender:10003196 a systemmap:CLS008 ;
+    rdfs:label "Direktion BLW"@de , "Direction OFAG"@fr ;
+    schema:parentOrganization staatskalender:10008654 .
+
+staatskalender:10003634 a systemmap:CLS008 ;
+    rdfs:label "Agroscope"@de , "Agroscope"@fr , "Agroscope"@it , "Agroscope"@en ;
+    schema:parentOrganization staatskalender:10008654 .
+
 staatskalender:10008659 a systemmap:CLS008 ;
     rdfs:label "Bundesamt für Zoll und Grenzsicherheit"@de,
         "Federal Office for Customs and Border Security"@en,
@@ -504,7 +512,7 @@ systemmap:SYS003 a schema:SoftwareApplication ;
         "AGIS serves as a central data hub where agricultural data collected by the cantons is validated and aggregated into a nationwide dataset. The system ensures consistency and accuracy in the collection of agricultural data. It supports well-founded decision-making processes at the federal level."@en,
         "SIPA sert de plaque tournante centrale des données, où les données agricoles collectées par les cantons sont validées et agrégées dans un ensemble de données à l'échelle nationale. Le système garantit la cohérence et la précision dans la collecte des données agricoles. Il soutient des processus décisionnels éclairés au niveau fédéral."@fr,
         "AGIS funge da hub centrale per i dati, dove i dati agricoli raccolti dai cantoni vengono convalidati e aggregati in un insieme di dati a livello nazionale. Il sistema garantisce coerenza e accuratezza nella raccolta dei dati agricoli. Supporta processi decisionali ben fondati a livello federale."@it ;
-    systemmap:PRP008 systemmap:ORG010 ;
+    systemmap:PRP008 staatskalender:10003229 ;
     systemmap:PRP102 "AGIS"@de,
         "AGIS"@en,
         "SIPA"@fr,
@@ -519,7 +527,7 @@ systemmap:SYS004 a schema:SoftwareApplication ;
         "ASTAT is the Business Intelligence system of the BLW. It provides analysis and reporting functions to enable data-driven decision-making. This simplifies the monitoring and evaluation of agricultural policy measures."@en,
         "ASTAT est le système de Business Intelligence de l'OFAG. Il fournit des fonctions d'analyse et de reporting pour permettre une prise de décision basée sur les données. Cela simplifie la surveillance et l'évaluation des mesures de politique agricole."@fr,
         "ASTAT è il sistema di Business Intelligence dell'UFAG. Fornisce funzioni di analisi e reporting per consentire decisioni basate sui dati. Ciò semplifica il monitoraggio e la valutazione delle misure di politica agricola."@it ;
-    systemmap:PRP008 systemmap:ORG013 ;
+    systemmap:PRP008 staatskalender:20045226 ;
     systemmap:PRP102 "ASTAT"@de,
         "ASTAT"@en,
         "ASTAT"@fr,
@@ -559,7 +567,7 @@ systemmap:SYS007 a schema:SoftwareApplication ;
 systemmap:SYS008 a schema:SoftwareApplication ;
     rdfs:label "Meine Agrardatenfreigabe"@de ;
     rdfs:comment "Meine Agrardatenfreigabe vereinfacht den Datenaustausch zwischen Betrieben und Datenempfängern wie zum Beispiel Labelorganisationen. Sie bietet eine Plattform zur Verwaltung von Zugriffsberechtigungen und Datenfreigabevereinbarungen. Damit wird die Zusammenarbeit und Datenweitergabe im Agrarsektor transparenter gestaltet."@de ;
-    systemmap:PRP008 systemmap:ORG011 ;
+    systemmap:PRP008 staatskalender:20051820 ;
     systemmap:PRP102 "MAF"@de .
 
 systemmap:SYS009 a schema:SoftwareApplication ;

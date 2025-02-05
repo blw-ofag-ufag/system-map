@@ -15,12 +15,13 @@ window.NODE_QUERY = `
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map#>
+  PREFIX schema: <https://schema.org/>
   SELECT ?id ?group ?displayLabel ?comment ?abbreviation
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/ontologies> {
       ?id a ?group .
       ?group rdfs:subClassOf* ?supergroup .
-      VALUES ?supergroup { systemmap:CLS001 systemmap:CLS002 systemmap:CLS003 }
+      VALUES ?supergroup { systemmap:CLS001 schema:SoftwareApplication systemmap:CLS003 }
       OPTIONAL {
         ?id rdfs:label ?label .
         FILTER(LANG(?label) = "${lang}")
@@ -100,7 +101,7 @@ window.mapClassIriToGroup = function(iri) {
   switch (iri) {
     case "https://agriculture.ld.admin.ch/foag/system-map#CLS001":
       return "Organization";
-    case "https://agriculture.ld.admin.ch/foag/system-map#CLS002":
+    case "https://schema.org/SoftwareApplication":
       return "System";
     case "https://agriculture.ld.admin.ch/foag/system-map#CLS003":
       return "Information";

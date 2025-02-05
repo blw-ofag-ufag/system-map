@@ -390,8 +390,14 @@ ns1:INF001 a ns1:CLS004 ;
     ns1:PRP012 ns1:SYS003 .
 
 ns1:INF002 a ns1:CLS004 ;
-    rdfs:label "Informationen zu Betriebsleitenden"@de ;
-    rdfs:comment "Beruf und Alter der Betriebsleiterin bzw. des Betriebsleiters."@de ;
+    rdfs:label "Informationen zu Betriebsleitenden"@de,
+        "Information about farm managers"@en,
+        "Informations sur les directeurs d'exploitation"@fr,
+        "Informazioni sui gestori aziendali"@it ;
+    rdfs:comment "Beruf und Alter der Betriebsleiterin bzw. des Betriebsleiters."@de,
+        "Occupation and age of the farm manager."@en,
+        "Profession et âge du directeur ou de la directrice d'exploitation."@fr,
+        "Professione ed età del gestore aziendale."@it ;
     ns1:PRP012 ns1:SYS003 ;
     ns1:PRP013 ns1:INF030 .
 
@@ -430,23 +436,47 @@ ns1:INF021 a ns1:CLS004 ;
     ns1:PRP012 ns1:SYS021 .
 
 ns1:INF027 a ns1:CLS004 ;
-    rdfs:label "Stammdaten und Identifikatoren"@de ;
-    rdfs:comment "Name und Adresse des Unternehmens oder Betriebs, Gemeindenummern, BUR-Nummer (nichtsprechende 8-stellige Identifikationsnummer), Unternehmens-Identifikationsnummer (UID), Art der wirtschaftlichen Tätigkeit (NOGA), Rechtsform des Unternehmens."@de ;
+    rdfs:label "Stammdaten und Identifikatoren"@de,
+        "Master data and identifiers"@en,
+        "Données de base et identifiants"@fr,
+        "Dati di base e identificatori"@it ;
+    rdfs:comment "Name und Adresse des Unternehmens oder Betriebs, Gemeindenummern, BUR-Nummer (nichtsprechende 8-stellige Identifikationsnummer), Unternehmens-Identifikationsnummer (UID), Art der wirtschaftlichen Tätigkeit (NOGA), Rechtsform des Unternehmens."@de,
+        "Name and address of the company or business, municipality numbers, BUR number (non-speaking 8-digit identification number), company identification number (UID), type of economic activity (NOGA), legal form of the company."@en,
+        "Nom et adresse de l'entreprise ou de l'exploitation, numéros de commune, numéro BUR (numéro d'identification à 8 chiffres non parlant), numéro d'identification de l'entreprise (UID), type d'activité économique (NOGA), forme juridique de l'entreprise."@fr,
+        "Nome e indirizzo dell'azienda o dell'impresa, numeri dei comuni, numero BUR (numero di identificazione a 8 cifre non parlante), numero di identificazione aziendale (UID), tipo di attività economica (NOGA), forma giuridica dell'azienda."@it ;
     ns1:PRP012 ns1:SYS025 .
 
 ns1:INF029 a ns1:CLS004 ;
-    rdfs:label "Informationen zu Forstbetrieben"@de ;
-    rdfs:comment "Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit."@de ;
+    rdfs:label "Informationen zu Forstbetrieben"@de,
+        "Information about forestry enterprises"@en,
+        "Informations sur les entreprises forestières"@fr,
+        "Informazioni sulle aziende forestali"@it ;
+    rdfs:comment "Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit."@de,
+        "Number of employed persons by gender and working time."@en,
+        "Nombre de personnes employées selon le sexe et le temps de travail."@fr,
+        "Numero di persone impiegate per genere e orario di lavoro."@it ;
     ns1:PRP012 ns1:SYS025 .
 
 ns1:INF030 a ns1:CLS004 ;
-    rdfs:label "Informationen zu Landwirtschaftsbetrieben"@de ;
-    rdfs:comment "Zahl der Grossvieheinheiten, Angaben über die Bodennutzung, den Beruf und das Alter des Betriebsleiters/der Betriebsleiterin."@de ;
+    rdfs:label "Informationen zu Landwirtschaftsbetrieben"@de,
+        "Information about agricultural enterprises"@en,
+        "Informations sur les exploitations agricoles"@fr,
+        "Informazioni sulle aziende agricole"@it ;
+    rdfs:comment "Zahl der Grossvieheinheiten, Angaben über die Bodennutzung, den Beruf und das Alter des Betriebsleiters/der Betriebsleiterin."@de,
+        "Number of large livestock units, information on land use, occupation and age of the farm manager."@en,
+        "Nombre d'unités de gros bétail, informations sur l'utilisation des sols, la profession et l'âge du directeur ou de la directrice d'exploitation."@fr,
+        "Numero di unità di bestiame grosso, informazioni sull'uso del suolo, la professione e l'età del gestore aziendale."@it ;
     ns1:PRP012 ns1:SYS025 .
 
 ns1:INF031 a ns1:CLS004 ;
-    rdfs:label "Pflanzenschutzmittel-Importe"@de ;
-    rdfs:comment "Daten zu jedem Import von Pflanzenschutzmitteln mit UID und Namen des Importeurs, Datum des Imports, Importmenge, Warenbezeichnung (Freitext) sowie Zustelladresse."@de ;
+    rdfs:label "Pflanzenschutzmittel-Importe"@de,
+        "Pesticide imports"@en,
+        "Importations de produits phytosanitaires"@fr,
+        "Importazioni di prodotti fitosanitari"@it ;
+    rdfs:comment "Daten zu jedem Import von Pflanzenschutzmitteln mit UID und Namen des Importeurs, Datum des Imports, Importmenge, Warenbezeichnung (Freitext) sowie Zustelladresse."@de,
+        "Data on each import of pesticides, including UID and name of the importer, date of import, import quantity, product designation (free text), and delivery address."@en,
+        "Données sur chaque importation de produits phytosanitaires, y compris l'UID et le nom de l'importateur, la date d'importation, la quantité importée, la désignation du produit (texte libre) et l'adresse de livraison."@fr,
+        "Dati su ogni importazione di prodotti fitosanitari, compresi UID e nome dell'importatore, data di importazione, quantità importata, denominazione del prodotto (testo libero) e indirizzo di consegna."@it ;
     ns1:PRP012 ns1:SYS026 .
 
 ns1:INF024 a ns1:CLS005 ;

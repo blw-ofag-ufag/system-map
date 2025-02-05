@@ -109,11 +109,12 @@
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map#>
+PREFIX schema: <https://schema.org/>
 SELECT ?id ?group ?label ?comment ?abbreviation
 WHERE {
   GRAPH <https://lindas.admin.ch/foag/ontologies> {
     ?id a ?group .
-    VALUES ?group { systemmap:CLS001 systemmap:CLS002 systemmap:CLS003 systemmap:CLS004 systemmap:CLS005 systemmap:CLS006 systemmap:CLS007 systemmap:CLS008 systemmap:CLS009 systemmap:CLS010 systemmap:CLS011 }
+    VALUES ?group { schema:Organization schema:SoftwareApplication systemmap:CLS003 systemmap:CLS004 systemmap:CLS005 schema:GovernmentOrganization systemmap:CLS007 systemmap:CLS008 systemmap:CLS009 systemmap:CLS010 systemmap:CLS011 }
     ?id rdfs:label ?label .
     FILTER(LANG(?label)="de")
   }
@@ -125,16 +126,17 @@ WHERE {
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map#>
+PREFIX schema: <https://schema.org/>
 SELECT ?subject ?predicate ?object
 WHERE {
   GRAPH <https://lindas.admin.ch/foag/ontologies> {
     ?subject ?predicate ?object .
     ?subject a ?group .
-    VALUES ?group { systemmap:CLS001 systemmap:CLS002 systemmap:CLS003 systemmap:CLS004 systemmap:CLS005 systemmap:CLS006 systemmap:CLS007 systemmap:CLS008 systemmap:CLS009 systemmap:CLS010 systemmap:CLS011 }
+    VALUES ?group { schema:Organization schema:SoftwareApplication systemmap:CLS003 systemmap:CLS004 systemmap:CLS005 schema:GovernmentOrganization systemmap:CLS007 systemmap:CLS008 systemmap:CLS009 systemmap:CLS010 systemmap:CLS011 }
     ?subject rdfs:label ?sLabel .
     FILTER(LANG(?sLabel)="de")
     ?object a ?group2 .
-    VALUES ?group2 { systemmap:CLS001 systemmap:CLS002 systemmap:CLS003 systemmap:CLS004 systemmap:CLS005 systemmap:CLS006 systemmap:CLS007 systemmap:CLS008 systemmap:CLS009 systemmap:CLS010 systemmap:CLS011 }
+    VALUES ?group { schema:Organization schema:SoftwareApplication systemmap:CLS003 systemmap:CLS004 systemmap:CLS005 schema:GovernmentOrganization systemmap:CLS007 systemmap:CLS008 systemmap:CLS009 systemmap:CLS010 systemmap:CLS011 }
     ?object rdfs:label ?oLabel .
     FILTER(LANG(?oLabel)="de")
   }

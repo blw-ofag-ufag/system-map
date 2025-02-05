@@ -99,7 +99,7 @@ window.getSparqlData = async function(query) {
 // Map the IRIs for classes onto simpler group names
 window.mapClassIriToGroup = function(iri) {
   switch (iri) {
-    case "https://agriculture.ld.admin.ch/foag/system-map#CLS001":
+    case "https://schema.org/Organization":
       return "Organization";
     case "https://schema.org/SoftwareApplication":
       return "System";

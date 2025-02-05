@@ -31,13 +31,6 @@ ns1:CLS005 a owl:Class ;
     rdfs:seeAlso <https://www.fedlex.admin.ch/eli/oc/2022/491/de#art_5> ;
     rdfs:subClassOf ns1:CLS004 .
 
-ns1:CLS006 a owl:Class ;
-    rdfs:label "Öffentlich-rechtliche Organisation"@de,
-        "Public-sector organization"@en,
-        "Organisation de droit public"@fr,
-        "Organizzazione di diritto pubblico"@it ;
-    rdfs:subClassOf schema:Organization .
-
 ns1:CLS007 a owl:Class ;
     rdfs:label "Privatrechtliche Organisation"@de,
         "Private-sector organization"@en,
@@ -50,14 +43,14 @@ ns1:CLS008 a owl:Class ;
         "Federal organization"@en,
         "Organisation fédérale"@fr,
         "Organizzazione federale"@it ;
-    rdfs:subClassOf ns1:CLS006 .
+    rdfs:subClassOf schema:GovernmentOrganization .
 
 ns1:CLS009 a owl:Class ;
     rdfs:label "Kantonale Organisation"@de,
         "Cantonal organization"@en,
         "Organisation cantonale"@fr,
         "Organizzazione cantonale"@it ;
-    rdfs:subClassOf ns1:CLS006 .
+    rdfs:subClassOf schema:GovernmentOrganization .
 
 ns1:CLS010 a owl:Class ;
     rdfs:label "Landwirtschaftsamt eines Kantons"@de,
@@ -72,6 +65,13 @@ ns1:CLS011 a owl:Class ;
         "Centre de conseil cantonal"@fr,
         "Centro di consulenza cantonale"@it ;
     rdfs:subClassOf ns1:CLS009 .
+
+schema:GovernmentOrganization a owl:Class ;
+    rdfs:label "Öffentlich-rechtliche Organisation"@de,
+        "Public-sector organization"@en,
+        "Organisation de droit public"@fr,
+        "Organizzazione di diritto pubblico"@it ;
+    rdfs:subClassOf schema:Organization .
 
 schema:Organization a owl:Class ;
     rdfs:label "Organisation"@de,

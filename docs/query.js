@@ -15,14 +15,17 @@ window.NODE_QUERY = `
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map#>
-  SELECT ?id ?group ?label ?comment ?abbreviation
+  SELECT ?id ?group ?displayLabel ?comment ?abbreviation
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/ontologies> {
       ?id a ?group .
       ?group rdfs:subClassOf* ?supergroup .
       VALUES ?supergroup { systemmap:CLS001 systemmap:CLS002 systemmap:CLS003 }
-      ?id rdfs:label ?label .
-      FILTER(LANG(?label) = "${lang}")
+      OPTIONAL {
+        ?id rdfs:label ?label .
+        FILTER(LANG(?label) = "${lang}")
+      }
+      BIND(COALESCE(?label, "?") AS ?displayLabel)
       OPTIONAL {
         ?id rdfs:comment ?comment .
         FILTER(LANG(?comment) = "${lang}")

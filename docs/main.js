@@ -104,12 +104,12 @@ async function init() {
     const nodes = nodesJson.results.bindings.map(row => {
         const iri = row.id.value;
         const groupIri = row.group.value;
-        const label = row.label.value;
+        const label = row.displayLabel.value; // use displayLabel from the query
         const comment = row.comment ? row.comment.value : "";
         const abbreviation = row.abbreviation ? row.abbreviation.value : "";
-
+    
         const groupName = mapClassIriToGroup(groupIri);
-
+    
         return {
             id: iri,
             label: `<b>${shortenLabel(label, abbreviation)}</b>`,
@@ -122,7 +122,7 @@ async function init() {
                 comment: comment
             }
         };
-    });
+    });    
 
     const edges = edgesJson.results.bindings.map(row => ({
         from: row.from.value,

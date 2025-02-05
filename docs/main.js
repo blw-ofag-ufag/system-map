@@ -74,8 +74,10 @@ function blendHexColors(c1, c2, ratio) {
  */
 async function init() {
 
-    // Track if a node is pinned (i.e. clicked) so that the info panel remains fixed.
+    // Track if a node/edge is pinned (i.e. clicked) so that the info panel remains fixed.
     let pinnedNodeId = null;
+    let pinnedEdgeId = null;
+
 
     async function fetchAndDisplayTitle() {
         try {
@@ -127,8 +129,9 @@ async function init() {
     const edges = edgesJson.results.bindings.map(row => ({
         from: row.from.value,
         to: row.to.value,
-        label: row.label.value
-    }));
+        label: row.label.value,
+        comment: row.comment ? row.comment.value : ""
+    }));    
 
     // 3) Create Vis DataSets
     const nodesDataset = new vis.DataSet(nodes);
@@ -239,14 +242,14 @@ async function init() {
             abbreviation,
             comment
         } = nodeData.data;
-        let html = `<a href='${iri}' target='blank'><small><code>${iri}</code></small></a>`;
-        html += `<h3>${fullLabel}`;
+        let html = `<a href='${iri}' target='blank'><small><code>${iri}</code></small></a><br>`;
+        html += `<h4>${fullLabel}`;
         if (abbreviation) {
             html += ` (${abbreviation})`;
         }
-        html += `</h3>`;
+        html += `</h4>`;
         if (comment) {
-            html += `<p>${comment}</p>`;
+            html += `<p><small>${comment}</small></p>`;
         }
         infoPanel.innerHTML = html;
         infoPanel.classList.remove("hidden");
@@ -258,6 +261,23 @@ async function init() {
         // Ensure the info panel is not fixed anymore
         infoPanel.classList.remove("fixed");
     }
+
+    function showEdgeInfo(edgeData) {
+        // Build HTML for edge info (IRI as a clickable link, label, and comment)
+        let html = `<h4>${edgeData.label}</h4>`;
+        if (edgeData.comment) {
+            html += `<p><small>${edgeData.comment}</small></p>`;
+        }
+        infoPanel.innerHTML = html;
+        infoPanel.classList.remove("hidden");
+    }
+    
+    function hideEdgeInfo() {
+        infoPanel.classList.add("hidden");
+        infoPanel.innerHTML = "";
+        infoPanel.classList.remove("fixed");
+    }
+    
 
     // 7) Hover => BFS highlight + show panel
     network.on("hoverNode", (params) => {
@@ -354,26 +374,51 @@ async function init() {
             hideNodeInfo();
         }
     });
+
+    // When hovering over an edge, show its info (unless an entity is pinned)
+    network.on("hoverEdge", (params) => {
+        if (!pinnedEdgeId && !pinnedNodeId) {
+            const hoveredEdgeId = params.edge; // vis.js provides the hovered edge's id here
+            const edgeData = edgesDataset.get(hoveredEdgeId);
+            if (edgeData) {
+                showEdgeInfo(edgeData);
+            }
+        }
+    });
+
+    network.on("blurEdge", () => {
+        if (!pinnedEdgeId && !pinnedNodeId) {
+            hideEdgeInfo();
+        }
+    });
     
     network.on("click", (params) => {
         if (params.nodes.length > 0) {
-            // A node was clicked—pin its info.
+            // A node was clicked—pin its info panel.
             pinnedNodeId = params.nodes[0];
+            pinnedEdgeId = null; // Clear any pinned edge.
             const nodeData = nodesDataset.get(pinnedNodeId);
             if (nodeData && nodeData.data) {
                 showNodeInfo(nodeData);
             }
-            // Add the "fixed" class so that pointer events are enabled
+            infoPanel.classList.add("fixed");
+        } else if (params.edges.length > 0) {
+            // An edge was clicked—pin its info panel.
+            pinnedEdgeId = params.edges[0];
+            pinnedNodeId = null; // Clear any pinned node.
+            const edgeData = edgesDataset.get(pinnedEdgeId);
+            if (edgeData) {
+                showEdgeInfo(edgeData);
+            }
             infoPanel.classList.add("fixed");
         } else {
-            // Clicked on empty space—unpin and hide the info panel.
+            // Clicked on empty space—unpin any info panel.
             pinnedNodeId = null;
-            hideNodeInfo();
-            // Remove the "fixed" class to restore the original behavior.
+            pinnedEdgeId = null;
+            hideNodeInfo(); // (hideNodeInfo and hideEdgeInfo perform the same DOM reset)
             infoPanel.classList.remove("fixed");
         }
     });
-    
 
     function buildLegend(classRows) {
     // Grab the legend <div>

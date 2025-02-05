@@ -1,8 +1,8 @@
 # 🧭 A system map for the FOAG
 
-Explore the visual system map [here](https://blw-ofag-ufag.github.io/system-map/index.html?lang=de).
-
-Explore the ontology of this graph [here](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/system-map/refs/heads/main/graph.ttl).
+- [**DigiAgriFood system map**](https://blw-ofag-ufag.github.io/system-map/index.html?lang=de), a visualization of the system map knowledge graph that specifically shows the classes organization, system and information unit.
+- [**Circular system map**](https://blw-ofag-ufag.github.io/system-map/index.html?lang=de), an alternative visualization in circular arrangement.
+- [**Ontology visualization**](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/system-map/refs/heads/main/graph.ttl) made with WebVOWL, allowing to get a quick grasp of the ontology underlying the system map.
 
 # 🔎 Examples of SPARQL queries from LINDAS
 

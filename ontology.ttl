@@ -15,16 +15,6 @@ systemmap:CLS001 a owl:Class ;
         "Une entité (juridique) telle qu'une entreprise, une agence ou une organisation à but non lucratif, ou une sous-unité d'une telle entité."@fr,
         "Un'entità (giuridica) come un'azienda, un'agenzia o un'organizzazione senza scopo di lucro, o una sotto-unità di tale entità."@it .
 
-systemmap:CLS002 a owl:Class ;
-    rdfs:label "IT-System"@de,
-        "IT system"@en,
-        "Système informatique"@fr,
-        "Sistema IT"@it ;
-    rdfs:comment "Jedes IT-System (im abstrakten Sinne), oft mit einer oder mehreren dazugehörigen Datenbanken."@de,
-        "Any IT system (in an abstract sense), often with one or more associated databases."@en,
-        "Tout système informatique (dans un sens abstrait), souvent avec une ou plusieurs bases de données associées."@fr,
-        "Qualsiasi sistema IT (in senso astratto), spesso con uno o più database associati."@it .
-
 systemmap:CLS003 a owl:Class ;
     rdfs:label "Informationseinheit"@de,
         "Information unit"@en,
@@ -93,6 +83,16 @@ systemmap:CLS011 a owl:Class ;
         "Centro di consulenza cantonale"@it ;
     rdfs:subClassOf systemmap:CLS009 .
 
+schema:SoftwareApplication a owl:Class ;
+    rdfs:label "IT-System"@de,
+        "IT system"@en,
+        "Système informatique"@fr,
+        "Sistema IT"@it ;
+    rdfs:comment "Jedes IT-System (im abstrakten Sinne), oft mit einer oder mehreren dazugehörigen Datenbanken."@de,
+        "Any IT system (in an abstract sense), often with one or more associated databases."@en,
+        "Tout système informatique (dans un sens abstrait), souvent avec une ou plusieurs bases de données associées."@fr,
+        "Qualsiasi sistema IT (in senso astratto), spesso con uno o più database associati."@it .
+
 systemmap:PRP101 a owl:DatatypeProperty ;
     rdfs:label "Organisationsabkürzung"@de,
         "Organization abbreviation"@en,
@@ -106,7 +106,7 @@ systemmap:PRP102 a owl:DatatypeProperty ;
         "System abbreviation"@en,
         "Abréviation du système"@fr,
         "Abbreviazione del sistema"@it ;
-    rdfs:domain systemmap:CLS002 ;
+    rdfs:domain schema:SoftwareApplication ;
     rdfs:range xsd:string .
 
 systemmap:PRP005 a owl:ObjectProperty ;
@@ -137,7 +137,7 @@ systemmap:PRP007 a owl:ObjectProperty ;
         "Cette relation indique que l'organisation X est responsable de l'exploitation du système Y. Si l'organisation Y externalise l'exploitation d'un système X à un prestataire de services Z, utilisez toujours cette relation d'exploitation entre X et Y, car elle reflète la responsabilité plutôt que l'exploitation technique. Utilisez cette relation au niveau organisationnel le plus bas possible."@fr,
         "Questa relazione indica che l'organizzazione X è responsabile della gestione del sistema Y. Se l'organizzazione Y esternalizza la gestione di un sistema X a un fornitore di servizi Z, continua a utilizzare questa relazione operativa tra X e Y, poiché riflette la responsabilità piuttosto che l'operazione tecnica. Inoltre, usa questa relazione al livello organizzativo più basso possibile."@it ;
     rdfs:domain systemmap:CLS001 ;
-    rdfs:range systemmap:CLS002 ;
+    rdfs:range schema:SoftwareApplication ;
     owl:inverseOf systemmap:PRP008 .
 
 systemmap:PRP008 a owl:ObjectProperty ;
@@ -149,7 +149,7 @@ systemmap:PRP008 a owl:ObjectProperty ;
         "Indicates that an IT system X is operated by an organization Y; i.e., that organization Y is responsible for operating system X."@en,
         "Indique qu'un système informatique X est exploité par une organisation Y, c'est-à-dire que l'organisation Y est responsable de l'exploitation du système X."@fr,
         "Indica che un sistema IT X è gestito da un'organizzazione Y, ovvero che l'organizzazione Y è responsabile della gestione del sistema X."@it ;
-    rdfs:domain systemmap:CLS002 ;
+    rdfs:domain schema:SoftwareApplication ;
     rdfs:range systemmap:CLS001 ;
     owl:inverseOf systemmap:PRP007 .
 
@@ -162,7 +162,7 @@ systemmap:PRP011 a owl:ObjectProperty ;
         "Indicates that an IT system X contains the information unit Y. For example, AGIS contains information about farming areas in Switzerland."@en,
         "Indique qu'un système informatique X contient l'unité d'information Y. Par exemple, AGIS contient des informations sur les surfaces agricoles en Suisse."@fr,
         "Indica che un sistema IT X contiene l'unità di informazione Y. Ad esempio, AGIS contiene informazioni sulle superfici agricole in Svizzera."@it ;
-    rdfs:domain systemmap:CLS002 ;
+    rdfs:domain schema:SoftwareApplication ;
     rdfs:range systemmap:CLS003 ;
     owl:inverseOf systemmap:PRP012 .
 
@@ -176,7 +176,7 @@ systemmap:PRP012 a owl:ObjectProperty ;
         "Indique qu'une unité d'information X est contenue dans le système informatique Y. Par exemple, les informations sur les surfaces agricoles en Suisse sont contenues dans AGIS."@fr,
         "Indica che un'unità di informazione X è contenuta nel sistema IT Y. Ad esempio, le informazioni sulle superfici agricole in Svizzera sono contenute in AGIS."@it ;
     rdfs:domain systemmap:CLS003 ;
-    rdfs:range systemmap:CLS002 ;
+    rdfs:range schema:SoftwareApplication ;
     owl:inverseOf systemmap:PRP011 .
 
 systemmap:PRP013 a owl:ObjectProperty ;

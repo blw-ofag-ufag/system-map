@@ -15,16 +15,6 @@ ns1:CLS001 a owl:Class ;
         "Une entité (juridique) telle qu'une entreprise, une agence ou une organisation à but non lucratif, ou une sous-unité d'une telle entité."@fr,
         "Un'entità (giuridica) come un'azienda, un'agenzia o un'organizzazione senza scopo di lucro, o una sotto-unità di tale entità."@it .
 
-ns1:CLS002 a owl:Class ;
-    rdfs:label "IT-System"@de,
-        "IT system"@en,
-        "Système informatique"@fr,
-        "Sistema IT"@it ;
-    rdfs:comment "Jedes IT-System (im abstrakten Sinne), oft mit einer oder mehreren dazugehörigen Datenbanken."@de,
-        "Any IT system (in an abstract sense), often with one or more associated databases."@en,
-        "Tout système informatique (dans un sens abstrait), souvent avec une ou plusieurs bases de données associées."@fr,
-        "Qualsiasi sistema IT (in senso astratto), spesso con uno o più database associati."@it .
-
 ns1:CLS003 a owl:Class ;
     rdfs:label "Informationseinheit"@de,
         "Information unit"@en,
@@ -93,6 +83,16 @@ ns1:CLS011 a owl:Class ;
         "Centro di consulenza cantonale"@it ;
     rdfs:subClassOf ns1:CLS009 .
 
+schema:SoftwareApplication a owl:Class ;
+    rdfs:label "IT-System"@de,
+        "IT system"@en,
+        "Système informatique"@fr,
+        "Sistema IT"@it ;
+    rdfs:comment "Jedes IT-System (im abstrakten Sinne), oft mit einer oder mehreren dazugehörigen Datenbanken."@de,
+        "Any IT system (in an abstract sense), often with one or more associated databases."@en,
+        "Tout système informatique (dans un sens abstrait), souvent avec une ou plusieurs bases de données associées."@fr,
+        "Qualsiasi sistema IT (in senso astratto), spesso con uno o più database associati."@it .
+
 ns1:PRP101 a owl:DatatypeProperty ;
     rdfs:label "Organisationsabkürzung"@de,
         "Organization abbreviation"@en,
@@ -106,7 +106,7 @@ ns1:PRP102 a owl:DatatypeProperty ;
         "System abbreviation"@en,
         "Abréviation du système"@fr,
         "Abbreviazione del sistema"@it ;
-    rdfs:domain ns1:CLS002 ;
+    rdfs:domain schema:SoftwareApplication ;
     rdfs:range xsd:string .
 
 ns1:PRP005 a owl:ObjectProperty ;
@@ -137,7 +137,7 @@ ns1:PRP007 a owl:ObjectProperty ;
         "Cette relation indique que l'organisation X est responsable de l'exploitation du système Y. Si l'organisation Y externalise l'exploitation d'un système X à un prestataire de services Z, utilisez toujours cette relation d'exploitation entre X et Y, car elle reflète la responsabilité plutôt que l'exploitation technique. Utilisez cette relation au niveau organisationnel le plus bas possible."@fr,
         "Questa relazione indica che l'organizzazione X è responsabile della gestione del sistema Y. Se l'organizzazione Y esternalizza la gestione di un sistema X a un fornitore di servizi Z, continua a utilizzare questa relazione operativa tra X e Y, poiché riflette la responsabilità piuttosto che l'operazione tecnica. Inoltre, usa questa relazione al livello organizzativo più basso possibile."@it ;
     rdfs:domain ns1:CLS001 ;
-    rdfs:range ns1:CLS002 ;
+    rdfs:range schema:SoftwareApplication ;
     owl:inverseOf ns1:PRP008 .
 
 ns1:PRP008 a owl:ObjectProperty ;
@@ -149,7 +149,7 @@ ns1:PRP008 a owl:ObjectProperty ;
         "Indicates that an IT system X is operated by an organization Y; i.e., that organization Y is responsible for operating system X."@en,
         "Indique qu'un système informatique X est exploité par une organisation Y, c'est-à-dire que l'organisation Y est responsable de l'exploitation du système X."@fr,
         "Indica che un sistema IT X è gestito da un'organizzazione Y, ovvero che l'organizzazione Y è responsabile della gestione del sistema X."@it ;
-    rdfs:domain ns1:CLS002 ;
+    rdfs:domain schema:SoftwareApplication ;
     rdfs:range ns1:CLS001 ;
     owl:inverseOf ns1:PRP007 .
 
@@ -162,7 +162,7 @@ ns1:PRP011 a owl:ObjectProperty ;
         "Indicates that an IT system X contains the information unit Y. For example, AGIS contains information about farming areas in Switzerland."@en,
         "Indique qu'un système informatique X contient l'unité d'information Y. Par exemple, AGIS contient des informations sur les surfaces agricoles en Suisse."@fr,
         "Indica che un sistema IT X contiene l'unità di informazione Y. Ad esempio, AGIS contiene informazioni sulle superfici agricole in Svizzera."@it ;
-    rdfs:domain ns1:CLS002 ;
+    rdfs:domain schema:SoftwareApplication ;
     rdfs:range ns1:CLS003 ;
     owl:inverseOf ns1:PRP012 .
 
@@ -176,7 +176,7 @@ ns1:PRP012 a owl:ObjectProperty ;
         "Indique qu'une unité d'information X est contenue dans le système informatique Y. Par exemple, les informations sur les surfaces agricoles en Suisse sont contenues dans AGIS."@fr,
         "Indica che un'unità di informazione X è contenuta nel sistema IT Y. Ad esempio, le informazioni sulle superfici agricole in Svizzera sono contenute in AGIS."@it ;
     rdfs:domain ns1:CLS003 ;
-    rdfs:range ns1:CLS002 ;
+    rdfs:range schema:SoftwareApplication ;
     owl:inverseOf ns1:PRP011 .
 
 ns1:PRP013 a owl:ObjectProperty ;
@@ -287,184 +287,6 @@ ns1:ORG200 a ns1:CLS001 ;
         "UPOV"@en,
         "UPOV"@fr,
         "UPOV"@it .
-
-ns1:SYS001 a ns1:CLS002 ;
-    rdfs:label "Acontrol"@de,
-        "Acontrol"@en,
-        "Acontrol"@fr,
-        "Acontrol"@it ;
-    rdfs:comment "Acontrol ist das Informationssystem des BLW, das für die Planung, Erfassung und Verwaltung landwirtschaftlicher Inspektionen eingesetzt wird. Es vereinfacht die Kontrollprozesse durch eine zentrale Plattform für Dateneingabe und -abfrage. Auf diese Weise wird eine effiziente Überwachung und Einhaltung landwirtschaftlicher Standards gewährleistet."@de,
-        "Acontrol is the information system of the FOAG, used for the planning, recording, and management of agricultural inspections. It simplifies control processes through a central platform for data entry and retrieval. This ensures efficient monitoring and compliance with agricultural standards."@en,
-        "Acontrol est le système d'information de l'OFAG, utilisé pour la planification, l'enregistrement et la gestion des inspections agricoles. Il simplifie les processus de contrôle grâce à une plateforme centrale pour la saisie et la consultation des données. Cela permet d'assurer une surveillance efficace et le respect des normes agricoles."@fr,
-        "Acontrol è il sistema informativo dell'UFAG, utilizzato per la pianificazione, la registrazione e la gestione delle ispezioni agricole. Semplifica i processi di controllo attraverso una piattaforma centrale per l'inserimento e il recupero dei dati. In questo modo, garantisce un monitoraggio efficiente e il rispetto degli standard agricoli."@it ;
-    ns1:PRP008 ns1:ORG021 .
-
-ns1:SYS002 a ns1:CLS002 ;
-    rdfs:label "Agate"@de,
-        "Agate"@en,
-        "Agate"@fr,
-        "Agate"@it ;
-    rdfs:comment "Agate ist ein Online-Portal, das den Zugriff auf verschiedene landwirtschaftliche Anwendungen mit nur einem Login ermöglicht. Es erleichtert den Datenaustausch im Agrar- und Ernährungsbereich und erhöht so den Benutzerkomfort. Durch diesen zentralisierten Zugangspunkt werden Verwaltungsprozesse für alle Beteiligten vereinfacht."@de,
-        "Agate is an online portal that allows access to various agricultural applications with just one login. It facilitates data exchange in the agricultural and food sector, thereby increasing user convenience. This centralized access point simplifies administrative processes for all stakeholders."@en,
-        "Agate est un portail en ligne qui permet d'accéder à diverses applications agricoles avec un seul identifiant. Il facilite l'échange de données dans le secteur agricole et alimentaire, augmentant ainsi le confort des utilisateurs. Ce point d'accès centralisé simplifie les processus administratifs pour toutes les parties prenantes."@fr,
-        "Agate è un portale online che consente l'accesso a diverse applicazioni agricole con un solo login. Facilita lo scambio di dati nel settore agricolo e alimentare, aumentando così la comodità per gli utenti. Questo punto di accesso centralizzato semplifica i processi amministrativi per tutte le parti interessate."@it ;
-    ns1:PRP008 ns1:ORG014 .
-
-ns1:SYS003 a ns1:CLS002 ;
-    rdfs:label "Agrarpolitisches Informationssystem"@de,
-        "Agricultural Policy Information System"@en,
-        "Système d'information sur la politique agricole"@fr,
-        "Sistema informativo di politica agricola"@it ;
-    rdfs:comment "AGIS fungiert als zentrale Datendrehscheibe, in der die von den Kantonen erhobenen landwirtschaftlichen Daten validiert und zu einem gesamtschweizerischen Datenbestand aggregiert werden. Das System sorgt für Konsistenz und Genauigkeit bei der Erfassung von landwirtschaftlichen Daten. Es unterstützt fundierte Entscheidungsprozesse auf Bundesebene."@de,
-        "AGIS serves as a central data hub where agricultural data collected by the cantons is validated and aggregated into a nationwide dataset. The system ensures consistency and accuracy in the collection of agricultural data. It supports well-founded decision-making processes at the federal level."@en,
-        "SIPA sert de plaque tournante centrale des données, où les données agricoles collectées par les cantons sont validées et agrégées dans un ensemble de données à l'échelle nationale. Le système garantit la cohérence et la précision dans la collecte des données agricoles. Il soutient des processus décisionnels éclairés au niveau fédéral."@fr,
-        "AGIS funge da hub centrale per i dati, dove i dati agricoli raccolti dai cantoni vengono convalidati e aggregati in un insieme di dati a livello nazionale. Il sistema garantisce coerenza e accuratezza nella raccolta dei dati agricoli. Supporta processi decisionali ben fondati a livello federale."@it ;
-    ns1:PRP008 ns1:ORG010 ;
-    ns1:PRP102 "AGIS"@de,
-        "AGIS"@en,
-        "SIPA"@fr,
-        "AGIS"@it .
-
-ns1:SYS004 a ns1:CLS002 ;
-    rdfs:label "Business-Intelligence-System"@de,
-        "Business Intelligence System"@en,
-        "Système de Business Intelligence"@fr,
-        "Sistema di Business Intelligence"@it ;
-    rdfs:comment "ASTAT ist das Business-Intelligence-System des BLW. Es stellt Analyse- und Reporting-Funktionen bereit, um datengestützte Entscheidungen zu ermöglichen. Dadurch wird die Überwachung und Bewertung agrarpolitischer Massnahmen vereinfacht."@de,
-        "ASTAT is the Business Intelligence system of the BLW. It provides analysis and reporting functions to enable data-driven decision-making. This simplifies the monitoring and evaluation of agricultural policy measures."@en,
-        "ASTAT est le système de Business Intelligence de l'OFAG. Il fournit des fonctions d'analyse et de reporting pour permettre une prise de décision basée sur les données. Cela simplifie la surveillance et l'évaluation des mesures de politique agricole."@fr,
-        "ASTAT è il sistema di Business Intelligence dell'UFAG. Fornisce funzioni di analisi e reporting per consentire decisioni basate sui dati. Ciò semplifica il monitoraggio e la valutazione delle misure di politica agricola."@it ;
-    ns1:PRP008 ns1:ORG013 ;
-    ns1:PRP102 "ASTAT"@de,
-        "ASTAT"@en,
-        "ASTAT"@fr,
-        "ASTAT"@it .
-
-ns1:SYS005 a ns1:CLS002 ;
-    rdfs:label "CePa"@de,
-        "CePa"@en,
-        "CePa"@fr,
-        "CePa"@it ;
-    rdfs:comment "CePa ist eine IT-Anwendung für die digitale Verwaltung von Verfahren und Korrespondenz im Rahmen des Pflanzenpassesystems sowie der amtlichen Zertifizierung von Vermehrungsmaterial. Sie optimiert Zertifizierungsabläufe und stellt die Einhaltung pflanzengesundheitlicher Vorschriften sicher. Auf diese Weise wird die Rückverfolgbarkeit und Qualitätskontrolle von Pflanzenmaterial unterstützt."@de,
-        "CePa is an IT application for the digital management of procedures and correspondence within the framework of the plant passport system and the official certification of propagation material. It optimizes certification processes and ensures compliance with plant health regulations. In this way, it supports traceability and quality control of plant material."@en,
-        "CePa est une application informatique pour la gestion numérique des procédures et de la correspondance dans le cadre du système de passeport phytosanitaire ainsi que de la certification officielle du matériel de multiplication. Elle optimise les processus de certification et garantit le respect des réglementations phytosanitaires. De cette manière, elle soutient la traçabilité et le contrôle de la qualité du matériel végétal."@fr,
-        "CePa è un'applicazione IT per la gestione digitale delle procedure e della corrispondenza nell'ambito del sistema del passaporto delle piante e della certificazione ufficiale del materiale di propagazione. Ottimizza i processi di certificazione e garantisce il rispetto delle normative fitosanitarie. In questo modo, supporta la tracciabilità e il controllo della qualità del materiale vegetale."@it ;
-    ns1:PRP008 ns1:ORG031 ;
-    ns1:PRP102 "CePa"@de,
-        "CePa"@en,
-        "CePa"@fr,
-        "CePa"@it .
-
-ns1:SYS006 a ns1:CLS002 ;
-    rdfs:label "digiFLUX"@de,
-        "digiFLUX"@en,
-        "digiFLUX"@fr,
-        "digiFLUX"@it ;
-    rdfs:comment "digiFLUX ist eine Webanwendung, die zur Umsetzung der Meldepflicht für den Handel und die Anwendung von Pflanzenschutzmitteln sowie für den Handel mit Nährstoffen entwickelt wurde. Sie ermöglicht den Akteuren eine einheitliche Schnittstelle zur Eingabe aller erforderlichen Angaben. Dadurch wird Transparenz und Einhaltung gesetzlicher Vorschriften im Agrarbereich gewährleistet."@de,
-        "digiFLUX is a web application developed to implement the reporting obligation for the trade and use of plant protection products as well as for the trade of nutrients. It provides stakeholders with a unified interface for entering all required information. This ensures transparency and compliance with legal regulations in the agricultural sector."@en,
-        "digiFLUX est une application web développée pour mettre en œuvre l'obligation de déclaration du commerce et de l'utilisation des produits phytosanitaires ainsi que du commerce des nutriments. Elle offre aux acteurs une interface unifiée pour saisir toutes les informations requises. Cela garantit la transparence et le respect des réglementations légales dans le secteur agricole."@fr,
-        "digiFLUX è un'applicazione web sviluppata per attuare l'obbligo di segnalazione per il commercio e l'uso dei prodotti fitosanitari nonché per il commercio di nutrienti. Fornisce agli operatori un'interfaccia unificata per l'inserimento di tutte le informazioni richieste. Ciò garantisce trasparenza e conformità alle normative legali nel settore agricolo."@it ;
-    ns1:PRP008 ns1:ORG020 .
-
-ns1:SYS007 a ns1:CLS002 ;
-    rdfs:label "eKontingente"@de ;
-    rdfs:comment "eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können. Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet."@de ;
-    ns1:PRP008 ns1:ORG040 .
-
-ns1:SYS008 a ns1:CLS002 ;
-    rdfs:label "Meine Agrardatenfreigabe"@de ;
-    rdfs:comment "Meine Agrardatenfreigabe vereinfacht den Datenaustausch zwischen Betrieben und Datenempfängern wie zum Beispiel Labelorganisationen. Sie bietet eine Plattform zur Verwaltung von Zugriffsberechtigungen und Datenfreigabevereinbarungen. Damit wird die Zusammenarbeit und Datenweitergabe im Agrarsektor transparenter gestaltet."@de ;
-    ns1:PRP008 ns1:ORG011 ;
-    ns1:PRP102 "MAF"@de .
-
-ns1:SYS009 a ns1:CLS002 ;
-    rdfs:label "Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft"@de ;
-    rdfs:comment "Das Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft (PGREL-NIS) macht Daten des Aktionsplans zur Vielfalt der Kulturpflanzen öffentlich zugänglich. Es bietet einen Überblick und Zugriff auf Informationen zu Pflanzengenetischen Ressourcen. Damit trägt es zur Erhaltung und Förderung pflanzengenetischer Vielfalt bei."@de ;
-    ns1:PRP008 ns1:ORG030 ;
-    ns1:PRP102 "PGREL-NIS"@de .
-
-ns1:SYS010 a ns1:CLS002 ;
-    rdfs:label "HODUFLU"@de ;
-    rdfs:comment "HODUFLU ist ein Internetprogramm zur einheitlichen Verwaltung von Hof- und Recyclingdüngerverschiebungen in der Landwirtschaft. Auf dieser Seite finden Sie Zugang zur Anwendung und nützliche Dokumente wie das Benutzerhandbuch für HODUFLU."@de ;
-    ns1:PRP008 ns1:ORG020 .
-
-ns1:SYS011 a ns1:CLS002 ;
-    rdfs:label "Protection Variété"@de ;
-    rdfs:comment "ProVar bedeutet Sortenschutz (protection variété) und ist die Datenbank zur Verwaltung aller wichtigen Informationen zu den Sortenarten von Pflanzen. Das Sortenschutzrecht regelt den gewerblichen Schutz neuer Pflanzenzüchtungen sowie deren gewerbsmässiger Nutzung."@de ;
-    ns1:PRP008 ns1:ORG032 ;
-    ns1:PRP102 "ProVar"@de .
-
-ns1:SYS020 a ns1:CLS002 ;
-    rdfs:label "Tierverkehrsdatenbank"@de,
-        "Banque de données sur le trafic des animaux"@fr,
-        "Banca dati sul traffico di animali"@it ;
-    rdfs:comment "Die Tierverkehrsdatenbank (TVD) ist ein schweizerisches System zur Registrierung und Nachverfolgung von Nutztieren, wie Rinder, Schweine, Schafe, Ziegen und in Gehege gehaltenes Wild. Dies ist u.a. ein wichtiger Beitrag für die Lebensmittelsicherheit und zu der Eindämmung von Tierseuchen. Dank einem zweckmässigen Erfassungssystem werden in der Datenbank Informationen wie Geburts-, Bewegungs- und Schlachtdaten sowie Halterwechsel erfasst."@de,
-        "La banque de données sur le trafic des animaux (BDTA) est un système suisse d’enregistrement et de suivi des animaux de rente, tels que les bovins, les porcs, les ovins, les caprins ou le gibier détenu en enclos. Ce système contribue notamment à la sécurité des denrées alimentaires et à l’enraiement des épizooties. Le système de saisie judicieux permet d’enregistrer des informations relatives à la naissance, aux déplacements et à l’abattage des animaux de rente ou encore aux changements de propriétaires."@fr,
-        "La Banca dati sul traffico di animali (BDTA) è un sistema svizzero per la registrazione e la tracciabilità di animali da reddito come bovini, suini, ovini, caprini e selvaggina allevata in recinti. Tale sistema contribuisce in modo significativo anche alla sicurezza alimentare e al contenimento delle epizoozie. Grazie a un sistema di registrazione mirato, nella BDTA vengono registrati i dati relativi alla nascita, agli spostamenti, alla macellazione e al cambiamento del detentore."@it ;
-    ns1:PRP008 ns1:ORG101 ;
-    ns1:PRP102 "TVD"@de,
-        "BDTA"@fr,
-        "BDTA"@it .
-
-ns1:SYS021 a ns1:CLS002 ;
-    rdfs:label "Datenbank Milch"@de,
-        "Milk Database"@en,
-        "Base de données lait"@fr,
-        "Database latte"@it ;
-    rdfs:comment "Die Datenbank Milch (dbmilch.ch) ist eine Webapplikation der TSM Treuhand GmbH. Sie ist die Online-Plattform der Akteure der Schweizer Milchwirtschaft. Die von der Bedag Solutions AG entwickelte Lösung kann von den kantonalen Veterinär- und Landwirtschaftsämtern oder auch anderen Organisationen in Verbindung mit Acontrol genutzt werden."@de,
-        "The Milk Database (dbmilch.ch) is a web application of TSM Treuhand GmbH. It is the online platform for actors in the Swiss dairy industry. The solution developed by Bedag Solutions AG can be used by cantonal veterinary and agricultural offices or other organizations in conjunction with Acontrol."@en,
-        "La base de données lait (dbmilch.ch) est une application web de TSM Treuhand GmbH. Elle est la plateforme en ligne des acteurs de l'industrie laitière suisse. La solution développée par Bedag Solutions AG peut être utilisée par les offices vétérinaires et agricoles cantonaux ou par d'autres organisations en lien avec Acontrol."@fr,
-        "La database latte (dbmilch.ch) è un'applicazione web di TSM Treuhand GmbH. È la piattaforma online per gli attori dell'industria lattiero-casearia svizzera. La soluzione sviluppata da Bedag Solutions AG può essere utilizzata dagli uffici veterinari e agricoli cantonali o da altre organizzazioni in combinazione con Acontrol."@it ;
-    ns1:PRP008 ns1:ORG100 ;
-    ns1:PRP102 "dbmilch"@de,
-        "dbmilch"@en,
-        "dbmilch"@fr,
-        "dbmilch"@it .
-
-ns1:SYS022 a ns1:CLS002 ;
-    rdfs:label "ACmobile"@de ;
-    rdfs:comment "ACmobile ist eine plattformunabhängige, mobile Lösung für die elektronische Erfassung von Kontrollergebnissen und Massnahmen."@de .
-
-ns1:SYS023 a ns1:CLS002 ;
-    rdfs:label "Barto"@de ;
-    rdfs:comment "Barto ist eine digitale Plattform für die Landwirtschaft, die eine effiziente Betriebsführung, Dokumentation und Analyse von Betriebsdaten ermöglicht. Sie integriert verschiedene agronomische und administrative Funktionen und bietet Landwirtinnen und Landwirten eine zentrale Lösung für die Verwaltung ihres Betriebs. Barto wird von der Barto AG betrieben und arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen."@de ;
-    ns1:PRP008 ns1:ORG102 .
-
-ns1:SYS024 a ns1:CLS002 ;
-    rdfs:label "Pflanzensorten-Datenbank"@de,
-        "Plant Variety Database"@en,
-        "Base de données des variétés de plantes"@fr,
-        "Database delle varietà vegetali"@it ;
-    rdfs:comment "Die PLUTO-Datenbank enthält Informationen über Pflanzenarten und -sorten von UPOV-Mitgliedern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD). Die PLUTO-Datenbank bietet ein Suchinstrument für Sortenbezeichnungen, um die Unterscheidbarkeit neuer Sorten sicherzustellen."@de,
-        "The PLUTO database contains information on plant species and varieties from UPOV members as well as the Organisation for Economic Co-operation and Development (OECD). The PLUTO database provides a search tool for variety denominations to ensure the distinctness of new varieties."@en,
-        "La base de données PLUTO contient des informations sur les espèces et variétés de plantes des membres de l'UPOV ainsi que de l'Organisation de coopération et de développement économiques (OCDE). La base de données PLUTO offre un outil de recherche pour les dénominations variétales afin d'assurer la distinction des nouvelles variétés."@fr,
-        "Il database PLUTO contiene informazioni sulle specie e varietà vegetali dei membri dell'UPOV e dell'Organizzazione per la cooperazione e lo sviluppo economico (OCSE). Il database PLUTO fornisce uno strumento di ricerca per le denominazioni varietali al fine di garantire la distinzione delle nuove varietà."@it ;
-    ns1:PRP008 ns1:ORG200 ;
-    ns1:PRP102 "PLUTO"@de,
-        "PLUTO"@en,
-        "PLUTO"@fr,
-        "PLUTO"@it .
-
-ns1:SYS025 a ns1:CLS002 ;
-    rdfs:label "Betriebs- und Unternehmensregister"@de ;
-    rdfs:comment "Das Betriebs- und Unternehmensregister (BUR) umfasst alle Unternehmen und Betriebe des privaten und öffentlichen Rechts, die in der Schweiz domiziliert sind und eine wirtschaftliche Tätigkeit ausüben. Das BUR dient dem BFS als Adressregister für die statistischen Erhebungen bei Unternehmen und Arbeitsstätten. Auch andere Ämter der Bundesverwaltung und zahlreiche Kantone verwenden das BUR zu statistischen oder administrativen Zwecken."@de ;
-    ns1:PRP008 <https://register.ld.admin.ch/staatskalender/organization/10008742> ;
-    ns1:PRP102 "BUR"@de .
-
-ns1:SYS026 a ns1:CLS002 ;
-    rdfs:label "e-Deklaration"@de,
-        "e-declaration"@en,
-        "e-déclaration"@fr,
-        "e-dichiarazione"@it ;
-    rdfs:comment "e-dec ist das elektronische Zollanmeldesystem der Schweiz, das Unternehmen ermöglicht, Waren für Import, Export und Transit elektronisch zu deklarieren. Dank seines modularen Aufbaus optimiert es die Zollprozesse, was zu Kosteneinsparungen und höherer Effizienz führt. Besonders hervorzuheben ist, dass e-dec mehrere Kommunikationsstandards unterstützt und jede Zollanmeldung bis zu 99'999 Tarifpositionen enthalten kann."@de,
-        "e-dec is Switzerland's electronic customs declaration system that enables companies to declare goods for import, export, and transit electronically. Designed with a modular structure, it streamlines customs processes, leading to cost savings and increased efficiency. Notably, e-dec supports multiple communication standards and allows each customs declaration to include up to 99'999 tariff headings."@en,
-        "e-dec est le système électronique de déclaration en douane de la Suisse, permettant aux entreprises de déclarer électroniquement les marchandises à l'importation, à l'exportation et en transit. Conçu avec une structure modulaire, il optimise les processus douaniers, entraînant des économies de coûts et une efficacité accrue. Notamment, e-dec prend en charge plusieurs normes de communication et permet à chaque déclaration en douane d'inclure jusqu'à 99'999 positions tarifaires."@fr,
-        "e-dec è il sistema elettronico di dichiarazione doganale della Svizzera che consente alle aziende di dichiarare elettronicamente le merci per l'importazione, l'esportazione e il transito. Progettato con una struttura modulare, ottimizza i processi doganali, portando a risparmi sui costi e a una maggiore efficienza. In particolare, e-dec supporta diversi standard di comunicazione e consente a ogni dichiarazione doganale di includere fino a 99'999 voci tariffarie."@it ;
-    ns1:PRP008 <https://register.ld.admin.ch/staatskalender/organization/10008659> ;
-    ns1:PRP102 "e-dec"@de,
-        "e-dec"@en,
-        "e-dec"@fr,
-        "e-dec"@it .
 
 ns1:INF003 a ns1:CLS003 ;
     rdfs:label "Informationen zu Flächen und Kulturen"@de ;
@@ -891,4 +713,182 @@ ns1:ORG204 a ns1:CLS008 ;
     rdfs:label "Bundesamt für Statistik"@de ;
     rdfs:comment "Als nationales Kompetenzzentrum der öffentlichen Statistik ist das Bundesamt für Statistik (BFS) der zentrale Knotenpunkt im Datennökosystem der Schweiz. Es unterstützt und stärkt die gesamte öffentliche Verwaltung im Umgang mit Daten."@de ;
     ns1:PRP101 "BFS"@de .
+
+ns1:SYS001 a schema:SoftwareApplication ;
+    rdfs:label "Acontrol"@de,
+        "Acontrol"@en,
+        "Acontrol"@fr,
+        "Acontrol"@it ;
+    rdfs:comment "Acontrol ist das Informationssystem des BLW, das für die Planung, Erfassung und Verwaltung landwirtschaftlicher Inspektionen eingesetzt wird. Es vereinfacht die Kontrollprozesse durch eine zentrale Plattform für Dateneingabe und -abfrage. Auf diese Weise wird eine effiziente Überwachung und Einhaltung landwirtschaftlicher Standards gewährleistet."@de,
+        "Acontrol is the information system of the FOAG, used for the planning, recording, and management of agricultural inspections. It simplifies control processes through a central platform for data entry and retrieval. This ensures efficient monitoring and compliance with agricultural standards."@en,
+        "Acontrol est le système d'information de l'OFAG, utilisé pour la planification, l'enregistrement et la gestion des inspections agricoles. Il simplifie les processus de contrôle grâce à une plateforme centrale pour la saisie et la consultation des données. Cela permet d'assurer une surveillance efficace et le respect des normes agricoles."@fr,
+        "Acontrol è il sistema informativo dell'UFAG, utilizzato per la pianificazione, la registrazione e la gestione delle ispezioni agricole. Semplifica i processi di controllo attraverso una piattaforma centrale per l'inserimento e il recupero dei dati. In questo modo, garantisce un monitoraggio efficiente e il rispetto degli standard agricoli."@it ;
+    ns1:PRP008 ns1:ORG021 .
+
+ns1:SYS002 a schema:SoftwareApplication ;
+    rdfs:label "Agate"@de,
+        "Agate"@en,
+        "Agate"@fr,
+        "Agate"@it ;
+    rdfs:comment "Agate ist ein Online-Portal, das den Zugriff auf verschiedene landwirtschaftliche Anwendungen mit nur einem Login ermöglicht. Es erleichtert den Datenaustausch im Agrar- und Ernährungsbereich und erhöht so den Benutzerkomfort. Durch diesen zentralisierten Zugangspunkt werden Verwaltungsprozesse für alle Beteiligten vereinfacht."@de,
+        "Agate is an online portal that allows access to various agricultural applications with just one login. It facilitates data exchange in the agricultural and food sector, thereby increasing user convenience. This centralized access point simplifies administrative processes for all stakeholders."@en,
+        "Agate est un portail en ligne qui permet d'accéder à diverses applications agricoles avec un seul identifiant. Il facilite l'échange de données dans le secteur agricole et alimentaire, augmentant ainsi le confort des utilisateurs. Ce point d'accès centralisé simplifie les processus administratifs pour toutes les parties prenantes."@fr,
+        "Agate è un portale online che consente l'accesso a diverse applicazioni agricole con un solo login. Facilita lo scambio di dati nel settore agricolo e alimentare, aumentando così la comodità per gli utenti. Questo punto di accesso centralizzato semplifica i processi amministrativi per tutte le parti interessate."@it ;
+    ns1:PRP008 ns1:ORG014 .
+
+ns1:SYS003 a schema:SoftwareApplication ;
+    rdfs:label "Agrarpolitisches Informationssystem"@de,
+        "Agricultural Policy Information System"@en,
+        "Système d'information sur la politique agricole"@fr,
+        "Sistema informativo di politica agricola"@it ;
+    rdfs:comment "AGIS fungiert als zentrale Datendrehscheibe, in der die von den Kantonen erhobenen landwirtschaftlichen Daten validiert und zu einem gesamtschweizerischen Datenbestand aggregiert werden. Das System sorgt für Konsistenz und Genauigkeit bei der Erfassung von landwirtschaftlichen Daten. Es unterstützt fundierte Entscheidungsprozesse auf Bundesebene."@de,
+        "AGIS serves as a central data hub where agricultural data collected by the cantons is validated and aggregated into a nationwide dataset. The system ensures consistency and accuracy in the collection of agricultural data. It supports well-founded decision-making processes at the federal level."@en,
+        "SIPA sert de plaque tournante centrale des données, où les données agricoles collectées par les cantons sont validées et agrégées dans un ensemble de données à l'échelle nationale. Le système garantit la cohérence et la précision dans la collecte des données agricoles. Il soutient des processus décisionnels éclairés au niveau fédéral."@fr,
+        "AGIS funge da hub centrale per i dati, dove i dati agricoli raccolti dai cantoni vengono convalidati e aggregati in un insieme di dati a livello nazionale. Il sistema garantisce coerenza e accuratezza nella raccolta dei dati agricoli. Supporta processi decisionali ben fondati a livello federale."@it ;
+    ns1:PRP008 ns1:ORG010 ;
+    ns1:PRP102 "AGIS"@de,
+        "AGIS"@en,
+        "SIPA"@fr,
+        "AGIS"@it .
+
+ns1:SYS004 a schema:SoftwareApplication ;
+    rdfs:label "Business-Intelligence-System"@de,
+        "Business Intelligence System"@en,
+        "Système de Business Intelligence"@fr,
+        "Sistema di Business Intelligence"@it ;
+    rdfs:comment "ASTAT ist das Business-Intelligence-System des BLW. Es stellt Analyse- und Reporting-Funktionen bereit, um datengestützte Entscheidungen zu ermöglichen. Dadurch wird die Überwachung und Bewertung agrarpolitischer Massnahmen vereinfacht."@de,
+        "ASTAT is the Business Intelligence system of the BLW. It provides analysis and reporting functions to enable data-driven decision-making. This simplifies the monitoring and evaluation of agricultural policy measures."@en,
+        "ASTAT est le système de Business Intelligence de l'OFAG. Il fournit des fonctions d'analyse et de reporting pour permettre une prise de décision basée sur les données. Cela simplifie la surveillance et l'évaluation des mesures de politique agricole."@fr,
+        "ASTAT è il sistema di Business Intelligence dell'UFAG. Fornisce funzioni di analisi e reporting per consentire decisioni basate sui dati. Ciò semplifica il monitoraggio e la valutazione delle misure di politica agricola."@it ;
+    ns1:PRP008 ns1:ORG013 ;
+    ns1:PRP102 "ASTAT"@de,
+        "ASTAT"@en,
+        "ASTAT"@fr,
+        "ASTAT"@it .
+
+ns1:SYS005 a schema:SoftwareApplication ;
+    rdfs:label "CePa"@de,
+        "CePa"@en,
+        "CePa"@fr,
+        "CePa"@it ;
+    rdfs:comment "CePa ist eine IT-Anwendung für die digitale Verwaltung von Verfahren und Korrespondenz im Rahmen des Pflanzenpassesystems sowie der amtlichen Zertifizierung von Vermehrungsmaterial. Sie optimiert Zertifizierungsabläufe und stellt die Einhaltung pflanzengesundheitlicher Vorschriften sicher. Auf diese Weise wird die Rückverfolgbarkeit und Qualitätskontrolle von Pflanzenmaterial unterstützt."@de,
+        "CePa is an IT application for the digital management of procedures and correspondence within the framework of the plant passport system and the official certification of propagation material. It optimizes certification processes and ensures compliance with plant health regulations. In this way, it supports traceability and quality control of plant material."@en,
+        "CePa est une application informatique pour la gestion numérique des procédures et de la correspondance dans le cadre du système de passeport phytosanitaire ainsi que de la certification officielle du matériel de multiplication. Elle optimise les processus de certification et garantit le respect des réglementations phytosanitaires. De cette manière, elle soutient la traçabilité et le contrôle de la qualité du matériel végétal."@fr,
+        "CePa è un'applicazione IT per la gestione digitale delle procedure e della corrispondenza nell'ambito del sistema del passaporto delle piante e della certificazione ufficiale del materiale di propagazione. Ottimizza i processi di certificazione e garantisce il rispetto delle normative fitosanitarie. In questo modo, supporta la tracciabilità e il controllo della qualità del materiale vegetale."@it ;
+    ns1:PRP008 ns1:ORG031 ;
+    ns1:PRP102 "CePa"@de,
+        "CePa"@en,
+        "CePa"@fr,
+        "CePa"@it .
+
+ns1:SYS006 a schema:SoftwareApplication ;
+    rdfs:label "digiFLUX"@de,
+        "digiFLUX"@en,
+        "digiFLUX"@fr,
+        "digiFLUX"@it ;
+    rdfs:comment "digiFLUX ist eine Webanwendung, die zur Umsetzung der Meldepflicht für den Handel und die Anwendung von Pflanzenschutzmitteln sowie für den Handel mit Nährstoffen entwickelt wurde. Sie ermöglicht den Akteuren eine einheitliche Schnittstelle zur Eingabe aller erforderlichen Angaben. Dadurch wird Transparenz und Einhaltung gesetzlicher Vorschriften im Agrarbereich gewährleistet."@de,
+        "digiFLUX is a web application developed to implement the reporting obligation for the trade and use of plant protection products as well as for the trade of nutrients. It provides stakeholders with a unified interface for entering all required information. This ensures transparency and compliance with legal regulations in the agricultural sector."@en,
+        "digiFLUX est une application web développée pour mettre en œuvre l'obligation de déclaration du commerce et de l'utilisation des produits phytosanitaires ainsi que du commerce des nutriments. Elle offre aux acteurs une interface unifiée pour saisir toutes les informations requises. Cela garantit la transparence et le respect des réglementations légales dans le secteur agricole."@fr,
+        "digiFLUX è un'applicazione web sviluppata per attuare l'obbligo di segnalazione per il commercio e l'uso dei prodotti fitosanitari nonché per il commercio di nutrienti. Fornisce agli operatori un'interfaccia unificata per l'inserimento di tutte le informazioni richieste. Ciò garantisce trasparenza e conformità alle normative legali nel settore agricolo."@it ;
+    ns1:PRP008 ns1:ORG020 .
+
+ns1:SYS007 a schema:SoftwareApplication ;
+    rdfs:label "eKontingente"@de ;
+    rdfs:comment "eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können. Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet."@de ;
+    ns1:PRP008 ns1:ORG040 .
+
+ns1:SYS008 a schema:SoftwareApplication ;
+    rdfs:label "Meine Agrardatenfreigabe"@de ;
+    rdfs:comment "Meine Agrardatenfreigabe vereinfacht den Datenaustausch zwischen Betrieben und Datenempfängern wie zum Beispiel Labelorganisationen. Sie bietet eine Plattform zur Verwaltung von Zugriffsberechtigungen und Datenfreigabevereinbarungen. Damit wird die Zusammenarbeit und Datenweitergabe im Agrarsektor transparenter gestaltet."@de ;
+    ns1:PRP008 ns1:ORG011 ;
+    ns1:PRP102 "MAF"@de .
+
+ns1:SYS009 a schema:SoftwareApplication ;
+    rdfs:label "Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft"@de ;
+    rdfs:comment "Das Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft (PGREL-NIS) macht Daten des Aktionsplans zur Vielfalt der Kulturpflanzen öffentlich zugänglich. Es bietet einen Überblick und Zugriff auf Informationen zu Pflanzengenetischen Ressourcen. Damit trägt es zur Erhaltung und Förderung pflanzengenetischer Vielfalt bei."@de ;
+    ns1:PRP008 ns1:ORG030 ;
+    ns1:PRP102 "PGREL-NIS"@de .
+
+ns1:SYS010 a schema:SoftwareApplication ;
+    rdfs:label "HODUFLU"@de ;
+    rdfs:comment "HODUFLU ist ein Internetprogramm zur einheitlichen Verwaltung von Hof- und Recyclingdüngerverschiebungen in der Landwirtschaft. Auf dieser Seite finden Sie Zugang zur Anwendung und nützliche Dokumente wie das Benutzerhandbuch für HODUFLU."@de ;
+    ns1:PRP008 ns1:ORG020 .
+
+ns1:SYS011 a schema:SoftwareApplication ;
+    rdfs:label "Protection Variété"@de ;
+    rdfs:comment "ProVar bedeutet Sortenschutz (protection variété) und ist die Datenbank zur Verwaltung aller wichtigen Informationen zu den Sortenarten von Pflanzen. Das Sortenschutzrecht regelt den gewerblichen Schutz neuer Pflanzenzüchtungen sowie deren gewerbsmässiger Nutzung."@de ;
+    ns1:PRP008 ns1:ORG032 ;
+    ns1:PRP102 "ProVar"@de .
+
+ns1:SYS020 a schema:SoftwareApplication ;
+    rdfs:label "Tierverkehrsdatenbank"@de,
+        "Banque de données sur le trafic des animaux"@fr,
+        "Banca dati sul traffico di animali"@it ;
+    rdfs:comment "Die Tierverkehrsdatenbank (TVD) ist ein schweizerisches System zur Registrierung und Nachverfolgung von Nutztieren, wie Rinder, Schweine, Schafe, Ziegen und in Gehege gehaltenes Wild. Dies ist u.a. ein wichtiger Beitrag für die Lebensmittelsicherheit und zu der Eindämmung von Tierseuchen. Dank einem zweckmässigen Erfassungssystem werden in der Datenbank Informationen wie Geburts-, Bewegungs- und Schlachtdaten sowie Halterwechsel erfasst."@de,
+        "La banque de données sur le trafic des animaux (BDTA) est un système suisse d’enregistrement et de suivi des animaux de rente, tels que les bovins, les porcs, les ovins, les caprins ou le gibier détenu en enclos. Ce système contribue notamment à la sécurité des denrées alimentaires et à l’enraiement des épizooties. Le système de saisie judicieux permet d’enregistrer des informations relatives à la naissance, aux déplacements et à l’abattage des animaux de rente ou encore aux changements de propriétaires."@fr,
+        "La Banca dati sul traffico di animali (BDTA) è un sistema svizzero per la registrazione e la tracciabilità di animali da reddito come bovini, suini, ovini, caprini e selvaggina allevata in recinti. Tale sistema contribuisce in modo significativo anche alla sicurezza alimentare e al contenimento delle epizoozie. Grazie a un sistema di registrazione mirato, nella BDTA vengono registrati i dati relativi alla nascita, agli spostamenti, alla macellazione e al cambiamento del detentore."@it ;
+    ns1:PRP008 ns1:ORG101 ;
+    ns1:PRP102 "TVD"@de,
+        "BDTA"@fr,
+        "BDTA"@it .
+
+ns1:SYS021 a schema:SoftwareApplication ;
+    rdfs:label "Datenbank Milch"@de,
+        "Milk Database"@en,
+        "Base de données lait"@fr,
+        "Database latte"@it ;
+    rdfs:comment "Die Datenbank Milch (dbmilch.ch) ist eine Webapplikation der TSM Treuhand GmbH. Sie ist die Online-Plattform der Akteure der Schweizer Milchwirtschaft. Die von der Bedag Solutions AG entwickelte Lösung kann von den kantonalen Veterinär- und Landwirtschaftsämtern oder auch anderen Organisationen in Verbindung mit Acontrol genutzt werden."@de,
+        "The Milk Database (dbmilch.ch) is a web application of TSM Treuhand GmbH. It is the online platform for actors in the Swiss dairy industry. The solution developed by Bedag Solutions AG can be used by cantonal veterinary and agricultural offices or other organizations in conjunction with Acontrol."@en,
+        "La base de données lait (dbmilch.ch) est une application web de TSM Treuhand GmbH. Elle est la plateforme en ligne des acteurs de l'industrie laitière suisse. La solution développée par Bedag Solutions AG peut être utilisée par les offices vétérinaires et agricoles cantonaux ou par d'autres organisations en lien avec Acontrol."@fr,
+        "La database latte (dbmilch.ch) è un'applicazione web di TSM Treuhand GmbH. È la piattaforma online per gli attori dell'industria lattiero-casearia svizzera. La soluzione sviluppata da Bedag Solutions AG può essere utilizzata dagli uffici veterinari e agricoli cantonali o da altre organizzazioni in combinazione con Acontrol."@it ;
+    ns1:PRP008 ns1:ORG100 ;
+    ns1:PRP102 "dbmilch"@de,
+        "dbmilch"@en,
+        "dbmilch"@fr,
+        "dbmilch"@it .
+
+ns1:SYS022 a schema:SoftwareApplication ;
+    rdfs:label "ACmobile"@de ;
+    rdfs:comment "ACmobile ist eine plattformunabhängige, mobile Lösung für die elektronische Erfassung von Kontrollergebnissen und Massnahmen."@de .
+
+ns1:SYS023 a schema:SoftwareApplication ;
+    rdfs:label "Barto"@de ;
+    rdfs:comment "Barto ist eine digitale Plattform für die Landwirtschaft, die eine effiziente Betriebsführung, Dokumentation und Analyse von Betriebsdaten ermöglicht. Sie integriert verschiedene agronomische und administrative Funktionen und bietet Landwirtinnen und Landwirten eine zentrale Lösung für die Verwaltung ihres Betriebs. Barto wird von der Barto AG betrieben und arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen."@de ;
+    ns1:PRP008 ns1:ORG102 .
+
+ns1:SYS024 a schema:SoftwareApplication ;
+    rdfs:label "Pflanzensorten-Datenbank"@de,
+        "Plant Variety Database"@en,
+        "Base de données des variétés de plantes"@fr,
+        "Database delle varietà vegetali"@it ;
+    rdfs:comment "Die PLUTO-Datenbank enthält Informationen über Pflanzenarten und -sorten von UPOV-Mitgliedern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD). Die PLUTO-Datenbank bietet ein Suchinstrument für Sortenbezeichnungen, um die Unterscheidbarkeit neuer Sorten sicherzustellen."@de,
+        "The PLUTO database contains information on plant species and varieties from UPOV members as well as the Organisation for Economic Co-operation and Development (OECD). The PLUTO database provides a search tool for variety denominations to ensure the distinctness of new varieties."@en,
+        "La base de données PLUTO contient des informations sur les espèces et variétés de plantes des membres de l'UPOV ainsi que de l'Organisation de coopération et de développement économiques (OCDE). La base de données PLUTO offre un outil de recherche pour les dénominations variétales afin d'assurer la distinction des nouvelles variétés."@fr,
+        "Il database PLUTO contiene informazioni sulle specie e varietà vegetali dei membri dell'UPOV e dell'Organizzazione per la cooperazione e lo sviluppo economico (OCSE). Il database PLUTO fornisce uno strumento di ricerca per le denominazioni varietali al fine di garantire la distinzione delle nuove varietà."@it ;
+    ns1:PRP008 ns1:ORG200 ;
+    ns1:PRP102 "PLUTO"@de,
+        "PLUTO"@en,
+        "PLUTO"@fr,
+        "PLUTO"@it .
+
+ns1:SYS025 a schema:SoftwareApplication ;
+    rdfs:label "Betriebs- und Unternehmensregister"@de ;
+    rdfs:comment "Das Betriebs- und Unternehmensregister (BUR) umfasst alle Unternehmen und Betriebe des privaten und öffentlichen Rechts, die in der Schweiz domiziliert sind und eine wirtschaftliche Tätigkeit ausüben. Das BUR dient dem BFS als Adressregister für die statistischen Erhebungen bei Unternehmen und Arbeitsstätten. Auch andere Ämter der Bundesverwaltung und zahlreiche Kantone verwenden das BUR zu statistischen oder administrativen Zwecken."@de ;
+    ns1:PRP008 <https://register.ld.admin.ch/staatskalender/organization/10008742> ;
+    ns1:PRP102 "BUR"@de .
+
+ns1:SYS026 a schema:SoftwareApplication ;
+    rdfs:label "e-Deklaration"@de,
+        "e-declaration"@en,
+        "e-déclaration"@fr,
+        "e-dichiarazione"@it ;
+    rdfs:comment "e-dec ist das elektronische Zollanmeldesystem der Schweiz, das Unternehmen ermöglicht, Waren für Import, Export und Transit elektronisch zu deklarieren. Dank seines modularen Aufbaus optimiert es die Zollprozesse, was zu Kosteneinsparungen und höherer Effizienz führt. Besonders hervorzuheben ist, dass e-dec mehrere Kommunikationsstandards unterstützt und jede Zollanmeldung bis zu 99'999 Tarifpositionen enthalten kann."@de,
+        "e-dec is Switzerland's electronic customs declaration system that enables companies to declare goods for import, export, and transit electronically. Designed with a modular structure, it streamlines customs processes, leading to cost savings and increased efficiency. Notably, e-dec supports multiple communication standards and allows each customs declaration to include up to 99'999 tariff headings."@en,
+        "e-dec est le système électronique de déclaration en douane de la Suisse, permettant aux entreprises de déclarer électroniquement les marchandises à l'importation, à l'exportation et en transit. Conçu avec une structure modulaire, il optimise les processus douaniers, entraînant des économies de coûts et une efficacité accrue. Notamment, e-dec prend en charge plusieurs normes de communication et permet à chaque déclaration en douane d'inclure jusqu'à 99'999 positions tarifaires."@fr,
+        "e-dec è il sistema elettronico di dichiarazione doganale della Svizzera che consente alle aziende di dichiarare elettronicamente le merci per l'importazione, l'esportazione e il transito. Progettato con una struttura modulare, ottimizza i processi doganali, portando a risparmi sui costi e a una maggiore efficienza. In particolare, e-dec supporta diversi standard di comunicazione e consente a ogni dichiarazione doganale di includere fino a 99'999 voci tariffarie."@it ;
+    ns1:PRP008 <https://register.ld.admin.ch/staatskalender/organization/10008659> ;
+    ns1:PRP102 "e-dec"@de,
+        "e-dec"@en,
+        "e-dec"@fr,
+        "e-dec"@it .
 

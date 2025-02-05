@@ -109,32 +109,6 @@ ns1:PRP102 a owl:DatatypeProperty ;
     rdfs:domain ns1:CLS002 ;
     rdfs:range xsd:string .
 
-ns1:PRP003 a owl:ObjectProperty ;
-    rdfs:label "hat Mitgliederorganisationen"@de,
-        "has member organizations"@en,
-        "a des organisations membres"@fr,
-        "ha organizzazioni membri"@it ;
-    rdfs:comment "Gibt an, dass eine Organisation X eine andere Organisation Y als Mitgliedsorganisation hat. Diese Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formellen Vereinigungen darstellen, bei denen Organisationen als Mitglieder teilnehmen. Informelle Beziehungen gehören nicht dazu."@de,
-        "Indicates that an organization X has another organization Y as a member organization. This relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en,
-        "Indique qu'une organisation X a une autre organisation Y comme organisation membre. Cette relation est utilisée pour représenter les adhésions à des organisations sectorielles, des associations professionnelles ou d'autres associations formelles dans lesquelles les organisations participent en tant que membres. Les relations informelles ne sont pas incluses."@fr,
-        "Indica che un'organizzazione X ha un'altra organizzazione Y come organizzazione membro. Questa relazione viene utilizzata per rappresentare l'appartenenza a organizzazioni di settore, associazioni professionali o altre associazioni formali in cui le organizzazioni partecipano come membri. Le relazioni informali non sono incluse."@it ;
-    rdfs:domain ns1:CLS001 ;
-    rdfs:range ns1:CLS001 ;
-    owl:inverseOf ns1:PRP004 .
-
-ns1:PRP004 a owl:ObjectProperty ;
-    rdfs:label "ist eine Mitgliedsorganisation von"@de,
-        "is a member organization of"@en,
-        "est une organisation membre de"@fr,
-        "è un'organizzazione membro di"@it ;
-    rdfs:comment "Gibt an, dass eine Organisation X eine Mitgliedsorganisation einer anderen Organisation Y ist. Die Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formellen Vereinigungen darstellen, bei denen Organisationen als Mitglieder teilnehmen. Informelle Beziehungen gehören nicht dazu."@de,
-        "Indicates that an organization X is a member organization of another organization Y. The relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en,
-        "Indique qu'une organisation X est une organisation membre d'une autre organisation Y. La relation est utilisée pour représenter les adhésions à des organisations sectorielles, des associations professionnelles ou d'autres associations formelles dans lesquelles les organisations participent en tant que membres. Les relations informelles ne sont pas incluses."@fr,
-        "Indica che un'organizzazione X è un'organizzazione membro di un'altra organizzazione Y. La relazione viene utilizzata per rappresentare l'appartenenza a organizzazioni di settore, associazioni professionali o altre associazioni formali in cui le organizzazioni partecipano come membri. Le relazioni informali non sono incluse."@it ;
-    rdfs:domain ns1:CLS001 ;
-    rdfs:range ns1:CLS001 ;
-    owl:inverseOf ns1:PRP003 .
-
 ns1:PRP005 a owl:ObjectProperty ;
     rdfs:label "ist (teilweise) in Besitz von"@de,
         "is (partially) owned by"@en,
@@ -238,6 +212,32 @@ ns1:PRP015 a owl:ObjectProperty ;
         "Indica che un'organizzazione X ha il diritto di accedere all'unità di informazione Y."@it ;
     rdfs:domain ns1:CLS001 ;
     rdfs:range ns1:CLS003 .
+
+schema:member a owl:ObjectProperty ;
+    rdfs:label "hat Mitgliederorganisationen"@de,
+        "has member organizations"@en,
+        "a des organisations membres"@fr,
+        "ha organizzazioni membri"@it ;
+    rdfs:comment "Gibt an, dass eine Organisation X eine andere Organisation Y als Mitgliedsorganisation hat. Diese Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formellen Vereinigungen darstellen, bei denen Organisationen als Mitglieder teilnehmen. Informelle Beziehungen gehören nicht dazu."@de,
+        "Indicates that an organization X has another organization Y as a member organization. This relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en,
+        "Indique qu'une organisation X a une autre organisation Y comme organisation membre. Cette relation est utilisée pour représenter les adhésions à des organisations sectorielles, des associations professionnelles ou d'autres associations formelles dans lesquelles les organisations participent en tant que membres. Les relations informelles ne sont pas incluses."@fr,
+        "Indica che un'organizzazione X ha un'altra organizzazione Y come organizzazione membro. Questa relazione viene utilizzata per rappresentare l'appartenenza a organizzazioni di settore, associazioni professionali o altre associazioni formali in cui le organizzazioni partecipano come membri. Le relazioni informali non sono incluse."@it ;
+    rdfs:domain ns1:CLS001 ;
+    rdfs:range ns1:CLS001 ;
+    owl:inverseOf schema:memberOf .
+
+schema:memberOf a owl:ObjectProperty ;
+    rdfs:label "ist eine Mitgliedsorganisation von"@de,
+        "is a member organization of"@en,
+        "est une organisation membre de"@fr,
+        "è un'organizzazione membro di"@it ;
+    rdfs:comment "Gibt an, dass eine Organisation X eine Mitgliedsorganisation einer anderen Organisation Y ist. Die Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formellen Vereinigungen darstellen, bei denen Organisationen als Mitglieder teilnehmen. Informelle Beziehungen gehören nicht dazu."@de,
+        "Indicates that an organization X is a member organization of another organization Y. The relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en,
+        "Indique qu'une organisation X est une organisation membre d'une autre organisation Y. La relation est utilisée pour représenter les adhésions à des organisations sectorielles, des associations professionnelles ou d'autres associations formelles dans lesquelles les organisations participent en tant que membres. Les relations informelles ne sont pas incluses."@fr,
+        "Indica che un'organizzazione X è un'organizzazione membro di un'altra organizzazione Y. La relazione viene utilizzata per rappresentare l'appartenenza a organizzazioni di settore, associazioni professionali o altre associazioni formali in cui le organizzazioni partecipano come membri. Le relazioni informali non sono incluse."@it ;
+    rdfs:domain ns1:CLS001 ;
+    rdfs:range ns1:CLS001 ;
+    owl:inverseOf schema:member .
 
 schema:parentOrganization a owl:ObjectProperty,
         owl:TransitiveProperty ;

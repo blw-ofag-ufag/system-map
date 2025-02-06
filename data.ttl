@@ -3,6 +3,11 @@
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/foag/system-map#> .
 
+systemmap:INF004 a systemmap:CLS002 ;
+    rdfs:label "BUR-Number",
+        "BUR-Nummer"@de ;
+    systemmap:PRP012 systemmap:SYS025 .
+
 systemmap:INF003 a systemmap:CLS003 ;
     rdfs:label "Informationen zu Flächen und Kulturen"@de ;
     rdfs:comment "Daten zu Grössen und Ort der Flächen (nur als Koordinaten ohne Polygone), landwirtschaftlichen Hauptkulturen und Betriebszugehörigkeit der Flächen."@de ;
@@ -113,6 +118,7 @@ systemmap:INF002 a systemmap:CLS004 ;
         "Occupation and age of the farm manager."@en,
         "Profession et âge du directeur ou de la directrice d'exploitation."@fr,
         "Professione ed età del gestore aziendale."@it ;
+    systemmap:PRP001 systemmap:INF004 ;
     systemmap:PRP012 systemmap:SYS003 ;
     systemmap:PRP013 systemmap:INF030 .
 
@@ -246,21 +252,6 @@ systemmap:ORG103 a systemmap:CLS007 ;
         "La coopérative Fenaco est une entreprise agricole suisse qui aide les agriculteurs à gérer leurs exploitations avec succès. Elle est active dans les domaines du commerce agricole, de la production alimentaire, du commerce de détail et de l'énergie. Fenaco possède des marques telles que Landi, Volg, Agrola et divers producteurs alimentaires. La coopérative appartient aux agriculteurs suisses et son siège est à Berne."@fr,
         "La cooperativa Fenaco è un'azienda agricola svizzera che supporta gli agricoltori nella gestione economica delle loro aziende. Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia. Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari. La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna."@it .
 
-systemmap:ORG003 a systemmap:CLS008 ;
-    rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de,
-        "Directorate for Digitalization and Data Management"@en,
-        "Unité de direction Transition numérique et gestion des données"@fr,
-        "Unità di direzione Digitalizzazione e gestione dei dati"@it ;
-    rdfs:comment "Der Direktionsbereich Digitalisierung und Datenmanagement setzt sich dafür ein, dass die digitale Transformation und das Datenmanagement in der Land- und Ernährungswirtschaft ziel- und zukunftsgerichtet gefördert werden."@de,
-        "The Directorate for Digitalization and Data Management is committed to ensuring that digital transformation and data management in the agricultural and food sector are promoted in a goal-oriented and forward-looking manner."@en,
-        "La Direction de la numérisation et de la gestion des données s'engage à ce que la transformation numérique et la gestion des données dans le secteur agricole et alimentaire soient encouragées de manière ciblée et tournée vers l'avenir."@fr,
-        "La Direzione per la digitalizzazione e la gestione dei dati si impegna a garantire che la trasformazione digitale e la gestione dei dati nel settore agricolo e alimentare siano promosse in modo mirato e orientato al futuro."@it ;
-    systemmap:PRP101 "DBDD"@de,
-        "DBDD"@en,
-        "DBDD"@fr,
-        "DBDD"@it ;
-    schema:parentOrganization staatskalender:10008654 .
-
 systemmap:ORG004 a systemmap:CLS008 ;
     rdfs:label "Direktionsbereich Recht, Ressourcen und Integrale Sicherheit"@de,
         "Directorate for Law, Resources, and Integral Security"@en,
@@ -328,32 +319,22 @@ systemmap:ORG010 a systemmap:CLS008 ;
         "FBAIS"@en,
         "FBAIS"@fr,
         "FBAIS"@it ;
-    schema:parentOrganization systemmap:ORG003 .
+    schema:parentOrganization staatskalender:20034677 .
 
 systemmap:ORG011 a systemmap:CLS008 ;
     rdfs:label "Kompetenzzentrum für die digitale Transformation"@de ;
     systemmap:PRP101 "GRKDT"@de ;
-    schema:parentOrganization systemmap:ORG003 .
+    schema:parentOrganization staatskalender:20034677 .
 
 systemmap:ORG012 a systemmap:CLS008 ;
     rdfs:label "Fachbereich Marktanalyse"@de ;
     systemmap:PRP101 "FBMA"@de ;
-    schema:parentOrganization systemmap:ORG003 .
+    schema:parentOrganization staatskalender:20034677 .
 
 systemmap:ORG013 a systemmap:CLS008 ;
     rdfs:label "Gruppe Business Intelligence"@de ;
     systemmap:PRP101 "GRBI"@de ;
-    schema:parentOrganization systemmap:ORG003 .
-
-systemmap:ORG014 a systemmap:CLS008 ;
-    rdfs:label "Fachbereich Informatikführung"@de ;
-    systemmap:PRP101 "FBIF"@de ;
-    schema:parentOrganization systemmap:ORG003 .
-
-systemmap:ORG015 a systemmap:CLS008 ;
-    rdfs:label "Gruppe GEVER Services"@de ;
-    systemmap:PRP101 "GRGS"@de ;
-    schema:parentOrganization systemmap:ORG003 .
+    schema:parentOrganization staatskalender:20034677 .
 
 systemmap:ORG020 a systemmap:CLS008 ;
     rdfs:label "Fachbereich Direktzahlungsprogramme"@de ;
@@ -459,6 +440,31 @@ staatskalender:10008742 a systemmap:CLS008 ;
     rdfs:comment "Als nationales Kompetenzzentrum der öffentlichen Statistik ist das Bundesamt für Statistik (BFS) der zentrale Knotenpunkt im Datennökosystem der Schweiz. Es unterstützt und stärkt die gesamte öffentliche Verwaltung im Umgang mit Daten."@de ;
     systemmap:PRP101 "BFS"@de .
 
+staatskalender:20032934 a systemmap:CLS008 ;
+    rdfs:label "Gruppe GEVER Services"@de ;
+    systemmap:PRP101 "GRGS"@de ;
+    schema:parentOrganization staatskalender:20034677 .
+
+staatskalender:20034677 a systemmap:CLS008 ;
+    rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de,
+        "Directorate for Digitalization and Data Management"@en,
+        "Unité de direction Transition numérique et gestion des données"@fr,
+        "Unità di direzione Digitalizzazione e gestione dei dati"@it ;
+    rdfs:comment "Der Direktionsbereich Digitalisierung und Datenmanagement setzt sich dafür ein, dass die digitale Transformation und das Datenmanagement in der Land- und Ernährungswirtschaft ziel- und zukunftsgerichtet gefördert werden."@de,
+        "The Directorate for Digitalization and Data Management is committed to ensuring that digital transformation and data management in the agricultural and food sector are promoted in a goal-oriented and forward-looking manner."@en,
+        "La Direction de la numérisation et de la gestion des données s'engage à ce que la transformation numérique et la gestion des données dans le secteur agricole et alimentaire soient encouragées de manière ciblée et tournée vers l'avenir."@fr,
+        "La Direzione per la digitalizzazione e la gestione dei dati si impegna a garantire che la trasformazione digitale e la gestione dei dati nel settore agricolo e alimentare siano promosse in modo mirato e orientato al futuro."@it ;
+    systemmap:PRP101 "DBDD"@de,
+        "DBDD"@en,
+        "DBDD"@fr,
+        "DBDD"@it ;
+    schema:parentOrganization staatskalender:10008654 .
+
+staatskalender:20045226 a systemmap:CLS008 ;
+    rdfs:label "Fachbereich Informatikführung"@de ;
+    systemmap:PRP101 "FBIF"@de ;
+    schema:parentOrganization staatskalender:20034677 .
+
 systemmap:ORG200 a schema:Organization ;
     rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
         "International Union for the Protection of New Varieties of Plants"@en,
@@ -493,7 +499,7 @@ systemmap:SYS002 a schema:SoftwareApplication ;
         "Agate is an online portal that allows access to various agricultural applications with just one login. It facilitates data exchange in the agricultural and food sector, thereby increasing user convenience. This centralized access point simplifies administrative processes for all stakeholders."@en,
         "Agate est un portail en ligne qui permet d'accéder à diverses applications agricoles avec un seul identifiant. Il facilite l'échange de données dans le secteur agricole et alimentaire, augmentant ainsi le confort des utilisateurs. Ce point d'accès centralisé simplifie les processus administratifs pour toutes les parties prenantes."@fr,
         "Agate è un portale online che consente l'accesso a diverse applicazioni agricole con un solo login. Facilita lo scambio di dati nel settore agricolo e alimentare, aumentando così la comodità per gli utenti. Questo punto di accesso centralizzato semplifica i processi amministrativi per tutte le parti interessate."@it ;
-    systemmap:PRP008 systemmap:ORG014 .
+    systemmap:PRP008 staatskalender:20045226 .
 
 systemmap:SYS003 a schema:SoftwareApplication ;
     rdfs:label "Agrarpolitisches Informationssystem"@de,

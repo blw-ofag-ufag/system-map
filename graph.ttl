@@ -5,6 +5,17 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+ns1:CLS002 a owl:Class ;
+    rdfs:label "Identifikationsnummer"@de,
+        "Identification number"@en,
+        "Numéro d'identification"@fr,
+        "Numero di identificazione"@it ;
+    rdfs:comment "Eine Art von Identifikationsnummer (ID). Damit ist nicht die ID selbst gemeint, sondern die Sammlung von Identifikationsnummern insgesamt. Unter 'BUR' wird also nicht '1234-5678' verstanden, sondern die Sammlung <i>aller</i> BUR-Identifikationsnummern."@de,
+        "A type of identification number (ID). This does not refer to the ID itself but to the collection of identification numbers as a whole. 'BUR' does not mean '1234-5678' but rather the collection of <i>all</i> BUR identification numbers."@en,
+        "Un type de numéro d'identification (ID). Cela ne fait pas référence à l'ID lui-même, mais à l'ensemble des numéros d'identification. 'BUR' ne signifie pas '1234-5678', mais plutôt la collection de <i>tous</i> les numéros d'identification BUR."@fr,
+        "Un tipo di numero di identificazione (ID). Questo non si riferisce al numero ID stesso, ma all'insieme dei numeri di identificazione. 'BUR' non significa '1234-5678', ma piuttosto l'insieme di <i>tutti</i> i numeri di identificazione BUR."@it ;
+    rdfs:subClassOf ns1:CLS003 .
+
 ns1:CLS003 a owl:Class ;
     rdfs:label "Informationseinheit"@de,
         "Information unit"@en,
@@ -108,6 +119,18 @@ ns1:PRP102 a owl:DatatypeProperty ;
         "Abbreviazione del sistema"@it ;
     rdfs:domain schema:SoftwareApplication ;
     rdfs:range xsd:string .
+
+ns1:PRP001 a owl:ObjectProperty ;
+    rdfs:label "nutzt ID"@de,
+        "uses ID"@en,
+        "utilise ID"@fr,
+        "utilizza ID"@it ;
+    rdfs:comment "Diese Beziehung zeigt an, dass eine Informationseinheit X für die Identifikation von einem <i>Business Object</i> eine Art von Identifikationsnummer Y verwendet."@de,
+        "This relationship indicates that an information unit X uses some kind of identification number Y for the identification of a <i>Business Object</i>."@en,
+        "Cette relation indique qu'une unité d'information X utilise un certain type de numéro d'identification Y pour identifier un <i>Business Object</i>."@fr,
+        "Questa relazione indica che un'unità di informazione X utilizza un certo tipo di numero di identificazione Y per l'identificazione di un <i>Business Object</i>."@it ;
+    rdfs:domain ns1:CLS003 ;
+    rdfs:range ns1:CLS002 .
 
 ns1:PRP005 a owl:ObjectProperty ;
     rdfs:label "ist (teilweise) in Besitz von"@de,
@@ -274,6 +297,11 @@ ns1: a owl:Ontology ;
         "Mappa del sistema DigiAgriFoodCH"@it ;
     owl:versionInfo "0.3.0" .
 
+ns1:INF004 a ns1:CLS002 ;
+    rdfs:label "BUR-Number",
+        "BUR-Nummer"@de ;
+    ns1:PRP012 ns1:SYS025 .
+
 ns1:INF003 a ns1:CLS003 ;
     rdfs:label "Informationen zu Flächen und Kulturen"@de ;
     rdfs:comment "Daten zu Grössen und Ort der Flächen (nur als Koordinaten ohne Polygone), landwirtschaftlichen Hauptkulturen und Betriebszugehörigkeit der Flächen."@de ;
@@ -384,6 +412,7 @@ ns1:INF002 a ns1:CLS004 ;
         "Occupation and age of the farm manager."@en,
         "Profession et âge du directeur ou de la directrice d'exploitation."@fr,
         "Professione ed età del gestore aziendale."@it ;
+    ns1:PRP001 ns1:INF004 ;
     ns1:PRP012 ns1:SYS003 ;
     ns1:PRP013 ns1:INF030 .
 
@@ -517,21 +546,6 @@ ns1:ORG103 a ns1:CLS007 ;
         "La coopérative Fenaco est une entreprise agricole suisse qui aide les agriculteurs à gérer leurs exploitations avec succès. Elle est active dans les domaines du commerce agricole, de la production alimentaire, du commerce de détail et de l'énergie. Fenaco possède des marques telles que Landi, Volg, Agrola et divers producteurs alimentaires. La coopérative appartient aux agriculteurs suisses et son siège est à Berne."@fr,
         "La cooperativa Fenaco è un'azienda agricola svizzera che supporta gli agricoltori nella gestione economica delle loro aziende. Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia. Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari. La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna."@it .
 
-ns1:ORG003 a ns1:CLS008 ;
-    rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de,
-        "Directorate for Digitalization and Data Management"@en,
-        "Unité de direction Transition numérique et gestion des données"@fr,
-        "Unità di direzione Digitalizzazione e gestione dei dati"@it ;
-    rdfs:comment "Der Direktionsbereich Digitalisierung und Datenmanagement setzt sich dafür ein, dass die digitale Transformation und das Datenmanagement in der Land- und Ernährungswirtschaft ziel- und zukunftsgerichtet gefördert werden."@de,
-        "The Directorate for Digitalization and Data Management is committed to ensuring that digital transformation and data management in the agricultural and food sector are promoted in a goal-oriented and forward-looking manner."@en,
-        "La Direction de la numérisation et de la gestion des données s'engage à ce que la transformation numérique et la gestion des données dans le secteur agricole et alimentaire soient encouragées de manière ciblée et tournée vers l'avenir."@fr,
-        "La Direzione per la digitalizzazione e la gestione dei dati si impegna a garantire che la trasformazione digitale e la gestione dei dati nel settore agricolo e alimentare siano promosse in modo mirato e orientato al futuro."@it ;
-    ns1:PRP101 "DBDD"@de,
-        "DBDD"@en,
-        "DBDD"@fr,
-        "DBDD"@it ;
-    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/10008654> .
-
 ns1:ORG004 a ns1:CLS008 ;
     rdfs:label "Direktionsbereich Recht, Ressourcen und Integrale Sicherheit"@de,
         "Directorate for Law, Resources, and Integral Security"@en,
@@ -599,32 +613,22 @@ ns1:ORG010 a ns1:CLS008 ;
         "FBAIS"@en,
         "FBAIS"@fr,
         "FBAIS"@it ;
-    schema:parentOrganization ns1:ORG003 .
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/20034677> .
 
 ns1:ORG011 a ns1:CLS008 ;
     rdfs:label "Kompetenzzentrum für die digitale Transformation"@de ;
     ns1:PRP101 "GRKDT"@de ;
-    schema:parentOrganization ns1:ORG003 .
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/20034677> .
 
 ns1:ORG012 a ns1:CLS008 ;
     rdfs:label "Fachbereich Marktanalyse"@de ;
     ns1:PRP101 "FBMA"@de ;
-    schema:parentOrganization ns1:ORG003 .
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/20034677> .
 
 ns1:ORG013 a ns1:CLS008 ;
     rdfs:label "Gruppe Business Intelligence"@de ;
     ns1:PRP101 "GRBI"@de ;
-    schema:parentOrganization ns1:ORG003 .
-
-ns1:ORG014 a ns1:CLS008 ;
-    rdfs:label "Fachbereich Informatikführung"@de ;
-    ns1:PRP101 "FBIF"@de ;
-    schema:parentOrganization ns1:ORG003 .
-
-ns1:ORG015 a ns1:CLS008 ;
-    rdfs:label "Gruppe GEVER Services"@de ;
-    ns1:PRP101 "GRGS"@de ;
-    schema:parentOrganization ns1:ORG003 .
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/20034677> .
 
 ns1:ORG020 a ns1:CLS008 ;
     rdfs:label "Fachbereich Direktzahlungsprogramme"@de ;
@@ -730,6 +734,31 @@ ns1:ORG204 a ns1:CLS008 ;
     rdfs:comment "Als nationales Kompetenzzentrum der öffentlichen Statistik ist das Bundesamt für Statistik (BFS) der zentrale Knotenpunkt im Datennökosystem der Schweiz. Es unterstützt und stärkt die gesamte öffentliche Verwaltung im Umgang mit Daten."@de ;
     ns1:PRP101 "BFS"@de .
 
+<https://register.ld.admin.ch/staatskalender/organization/20032934> a ns1:CLS008 ;
+    rdfs:label "Gruppe GEVER Services"@de ;
+    ns1:PRP101 "GRGS"@de ;
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/20034677> .
+
+<https://register.ld.admin.ch/staatskalender/organization/20034677> a ns1:CLS008 ;
+    rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de,
+        "Directorate for Digitalization and Data Management"@en,
+        "Unité de direction Transition numérique et gestion des données"@fr,
+        "Unità di direzione Digitalizzazione e gestione dei dati"@it ;
+    rdfs:comment "Der Direktionsbereich Digitalisierung und Datenmanagement setzt sich dafür ein, dass die digitale Transformation und das Datenmanagement in der Land- und Ernährungswirtschaft ziel- und zukunftsgerichtet gefördert werden."@de,
+        "The Directorate for Digitalization and Data Management is committed to ensuring that digital transformation and data management in the agricultural and food sector are promoted in a goal-oriented and forward-looking manner."@en,
+        "La Direction de la numérisation et de la gestion des données s'engage à ce que la transformation numérique et la gestion des données dans le secteur agricole et alimentaire soient encouragées de manière ciblée et tournée vers l'avenir."@fr,
+        "La Direzione per la digitalizzazione e la gestione dei dati si impegna a garantire che la trasformazione digitale e la gestione dei dati nel settore agricolo e alimentare siano promosse in modo mirato e orientato al futuro."@it ;
+    ns1:PRP101 "DBDD"@de,
+        "DBDD"@en,
+        "DBDD"@fr,
+        "DBDD"@it ;
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/10008654> .
+
+<https://register.ld.admin.ch/staatskalender/organization/20045226> a ns1:CLS008 ;
+    rdfs:label "Fachbereich Informatikführung"@de ;
+    ns1:PRP101 "FBIF"@de ;
+    schema:parentOrganization <https://register.ld.admin.ch/staatskalender/organization/20034677> .
+
 ns1:ORG200 a schema:Organization ;
     rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
         "International Union for the Protection of New Varieties of Plants"@en,
@@ -764,7 +793,7 @@ ns1:SYS002 a schema:SoftwareApplication ;
         "Agate is an online portal that allows access to various agricultural applications with just one login. It facilitates data exchange in the agricultural and food sector, thereby increasing user convenience. This centralized access point simplifies administrative processes for all stakeholders."@en,
         "Agate est un portail en ligne qui permet d'accéder à diverses applications agricoles avec un seul identifiant. Il facilite l'échange de données dans le secteur agricole et alimentaire, augmentant ainsi le confort des utilisateurs. Ce point d'accès centralisé simplifie les processus administratifs pour toutes les parties prenantes."@fr,
         "Agate è un portale online che consente l'accesso a diverse applicazioni agricole con un solo login. Facilita lo scambio di dati nel settore agricolo e alimentare, aumentando così la comodità per gli utenti. Questo punto di accesso centralizzato semplifica i processi amministrativi per tutte le parti interessate."@it ;
-    ns1:PRP008 ns1:ORG014 .
+    ns1:PRP008 <https://register.ld.admin.ch/staatskalender/organization/20045226> .
 
 ns1:SYS003 a schema:SoftwareApplication ;
     rdfs:label "Agrarpolitisches Informationssystem"@de,

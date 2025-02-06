@@ -103,6 +103,8 @@ window.mapClassIriToGroup = function(iri) {
       return "Organization";
     case "https://schema.org/SoftwareApplication":
       return "System";
+    case "https://agriculture.ld.admin.ch/foag/system-map#CLS002":
+      return "Information";
     case "https://agriculture.ld.admin.ch/foag/system-map#CLS003":
       return "Information";
     case "https://agriculture.ld.admin.ch/foag/system-map#CLS004":

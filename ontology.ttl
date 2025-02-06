@@ -5,6 +5,17 @@
 @prefix systemmap: <https://agriculture.ld.admin.ch/foag/system-map#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+systemmap:CLS002 a owl:Class ;
+    rdfs:label "Identifikationsnummer"@de,
+        "Identification number"@en,
+        "Numéro d'identification"@fr,
+        "Numero di identificazione"@it ;
+    rdfs:comment "Eine Art von Identifikationsnummer (ID). Damit ist nicht die ID selbst gemeint, sondern die Sammlung von Identifikationsnummern insgesamt. Unter 'BUR' wird also nicht '1234-5678' verstanden, sondern die Sammlung <i>aller</i> BUR-Identifikationsnummern."@de,
+        "A type of identification number (ID). This does not refer to the ID itself but to the collection of identification numbers as a whole. 'BUR' does not mean '1234-5678' but rather the collection of <i>all</i> BUR identification numbers."@en,
+        "Un type de numéro d'identification (ID). Cela ne fait pas référence à l'ID lui-même, mais à l'ensemble des numéros d'identification. 'BUR' ne signifie pas '1234-5678', mais plutôt la collection de <i>tous</i> les numéros d'identification BUR."@fr,
+        "Un tipo di numero di identificazione (ID). Questo non si riferisce al numero ID stesso, ma all'insieme dei numeri di identificazione. 'BUR' non significa '1234-5678', ma piuttosto l'insieme di <i>tutti</i> i numeri di identificazione BUR."@it ;
+    rdfs:subClassOf systemmap:CLS003 .
+
 systemmap:CLS003 a owl:Class ;
     rdfs:label "Informationseinheit"@de,
         "Information unit"@en,
@@ -108,6 +119,18 @@ systemmap:PRP102 a owl:DatatypeProperty ;
         "Abbreviazione del sistema"@it ;
     rdfs:domain schema:SoftwareApplication ;
     rdfs:range xsd:string .
+
+systemmap:PRP001 a owl:ObjectProperty ;
+    rdfs:label "nutzt ID"@de,
+        "uses ID"@en,
+        "utilise ID"@fr,
+        "utilizza ID"@it ;
+    rdfs:comment "Diese Beziehung zeigt an, dass eine Informationseinheit X für die Identifikation von einem <i>Business Object</i> eine Art von Identifikationsnummer Y verwendet."@de,
+        "This relationship indicates that an information unit X uses some kind of identification number Y for the identification of a <i>Business Object</i>."@en,
+        "Cette relation indique qu'une unité d'information X utilise un certain type de numéro d'identification Y pour identifier un <i>Business Object</i>."@fr,
+        "Questa relazione indica che un'unità di informazione X utilizza un certo tipo di numero di identificazione Y per l'identificazione di un <i>Business Object</i>."@it ;
+    rdfs:domain systemmap:CLS003 ;
+    rdfs:range systemmap:CLS002 .
 
 systemmap:PRP005 a owl:ObjectProperty ;
     rdfs:label "ist (teilweise) in Besitz von"@de,

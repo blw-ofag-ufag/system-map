@@ -10,7 +10,7 @@
 - [Get edges from LINDAS](https://s.zazuko.com/3wDcscR)
 - [A list of information units](https://s.zazuko.com/2XsfNRB) and their classification according to the data protection act.
 
-## Python processing of the `.ttl` files
+# 💭 Python processing of the `.ttl` files
 
 The repository includes a Python script `scripts/reason.py` that processes the two Turtle files (`data.ttl` and `ontology.ttl`) by first sorting them and then applying custom reasoning before producing the final output (`graph.ttl`). Here's how it works:
 

@@ -1,3 +1,4 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
@@ -252,6 +253,37 @@ systemmap:ORG103 a systemmap:CLS007 ;
         "La coopérative Fenaco est une entreprise agricole suisse qui aide les agriculteurs à gérer leurs exploitations avec succès. Elle est active dans les domaines du commerce agricole, de la production alimentaire, du commerce de détail et de l'énergie. Fenaco possède des marques telles que Landi, Volg, Agrola et divers producteurs alimentaires. La coopérative appartient aux agriculteurs suisses et son siège est à Berne."@fr,
         "La cooperativa Fenaco è un'azienda agricola svizzera che supporta gli agricoltori nella gestione economica delle loro aziende. Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia. Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari. La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna."@it .
 
+systemmap:ORG001 a systemmap:CLS008 ;
+    rdfs:label "Bundesamt für Landwirtschaft"@de,
+        "Federal Office for Agriculture"@en,
+        "Office fédéral de l'agriculture"@fr,
+        "Ufficio federale dell'agricoltura"@it ;
+    rdfs:comment "Das Bundesamt für Landwirtschaft (BLW) ist das Kompetenzzentrum des Bundes für alle Kernfragen im Zusammenhang mit dem Agrarsektor."@de,
+        "The Federal Office for Agriculture (FOAG) is the Confederation's competence centre for all core issues relating to the agricultural sector."@en,
+        "L'Office fédéral de l'agriculture (OFAG) est le centre de compétence de la Confédération pour toutes les questions essentielles liées au secteur agricole."@fr,
+        "L'Ufficio federale dell'agricoltura (UFAG) è il centro di competenza della Confederazione per tutte le questioni fondamentali relative al settore agricolo."@it ;
+    owl:sameAs staatskalender:10008654 ;
+    systemmap:PRP101 "BLW"@de,
+        "FOAG"@en,
+        "OFAG"@fr,
+        "UFAG"@it .
+
+systemmap:ORG002 a systemmap:CLS008 ;
+    rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de,
+        "Directorate for Digitalization and Data Management"@en,
+        "Unité de direction Transition numérique et gestion des données"@fr,
+        "Unità di direzione Digitalizzazione e gestione dei dati"@it ;
+    rdfs:comment "Der Direktionsbereich Digitalisierung und Datenmanagement setzt sich dafür ein, dass die digitale Transformation und das Datenmanagement in der Land- und Ernährungswirtschaft ziel- und zukunftsgerichtet gefördert werden."@de,
+        "The Directorate for Digitalization and Data Management is committed to ensuring that digital transformation and data management in the agricultural and food sector are promoted in a goal-oriented and forward-looking manner."@en,
+        "La Direction de la numérisation et de la gestion des données s'engage à ce que la transformation numérique et la gestion des données dans le secteur agricole et alimentaire soient encouragées de manière ciblée et tournée vers l'avenir."@fr,
+        "La Direzione per la digitalizzazione e la gestione dei dati si impegna a garantire che la trasformazione digitale e la gestione dei dati nel settore agricolo e alimentare siano promosse in modo mirato e orientato al futuro."@it ;
+    owl:sameAs staatskalender:20034677 ;
+    systemmap:PRP101 "DBDD"@de,
+        "DBDD"@en,
+        "DBDD"@fr,
+        "DBDD"@it ;
+    schema:parentOrganization systemmap:ORG001 .
+
 systemmap:ORG004 a systemmap:CLS008 ;
     rdfs:label "Direktionsbereich Recht, Ressourcen und Integrale Sicherheit"@de,
         "Directorate for Law, Resources, and Integral Security"@en,
@@ -265,7 +297,7 @@ systemmap:ORG004 a systemmap:CLS008 ;
         "DBRRIS"@en,
         "DBRRIS"@fr,
         "DBRRIS"@it ;
-    schema:parentOrganization staatskalender:10008654 .
+    schema:parentOrganization systemmap:ORG001 .
 
 systemmap:ORG005 a systemmap:CLS008 ;
     rdfs:label "Direktionsbereich Produktionsgrundlagen, natürliche Ressourcen und Forschung"@de,
@@ -280,7 +312,7 @@ systemmap:ORG005 a systemmap:CLS008 ;
         "DBPRF"@en,
         "DBPRF"@fr,
         "DBPRF"@it ;
-    schema:parentOrganization staatskalender:10008654 .
+    schema:parentOrganization systemmap:ORG001 .
 
 systemmap:ORG006 a systemmap:CLS008 ;
     rdfs:label "Direktionsbereich Direktzahlungen und Ländliche Entwicklung"@de,
@@ -292,7 +324,7 @@ systemmap:ORG006 a systemmap:CLS008 ;
         "Les agriculteurs fournissent divers services à la collectivité et sont donc soutenus par des contributions financières. La Direction des paiements directs et du développement rural en est responsable. Elle s'engage également pour la vitalité des zones rurales."@fr,
         "Gli agricoltori forniscono vari servizi alla collettività e sono quindi sostenuti con contributi finanziari. La Direzione dei pagamenti diretti e dello sviluppo rurale è responsabile di questo. Inoltre, si impegna per la vitalità delle aree rurali."@it ;
     systemmap:PRP101 "DBDLE"@de ;
-    schema:parentOrganization staatskalender:10008654 .
+    schema:parentOrganization systemmap:ORG001 .
 
 systemmap:ORG007 a systemmap:CLS008 ;
     rdfs:label "Direktionsbereich Märkte und Internationales"@de,
@@ -304,7 +336,7 @@ systemmap:ORG007 a systemmap:CLS008 ;
         "La Direction des marchés et des affaires internationales s'efforce de garantir que l'agriculture tire la plus grande valeur ajoutée possible de la vente de ses produits. Elle soutient les mesures d'auto-assistance, l'innovation et la commercialisation des différentes filières. De plus, cette direction est impliquée dans des organisations internationales telles que l'Organisation des Nations unies pour l'alimentation et l'agriculture (FAO) et l'Organisation mondiale du commerce (OMC)."@fr,
         "La Direzione dei mercati e degli affari internazionali si adopera affinché l'agricoltura ottenga il massimo valore aggiunto possibile dalla vendita dei suoi prodotti. Sostiene misure di auto-aiuto, innovazione e commercializzazione nei vari settori. Inoltre, questa direzione è coinvolta in organizzazioni internazionali come l'Organizzazione delle Nazioni Unite per l'alimentazione e l'agricoltura (FAO) e l'Organizzazione mondiale del commercio (OMC)."@it ;
     systemmap:PRP101 "DBMI"@de ;
-    schema:parentOrganization staatskalender:10008654 .
+    schema:parentOrganization systemmap:ORG001 .
 
 systemmap:ORG010 a systemmap:CLS008 ;
     rdfs:label "Fachbereich Agrarinformationssysteme"@de,
@@ -319,22 +351,22 @@ systemmap:ORG010 a systemmap:CLS008 ;
         "FBAIS"@en,
         "FBAIS"@fr,
         "FBAIS"@it ;
-    schema:parentOrganization staatskalender:20034677 .
+    schema:parentOrganization systemmap:ORG002 .
 
 systemmap:ORG011 a systemmap:CLS008 ;
     rdfs:label "Kompetenzzentrum für die digitale Transformation"@de ;
     systemmap:PRP101 "GRKDT"@de ;
-    schema:parentOrganization staatskalender:20034677 .
+    schema:parentOrganization systemmap:ORG002 .
 
 systemmap:ORG012 a systemmap:CLS008 ;
     rdfs:label "Fachbereich Marktanalyse"@de ;
     systemmap:PRP101 "FBMA"@de ;
-    schema:parentOrganization staatskalender:20034677 .
+    schema:parentOrganization systemmap:ORG002 .
 
 systemmap:ORG013 a systemmap:CLS008 ;
     rdfs:label "Gruppe Business Intelligence"@de ;
     systemmap:PRP101 "GRBI"@de ;
-    schema:parentOrganization staatskalender:20034677 .
+    schema:parentOrganization systemmap:ORG002 .
 
 systemmap:ORG020 a systemmap:CLS008 ;
     rdfs:label "Fachbereich Direktzahlungsprogramme"@de ;
@@ -391,79 +423,55 @@ systemmap:ORG041 a systemmap:CLS008 ;
 
 systemmap:ORG201 a systemmap:CLS008 ;
     rdfs:label "Wissensgrundlagen"@de ;
-    schema:parentOrganization staatskalender:10008671 .
+    schema:parentOrganization systemmap:ORG211 .
 
 systemmap:ORG202 a systemmap:CLS008 ;
     rdfs:label "Tiergesundheit und Tierschutz"@de ;
-    schema:parentOrganization staatskalender:10008671 .
+    schema:parentOrganization systemmap:ORG211 .
 
 systemmap:ORG203 a systemmap:CLS008 ;
     rdfs:label "Lebensmittel und Ernährung"@de ;
-    schema:parentOrganization staatskalender:10008671 .
+    schema:parentOrganization systemmap:ORG211 .
 
 systemmap:ORG204 a systemmap:CLS008 ;
     rdfs:label "Zulassungsstelle Pflanzenschutzmittel"@de ;
-    schema:parentOrganization staatskalender:10008671 .
+    schema:parentOrganization systemmap:ORG211 .
 
-staatskalender:10008654 a systemmap:CLS008 ;
-    rdfs:label "Bundesamt für Landwirtschaft"@de,
-        "Federal Office for Agriculture"@en,
-        "Office fédéral de l'agriculture"@fr,
-        "Ufficio federale dell'agricoltura"@it ;
-    rdfs:comment "Das Bundesamt für Landwirtschaft (BLW) ist das Kompetenzzentrum des Bundes für alle Kernfragen im Zusammenhang mit dem Agrarsektor."@de,
-        "The Federal Office for Agriculture (FOAG) is the Confederation's competence centre for all core issues relating to the agricultural sector."@en,
-        "L'Office fédéral de l'agriculture (OFAG) est le centre de compétence de la Confédération pour toutes les questions essentielles liées au secteur agricole."@fr,
-        "L'Ufficio federale dell'agricoltura (UFAG) è il centro di competenza della Confederazione per tutte le questioni fondamentali relative al settore agricolo."@it ;
-    systemmap:PRP101 "BLW"@de,
-        "FOAG"@en,
-        "OFAG"@fr,
-        "UFAG"@it .
-
-staatskalender:10008659 a systemmap:CLS008 ;
+systemmap:ORG210 a systemmap:CLS008 ;
     rdfs:label "Bundesamt für Zoll und Grenzsicherheit"@de,
         "Federal Office for Customs and Border Security"@en,
         "Office fédéral de la douane et de la sécurité des frontières"@fr,
         "Ufficio federale della dogana e della sicurezza dei confini"@it ;
     rdfs:comment "Das Bundesamt für Zoll und Grenzsicherheit ist mit über 4000 Mitarbeitenden die grösste Verwaltungseinheit des Finanzdepartements. Hier finden Sie die Mitglieder der Geschäftsleitung."@de ;
+    owl:sameAs staatskalender:10008659 ;
     systemmap:PRP101 "BAZG"@de,
         "FOCBS"@en,
         "OFDF"@fr,
         "UDSC"@it .
 
-staatskalender:10008671 a systemmap:CLS008 ;
+systemmap:ORG211 a systemmap:CLS008 ;
     rdfs:label "Bundesamt für Lebensmittelsicherheit und Veterinärwesen"@de ;
     rdfs:comment "Hauptaufgabe des BLV ist es, die Gesundheit und das Wohlbefinden von Mensch und Tier aktiv zu fördern. Die Hauptpfeiler dafür sind beim Menschen Lebensmittelsicherheit und gesunde Ernährung und beim Tier Tierschutz und Tiergesundheit."@de ;
+    owl:sameAs staatskalender:10008671 ;
     systemmap:PRP101 "BLV"@de .
 
-staatskalender:10008742 a systemmap:CLS008 ;
+systemmap:ORG212 a systemmap:CLS008 ;
     rdfs:label "Bundesamt für Statistik"@de ;
     rdfs:comment "Als nationales Kompetenzzentrum der öffentlichen Statistik ist das Bundesamt für Statistik (BFS) der zentrale Knotenpunkt im Datennökosystem der Schweiz. Es unterstützt und stärkt die gesamte öffentliche Verwaltung im Umgang mit Daten."@de ;
+    owl:sameAs staatskalender:10008742 ;
     systemmap:PRP101 "BFS"@de .
 
-staatskalender:20032934 a systemmap:CLS008 ;
+systemmap:ORG213 a systemmap:CLS008 ;
     rdfs:label "Gruppe GEVER Services"@de ;
+    owl:sameAs staatskalender:20032934 ;
     systemmap:PRP101 "GRGS"@de ;
-    schema:parentOrganization staatskalender:20034677 .
+    schema:parentOrganization systemmap:ORG002 .
 
-staatskalender:20034677 a systemmap:CLS008 ;
-    rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de,
-        "Directorate for Digitalization and Data Management"@en,
-        "Unité de direction Transition numérique et gestion des données"@fr,
-        "Unità di direzione Digitalizzazione e gestione dei dati"@it ;
-    rdfs:comment "Der Direktionsbereich Digitalisierung und Datenmanagement setzt sich dafür ein, dass die digitale Transformation und das Datenmanagement in der Land- und Ernährungswirtschaft ziel- und zukunftsgerichtet gefördert werden."@de,
-        "The Directorate for Digitalization and Data Management is committed to ensuring that digital transformation and data management in the agricultural and food sector are promoted in a goal-oriented and forward-looking manner."@en,
-        "La Direction de la numérisation et de la gestion des données s'engage à ce que la transformation numérique et la gestion des données dans le secteur agricole et alimentaire soient encouragées de manière ciblée et tournée vers l'avenir."@fr,
-        "La Direzione per la digitalizzazione e la gestione dei dati si impegna a garantire che la trasformazione digitale e la gestione dei dati nel settore agricolo e alimentare siano promosse in modo mirato e orientato al futuro."@it ;
-    systemmap:PRP101 "DBDD"@de,
-        "DBDD"@en,
-        "DBDD"@fr,
-        "DBDD"@it ;
-    schema:parentOrganization staatskalender:10008654 .
-
-staatskalender:20045226 a systemmap:CLS008 ;
+systemmap:ORG214 a systemmap:CLS008 ;
     rdfs:label "Fachbereich Informatikführung"@de ;
+    owl:sameAs systemmap:ORG214 ;
     systemmap:PRP101 "FBIF"@de ;
-    schema:parentOrganization staatskalender:20034677 .
+    schema:parentOrganization systemmap:ORG002 .
 
 systemmap:ORG200 a schema:Organization ;
     rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
@@ -499,7 +507,7 @@ systemmap:SYS002 a schema:SoftwareApplication ;
         "Agate is an online portal that allows access to various agricultural applications with just one login. It facilitates data exchange in the agricultural and food sector, thereby increasing user convenience. This centralized access point simplifies administrative processes for all stakeholders."@en,
         "Agate est un portail en ligne qui permet d'accéder à diverses applications agricoles avec un seul identifiant. Il facilite l'échange de données dans le secteur agricole et alimentaire, augmentant ainsi le confort des utilisateurs. Ce point d'accès centralisé simplifie les processus administratifs pour toutes les parties prenantes."@fr,
         "Agate è un portale online che consente l'accesso a diverse applicazioni agricole con un solo login. Facilita lo scambio di dati nel settore agricolo e alimentare, aumentando così la comodità per gli utenti. Questo punto di accesso centralizzato semplifica i processi amministrativi per tutte le parti interessate."@it ;
-    systemmap:PRP008 staatskalender:20045226 .
+    systemmap:PRP008 systemmap:ORG214 .
 
 systemmap:SYS003 a schema:SoftwareApplication ;
     rdfs:label "Agrarpolitisches Informationssystem"@de,
@@ -639,7 +647,7 @@ systemmap:SYS024 a schema:SoftwareApplication ;
 systemmap:SYS025 a schema:SoftwareApplication ;
     rdfs:label "Betriebs- und Unternehmensregister"@de ;
     rdfs:comment "Das Betriebs- und Unternehmensregister (BUR) umfasst alle Unternehmen und Betriebe des privaten und öffentlichen Rechts, die in der Schweiz domiziliert sind und eine wirtschaftliche Tätigkeit ausüben. Das BUR dient dem BFS als Adressregister für die statistischen Erhebungen bei Unternehmen und Arbeitsstätten. Auch andere Ämter der Bundesverwaltung und zahlreiche Kantone verwenden das BUR zu statistischen oder administrativen Zwecken."@de ;
-    systemmap:PRP008 staatskalender:10008742 ;
+    systemmap:PRP008 systemmap:ORG212 ;
     systemmap:PRP102 "BUR"@de .
 
 systemmap:SYS026 a schema:SoftwareApplication ;
@@ -651,7 +659,7 @@ systemmap:SYS026 a schema:SoftwareApplication ;
         "e-dec is Switzerland's electronic customs declaration system that enables companies to declare goods for import, export, and transit electronically. Designed with a modular structure, it streamlines customs processes, leading to cost savings and increased efficiency. Notably, e-dec supports multiple communication standards and allows each customs declaration to include up to 99'999 tariff headings."@en,
         "e-dec est le système électronique de déclaration en douane de la Suisse, permettant aux entreprises de déclarer électroniquement les marchandises à l'importation, à l'exportation et en transit. Conçu avec une structure modulaire, il optimise les processus douaniers, entraînant des économies de coûts et une efficacité accrue. Notamment, e-dec prend en charge plusieurs normes de communication et permet à chaque déclaration en douane d'inclure jusqu'à 99'999 positions tarifaires."@fr,
         "e-dec è il sistema elettronico di dichiarazione doganale della Svizzera che consente alle aziende di dichiarare elettronicamente le merci per l'importazione, l'esportazione e il transito. Progettato con una struttura modulare, ottimizza i processi doganali, portando a risparmi sui costi e a una maggiore efficienza. In particolare, e-dec supporta diversi standard di comunicazione e consente a ogni dichiarazione doganale di includere fino a 99'999 voci tariffarie."@it ;
-    systemmap:PRP008 staatskalender:10008659 ;
+    systemmap:PRP008 systemmap:ORG210 ;
     systemmap:PRP102 "e-dec"@de,
         "e-dec"@en,
         "e-dec"@fr,

@@ -267,8 +267,8 @@ schema:memberOf a owl:ObjectProperty ;
 
 schema:parentOrganization a owl:ObjectProperty,
         owl:TransitiveProperty ;
-    rdfs:label "ist Teil von"@de,
-        "is a part of"@en,
+    rdfs:label "gehört zu"@de,
+        "belongs to"@en,
         "fait partie de"@fr,
         "fa parte di"@it ;
     rdfs:comment "Zeigt an, dass die (Teil-)Organisation ein Teil von einer (Über-)Organisation Y ist."@de,

@@ -20,8 +20,7 @@ window.NODE_QUERY = `
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/ontologies> {
       ?id a ?group .
-      ?group rdfs:subClassOf* ?supergroup .
-      VALUES ?supergroup { schema:Organization schema:SoftwareApplication systemmap:CLS003 }
+      VALUES ?group { schema:Organization schema:SoftwareApplication systemmap:CLS003 }
       OPTIONAL {
         ?id rdfs:label ?label .
         FILTER(LANG(?label) = "${lang}")
@@ -44,11 +43,13 @@ window.NODE_QUERY = `
 window.EDGE_QUERY = `
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
+  PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map#>
+  PREFIX schema: <https://schema.org/>
   SELECT (?property AS ?id) ?from ?to ?label ?comment
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/ontologies> {
       ?from ?property ?to .
-      ?property a owl:ObjectProperty .
+      VALUES ?property { systemmap:PRP013 schema:parentOrganization systemmap:PRP007 systemmap:PRP005 systemmap:PRP015 systemmap:PRP011 systemmap:PRP001 }
       ?property rdfs:label ?label .
       FILTER(LANG(?label)="${lang}")
       OPTIONAL {

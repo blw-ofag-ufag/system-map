@@ -20,7 +20,7 @@ window.NODE_QUERY = `
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/ontologies> {
       ?id a ?group .
-      VALUES ?group { schema:Organization schema:SoftwareApplication systemmap:CLS003 }
+      VALUES ?group { schema:Organization schema:SoftwareApplication systemmap:Information }
       OPTIONAL {
         ?id rdfs:label ?label .
         FILTER(LANG(?label) = "${lang}")
@@ -33,7 +33,7 @@ window.NODE_QUERY = `
       OPTIONAL {
         ?id ?hasAbbreviation ?abbreviation .
         FILTER(LANG(?abbreviation) = "${lang}")
-        VALUES ?hasAbbreviation { systemmap:PRP101 systemmap:PRP102 }
+        VALUES ?hasAbbreviation { systemmap:abbreviation }
       }
     }
   }
@@ -49,7 +49,7 @@ window.EDGE_QUERY = `
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/ontologies> {
       ?from ?property ?to .
-      VALUES ?property { systemmap:PRP013 schema:parentOrganization systemmap:PRP007 systemmap:PRP005 systemmap:PRP015 systemmap:PRP011 systemmap:PRP001 }
+      VALUES ?property { systemmap:informs schema:parentOrganization systemmap:operates systemmap:owns systemmap:access systemmap:contains systemmap:usesIdentifier }
       ?property rdfs:label ?label .
       FILTER(LANG(?label)="${lang}")
       OPTIONAL {
@@ -104,26 +104,8 @@ window.mapClassIriToGroup = function(iri) {
       return "Organization";
     case "https://schema.org/SoftwareApplication":
       return "System";
-    case "https://agriculture.ld.admin.ch/foag/system-map#CLS002":
+    case "https://agriculture.ld.admin.ch/foag/system-map#Information":
       return "Information";
-    case "https://agriculture.ld.admin.ch/foag/system-map#CLS003":
-      return "Information";
-    case "https://agriculture.ld.admin.ch/foag/system-map#CLS004":
-      return "Information";
-    case "https://agriculture.ld.admin.ch/foag/system-map#CLS005":
-      return "Information";
-    case "https://agriculture.ld.admin.ch/foag/system-map#CLS006":
-      return "Organization";
-    case "https://agriculture.ld.admin.ch/foag/system-map#CLS007":
-      return "Organization";
-    case "https://agriculture.ld.admin.ch/foag/system-map#CLS008":
-      return "Organization";
-    case "https://agriculture.ld.admin.ch/foag/system-map#CLS009":
-      return "Organization";
-    case "https://agriculture.ld.admin.ch/foag/system-map#CLS010":
-      return "Organization";
-    case "https://agriculture.ld.admin.ch/foag/system-map#CLS011":
-      return "Organization";
     default:
       return "Other";
   }

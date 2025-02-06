@@ -5,7 +5,35 @@
 @prefix systemmap: <https://agriculture.ld.admin.ch/foag/system-map#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-systemmap:CLS002 a owl:Class ;
+systemmap:CantonalAgriculturalAdvisor a owl:Class ;
+    rdfs:label "Kantonale Beratungsstelle"@de,
+        "Cantonal advice center"@en,
+        "Centre de conseil cantonal"@fr,
+        "Centro di consulenza cantonale"@it ;
+    rdfs:subClassOf systemmap:CantonalOrganization .
+
+systemmap:CantonalAgriculturalOffice a owl:Class ;
+    rdfs:label "Landwirtschaftsamt eines Kantons"@de,
+        "Cantonal agricultural office"@en,
+        "Office agricole cantonal"@fr,
+        "Ufficio agricolo cantonale"@it ;
+    rdfs:subClassOf systemmap:CantonalOrganization .
+
+systemmap:CantonalOrganization a owl:Class ;
+    rdfs:label "Kantonale Organisation"@de,
+        "Cantonal organization"@en,
+        "Organisation cantonale"@fr,
+        "Organizzazione cantonale"@it ;
+    rdfs:subClassOf schema:GovernmentOrganization .
+
+systemmap:FederalOrganization a owl:Class ;
+    rdfs:label "Organisation des Bundes"@de,
+        "Federal organization"@en,
+        "Organisation fédérale"@fr,
+        "Organizzazione federale"@it ;
+    rdfs:subClassOf schema:GovernmentOrganization .
+
+systemmap:Identifier a owl:Class ;
     rdfs:label "Identifikationsnummer"@de,
         "Identification number"@en,
         "Numéro d'identification"@fr,
@@ -14,9 +42,9 @@ systemmap:CLS002 a owl:Class ;
         "A type of identification number (ID). This does not refer to the ID itself but to the collection of identification numbers as a whole. 'BUR' does not mean '1234-5678' but rather the collection of <i>all</i> BUR identification numbers."@en,
         "Un type de numéro d'identification (ID). Cela ne fait pas référence à l'ID lui-même, mais à l'ensemble des numéros d'identification. 'BUR' ne signifie pas '1234-5678', mais plutôt la collection de <i>tous</i> les numéros d'identification BUR."@fr,
         "Un tipo di numero di identificazione (ID). Questo non si riferisce al numero ID stesso, ma all'insieme dei numeri di identificazione. 'BUR' non significa '1234-5678', ma piuttosto l'insieme di <i>tutti</i> i numeri di identificazione BUR."@it ;
-    rdfs:subClassOf systemmap:CLS003 .
+    rdfs:subClassOf systemmap:Information .
 
-systemmap:CLS003 a owl:Class ;
+systemmap:Information a owl:Class ;
     rdfs:label "Informationseinheit"@de,
         "Information unit"@en,
         "Unité d'information"@fr,
@@ -26,56 +54,28 @@ systemmap:CLS003 a owl:Class ;
         "Une information dans un système informatique. Cela peut vraiment être n'importe quoi."@fr,
         "Un'informazione in un sistema IT. Potrebbe essere qualsiasi cosa."@it .
 
-systemmap:CLS004 a owl:Class ;
+systemmap:PersonInformation a owl:Class ;
     rdfs:label "Informationseinheit mit Personendaten"@de,
         "Information unit containing personal data"@en,
         "Unité d'information contenant des données personnelles"@fr,
         "Unità di informazione contenente dati personali"@it ;
     rdfs:seeAlso <https://www.fedlex.admin.ch/eli/oc/2022/491/de#art_5> ;
-    rdfs:subClassOf systemmap:CLS003 .
+    rdfs:subClassOf systemmap:Information .
 
-systemmap:CLS005 a owl:Class ;
-    rdfs:label "Informationseinheit mit besonders schützenswerten Personendaten"@de,
-        "Information unit containing sensitive personal data"@en,
-        "Unité d'information contenant des données personnelles sensibles"@fr,
-        "Unità di informazione contenente dati personali sensibili"@it ;
-    rdfs:seeAlso <https://www.fedlex.admin.ch/eli/oc/2022/491/de#art_5> ;
-    rdfs:subClassOf systemmap:CLS004 .
-
-systemmap:CLS007 a owl:Class ;
+systemmap:PrivateOrganization a owl:Class ;
     rdfs:label "Privatrechtliche Organisation"@de,
         "Private-sector organization"@en,
         "Organisation de droit privé"@fr,
         "Organizzazione di diritto privato"@it ;
     rdfs:subClassOf schema:Organization .
 
-systemmap:CLS008 a owl:Class ;
-    rdfs:label "Organisation des Bundes"@de,
-        "Federal organization"@en,
-        "Organisation fédérale"@fr,
-        "Organizzazione federale"@it ;
-    rdfs:subClassOf schema:GovernmentOrganization .
-
-systemmap:CLS009 a owl:Class ;
-    rdfs:label "Kantonale Organisation"@de,
-        "Cantonal organization"@en,
-        "Organisation cantonale"@fr,
-        "Organizzazione cantonale"@it ;
-    rdfs:subClassOf schema:GovernmentOrganization .
-
-systemmap:CLS010 a owl:Class ;
-    rdfs:label "Landwirtschaftsamt eines Kantons"@de,
-        "Cantonal agricultural office"@en,
-        "Office agricole cantonal"@fr,
-        "Ufficio agricolo cantonale"@it ;
-    rdfs:subClassOf systemmap:CLS009 .
-
-systemmap:CLS011 a owl:Class ;
-    rdfs:label "Kantonale Beratungsstelle"@de,
-        "Cantonal advice center"@en,
-        "Centre de conseil cantonal"@fr,
-        "Centro di consulenza cantonale"@it ;
-    rdfs:subClassOf systemmap:CLS009 .
+systemmap:SensitivePersonInformation a owl:Class ;
+    rdfs:label "Informationseinheit mit besonders schützenswerten Personendaten"@de,
+        "Information unit containing sensitive personal data"@en,
+        "Unité d'information contenant des données personnelles sensibles"@fr,
+        "Unità di informazione contenente dati personali sensibili"@it ;
+    rdfs:seeAlso <https://www.fedlex.admin.ch/eli/oc/2022/491/de#art_5> ;
+    rdfs:subClassOf systemmap:PersonInformation .
 
 schema:GovernmentOrganization a owl:Class ;
     rdfs:label "Öffentlich-rechtliche Organisation"@de,
@@ -89,10 +89,10 @@ schema:Organization a owl:Class ;
         "Organization"@en,
         "Organisation"@fr,
         "Organizzazione"@it ;
-    rdfs:comment "Eine (juristische) Einheit wie ein Unternehmen, eine Behörde oder eine Non-Profit-Organisation oder eine Untereinheit einer solchen."@de,
-        "A (legal) entity such as a company, agency or non-profit organization, or a subunit of such an entity."@en,
-        "Une entité (juridique) telle qu'une entreprise, une agence ou une organisation à but non lucratif, ou une sous-unité d'une telle entité."@fr,
-        "Un'entità (giuridica) come un'azienda, un'agenzia o un'organizzazione senza scopo di lucro, o una sotto-unità di tale entità."@it .
+    rdfs:comment "Eine Einheit wie ein Unternehmen, eine Behörde oder eine NGO oder eine Untereinheit einer solchen."@de,
+        "An entity such as a company, an authority, or an NGO, or a subunit of such an entity."@en,
+        "Une entité telle qu'une entreprise, une autorité ou une ONG, ou une sous-unité d'une telle entité."@fr,
+        "Un'entità come un'azienda, un'autorità o un'ONG, o una sua sotto-unità."@it .
 
 schema:SoftwareApplication a owl:Class ;
     rdfs:label "IT-System"@de,
@@ -104,68 +104,75 @@ schema:SoftwareApplication a owl:Class ;
         "Tout système informatique (dans un sens abstrait), souvent avec une ou plusieurs bases de données associées."@fr,
         "Qualsiasi sistema IT (in senso astratto), spesso con uno o più database associati."@it .
 
-systemmap:PRP101 a owl:DatatypeProperty ;
-    rdfs:label "Organisationsabkürzung"@de,
-        "Organization abbreviation"@en,
-        "Abréviation de l'organisation"@fr,
-        "Abbreviazione dell'organizzazione"@it ;
-    rdfs:domain schema:Organization ;
+systemmap:abbreviation a owl:DatatypeProperty ;
+    rdfs:label "Abkürzung"@de,
+        "Abbreviation"@en,
+        "Abréviation"@fr,
+        "Abbreviazione"@it ;
     rdfs:range xsd:string .
 
-systemmap:PRP102 a owl:DatatypeProperty ;
-    rdfs:label "Abkürzung des IT-Systems"@de,
-        "System abbreviation"@en,
-        "Abréviation du système"@fr,
-        "Abbreviazione del sistema"@it ;
-    rdfs:domain schema:SoftwareApplication ;
-    rdfs:range xsd:string .
-
-systemmap:PRP001 a owl:ObjectProperty ;
-    rdfs:label "nutzt ID"@de,
-        "uses ID"@en,
-        "utilise ID"@fr,
-        "utilizza ID"@it ;
-    rdfs:comment "Diese Beziehung zeigt an, dass eine Informationseinheit X für die Identifikation von einem <i>Business Object</i> eine Art von Identifikationsnummer Y verwendet."@de,
-        "This relationship indicates that an information unit X uses some kind of identification number Y for the identification of a <i>Business Object</i>."@en,
-        "Cette relation indique qu'une unité d'information X utilise un certain type de numéro d'identification Y pour identifier un <i>Business Object</i>."@fr,
-        "Questa relazione indica che un'unità di informazione X utilizza un certo tipo di numero di identificazione Y per l'identificazione di un <i>Business Object</i>."@it ;
-    rdfs:domain systemmap:CLS003 ;
-    rdfs:range systemmap:CLS002 .
-
-systemmap:PRP005 a owl:ObjectProperty ;
-    rdfs:label "ist (teilweise) in Besitz von"@de,
-        "is (partially) owned by"@en,
-        "est (partiellement) détenu par"@fr,
-        "è (parzialmente) di proprietà di"@it ;
-    rdfs:comment "Diese Beziehung zeigt an, dass eine Organisation X (teilweise) im Besitz einer anderen Organisation Y ist."@de ;
+systemmap:access a owl:ObjectProperty ;
+    rdfs:label "hat Zugriff auf"@de,
+        "has access to"@en,
+        "a accès à"@fr,
+        "ha accesso a"@it ;
+    rdfs:comment "Zeigt an, dass eine Organisation X die Rechte zum Zugriff auf die Informationseinheit Y hat."@de,
+        "Indicates that an organization X has the rights to access the information unit Y."@en,
+        "Indique qu'une organisation X a le droit d'accéder à l'unité d'information Y."@fr,
+        "Indica che un'organizzazione X ha il diritto di accedere all'unità di informazione Y."@it ;
     rdfs:domain schema:Organization ;
-    rdfs:range schema:Organization ;
-    owl:inverseOf systemmap:PRP006 .
+    rdfs:range systemmap:Information .
 
-systemmap:PRP006 a owl:ObjectProperty ;
-    rdfs:label "besitzt (teilweise)"@de,
-        "(partially) owns"@en,
-        "possède (partiellement)"@fr,
-        "possiede (parzialmente)"@it ;
-    rdfs:comment "Diese Beziehung zeigt an, dass eine Organisation X eine andere Organisation Y (teilweise) besitzt."@de ;
-    rdfs:domain schema:Organization ;
-    rdfs:range schema:Organization ;
-    owl:inverseOf systemmap:PRP005 .
-
-systemmap:PRP007 a owl:ObjectProperty ;
-    rdfs:label "betreibt"@de,
-        "operates"@en,
-        "exploite"@fr,
-        "gestisce"@it ;
-    rdfs:comment "Diese Beziehung zeigt an, dass Organisation X für das Betriebssystem Y verantwortlich ist. Wenn Organisation Y den Betrieb eines Systems X an einen Dienstleister Z auslagert, verwenden Sie weiterhin diese Betriebsbeziehung zwischen X und Y, da sie eher die Verantwortlichkeit als den technischen Betrieb widerspiegelt. Die Beziehung ist auf niedrigstmöglicher Organisationsebene zu verwenden."@de,
-        "This relationship indicates that organization X is in charge of operating system Y. If organization Y outsources the operation of a system X to a service provider Z, still use this operating relationship between X and Y since it reflects responsibility rather than technical operation. Also, use this on the lowest organizational level possible."@en,
-        "Cette relation indique que l'organisation X est responsable de l'exploitation du système Y. Si l'organisation Y externalise l'exploitation d'un système X à un prestataire de services Z, utilisez toujours cette relation d'exploitation entre X et Y, car elle reflète la responsabilité plutôt que l'exploitation technique. Utilisez cette relation au niveau organisationnel le plus bas possible."@fr,
-        "Questa relazione indica che l'organizzazione X è responsabile della gestione del sistema Y. Se l'organizzazione Y esternalizza la gestione di un sistema X a un fornitore di servizi Z, continua a utilizzare questa relazione operativa tra X e Y, poiché riflette la responsabilità piuttosto che l'operazione tecnica. Inoltre, usa questa relazione al livello organizzativo più basso possibile."@it ;
-    rdfs:domain schema:Organization ;
+systemmap:containedIn a owl:ObjectProperty ;
+    rdfs:label "ist beinhaltet in"@de,
+        "is contained in"@en,
+        "est contenu dans"@fr,
+        "è contenuto in"@it ;
+    rdfs:comment "Gibt an, dass eine Informationseinheit X im IT-System Y enthalten ist. Beispielsweise sind Informationen über landwirtschaftliche Flächen in der Schweiz in AGIS enthalten."@de,
+        "Indicates that an information unit X is contained in the IT system Y. For example, information about farming areas in Switzerland is contained in AGIS."@en,
+        "Indique qu'une unité d'information X est contenue dans le système informatique Y. Par exemple, les informations sur les surfaces agricoles en Suisse sont contenues dans AGIS."@fr,
+        "Indica che un'unità di informazione X è contenuta nel sistema IT Y. Ad esempio, le informazioni sulle superfici agricole in Svizzera sono contenute in AGIS."@it ;
+    rdfs:domain systemmap:Information ;
     rdfs:range schema:SoftwareApplication ;
-    owl:inverseOf systemmap:PRP008 .
+    owl:inverseOf systemmap:contains .
 
-systemmap:PRP008 a owl:ObjectProperty ;
+systemmap:contains a owl:ObjectProperty ;
+    rdfs:label "beinhaltet"@de,
+        "contains"@en,
+        "contient"@fr,
+        "contiene"@it ;
+    rdfs:comment "Gibt an, dass ein IT-System X die Informationseinheit Y enthält. Beispielsweise enthält AGIS Informationen über landwirtschaftliche Flächen in der Schweiz."@de,
+        "Indicates that an IT system X contains the information unit Y. For example, AGIS contains information about farming areas in Switzerland."@en,
+        "Indique qu'un système informatique X contient l'unité d'information Y. Par exemple, AGIS contient des informations sur les surfaces agricoles en Suisse."@fr,
+        "Indica che un sistema IT X contiene l'unità di informazione Y. Ad esempio, AGIS contiene informazioni sulle superfici agricole in Svizzera."@it ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range systemmap:Information ;
+    owl:inverseOf systemmap:containedIn .
+
+systemmap:informedBy a owl:ObjectProperty ;
+    rdfs:label "erhält Informationen von"@de,
+        "gets information from"@en,
+        "obtient des informations de"@fr,
+        "ottiene informazioni da"@it ;
+    rdfs:comment "Zeigt an, dass eine Informationseinheit X von einer anderen Informationseinheit Y abgeleitet ist. Diese Beziehung wird gebraucht, um Informationsflüsse darzustellen. Diese müssen nicht zwingend (durch eine API oder Ähnliches) formalisiert sein."@de,
+        "Indicates that an information unit X is derived from another information unit Y. This relationship is used to represent information flows. These do not necessarily have to be formalized (through an API or similar means)."@en,
+        "Indique qu'une unité d'information X est dérivée d'une autre unité d'information Y. Cette relation est utilisée pour représenter les flux d'information. Ceux-ci ne doivent pas nécessairement être formalisés (par une API ou un moyen similaire)."@fr,
+        "Indica che un'unità di informazione X è derivata da un'altra unità di informazione Y. Questa relazione viene utilizzata per rappresentare i flussi di informazioni. Questi non devono necessariamente essere formalizzati (tramite un'API o mezzi simili)."@it ;
+    rdfs:domain systemmap:Information ;
+    rdfs:range systemmap:Information ;
+    owl:inverseOf systemmap:informs .
+
+systemmap:informs a owl:ObjectProperty ;
+    rdfs:label "informiert"@de,
+        "informs"@en,
+        "informe"@fr,
+        "informa"@it ;
+    rdfs:comment "Zeigt auf, dass Informationseinheit X durch eine andere Informationseinheit Y <i>informiert</i> wird; d.h. dass <i>irgendwie</i> Daten fliessen. Das kann über manuelles Abschreiben, E-Mail-Versandt von Tabellen, APIs etc. geschehen."@de ;
+    rdfs:domain systemmap:Information ;
+    rdfs:range systemmap:Information ;
+    owl:inverseOf systemmap:informedBy .
+
+systemmap:operatedBy a owl:ObjectProperty ;
     rdfs:label "wird betrieben von"@de,
         "is operated by"@en,
         "est exploité par"@fr,
@@ -176,68 +183,52 @@ systemmap:PRP008 a owl:ObjectProperty ;
         "Indica che un sistema IT X è gestito da un'organizzazione Y, ovvero che l'organizzazione Y è responsabile della gestione del sistema X."@it ;
     rdfs:domain schema:SoftwareApplication ;
     rdfs:range schema:Organization ;
-    owl:inverseOf systemmap:PRP007 .
+    owl:inverseOf systemmap:operates .
 
-systemmap:PRP011 a owl:ObjectProperty ;
-    rdfs:label "beinhaltet"@de,
-        "contains"@en,
-        "contient"@fr,
-        "contiene"@it ;
-    rdfs:comment "Gibt an, dass ein IT-System X die Informationseinheit Y enthält. Beispielsweise enthält AGIS Informationen über landwirtschaftliche Flächen in der Schweiz."@de,
-        "Indicates that an IT system X contains the information unit Y. For example, AGIS contains information about farming areas in Switzerland."@en,
-        "Indique qu'un système informatique X contient l'unité d'information Y. Par exemple, AGIS contient des informations sur les surfaces agricoles en Suisse."@fr,
-        "Indica che un sistema IT X contiene l'unità di informazione Y. Ad esempio, AGIS contiene informazioni sulle superfici agricole in Svizzera."@it ;
-    rdfs:domain schema:SoftwareApplication ;
-    rdfs:range systemmap:CLS003 ;
-    owl:inverseOf systemmap:PRP012 .
-
-systemmap:PRP012 a owl:ObjectProperty ;
-    rdfs:label "ist beinhaltet in"@de,
-        "is contained in"@en,
-        "est contenu dans"@fr,
-        "è contenuto in"@it ;
-    rdfs:comment "Gibt an, dass eine Informationseinheit X im IT-System Y enthalten ist. Beispielsweise sind Informationen über landwirtschaftliche Flächen in der Schweiz in AGIS enthalten."@de,
-        "Indicates that an information unit X is contained in the IT system Y. For example, information about farming areas in Switzerland is contained in AGIS."@en,
-        "Indique qu'une unité d'information X est contenue dans le système informatique Y. Par exemple, les informations sur les surfaces agricoles en Suisse sont contenues dans AGIS."@fr,
-        "Indica che un'unità di informazione X è contenuta nel sistema IT Y. Ad esempio, le informazioni sulle superfici agricole in Svizzera sono contenute in AGIS."@it ;
-    rdfs:domain systemmap:CLS003 ;
-    rdfs:range schema:SoftwareApplication ;
-    owl:inverseOf systemmap:PRP011 .
-
-systemmap:PRP013 a owl:ObjectProperty ;
-    rdfs:label "informiert"@de,
-        "informs"@en,
-        "informe"@fr,
-        "informa"@it ;
-    rdfs:comment "Zeigt auf, dass Informationseinheit X durch eine andere Informationseinheit Y <i>informiert</i> wird; d.h. dass <i>irgendwie</i> Daten fliessen. Das kann über manuelles Abschreiben, E-Mail-Versandt von Tabellen, APIs etc. geschehen."@de ;
-    rdfs:domain systemmap:CLS003 ;
-    rdfs:range systemmap:CLS003 ;
-    owl:inverseOf systemmap:PRP014 .
-
-systemmap:PRP014 a owl:ObjectProperty ;
-    rdfs:label "erhält Informationen von"@de,
-        "gets information from"@en,
-        "obtient des informations de"@fr,
-        "ottiene informazioni da"@it ;
-    rdfs:comment "Zeigt an, dass eine Informationseinheit X von einer anderen Informationseinheit Y abgeleitet ist. Diese Beziehung wird gebraucht, um Informationsflüsse darzustellen. Diese müssen nicht zwingend (durch eine API oder Ähnliches) formalisiert sein."@de,
-        "Indicates that an information unit X is derived from another information unit Y. This relationship is used to represent information flows. These do not necessarily have to be formalized (through an API or similar means)."@en,
-        "Indique qu'une unité d'information X est dérivée d'une autre unité d'information Y. Cette relation est utilisée pour représenter les flux d'information. Ceux-ci ne doivent pas nécessairement être formalisés (par une API ou un moyen similaire)."@fr,
-        "Indica che un'unità di informazione X è derivata da un'altra unità di informazione Y. Questa relazione viene utilizzata per rappresentare i flussi di informazioni. Questi non devono necessariamente essere formalizzati (tramite un'API o mezzi simili)."@it ;
-    rdfs:domain systemmap:CLS003 ;
-    rdfs:range systemmap:CLS003 ;
-    owl:inverseOf systemmap:PRP013 .
-
-systemmap:PRP015 a owl:ObjectProperty ;
-    rdfs:label "hat Zugriff auf"@de,
-        "has access to"@en,
-        "a accès à"@fr,
-        "ha accesso a"@it ;
-    rdfs:comment "Zeigt an, dass eine Organisation X die Rechte zum Zugriff auf die Informationseinheit Y hat."@de,
-        "Indicates that an organization X has the rights to access the information unit Y."@en,
-        "Indique qu'une organisation X a le droit d'accéder à l'unité d'information Y."@fr,
-        "Indica che un'organizzazione X ha il diritto di accedere all'unità di informazione Y."@it ;
+systemmap:operates a owl:ObjectProperty ;
+    rdfs:label "betreibt"@de,
+        "operates"@en,
+        "exploite"@fr,
+        "gestisce"@it ;
+    rdfs:comment "Diese Beziehung zeigt an, dass Organisation X für das Betriebssystem Y verantwortlich ist. Wenn Organisation Y den Betrieb eines Systems X an einen Dienstleister Z auslagert, verwenden Sie weiterhin diese Betriebsbeziehung zwischen X und Y, da sie eher die Verantwortlichkeit als den technischen Betrieb widerspiegelt. Die Beziehung ist auf niedrigstmöglicher Organisationsebene zu verwenden."@de,
+        "This relationship indicates that organization X is in charge of operating system Y. If organization Y outsources the operation of a system X to a service provider Z, still use this operating relationship between X and Y since it reflects responsibility rather than technical operation. Also, use this on the lowest organizational level possible."@en,
+        "Cette relation indique que l'organisation X est responsable de l'exploitation du système Y. Si l'organisation Y externalise l'exploitation d'un système X à un prestataire de services Z, utilisez toujours cette relation d'exploitation entre X et Y, car elle reflète la responsabilité plutôt que l'exploitation technique. Utilisez cette relation au niveau organisationnel le plus bas possible."@fr,
+        "Questa relazione indica che l'organizzazione X è responsabile della gestione del sistema Y. Se l'organizzazione Y esternalizza la gestione di un sistema X a un fornitore di servizi Z, continua a utilizzare questa relazione operativa tra X e Y, poiché riflette la responsabilità piuttosto che l'operazione tecnica. Inoltre, usa questa relazione al livello organizzativo più basso possibile."@it ;
     rdfs:domain schema:Organization ;
-    rdfs:range systemmap:CLS003 .
+    rdfs:range schema:SoftwareApplication ;
+    owl:inverseOf systemmap:operatedBy .
+
+systemmap:ownedBy a owl:ObjectProperty ;
+    rdfs:label "ist (teilweise) in Besitz von"@de,
+        "is (partially) owned by"@en,
+        "est (partiellement) détenu par"@fr,
+        "è (parzialmente) di proprietà di"@it ;
+    rdfs:comment "Diese Beziehung zeigt an, dass eine Organisation X (teilweise) im Besitz einer anderen Organisation Y ist."@de ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Organization ;
+    owl:inverseOf systemmap:owns .
+
+systemmap:owns a owl:ObjectProperty ;
+    rdfs:label "besitzt (teilweise)"@de,
+        "(partially) owns"@en,
+        "possède (partiellement)"@fr,
+        "possiede (parzialmente)"@it ;
+    rdfs:comment "Diese Beziehung zeigt an, dass eine Organisation X eine andere Organisation Y (teilweise) besitzt."@de ;
+    rdfs:domain schema:Organization ;
+    rdfs:range schema:Organization ;
+    owl:inverseOf systemmap:ownedBy .
+
+systemmap:usesIdentifier a owl:ObjectProperty ;
+    rdfs:label "nutzt ID"@de,
+        "uses ID"@en,
+        "utilise ID"@fr,
+        "utilizza ID"@it ;
+    rdfs:comment "Diese Beziehung zeigt an, dass eine Informationseinheit X für die Identifikation von einem <i>Business Object</i> eine Art von Identifikationsnummer Y verwendet."@de,
+        "This relationship indicates that an information unit X uses some kind of identification number Y for the identification of a <i>Business Object</i>."@en,
+        "Cette relation indique qu'une unité d'information X utilise un certain type de numéro d'identification Y pour identifier un <i>Business Object</i>."@fr,
+        "Questa relazione indica che un'unità di informazione X utilizza un certo tipo di numero di identificazione Y per l'identificazione di un <i>Business Object</i>."@it ;
+    rdfs:domain systemmap:Information ;
+    rdfs:range systemmap:Identifier .
 
 schema:member a owl:ObjectProperty ;
     rdfs:label "hat Mitgliederorganisationen"@de,

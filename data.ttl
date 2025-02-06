@@ -4,256 +4,347 @@
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/foag/system-map#> .
 
-systemmap:INF004 a systemmap:CLS002 ;
-    rdfs:label "BUR-Number",
-        "BUR-Nummer"@de ;
-    systemmap:PRP012 systemmap:SYS025 .
+systemmap:ORG300 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Aargau"@de,
+        "Canton of Aargau"@en,
+        "Canton d'Argovie"@fr,
+        "Cantone Argovia"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Aargau."@de,
+        "The cantonal administration of Aargau."@en,
+        "L'administration cantonale d'Argovie."@fr,
+        "L'amministrazione cantonale di Argovia."@it ;
+    systemmap:abbreviation "AG" .
 
-systemmap:INF003 a systemmap:CLS003 ;
-    rdfs:label "Informationen zu Flächen und Kulturen"@de ;
-    rdfs:comment "Daten zu Grössen und Ort der Flächen (nur als Koordinaten ohne Polygone), landwirtschaftlichen Hauptkulturen und Betriebszugehörigkeit der Flächen."@de ;
-    systemmap:PRP012 systemmap:SYS003 ;
-    systemmap:PRP013 systemmap:INF030 .
+systemmap:ORG301 a systemmap:CantonalOrganization ;
+    rdfs:label "Departement Finanzen und Ressourcen"@de ;
+    schema:parentOrganization systemmap:ORG300 .
 
-systemmap:INF010 a systemmap:CLS003 ;
-    rdfs:label "Nationaler Sortenkatalog"@de,
-        "National variety catalog"@en,
-        "Catalogue national des variétés"@fr,
-        "Catalogo nazionale delle varietà"@it ;
-    rdfs:comment "Katalog von anerkannten landwirtschaftlich genutzten Pflanzensorten in der Schweiz. Die Informationen dazu werden von den Züchtern erfasst."@de,
-        "Catalog of recognized agricultural plant varieties used in Switzerland. The information is recorded by breeders."@en,
-        "Catalogue des variétés de plantes agricoles reconnues utilisées en Suisse. Les informations sont enregistrées par les sélectionneurs."@fr,
-        "Catalogo delle varietà di piante agricole riconosciute utilizzate in Svizzera. Le informazioni sono registrate dai selezionatori."@it ;
-    systemmap:PRP012 systemmap:SYS011 ;
-    systemmap:PRP014 systemmap:INF012 .
+systemmap:ORG302 a systemmap:CantonalOrganization ;
+    rdfs:label "Landwirtschaft"@de ;
+    schema:parentOrganization systemmap:ORG301 .
 
-systemmap:INF012 a systemmap:CLS003 ;
-    rdfs:label "Globale Pflanzenliste"@de,
-        "Global plant list"@en,
-        "Liste globale des plantes"@fr,
-        "Elenco globale delle piante"@it ;
-    rdfs:comment "Liste aller möglichen Pflanzenarten mit entsprechenden Pflanzenarten-Codes. UPOV verwendet ein spezifisches Codesystem, um Pflanzenarten und -gattungen eindeutig zu identifizieren. Diese sogenannten UPOV-Codes bestehen in der Regel aus fünf Buchstaben für die Gattung und drei Buchstaben für die Art, zum Beispiel steht <tt>PRUNU_ARM</tt> für <i>Prunus armeniaca</i> (Aprikose). Dieses System erleichtert die Klassifizierung und den Informationsaustausch über Pflanzensorten."@de,
-        "List of all possible plant species with corresponding plant species codes. UPOV uses a specific coding system to uniquely identify plant species and genera. These so-called UPOV codes usually consist of five letters for the genus and three letters for the species. For example, <tt>PRUNU_ARM</tt> stands for <i>Prunus armeniaca</i> (apricot). This system facilitates the classification and exchange of information on plant varieties."@en,
-        "Liste de toutes les espèces végétales possibles avec les codes d'espèces correspondants. L'UPOV utilise un système de codage spécifique pour identifier de manière unique les espèces et genres de plantes. Ces codes UPOV se composent généralement de cinq lettres pour le genre et de trois lettres pour l'espèce. Par exemple, <tt>PRUNU_ARM</tt> représente <i>Prunus armeniaca</i> (abricot). Ce système facilite la classification et l'échange d'informations sur les variétés de plantes."@fr,
-        "Elenco di tutte le possibili specie vegetali con i relativi codici di specie. L'UPOV utilizza un sistema di codifica specifico per identificare in modo univoco le specie e i generi di piante. Questi cosiddetti codici UPOV sono generalmente composti da cinque lettere per il genere e tre lettere per la specie. Ad esempio, <tt>PRUNU_ARM</tt> rappresenta <i>Prunus armeniaca</i> (albicocco). Questo sistema facilita la classificazione e lo scambio di informazioni sulle varietà vegetali."@it ;
-    systemmap:PRP012 systemmap:SYS024 .
+systemmap:ORG303 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Appenzell Ausserrhoden"@de,
+        "Canton of Appenzell Ausserrhoden"@en,
+        "Canton d'Appenzell Rhodes-Extérieures"@fr,
+        "Cantone di Appenzell Esterno"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Appenzell Ausserrhoden."@de,
+        "The cantonal administration of Appenzell Ausserrhoden."@en,
+        "L'administration cantonale d'Appenzell Rhodes-Extérieures."@fr,
+        "L'amministrazione cantonale di Appenzell Esterno."@it ;
+    systemmap:abbreviation "AR" .
 
-systemmap:INF013 a systemmap:CLS003 ;
-    rdfs:label "Globaler Sortenkatalog"@de,
-        "Global variety catalog"@en,
-        "Catalogue mondial des variétés"@fr,
-        "Catalogo globale delle varietà"@it ;
-    rdfs:comment "Informationen zu Pflanzensorten aus UPOV-Mitgliedsländern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD). Diese Sortenliste dient als zentrales Register für Sortenbezeichnungen und unterstützt bei der Überprüfung der Unterscheidbarkeit neuer Sorten."@de,
-        "Information on plant varieties from UPOV member countries as well as the Organisation for Economic Co-operation and Development (OECD). This variety list serves as a central register for variety denominations and supports the verification of the distinctness of new varieties."@en,
-        "Informations sur les variétés végétales des pays membres de l'UPOV ainsi que de l'Organisation de coopération et de développement économiques (OCDE). Cette liste de variétés sert de registre central pour les dénominations de variétés et aide à vérifier la distinction des nouvelles variétés."@fr,
-        "Informazioni sulle varietà vegetali provenienti dai paesi membri dell'UPOV e dall'Organizzazione per la cooperazione e lo sviluppo economico (OCSE). Questo elenco di varietà funge da registro centrale per le denominazioni varietali e supporta la verifica della distinzione delle nuove varietà."@it ;
-    systemmap:PRP012 systemmap:SYS024 ;
-    systemmap:PRP014 systemmap:INF010 .
+systemmap:ORG304 a systemmap:CantonalOrganization ;
+    rdfs:label "Departement Bau und Volkswirtschaft"@de ;
+    schema:parentOrganization systemmap:ORG303 .
 
-systemmap:INF022 a systemmap:CLS003 ;
-    rdfs:label "Daten zur Milchproduktion"@de,
-        "Data on milk production"@en,
-        "Données sur la production laitière"@fr,
-        "Dati sulla produzione di latte"@it ;
-    rdfs:comment "Monatliche Produktionsmengen (in kg) der im Vormonat gelieferten Kuh- und Büffelmilch von allen Milchproduzenten. Das BLW benötigt diese Information für die Ausrichtung der Zulage für Verkehrsmilch."@de,
-        "Monthly production quantities (in kg) of cow and buffalo milk delivered in the previous month by all milk producers. The BLW requires this information for the allocation of the subsidy for market milk."@en,
-        "Quantités de production mensuelles (en kg) du lait de vache et de bufflonne livré le mois précédent par tous les producteurs de lait. L'OFAG a besoin de ces informations pour l'octroi de la subvention pour le lait de consommation."@fr,
-        "Quantità di produzione mensili (in kg) del latte di mucca e bufala consegnato nel mese precedente da tutti i produttori di latte. L'UFAG necessita di queste informazioni per l'assegnazione del sussidio per il latte di consumo."@it ;
-    systemmap:PRP012 systemmap:SYS021 .
+systemmap:ORG305 a systemmap:CantonalOrganization ;
+    rdfs:label "Amt für Landwirtschaft"@de ;
+    schema:parentOrganization systemmap:ORG304 .
 
-systemmap:INF023 a systemmap:CLS003 ;
-    rdfs:label "Daten zur Milchverwertung"@de,
-        "Data on milk utilization"@en,
-        "Données sur la valorisation du lait"@fr,
-        "Dati sull'utilizzo del latte"@it ;
-    rdfs:comment "Diese Daten sind essenziell für die Berechnung und Auszahlung von Zulagen für verkäste Milch sowie für die Fütterung ohne Silage durch das Bundesamt für Landwirtschaft (BLW)."@de,
-        "These data are essential for the calculation and payment of subsidies for cheesed milk as well as for feeding without silage by the Federal Office for Agriculture (BLW)."@en,
-        "Ces données sont essentielles pour le calcul et le paiement des subventions pour le lait transformé en fromage ainsi que pour l'alimentation sans ensilage par l'Office fédéral de l'agriculture (OFAG)."@fr,
-        "Questi dati sono essenziali per il calcolo e il pagamento dei sussidi per il latte trasformato in formaggio e per l'alimentazione senza insilato da parte dell'Ufficio federale dell'agricoltura (UFAG)."@it ;
-    systemmap:PRP012 systemmap:SYS021 .
+systemmap:ORG306 a systemmap:CantonalOrganization ;
+    rdfs:label "Direktzahlungen und Tierzucht"@de ;
+    schema:parentOrganization systemmap:ORG305 .
 
-systemmap:INF025 a systemmap:CLS003 ;
-    rdfs:label "Daten zur Milchsegmentierung"@de,
-        "Data on milk segmentation"@en,
-        "Données sur la segmentation du lait"@fr,
-        "Dati sulla segmentazione del latte"@it ;
-    rdfs:comment "Daten zur Segmentierung der Milchverwertung gemäß dem BOM1-Reglement."@de,
-        "Data on the segmentation of milk utilization according to the BOM1 regulation."@en,
-        "Données sur la segmentation de la valorisation du lait selon le règlement BOM1."@fr,
-        "Dati sulla segmentazione dell'utilizzo del latte secondo il regolamento BOM1."@it ;
-    systemmap:PRP012 systemmap:SYS021 .
+systemmap:ORG307 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Appenzell Innerrhoden"@de,
+        "Canton of Appenzell Innerrhoden"@en,
+        "Canton d'Appenzell Rhodes-Intérieures"@fr,
+        "Cantone di Appenzell Interno"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Appenzell Innerrhoden."@de,
+        "The cantonal administration of Appenzell Innerrhoden."@en,
+        "L'administration cantonale d'Appenzell Rhodes-Intérieures."@fr,
+        "L'amministrazione cantonale di Appenzell Interno."@it ;
+    systemmap:abbreviation "AI" .
 
-systemmap:INF026 a systemmap:CLS003 ;
-    rdfs:label "Milchstatistik"@de,
-        "Milk statistics"@en,
-        "Statistiques du lait"@fr,
-        "Statistiche del latte"@it ;
-    rdfs:comment "Monatliche Statistiken und Mehrjahresvergleiche, die Angaben über die produzierte Milch und deren Verarbeitung in verschiedene Produktgruppen enthalten."@de,
-        "Monthly statistics and multi-year comparisons containing information on the milk produced and its processing into different product groups."@en,
-        "Statistiques mensuelles et comparaisons pluriannuelles contenant des informations sur le lait produit et sa transformation en différentes catégories de produits."@fr,
-        "Statistiche mensili e confronti pluriennali contenenti informazioni sul latte prodotto e sulla sua trasformazione in diverse categorie di prodotti."@it ;
-    systemmap:PRP012 systemmap:SYS021 .
+systemmap:ORG308 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Basel-Landschaft"@de,
+        "Canton of Basel-Landschaft"@en,
+        "Canton de Bâle-Campagne"@fr,
+        "Cantone Basilea Campagna"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Basel-Landschaft."@de,
+        "The cantonal administration of Basel-Landschaft."@en,
+        "L'administration cantonale de Bâle-Campagne."@fr,
+        "L'amministrazione cantonale di Basilea Campagna."@it ;
+    systemmap:abbreviation "BL" .
 
-systemmap:INF028 a systemmap:CLS003 ;
-    rdfs:label "Details zu Unternehmen"@de ;
-    rdfs:comment "Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit, Grundkapital der Aktiengesellschaften, Umsatzzahlen, Datum des Eintrags oder der Löschung im Handelsregister, Datum der Bekanntgabe der Gründung oder Schliessung eines Unternehmens oder Betriebs."@de ;
-    systemmap:PRP012 systemmap:SYS025 .
+systemmap:ORG309 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Basel-Stadt"@de,
+        "Canton of Basel-Stadt"@en,
+        "Canton de Bâle-Ville"@fr,
+        "Cantone Basilea Città"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Basel-Stadt."@de,
+        "The cantonal administration of Basel-Stadt."@en,
+        "L'administration cantonale de Bâle-Ville."@fr,
+        "L'amministrazione cantonale di Basilea Città."@it ;
+    systemmap:abbreviation "BS" .
 
-systemmap:INF001 a systemmap:CLS004 ;
-    rdfs:label "Kontaktdaten Bewirtschaftenden"@de,
-        "Contact details of farm managers"@en,
-        "Coordonnées des exploitants agricoles"@fr,
-        "Dati di contatto dei gestori agricoli"@it ;
-    rdfs:comment "Informationen zu Kontaktdaten von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de,
-        "Information on the contact details of farm managers, such as email addresses or phone numbers."@en,
-        "Informations sur les coordonnées des exploitants agricoles, telles que les adresses e-mail ou les numéros de téléphone."@fr,
-        "Informazioni sui dati di contatto dei gestori agricoli, come indirizzi e-mail o numeri di telefono."@it ;
-    systemmap:PRP012 systemmap:SYS003 .
+systemmap:ORG310 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Bern"@de,
+        "Canton of Bern"@en,
+        "Canton de Berne"@fr,
+        "Cantone di Berna"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Bern."@de,
+        "The cantonal administration of Bern."@en,
+        "L'administration cantonale de Berne."@fr,
+        "L'amministrazione cantonale di Berna."@it ;
+    systemmap:abbreviation "BE" .
 
-systemmap:INF002 a systemmap:CLS004 ;
-    rdfs:label "Informationen zu Betriebsleitenden"@de,
-        "Information about farm managers"@en,
-        "Informations sur les directeurs d'exploitation"@fr,
-        "Informazioni sui gestori aziendali"@it ;
-    rdfs:comment "Beruf und Alter der Betriebsleiterin bzw. des Betriebsleiters."@de,
-        "Occupation and age of the farm manager."@en,
-        "Profession et âge du directeur ou de la directrice d'exploitation."@fr,
-        "Professione ed età del gestore aziendale."@it ;
-    systemmap:PRP001 systemmap:INF004 ;
-    systemmap:PRP012 systemmap:SYS003 ;
-    systemmap:PRP013 systemmap:INF030 .
+systemmap:ORG311 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Freiburg"@de,
+        "Canton of Fribourg"@en,
+        "Canton de Fribourg"@fr,
+        "Cantone di Friburgo"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Freiburg."@de,
+        "The cantonal administration of Fribourg."@en,
+        "L'administration cantonale de Fribourg."@fr,
+        "L'amministrazione cantonale di Friburgo."@it ;
+    systemmap:abbreviation "FR" .
 
-systemmap:INF011 a systemmap:CLS004 ;
-    rdfs:label "Kontaktdaten Züchter"@de,
-        "Contact details of breeders"@en,
-        "Coordonnées des sélectionneurs"@fr,
-        "Dati di contatto dei selezionatori"@it ;
-    rdfs:comment "Kontaktdaten der Züchter, welche Informationen zu den Sorten an ProVar geben."@de,
-        "Contact details of breeders who provide information about the varieties to ProVar."@en,
-        "Coordonnées des sélectionneurs qui fournissent des informations sur les variétés à ProVar."@fr,
-        "Dati di contatto dei selezionatori che forniscono informazioni sulle varietà a ProVar."@it ;
-    systemmap:PRP012 systemmap:SYS011 .
+systemmap:ORG312 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Genf"@de,
+        "Canton of Geneva"@en,
+        "Canton de Genève"@fr,
+        "Cantone di Ginevra"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Genf."@de,
+        "The cantonal administration of Geneva."@en,
+        "L'administration cantonale de Genève."@fr,
+        "L'amministrazione cantonale di Ginevra."@it ;
+    systemmap:abbreviation "GE" .
 
-systemmap:INF020 a systemmap:CLS004 ;
-    rdfs:label "Kontaktdaten Milchproduzenten"@de,
-        "Contact details of milk producers"@en,
-        "Coordonnées des producteurs de lait"@fr,
-        "Dati di contatto dei produttori di latte"@it ;
-    rdfs:comment "Kontaktdaten der Milchproduzenten wie Adressen, TVD-Nummer, AGIS-Nummer des Betriebs, AGIS Nummer des Bewirtschaftenden und Zahlungsinformationen für die Ausbezahlung der Zulage für verkäste Milch und die Zulage für Fütterung ohne Silage. Wenn möglich, werden diese Kontaktdaten aus AGIS bezogen."@de,
-        "Contact details of milk producers, such as addresses, TVD number, AGIS number of the farm, AGIS number of the operator, and payment information for the subsidy for cheesed milk and the subsidy for feeding without silage. If possible, these contact details are obtained from AGIS."@en,
-        "Coordonnées des producteurs de lait, telles que les adresses, le numéro TVD, le numéro AGIS de l'exploitation, le numéro AGIS de l'exploitant et les informations de paiement pour la subvention pour le lait transformé en fromage et la subvention pour l'alimentation sans ensilage. Si possible, ces coordonnées sont obtenues auprès d'AGIS."@fr,
-        "Dati di contatto dei produttori di latte, come indirizzi, numero TVD, numero AGIS dell'azienda, numero AGIS del gestore e informazioni di pagamento per il sussidio per il latte trasformato in formaggio e il sussidio per l'alimentazione senza insilato. Se possibile, questi dati di contatto vengono ottenuti da AGIS."@it ;
-    systemmap:PRP012 systemmap:SYS021 ;
-    systemmap:PRP014 systemmap:INF001 .
+systemmap:ORG313 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Glarus"@de,
+        "Canton of Glarus"@en,
+        "Canton de Glaris"@fr,
+        "Cantone di Glarus"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Glarus."@de,
+        "The cantonal administration of Glarus."@en,
+        "L'administration cantonale de Glaris."@fr,
+        "L'amministrazione cantonale di Glarus."@it ;
+    systemmap:abbreviation "GL" .
 
-systemmap:INF021 a systemmap:CLS004 ;
-    rdfs:label "Kontaktdaten Milchverarbeiter"@de,
-        "Contact details of milk processors"@en,
-        "Coordonnées des transformateurs de lait"@fr,
-        "Dati di contatto dei trasformatori di latte"@it ;
-    rdfs:comment "Kontaktdaten der Milchverarbeiter wie Adressen oder Identifikationsnummern."@de,
-        "Contact details of milk processors, such as addresses or identification numbers."@en,
-        "Coordonnées des transformateurs de lait, telles que les adresses ou les numéros d'identification."@fr,
-        "Dati di contatto dei trasformatori di latte, come indirizzi o numeri di identificazione."@it ;
-    systemmap:PRP012 systemmap:SYS021 .
+systemmap:ORG314 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Graubünden"@de,
+        "Canton of Graubünden"@en,
+        "Canton des Grisons"@fr,
+        "Cantone dei Grigioni"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Graubünden."@de,
+        "The cantonal administration of Graubünden."@en,
+        "L'administration cantonale des Grisons."@fr,
+        "L'amministrazione cantonale dei Grigioni."@it ;
+    systemmap:abbreviation "GR" .
 
-systemmap:INF027 a systemmap:CLS004 ;
-    rdfs:label "Stammdaten und Identifikatoren"@de,
-        "Master data and identifiers"@en,
-        "Données de base et identifiants"@fr,
-        "Dati di base e identificatori"@it ;
-    rdfs:comment "Name und Adresse des Unternehmens oder Betriebs, Gemeindenummern, BUR-Nummer (nichtsprechende 8-stellige Identifikationsnummer), Unternehmens-Identifikationsnummer (UID), Art der wirtschaftlichen Tätigkeit (NOGA), Rechtsform des Unternehmens."@de,
-        "Name and address of the company or business, municipality numbers, BUR number (non-speaking 8-digit identification number), company identification number (UID), type of economic activity (NOGA), legal form of the company."@en,
-        "Nom et adresse de l'entreprise ou de l'exploitation, numéros de commune, numéro BUR (numéro d'identification à 8 chiffres non parlant), numéro d'identification de l'entreprise (UID), type d'activité économique (NOGA), forme juridique de l'entreprise."@fr,
-        "Nome e indirizzo dell'azienda o dell'impresa, numeri dei comuni, numero BUR (numero di identificazione a 8 cifre non parlante), numero di identificazione aziendale (UID), tipo di attività economica (NOGA), forma giuridica dell'azienda."@it ;
-    systemmap:PRP012 systemmap:SYS025 .
+systemmap:ORG315 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Jura"@de,
+        "Canton of Jura"@en,
+        "Canton du Jura"@fr,
+        "Cantone del Giura"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Jura."@de,
+        "The cantonal administration of Jura."@en,
+        "L'administration cantonale du Jura."@fr,
+        "L'amministrazione cantonale del Giura."@it ;
+    systemmap:abbreviation "JU" .
 
-systemmap:INF029 a systemmap:CLS004 ;
-    rdfs:label "Informationen zu Forstbetrieben"@de,
-        "Information about forestry enterprises"@en,
-        "Informations sur les entreprises forestières"@fr,
-        "Informazioni sulle aziende forestali"@it ;
-    rdfs:comment "Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit."@de,
-        "Number of employed persons by gender and working time."@en,
-        "Nombre de personnes employées selon le sexe et le temps de travail."@fr,
-        "Numero di persone impiegate per genere e orario di lavoro."@it ;
-    systemmap:PRP012 systemmap:SYS025 .
+systemmap:ORG316 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Luzern"@de,
+        "Canton of Lucerne"@en,
+        "Canton de Lucerne"@fr,
+        "Cantone di Lucerna"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Luzern."@de,
+        "The cantonal administration of Lucerne."@en,
+        "L'administration cantonale de Lucerne."@fr,
+        "L'amministrazione cantonale di Lucerna."@it ;
+    systemmap:abbreviation "LU" .
 
-systemmap:INF030 a systemmap:CLS004 ;
-    rdfs:label "Informationen zu Landwirtschaftsbetrieben"@de,
-        "Information about agricultural enterprises"@en,
-        "Informations sur les exploitations agricoles"@fr,
-        "Informazioni sulle aziende agricole"@it ;
-    rdfs:comment "Zahl der Grossvieheinheiten, Angaben über die Bodennutzung, den Beruf und das Alter des Betriebsleiters/der Betriebsleiterin."@de,
-        "Number of large livestock units, information on land use, occupation and age of the farm manager."@en,
-        "Nombre d'unités de gros bétail, informations sur l'utilisation des sols, la profession et l'âge du directeur ou de la directrice d'exploitation."@fr,
-        "Numero di unità di bestiame grosso, informazioni sull'uso del suolo, la professione e l'età del gestore aziendale."@it ;
-    systemmap:PRP012 systemmap:SYS025 .
+systemmap:ORG317 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Neuenburg"@de,
+        "Canton of Neuchâtel"@en,
+        "Canton de Neuchâtel"@fr,
+        "Cantone di Neuchâtel"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Neuenburg."@de,
+        "The cantonal administration of Neuchâtel."@en,
+        "L'administration cantonale de Neuchâtel."@fr,
+        "L'amministrazione cantonale di Neuchâtel."@it ;
+    systemmap:abbreviation "NE" .
 
-systemmap:INF031 a systemmap:CLS004 ;
-    rdfs:label "Pflanzenschutzmittel-Importe"@de,
-        "Pesticide imports"@en,
-        "Importations de produits phytosanitaires"@fr,
-        "Importazioni di prodotti fitosanitari"@it ;
-    rdfs:comment "Daten zu jedem Import von Pflanzenschutzmitteln mit UID und Namen des Importeurs, Datum des Imports, Importmenge, Warenbezeichnung (Freitext) sowie Zustelladresse."@de,
-        "Data on each import of pesticides, including UID and name of the importer, date of import, import quantity, product designation (free text), and delivery address."@en,
-        "Données sur chaque importation de produits phytosanitaires, y compris l'UID et le nom de l'importateur, la date d'importation, la quantité importée, la désignation du produit (texte libre) et l'adresse de livraison."@fr,
-        "Dati su ogni importazione di prodotti fitosanitari, compresi UID e nome dell'importatore, data di importazione, quantità importata, denominazione del prodotto (testo libero) e indirizzo di consegna."@it ;
-    systemmap:PRP012 systemmap:SYS026 .
+systemmap:ORG318 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Nidwalden"@de,
+        "Canton of Nidwalden"@en,
+        "Canton de Nidwald"@fr,
+        "Cantone di Nidvaldo"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Nidwalden."@de,
+        "The cantonal administration of Nidwalden."@en,
+        "L'administration cantonale de Nidwald."@fr,
+        "L'amministrazione cantonale di Nidvaldo."@it ;
+    systemmap:abbreviation "NW" .
 
-systemmap:INF024 a systemmap:CLS005 ;
-    rdfs:label "Resultate der Milchprüfung"@de,
-        "Results of milk testing"@en,
-        "Résultats du contrôle du lait"@fr,
-        "Risultati del controllo del latte"@it ;
-    rdfs:comment "Ergebnisse der öffentlich-rechtlichen Milchprüfung. Bei der öffentlich-rechtlichen Milchprüfung wird die Kuhmilch zweimal monatlich auf die Prüfmerkmale Keimzahl, somatische Zellen und Hemmstoffe untersucht. Hygienisch ungenügende Resultate haben Beanstandungen und bei länger andauernden Hygienemängeln eine amtliche Milchliefersperre zur Folge. Die Ergebnisse der Milchprüfung werden über die Plattform dbmilch.ch an berechtigte Kreise bereitgestellt."@de,
-        "Results of the public milk testing. In public milk testing, cow’s milk is examined twice a month for the parameters germ count, somatic cells, and inhibitors. Hygienically insufficient results lead to complaints and, in case of prolonged hygiene deficiencies, an official milk delivery ban. The results of the milk testing are made available to authorized parties via the platform dbmilch.ch."@en,
-        "Résultats du contrôle public du lait. Lors du contrôle public du lait, le lait de vache est analysé deux fois par mois pour les paramètres suivants : nombre de germes, cellules somatiques et inhibiteurs. Des résultats hygiéniques insuffisants entraînent des réclamations et, en cas de carences hygiéniques prolongées, une interdiction officielle de livraison de lait. Les résultats du contrôle du lait sont mis à disposition des cercles autorisés via la plateforme dbmilch.ch."@fr,
-        "Risultati del controllo pubblico del latte. Nel controllo pubblico del latte, il latte di mucca viene analizzato due volte al mese per i seguenti parametri: conta dei germi, cellule somatiche e inibitori. Risultati igienicamente insufficienti comportano reclami e, in caso di carenze igieniche prolungate, un divieto ufficiale di consegna del latte. I risultati del controllo del latte sono resi disponibili ai soggetti autorizzati tramite la piattaforma dbmilch.ch."@it ;
-    systemmap:PRP012 systemmap:SYS021 .
+systemmap:ORG319 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Obwalden"@de,
+        "Canton of Obwalden"@en,
+        "Canton d'Obwald"@fr,
+        "Cantone di Obvaldo"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Obwalden."@de,
+        "The cantonal administration of Obwalden."@en,
+        "L'administration cantonale d'Obwald."@fr,
+        "L'amministrazione cantonale di Obvaldo."@it ;
+    systemmap:abbreviation "OW" .
 
-systemmap:ORG100 a systemmap:CLS007 ;
-    rdfs:label "TSM Treuhand GmbH"@de,
-        "TSM Treuhand LLC"@en,
-        "TSM Treuhand GmbH"@fr,
-        "TSM Fiduciaria S. a g. l."@it ;
-    rdfs:comment "Die TSM Treuhand GmbH erfüllt unterschiedliche öffentlich- und privatrechtliche Aufträge in der Agrar- und Lebensmittelbranche. TSM steht für Treuhand, Statistik und Management. Die Haupttätigkeit der TSM besteht in der Verwaltung der Datenbank dbmilch.ch. Zudem werden weitere Aufträge im Bereich Treuhand, Fondsverwaltungen, Statistiken und Exportkontrollen durchgeführt. Der Hauptauftraggeber der TSM ist das Bundesamt für Landwirtschaft (BLW)."@de,
-        "TSM Treuhand LLC carries out various public and private law mandates in the agricultural and food sector. TSM stands for Trust, Statistics, and Management. The main activity of TSM is the management of the dbmilch.ch database. In addition, further assignments in the areas of fiduciary services, fund management, statistics, and export controls are carried out. The main client of TSM is the Federal Office for Agriculture (BLW)."@en,
-        "TSM Fiduciaire S. à r. l. remplit divers mandats de droit public et privé dans le secteur agricole et alimentaire. TSM signifie Fiduciaire, Statistique et Management. L'activité principale de TSM est la gestion de la base de données dbmilch.ch. En outre, d'autres missions sont effectuées dans les domaines de la fiducie, de la gestion de fonds, des statistiques et des contrôles à l'exportation. Le principal client de TSM est l'Office fédéral de l'agriculture (OFAG)."@fr,
-        "TSM Treuhand GmbH svolge diversi mandati di diritto pubblico e privato nel settore agricolo e alimentare. TSM sta per Fiduciario, Statistica e Management. L'attività principale di TSM è la gestione del database dbmilch.ch. Inoltre, vengono svolti altri incarichi nei settori della fiduciaria, della gestione dei fondi, delle statistiche e dei controlli all'esportazione. Il principale committente di TSM è l'Ufficio federale dell'agricoltura (UFAG)."@it .
+systemmap:ORG320 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Schaffhausen"@de,
+        "Canton of Schaffhausen"@en,
+        "Canton de Schaffhouse"@fr,
+        "Cantone di Schaffhausen"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Schaffhausen."@de,
+        "The cantonal administration of Schaffhausen."@en,
+        "L'administration cantonale de Schaffhouse."@fr,
+        "L'amministrazione cantonale di Schaffhausen."@it ;
+    systemmap:abbreviation "SH" .
 
-systemmap:ORG101 a systemmap:CLS007 ;
-    rdfs:label "Identitas AG"@de,
-        "Identitas AG"@en,
-        "Identitas AG"@fr,
-        "Identitas AG"@it ;
-    rdfs:comment "Die Identitas AG entwickelt und betreibt Informationssysteme für die Tierverkehrsdatenbank der Schweiz. Sie stellt Lösungen für die Rückverfolgbarkeit von Tieren, Tiergesundheit und Lebensmittelsicherheit bereit. Als IT-Dienstleister für Bund, Kantone und private Akteure bietet Identitas AG digitale Services zur Erfassung, Verarbeitung und Analyse von Tier- und Betriebsdaten an. Das Unternehmen hat seinen Sitz in Bern."@de,
-        "Identitas AG develops and operates information systems for Switzerland's animal traffic database. It provides solutions for animal traceability, animal health, and food safety. As an IT service provider for the federal government, cantons, and private actors, Identitas AG offers digital services for recording, processing, and analyzing animal and farm data. The company is based in Bern."@en,
-        "Identitas AG développe et exploite des systèmes d'information pour la base de données du trafic des animaux en Suisse. Elle propose des solutions pour la traçabilité des animaux, la santé animale et la sécurité alimentaire. En tant que prestataire de services informatiques pour la Confédération, les cantons et les acteurs privés, Identitas AG fournit des services numériques pour la saisie, le traitement et l'analyse des données animales et agricoles. L'entreprise est basée à Berne."@fr,
-        "Identitas AG sviluppa e gestisce sistemi informativi per la banca dati del traffico degli animali in Svizzera. Fornisce soluzioni per la tracciabilità degli animali, la salute animale e la sicurezza alimentare. In qualità di fornitore di servizi IT per la Confederazione, i cantoni e gli attori privati, Identitas AG offre servizi digitali per la registrazione, l'elaborazione e l'analisi dei dati sugli animali e sulle aziende agricole. L'azienda ha sede a Berna."@it .
+systemmap:ORG321 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Schwyz"@de,
+        "Canton of Schwyz"@en,
+        "Canton de Schwytz"@fr,
+        "Cantone di Svitto"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Schwyz."@de,
+        "The cantonal administration of Schwyz."@en,
+        "L'administration cantonale de Schwytz."@fr,
+        "L'amministrazione cantonale di Svitto."@it ;
+    systemmap:abbreviation "SZ" .
 
-systemmap:ORG102 a systemmap:CLS007 ;
-    rdfs:label "Barto AG"@de,
-        "Barto AG"@en,
-        "Barto AG"@fr,
-        "Barto AG"@it ;
-    rdfs:comment "Die Barto AG entwickelt und betreibt eine digitale Plattform für die Landwirtschaft. Sie bietet Landwirtinnen und Landwirten eine zentrale Lösung zur Betriebsführung, Dokumentation und Analyse von Betriebsdaten. Die Plattform integriert verschiedene agronomische und administrative Funktionen und ermöglicht eine effiziente Verwaltung von Ressourcen. Barto AG arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen. Der Sitz des Unternehmens befindet sich in der Schweiz."@de,
-        "Barto AG develops and operates a digital platform for agriculture. It provides farmers with a central solution for farm management, documentation, and analysis of operational data. The platform integrates various agronomic and administrative functions and enables efficient resource management. Barto AG collaborates with partners in the agricultural sector to provide innovative digital solutions. The company is based in Switzerland."@en,
-        "Barto AG développe et exploite une plateforme numérique pour l'agriculture. Elle offre aux agriculteurs une solution centrale pour la gestion des exploitations, la documentation et l'analyse des données d'exploitation. La plateforme intègre diverses fonctions agronomiques et administratives et permet une gestion efficace des ressources. Barto AG collabore avec des partenaires du secteur agricole pour proposer des solutions numériques innovantes. L'entreprise est basée en Suisse."@fr,
-        "Barto AG sviluppa e gestisce una piattaforma digitale per l'agricoltura. Fornisce agli agricoltori una soluzione centrale per la gestione aziendale, la documentazione e l'analisi dei dati operativi. La piattaforma integra varie funzioni agronomiche e amministrative e consente una gestione efficiente delle risorse. Barto AG collabora con partner del settore agricolo per fornire soluzioni digitali innovative. L'azienda ha sede in Svizzera."@it ;
-    systemmap:PRP005 systemmap:ORG103 .
+systemmap:ORG322 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Solothurn"@de,
+        "Canton of Solothurn"@en,
+        "Canton de Soleure"@fr,
+        "Cantone di Soletta"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Solothurn."@de,
+        "The cantonal administration of Solothurn."@en,
+        "L'administration cantonale de Soleure."@fr,
+        "L'amministrazione cantonale di Soletta."@it ;
+    systemmap:abbreviation "SO" .
 
-systemmap:ORG103 a systemmap:CLS007 ;
-    rdfs:label "Fenaco Genossenschaft"@de,
-        "Fenaco Cooperative"@en,
-        "Coopérative Fenaco"@fr,
-        "Cooperativa Fenaco"@it ;
-    rdfs:comment "Die Fenaco Genossenschaft ist ein schweizerisches Agrarunternehmen, das die Landwirtinnen und Landwirte dabei unterstützt, ihre Betriebe wirtschaftlich erfolgreich zu führen. Sie ist in den Bereichen Agrarhandel, Lebensmittelproduktion, Detailhandel und Energie tätig. Fenaco ist Eigentümerin von Marken wie Landi, Volg, Agrola und diverse Lebensmittelproduzenten. Die Genossenschaft gehört Schweizer Landwirten und hat ihren Hauptsitz in Bern."@de,
-        "The Fenaco Cooperative is a Swiss agricultural company that supports farmers in running their businesses successfully. It operates in the areas of agricultural trade, food production, retail, and energy. Fenaco owns brands such as Landi, Volg, Agrola, and various food producers. The cooperative is owned by Swiss farmers and is headquartered in Bern."@en,
-        "La coopérative Fenaco est une entreprise agricole suisse qui aide les agriculteurs à gérer leurs exploitations avec succès. Elle est active dans les domaines du commerce agricole, de la production alimentaire, du commerce de détail et de l'énergie. Fenaco possède des marques telles que Landi, Volg, Agrola et divers producteurs alimentaires. La coopérative appartient aux agriculteurs suisses et son siège est à Berne."@fr,
-        "La cooperativa Fenaco è un'azienda agricola svizzera che supporta gli agricoltori nella gestione economica delle loro aziende. Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia. Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari. La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna."@it .
+systemmap:ORG323 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton St. Gallen"@de,
+        "Canton of St. Gallen"@en,
+        "Canton de Saint-Gall"@fr,
+        "Cantone di San Gallo"@it ;
+    rdfs:comment "Die kantonale Verwaltung von St. Gallen."@de,
+        "The cantonal administration of St. Gallen."@en,
+        "L'administration cantonale de Saint-Gall."@fr,
+        "L'amministrazione cantonale di San Gallo."@it ;
+    systemmap:abbreviation "SG" .
 
-systemmap:ORG001 a systemmap:CLS008 ;
+systemmap:ORG324 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Tessin"@de,
+        "Canton of Ticino"@en,
+        "Canton du Tessin"@fr,
+        "Cantone Ticino"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Tessin."@de,
+        "The cantonal administration of Ticino."@en,
+        "L'administration cantonale du Tessin."@fr,
+        "L'amministrazione cantonale di Ticino."@it ;
+    systemmap:abbreviation "TI" .
+
+systemmap:ORG325 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Thurgau"@de,
+        "Canton of Thurgau"@en,
+        "Canton de Thurgovie"@fr,
+        "Cantone di Turgovia"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Thurgau."@de,
+        "The cantonal administration of Thurgau."@en,
+        "L'administration cantonale de Thurgau."@fr,
+        "L'amministrazione cantonale di Turgovia."@it ;
+    systemmap:abbreviation "TG" .
+
+systemmap:ORG326 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Uri"@de,
+        "Canton of Uri"@en,
+        "Canton d'Uri"@fr,
+        "Cantone di Uri"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Uri."@de,
+        "The cantonal administration of Uri."@en,
+        "L'administration cantonale d'Uri."@fr,
+        "L'amministrazione cantonale di Uri."@it ;
+    systemmap:abbreviation "UR" .
+
+systemmap:ORG327 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Waadt"@de,
+        "Canton of Vaud"@en,
+        "Canton de Vaud"@fr,
+        "Cantone di Vaud"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Waadt."@de,
+        "The cantonal administration of Vaud."@en,
+        "L'administration cantonale de Vaud."@fr,
+        "L'amministrazione cantonale di Vaud."@it ;
+    systemmap:abbreviation "VD" .
+
+systemmap:ORG328 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Wallis"@de,
+        "Canton of Valais"@en,
+        "Canton du Valais"@fr,
+        "Cantone del Vallese"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Wallis."@de,
+        "The cantonal administration of Valais."@en,
+        "L'administration cantonale du Valais."@fr,
+        "L'amministrazione cantonale del Vallese."@it ;
+    systemmap:abbreviation "VS" .
+
+systemmap:ORG329 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Zug"@de,
+        "Canton of Zug"@en,
+        "Canton de Zoug"@fr,
+        "Cantone di Zugo"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Zug."@de,
+        "The cantonal administration of Zug."@en,
+        "L'administration cantonale de Zoug."@fr,
+        "L'amministrazione cantonale di Zugo."@it ;
+    systemmap:abbreviation "ZG" .
+
+systemmap:ORG330 a systemmap:CantonalOrganization ;
+    rdfs:label "Kanton Zürich"@de,
+        "Canton of Zurich"@en,
+        "Canton de Zurich"@fr,
+        "Cantone di Zurigo"@it ;
+    rdfs:comment "Die kantonale Verwaltung von Zürich."@de,
+        "The cantonal administration of Zurich."@en,
+        "L'administration cantonale de Zurich."@fr,
+        "L'amministrazione cantonale di Zurigo."@it ;
+    systemmap:abbreviation "ZH" .
+
+systemmap:ORG331 a systemmap:CantonalOrganization ;
+    rdfs:label "Land- und Forstwirtschaftsdepartement"@de ;
+    systemmap:abbreviation "LFD"@de ;
+    schema:parentOrganization systemmap:ORG307 .
+
+systemmap:ORG332 a systemmap:CantonalOrganization ;
+    rdfs:label "Landwirtschaftsamt"@de ;
+    schema:parentOrganization systemmap:ORG331 .
+
+systemmap:ORG333 a systemmap:CantonalOrganization ;
+    rdfs:label "Ebenrain-Zentrum für Landwirtschaft, Natur und Ernährung"@de ;
+    schema:parentOrganization systemmap:ORG308 .
+
+systemmap:ORG334 a systemmap:CantonalOrganization ;
+    rdfs:label "Amt für Umwelt und Energie"@de ;
+    schema:parentOrganization systemmap:ORG309 .
+
+systemmap:ORG335 a systemmap:CantonalOrganization ;
+    rdfs:label "Landwirtschaft"@de ;
+    schema:parentOrganization systemmap:ORG334 .
+
+systemmap:ORG336 a systemmap:CantonalOrganization ;
+    rdfs:label "Amt für Landwirtschaft und Natur"@de ;
+    systemmap:abbreviation "LANAT"@de ;
+    schema:parentOrganization systemmap:ORG310 .
+
+systemmap:ORG337 a systemmap:CantonalOrganization ;
+    rdfs:label "Abteilung Direktzahlungen"@de ;
+    schema:parentOrganization systemmap:ORG336 .
+
+systemmap:ORG338 a systemmap:CantonalOrganization ;
+    rdfs:label "Koordinationsstelle für das Adress- und Betriebsregister"@de ;
+    schema:parentOrganization systemmap:ORG337 .
+
+systemmap:ORG001 a systemmap:FederalOrganization ;
     rdfs:label "Bundesamt für Landwirtschaft"@de,
         "Federal Office for Agriculture"@en,
         "Office fédéral de l'agriculture"@fr,
@@ -263,12 +354,12 @@ systemmap:ORG001 a systemmap:CLS008 ;
         "L'Office fédéral de l'agriculture (OFAG) est le centre de compétence de la Confédération pour toutes les questions essentielles liées au secteur agricole."@fr,
         "L'Ufficio federale dell'agricoltura (UFAG) è il centro di competenza della Confederazione per tutte le questioni fondamentali relative al settore agricolo."@it ;
     owl:sameAs staatskalender:10008654 ;
-    systemmap:PRP101 "BLW"@de,
+    systemmap:abbreviation "BLW"@de,
         "FOAG"@en,
         "OFAG"@fr,
         "UFAG"@it .
 
-systemmap:ORG002 a systemmap:CLS008 ;
+systemmap:ORG002 a systemmap:FederalOrganization ;
     rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de,
         "Directorate for Digitalization and Data Management"@en,
         "Unité de direction Transition numérique et gestion des données"@fr,
@@ -278,13 +369,13 @@ systemmap:ORG002 a systemmap:CLS008 ;
         "La Direction de la numérisation et de la gestion des données s'engage à ce que la transformation numérique et la gestion des données dans le secteur agricole et alimentaire soient encouragées de manière ciblée et tournée vers l'avenir."@fr,
         "La Direzione per la digitalizzazione e la gestione dei dati si impegna a garantire che la trasformazione digitale e la gestione dei dati nel settore agricolo e alimentare siano promosse in modo mirato e orientato al futuro."@it ;
     owl:sameAs staatskalender:20034677 ;
-    systemmap:PRP101 "DBDD"@de,
+    systemmap:abbreviation "DBDD"@de,
         "DBDD"@en,
         "DBDD"@fr,
         "DBDD"@it ;
     schema:parentOrganization systemmap:ORG001 .
 
-systemmap:ORG004 a systemmap:CLS008 ;
+systemmap:ORG004 a systemmap:FederalOrganization ;
     rdfs:label "Direktionsbereich Recht, Ressourcen und Integrale Sicherheit"@de,
         "Directorate for Law, Resources, and Integral Security"@en,
         "Unité de direction Droit, ressources internes et sécurité intégrale"@fr,
@@ -293,13 +384,13 @@ systemmap:ORG004 a systemmap:CLS008 ;
         "The Directorate for Law, Resources, and Integral Security ensures the legal compliance of various BLW measures and is particularly responsible for the office’s personnel measures."@en,
         "La Direction du droit, des ressources et de la sécurité intégrale garantit la conformité juridique des différentes mesures de l'OFAG et est notamment responsable des mesures en matière de personnel du bureau."@fr,
         "La Direzione per il diritto, le risorse e la sicurezza integrale garantisce la conformità legale delle varie misure dell'UFAG ed è in particolare responsabile delle misure relative al personale dell'ufficio."@it ;
-    systemmap:PRP101 "DBRRIS"@de,
+    systemmap:abbreviation "DBRRIS"@de,
         "DBRRIS"@en,
         "DBRRIS"@fr,
         "DBRRIS"@it ;
     schema:parentOrganization systemmap:ORG001 .
 
-systemmap:ORG005 a systemmap:CLS008 ;
+systemmap:ORG005 a systemmap:FederalOrganization ;
     rdfs:label "Direktionsbereich Produktionsgrundlagen, natürliche Ressourcen und Forschung"@de,
         "Directorate for Production Resources, Natural Resources and Research"@en,
         "Unité de direction Bases de production, ressources naturelles et recherche"@fr,
@@ -308,13 +399,13 @@ systemmap:ORG005 a systemmap:CLS008 ;
         "Resilient production and ecosystem systems are at the center of the Directorate for Production Resources, Natural Resources and Research. Among other things, it is responsible for ensuring that plants are sustainably protected and animals are optimally fed. Furthermore, this directorate promotes various research and advisory projects in Switzerland and internationally."@en,
         "Les systèmes de production et les écosystèmes résilients sont au cœur de la Direction des bases de production, des ressources naturelles et de la recherche. Elle est notamment chargée de garantir que les plantes soient protégées durablement et que les animaux soient nourris de manière optimale. De plus, cette direction soutient divers projets de recherche et de conseil en Suisse et à l'international."@fr,
         "I sistemi produttivi e gli ecosistemi resilienti sono al centro della Direzione delle basi produttive, delle risorse naturali e della ricerca. Tra le altre cose, è responsabile della protezione sostenibile delle piante e dell'alimentazione ottimale degli animali. Inoltre, questa direzione promuove vari progetti di ricerca e consulenza in Svizzera e a livello internazionale."@it ;
-    systemmap:PRP101 "DBPRF"@de,
+    systemmap:abbreviation "DBPRF"@de,
         "DBPRF"@en,
         "DBPRF"@fr,
         "DBPRF"@it ;
     schema:parentOrganization systemmap:ORG001 .
 
-systemmap:ORG006 a systemmap:CLS008 ;
+systemmap:ORG006 a systemmap:FederalOrganization ;
     rdfs:label "Direktionsbereich Direktzahlungen und Ländliche Entwicklung"@de,
         "Directorate for Direct Payments and Rural Development"@en,
         "Unité de direction Paiements directs et développement rural"@fr,
@@ -323,10 +414,10 @@ systemmap:ORG006 a systemmap:CLS008 ;
         "Farmers provide various services for the general public and are therefore supported with financial contributions. The Directorate for Direct Payments and Rural Development is responsible for this. It also works to ensure the vitality of rural areas."@en,
         "Les agriculteurs fournissent divers services à la collectivité et sont donc soutenus par des contributions financières. La Direction des paiements directs et du développement rural en est responsable. Elle s'engage également pour la vitalité des zones rurales."@fr,
         "Gli agricoltori forniscono vari servizi alla collettività e sono quindi sostenuti con contributi finanziari. La Direzione dei pagamenti diretti e dello sviluppo rurale è responsabile di questo. Inoltre, si impegna per la vitalità delle aree rurali."@it ;
-    systemmap:PRP101 "DBDLE"@de ;
+    systemmap:abbreviation "DBDLE"@de ;
     schema:parentOrganization systemmap:ORG001 .
 
-systemmap:ORG007 a systemmap:CLS008 ;
+systemmap:ORG007 a systemmap:FederalOrganization ;
     rdfs:label "Direktionsbereich Märkte und Internationales"@de,
         "Directorate for Markets and International Affairs"@en,
         "Unité de direction Marchés et affaires internationales"@fr,
@@ -335,10 +426,10 @@ systemmap:ORG007 a systemmap:CLS008 ;
         "The Directorate for Markets and International Affairs works to ensure that agriculture achieves the highest possible added value from the sale of its products. It supports self-help measures, innovation, and the marketing of various sectors. Additionally, this directorate is involved in international organizations such as the UN Food and Agriculture Organization (FAO) and the World Trade Organization (WTO)."@en,
         "La Direction des marchés et des affaires internationales s'efforce de garantir que l'agriculture tire la plus grande valeur ajoutée possible de la vente de ses produits. Elle soutient les mesures d'auto-assistance, l'innovation et la commercialisation des différentes filières. De plus, cette direction est impliquée dans des organisations internationales telles que l'Organisation des Nations unies pour l'alimentation et l'agriculture (FAO) et l'Organisation mondiale du commerce (OMC)."@fr,
         "La Direzione dei mercati e degli affari internazionali si adopera affinché l'agricoltura ottenga il massimo valore aggiunto possibile dalla vendita dei suoi prodotti. Sostiene misure di auto-aiuto, innovazione e commercializzazione nei vari settori. Inoltre, questa direzione è coinvolta in organizzazioni internazionali come l'Organizzazione delle Nazioni Unite per l'alimentazione e l'agricoltura (FAO) e l'Organizzazione mondiale del commercio (OMC)."@it ;
-    systemmap:PRP101 "DBMI"@de ;
+    systemmap:abbreviation "DBMI"@de ;
     schema:parentOrganization systemmap:ORG001 .
 
-systemmap:ORG010 a systemmap:CLS008 ;
+systemmap:ORG010 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Agrarinformationssysteme"@de,
         "Agricultural Information Systems Division"@en,
         "Secteur d'information sur l'agriculture"@fr,
@@ -347,62 +438,62 @@ systemmap:ORG010 a systemmap:CLS008 ;
         "The Agricultural Information Systems Division is the central hub for agricultural data. It is responsible for the Agate portal – the online gateway for agriculture – as well as for central information systems. It implements professional requirements into technical solutions and ensures high data quality. We rely on seamless, digital processes and standards. FBAIS provides interfaces for retrieving and sharing data with other federal offices and third parties outside the administration."@en,
         "L'Unité des systèmes d'information agricole est la plaque tournante centrale des données agricoles. Elle est responsable du portail Agate – la plateforme en ligne pour l'agriculture – ainsi que des systèmes d'information centraux. Elle met en œuvre les exigences professionnelles en solutions techniques et garantit une haute qualité des données. Nous misons sur des processus et des standards numériques sans rupture. FBAIS propose des interfaces pour l'accès et la transmission des données à d'autres offices fédéraux ainsi qu'à des tiers en dehors de l'administration."@fr,
         "La Divisione dei sistemi informativi agricoli è il punto di riferimento centrale per i dati agricoli. È responsabile del portale Agate – lo sportello online per l'agricoltura – e dei sistemi informativi centrali. Implementa i requisiti professionali in soluzioni tecniche e garantisce un'elevata qualità dei dati. Puntiamo su processi e standard digitali senza interruzioni. FBAIS fornisce interfacce per l'accesso e la condivisione dei dati con altri uffici federali e con terzi al di fuori dell'amministrazione."@it ;
-    systemmap:PRP101 "FBAIS"@de,
+    systemmap:abbreviation "FBAIS"@de,
         "FBAIS"@en,
         "FBAIS"@fr,
         "FBAIS"@it ;
     schema:parentOrganization systemmap:ORG002 .
 
-systemmap:ORG011 a systemmap:CLS008 ;
+systemmap:ORG011 a systemmap:FederalOrganization ;
     rdfs:label "Kompetenzzentrum für die digitale Transformation"@de ;
-    systemmap:PRP101 "GRKDT"@de ;
+    systemmap:abbreviation "GRKDT"@de ;
     schema:parentOrganization systemmap:ORG002 .
 
-systemmap:ORG012 a systemmap:CLS008 ;
+systemmap:ORG012 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Marktanalyse"@de ;
-    systemmap:PRP101 "FBMA"@de ;
+    systemmap:abbreviation "FBMA"@de ;
     schema:parentOrganization systemmap:ORG002 .
 
-systemmap:ORG013 a systemmap:CLS008 ;
+systemmap:ORG013 a systemmap:FederalOrganization ;
     rdfs:label "Gruppe Business Intelligence"@de ;
-    systemmap:PRP101 "GRBI"@de ;
+    systemmap:abbreviation "GRBI"@de ;
     schema:parentOrganization systemmap:ORG002 .
 
-systemmap:ORG020 a systemmap:CLS008 ;
+systemmap:ORG020 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Direktzahlungsprogramme"@de ;
     rdfs:comment "Der Fachbereich ist für die Umsetzung von Direktzahlungsprogrammen in den Bereichen Umwelt, Tierwohl und Landschaft verantwortlich. Dabei wird die Umsetzung durch Unterstützung der kantonalen Stellen sichergestellt und die Oberaufsicht über den kantonalen Vollzug wahrgenommen. Zudem erfolgt eine kontinuierliche Weiterentwicklung des ökologischen Leistungsnachweises (ÖLN) sowie der Massnahmen zur Förderung von Tierwohl, Biodiversität, Ressourceneffizienz, Produktionssystemen und Landschaftsqualität. Die Koordination mit anderen Regelbereichen, darunter die Biodiversitätsstrategie, der Biolandbau sowie Energie- und Klimaschutzfragen, ist ebenso Bestandteil der Tätigkeiten. Darüber hinaus werden Schnittstellen zur Gesetzgebung in den Bereichen Tier-, Gewässer-, Umwelt-, Natur- und Heimatschutz gepflegt. Im technischen Bereich erfolgt die Bereitstellung und Nutzung der EDV-Applikation Hofdüngerflüsse (HODUFLU) für Betriebs- und Datenauswertungen. Zudem werden Vorgaben zur Kürzung von Direktzahlungen nach den geltenden Verordnungen umgesetzt. Die Bearbeitung von Stellungnahmen zu Parlamentsvorstössen, Beschwerdefällen und Bundesratsgeschäften gehört ebenfalls zu den Aufgaben. Ergänzend werden Öffentlichkeitsarbeit sowie die Information und Einbindung relevanter Akteure wahrgenommen. Die Mitwirkung in Begleitgruppen sowie die Beteiligung an Forschungsfragen und Evaluationen runden das Aufgabengebiet ab."@de ;
-    systemmap:PRP101 "FBDP"@de ;
+    systemmap:abbreviation "FBDP"@de ;
     schema:parentOrganization systemmap:ORG006 .
 
-systemmap:ORG021 a systemmap:CLS008 ;
+systemmap:ORG021 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Direktzahlungsgrundlagen"@de ;
     rdfs:comment "Der Fachbereich Direktzahlungsgrundlagen ist zuständig für die Umsetzung und Weiterentwicklung des Direktzahlungssystems im Bereich der  Versorgungssicherheit, der Kulturlandschaft, der Übergangsbeiträge, der landwirtschaftlichen Zonen und Gebiete, der Landwirtschaftlichen Begriffe sowie der Anerkennung von Betrieben und Betriebsformen."@de ;
-    systemmap:PRP101 "FBDG"@de ;
+    systemmap:abbreviation "FBDG"@de ;
     schema:parentOrganization systemmap:ORG006 .
 
-systemmap:ORG030 a systemmap:CLS008 ;
+systemmap:ORG030 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Genetische Ressourcen und Technologien"@de ;
-    systemmap:PRP101 "FBGRT"@de ;
+    systemmap:abbreviation "FBGRT"@de ;
     schema:parentOrganization systemmap:ORG005 .
 
-systemmap:ORG031 a systemmap:CLS008 ;
+systemmap:ORG031 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Pflanzengesundheit"@de ;
     rdfs:comment "Die Aufgabe des Fachbereiches Pflanzengesundheit (FBPG) ist es, die Einschleppung und Ausbreitung von (geregelten) besonders gefährlichen Schädlingen und Krankheiten von Pflanzen zu vermeiden. Dies ist wichtig, um wirtschaftliche, soziale und ökologische Schäden zu vermeiden. Der Eidgenössische Pflanzenschutzdienst (EPSD), der vom Fachbereich gemeinsam mit der Sektion Waldschutz und Waldgesundheit des Bundesamts für Umwelt (BAFU) geführt wird, ist für die Umsetzung dieser Aufgabe auf nationaler Ebene zuständig."@de ;
-    systemmap:PRP101 "FBPG"@de ;
+    systemmap:abbreviation "FBPG"@de ;
     schema:parentOrganization systemmap:ORG005 .
 
-systemmap:ORG032 a systemmap:CLS008 ;
+systemmap:ORG032 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich nachhaltiger Pflanzenschutz und Sorten"@de ;
     rdfs:comment "Der Fachbereich nachhaltiger Pflanzenschutz und Sorten (FB NPS) sorgt für den Schutz der Kulturen, den Vollzug des Saatgutrechtes und den Sortenschutz. Dabei werden sowohl präventive als auch direkte Pflanzenschutzmassnahmen angewendet, um hochwertige Lebensmittel zu produzieren. Zudem ist das BLW für die Weiterentwicklung der Verordnungen zu Vermehrungsmaterial, den Nationalen Sortenkatalog und den Vollzug der Bestimmungen in Zusammenarbeit mit Agroscope verantwortlich."@de ;
-    systemmap:PRP101 "FBNPS"@de ;
+    systemmap:abbreviation "FBNPS"@de ;
     schema:parentOrganization systemmap:ORG005 .
 
-systemmap:ORG040 a systemmap:CLS008 ;
+systemmap:ORG040 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Ein- und Ausfuhr"@de ;
-    systemmap:PRP101 "FBEA"@de ;
+    systemmap:abbreviation "FBEA"@de ;
     schema:parentOrganization systemmap:ORG007 .
 
-systemmap:ORG041 a systemmap:CLS008 ;
+systemmap:ORG041 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Tierische Produkte und Tierzucht"@de,
         "Sector Animal Products and Breeding"@en,
         "Secteur Produits animaux et élevage"@fr,
@@ -411,67 +502,316 @@ systemmap:ORG041 a systemmap:CLS008 ;
         "The design and further development of agricultural policy framework conditions in the field of animal products and breeding are among the core tasks of the SPAE. Furthermore, it ensures the smooth and correct implementation of the relevant provisions of the Agricultural Act and the following Federal Council ordinances: Milk Price Support Ordinance, Slaughter Livestock Ordinance, Egg Ordinance, Ordinance on Identitas AG and the Animal Traffic Database, Disposal Contribution Ordinance, Agricultural Declaration Ordinance, Maximum Stock Ordinance, Ordinance on Sector and Producer Organizations, Sheep Wool Ordinance, and Breeding Ordinance."@en,
         "La conception et le développement des cadres politiques agricoles dans le domaine des produits animaux et de l'élevage font partie des missions principales du SPAE. Il veille également à la mise en œuvre correcte et sans heurts des dispositions pertinentes de la loi agricole et des ordonnances suivantes du Conseil fédéral : Ordonnance sur le soutien des prix du lait, Ordonnance sur le bétail de boucherie, Ordonnance sur les œufs, Ordonnance sur Identitas AG et la base de données sur le trafic des animaux, Ordonnance sur la contribution à l'élimination, Ordonnance sur la déclaration agricole, Ordonnance sur le nombre maximal d'animaux, Ordonnance sur les organisations de filières et de producteurs, Ordonnance sur la laine de mouton et Ordonnance sur l'élevage."@fr,
         "La progettazione e lo sviluppo del quadro politico agricolo nel settore dei prodotti animali e dell'allevamento sono tra i compiti principali dello SPAA. Inoltre, garantisce l'attuazione fluida e corretta delle disposizioni pertinenti della legge sull'agricoltura e delle seguenti ordinanze del Consiglio federale: Ordinanza sul sostegno del prezzo del latte, Ordinanza sul bestiame da macello, Ordinanza sulle uova, Ordinanza su Identitas AG e la banca dati sul traffico degli animali, Ordinanza sul contributo per lo smaltimento, Ordinanza sulla dichiarazione agricola, Ordinanza sul numero massimo di capi, Ordinanza sulle organizzazioni di settore e di produttori, Ordinanza sulla lana di pecora e Ordinanza sulla selezione degli animali."@it ;
-    systemmap:PRP015 systemmap:INF020,
-        systemmap:INF021,
-        systemmap:INF022,
-        systemmap:INF023 ;
-    systemmap:PRP101 "FBTT"@de,
+    systemmap:abbreviation "FBTT"@de,
         "FBTT"@en,
         "SPAE"@fr,
         "SPAA"@it ;
+    systemmap:access systemmap:INF020,
+        systemmap:INF021,
+        systemmap:INF022,
+        systemmap:INF023 ;
     schema:parentOrganization systemmap:ORG007 .
 
-systemmap:ORG201 a systemmap:CLS008 ;
+systemmap:ORG201 a systemmap:FederalOrganization ;
     rdfs:label "Wissensgrundlagen"@de ;
     schema:parentOrganization systemmap:ORG211 .
 
-systemmap:ORG202 a systemmap:CLS008 ;
+systemmap:ORG202 a systemmap:FederalOrganization ;
     rdfs:label "Tiergesundheit und Tierschutz"@de ;
     schema:parentOrganization systemmap:ORG211 .
 
-systemmap:ORG203 a systemmap:CLS008 ;
+systemmap:ORG203 a systemmap:FederalOrganization ;
     rdfs:label "Lebensmittel und Ernährung"@de ;
     schema:parentOrganization systemmap:ORG211 .
 
-systemmap:ORG204 a systemmap:CLS008 ;
+systemmap:ORG204 a systemmap:FederalOrganization ;
     rdfs:label "Zulassungsstelle Pflanzenschutzmittel"@de ;
     schema:parentOrganization systemmap:ORG211 .
 
-systemmap:ORG210 a systemmap:CLS008 ;
+systemmap:ORG210 a systemmap:FederalOrganization ;
     rdfs:label "Bundesamt für Zoll und Grenzsicherheit"@de,
         "Federal Office for Customs and Border Security"@en,
         "Office fédéral de la douane et de la sécurité des frontières"@fr,
         "Ufficio federale della dogana e della sicurezza dei confini"@it ;
     rdfs:comment "Das Bundesamt für Zoll und Grenzsicherheit ist mit über 4000 Mitarbeitenden die grösste Verwaltungseinheit des Finanzdepartements. Hier finden Sie die Mitglieder der Geschäftsleitung."@de ;
     owl:sameAs staatskalender:10008659 ;
-    systemmap:PRP101 "BAZG"@de,
+    systemmap:abbreviation "BAZG"@de,
         "FOCBS"@en,
         "OFDF"@fr,
         "UDSC"@it .
 
-systemmap:ORG211 a systemmap:CLS008 ;
+systemmap:ORG211 a systemmap:FederalOrganization ;
     rdfs:label "Bundesamt für Lebensmittelsicherheit und Veterinärwesen"@de ;
     rdfs:comment "Hauptaufgabe des BLV ist es, die Gesundheit und das Wohlbefinden von Mensch und Tier aktiv zu fördern. Die Hauptpfeiler dafür sind beim Menschen Lebensmittelsicherheit und gesunde Ernährung und beim Tier Tierschutz und Tiergesundheit."@de ;
     owl:sameAs staatskalender:10008671 ;
-    systemmap:PRP101 "BLV"@de .
+    systemmap:abbreviation "BLV"@de .
 
-systemmap:ORG212 a systemmap:CLS008 ;
+systemmap:ORG212 a systemmap:FederalOrganization ;
     rdfs:label "Bundesamt für Statistik"@de ;
     rdfs:comment "Als nationales Kompetenzzentrum der öffentlichen Statistik ist das Bundesamt für Statistik (BFS) der zentrale Knotenpunkt im Datennökosystem der Schweiz. Es unterstützt und stärkt die gesamte öffentliche Verwaltung im Umgang mit Daten."@de ;
     owl:sameAs staatskalender:10008742 ;
-    systemmap:PRP101 "BFS"@de .
+    systemmap:abbreviation "BFS"@de .
 
-systemmap:ORG213 a systemmap:CLS008 ;
+systemmap:ORG213 a systemmap:FederalOrganization ;
     rdfs:label "Gruppe GEVER Services"@de ;
     owl:sameAs staatskalender:20032934 ;
-    systemmap:PRP101 "GRGS"@de ;
+    systemmap:abbreviation "GRGS"@de ;
     schema:parentOrganization systemmap:ORG002 .
 
-systemmap:ORG214 a systemmap:CLS008 ;
+systemmap:ORG214 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Informatikführung"@de ;
     owl:sameAs systemmap:ORG214 ;
-    systemmap:PRP101 "FBIF"@de ;
+    systemmap:abbreviation "FBIF"@de ;
     schema:parentOrganization systemmap:ORG002 .
+
+systemmap:INF004 a systemmap:Identifier ;
+    rdfs:label "BUR-Number",
+        "BUR-Nummer"@de ;
+    systemmap:containedIn systemmap:SYS025 .
+
+systemmap:INF003 a systemmap:Information ;
+    rdfs:label "Informationen zu Flächen und Kulturen"@de ;
+    rdfs:comment "Daten zu Grössen und Ort der Flächen (nur als Koordinaten ohne Polygone), landwirtschaftlichen Hauptkulturen und Betriebszugehörigkeit der Flächen."@de ;
+    systemmap:containedIn systemmap:SYS003 ;
+    systemmap:informs systemmap:INF030 .
+
+systemmap:INF010 a systemmap:Information ;
+    rdfs:label "Nationaler Sortenkatalog"@de,
+        "National variety catalog"@en,
+        "Catalogue national des variétés"@fr,
+        "Catalogo nazionale delle varietà"@it ;
+    rdfs:comment "Katalog von anerkannten landwirtschaftlich genutzten Pflanzensorten in der Schweiz. Die Informationen dazu werden von den Züchtern erfasst."@de,
+        "Catalog of recognized agricultural plant varieties used in Switzerland. The information is recorded by breeders."@en,
+        "Catalogue des variétés de plantes agricoles reconnues utilisées en Suisse. Les informations sont enregistrées par les sélectionneurs."@fr,
+        "Catalogo delle varietà di piante agricole riconosciute utilizzate in Svizzera. Le informazioni sono registrate dai selezionatori."@it ;
+    systemmap:containedIn systemmap:SYS011 ;
+    systemmap:informedBy systemmap:INF012 .
+
+systemmap:INF012 a systemmap:Information ;
+    rdfs:label "Globale Pflanzenliste"@de,
+        "Global plant list"@en,
+        "Liste globale des plantes"@fr,
+        "Elenco globale delle piante"@it ;
+    rdfs:comment "Liste aller möglichen Pflanzenarten mit entsprechenden Pflanzenarten-Codes. UPOV verwendet ein spezifisches Codesystem, um Pflanzenarten und -gattungen eindeutig zu identifizieren. Diese sogenannten UPOV-Codes bestehen in der Regel aus fünf Buchstaben für die Gattung und drei Buchstaben für die Art, zum Beispiel steht <tt>PRUNU_ARM</tt> für <i>Prunus armeniaca</i> (Aprikose). Dieses System erleichtert die Klassifizierung und den Informationsaustausch über Pflanzensorten."@de,
+        "List of all possible plant species with corresponding plant species codes. UPOV uses a specific coding system to uniquely identify plant species and genera. These so-called UPOV codes usually consist of five letters for the genus and three letters for the species. For example, <tt>PRUNU_ARM</tt> stands for <i>Prunus armeniaca</i> (apricot). This system facilitates the classification and exchange of information on plant varieties."@en,
+        "Liste de toutes les espèces végétales possibles avec les codes d'espèces correspondants. L'UPOV utilise un système de codage spécifique pour identifier de manière unique les espèces et genres de plantes. Ces codes UPOV se composent généralement de cinq lettres pour le genre et de trois lettres pour l'espèce. Par exemple, <tt>PRUNU_ARM</tt> représente <i>Prunus armeniaca</i> (abricot). Ce système facilite la classification et l'échange d'informations sur les variétés de plantes."@fr,
+        "Elenco di tutte le possibili specie vegetali con i relativi codici di specie. L'UPOV utilizza un sistema di codifica specifico per identificare in modo univoco le specie e i generi di piante. Questi cosiddetti codici UPOV sono generalmente composti da cinque lettere per il genere e tre lettere per la specie. Ad esempio, <tt>PRUNU_ARM</tt> rappresenta <i>Prunus armeniaca</i> (albicocco). Questo sistema facilita la classificazione e lo scambio di informazioni sulle varietà vegetali."@it ;
+    systemmap:containedIn systemmap:SYS024 .
+
+systemmap:INF013 a systemmap:Information ;
+    rdfs:label "Globaler Sortenkatalog"@de,
+        "Global variety catalog"@en,
+        "Catalogue mondial des variétés"@fr,
+        "Catalogo globale delle varietà"@it ;
+    rdfs:comment "Informationen zu Pflanzensorten aus UPOV-Mitgliedsländern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD). Diese Sortenliste dient als zentrales Register für Sortenbezeichnungen und unterstützt bei der Überprüfung der Unterscheidbarkeit neuer Sorten."@de,
+        "Information on plant varieties from UPOV member countries as well as the Organisation for Economic Co-operation and Development (OECD). This variety list serves as a central register for variety denominations and supports the verification of the distinctness of new varieties."@en,
+        "Informations sur les variétés végétales des pays membres de l'UPOV ainsi que de l'Organisation de coopération et de développement économiques (OCDE). Cette liste de variétés sert de registre central pour les dénominations de variétés et aide à vérifier la distinction des nouvelles variétés."@fr,
+        "Informazioni sulle varietà vegetali provenienti dai paesi membri dell'UPOV e dall'Organizzazione per la cooperazione e lo sviluppo economico (OCSE). Questo elenco di varietà funge da registro centrale per le denominazioni varietali e supporta la verifica della distinzione delle nuove varietà."@it ;
+    systemmap:containedIn systemmap:SYS024 ;
+    systemmap:informedBy systemmap:INF010 .
+
+systemmap:INF022 a systemmap:Information ;
+    rdfs:label "Daten zur Milchproduktion"@de,
+        "Data on milk production"@en,
+        "Données sur la production laitière"@fr,
+        "Dati sulla produzione di latte"@it ;
+    rdfs:comment "Monatliche Produktionsmengen (in kg) der im Vormonat gelieferten Kuh- und Büffelmilch von allen Milchproduzenten. Das BLW benötigt diese Information für die Ausrichtung der Zulage für Verkehrsmilch."@de,
+        "Monthly production quantities (in kg) of cow and buffalo milk delivered in the previous month by all milk producers. The BLW requires this information for the allocation of the subsidy for market milk."@en,
+        "Quantités de production mensuelles (en kg) du lait de vache et de bufflonne livré le mois précédent par tous les producteurs de lait. L'OFAG a besoin de ces informations pour l'octroi de la subvention pour le lait de consommation."@fr,
+        "Quantità di produzione mensili (in kg) del latte di mucca e bufala consegnato nel mese precedente da tutti i produttori di latte. L'UFAG necessita di queste informazioni per l'assegnazione del sussidio per il latte di consumo."@it ;
+    systemmap:containedIn systemmap:SYS021 .
+
+systemmap:INF023 a systemmap:Information ;
+    rdfs:label "Daten zur Milchverwertung"@de,
+        "Data on milk utilization"@en,
+        "Données sur la valorisation du lait"@fr,
+        "Dati sull'utilizzo del latte"@it ;
+    rdfs:comment "Diese Daten sind essenziell für die Berechnung und Auszahlung von Zulagen für verkäste Milch sowie für die Fütterung ohne Silage durch das Bundesamt für Landwirtschaft (BLW)."@de,
+        "These data are essential for the calculation and payment of subsidies for cheesed milk as well as for feeding without silage by the Federal Office for Agriculture (BLW)."@en,
+        "Ces données sont essentielles pour le calcul et le paiement des subventions pour le lait transformé en fromage ainsi que pour l'alimentation sans ensilage par l'Office fédéral de l'agriculture (OFAG)."@fr,
+        "Questi dati sono essenziali per il calcolo e il pagamento dei sussidi per il latte trasformato in formaggio e per l'alimentazione senza insilato da parte dell'Ufficio federale dell'agricoltura (UFAG)."@it ;
+    systemmap:containedIn systemmap:SYS021 .
+
+systemmap:INF025 a systemmap:Information ;
+    rdfs:label "Daten zur Milchsegmentierung"@de,
+        "Data on milk segmentation"@en,
+        "Données sur la segmentation du lait"@fr,
+        "Dati sulla segmentazione del latte"@it ;
+    rdfs:comment "Daten zur Segmentierung der Milchverwertung gemäß dem BOM1-Reglement."@de,
+        "Data on the segmentation of milk utilization according to the BOM1 regulation."@en,
+        "Données sur la segmentation de la valorisation du lait selon le règlement BOM1."@fr,
+        "Dati sulla segmentazione dell'utilizzo del latte secondo il regolamento BOM1."@it ;
+    systemmap:containedIn systemmap:SYS021 .
+
+systemmap:INF026 a systemmap:Information ;
+    rdfs:label "Milchstatistik"@de,
+        "Milk statistics"@en,
+        "Statistiques du lait"@fr,
+        "Statistiche del latte"@it ;
+    rdfs:comment "Monatliche Statistiken und Mehrjahresvergleiche, die Angaben über die produzierte Milch und deren Verarbeitung in verschiedene Produktgruppen enthalten."@de,
+        "Monthly statistics and multi-year comparisons containing information on the milk produced and its processing into different product groups."@en,
+        "Statistiques mensuelles et comparaisons pluriannuelles contenant des informations sur le lait produit et sa transformation en différentes catégories de produits."@fr,
+        "Statistiche mensili e confronti pluriennali contenenti informazioni sul latte prodotto e sulla sua trasformazione in diverse categorie di prodotti."@it ;
+    systemmap:containedIn systemmap:SYS021 .
+
+systemmap:INF028 a systemmap:Information ;
+    rdfs:label "Details zu Unternehmen"@de ;
+    rdfs:comment "Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit, Grundkapital der Aktiengesellschaften, Umsatzzahlen, Datum des Eintrags oder der Löschung im Handelsregister, Datum der Bekanntgabe der Gründung oder Schliessung eines Unternehmens oder Betriebs."@de ;
+    systemmap:containedIn systemmap:SYS025 .
+
+systemmap:INF001 a systemmap:PersonInformation ;
+    rdfs:label "Kontaktdaten Bewirtschaftenden"@de,
+        "Contact details of farm managers"@en,
+        "Coordonnées des exploitants agricoles"@fr,
+        "Dati di contatto dei gestori agricoli"@it ;
+    rdfs:comment "Informationen zu Kontaktdaten von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de,
+        "Information on the contact details of farm managers, such as email addresses or phone numbers."@en,
+        "Informations sur les coordonnées des exploitants agricoles, telles que les adresses e-mail ou les numéros de téléphone."@fr,
+        "Informazioni sui dati di contatto dei gestori agricoli, come indirizzi e-mail o numeri di telefono."@it ;
+    systemmap:containedIn systemmap:SYS003 .
+
+systemmap:INF002 a systemmap:PersonInformation ;
+    rdfs:label "Informationen zu Betriebsleitenden"@de,
+        "Information about farm managers"@en,
+        "Informations sur les directeurs d'exploitation"@fr,
+        "Informazioni sui gestori aziendali"@it ;
+    rdfs:comment "Beruf und Alter der Betriebsleiterin bzw. des Betriebsleiters."@de,
+        "Occupation and age of the farm manager."@en,
+        "Profession et âge du directeur ou de la directrice d'exploitation."@fr,
+        "Professione ed età del gestore aziendale."@it ;
+    systemmap:containedIn systemmap:SYS003 ;
+    systemmap:informs systemmap:INF030 ;
+    systemmap:usesIdentifier systemmap:INF004 .
+
+systemmap:INF011 a systemmap:PersonInformation ;
+    rdfs:label "Kontaktdaten Züchter"@de,
+        "Contact details of breeders"@en,
+        "Coordonnées des sélectionneurs"@fr,
+        "Dati di contatto dei selezionatori"@it ;
+    rdfs:comment "Kontaktdaten der Züchter, welche Informationen zu den Sorten an ProVar geben."@de,
+        "Contact details of breeders who provide information about the varieties to ProVar."@en,
+        "Coordonnées des sélectionneurs qui fournissent des informations sur les variétés à ProVar."@fr,
+        "Dati di contatto dei selezionatori che forniscono informazioni sulle varietà a ProVar."@it ;
+    systemmap:containedIn systemmap:SYS011 .
+
+systemmap:INF020 a systemmap:PersonInformation ;
+    rdfs:label "Kontaktdaten Milchproduzenten"@de,
+        "Contact details of milk producers"@en,
+        "Coordonnées des producteurs de lait"@fr,
+        "Dati di contatto dei produttori di latte"@it ;
+    rdfs:comment "Kontaktdaten der Milchproduzenten wie Adressen, TVD-Nummer, AGIS-Nummer des Betriebs, AGIS Nummer des Bewirtschaftenden und Zahlungsinformationen für die Ausbezahlung der Zulage für verkäste Milch und die Zulage für Fütterung ohne Silage. Wenn möglich, werden diese Kontaktdaten aus AGIS bezogen."@de,
+        "Contact details of milk producers, such as addresses, TVD number, AGIS number of the farm, AGIS number of the operator, and payment information for the subsidy for cheesed milk and the subsidy for feeding without silage. If possible, these contact details are obtained from AGIS."@en,
+        "Coordonnées des producteurs de lait, telles que les adresses, le numéro TVD, le numéro AGIS de l'exploitation, le numéro AGIS de l'exploitant et les informations de paiement pour la subvention pour le lait transformé en fromage et la subvention pour l'alimentation sans ensilage. Si possible, ces coordonnées sont obtenues auprès d'AGIS."@fr,
+        "Dati di contatto dei produttori di latte, come indirizzi, numero TVD, numero AGIS dell'azienda, numero AGIS del gestore e informazioni di pagamento per il sussidio per il latte trasformato in formaggio e il sussidio per l'alimentazione senza insilato. Se possibile, questi dati di contatto vengono ottenuti da AGIS."@it ;
+    systemmap:containedIn systemmap:SYS021 ;
+    systemmap:informedBy systemmap:INF001 .
+
+systemmap:INF021 a systemmap:PersonInformation ;
+    rdfs:label "Kontaktdaten Milchverarbeiter"@de,
+        "Contact details of milk processors"@en,
+        "Coordonnées des transformateurs de lait"@fr,
+        "Dati di contatto dei trasformatori di latte"@it ;
+    rdfs:comment "Kontaktdaten der Milchverarbeiter wie Adressen oder Identifikationsnummern."@de,
+        "Contact details of milk processors, such as addresses or identification numbers."@en,
+        "Coordonnées des transformateurs de lait, telles que les adresses ou les numéros d'identification."@fr,
+        "Dati di contatto dei trasformatori di latte, come indirizzi o numeri di identificazione."@it ;
+    systemmap:containedIn systemmap:SYS021 .
+
+systemmap:INF027 a systemmap:PersonInformation ;
+    rdfs:label "Stammdaten und Identifikatoren"@de,
+        "Master data and identifiers"@en,
+        "Données de base et identifiants"@fr,
+        "Dati di base e identificatori"@it ;
+    rdfs:comment "Name und Adresse des Unternehmens oder Betriebs, Gemeindenummern, BUR-Nummer (nichtsprechende 8-stellige Identifikationsnummer), Unternehmens-Identifikationsnummer (UID), Art der wirtschaftlichen Tätigkeit (NOGA), Rechtsform des Unternehmens."@de,
+        "Name and address of the company or business, municipality numbers, BUR number (non-speaking 8-digit identification number), company identification number (UID), type of economic activity (NOGA), legal form of the company."@en,
+        "Nom et adresse de l'entreprise ou de l'exploitation, numéros de commune, numéro BUR (numéro d'identification à 8 chiffres non parlant), numéro d'identification de l'entreprise (UID), type d'activité économique (NOGA), forme juridique de l'entreprise."@fr,
+        "Nome e indirizzo dell'azienda o dell'impresa, numeri dei comuni, numero BUR (numero di identificazione a 8 cifre non parlante), numero di identificazione aziendale (UID), tipo di attività economica (NOGA), forma giuridica dell'azienda."@it ;
+    systemmap:containedIn systemmap:SYS025 .
+
+systemmap:INF029 a systemmap:PersonInformation ;
+    rdfs:label "Informationen zu Forstbetrieben"@de,
+        "Information about forestry enterprises"@en,
+        "Informations sur les entreprises forestières"@fr,
+        "Informazioni sulle aziende forestali"@it ;
+    rdfs:comment "Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit."@de,
+        "Number of employed persons by gender and working time."@en,
+        "Nombre de personnes employées selon le sexe et le temps de travail."@fr,
+        "Numero di persone impiegate per genere e orario di lavoro."@it ;
+    systemmap:containedIn systemmap:SYS025 .
+
+systemmap:INF030 a systemmap:PersonInformation ;
+    rdfs:label "Informationen zu Landwirtschaftsbetrieben"@de,
+        "Information about agricultural enterprises"@en,
+        "Informations sur les exploitations agricoles"@fr,
+        "Informazioni sulle aziende agricole"@it ;
+    rdfs:comment "Zahl der Grossvieheinheiten, Angaben über die Bodennutzung, den Beruf und das Alter des Betriebsleiters/der Betriebsleiterin."@de,
+        "Number of large livestock units, information on land use, occupation and age of the farm manager."@en,
+        "Nombre d'unités de gros bétail, informations sur l'utilisation des sols, la profession et l'âge du directeur ou de la directrice d'exploitation."@fr,
+        "Numero di unità di bestiame grosso, informazioni sull'uso del suolo, la professione e l'età del gestore aziendale."@it ;
+    systemmap:containedIn systemmap:SYS025 .
+
+systemmap:INF031 a systemmap:PersonInformation ;
+    rdfs:label "Pflanzenschutzmittel-Importe"@de,
+        "Pesticide imports"@en,
+        "Importations de produits phytosanitaires"@fr,
+        "Importazioni di prodotti fitosanitari"@it ;
+    rdfs:comment "Daten zu jedem Import von Pflanzenschutzmitteln mit UID und Namen des Importeurs, Datum des Imports, Importmenge, Warenbezeichnung (Freitext) sowie Zustelladresse."@de,
+        "Data on each import of pesticides, including UID and name of the importer, date of import, import quantity, product designation (free text), and delivery address."@en,
+        "Données sur chaque importation de produits phytosanitaires, y compris l'UID et le nom de l'importateur, la date d'importation, la quantité importée, la désignation du produit (texte libre) et l'adresse de livraison."@fr,
+        "Dati su ogni importazione di prodotti fitosanitari, compresi UID e nome dell'importatore, data di importazione, quantità importata, denominazione del prodotto (testo libero) e indirizzo di consegna."@it ;
+    systemmap:containedIn systemmap:SYS026 .
+
+systemmap:ORG100 a systemmap:PrivateOrganization ;
+    rdfs:label "TSM Treuhand GmbH"@de,
+        "TSM Treuhand LLC"@en,
+        "TSM Treuhand GmbH"@fr,
+        "TSM Fiduciaria S. a g. l."@it ;
+    rdfs:comment "Die TSM Treuhand GmbH erfüllt unterschiedliche öffentlich- und privatrechtliche Aufträge in der Agrar- und Lebensmittelbranche. TSM steht für Treuhand, Statistik und Management. Die Haupttätigkeit der TSM besteht in der Verwaltung der Datenbank dbmilch.ch. Zudem werden weitere Aufträge im Bereich Treuhand, Fondsverwaltungen, Statistiken und Exportkontrollen durchgeführt. Der Hauptauftraggeber der TSM ist das Bundesamt für Landwirtschaft (BLW)."@de,
+        "TSM Treuhand LLC carries out various public and private law mandates in the agricultural and food sector. TSM stands for Trust, Statistics, and Management. The main activity of TSM is the management of the dbmilch.ch database. In addition, further assignments in the areas of fiduciary services, fund management, statistics, and export controls are carried out. The main client of TSM is the Federal Office for Agriculture (BLW)."@en,
+        "TSM Fiduciaire S. à r. l. remplit divers mandats de droit public et privé dans le secteur agricole et alimentaire. TSM signifie Fiduciaire, Statistique et Management. L'activité principale de TSM est la gestion de la base de données dbmilch.ch. En outre, d'autres missions sont effectuées dans les domaines de la fiducie, de la gestion de fonds, des statistiques et des contrôles à l'exportation. Le principal client de TSM est l'Office fédéral de l'agriculture (OFAG)."@fr,
+        "TSM Treuhand GmbH svolge diversi mandati di diritto pubblico e privato nel settore agricolo e alimentare. TSM sta per Fiduciario, Statistica e Management. L'attività principale di TSM è la gestione del database dbmilch.ch. Inoltre, vengono svolti altri incarichi nei settori della fiduciaria, della gestione dei fondi, delle statistiche e dei controlli all'esportazione. Il principale committente di TSM è l'Ufficio federale dell'agricoltura (UFAG)."@it .
+
+systemmap:ORG101 a systemmap:PrivateOrganization ;
+    rdfs:label "Identitas AG"@de,
+        "Identitas AG"@en,
+        "Identitas AG"@fr,
+        "Identitas AG"@it ;
+    rdfs:comment "Die Identitas AG entwickelt und betreibt Informationssysteme für die Tierverkehrsdatenbank der Schweiz. Sie stellt Lösungen für die Rückverfolgbarkeit von Tieren, Tiergesundheit und Lebensmittelsicherheit bereit. Als IT-Dienstleister für Bund, Kantone und private Akteure bietet Identitas AG digitale Services zur Erfassung, Verarbeitung und Analyse von Tier- und Betriebsdaten an. Das Unternehmen hat seinen Sitz in Bern."@de,
+        "Identitas AG develops and operates information systems for Switzerland's animal traffic database. It provides solutions for animal traceability, animal health, and food safety. As an IT service provider for the federal government, cantons, and private actors, Identitas AG offers digital services for recording, processing, and analyzing animal and farm data. The company is based in Bern."@en,
+        "Identitas AG développe et exploite des systèmes d'information pour la base de données du trafic des animaux en Suisse. Elle propose des solutions pour la traçabilité des animaux, la santé animale et la sécurité alimentaire. En tant que prestataire de services informatiques pour la Confédération, les cantons et les acteurs privés, Identitas AG fournit des services numériques pour la saisie, le traitement et l'analyse des données animales et agricoles. L'entreprise est basée à Berne."@fr,
+        "Identitas AG sviluppa e gestisce sistemi informativi per la banca dati del traffico degli animali in Svizzera. Fornisce soluzioni per la tracciabilità degli animali, la salute animale e la sicurezza alimentare. In qualità di fornitore di servizi IT per la Confederazione, i cantoni e gli attori privati, Identitas AG offre servizi digitali per la registrazione, l'elaborazione e l'analisi dei dati sugli animali e sulle aziende agricole. L'azienda ha sede a Berna."@it .
+
+systemmap:ORG102 a systemmap:PrivateOrganization ;
+    rdfs:label "Barto AG"@de,
+        "Barto AG"@en,
+        "Barto AG"@fr,
+        "Barto AG"@it ;
+    rdfs:comment "Die Barto AG entwickelt und betreibt eine digitale Plattform für die Landwirtschaft. Sie bietet Landwirtinnen und Landwirten eine zentrale Lösung zur Betriebsführung, Dokumentation und Analyse von Betriebsdaten. Die Plattform integriert verschiedene agronomische und administrative Funktionen und ermöglicht eine effiziente Verwaltung von Ressourcen. Barto AG arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen. Der Sitz des Unternehmens befindet sich in der Schweiz."@de,
+        "Barto AG develops and operates a digital platform for agriculture. It provides farmers with a central solution for farm management, documentation, and analysis of operational data. The platform integrates various agronomic and administrative functions and enables efficient resource management. Barto AG collaborates with partners in the agricultural sector to provide innovative digital solutions. The company is based in Switzerland."@en,
+        "Barto AG développe et exploite une plateforme numérique pour l'agriculture. Elle offre aux agriculteurs une solution centrale pour la gestion des exploitations, la documentation et l'analyse des données d'exploitation. La plateforme intègre diverses fonctions agronomiques et administratives et permet une gestion efficace des ressources. Barto AG collabore avec des partenaires du secteur agricole pour proposer des solutions numériques innovantes. L'entreprise est basée en Suisse."@fr,
+        "Barto AG sviluppa e gestisce una piattaforma digitale per l'agricoltura. Fornisce agli agricoltori una soluzione centrale per la gestione aziendale, la documentazione e l'analisi dei dati operativi. La piattaforma integra varie funzioni agronomiche e amministrative e consente una gestione efficiente delle risorse. Barto AG collabora con partner del settore agricolo per fornire soluzioni digitali innovative. L'azienda ha sede in Svizzera."@it ;
+    systemmap:ownedBy systemmap:ORG103 .
+
+systemmap:ORG103 a systemmap:PrivateOrganization ;
+    rdfs:label "Fenaco Genossenschaft"@de,
+        "Fenaco Cooperative"@en,
+        "Coopérative Fenaco"@fr,
+        "Cooperativa Fenaco"@it ;
+    rdfs:comment "Die Fenaco Genossenschaft ist ein schweizerisches Agrarunternehmen, das die Landwirtinnen und Landwirte dabei unterstützt, ihre Betriebe wirtschaftlich erfolgreich zu führen. Sie ist in den Bereichen Agrarhandel, Lebensmittelproduktion, Detailhandel und Energie tätig. Fenaco ist Eigentümerin von Marken wie Landi, Volg, Agrola und diverse Lebensmittelproduzenten. Die Genossenschaft gehört Schweizer Landwirten und hat ihren Hauptsitz in Bern."@de,
+        "The Fenaco Cooperative is a Swiss agricultural company that supports farmers in running their businesses successfully. It operates in the areas of agricultural trade, food production, retail, and energy. Fenaco owns brands such as Landi, Volg, Agrola, and various food producers. The cooperative is owned by Swiss farmers and is headquartered in Bern."@en,
+        "La coopérative Fenaco est une entreprise agricole suisse qui aide les agriculteurs à gérer leurs exploitations avec succès. Elle est active dans les domaines du commerce agricole, de la production alimentaire, du commerce de détail et de l'énergie. Fenaco possède des marques telles que Landi, Volg, Agrola et divers producteurs alimentaires. La coopérative appartient aux agriculteurs suisses et son siège est à Berne."@fr,
+        "La cooperativa Fenaco è un'azienda agricola svizzera che supporta gli agricoltori nella gestione economica delle loro aziende. Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia. Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari. La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna."@it .
+
+systemmap:INF024 a systemmap:SensitivePersonInformation ;
+    rdfs:label "Resultate der Milchprüfung"@de,
+        "Results of milk testing"@en,
+        "Résultats du contrôle du lait"@fr,
+        "Risultati del controllo del latte"@it ;
+    rdfs:comment "Ergebnisse der öffentlich-rechtlichen Milchprüfung. Bei der öffentlich-rechtlichen Milchprüfung wird die Kuhmilch zweimal monatlich auf die Prüfmerkmale Keimzahl, somatische Zellen und Hemmstoffe untersucht. Hygienisch ungenügende Resultate haben Beanstandungen und bei länger andauernden Hygienemängeln eine amtliche Milchliefersperre zur Folge. Die Ergebnisse der Milchprüfung werden über die Plattform dbmilch.ch an berechtigte Kreise bereitgestellt."@de,
+        "Results of the public milk testing. In public milk testing, cow’s milk is examined twice a month for the parameters germ count, somatic cells, and inhibitors. Hygienically insufficient results lead to complaints and, in case of prolonged hygiene deficiencies, an official milk delivery ban. The results of the milk testing are made available to authorized parties via the platform dbmilch.ch."@en,
+        "Résultats du contrôle public du lait. Lors du contrôle public du lait, le lait de vache est analysé deux fois par mois pour les paramètres suivants : nombre de germes, cellules somatiques et inhibiteurs. Des résultats hygiéniques insuffisants entraînent des réclamations et, en cas de carences hygiéniques prolongées, une interdiction officielle de livraison de lait. Les résultats du contrôle du lait sont mis à disposition des cercles autorisés via la plateforme dbmilch.ch."@fr,
+        "Risultati del controllo pubblico del latte. Nel controllo pubblico del latte, il latte di mucca viene analizzato due volte al mese per i seguenti parametri: conta dei germi, cellule somatiche e inibitori. Risultati igienicamente insufficienti comportano reclami e, in caso di carenze igieniche prolungate, un divieto ufficiale di consegna del latte. I risultati del controllo del latte sono resi disponibili ai soggetti autorizzati tramite la piattaforma dbmilch.ch."@it ;
+    systemmap:containedIn systemmap:SYS021 .
 
 systemmap:ORG200 a schema:Organization ;
     rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
@@ -482,7 +822,7 @@ systemmap:ORG200 a schema:Organization ;
         "The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland. It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society."@en,
         "L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse. Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société."@fr,
         "L'Unione internazionale per la protezione delle nuove varietà vegetali (UPOV) è un'organizzazione intergovernativa con sede a Ginevra, in Svizzera. È stata fondata nel 1961 e mira a promuovere un sistema efficace per la protezione del miglioramento genetico delle piante, al fine di sostenere lo sviluppo di nuove varietà vegetali a beneficio della società."@it ;
-    systemmap:PRP101 "UPOV"@de,
+    systemmap:abbreviation "UPOV"@de,
         "UPOV"@en,
         "UPOV"@fr,
         "UPOV"@it .
@@ -496,7 +836,7 @@ systemmap:SYS001 a schema:SoftwareApplication ;
         "Acontrol is the information system of the FOAG, used for the planning, recording, and management of agricultural inspections. It simplifies control processes through a central platform for data entry and retrieval. This ensures efficient monitoring and compliance with agricultural standards."@en,
         "Acontrol est le système d'information de l'OFAG, utilisé pour la planification, l'enregistrement et la gestion des inspections agricoles. Il simplifie les processus de contrôle grâce à une plateforme centrale pour la saisie et la consultation des données. Cela permet d'assurer une surveillance efficace et le respect des normes agricoles."@fr,
         "Acontrol è il sistema informativo dell'UFAG, utilizzato per la pianificazione, la registrazione e la gestione delle ispezioni agricole. Semplifica i processi di controllo attraverso una piattaforma centrale per l'inserimento e il recupero dei dati. In questo modo, garantisce un monitoraggio efficiente e il rispetto degli standard agricoli."@it ;
-    systemmap:PRP008 systemmap:ORG021 .
+    systemmap:operatedBy systemmap:ORG021 .
 
 systemmap:SYS002 a schema:SoftwareApplication ;
     rdfs:label "Agate"@de,
@@ -507,7 +847,7 @@ systemmap:SYS002 a schema:SoftwareApplication ;
         "Agate is an online portal that allows access to various agricultural applications with just one login. It facilitates data exchange in the agricultural and food sector, thereby increasing user convenience. This centralized access point simplifies administrative processes for all stakeholders."@en,
         "Agate est un portail en ligne qui permet d'accéder à diverses applications agricoles avec un seul identifiant. Il facilite l'échange de données dans le secteur agricole et alimentaire, augmentant ainsi le confort des utilisateurs. Ce point d'accès centralisé simplifie les processus administratifs pour toutes les parties prenantes."@fr,
         "Agate è un portale online che consente l'accesso a diverse applicazioni agricole con un solo login. Facilita lo scambio di dati nel settore agricolo e alimentare, aumentando così la comodità per gli utenti. Questo punto di accesso centralizzato semplifica i processi amministrativi per tutte le parti interessate."@it ;
-    systemmap:PRP008 systemmap:ORG214 .
+    systemmap:operatedBy systemmap:ORG214 .
 
 systemmap:SYS003 a schema:SoftwareApplication ;
     rdfs:label "Agrarpolitisches Informationssystem"@de,
@@ -518,11 +858,11 @@ systemmap:SYS003 a schema:SoftwareApplication ;
         "AGIS serves as a central data hub where agricultural data collected by the cantons is validated and aggregated into a nationwide dataset. The system ensures consistency and accuracy in the collection of agricultural data. It supports well-founded decision-making processes at the federal level."@en,
         "SIPA sert de plaque tournante centrale des données, où les données agricoles collectées par les cantons sont validées et agrégées dans un ensemble de données à l'échelle nationale. Le système garantit la cohérence et la précision dans la collecte des données agricoles. Il soutient des processus décisionnels éclairés au niveau fédéral."@fr,
         "AGIS funge da hub centrale per i dati, dove i dati agricoli raccolti dai cantoni vengono convalidati e aggregati in un insieme di dati a livello nazionale. Il sistema garantisce coerenza e accuratezza nella raccolta dei dati agricoli. Supporta processi decisionali ben fondati a livello federale."@it ;
-    systemmap:PRP008 systemmap:ORG010 ;
-    systemmap:PRP102 "AGIS"@de,
+    systemmap:abbreviation "AGIS"@de,
         "AGIS"@en,
         "SIPA"@fr,
-        "AGIS"@it .
+        "AGIS"@it ;
+    systemmap:operatedBy systemmap:ORG010 .
 
 systemmap:SYS004 a schema:SoftwareApplication ;
     rdfs:label "Business-Intelligence-System"@de,
@@ -533,11 +873,11 @@ systemmap:SYS004 a schema:SoftwareApplication ;
         "ASTAT is the Business Intelligence system of the BLW. It provides analysis and reporting functions to enable data-driven decision-making. This simplifies the monitoring and evaluation of agricultural policy measures."@en,
         "ASTAT est le système de Business Intelligence de l'OFAG. Il fournit des fonctions d'analyse et de reporting pour permettre une prise de décision basée sur les données. Cela simplifie la surveillance et l'évaluation des mesures de politique agricole."@fr,
         "ASTAT è il sistema di Business Intelligence dell'UFAG. Fornisce funzioni di analisi e reporting per consentire decisioni basate sui dati. Ciò semplifica il monitoraggio e la valutazione delle misure di politica agricola."@it ;
-    systemmap:PRP008 systemmap:ORG013 ;
-    systemmap:PRP102 "ASTAT"@de,
+    systemmap:abbreviation "ASTAT"@de,
         "ASTAT"@en,
         "ASTAT"@fr,
-        "ASTAT"@it .
+        "ASTAT"@it ;
+    systemmap:operatedBy systemmap:ORG013 .
 
 systemmap:SYS005 a schema:SoftwareApplication ;
     rdfs:label "CePa"@de,
@@ -548,11 +888,7 @@ systemmap:SYS005 a schema:SoftwareApplication ;
         "CePa is an IT application for the digital management of procedures and correspondence within the framework of the plant passport system and the official certification of propagation material. It optimizes certification processes and ensures compliance with plant health regulations. In this way, it supports traceability and quality control of plant material."@en,
         "CePa est une application informatique pour la gestion numérique des procédures et de la correspondance dans le cadre du système de passeport phytosanitaire ainsi que de la certification officielle du matériel de multiplication. Elle optimise les processus de certification et garantit le respect des réglementations phytosanitaires. De cette manière, elle soutient la traçabilité et le contrôle de la qualité du matériel végétal."@fr,
         "CePa è un'applicazione IT per la gestione digitale delle procedure e della corrispondenza nell'ambito del sistema del passaporto delle piante e della certificazione ufficiale del materiale di propagazione. Ottimizza i processi di certificazione e garantisce il rispetto delle normative fitosanitarie. In questo modo, supporta la tracciabilità e il controllo della qualità del materiale vegetale."@it ;
-    systemmap:PRP008 systemmap:ORG031 ;
-    systemmap:PRP102 "CePa"@de,
-        "CePa"@en,
-        "CePa"@fr,
-        "CePa"@it .
+    systemmap:operatedBy systemmap:ORG031 .
 
 systemmap:SYS006 a schema:SoftwareApplication ;
     rdfs:label "digiFLUX"@de,
@@ -563,35 +899,79 @@ systemmap:SYS006 a schema:SoftwareApplication ;
         "digiFLUX is a web application developed to implement the reporting obligation for the trade and use of plant protection products as well as for the trade of nutrients. It provides stakeholders with a unified interface for entering all required information. This ensures transparency and compliance with legal regulations in the agricultural sector."@en,
         "digiFLUX est une application web développée pour mettre en œuvre l'obligation de déclaration du commerce et de l'utilisation des produits phytosanitaires ainsi que du commerce des nutriments. Elle offre aux acteurs une interface unifiée pour saisir toutes les informations requises. Cela garantit la transparence et le respect des réglementations légales dans le secteur agricole."@fr,
         "digiFLUX è un'applicazione web sviluppata per attuare l'obbligo di segnalazione per il commercio e l'uso dei prodotti fitosanitari nonché per il commercio di nutrienti. Fornisce agli operatori un'interfaccia unificata per l'inserimento di tutte le informazioni richieste. Ciò garantisce trasparenza e conformità alle normative legali nel settore agricolo."@it ;
-    systemmap:PRP008 systemmap:ORG020 .
+    systemmap:operatedBy systemmap:ORG020 .
 
 systemmap:SYS007 a schema:SoftwareApplication ;
     rdfs:label "eKontingente"@de ;
     rdfs:comment "eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können. Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet."@de ;
-    systemmap:PRP008 systemmap:ORG040 .
+    systemmap:operatedBy systemmap:ORG040 .
 
 systemmap:SYS008 a schema:SoftwareApplication ;
     rdfs:label "Meine Agrardatenfreigabe"@de ;
     rdfs:comment "Meine Agrardatenfreigabe vereinfacht den Datenaustausch zwischen Betrieben und Datenempfängern wie zum Beispiel Labelorganisationen. Sie bietet eine Plattform zur Verwaltung von Zugriffsberechtigungen und Datenfreigabevereinbarungen. Damit wird die Zusammenarbeit und Datenweitergabe im Agrarsektor transparenter gestaltet."@de ;
-    systemmap:PRP008 systemmap:ORG011 ;
-    systemmap:PRP102 "MAF"@de .
+    systemmap:abbreviation "MAF"@de ;
+    systemmap:operatedBy systemmap:ORG011 .
 
 systemmap:SYS009 a schema:SoftwareApplication ;
     rdfs:label "Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft"@de ;
     rdfs:comment "Das Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft (PGREL-NIS) macht Daten des Aktionsplans zur Vielfalt der Kulturpflanzen öffentlich zugänglich. Es bietet einen Überblick und Zugriff auf Informationen zu Pflanzengenetischen Ressourcen. Damit trägt es zur Erhaltung und Förderung pflanzengenetischer Vielfalt bei."@de ;
-    systemmap:PRP008 systemmap:ORG030 ;
-    systemmap:PRP102 "PGREL-NIS"@de .
+    systemmap:abbreviation "PGREL-NIS"@de ;
+    systemmap:operatedBy systemmap:ORG030 .
 
 systemmap:SYS010 a schema:SoftwareApplication ;
     rdfs:label "HODUFLU"@de ;
     rdfs:comment "HODUFLU ist ein Internetprogramm zur einheitlichen Verwaltung von Hof- und Recyclingdüngerverschiebungen in der Landwirtschaft. Auf dieser Seite finden Sie Zugang zur Anwendung und nützliche Dokumente wie das Benutzerhandbuch für HODUFLU."@de ;
-    systemmap:PRP008 systemmap:ORG020 .
+    systemmap:operatedBy systemmap:ORG020 .
 
 systemmap:SYS011 a schema:SoftwareApplication ;
     rdfs:label "Protection Variété"@de ;
     rdfs:comment "ProVar bedeutet Sortenschutz (protection variété) und ist die Datenbank zur Verwaltung aller wichtigen Informationen zu den Sortenarten von Pflanzen. Das Sortenschutzrecht regelt den gewerblichen Schutz neuer Pflanzenzüchtungen sowie deren gewerbsmässiger Nutzung."@de ;
-    systemmap:PRP008 systemmap:ORG032 ;
-    systemmap:PRP102 "ProVar"@de .
+    systemmap:abbreviation "ProVar"@de ;
+    systemmap:operatedBy systemmap:ORG032 .
+
+systemmap:SYS012 a schema:SoftwareApplication ;
+    rdfs:label "Gesamtlösung EDV Landwirtschaft & Natur"@de ;
+    rdfs:comment "Das Agrarinformationssystem GELAN steht seit 1999 in den Kantonen Bern, Fribourg und Solothurn im Einsatz. Es wurde seither auf 15 vollständig integrierte Teilsysteme erweitert und die Erfassung von Flächendaten erfolgt in einem Geographischen Informationssystem (GIS). Nebst den Direktzahlungen unterstützt GELAN unter anderem folgende Vollzugsbereiche: Strukturverbesserungen, Ressourcenprojekte, Naturschutz, Tierschutz, Tierseuchenrecht, Gewässerschutz und Kontrollwesen."@de ;
+    systemmap:abbreviation "GELAN"@de ;
+    systemmap:operatedBy systemmap:ORG311,
+        systemmap:ORG322,
+        systemmap:ORG336 .
+
+systemmap:SYS013 a schema:SoftwareApplication ;
+    rdfs:label "Agricola"@de ;
+    systemmap:operatedBy systemmap:ORG302,
+        systemmap:ORG306,
+        systemmap:ORG313,
+        systemmap:ORG314,
+        systemmap:ORG318,
+        systemmap:ORG319,
+        systemmap:ORG321,
+        systemmap:ORG323,
+        systemmap:ORG324,
+        systemmap:ORG326,
+        systemmap:ORG330,
+        systemmap:ORG332 .
+
+systemmap:SYS014 a schema:SoftwareApplication ;
+    rdfs:label "Acorda"@de ;
+    systemmap:operatedBy systemmap:ORG312,
+        systemmap:ORG315,
+        systemmap:ORG317,
+        systemmap:ORG327 .
+
+systemmap:SYS015 a schema:SoftwareApplication ;
+    rdfs:label "Lawis"@de ;
+    systemmap:operatedBy systemmap:ORG316,
+        systemmap:ORG320,
+        systemmap:ORG325,
+        systemmap:ORG329,
+        systemmap:ORG333,
+        systemmap:ORG335 .
+
+systemmap:SYS016 a schema:SoftwareApplication ;
+    rdfs:label "SAP Wallis"@de,
+        "SAP Valais"@fr ;
+    systemmap:operatedBy systemmap:ORG328 .
 
 systemmap:SYS020 a schema:SoftwareApplication ;
     rdfs:label "Tierverkehrsdatenbank"@de,
@@ -600,10 +980,10 @@ systemmap:SYS020 a schema:SoftwareApplication ;
     rdfs:comment "Die Tierverkehrsdatenbank (TVD) ist ein schweizerisches System zur Registrierung und Nachverfolgung von Nutztieren, wie Rinder, Schweine, Schafe, Ziegen und in Gehege gehaltenes Wild. Dies ist u.a. ein wichtiger Beitrag für die Lebensmittelsicherheit und zu der Eindämmung von Tierseuchen. Dank einem zweckmässigen Erfassungssystem werden in der Datenbank Informationen wie Geburts-, Bewegungs- und Schlachtdaten sowie Halterwechsel erfasst."@de,
         "La banque de données sur le trafic des animaux (BDTA) est un système suisse d’enregistrement et de suivi des animaux de rente, tels que les bovins, les porcs, les ovins, les caprins ou le gibier détenu en enclos. Ce système contribue notamment à la sécurité des denrées alimentaires et à l’enraiement des épizooties. Le système de saisie judicieux permet d’enregistrer des informations relatives à la naissance, aux déplacements et à l’abattage des animaux de rente ou encore aux changements de propriétaires."@fr,
         "La Banca dati sul traffico di animali (BDTA) è un sistema svizzero per la registrazione e la tracciabilità di animali da reddito come bovini, suini, ovini, caprini e selvaggina allevata in recinti. Tale sistema contribuisce in modo significativo anche alla sicurezza alimentare e al contenimento delle epizoozie. Grazie a un sistema di registrazione mirato, nella BDTA vengono registrati i dati relativi alla nascita, agli spostamenti, alla macellazione e al cambiamento del detentore."@it ;
-    systemmap:PRP008 systemmap:ORG101 ;
-    systemmap:PRP102 "TVD"@de,
+    systemmap:abbreviation "TVD"@de,
         "BDTA"@fr,
-        "BDTA"@it .
+        "BDTA"@it ;
+    systemmap:operatedBy systemmap:ORG101 .
 
 systemmap:SYS021 a schema:SoftwareApplication ;
     rdfs:label "Datenbank Milch"@de,
@@ -614,11 +994,11 @@ systemmap:SYS021 a schema:SoftwareApplication ;
         "The Milk Database (dbmilch.ch) is a web application of TSM Treuhand GmbH. It is the online platform for actors in the Swiss dairy industry. The solution developed by Bedag Solutions AG can be used by cantonal veterinary and agricultural offices or other organizations in conjunction with Acontrol."@en,
         "La base de données lait (dbmilch.ch) est une application web de TSM Treuhand GmbH. Elle est la plateforme en ligne des acteurs de l'industrie laitière suisse. La solution développée par Bedag Solutions AG peut être utilisée par les offices vétérinaires et agricoles cantonaux ou par d'autres organisations en lien avec Acontrol."@fr,
         "La database latte (dbmilch.ch) è un'applicazione web di TSM Treuhand GmbH. È la piattaforma online per gli attori dell'industria lattiero-casearia svizzera. La soluzione sviluppata da Bedag Solutions AG può essere utilizzata dagli uffici veterinari e agricoli cantonali o da altre organizzazioni in combinazione con Acontrol."@it ;
-    systemmap:PRP008 systemmap:ORG100 ;
-    systemmap:PRP102 "dbmilch"@de,
+    systemmap:abbreviation "dbmilch"@de,
         "dbmilch"@en,
         "dbmilch"@fr,
-        "dbmilch"@it .
+        "dbmilch"@it ;
+    systemmap:operatedBy systemmap:ORG100 .
 
 systemmap:SYS022 a schema:SoftwareApplication ;
     rdfs:label "ACmobile"@de ;
@@ -627,7 +1007,7 @@ systemmap:SYS022 a schema:SoftwareApplication ;
 systemmap:SYS023 a schema:SoftwareApplication ;
     rdfs:label "Barto"@de ;
     rdfs:comment "Barto ist eine digitale Plattform für die Landwirtschaft, die eine effiziente Betriebsführung, Dokumentation und Analyse von Betriebsdaten ermöglicht. Sie integriert verschiedene agronomische und administrative Funktionen und bietet Landwirtinnen und Landwirten eine zentrale Lösung für die Verwaltung ihres Betriebs. Barto wird von der Barto AG betrieben und arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen."@de ;
-    systemmap:PRP008 systemmap:ORG102 .
+    systemmap:operatedBy systemmap:ORG102 .
 
 systemmap:SYS024 a schema:SoftwareApplication ;
     rdfs:label "Pflanzensorten-Datenbank"@de,
@@ -638,17 +1018,17 @@ systemmap:SYS024 a schema:SoftwareApplication ;
         "The PLUTO database contains information on plant species and varieties from UPOV members as well as the Organisation for Economic Co-operation and Development (OECD). The PLUTO database provides a search tool for variety denominations to ensure the distinctness of new varieties."@en,
         "La base de données PLUTO contient des informations sur les espèces et variétés de plantes des membres de l'UPOV ainsi que de l'Organisation de coopération et de développement économiques (OCDE). La base de données PLUTO offre un outil de recherche pour les dénominations variétales afin d'assurer la distinction des nouvelles variétés."@fr,
         "Il database PLUTO contiene informazioni sulle specie e varietà vegetali dei membri dell'UPOV e dell'Organizzazione per la cooperazione e lo sviluppo economico (OCSE). Il database PLUTO fornisce uno strumento di ricerca per le denominazioni varietali al fine di garantire la distinzione delle nuove varietà."@it ;
-    systemmap:PRP008 systemmap:ORG200 ;
-    systemmap:PRP102 "PLUTO"@de,
+    systemmap:abbreviation "PLUTO"@de,
         "PLUTO"@en,
         "PLUTO"@fr,
-        "PLUTO"@it .
+        "PLUTO"@it ;
+    systemmap:operatedBy systemmap:ORG200 .
 
 systemmap:SYS025 a schema:SoftwareApplication ;
     rdfs:label "Betriebs- und Unternehmensregister"@de ;
     rdfs:comment "Das Betriebs- und Unternehmensregister (BUR) umfasst alle Unternehmen und Betriebe des privaten und öffentlichen Rechts, die in der Schweiz domiziliert sind und eine wirtschaftliche Tätigkeit ausüben. Das BUR dient dem BFS als Adressregister für die statistischen Erhebungen bei Unternehmen und Arbeitsstätten. Auch andere Ämter der Bundesverwaltung und zahlreiche Kantone verwenden das BUR zu statistischen oder administrativen Zwecken."@de ;
-    systemmap:PRP008 systemmap:ORG212 ;
-    systemmap:PRP102 "BUR"@de .
+    systemmap:abbreviation "BUR"@de ;
+    systemmap:operatedBy systemmap:ORG212 .
 
 systemmap:SYS026 a schema:SoftwareApplication ;
     rdfs:label "e-Deklaration"@de,
@@ -659,9 +1039,9 @@ systemmap:SYS026 a schema:SoftwareApplication ;
         "e-dec is Switzerland's electronic customs declaration system that enables companies to declare goods for import, export, and transit electronically. Designed with a modular structure, it streamlines customs processes, leading to cost savings and increased efficiency. Notably, e-dec supports multiple communication standards and allows each customs declaration to include up to 99'999 tariff headings."@en,
         "e-dec est le système électronique de déclaration en douane de la Suisse, permettant aux entreprises de déclarer électroniquement les marchandises à l'importation, à l'exportation et en transit. Conçu avec une structure modulaire, il optimise les processus douaniers, entraînant des économies de coûts et une efficacité accrue. Notamment, e-dec prend en charge plusieurs normes de communication et permet à chaque déclaration en douane d'inclure jusqu'à 99'999 positions tarifaires."@fr,
         "e-dec è il sistema elettronico di dichiarazione doganale della Svizzera che consente alle aziende di dichiarare elettronicamente le merci per l'importazione, l'esportazione e il transito. Progettato con una struttura modulare, ottimizza i processi doganali, portando a risparmi sui costi e a una maggiore efficienza. In particolare, e-dec supporta diversi standard di comunicazione e consente a ogni dichiarazione doganale di includere fino a 99'999 voci tariffarie."@it ;
-    systemmap:PRP008 systemmap:ORG210 ;
-    systemmap:PRP102 "e-dec"@de,
+    systemmap:abbreviation "e-dec"@de,
         "e-dec"@en,
         "e-dec"@fr,
-        "e-dec"@it .
+        "e-dec"@it ;
+    systemmap:operatedBy systemmap:ORG210 .
 

@@ -85,3 +85,8 @@ html, body {
   z-index: 100;
  /* Ensure it sits on top of other elements */
 }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0.8em;   /* Adjust value as needed */
+  margin-bottom: -0.2em; /* Adjust value as needed */
+}

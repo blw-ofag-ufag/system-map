@@ -137,6 +137,7 @@ systemmap:PRP005 a owl:ObjectProperty ;
         "is (partially) owned by"@en,
         "est (partiellement) détenu par"@fr,
         "è (parzialmente) di proprietà di"@it ;
+    rdfs:comment "Diese Beziehung zeigt an, dass eine Organisation X (teilweise) im Besitz einer anderen Organisation Y ist."@de ;
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization ;
     owl:inverseOf systemmap:PRP006 .
@@ -146,6 +147,7 @@ systemmap:PRP006 a owl:ObjectProperty ;
         "(partially) owns"@en,
         "possède (partiellement)"@fr,
         "possiede (parzialmente)"@it ;
+    rdfs:comment "Diese Beziehung zeigt an, dass eine Organisation X eine andere Organisation Y (teilweise) besitzt."@de ;
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization ;
     owl:inverseOf systemmap:PRP005 .
@@ -207,6 +209,7 @@ systemmap:PRP013 a owl:ObjectProperty ;
         "informs"@en,
         "informe"@fr,
         "informa"@it ;
+    rdfs:comment "Zeigt auf, dass Informationseinheit X durch eine andere Informationseinheit Y <i>informiert</i> wird; d.h. dass <i>irgendwie</i> Daten fliessen. Das kann über manuelles Abschreiben, E-Mail-Versandt von Tabellen, APIs etc. geschehen."@de ;
     rdfs:domain systemmap:CLS003 ;
     rdfs:range systemmap:CLS003 ;
     owl:inverseOf systemmap:PRP014 .

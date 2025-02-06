@@ -15,9 +15,7 @@ Actually, there is a python script *reasoning* over the two files. This is descr
 
 # 🔎 Examples of SPARQL queries from LINDAS
 
-- [Get nodes from LINDAS](https://s.zazuko.com/gmh9NR)
-- [Get edges from LINDAS](https://s.zazuko.com/3wDcscR)
-- [A list of information units](https://s.zazuko.com/2XsfNRB) and their classification according to the data protection act.
+- [Is there (sensitive) personal data in a system?](https://s.zazuko.com/2vmR264)
 
 # 💭 Reasoning with python
 

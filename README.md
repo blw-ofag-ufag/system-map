@@ -11,7 +11,7 @@ If instead you are interested in the *actual* data, you can have a look at the f
 - **`ontology.ttl`** contains information about how the data is structured.
 - **`data.ttl`** contains information about the organizations, systems and information units themselves.
 
-Actually, there is a python script *reasoning* over the two files. This is described [in the section below](https://github.com/blw-ofag-ufag/system-map#-python-processing-of-the-ttl-files) in more detail.
+Actually, there is a python script *reasoning* over the two files. This is described in more detail below.
 
 # 🔎 Examples of SPARQL queries from LINDAS
 

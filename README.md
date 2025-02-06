@@ -1,8 +1,17 @@
 # 🧭 A system map for the FOAG
 
+This repository is set up to gather and visualize information about IT systems, the data those contain and their operating organizations in the Swiss agri-food sector. You can visually explore this work on the following pages:
+
 - [**DigiAgriFood system map**](https://blw-ofag-ufag.github.io/system-map/index.html?lang=de), a visualization of the system map knowledge graph that specifically shows the classes organization, system and information unit.
-- [**Circular system map**](https://blw-ofag-ufag.github.io/system-map/index.html?lang=de), an alternative visualization in circular arrangement.
+- [**Circular system map**](https://blw-ofag-ufag.github.io/system-map/circle), an alternative visualization in circular arrangement.
 - [**Ontology visualization**](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/system-map/refs/heads/main/graph.ttl) made with WebVOWL, allowing to get a quick grasp of the ontology underlying the system map.
+
+If instead you are interested in the *actual* data, you can have a look at the following files:
+
+- **`ontology.ttl`** contains information about how the data is structured.
+- **`data.ttl`** contains information about the organizations, systems and information units themselves.
+
+Actually, there is a python script *reasoning* over the two files. This is described [in the section below](https://github.com/blw-ofag-ufag/system-map#-python-processing-of-the-ttl-files) in more detail.
 
 # 🔎 Examples of SPARQL queries from LINDAS
 
@@ -10,7 +19,7 @@
 - [Get edges from LINDAS](https://s.zazuko.com/3wDcscR)
 - [A list of information units](https://s.zazuko.com/2XsfNRB) and their classification according to the data protection act.
 
-# 💭 Python processing of the `.ttl` files
+# 💭 Reasoning with python
 
 The repository includes a Python script `scripts/reason.py` that processes the two Turtle files (`data.ttl` and `ontology.ttl`) by first sorting them and then applying custom reasoning before producing the final output (`graph.ttl`). Here's how it works:
 

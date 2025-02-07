@@ -1,4 +1,4 @@
-# 🧭 A system map for the FOAG
+# 🧭 A system map for the Federal Office for Agriculture
 
 This repository is set up to gather and visualize information about IT systems, the data those contain and their operating organizations in the Swiss agri-food sector. You can visually explore this work on the following pages:
 
@@ -8,10 +8,25 @@ This repository is set up to gather and visualize information about IT systems, 
 
 If instead you are interested in the *actual* data, you can have a look at the following files:
 
-- **`ontology.ttl`** contains information about how the data is structured.
-- **`data.ttl`** contains information about the organizations, systems and information units themselves.
+- [**`ontology.ttl`**](ontology.ttl) contains information about how the data is structured.
+- [**`data.ttl`**](data.ttl) contains information about the organizations, systems and information units themselves.
 
 Actually, there is a python script *reasoning* over the two files. This is described in more detail below.
+
+# ⚙️ Setting query parameters in the system map visualization
+
+In the [DigiAgriFood system map](https://blw-ofag-ufag.github.io/system-map/index.html), we can set URL parameters to change the language or the underlying LINDAS SPARQL query. For example, you might want to visualize only IT systems and the data flow for the Swiss agri-food sector, without any organizational information, but in French. You can do that with:
+
+[`https://blw-ofag-ufag.github.io/system-map/index.html?lang=fr&organization=false`](https://blw-ofag-ufag.github.io/system-map/index.html?lang=fr&organization=false)
+
+Here's a table of the possible URL parameters, descriptions and their default values.
+
+| Parameter     | Possible values | Default | Description |
+|--------------|--------|---------|-------------|
+| `lang`       | `de`, `fr`, `it`, `en` | `de`    | Defines the language for labels and descriptions. Currently, the graph contains *some* langstrings in German, French, Italian and English. If the node or edge label is not found in said language, a question mark is shown instead. |
+| `organization` | `true`, `false` | `true` | Determines whether organizations (`schema:Organization`) should be displayed. |
+| `system`     | `true`, `false` | `true` | Determines whether IT systems (`schema:SoftwareApplication`) should be displayed. |
+| `information` | `true`, `false` | `true` | Determines whether information units (`systemmap:Information`) should be displayed. |
 
 # 🔎 Examples of SPARQL queries from LINDAS
 

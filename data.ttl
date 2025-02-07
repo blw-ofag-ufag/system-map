@@ -699,7 +699,8 @@ systemmap:INF028 a systemmap:Information ;
 systemmap:INF033 a systemmap:Information ;
     rdfs:label "Produktekatalog"@de ;
     systemmap:containedIn systemmap:SYS006 ;
-    systemmap:informedBy systemmap:INF037 .
+    systemmap:informedBy systemmap:INF037,
+        systemmap:INF042 .
 
 systemmap:INF034 a systemmap:Information ;
     rdfs:label "Verschiebung von Hof- und Recyclingdünger"@de ;
@@ -726,11 +727,6 @@ systemmap:INF039 a systemmap:Information ;
     rdfs:label "Auflagen zur Anwendung von PSM"@de ;
     systemmap:containedIn systemmap:SYS017 .
 
-systemmap:INF04 a systemmap:Information ;
-    rdfs:label "Dünger"@de ;
-    rdfs:comment "Produkte zur Boden- und Pflanzendüngung."@de ;
-    systemmap:containedIn systemmap:SYS028 .
-
 systemmap:INF040 a systemmap:Information ;
     rdfs:label "Zubereitungen"@de ;
     rdfs:comment "Mischungen oder Lösungen aus zwei oder mehr Stoffen."@de ;
@@ -739,6 +735,11 @@ systemmap:INF040 a systemmap:Information ;
 systemmap:INF041 a systemmap:Information ;
     rdfs:label "Biozide"@de ;
     rdfs:comment "Produkte zur Bekämpfung von Schadorganismen. Mitenthalten sind auch Parallelimportierte von Pflanzenschutzmittel, also Pflanzenschutzmittel, die aus anderen Ländern importiert werden."@de ;
+    systemmap:containedIn systemmap:SYS028 .
+
+systemmap:INF042 a systemmap:Information ;
+    rdfs:label "Dünger"@de ;
+    rdfs:comment "Produkte zur Boden- und Pflanzendüngung."@de ;
     systemmap:containedIn systemmap:SYS028 .
 
 systemmap:INF001 a systemmap:PersonInformation ;
@@ -921,9 +922,9 @@ systemmap:INF024 a systemmap:SensitivePersonInformation ;
 
 systemmap:ORG099 a schema:Organization ;
     rdfs:label "Gemeinsamen Anmeldestelle Chemikalien"@de ;
-    schema:member systemmap:ORG319,
-        systemmap:ORG320,
-        systemmap:ORG321 .
+    schema:member systemmap:ORG096,
+        systemmap:ORG097,
+        systemmap:ORG098 .
 
 systemmap:ORG200 a schema:Organization ;
     rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,

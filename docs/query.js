@@ -7,6 +7,11 @@ function getQueryParam(name, defaultValue) {
 // language code used in the queries
 window.lang = getQueryParam("lang", "de");
 
+// should schema:Organization, schema:SoftwareApplication and systemmap:Information be displayed
+window.organization = getQueryParam("organization", "true") === "true" ? "schema:Organization" : "";
+window.system = getQueryParam("system", "true") === "true" ? "schema:SoftwareApplication" : "";
+window.information = getQueryParam("information", "true") === "true" ? "systemmap:Information" : "";
+
 // set SPARQL endpoint
 window.ENDPOINT = "https://test.lindas.admin.ch/query";
 
@@ -20,7 +25,7 @@ window.NODE_QUERY = `
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/ontologies> {
       ?id a ?group .
-      VALUES ?group { schema:Organization schema:SoftwareApplication systemmap:Information }
+      VALUES ?group { ${organization} ${system} ${information} }
       OPTIONAL {
         ?id rdfs:label ?label .
         FILTER(LANG(?label) = "${lang}")
@@ -49,7 +54,7 @@ window.EDGE_QUERY = `
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/ontologies> {
       ?from ?property ?to .
-      VALUES ?property { systemmap:informs schema:parentOrganization systemmap:operates systemmap:owns systemmap:access systemmap:contains systemmap:usesIdentifier }
+      VALUES ?property { systemmap:informs schema:parentOrganization systemmap:operates systemmap:owns systemmap:access systemmap:contains systemmap:usesIdentifier schema:memberOf }
       ?property rdfs:label ?label .
       FILTER(LANG(?label)="${lang}")
       OPTIONAL {
@@ -64,10 +69,12 @@ window.EDGE_QUERY = `
 window.CLASS_QUERY = `
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
+  PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map#>
+  PREFIX schema: <https://schema.org/>
   SELECT ?iri ?label ?comment
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/ontologies> {
-      ?iri a owl:Class .
+      VALUES ?iri { ${organization} ${system} ${information} }
       ?iri rdfs:label ?label .
       ?iri rdfs:comment ?comment .    
       FILTER(LANG(?label) = "${lang}" && LANG(?comment) = "${lang}")

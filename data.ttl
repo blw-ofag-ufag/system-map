@@ -512,6 +512,18 @@ systemmap:ORG041 a systemmap:FederalOrganization ;
         systemmap:INF023 ;
     schema:parentOrganization systemmap:ORG007 .
 
+systemmap:ORG096 a systemmap:FederalOrganization ;
+    rdfs:label "Bundesamt für Umwelt"@de ;
+    systemmap:abbreviation "BAFU"@de .
+
+systemmap:ORG097 a systemmap:FederalOrganization ;
+    rdfs:label "Bundesamt für Gesundheit"@de ;
+    systemmap:abbreviation "BAG"@de .
+
+systemmap:ORG098 a systemmap:FederalOrganization ;
+    rdfs:label "Staatssektretariat für Wirtschaft"@de ;
+    systemmap:abbreviation "SECO"@de .
+
 systemmap:ORG201 a systemmap:FederalOrganization ;
     rdfs:label "Wissensgrundlagen"@de ;
     schema:parentOrganization systemmap:ORG211 .
@@ -564,16 +576,35 @@ systemmap:ORG214 a systemmap:FederalOrganization ;
     systemmap:abbreviation "FBIF"@de ;
     schema:parentOrganization systemmap:ORG002 .
 
+systemmap:INF003 a systemmap:Identifier ;
+    rdfs:label "UID-Nummer"@de ;
+    systemmap:containedIn systemmap:SYS027 .
+
 systemmap:INF004 a systemmap:Identifier ;
-    rdfs:label "BUR-Number",
-        "BUR-Nummer"@de ;
+    rdfs:label "BUR-Nummer"@de,
+        "BUR-Number"@en ;
     systemmap:containedIn systemmap:SYS025 .
 
-systemmap:INF003 a systemmap:Information ;
-    rdfs:label "Informationen zu Flächen und Kulturen"@de ;
-    rdfs:comment "Daten zu Grössen und Ort der Flächen (nur als Koordinaten ohne Polygone), landwirtschaftlichen Hauptkulturen und Betriebszugehörigkeit der Flächen."@de ;
-    systemmap:containedIn systemmap:SYS003 ;
-    systemmap:informs systemmap:INF030 .
+systemmap:INF005 a systemmap:Information ;
+    rdfs:label "Tieridentifikationsdaten"@de ;
+    rdfs:comment "Enthält grundlegende Identifikationsdaten der Tiere, wie eindeutige Ohrmarkennummern, Art, Geschlecht und Geburtsdatum. Diese Stammdaten bilden die Basis für die lückenlose Rückverfolgbarkeit im TVD."@de ;
+    systemmap:containedIn systemmap:SYS020 .
+
+systemmap:INF006 a systemmap:Information ;
+    rdfs:label "Tierereignisdaten"@de ;
+    rdfs:comment "Erfasst alle dynamischen Ereignisse im Lebenszyklus der Tiere, darunter Geburts-, Bewegungs- und Schlachtdaten sowie Halterwechsel. Diese Informationen sind essenziell, um Standortwechsel, Transportschritte und Verarbeitungsprozesse nachvollziehen zu können."@de ;
+    systemmap:containedIn systemmap:SYS020 .
+
+systemmap:INF007 a systemmap:Information ;
+    rdfs:label "Meldepflichtdaten (Schafe & Ziegen)"@de ;
+    rdfs:comment "Beinhaltet spezifische Daten, die aufgrund erweiterter Meldepflichten für Schafe und Ziegen erfasst werden müssen. Dazu gehören Meldungen zu Geburten (innerhalb von 30 Tagen) sowie zu Verendungen, Zu- und Abgängen sowie Schlachtungen (innerhalb von 3 Tagen)."@de ;
+    systemmap:containedIn systemmap:SYS020 .
+
+systemmap:INF008 a systemmap:Information ;
+    rdfs:label "Daten zu Tierhaltern"@de ;
+    rdfs:comment "Administrative Informationen zu den Tierhalterinnen und Tierhaltern. Dies umfasst die für die eindeutige Zuordnung erforderlichen Identifikationsdaten wie die TVD-Nummer bzw. Betriebsnummer sowie grundlegende Angaben zur Identität und Kontaktadresse der Person. Diese Daten gewährleisten, dass alle Tierbewegungen und -ereignisse korrekt einer Halterin bzw. einem Halter zugeordnet werden können, was für die Rückverfolgbarkeit und die Einhaltung gesetzlicher Anforderungen unerlässlich ist."@de ;
+    systemmap:containedIn systemmap:SYS020 ;
+    systemmap:informedBy systemmap:INF014 .
 
 systemmap:INF010 a systemmap:Information ;
     rdfs:label "Nationaler Sortenkatalog"@de,
@@ -609,6 +640,12 @@ systemmap:INF013 a systemmap:Information ;
         "Informazioni sulle varietà vegetali provenienti dai paesi membri dell'UPOV e dall'Organizzazione per la cooperazione e lo sviluppo economico (OCSE). Questo elenco di varietà funge da registro centrale per le denominazioni varietali e supporta la verifica della distinzione delle nuove varietà."@it ;
     systemmap:containedIn systemmap:SYS024 ;
     systemmap:informedBy systemmap:INF010 .
+
+systemmap:INF015 a systemmap:Information ;
+    rdfs:label "Strukturdaten"@de ;
+    rdfs:comment "Umfasst umfassende Kennzahlen zur strukturellen Ausprägung der Landwirtschaft. Diese Daten beinhalten u. a. Informationen über Betriebsgrössen, Flächennutzung (Ackerbau, Dauergrünland etc.), Tierhaltung, Arbeitskräfte, Produktionssysteme sowie den Einsatz von Mechanisierung und Technologie. Sie dienen als Basis für agrarpolitische Entscheidungen, wissenschaftliche Analysen und Planungen im Förderwesen."@de ;
+    systemmap:containedIn systemmap:SYS003 ;
+    systemmap:informs systemmap:INF030 .
 
 systemmap:INF022 a systemmap:Information ;
     rdfs:label "Daten zur Milchproduktion"@de,
@@ -659,6 +696,51 @@ systemmap:INF028 a systemmap:Information ;
     rdfs:comment "Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit, Grundkapital der Aktiengesellschaften, Umsatzzahlen, Datum des Eintrags oder der Löschung im Handelsregister, Datum der Bekanntgabe der Gründung oder Schliessung eines Unternehmens oder Betriebs."@de ;
     systemmap:containedIn systemmap:SYS025 .
 
+systemmap:INF033 a systemmap:Information ;
+    rdfs:label "Produktekatalog"@de ;
+    systemmap:containedIn systemmap:SYS006 ;
+    systemmap:informedBy systemmap:INF037 .
+
+systemmap:INF034 a systemmap:Information ;
+    rdfs:label "Verschiebung von Hof- und Recyclingdünger"@de ;
+    systemmap:containedIn systemmap:SYS006 .
+
+systemmap:INF035 a systemmap:Information ;
+    rdfs:label "Verschiebung von Mineraldüngern"@de ;
+    systemmap:containedIn systemmap:SYS006 .
+
+systemmap:INF036 a systemmap:Information ;
+    rdfs:label "Verschiebung von Pflanzenschutzmitteln"@de ;
+    systemmap:containedIn systemmap:SYS006 .
+
+systemmap:INF037 a systemmap:Information ;
+    rdfs:label "Pflanzenschutzmittel"@de ;
+    rdfs:comment "Liste der in der Schweiz erlaubten Pflanzenschutzmittel, deren chemische Zusammensetzung, W-Nummern und Bewilligungsinhaber."@de ;
+    systemmap:containedIn systemmap:SYS017 .
+
+systemmap:INF038 a systemmap:Information ;
+    rdfs:label "Kulturen und Schaderreger"@de ;
+    systemmap:containedIn systemmap:SYS017 .
+
+systemmap:INF039 a systemmap:Information ;
+    rdfs:label "Auflagen zur Anwendung von PSM"@de ;
+    systemmap:containedIn systemmap:SYS017 .
+
+systemmap:INF04 a systemmap:Information ;
+    rdfs:label "Dünger"@de ;
+    rdfs:comment "Produkte zur Boden- und Pflanzendüngung."@de ;
+    systemmap:containedIn systemmap:SYS028 .
+
+systemmap:INF040 a systemmap:Information ;
+    rdfs:label "Zubereitungen"@de ;
+    rdfs:comment "Mischungen oder Lösungen aus zwei oder mehr Stoffen."@de ;
+    systemmap:containedIn systemmap:SYS028 .
+
+systemmap:INF041 a systemmap:Information ;
+    rdfs:label "Biozide"@de ;
+    rdfs:comment "Produkte zur Bekämpfung von Schadorganismen. Mitenthalten sind auch Parallelimportierte von Pflanzenschutzmittel, also Pflanzenschutzmittel, die aus anderen Ländern importiert werden."@de ;
+    systemmap:containedIn systemmap:SYS028 .
+
 systemmap:INF001 a systemmap:PersonInformation ;
     rdfs:label "Kontaktdaten Bewirtschaftenden"@de,
         "Contact details of farm managers"@en,
@@ -671,17 +753,13 @@ systemmap:INF001 a systemmap:PersonInformation ;
     systemmap:containedIn systemmap:SYS003 .
 
 systemmap:INF002 a systemmap:PersonInformation ;
-    rdfs:label "Informationen zu Betriebsleitenden"@de,
-        "Information about farm managers"@en,
-        "Informations sur les directeurs d'exploitation"@fr,
-        "Informazioni sui gestori aziendali"@it ;
-    rdfs:comment "Beruf und Alter der Betriebsleiterin bzw. des Betriebsleiters."@de,
-        "Occupation and age of the farm manager."@en,
-        "Profession et âge du directeur ou de la directrice d'exploitation."@fr,
-        "Professione ed età del gestore aziendale."@it ;
-    systemmap:containedIn systemmap:SYS003 ;
-    systemmap:informs systemmap:INF030 ;
-    systemmap:usesIdentifier systemmap:INF004 .
+    rdfs:label "Informationen der Strukturdatenerhebung"@de ;
+    systemmap:containedIn systemmap:SYS012,
+        systemmap:SYS013,
+        systemmap:SYS014,
+        systemmap:SYS015,
+        systemmap:SYS016 ;
+    systemmap:informs systemmap:INF015 .
 
 systemmap:INF011 a systemmap:PersonInformation ;
     rdfs:label "Kontaktdaten Züchter"@de,
@@ -693,6 +771,24 @@ systemmap:INF011 a systemmap:PersonInformation ;
         "Coordonnées des sélectionneurs qui fournissent des informations sur les variétés à ProVar."@fr,
         "Dati di contatto dei selezionatori che forniscono informazioni sulle varietà a ProVar."@it ;
     systemmap:containedIn systemmap:SYS011 .
+
+systemmap:INF014 a systemmap:PersonInformation ;
+    rdfs:label "Betriebsdaten (Person, Betrieb)"@de ;
+    rdfs:comment "Enthält grundlegende Informationen zu landwirtschaftlichen Betrieben sowie zu den zugehörigen Personen. Dazu gehören Identifikationsdaten, organisatorische Strukturen und Angaben zu den am Betrieb beteiligten Personen (z. B. Betriebsleiter, Familienmitglieder und Mitarbeitende)."@de ;
+    systemmap:containedIn systemmap:SYS003 ;
+    systemmap:informs systemmap:INF030 ;
+    systemmap:usesIdentifier systemmap:INF003,
+        systemmap:INF004 .
+
+systemmap:INF016 a systemmap:PersonInformation ;
+    rdfs:label "Beitragsdaten"@de ;
+    rdfs:comment "Beinhaltet Daten zu finanziellen Zuwendungen an landwirtschaftliche Betriebe. Dies umfasst Informationen über die Beitragshöhen, Berechnungsgrundlagen, Auszahlungskriterien und -modalitäten sowie die zugrunde liegenden administrativen Prozesse."@de ;
+    systemmap:containedIn systemmap:SYS003 .
+
+systemmap:INF018 a systemmap:PersonInformation ;
+    rdfs:label "Anmeldungen für Direktzahlungsarten"@de ;
+    rdfs:comment "Umfasst den Prozess und die zugehörigen Daten zur Registrierung für unterschiedliche Direktzahlungsarten. Enthalten sind Informationen zu Anmeldeverfahren, Fristen, Voraussetzungen und den verwendeten Formularen zur Antragstellung."@de ;
+    systemmap:containedIn systemmap:SYS003 .
 
 systemmap:INF020 a systemmap:PersonInformation ;
     rdfs:label "Kontaktdaten Milchproduzenten"@de,
@@ -761,6 +857,11 @@ systemmap:INF031 a systemmap:PersonInformation ;
         "Dati su ogni importazione di prodotti fitosanitari, compresi UID e nome dell'importatore, data di importazione, quantità importata, denominazione del prodotto (testo libero) e indirizzo di consegna."@it ;
     systemmap:containedIn systemmap:SYS026 .
 
+systemmap:INF032 a systemmap:PersonInformation ;
+    rdfs:label "Informationen zur Einfuhr von PSM"@de ;
+    systemmap:containedIn systemmap:SYS007 ;
+    systemmap:informedBy systemmap:INF031 .
+
 systemmap:ORG100 a systemmap:PrivateOrganization ;
     rdfs:label "TSM Treuhand GmbH"@de,
         "TSM Treuhand LLC"@en,
@@ -802,6 +903,11 @@ systemmap:ORG103 a systemmap:PrivateOrganization ;
         "La coopérative Fenaco est une entreprise agricole suisse qui aide les agriculteurs à gérer leurs exploitations avec succès. Elle est active dans les domaines du commerce agricole, de la production alimentaire, du commerce de détail et de l'énergie. Fenaco possède des marques telles que Landi, Volg, Agrola et divers producteurs alimentaires. La coopérative appartient aux agriculteurs suisses et son siège est à Berne."@fr,
         "La cooperativa Fenaco è un'azienda agricola svizzera che supporta gli agricoltori nella gestione economica delle loro aziende. Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia. Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari. La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna."@it .
 
+systemmap:INF017 a systemmap:SensitivePersonInformation ;
+    rdfs:label "Kürzungen von Direktzahlungen"@de ;
+    rdfs:comment "Enthält Informationen über die Regelungen und Verfahren, nach denen Direktzahlungen an landwirtschaftliche Betriebe gekürzt werden. Die Daten umfassen Kriterien, Berechnungsgrundlagen, betroffene Zeiträume und administrative Abläufe, die zu solchen Kürzungen führen können."@de ;
+    systemmap:containedIn systemmap:SYS003 .
+
 systemmap:INF024 a systemmap:SensitivePersonInformation ;
     rdfs:label "Resultate der Milchprüfung"@de,
         "Results of milk testing"@en,
@@ -812,6 +918,12 @@ systemmap:INF024 a systemmap:SensitivePersonInformation ;
         "Résultats du contrôle public du lait. Lors du contrôle public du lait, le lait de vache est analysé deux fois par mois pour les paramètres suivants : nombre de germes, cellules somatiques et inhibiteurs. Des résultats hygiéniques insuffisants entraînent des réclamations et, en cas de carences hygiéniques prolongées, une interdiction officielle de livraison de lait. Les résultats du contrôle du lait sont mis à disposition des cercles autorisés via la plateforme dbmilch.ch."@fr,
         "Risultati del controllo pubblico del latte. Nel controllo pubblico del latte, il latte di mucca viene analizzato due volte al mese per i seguenti parametri: conta dei germi, cellule somatiche e inibitori. Risultati igienicamente insufficienti comportano reclami e, in caso di carenze igieniche prolungate, un divieto ufficiale di consegna del latte. I risultati del controllo del latte sono resi disponibili ai soggetti autorizzati tramite la piattaforma dbmilch.ch."@it ;
     systemmap:containedIn systemmap:SYS021 .
+
+systemmap:ORG099 a schema:Organization ;
+    rdfs:label "Gemeinsamen Anmeldestelle Chemikalien"@de ;
+    schema:member systemmap:ORG319,
+        systemmap:ORG320,
+        systemmap:ORG321 .
 
 systemmap:ORG200 a schema:Organization ;
     rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
@@ -973,6 +1085,10 @@ systemmap:SYS016 a schema:SoftwareApplication ;
         "SAP Valais"@fr ;
     systemmap:operatedBy systemmap:ORG328 .
 
+systemmap:SYS017 a schema:SoftwareApplication ;
+    rdfs:label "Pflanzenschutzmittelverzeichnis"@de ;
+    systemmap:operatedBy systemmap:ORG204 .
+
 systemmap:SYS020 a schema:SoftwareApplication ;
     rdfs:label "Tierverkehrsdatenbank"@de,
         "Banque de données sur le trafic des animaux"@fr,
@@ -1044,4 +1160,13 @@ systemmap:SYS026 a schema:SoftwareApplication ;
         "e-dec"@fr,
         "e-dec"@it ;
     systemmap:operatedBy systemmap:ORG210 .
+
+systemmap:SYS027 a schema:SoftwareApplication ;
+    rdfs:label "UID-Register"@de ;
+    systemmap:operatedBy systemmap:ORG212 .
+
+systemmap:SYS028 a schema:SoftwareApplication ;
+    rdfs:label "Produkteregister Chemikalien"@de ;
+    systemmap:abbreviation "RPC"@de ;
+    systemmap:operatedBy systemmap:ORG099 .
 

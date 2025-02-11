@@ -3,7 +3,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
-@prefix systemmap: <https://agriculture.ld.admin.ch/foag/system-map#> .
+@prefix systemmap: <https://agriculture.ld.admin.ch/foag/system-map/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 systemmap:CantonalAgriculturalAdvisor a owl:Class ;

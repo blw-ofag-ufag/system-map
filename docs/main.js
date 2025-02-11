@@ -203,7 +203,7 @@ async function init() {
                 springConstant: 0.05
             },
             stabilization: {
-                iterations: 1000
+                iterations: 150
             }
         }
     };

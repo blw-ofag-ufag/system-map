@@ -2,7 +2,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
-@prefix systemmap: <https://agriculture.ld.admin.ch/foag/system-map/> .
+@prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
 
 systemmap:ORG099 a schema:Organization ;
     rdfs:label "Gemeinsamen Anmeldestelle Chemikalien"@de ;
@@ -15,8 +15,10 @@ systemmap:ORG200 a schema:Organization ;
         "International Union for the Protection of New Varieties of Plants"@en,
         "Union internationale pour la protection des obtentions végétales"@fr,
         "Unione internazionale per la protezione delle nuove varietà vegetali"@it ;
-    rdfs:comment "Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz. Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen."@de,
-        "The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland. It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society."@en,
+    rdfs:comment """Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz.
+        Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen."""@de,
+        """The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland.
+        It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society."""@en,
         "L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse. Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société."@fr,
         "L'Unione internazionale per la protezione delle nuove varietà vegetali (UPOV) è un'organizzazione intergovernativa con sede a Ginevra, in Svizzera. È stata fondata nel 1961 e mira a promuovere un sistema efficace per la protezione del miglioramento genetico delle piante, al fine di sostenere lo sviluppo di nuove varietà vegetali a beneficio della società."@it ;
     systemmap:abbreviation "UPOV"@de,
@@ -894,7 +896,8 @@ systemmap:INF013 a systemmap:Information ;
 
 systemmap:INF015 a systemmap:Information ;
     rdfs:label "Strukturdaten"@de ;
-    rdfs:comment "Umfasst umfassende Kennzahlen zur strukturellen Ausprägung der Landwirtschaft. Diese Daten beinhalten u. a. Informationen über Betriebsgrössen, Flächennutzung (Ackerbau, Dauergrünland etc.), Tierhaltung, Arbeitskräfte, Produktionssysteme sowie den Einsatz von Mechanisierung und Technologie. Sie dienen als Basis für agrarpolitische Entscheidungen, wissenschaftliche Analysen und Planungen im Förderwesen."@de ;
+    rdfs:comment """Die landwirtschaftliche Strukturerhebung erfasst jährlich seit 1997 die Struktur aller Landwirtschaftsbetriebe in der Schweiz und basiert hauptsächlich auf administrativen Daten.
+        Sie deckt nahezu 100 % der Betriebe ab und erfasst Variablen wie Betriebsgrößen, Anbauflächen, Nutztierbestände und Beschäftigte. Die Erhebung dient der statistischen Analyse der Landwirtschaft, der Aktualisierung des Betriebsregisters und der agrarpolitischen Entscheidungsfindung."""@de ;
     systemmap:containedIn systemmap:SYS003 ;
     systemmap:informs systemmap:INF030 .
 
@@ -1025,8 +1028,14 @@ systemmap:INF011 a systemmap:PersonInformation ;
     systemmap:containedIn systemmap:SYS011 .
 
 systemmap:INF014 a systemmap:PersonInformation ;
-    rdfs:label "Betriebsdaten (Person, Betrieb)"@de ;
-    rdfs:comment "Enthält grundlegende Informationen zu landwirtschaftlichen Betrieben sowie zu den zugehörigen Personen. Dazu gehören Identifikationsdaten, organisatorische Strukturen und Angaben zu den am Betrieb beteiligten Personen (z. B. Betriebsleiter, Familienmitglieder und Mitarbeitende)."@de ;
+    rdfs:label "Betriebsdaten (Person, Betrieb)"@de,
+        "Operational data (Person, Business)"@en,
+        "Données opérationnelles (Personne, Entreprise)"@fr,
+        "Dati operativi (Persona, Impresa)"@it ;
+    rdfs:comment "Enthält grundlegende Informationen zu landwirtschaftlichen Betrieben sowie zu den zugehörigen Personen. Dazu gehören Identifikationsdaten, organisatorische Strukturen und Angaben zu den am Betrieb beteiligten Personen (z. B. Betriebsleiter, Familienmitglieder und Mitarbeitende)."@de,
+        "Contains basic information about agricultural businesses and related individuals. This includes identification data, organizational structures, and details about individuals involved in the business (e.g., farm managers, family members, and employees)."@en,
+        "Contient des informations de base sur les exploitations agricoles et les personnes associées. Cela inclut les données d'identification, les structures organisationnelles et les détails sur les personnes impliquées dans l'exploitation (p. ex. gestionnaires de ferme, membres de la famille et employés)."@fr,
+        "Contiene informazioni di base sulle aziende agricole e sulle persone ad esse associate. Ciò include dati identificativi, strutture organizzative e dettagli sulle persone coinvolte nell'azienda (ad es. gestori dell'azienda, familiari e dipendenti)."@it ;
     systemmap:containedIn systemmap:SYS003 ;
     systemmap:informs systemmap:INF030 ;
     systemmap:usesIdentifier systemmap:INF003,

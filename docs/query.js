@@ -19,7 +19,7 @@ window.ENDPOINT = "https://test.lindas.admin.ch/query";
 window.NODE_QUERY = `
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
-  PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map/>
+  PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
   PREFIX schema: <http://schema.org/>
   SELECT ?id ?group ?displayLabel ?comment ?abbreviation
   WHERE {
@@ -48,7 +48,7 @@ window.NODE_QUERY = `
 window.EDGE_QUERY = `
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
-  PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map/>
+  PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
   PREFIX schema: <http://schema.org/>
   SELECT (?property AS ?id) ?from ?to ?label ?comment
   WHERE {
@@ -69,7 +69,7 @@ window.EDGE_QUERY = `
 window.CLASS_QUERY = `
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
-  PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map/>
+  PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
   PREFIX schema: <http://schema.org/>
   SELECT ?iri ?label ?comment
   WHERE {
@@ -89,7 +89,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT ?title
 WHERE {
   GRAPH <https://lindas.admin.ch/foag/ontologies> {
-    <https://agriculture.ld.admin.ch/foag/system-map/> dcterms:title ?title .
+    <https://agriculture.ld.admin.ch/system-map/> dcterms:title ?title .
     FILTER(LANG(?title)="${lang}")
   }
 }
@@ -111,7 +111,7 @@ window.mapClassIriToGroup = function(iri) {
       return "Organization";
     case "http://schema.org/SoftwareApplication":
       return "System";
-    case "https://agriculture.ld.admin.ch/foag/system-map/Information":
+    case "https://agriculture.ld.admin.ch/system-map/Information":
       return "Information";
     default:
       return "Other";

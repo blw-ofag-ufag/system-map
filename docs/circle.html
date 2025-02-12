@@ -131,7 +131,7 @@
     var nodesQuery = `
       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
       PREFIX owl: <http://www.w3.org/2002/07/owl#>
-      PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map/>
+      PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
       PREFIX schema: <http://schema.org/>
       SELECT ?id ?group ?label ?comment ?abbreviation
       WHERE {
@@ -149,7 +149,7 @@
     var edgesQuery = `
       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
       PREFIX owl: <http://www.w3.org/2002/07/owl#>
-      PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map/>
+      PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
       PREFIX schema: <http://schema.org/>
       SELECT ?subject ?predicate ?object
       WHERE {

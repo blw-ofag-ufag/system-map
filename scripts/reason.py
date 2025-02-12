@@ -1,17 +1,41 @@
 import rdflib
-from rdflib import Graph, RDF, RDFS, OWL, URIRef
+from rdflib import Graph, RDF, RDFS, OWL, URIRef, Namespace
+from rdflib.namespace import NamespaceManager
 from otsrdflib import OrderedTurtleSerializer
 
+SCHEMA = Namespace("http://schema.org/") # set schema prefix to the old, outdated http://... prefix because LINDAS works with these
 
 def sort_and_overwrite_turtle(graph: Graph, file_path: str):
     """
     Sorts the given RDF graph and overwrites the given Turtle file in sorted form.
+    Forcibly rebinds 'schema:' to http://schema.org/ so we don't get schema1:, etc.
     """
-    with open(file_path, 'wb') as f:
-        serializer = OrderedTurtleSerializer(graph)
-        serializer.serialize(f)
-    print(f"File '{file_path}' sorted and overwritten.")
 
+    # 1) Create a new, empty namespace manager
+    nm = NamespaceManager(Graph())
+
+    # 2) Copy over all *existing* prefixes except those that
+    #    point to http://schema.org/ or start with "schema"
+    for prefix, uri in graph.namespace_manager.namespaces():
+        if str(uri) == str(SCHEMA) or prefix.startswith("schema"):
+            # Skip any existing schema or schema1, schema2, etc.
+            continue
+        nm.bind(prefix, uri)
+
+    # 3) Bind "schema" -> "http://schema.org/" exactly once
+    nm.bind("schema", str(SCHEMA), replace=True)
+
+    # 4) Assign the new namespace manager to the graph
+    graph.namespace_manager = nm
+
+    # 5) Serialize with the OrderedTurtleSerializer,
+    #    ensuring it uses this updated namespace manager
+    with open(file_path, "wb") as f:
+        serializer = OrderedTurtleSerializer(graph)
+        serializer.namespace_manager = graph.namespace_manager
+        serializer.serialize(f)
+
+    print(f"File '{file_path}': Triples sorted and overwritten.")
 
 def load_and_sort_ttl(file_path: str) -> Graph:
     """
@@ -23,7 +47,6 @@ def load_and_sort_ttl(file_path: str) -> Graph:
     # Sort the file's content, overwriting the original.
     sort_and_overwrite_turtle(g, file_path)
     return g
-
 
 def reason_subclass_and_inverse(ontology_graph: Graph, data_graph: Graph) -> Graph:
     """
@@ -42,7 +65,6 @@ def reason_subclass_and_inverse(ontology_graph: Graph, data_graph: Graph) -> Gra
     for s, p, o in ontology_graph:
         if p == RDFS.subClassOf and isinstance(s, URIRef) and isinstance(o, URIRef):
             subclass_of.setdefault(s, set()).add(o)
-
         if p == OWL.inverseOf and isinstance(s, URIRef) and isinstance(o, URIRef):
             inverse_of[s] = o
             inverse_of[o] = s
@@ -75,8 +97,29 @@ def reason_subclass_and_inverse(ontology_graph: Graph, data_graph: Graph) -> Gra
         if len(g) > len(existing_triples):
             changed = True
 
-    return g
+    # --- New part: duplicate langstring labels/comments as schema:name/description ---
+    # We'll do a final pass to copy over rdfs:label => schema:name, rdfs:comment => schema:description
+    # preserving language tags if present.
+    new_triples = []
+    for s, p, o in g.triples((None, None, None)):
+        # Check if it's a label
+        if p == RDFS.label:
+            # (s, schema:name, o) if not already in the graph
+            if (s, SCHEMA.name, o) not in g:
+                new_triples.append((s, SCHEMA.name, o))
 
+        # Check if it's a comment
+        elif p == RDFS.comment:
+            # (s, schema:description, o) if not already in the graph
+            if (s, SCHEMA.description, o) not in g:
+                new_triples.append((s, SCHEMA.description, o))
+
+    for triple in new_triples:
+        g.add(triple)
+    # ---
+
+    print(f"File 'graph.ttl': Finished reasoning, added new triples.")
+    return g
 
 if __name__ == "__main__":
     # Paths

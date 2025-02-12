@@ -20,7 +20,7 @@ window.NODE_QUERY = `
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map/>
-  PREFIX schema: <https://schema.org/>
+  PREFIX schema: <http://schema.org/>
   SELECT ?id ?group ?displayLabel ?comment ?abbreviation
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/ontologies> {
@@ -49,7 +49,7 @@ window.EDGE_QUERY = `
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map/>
-  PREFIX schema: <https://schema.org/>
+  PREFIX schema: <http://schema.org/>
   SELECT (?property AS ?id) ?from ?to ?label ?comment
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/ontologies> {
@@ -70,7 +70,7 @@ window.CLASS_QUERY = `
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX systemmap: <https://agriculture.ld.admin.ch/foag/system-map/>
-  PREFIX schema: <https://schema.org/>
+  PREFIX schema: <http://schema.org/>
   SELECT ?iri ?label ?comment
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/ontologies> {
@@ -107,9 +107,9 @@ window.getSparqlData = async function(query) {
 // Map the IRIs for classes onto simpler group names
 window.mapClassIriToGroup = function(iri) {
   switch (iri) {
-    case "https://schema.org/Organization":
+    case "http://schema.org/Organization":
       return "Organization";
-    case "https://schema.org/SoftwareApplication":
+    case "http://schema.org/SoftwareApplication":
       return "System";
     case "https://agriculture.ld.admin.ch/foag/system-map/Information":
       return "Information";

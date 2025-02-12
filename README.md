@@ -30,8 +30,8 @@ Here's a table of the possible URL parameters, descriptions and their default va
 
 # 🔎 Examples of SPARQL queries from LINDAS
 
-- [Is there (sensitive) personal data in a system?](https://s.zazuko.com/qrbxMW)
-- [Table of Cantons, their agricultural IT-Systems and the respective operating agency (if given)](https://s.zazuko.com/2LTWkov)
+- [Is there (sensitive) personal data in a system?](https://s.zazuko.com/2QG7WZs)
+- [Table of Cantons, their agricultural IT-Systems and the respective operating agency (if given)](https://s.zazuko.com/2NNd9zT)
 
 # 💭 Reasoning with python
 

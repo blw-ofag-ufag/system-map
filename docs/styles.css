@@ -11,6 +11,7 @@ html, body {
   height: 100%;
   box-sizing: border-box;
 }
+
 /* The custom info panel in the top-right corner */
 .info-panel {
   position: absolute;

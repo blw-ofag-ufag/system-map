@@ -146,6 +146,7 @@ async function init() {
 
     // Keep your old physics/layout/chosen styles
     const options = {
+
         nodes: {
             shape: "box",
             widthConstraint: 150,
@@ -197,19 +198,22 @@ async function init() {
         physics: {
             enabled: true,
             barnesHut: {
-                gravitationalConstant: -10000,
-                centralGravity: 0.05,
-                springLength: 250,
-                springConstant: 0.05
+                gravitationalConstant: -8000, // negative in order to have nodes push each other appart
+                centralGravity: 0.1, // increase for stronger central gravity, i.e. that nodes move to the center
+                springLength: 300,
+                springConstant: 0.1 // increase to make spring more rigid
             },
             stabilization: {
-                iterations: 150
+                iterations: 100
             }
         }
     };
 
     const network = new vis.Network(container, data, options);
-    network.fit();
+
+    console.log("Scale before:", network.getScale()); 
+    network.fit({ scale: 0.003 });
+    console.log("Scale after :", network.getScale());
 
     // 5) The BFS highlight color-blending
     //    Map group => original background/border/font

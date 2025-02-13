@@ -606,7 +606,8 @@ systemmap:ORG001 a systemmap:FederalOrganization ;
         "The Federal Office for Agriculture (FOAG) is the Confederation's competence centre for all core issues relating to the agricultural sector."@en,
         "L'Office fédéral de l'agriculture (OFAG) est le centre de compétence de la Confédération pour toutes les questions essentielles liées au secteur agricole."@fr,
         "L'Ufficio federale dell'agricoltura (UFAG) è il centro di competenza della Confederazione per tutte le questioni fondamentali relative al settore agricolo."@it ;
-    owl:sameAs staatskalender:10008654 ;
+    owl:sameAs <https://ld.admin.ch/office/VI.1.5>,
+        staatskalender:10008654 ;
     systemmap:abbreviation "BLW"@de,
         "FOAG"@en,
         "OFAG"@fr,

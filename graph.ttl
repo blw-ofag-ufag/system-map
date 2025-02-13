@@ -30,7 +30,8 @@ systemmap:ORG001 a schema:GovernmentOrganization,
         "The Federal Office for Agriculture (FOAG) is the Confederation's competence centre for all core issues relating to the agricultural sector."@en,
         "L'Office fédéral de l'agriculture (OFAG) est le centre de compétence de la Confédération pour toutes les questions essentielles liées au secteur agricole."@fr,
         "L'Ufficio federale dell'agricoltura (UFAG) è il centro di competenza della Confederazione per tutte le questioni fondamentali relative al settore agricolo."@it ;
-    owl:sameAs staatskalender:10008654 ;
+    owl:sameAs <https://ld.admin.ch/office/VI.1.5>,
+        staatskalender:10008654 ;
     systemmap:abbreviation "BLW"@de,
         "FOAG"@en,
         "OFAG"@fr,
@@ -1897,18 +1898,18 @@ systemmap:containedIn a owl:ObjectProperty ;
     owl:inverseOf systemmap:contains .
 
 systemmap:contains a owl:ObjectProperty ;
-    rdfs:label "beinhaltet Informationseinheit"@de,
-        "contains information unit"@en,
-        "contient une unité d'information"@fr,
-        "contiene un'unità di informazione"@it ;
+    rdfs:label "beinhaltet"@de,
+        "contains"@en,
+        "contient"@fr,
+        "contiene"@it ;
     schema:description "Gibt an, dass ein IT-System X die Informationseinheit Y enthält. Beispielsweise enthält AGIS Informationen über landwirtschaftliche Flächen in der Schweiz."@de,
         "Indicates that an IT system X contains the information unit Y. For example, AGIS contains information about farming areas in Switzerland."@en,
         "Indique qu'un système informatique X contient l'unité d'information Y. Par exemple, AGIS contient des informations sur les surfaces agricoles en Suisse."@fr,
         "Indica che un sistema IT X contiene l'unità di informazione Y. Ad esempio, AGIS contiene informazioni sulle superfici agricole in Svizzera."@it ;
-    schema:name "beinhaltet Informationseinheit"@de,
-        "contains information unit"@en,
-        "contient une unité d'information"@fr,
-        "contiene un'unità di informazione"@it ;
+    schema:name "beinhaltet"@de,
+        "contains"@en,
+        "contient"@fr,
+        "contiene"@it ;
     rdfs:comment "Gibt an, dass ein IT-System X die Informationseinheit Y enthält. Beispielsweise enthält AGIS Informationen über landwirtschaftliche Flächen in der Schweiz."@de,
         "Indicates that an IT system X contains the information unit Y. For example, AGIS contains information about farming areas in Switzerland."@en,
         "Indique qu'un système informatique X contient l'unité d'information Y. Par exemple, AGIS contient des informations sur les surfaces agricoles en Suisse."@fr,

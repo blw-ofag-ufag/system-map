@@ -1,5 +1,3 @@
-# Ignore Mac-specific files
 .DS_Store
-
-# ignore
 upload.sh
+notes.md

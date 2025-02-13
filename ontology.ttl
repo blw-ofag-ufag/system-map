@@ -186,10 +186,10 @@ systemmap:containedIn a owl:ObjectProperty ;
     owl:inverseOf systemmap:contains .
 
 systemmap:contains a owl:ObjectProperty ;
-    rdfs:label "beinhaltet Informationseinheit"@de,
-        "contains information unit"@en,
-        "contient une unité d'information"@fr,
-        "contiene un'unità di informazione"@it ;
+    rdfs:label "beinhaltet"@de,
+        "contains"@en,
+        "contient"@fr,
+        "contiene"@it ;
     rdfs:comment "Gibt an, dass ein IT-System X die Informationseinheit Y enthält. Beispielsweise enthält AGIS Informationen über landwirtschaftliche Flächen in der Schweiz."@de,
         "Indicates that an IT system X contains the information unit Y. For example, AGIS contains information about farming areas in Switzerland."@en,
         "Indique qu'un système informatique X contient l'unité d'information Y. Par exemple, AGIS contient des informations sur les surfaces agricoles en Suisse."@fr,

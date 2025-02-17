@@ -125,7 +125,7 @@
         node = svg.append("g").selectAll(".node");
 
     // SPARQL endpoint.
-    var endpoint = "https://test.lindas.admin.ch/query";
+    var endpoint = "https://lindas.admin.ch/query";
 
     // Query for nodes.
     var nodesQuery = `
@@ -135,7 +135,7 @@
       PREFIX schema: <http://schema.org/>
       SELECT ?id ?group ?label ?comment ?abbreviation
       WHERE {
-        GRAPH <https://lindas.admin.ch/foag/ontologies> {
+        GRAPH <https://lindas.admin.ch/foag/system-map> {
           ?id a ?group .
           VALUES ?group { schema:Organization schema:SoftwareApplication systemmap:Information }
           ?id rdfs:label ?label .
@@ -153,7 +153,7 @@
       PREFIX schema: <http://schema.org/>
       SELECT ?subject ?predicate ?object
       WHERE {
-        GRAPH <https://lindas.admin.ch/foag/ontologies> {
+        GRAPH <https://lindas.admin.ch/foag/system-map> {
           ?subject ?predicate ?object .
           ?subject a ?group .
           VALUES ?group { schema:Organization schema:SoftwareApplication systemmap:Information }

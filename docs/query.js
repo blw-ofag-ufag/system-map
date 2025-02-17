@@ -13,7 +13,7 @@ window.system = getQueryParam("system", "true") === "true" ? "schema:SoftwareApp
 window.information = getQueryParam("information", "true") === "true" ? "systemmap:Information" : "";
 
 // set SPARQL endpoint
-window.ENDPOINT = "https://test.lindas.admin.ch/query";
+window.ENDPOINT = "https://lindas.admin.ch/query";
 
 // query nodes (everything that is instance of Organization, :System or :Information or a subclass thereof)
 window.NODE_QUERY = `
@@ -23,7 +23,7 @@ window.NODE_QUERY = `
   PREFIX schema: <http://schema.org/>
   SELECT ?id ?group ?displayLabel ?comment ?abbreviation
   WHERE {
-    GRAPH <https://lindas.admin.ch/foag/ontologies> {
+    GRAPH <https://lindas.admin.ch/foag/system-map> {
       ?id a ?group .
       VALUES ?group { ${organization} ${system} ${information} }
       OPTIONAL {
@@ -52,7 +52,7 @@ window.EDGE_QUERY = `
   PREFIX schema: <http://schema.org/>
   SELECT (?property AS ?id) ?from ?to ?label ?comment
   WHERE {
-    GRAPH <https://lindas.admin.ch/foag/ontologies> {
+    GRAPH <https://lindas.admin.ch/foag/system-map> {
       ?from ?property ?to .
       VALUES ?property { systemmap:informs schema:parentOrganization systemmap:operates systemmap:owns systemmap:access systemmap:contains systemmap:usesIdentifier schema:memberOf }
       ?property rdfs:label ?label .
@@ -73,7 +73,7 @@ window.CLASS_QUERY = `
   PREFIX schema: <http://schema.org/>
   SELECT ?iri ?label ?comment
   WHERE {
-    GRAPH <https://lindas.admin.ch/foag/ontologies> {
+    GRAPH <https://lindas.admin.ch/foag/system-map> {
       VALUES ?iri { ${organization} ${system} ${information} }
       ?iri rdfs:label ?label .
       ?iri rdfs:comment ?comment .    
@@ -88,7 +88,7 @@ window.TITLE_QUERY = `
 PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT ?title
 WHERE {
-  GRAPH <https://lindas.admin.ch/foag/ontologies> {
+  GRAPH <https://lindas.admin.ch/foag/system-map> {
     <https://agriculture.ld.admin.ch/system-map/> dcterms:title ?title .
     FILTER(LANG(?title)="${lang}")
   }

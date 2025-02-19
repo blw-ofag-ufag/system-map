@@ -203,11 +203,19 @@ systemmap:ORG011 a schema:GovernmentOrganization,
         "Competence Center for Digital Transformation"@en,
         "Centre de compétence pour la transformation numérique"@fr,
         "Centro di competenza per la trasformazione digitale"@it ;
+    schema:description "Das Kompetenzzentrum für die digitale Transformation widmet sich der Standardisierung und Harmonisierung von Daten im Agrar- und Ernährungssektor und ermöglicht deren Mehrfachnutzung nach dem Once-Only-Prinzip. Es führt und koordiniert die digitale Transformation des Sektors, indem es rechtliche, semantische, technische und organisatorische Herausforderungen angeht. Darüber hinaus fördert es die Kommunikation zwischen den Akteuren, um einen reibungslosen und effektiven Übergang zu digitalen Prozessen zu gewährleisten."@de,
+        "The Competence Center for Digital Transformation is dedicated to standardizing and harmonizing data in the agri-food sector while enabling multiple data uses through the Once-Only Principle. It leads and coordinates the sector’s digital transformation by addressing legal, semantic, technical, and organizational challenges. Additionally, it fosters communication among stakeholders to ensure a smooth and effective transition to digital processes."@en,
+        "Le Centre de compétence pour la transformation numérique se consacre à la standardisation et à l'harmonisation des données dans le secteur agroalimentaire, tout en permettant leur réutilisation multiple selon le principe du « Once-Only ». Il dirige et coordonne la transformation numérique du secteur en relevant les défis juridiques, sémantiques, techniques et organisationnels. De plus, il favorise la communication entre les parties prenantes afin d'assurer une transition fluide et efficace vers des processus numériques."@fr,
+        "Il Centro di competenza per la trasformazione digitale si dedica alla standardizzazione e all'armonizzazione dei dati nel settore agroalimentare, consentendone il riutilizzo multiplo secondo il principio del « Once-Only ». Guida e coordina la trasformazione digitale del settore affrontando le sfide legali, semantiche, tecniche e organizzative. Inoltre, promuove la comunicazione tra le parti interessate per garantire una transizione fluida ed efficace ai processi digitali."@it ;
     schema:name "Kompetenzzentrum für die digitale Transformation"@de,
         "Competence Center for Digital Transformation"@en,
         "Centre de compétence pour la transformation numérique"@fr,
         "Centro di competenza per la trasformazione digitale"@it ;
     schema:parentOrganization systemmap:ORG002 ;
+    rdfs:comment "Das Kompetenzzentrum für die digitale Transformation widmet sich der Standardisierung und Harmonisierung von Daten im Agrar- und Ernährungssektor und ermöglicht deren Mehrfachnutzung nach dem Once-Only-Prinzip. Es führt und koordiniert die digitale Transformation des Sektors, indem es rechtliche, semantische, technische und organisatorische Herausforderungen angeht. Darüber hinaus fördert es die Kommunikation zwischen den Akteuren, um einen reibungslosen und effektiven Übergang zu digitalen Prozessen zu gewährleisten."@de,
+        "The Competence Center for Digital Transformation is dedicated to standardizing and harmonizing data in the agri-food sector while enabling multiple data uses through the Once-Only Principle. It leads and coordinates the sector’s digital transformation by addressing legal, semantic, technical, and organizational challenges. Additionally, it fosters communication among stakeholders to ensure a smooth and effective transition to digital processes."@en,
+        "Le Centre de compétence pour la transformation numérique se consacre à la standardisation et à l'harmonisation des données dans le secteur agroalimentaire, tout en permettant leur réutilisation multiple selon le principe du « Once-Only ». Il dirige et coordonne la transformation numérique du secteur en relevant les défis juridiques, sémantiques, techniques et organisationnels. De plus, il favorise la communication entre les parties prenantes afin d'assurer une transition fluide et efficace vers des processus numériques."@fr,
+        "Il Centro di competenza per la trasformazione digitale si dedica alla standardizzazione e all'armonizzazione dei dati nel settore agroalimentare, consentendone il riutilizzo multiplo secondo il principio del « Once-Only ». Guida e coordina la trasformazione digitale del settore affrontando le sfide legali, semantiche, tecniche e organizzative. Inoltre, promuove la comunicazione tra le parti interessate per garantire una transizione fluida ed efficace ai processi digitali."@it ;
     systemmap:abbreviation "GRKDT"@de,
         "GRKDT"@en,
         "GRKDT"@fr,
@@ -218,11 +226,11 @@ systemmap:ORG012 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Marktanalyse"@de,
-        "Secteur Analyses du marché"@fr,
-        "Settore Analisi di mercato"@it ;
+        "Secteur analyses du marché"@fr,
+        "Settore analisi di mercato"@it ;
     schema:name "Fachbereich Marktanalyse"@de,
-        "Secteur Analyses du marché"@fr,
-        "Settore Analisi di mercato"@it ;
+        "Secteur analyses du marché"@fr,
+        "Settore analisi di mercato"@it ;
     schema:parentOrganization systemmap:ORG002 ;
     systemmap:abbreviation "FBMA"@de .
 
@@ -1093,8 +1101,10 @@ systemmap:ORG333 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:CantonalOrganization ;
     rdfs:label "Ebenrain-Zentrum für Landwirtschaft, Natur und Ernährung"@de ;
+    schema:description "Das Ebenrain-Zentrum für Landwirtschaft, Natur und Ernährung mit Sitz in Sissach übernimmt die Aufgaben des Kantons zugunsten von Landwirtschaft, Natur und Ernährung. Der Ebenrain führt eine landwirtschaftliche Schule zur Ausbildung der Landwirte und Landwirtinnen, die Brücke Ebenrain sowie einen Kursgarten für die praktische Bildungsarbeit. Mit Kursen und Beratung sorgt er dafür, dass die Landwirtinnen und Landwirte fachlich fit für die Zukunft sind. Er fördert eine gesunde und ausgewogene Ernährung in der Gemeinschaftsgastronomie und in der breiten Bevölkerung."@de ;
     schema:name "Ebenrain-Zentrum für Landwirtschaft, Natur und Ernährung"@de ;
     schema:parentOrganization systemmap:ORG308 ;
+    rdfs:comment "Das Ebenrain-Zentrum für Landwirtschaft, Natur und Ernährung mit Sitz in Sissach übernimmt die Aufgaben des Kantons zugunsten von Landwirtschaft, Natur und Ernährung. Der Ebenrain führt eine landwirtschaftliche Schule zur Ausbildung der Landwirte und Landwirtinnen, die Brücke Ebenrain sowie einen Kursgarten für die praktische Bildungsarbeit. Mit Kursen und Beratung sorgt er dafür, dass die Landwirtinnen und Landwirte fachlich fit für die Zukunft sind. Er fördert eine gesunde und ausgewogene Ernährung in der Gemeinschaftsgastronomie und in der breiten Bevölkerung."@de ;
     systemmap:operates systemmap:SYS015 .
 
 systemmap:ORG334 a schema:GovernmentOrganization,
@@ -1150,7 +1160,7 @@ systemmap:ORG100 a schema:Organization,
         systemmap:PrivateOrganization ;
     rdfs:label "TSM Treuhand GmbH"@de,
         "TSM Treuhand LLC"@en,
-        "TSM Treuhand GmbH"@fr,
+        "TSM Treuhand S. à r. l."@fr,
         "TSM Fiduciaria S. a g. l."@it ;
     schema:description "Die TSM Treuhand GmbH erfüllt unterschiedliche öffentlich- und privatrechtliche Aufträge in der Agrar- und Lebensmittelbranche. TSM steht für Treuhand, Statistik und Management. Die Haupttätigkeit der TSM besteht in der Verwaltung der Datenbank dbmilch.ch. Zudem werden weitere Aufträge im Bereich Treuhand, Fondsverwaltungen, Statistiken und Exportkontrollen durchgeführt. Der Hauptauftraggeber der TSM ist das Bundesamt für Landwirtschaft (BLW)."@de,
         "TSM Treuhand LLC carries out various public and private law mandates in the agricultural and food sector. TSM stands for Trust, Statistics, and Management. The main activity of TSM is the management of the dbmilch.ch database. In addition, further assignments in the areas of fiduciary services, fund management, statistics, and export controls are carried out. The main client of TSM is the Federal Office for Agriculture (BLW)."@en,
@@ -1158,7 +1168,7 @@ systemmap:ORG100 a schema:Organization,
         "TSM Treuhand GmbH svolge diversi mandati di diritto pubblico e privato nel settore agricolo e alimentare. TSM sta per Fiduciario, Statistica e Management. L'attività principale di TSM è la gestione del database dbmilch.ch. Inoltre, vengono svolti altri incarichi nei settori della fiduciaria, della gestione dei fondi, delle statistiche e dei controlli all'esportazione. Il principale committente di TSM è l'Ufficio federale dell'agricoltura (UFAG)."@it ;
     schema:name "TSM Treuhand GmbH"@de,
         "TSM Treuhand LLC"@en,
-        "TSM Treuhand GmbH"@fr,
+        "TSM Treuhand S. à r. l."@fr,
         "TSM Fiduciaria S. a g. l."@it ;
     rdfs:comment "Die TSM Treuhand GmbH erfüllt unterschiedliche öffentlich- und privatrechtliche Aufträge in der Agrar- und Lebensmittelbranche. TSM steht für Treuhand, Statistik und Management. Die Haupttätigkeit der TSM besteht in der Verwaltung der Datenbank dbmilch.ch. Zudem werden weitere Aufträge im Bereich Treuhand, Fondsverwaltungen, Statistiken und Exportkontrollen durchgeführt. Der Hauptauftraggeber der TSM ist das Bundesamt für Landwirtschaft (BLW)."@de,
         "TSM Treuhand LLC carries out various public and private law mandates in the agricultural and food sector. TSM stands for Trust, Statistics, and Management. The main activity of TSM is the management of the dbmilch.ch database. In addition, further assignments in the areas of fiduciary services, fund management, statistics, and export controls are carried out. The main client of TSM is the Federal Office for Agriculture (BLW)."@en,
@@ -1429,9 +1439,17 @@ systemmap:SYS011 a schema:SoftwareApplication ;
 
 systemmap:SYS012 a schema:SoftwareApplication ;
     rdfs:label "Gesamtlösung EDV Landwirtschaft & Natur"@de ;
-    schema:description "Das Agrarinformationssystem GELAN steht seit 1999 in den Kantonen Bern, Fribourg und Solothurn im Einsatz. Es wurde seither auf 15 vollständig integrierte Teilsysteme erweitert und die Erfassung von Flächendaten erfolgt in einem Geographischen Informationssystem (GIS). Nebst den Direktzahlungen unterstützt GELAN unter anderem folgende Vollzugsbereiche: Strukturverbesserungen, Ressourcenprojekte, Naturschutz, Tierschutz, Tierseuchenrecht, Gewässerschutz und Kontrollwesen."@de ;
+    schema:description """
+        Das Agrarinformationssystem GELAN steht seit 1999 in den Kantonen Bern, Fribourg und Solothurn im Einsatz.
+        Es wurde seither auf 15 vollständig integrierte Teilsysteme erweitert und die Erfassung von Flächendaten erfolgt in einem Geographischen Informationssystem (GIS).
+        Nebst den Direktzahlungen unterstützt GELAN unter anderem folgende Vollzugsbereiche: Strukturverbesserungen, Ressourcenprojekte, Naturschutz, Tierschutz, Tierseuchenrecht, Gewässerschutz und Kontrollwesen.
+        """@de ;
     schema:name "Gesamtlösung EDV Landwirtschaft & Natur"@de ;
-    rdfs:comment "Das Agrarinformationssystem GELAN steht seit 1999 in den Kantonen Bern, Fribourg und Solothurn im Einsatz. Es wurde seither auf 15 vollständig integrierte Teilsysteme erweitert und die Erfassung von Flächendaten erfolgt in einem Geographischen Informationssystem (GIS). Nebst den Direktzahlungen unterstützt GELAN unter anderem folgende Vollzugsbereiche: Strukturverbesserungen, Ressourcenprojekte, Naturschutz, Tierschutz, Tierseuchenrecht, Gewässerschutz und Kontrollwesen."@de ;
+    rdfs:comment """
+        Das Agrarinformationssystem GELAN steht seit 1999 in den Kantonen Bern, Fribourg und Solothurn im Einsatz.
+        Es wurde seither auf 15 vollständig integrierte Teilsysteme erweitert und die Erfassung von Flächendaten erfolgt in einem Geographischen Informationssystem (GIS).
+        Nebst den Direktzahlungen unterstützt GELAN unter anderem folgende Vollzugsbereiche: Strukturverbesserungen, Ressourcenprojekte, Naturschutz, Tierschutz, Tierseuchenrecht, Gewässerschutz und Kontrollwesen.
+        """@de ;
     systemmap:abbreviation "GELAN"@de ;
     systemmap:contains systemmap:INF002 ;
     systemmap:operatedBy systemmap:ORG311,
@@ -1439,8 +1457,20 @@ systemmap:SYS012 a schema:SoftwareApplication ;
         systemmap:ORG336 .
 
 systemmap:SYS013 a schema:SoftwareApplication ;
-    rdfs:label "Agricola"@de ;
-    schema:name "Agricola"@de ;
+    rdfs:label "AGRICOLA"@de ;
+    schema:description """
+        AGRICOLA kommt in 12 Kantonen zum Einsatz, darunter Aargau, Zürich, St. Gallen und Graubünden.
+        Es besteht aus verschiedenen Softwareprodukten für Datenverwaltung, Dateneingabe, mobile Kontrollen und GIS.
+        Neben Direktzahlungen unterstützt es auch Bereiche wie Strukturverbesserung, Boden- und Pachtrecht sowie Naturschutz.
+        Über 21.000 Landwirte und 1.000 Verwaltungsmitarbeiter nutzen das System, das Finanzflüsse von über 1 Milliarde Franken jährlich verwaltet.
+        """@de ;
+    schema:name "AGRICOLA"@de ;
+    rdfs:comment """
+        AGRICOLA kommt in 12 Kantonen zum Einsatz, darunter Aargau, Zürich, St. Gallen und Graubünden.
+        Es besteht aus verschiedenen Softwareprodukten für Datenverwaltung, Dateneingabe, mobile Kontrollen und GIS.
+        Neben Direktzahlungen unterstützt es auch Bereiche wie Strukturverbesserung, Boden- und Pachtrecht sowie Naturschutz.
+        Über 21.000 Landwirte und 1.000 Verwaltungsmitarbeiter nutzen das System, das Finanzflüsse von über 1 Milliarde Franken jährlich verwaltet.
+        """@de ;
     systemmap:contains systemmap:INF002 ;
     systemmap:operatedBy systemmap:ORG302,
         systemmap:ORG306,
@@ -1457,7 +1487,17 @@ systemmap:SYS013 a schema:SoftwareApplication ;
 
 systemmap:SYS014 a schema:SoftwareApplication ;
     rdfs:label "Acorda"@de ;
+    schema:description """
+        ACORDA wird von den Kantonen Waadt, Neuenburg, Genf und Jura genutzt.
+        Das System bietet Funktionen wie die Erfassung von Strukturdaten, Berechnung und Auszahlung von Direktzahlungen, Georeferenzierung und Datenaustausch mit Bundessystemen.
+        Zusätzlich verfügt es über spezielle Module für Bereiche wie Bienenzucht, Weinbau und Kontrollen.
+        """@de ;
     schema:name "Acorda"@de ;
+    rdfs:comment """
+        ACORDA wird von den Kantonen Waadt, Neuenburg, Genf und Jura genutzt.
+        Das System bietet Funktionen wie die Erfassung von Strukturdaten, Berechnung und Auszahlung von Direktzahlungen, Georeferenzierung und Datenaustausch mit Bundessystemen.
+        Zusätzlich verfügt es über spezielle Module für Bereiche wie Bienenzucht, Weinbau und Kontrollen.
+        """@de ;
     systemmap:contains systemmap:INF002 ;
     systemmap:operatedBy systemmap:ORG312,
         systemmap:ORG315,
@@ -1465,8 +1505,70 @@ systemmap:SYS014 a schema:SoftwareApplication ;
         systemmap:ORG327 .
 
 systemmap:SYS015 a schema:SoftwareApplication ;
-    rdfs:label "Lawis"@de ;
-    schema:name "Lawis"@de ;
+    rdfs:label "LAWIS"@de,
+        "LAWIS"@en,
+        "LAWIS"@fr,
+        "LAWIS"@it ;
+    schema:description """
+        LAWIS wird in den Kantonen Basel-Land, Luzern, Schaffhausen, Thurgau, Zug sowie in Liechtenstein eingesetzt.
+        Es ist eine webbasierte Lösung, die von SOFTEC AG gehostet wird.
+        LAWIS umfasst Module für Landwirtschaft/Direktzahlungen, Strukturverbesserung, Naturschutz, Gewässerschutz und Zahlungen.
+        Es bietet GIS-Funktionalitäten und mobile Lösungen für Kontrollen.
+        Das System verwaltet ca. 26'000 Betriebe und 180'000 Parzellen und verfügt über Zusatzmodule für Weinbau (Traubenpass) und Forstwirtschaft (Waldportal).
+        """@de,
+        """
+        LAWIS is used in the cantons of Basel-Land, Lucerne, Schaffhausen, Thurgau, Zug, as well as in Liechtenstein.
+        It is a web-based solution hosted by SOFTEC AG.
+        LAWIS includes modules for agriculture/direct payments, structural improvements, nature conservation, water protection, and payments.
+        It offers GIS functionalities and mobile solutions for inspections.
+        The system manages approximately 26,000 farms and 180,000 parcels and includes additional modules for viticulture (grape pass) and forestry (forest portal).
+        """@en,
+        """
+        LAWIS est utilisé dans les cantons de Bâle-Campagne, Lucerne, Schaffhouse, Thurgovie, Zoug ainsi qu'au Liechtenstein.
+        C'est une solution web hébergée par SOFTEC AG.
+        LAWIS comprend des modules pour l'agriculture/les paiements directs, l'amélioration des structures, la protection de la nature, la protection des eaux et les paiements.
+        Il offre des fonctionnalités SIG et des solutions mobiles pour les contrôles.
+        Le système gère environ 26 000 exploitations et 180 000 parcelles et dispose de modules supplémentaires pour la viticulture (passeport raisin) et la foresterie (portail forestier).
+        """@fr,
+        """
+        LAWIS è utilizzato nei cantoni di Basilea Campagna, Lucerna, Sciaffusa, Turgovia, Zugo e nel Liechtenstein.
+        È una soluzione web-based ospitata da SOFTEC AG.
+        LAWIS include moduli per l'agricoltura/pagamenti diretti, il miglioramento strutturale, la conservazione della natura, la protezione delle acque e i pagamenti.
+        Offre funzionalità GIS e soluzioni mobili per i controlli.
+        Il sistema gestisce circa 26.000 aziende agricole e 180.000 particelle e dispone di moduli aggiuntivi per la viticoltura (passaporto dell'uva) e la silvicoltura (portale forestale).
+        """@it ;
+    schema:name "LAWIS"@de,
+        "LAWIS"@en,
+        "LAWIS"@fr,
+        "LAWIS"@it ;
+    rdfs:comment """
+        LAWIS wird in den Kantonen Basel-Land, Luzern, Schaffhausen, Thurgau, Zug sowie in Liechtenstein eingesetzt.
+        Es ist eine webbasierte Lösung, die von SOFTEC AG gehostet wird.
+        LAWIS umfasst Module für Landwirtschaft/Direktzahlungen, Strukturverbesserung, Naturschutz, Gewässerschutz und Zahlungen.
+        Es bietet GIS-Funktionalitäten und mobile Lösungen für Kontrollen.
+        Das System verwaltet ca. 26'000 Betriebe und 180'000 Parzellen und verfügt über Zusatzmodule für Weinbau (Traubenpass) und Forstwirtschaft (Waldportal).
+        """@de,
+        """
+        LAWIS is used in the cantons of Basel-Land, Lucerne, Schaffhausen, Thurgau, Zug, as well as in Liechtenstein.
+        It is a web-based solution hosted by SOFTEC AG.
+        LAWIS includes modules for agriculture/direct payments, structural improvements, nature conservation, water protection, and payments.
+        It offers GIS functionalities and mobile solutions for inspections.
+        The system manages approximately 26,000 farms and 180,000 parcels and includes additional modules for viticulture (grape pass) and forestry (forest portal).
+        """@en,
+        """
+        LAWIS est utilisé dans les cantons de Bâle-Campagne, Lucerne, Schaffhouse, Thurgovie, Zoug ainsi qu'au Liechtenstein.
+        C'est une solution web hébergée par SOFTEC AG.
+        LAWIS comprend des modules pour l'agriculture/les paiements directs, l'amélioration des structures, la protection de la nature, la protection des eaux et les paiements.
+        Il offre des fonctionnalités SIG et des solutions mobiles pour les contrôles.
+        Le système gère environ 26 000 exploitations et 180 000 parcelles et dispose de modules supplémentaires pour la viticulture (passeport raisin) et la foresterie (portail forestier).
+        """@fr,
+        """
+        LAWIS è utilizzato nei cantoni di Basilea Campagna, Lucerna, Sciaffusa, Turgovia, Zugo e nel Liechtenstein.
+        È una soluzione web-based ospitata da SOFTEC AG.
+        LAWIS include moduli per l'agricoltura/pagamenti diretti, il miglioramento strutturale, la conservazione della natura, la protezione delle acque e i pagamenti.
+        Offre funzionalità GIS e soluzioni mobili per i controlli.
+        Il sistema gestisce circa 26.000 aziende agricole e 180.000 particelle e dispone di moduli aggiuntivi per la viticoltura (passaporto dell'uva) e la silvicoltura (portale forestale).
+        """@it ;
     systemmap:contains systemmap:INF002 ;
     systemmap:operatedBy systemmap:ORG316,
         systemmap:ORG320,
@@ -1478,8 +1580,18 @@ systemmap:SYS015 a schema:SoftwareApplication ;
 systemmap:SYS016 a schema:SoftwareApplication ;
     rdfs:label "SAP Wallis"@de,
         "SAP Valais"@fr ;
+    schema:description """
+        SAP Agri Valais ist das Agrarinformationssystem des Kanton Wallis und damit eine spezifische Lösung basierend auf SAP, die in das kantonale IT-Netzwerk integriert ist.
+        Eine Web-Schnittstelle (ePDir) ermöglicht externen Nutzern die Dateneingabe.
+        Das System wird von Landwirtschaftsbetrieben, Gemeindeverwaltungen und Kontrollorganisationen genutzt und dient der Verwaltung von Bundes- und kantonalen Daten, Direktzahlungen und Statistiken.
+        """@de ;
     schema:name "SAP Wallis"@de,
         "SAP Valais"@fr ;
+    rdfs:comment """
+        SAP Agri Valais ist das Agrarinformationssystem des Kanton Wallis und damit eine spezifische Lösung basierend auf SAP, die in das kantonale IT-Netzwerk integriert ist.
+        Eine Web-Schnittstelle (ePDir) ermöglicht externen Nutzern die Dateneingabe.
+        Das System wird von Landwirtschaftsbetrieben, Gemeindeverwaltungen und Kontrollorganisationen genutzt und dient der Verwaltung von Bundes- und kantonalen Daten, Direktzahlungen und Statistiken.
+        """@de ;
     systemmap:contains systemmap:INF002 ;
     systemmap:operatedBy systemmap:ORG328 .
 
@@ -1620,7 +1732,11 @@ systemmap:SYS026 a schema:SoftwareApplication ;
 
 systemmap:SYS027 a schema:SoftwareApplication ;
     rdfs:label "UID-Register"@de ;
+    schema:description "Das UID-Register ist eine zentrale Datenbank des Bundesamts für Statistik (BFS), die der eindeutigen Identifikation von Unternehmen in der Schweiz dient. Jedes in der Schweiz aktive Unternehmen erhält eine einheitliche Unternehmens-Identifikationsnummer (UID), die administrative Abläufe vereinfacht und die Zusammenarbeit zwischen Behörden effizienter gestaltet. Die im UID-Register enthaltenen Daten beschränken sich auf das für die Identifikation notwendige Minimum."@de ;
     schema:name "UID-Register"@de ;
+    rdfs:comment "Das UID-Register ist eine zentrale Datenbank des Bundesamts für Statistik (BFS), die der eindeutigen Identifikation von Unternehmen in der Schweiz dient. Jedes in der Schweiz aktive Unternehmen erhält eine einheitliche Unternehmens-Identifikationsnummer (UID), die administrative Abläufe vereinfacht und die Zusammenarbeit zwischen Behörden effizienter gestaltet. Die im UID-Register enthaltenen Daten beschränken sich auf das für die Identifikation notwendige Minimum."@de ;
+    rdfs:seeAlso <https://www.ech.ch/ech/ech-0108>,
+        <https://www.uid.admin.ch/> ;
     systemmap:contains systemmap:INF003 ;
     systemmap:operatedBy systemmap:ORG212 .
 

@@ -199,17 +199,30 @@ systemmap:ORG010 a schema:GovernmentOrganization,
 systemmap:ORG011 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
-    rdfs:label "Kompetenzzentrum für die digitale Transformation"@de ;
-    schema:name "Kompetenzzentrum für die digitale Transformation"@de ;
+    rdfs:label "Kompetenzzentrum für die digitale Transformation"@de,
+        "Competence Center for Digital Transformation"@en,
+        "Centre de compétence pour la transformation numérique"@fr,
+        "Centro di competenza per la trasformazione digitale"@it ;
+    schema:name "Kompetenzzentrum für die digitale Transformation"@de,
+        "Competence Center for Digital Transformation"@en,
+        "Centre de compétence pour la transformation numérique"@fr,
+        "Centro di competenza per la trasformazione digitale"@it ;
     schema:parentOrganization systemmap:ORG002 ;
-    systemmap:abbreviation "GRKDT"@de ;
+    systemmap:abbreviation "GRKDT"@de,
+        "GRKDT"@en,
+        "GRKDT"@fr,
+        "GRKDT"@it ;
     systemmap:operates systemmap:SYS008 .
 
 systemmap:ORG012 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
-    rdfs:label "Fachbereich Marktanalyse"@de ;
-    schema:name "Fachbereich Marktanalyse"@de ;
+    rdfs:label "Fachbereich Marktanalyse"@de,
+        "Secteur Analyses du marché"@fr,
+        "Settore Analisi di mercato"@it ;
+    schema:name "Fachbereich Marktanalyse"@de,
+        "Secteur Analyses du marché"@fr,
+        "Settore Analisi di mercato"@it ;
     schema:parentOrganization systemmap:ORG002 ;
     systemmap:abbreviation "FBMA"@de .
 
@@ -225,12 +238,27 @@ systemmap:ORG013 a schema:GovernmentOrganization,
 systemmap:ORG020 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
-    rdfs:label "Fachbereich Direktzahlungsprogramme"@de ;
-    schema:description "Der Fachbereich ist für die Umsetzung von Direktzahlungsprogrammen in den Bereichen Umwelt, Tierwohl und Landschaft verantwortlich. Dabei wird die Umsetzung durch Unterstützung der kantonalen Stellen sichergestellt und die Oberaufsicht über den kantonalen Vollzug wahrgenommen. Zudem erfolgt eine kontinuierliche Weiterentwicklung des ökologischen Leistungsnachweises (ÖLN) sowie der Massnahmen zur Förderung von Tierwohl, Biodiversität, Ressourceneffizienz, Produktionssystemen und Landschaftsqualität. Die Koordination mit anderen Regelbereichen, darunter die Biodiversitätsstrategie, der Biolandbau sowie Energie- und Klimaschutzfragen, ist ebenso Bestandteil der Tätigkeiten. Darüber hinaus werden Schnittstellen zur Gesetzgebung in den Bereichen Tier-, Gewässer-, Umwelt-, Natur- und Heimatschutz gepflegt. Im technischen Bereich erfolgt die Bereitstellung und Nutzung der EDV-Applikation Hofdüngerflüsse (HODUFLU) für Betriebs- und Datenauswertungen. Zudem werden Vorgaben zur Kürzung von Direktzahlungen nach den geltenden Verordnungen umgesetzt. Die Bearbeitung von Stellungnahmen zu Parlamentsvorstössen, Beschwerdefällen und Bundesratsgeschäften gehört ebenfalls zu den Aufgaben. Ergänzend werden Öffentlichkeitsarbeit sowie die Information und Einbindung relevanter Akteure wahrgenommen. Die Mitwirkung in Begleitgruppen sowie die Beteiligung an Forschungsfragen und Evaluationen runden das Aufgabengebiet ab."@de ;
-    schema:name "Fachbereich Direktzahlungsprogramme"@de ;
+    rdfs:label "Fachbereich Direktzahlungsprogramme"@de,
+        "Direct payment programs division"@en,
+        "Secteur Paiements directs - Programmes"@fr,
+        "Settore Pagamenti diretti Programmi"@it ;
+    schema:description "Der Fachbereich setzt Direktzahlungsprogramme in den Bereichen Umwelt, Tierwohl und Landschaft um, unterstützt kantonale Stellen und überwacht deren Vollzug. Zudem wird der ökologische Leistungsnachweis (ÖLN) weiterentwickelt, Regelbereiche wie Biodiversitätsstrategie, Biolandbau sowie Energie- und Klimaschutz koordiniert und relevante Gesetzgebungsschnittstellen gepflegt. Technisch werden EDV-Applikationen bereitgestellt und Kürzungsmassnahmen umgesetzt. Weitere Aufgaben umfassen die Bearbeitung von Stellungnahmen, Öffentlichkeitsarbeit sowie die Information und Einbindung relevanter Akteure."@de,
+        "The division implements direct payment programs in the areas of environment, animal welfare, and landscape, supports cantonal authorities, and monitors their enforcement. Furthermore, the ecological performance certificate (ÖLN) is being further developed, regulatory areas such as biodiversity strategy, organic farming, as well as energy and climate protection are coordinated, and relevant legislative interfaces are maintained. Technically, IT applications are provided, and reduction measures are implemented. Other tasks include processing statements, public relations, as well as informing and involving relevant stakeholders."@en,
+        "Le secteur met en œuvre des programmes de paiements directs dans les domaines de l’environnement, du bien-être animal et du paysage, soutient les autorités cantonales et surveille leur application. En outre, la preuve écologique de performance (ÖLN) est développée, les domaines réglementaires tels que la stratégie de biodiversité, l’agriculture biologique ainsi que la protection de l’énergie et du climat sont coordonnés, et les interfaces législatives pertinentes sont maintenues. Techniquement, des applications informatiques sont mises à disposition et des mesures de réduction sont mises en œuvre. D’autres tâches comprennent le traitement des avis, les relations publiques ainsi que l’information et l’implication des acteurs concernés."@fr,
+        "Il settore attua programmi di pagamenti diretti nei settori dell’ambiente, del benessere animale e del paesaggio, sostiene le autorità cantonali e ne controlla l’applicazione. Inoltre, viene sviluppata la certificazione ecologica delle prestazioni (ÖLN), vengono coordinati ambiti normativi come la strategia per la biodiversità, l’agricoltura biologica e la protezione dell’energia e del clima, e vengono mantenute le interfacce legislative pertinenti. Dal punto di vista tecnico, vengono fornite applicazioni informatiche e attuate misure di riduzione. Altri compiti includono l’elaborazione di pareri, le relazioni pubbliche e l’informazione e il coinvolgimento degli attori rilevanti."@it ;
+    schema:name "Fachbereich Direktzahlungsprogramme"@de,
+        "Direct payment programs division"@en,
+        "Secteur Paiements directs - Programmes"@fr,
+        "Settore Pagamenti diretti Programmi"@it ;
     schema:parentOrganization systemmap:ORG006 ;
-    rdfs:comment "Der Fachbereich ist für die Umsetzung von Direktzahlungsprogrammen in den Bereichen Umwelt, Tierwohl und Landschaft verantwortlich. Dabei wird die Umsetzung durch Unterstützung der kantonalen Stellen sichergestellt und die Oberaufsicht über den kantonalen Vollzug wahrgenommen. Zudem erfolgt eine kontinuierliche Weiterentwicklung des ökologischen Leistungsnachweises (ÖLN) sowie der Massnahmen zur Förderung von Tierwohl, Biodiversität, Ressourceneffizienz, Produktionssystemen und Landschaftsqualität. Die Koordination mit anderen Regelbereichen, darunter die Biodiversitätsstrategie, der Biolandbau sowie Energie- und Klimaschutzfragen, ist ebenso Bestandteil der Tätigkeiten. Darüber hinaus werden Schnittstellen zur Gesetzgebung in den Bereichen Tier-, Gewässer-, Umwelt-, Natur- und Heimatschutz gepflegt. Im technischen Bereich erfolgt die Bereitstellung und Nutzung der EDV-Applikation Hofdüngerflüsse (HODUFLU) für Betriebs- und Datenauswertungen. Zudem werden Vorgaben zur Kürzung von Direktzahlungen nach den geltenden Verordnungen umgesetzt. Die Bearbeitung von Stellungnahmen zu Parlamentsvorstössen, Beschwerdefällen und Bundesratsgeschäften gehört ebenfalls zu den Aufgaben. Ergänzend werden Öffentlichkeitsarbeit sowie die Information und Einbindung relevanter Akteure wahrgenommen. Die Mitwirkung in Begleitgruppen sowie die Beteiligung an Forschungsfragen und Evaluationen runden das Aufgabengebiet ab."@de ;
-    systemmap:abbreviation "FBDP"@de ;
+    rdfs:comment "Der Fachbereich setzt Direktzahlungsprogramme in den Bereichen Umwelt, Tierwohl und Landschaft um, unterstützt kantonale Stellen und überwacht deren Vollzug. Zudem wird der ökologische Leistungsnachweis (ÖLN) weiterentwickelt, Regelbereiche wie Biodiversitätsstrategie, Biolandbau sowie Energie- und Klimaschutz koordiniert und relevante Gesetzgebungsschnittstellen gepflegt. Technisch werden EDV-Applikationen bereitgestellt und Kürzungsmassnahmen umgesetzt. Weitere Aufgaben umfassen die Bearbeitung von Stellungnahmen, Öffentlichkeitsarbeit sowie die Information und Einbindung relevanter Akteure."@de,
+        "The division implements direct payment programs in the areas of environment, animal welfare, and landscape, supports cantonal authorities, and monitors their enforcement. Furthermore, the ecological performance certificate (ÖLN) is being further developed, regulatory areas such as biodiversity strategy, organic farming, as well as energy and climate protection are coordinated, and relevant legislative interfaces are maintained. Technically, IT applications are provided, and reduction measures are implemented. Other tasks include processing statements, public relations, as well as informing and involving relevant stakeholders."@en,
+        "Le secteur met en œuvre des programmes de paiements directs dans les domaines de l’environnement, du bien-être animal et du paysage, soutient les autorités cantonales et surveille leur application. En outre, la preuve écologique de performance (ÖLN) est développée, les domaines réglementaires tels que la stratégie de biodiversité, l’agriculture biologique ainsi que la protection de l’énergie et du climat sont coordonnés, et les interfaces législatives pertinentes sont maintenues. Techniquement, des applications informatiques sont mises à disposition et des mesures de réduction sont mises en œuvre. D’autres tâches comprennent le traitement des avis, les relations publiques ainsi que l’information et l’implication des acteurs concernés."@fr,
+        "Il settore attua programmi di pagamenti diretti nei settori dell’ambiente, del benessere animale e del paesaggio, sostiene le autorità cantonali e ne controlla l’applicazione. Inoltre, viene sviluppata la certificazione ecologica delle prestazioni (ÖLN), vengono coordinati ambiti normativi come la strategia per la biodiversità, l’agricoltura biologica e la protezione dell’energia e del clima, e vengono mantenute le interfacce legislative pertinenti. Dal punto di vista tecnico, vengono fornite applicazioni informatiche e attuate misure di riduzione. Altri compiti includono l’elaborazione di pareri, le relazioni pubbliche e l’informazione e il coinvolgimento degli attori rilevanti."@it ;
+    systemmap:abbreviation "FBDP"@de,
+        "FBDP"@en,
+        "FBDP"@fr,
+        "FBDP"@it ;
     systemmap:operates systemmap:SYS006,
         systemmap:SYS010 .
 
@@ -2241,10 +2269,10 @@ systemmap:INF014 a systemmap:Information,
 systemmap:INF015 a systemmap:Information ;
     rdfs:label "Strukturdaten"@de ;
     schema:description """Die landwirtschaftliche Strukturerhebung erfasst jährlich seit 1997 die Struktur aller Landwirtschaftsbetriebe in der Schweiz und basiert hauptsächlich auf administrativen Daten.
-        Sie deckt nahezu 100 % der Betriebe ab und erfasst Variablen wie Betriebsgrößen, Anbauflächen, Nutztierbestände und Beschäftigte. Die Erhebung dient der statistischen Analyse der Landwirtschaft, der Aktualisierung des Betriebsregisters und der agrarpolitischen Entscheidungsfindung."""@de ;
+        Sie deckt nahezu 100 % der Betriebe ab und erfasst Variablen wie Betriebsgrössen, Anbauflächen, Nutztierbestände und Beschäftigte. Die Erhebung dient der statistischen Analyse der Landwirtschaft, der Aktualisierung des Betriebsregisters und der agrarpolitischen Entscheidungsfindung."""@de ;
     schema:name "Strukturdaten"@de ;
     rdfs:comment """Die landwirtschaftliche Strukturerhebung erfasst jährlich seit 1997 die Struktur aller Landwirtschaftsbetriebe in der Schweiz und basiert hauptsächlich auf administrativen Daten.
-        Sie deckt nahezu 100 % der Betriebe ab und erfasst Variablen wie Betriebsgrößen, Anbauflächen, Nutztierbestände und Beschäftigte. Die Erhebung dient der statistischen Analyse der Landwirtschaft, der Aktualisierung des Betriebsregisters und der agrarpolitischen Entscheidungsfindung."""@de ;
+        Sie deckt nahezu 100 % der Betriebe ab und erfasst Variablen wie Betriebsgrössen, Anbauflächen, Nutztierbestände und Beschäftigte. Die Erhebung dient der statistischen Analyse der Landwirtschaft, der Aktualisierung des Betriebsregisters und der agrarpolitischen Entscheidungsfindung."""@de ;
     systemmap:containedIn systemmap:SYS003 ;
     systemmap:informedBy systemmap:INF002 ;
     systemmap:informs systemmap:INF030 .

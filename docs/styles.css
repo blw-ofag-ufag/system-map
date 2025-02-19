@@ -91,3 +91,22 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.8em;   /* Adjust value as needed */
   margin-bottom: -0.2em; /* Adjust value as needed */
 }
+
+.social-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* ensures it stays on top */
+}
+
+.social-icons a {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #FF7F51; /* Change this to your preferred hover color */
+}

@@ -136,7 +136,7 @@ async function init() {
         
         // If this edge represents an "informs" relationship,
         // add dashed styling and increase its length.
-        if (row.id.value === "https://agriculture.ld.admin.ch/system-map/informs" || row.id.value === "https://agriculture.ld.admin.ch/system-map/usesIdentifier") {
+        if (row.id.value === "https://agriculture.ld.admin.ch/system-map/informs" || row.id.value === "https://agriculture.ld.admin.ch/system-map/usesIdentifier" || row.id.value === "https://agriculture.ld.admin.ch/system-map/access") {
             edge.dashes = [5, 10]; // Dash pattern: 5px dash, 5px gap
             edge.length = 600;    // Increase edge length to allow more spacing
         }

@@ -4,11 +4,41 @@
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
 
+<https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_27> a schema:Legislation ;
+    rdfs:label "Art. 27 LwG"@de,
+        "Art. 27 AgricA"@en,
+        "Art. 27 LAgr"@fr,
+        "Art. 27 LAgr"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/1999/71> a schema:Legislation ;
+    rdfs:label "Verordnung über die Marktbeobachtung im Landwirtschaftsbereich"@de,
+        "Ordonnance sur l’observation du marché dans le domaine de l’agriculture"@fr,
+        "Ordinanza concernente il monitoraggio del mercato nel settore agricolo"@it .
+
 systemmap:ORG099 a schema:Organization ;
-    rdfs:label "Gemeinsamen Anmeldestelle Chemikalien"@de ;
+    rdfs:label "Gemeinsame Anmeldestelle Chemikalien"@de,
+        "Common Notification Authority for Chemicals"@en,
+        "Autorité commune de notification des produits chimiques"@fr,
+        "Autorità comune di notifica delle sostanze chimiche"@it ;
     schema:member systemmap:ORG096,
         systemmap:ORG097,
-        systemmap:ORG098 .
+        systemmap:ORG098 ;
+    rdfs:comment """
+        Die Gemeinsame Anmeldestelle Chemikalien ist die zentrale Anlaufstelle für Chemikalien in der Schweiz,
+        betrieben vom Bundesamt für Umwelt (BAFU), dem Bundesamt für Gesundheit (BAG) und dem Staatssekretariat für Wirtschaft (SECO).
+        """@de,
+        """
+        The Common Notification Authority for Chemicals is the central contact point for chemicals in Switzerland,
+        operated by the Federal Office for the Environment (FOEN), the Federal Office of Public Health (FOPH), and the State Secretariat for Economic Affairs (SECO).
+        """@en,
+        """
+        L'Autorité commune de notification des produits chimiques est le point de contact central pour les produits chimiques en Suisse,
+        géré par l'Office fédéral de l'environnement (OFEV), l'Office fédéral de la santé publique (OFSP) et le Secrétariat d'État à l'économie (SECO).
+        """@fr,
+        """
+        L'Autorità comune di notifica delle sostanze chimiche è il punto di contatto centrale per le sostanze chimiche in Svizzera,
+        gestito dall'Ufficio federale dell'ambiente (UFAM), dall'Ufficio federale della sanità pubblica (UFSP) e dalla Segreteria di Stato dell'economia (SECO).
+        """@it .
 
 systemmap:ORG200 a schema:Organization ;
     rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
@@ -106,26 +136,68 @@ systemmap:SYS007 a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:ORG040 .
 
 systemmap:SYS008 a schema:SoftwareApplication ;
-    rdfs:label "Meine Agrardatenfreigabe"@de ;
-    rdfs:comment "Meine Agrardatenfreigabe vereinfacht den Datenaustausch zwischen Betrieben und Datenempfängern wie zum Beispiel Labelorganisationen. Sie bietet eine Plattform zur Verwaltung von Zugriffsberechtigungen und Datenfreigabevereinbarungen. Damit wird die Zusammenarbeit und Datenweitergabe im Agrarsektor transparenter gestaltet."@de ;
-    systemmap:abbreviation "MAF"@de ;
+    rdfs:label "Meine Agrardatenfreigabe"@de,
+        "My Agricultural Data Release"@en,
+        "Ma libération des données agricoles"@fr,
+        "Il mio rilascio dei dati agricoli"@it ;
+    rdfs:comment "Meine Agrardatenfreigabe vereinfacht den Datenaustausch zwischen Betrieben und Datenempfängern wie zum Beispiel Labelorganisationen. Sie bietet eine Plattform zur Verwaltung von Zugriffsberechtigungen und Datenfreigabevereinbarungen. Damit wird die Zusammenarbeit und Datenweitergabe im Agrarsektor transparenter gestaltet."@de,
+        "My Agricultural Data Release simplifies data exchange between farms and data recipients such as label organizations. It provides a platform for managing access permissions and data-sharing agreements. This makes collaboration and data transfer in the agricultural sector more transparent."@en,
+        "Ma libération des données agricoles simplifie l'échange de données entre exploitations agricoles et destinataires de données, tels que les organisations de labels. Elle offre une plateforme pour gérer les autorisations d'accès et les accords de partage de données. Cela rend la collaboration et le transfert de données dans le secteur agricole plus transparents."@fr,
+        "Il mio rilascio dei dati agricoli semplifica lo scambio di dati tra aziende agricole e destinatari dei dati, come le organizzazioni di etichettatura. Fornisce una piattaforma per gestire i permessi di accesso e gli accordi di condivisione dei dati. Ciò rende più trasparente la collaborazione e il trasferimento dei dati nel settore agricolo."@it ;
+    systemmap:abbreviation "MAF"@de,
+        "MADR"@en,
+        "MLDA"@fr,
+        "MRDA"@it ;
     systemmap:operatedBy systemmap:ORG011 .
 
 systemmap:SYS009 a schema:SoftwareApplication ;
-    rdfs:label "Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft"@de ;
-    rdfs:comment "Das Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft (PGREL-NIS) macht Daten des Aktionsplans zur Vielfalt der Kulturpflanzen öffentlich zugänglich. Es bietet einen Überblick und Zugriff auf Informationen zu Pflanzengenetischen Ressourcen. Damit trägt es zur Erhaltung und Förderung pflanzengenetischer Vielfalt bei."@de ;
-    systemmap:abbreviation "PGREL-NIS"@de ;
+    rdfs:label "Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft"@de,
+        "National Information System for Plant Genetic Resources for Food and Agriculture"@en,
+        "Système national d'information sur les ressources phytogénétiques pour l'alimentation et l'agriculture"@fr,
+        "Sistema informativo nazionale sulle risorse genetiche vegetali per l'alimentazione e l'agricoltura"@it ;
+    rdfs:comment "Das Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft (PGREL-NIS) macht Daten des Aktionsplans zur Vielfalt der Kulturpflanzen öffentlich zugänglich. Es bietet einen Überblick und Zugriff auf Informationen zu Pflanzengenetischen Ressourcen. Damit trägt es zur Erhaltung und Förderung pflanzengenetischer Vielfalt bei."@de,
+        "The National Information System for Plant Genetic Resources for Food and Agriculture (PGREL-NIS) provides public access to data from the Action Plan for Crop Diversity. It offers an overview and access to information on plant genetic resources. This contributes to the conservation and promotion of plant genetic diversity."@en,
+        "Le Système national d'information sur les ressources phytogénétiques pour l'alimentation et l'agriculture (PGREL-NIS) donne accès aux données du plan d'action sur la diversité des cultures. Il offre une vue d'ensemble et un accès aux informations sur les ressources phytogénétiques. Cela contribue à la conservation et à la promotion de la diversité génétique des plantes."@fr,
+        "Il Sistema informativo nazionale sulle risorse genetiche vegetali per l'alimentazione e l'agricoltura (PGREL-NIS) rende pubblici i dati del piano d'azione per la diversità delle colture. Fornisce una panoramica e l'accesso alle informazioni sulle risorse genetiche vegetali. Ciò contribuisce alla conservazione e alla promozione della diversità genetica delle piante."@it ;
+    systemmap:abbreviation "PGREL-NIS"@de,
+        "NIS-PGRFA"@en,
+        "SNIRPAA"@fr,
+        "SIN-RGVA"@it ;
     systemmap:operatedBy systemmap:ORG030 .
 
 systemmap:SYS010 a schema:SoftwareApplication ;
     rdfs:label "HODUFLU"@de ;
-    rdfs:comment "HODUFLU ist ein Internetprogramm zur einheitlichen Verwaltung von Hof- und Recyclingdüngerverschiebungen in der Landwirtschaft. Auf dieser Seite finden Sie Zugang zur Anwendung und nützliche Dokumente wie das Benutzerhandbuch für HODUFLU."@de ;
+    rdfs:comment """
+    HODUFLU ist ein Internetprogramm zur einheitlichen Verwaltung von Hof- und Recyclingdüngerverschiebungen in der Landwirtschaft.
+    Auf dieser Seite finden Sie Zugang zur Anwendung und nützliche Dokumente wie das Benutzerhandbuch für HODUFLU.
+    """@de ;
     systemmap:operatedBy systemmap:ORG020 .
 
 systemmap:SYS011 a schema:SoftwareApplication ;
-    rdfs:label "Protection Variété"@de ;
-    rdfs:comment "ProVar bedeutet Sortenschutz (protection variété) und ist die Datenbank zur Verwaltung aller wichtigen Informationen zu den Sortenarten von Pflanzen. Das Sortenschutzrecht regelt den gewerblichen Schutz neuer Pflanzenzüchtungen sowie deren gewerbsmässiger Nutzung."@de ;
-    systemmap:abbreviation "ProVar"@de ;
+    rdfs:label "Protection Variété"@de,
+        "Protection Variété"@en,
+        "Protection Variété"@fr,
+        "Protection Variété"@it ;
+    rdfs:comment """
+        ProVar bedeutet Sortenschutz (protection variété) und ist die Datenbank zur Verwaltung aller wichtigen Informationen zu den Sortenarten von Pflanzen.
+        Das Sortenschutzrecht regelt den gewerblichen Schutz neuer Pflanzenzüchtungen sowie deren gewerbsmässige Nutzung.
+        """@de,
+        """
+        ProVar stands for variety protection (protection variété) and is the database for managing all key information on plant varieties.
+        Plant variety protection law regulates the commercial protection of new plant breeds and their commercial use.
+        """@en,
+        """
+        ProVar signifie protection des variétés (protection variété) et est la base de données pour la gestion de toutes les informations essentielles sur les variétés végétales.
+        Le droit de protection des variétés végétales régit la protection commerciale des nouvelles créations végétales ainsi que leur utilisation commerciale.
+        """@fr,
+        """
+        ProVar significa protezione delle varietà (protection variété) ed è il database per la gestione di tutte le informazioni importanti sulle varietà di piante.
+        Il diritto di protezione delle varietà vegetali disciplina la protezione commerciale delle nuove varietà vegetali e il loro uso commerciale.
+        """@it ;
+    systemmap:abbreviation "ProVar"@de,
+        "ProVar"@en,
+        "ProVar"@fr,
+        "ProVar"@it ;
     systemmap:operatedBy systemmap:ORG032 .
 
 systemmap:SYS012 a schema:SoftwareApplication ;
@@ -133,7 +205,8 @@ systemmap:SYS012 a schema:SoftwareApplication ;
     rdfs:comment """
         Das Agrarinformationssystem GELAN steht seit 1999 in den Kantonen Bern, Fribourg und Solothurn im Einsatz.
         Es wurde seither auf 15 vollständig integrierte Teilsysteme erweitert und die Erfassung von Flächendaten erfolgt in einem Geographischen Informationssystem (GIS).
-        Nebst den Direktzahlungen unterstützt GELAN unter anderem folgende Vollzugsbereiche: Strukturverbesserungen, Ressourcenprojekte, Naturschutz, Tierschutz, Tierseuchenrecht, Gewässerschutz und Kontrollwesen.
+        Nebst den Direktzahlungen unterstützt GELAN unter anderem folgende Vollzugsbereiche:
+        Strukturverbesserungen, Ressourcenprojekte, Naturschutz, Tierschutz, Tierseuchenrecht, Gewässerschutz und Kontrollwesen.
         """@de ;
     systemmap:abbreviation "GELAN"@de ;
     systemmap:operatedBy systemmap:ORG311,
@@ -307,9 +380,39 @@ systemmap:SYS027 a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:ORG212 .
 
 systemmap:SYS028 a schema:SoftwareApplication ;
-    rdfs:label "Produkteregister Chemikalien"@de ;
-    systemmap:abbreviation "RPC"@de ;
+    rdfs:label "Produkteregister Chemikalien"@de,
+        "Chemical Products Register"@en,
+        "Registre des produits chimiques"@fr,
+        "Registro dei prodotti chimici"@it ;
+    rdfs:comment """
+        Das Produkteregister Chemikalien (RPC) ist die zentrale Datenbank des Bundes für gefährliche chemische Stoffe und Gemische.
+        Es ermöglicht Unternehmen, neue Produkte zu melden oder Zulassungsanträge zu stellen sowie bereits registrierte Produkte zu aktualisieren.
+        Zudem dient es als öffentlich zugängliche Rechercheplattform für gemeldete, angemeldete und zugelassene Chemikalien.
+        """@de,
+        """
+        The Chemical Products Register (RPC) is the federal central database for hazardous chemical substances and mixtures.
+        It enables companies to report new products, submit approval applications, and update already registered products.
+        Additionally, it serves as a publicly accessible research platform for reported, registered, and approved chemicals.
+        """@en,
+        """Le Registre des produits chimiques (RPC) est la base de données centrale fédérale pour les substances chimiques dangereuses et les mélanges.
+        Il permet aux entreprises de déclarer de nouveaux produits, de soumettre des demandes d'approbation et de mettre à jour les produits déjà enregistrés.
+        De plus, il sert de plateforme de recherche accessible au public pour les produits chimiques déclarés, enregistrés et approuvés.
+        """@fr,
+        """Il Registro dei prodotti chimici (RPC) è la banca dati centrale federale per le sostanze chimiche pericolose e le miscele.
+        Consente alle aziende di segnalare nuovi prodotti, presentare domande di approvazione e aggiornare i prodotti già registrati.
+        Inoltre, funge da piattaforma di ricerca accessibile al pubblico per i prodotti chimici segnalati, registrati e approvati.
+        """@it ;
+    systemmap:abbreviation "RPC"@de,
+        "CPR"@en,
+        "RPC"@fr,
+        "RPC"@it ;
     systemmap:operatedBy systemmap:ORG099 .
+
+systemmap:SYS029 a schema:SoftwareApplication ;
+    rdfs:label "Marktdaten Analyse- und Reporting-System"@de ;
+    rdfs:comment "Im Marktdaten Analyse- und Reporting-System werden Preis- und andere wichtige Agrarmarktdaten gesammelt, aggregiert, berechnet, analysiert und für Reports aufbereitet. MARS III ist in das BI BLW eingebunden."@de ;
+    systemmap:abbreviation "MARS III"@de ;
+    systemmap:operatedBy systemmap:ORG012 .
 
 systemmap:ORG300 a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Aargau"@de,
@@ -770,14 +873,41 @@ systemmap:ORG011 a systemmap:FederalOrganization ;
 
 systemmap:ORG012 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Marktanalyse"@de,
+        "Market Analysis Division"@en,
         "Secteur analyses du marché"@fr,
         "Settore analisi di mercato"@it ;
     schema:parentOrganization systemmap:ORG002 ;
-    systemmap:abbreviation "FBMA"@de .
+    rdfs:comment """
+        Der Fachbereich Marktanalysen informiert regelmässig über die Preisentwicklung in den Agrarmärkten mit dem Ziel, die Markttransparenz zu erhöhen und langfristige Entwicklungen aufzuzeigen.
+        Dazu werden in verschiedenen Marktbereichen Preise entlang der Wertschöpfungsketten erhoben und ausgewiesen sowie datengestützte Marktanalysen erstellt.
+        """@de,
+        """
+        The Market Analysis Division regularly provides information on price developments in agricultural markets with the aim of increasing market transparency and highlighting long-term trends.
+        To this end, prices are collected and reported along the value chains in various market sectors, and data-driven market analyses are created.
+        """@en,
+        """
+        Le Secteur analyses du marché informe régulièrement sur l'évolution des prix sur les marchés agricoles dans le but d'accroître la transparence du marché et de mettre en évidence les tendances à long terme.
+        À cette fin, les prix sont collectés et publiés tout au long des chaînes de valeur dans divers secteurs du marché, et des analyses de marché basées sur les données sont élaborées.
+        """@fr,
+        """
+        Il Settore analisi di mercato informa regolarmente sull'andamento dei prezzi nei mercati agricoli con l'obiettivo di aumentare la trasparenza del mercato e evidenziare le tendenze a lungo termine.
+        A tal fine, i prezzi vengono raccolti e riportati lungo le catene del valore in vari settori di mercato e vengono create analisi di mercato basate sui dati.
+        """@it ;
+    systemmap:abbreviation "FBMA"@de,
+        "MAD"@en,
+        "SAM"@fr,
+        "SAM"@it ;
+    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_27>,
+        <https://www.fedlex.admin.ch/eli/cc/1999/71> .
 
 systemmap:ORG013 a systemmap:FederalOrganization ;
-    rdfs:label "Gruppe Business Intelligence"@de ;
+    rdfs:label "Business Intelligence Competence Center"@de ;
     schema:parentOrganization systemmap:ORG002 ;
+    rdfs:comment """
+        Das Business Intelligence Competence Center (BI) ist verantwortlich für die Entwicklung und Umsetzung der BI-Strategie sowie die Planung und Durchführung von BI-Projekten.
+        Zu seinen Aufgaben gehören die Datenvisualisierung, das Reporting, die Beratung und Schulung von BI-Fachanwendern sowie die Analyse, Modellierung und Integration von Daten.
+        Zudem koordiniert das BI-Team den Betrieb von ASTAT mit dem ISCeco und die BI-Aktivitäten mit dem BLV.
+        """@de ;
     systemmap:abbreviation "GRBI"@de .
 
 systemmap:ORG020 a systemmap:FederalOrganization ;
@@ -821,6 +951,10 @@ systemmap:ORG032 a systemmap:FederalOrganization ;
 systemmap:ORG040 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Ein- und Ausfuhr"@de ;
     schema:parentOrganization systemmap:ORG007 ;
+    rdfs:comment """
+        Zu den Hauptaufgaben des Fachbereichs Ein- und Ausfuhr (FBEA) gehören die Verwaltung der Zollkontingente, die Erteilung von Einfuhrbewilligungen, die Zuteilung von Kontingentsanteilen, die Koordination mit der Oberzolldirektion sowie die Durchführung von internen und externen Kontrollen.
+        Zudem kümmert sich der FBEA um die Gebührenverwaltung, den Betrieb und die Wartung von Fachapplikationen, die Bearbeitung von Gesuchen im Veredelungsverkehr und um Exportberatungen.
+        """@de ;
     systemmap:abbreviation "FBEA"@de .
 
 systemmap:ORG041 a systemmap:FederalOrganization ;
@@ -897,6 +1031,10 @@ systemmap:ORG212 a systemmap:FederalOrganization ;
 systemmap:ORG213 a systemmap:FederalOrganization ;
     rdfs:label "Gruppe GEVER Services"@de ;
     schema:parentOrganization systemmap:ORG002 ;
+    rdfs:comment """
+        Die Gruppe GEVER Services ist für die physische und elektronische Postverteilung sowie die zentrale Adressverwaltung im BLW zuständig.
+        Die Postverarbeitung erfolgt hauptsächlich über das GEVER-System, das eine strukturierte Bearbeitung und Archivierung digitaler Unterlagen ermöglicht. 
+        """@de ;
     owl:sameAs staatskalender:20032934 ;
     systemmap:abbreviation "GRGS"@de .
 
@@ -908,6 +1046,10 @@ systemmap:ORG214 a systemmap:FederalOrganization ;
 
 systemmap:INF003 a systemmap:Identifier ;
     rdfs:label "UID-Nummer"@de ;
+    rdfs:comment """
+        Jedes in der Schweiz aktive Unternehmen erhält eine einheitliche Unternehmens-Identifikationsnummer (UID).
+        Die Verwendung der UID ermöglicht eine administrative Entlastung der Unternehmen sowie eine effizientere Zusammenarbeit zwischen den Behörden.
+        """@de ;
     systemmap:containedIn systemmap:SYS027 .
 
 systemmap:INF004 a systemmap:Identifier ;
@@ -1256,4 +1398,3 @@ systemmap:INF024 a systemmap:SensitivePersonInformation ;
         "Résultats du contrôle public du lait. Lors du contrôle public du lait, le lait de vache est analysé deux fois par mois pour les paramètres suivants : nombre de germes, cellules somatiques et inhibiteurs. Des résultats hygiéniques insuffisants entraînent des réclamations et, en cas de carences hygiéniques prolongées, une interdiction officielle de livraison de lait. Les résultats du contrôle du lait sont mis à disposition des cercles autorisés via la plateforme dbmilch.ch."@fr,
         "Risultati del controllo pubblico del latte. Nel controllo pubblico del latte, il latte di mucca viene analizzato due volte al mese per i seguenti parametri: conta dei germi, cellule somatiche e inibitori. Risultati igienicamente insufficienti comportano reclami e, in caso di carenze igieniche prolungate, un divieto ufficiale di consegna del latte. I risultati del controllo del latte sono resi disponibili ai soggetti autorizzati tramite la piattaforma dbmilch.ch."@it ;
     systemmap:containedIn systemmap:SYS021 .
-

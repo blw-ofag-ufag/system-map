@@ -263,7 +263,8 @@ systemmap:ORG010 a schema:GovernmentOrganization,
         "FBAIS"@en,
         "FBAIS"@fr,
         "FBAIS"@it ;
-    systemmap:operates systemmap:SYS003 .
+    systemmap:operates systemmap:SYS003,
+        systemmap:SYS030 .
 
 systemmap:ORG011 a schema:GovernmentOrganization,
         schema:Organization,
@@ -289,7 +290,8 @@ systemmap:ORG011 a schema:GovernmentOrganization,
         "GRKDT"@en,
         "GRKDT"@fr,
         "GRKDT"@it ;
-    systemmap:operates systemmap:SYS008 .
+    systemmap:operates systemmap:SYS008,
+        systemmap:SYS042 .
 
 systemmap:ORG012 a schema:GovernmentOrganization,
         schema:Organization,
@@ -346,42 +348,113 @@ systemmap:ORG012 a schema:GovernmentOrganization,
 systemmap:ORG013 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
-    rdfs:label "Business Intelligence Competence Center"@de ;
-    schema:description """
-        Das Business Intelligence Competence Center (BI) ist verantwortlich für die Entwicklung und Umsetzung der BI-Strategie sowie die Planung und Durchführung von BI-Projekten.
-        Zu seinen Aufgaben gehören die Datenvisualisierung, das Reporting, die Beratung und Schulung von BI-Fachanwendern sowie die Analyse, Modellierung und Integration von Daten.
-        Zudem koordiniert das BI-Team den Betrieb von ASTAT mit dem ISCeco und die BI-Aktivitäten mit dem BLV.
-        """@de ;
-    schema:name "Business Intelligence Competence Center"@de ;
+    rdfs:label "Business Intelligence Competence Center"@de,
+        "Business Intelligence Competence Center"@en,
+        "Centre de compétence Business Intelligence"@fr,
+        "Centro di competenza Business Intelligence"@it ;
+    schema:description """  
+        Das Business Intelligence Competence Center (BI) ist verantwortlich für die Entwicklung und Umsetzung der BI-Strategie sowie die Planung und Durchführung von BI-Projekten.  
+        Zu seinen Aufgaben gehören die Datenvisualisierung, das Reporting, die Beratung und Schulung von BI-Fachanwendern sowie die Analyse, Modellierung und Integration von Daten.  
+        Zudem koordiniert das BI-Team den Betrieb von ASTAT mit dem ISCeco und die BI-Aktivitäten mit dem BLV.  
+        """@de,
+        """  
+        The Business Intelligence Competence Center (BI) is responsible for developing and implementing the BI strategy, as well as planning and executing BI projects.  
+        Its tasks include data visualization, reporting, advising and training BI professionals, as well as data analysis, modeling, and integration.  
+        Additionally, the BI team coordinates the operation of ASTAT with ISCeco and BI activities with the FSVO.  
+        """@en,
+        """  
+        Le Centre de compétence Business Intelligence (BI) est responsable du développement et de la mise en œuvre de la stratégie BI, ainsi que de la planification et de l'exécution des projets BI.  
+        Ses tâches incluent la visualisation des données, le reporting, le conseil et la formation des spécialistes BI, ainsi que l'analyse, la modélisation et l'intégration des données.  
+        De plus, l'équipe BI coordonne l'exploitation d'ASTAT avec l'ISCeco et les activités BI avec l'OSAV.  
+        """@fr,
+        """  
+        Il Centro di competenza Business Intelligence (BI) è responsabile dello sviluppo e dell'implementazione della strategia BI, nonché della pianificazione e dell'esecuzione dei progetti BI.  
+        I suoi compiti includono la visualizzazione dei dati, il reporting, la consulenza e la formazione degli specialisti BI, oltre all'analisi, alla modellazione e all'integrazione dei dati.  
+        Inoltre, il team BI coordina il funzionamento di ASTAT con ISCeco e le attività BI con l'USAV.  
+        """@it ;
+    schema:name "Business Intelligence Competence Center"@de,
+        "Business Intelligence Competence Center"@en,
+        "Centre de compétence Business Intelligence"@fr,
+        "Centro di competenza Business Intelligence"@it ;
     schema:parentOrganization systemmap:ORG002 ;
-    rdfs:comment """
-        Das Business Intelligence Competence Center (BI) ist verantwortlich für die Entwicklung und Umsetzung der BI-Strategie sowie die Planung und Durchführung von BI-Projekten.
-        Zu seinen Aufgaben gehören die Datenvisualisierung, das Reporting, die Beratung und Schulung von BI-Fachanwendern sowie die Analyse, Modellierung und Integration von Daten.
-        Zudem koordiniert das BI-Team den Betrieb von ASTAT mit dem ISCeco und die BI-Aktivitäten mit dem BLV.
-        """@de ;
-    systemmap:abbreviation "GRBI"@de ;
+    rdfs:comment """  
+        Das Business Intelligence Competence Center (BI) ist verantwortlich für die Entwicklung und Umsetzung der BI-Strategie sowie die Planung und Durchführung von BI-Projekten.  
+        Zu seinen Aufgaben gehören die Datenvisualisierung, das Reporting, die Beratung und Schulung von BI-Fachanwendern sowie die Analyse, Modellierung und Integration von Daten.  
+        Zudem koordiniert das BI-Team den Betrieb von ASTAT mit dem ISCeco und die BI-Aktivitäten mit dem BLV.  
+        """@de,
+        """  
+        The Business Intelligence Competence Center (BI) is responsible for developing and implementing the BI strategy, as well as planning and executing BI projects.  
+        Its tasks include data visualization, reporting, advising and training BI professionals, as well as data analysis, modeling, and integration.  
+        Additionally, the BI team coordinates the operation of ASTAT with ISCeco and BI activities with the FSVO.  
+        """@en,
+        """  
+        Le Centre de compétence Business Intelligence (BI) est responsable du développement et de la mise en œuvre de la stratégie BI, ainsi que de la planification et de l'exécution des projets BI.  
+        Ses tâches incluent la visualisation des données, le reporting, le conseil et la formation des spécialistes BI, ainsi que l'analyse, la modélisation et l'intégration des données.  
+        De plus, l'équipe BI coordonne l'exploitation d'ASTAT avec l'ISCeco et les activités BI avec l'OSAV.  
+        """@fr,
+        """  
+        Il Centro di competenza Business Intelligence (BI) è responsabile dello sviluppo e dell'implementazione della strategia BI, nonché della pianificazione e dell'esecuzione dei progetti BI.  
+        I suoi compiti includono la visualizzazione dei dati, il reporting, la consulenza e la formazione degli specialisti BI, oltre all'analisi, alla modellazione e all'integrazione dei dati.  
+        Inoltre, il team BI coordina il funzionamento di ASTAT con ISCeco e le attività BI con l'USAV.  
+        """@it ;
+    systemmap:abbreviation "GRBI"@de,
+        "GRBI"@en,
+        "GRBI"@fr,
+        "GRBI"@it ;
     systemmap:operates systemmap:SYS004 .
 
 systemmap:ORG020 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Direktzahlungsprogramme"@de,
-        "Direct payment programs division"@en,
+        "Direct Payment Programs Division"@en,
         "Secteur Paiements directs - Programmes"@fr,
-        "Settore Pagamenti diretti Programmi"@it ;
-    schema:description "Der Fachbereich setzt Direktzahlungsprogramme in den Bereichen Umwelt, Tierwohl und Landschaft um, unterstützt kantonale Stellen und überwacht deren Vollzug. Zudem wird der ökologische Leistungsnachweis (ÖLN) weiterentwickelt, Regelbereiche wie Biodiversitätsstrategie, Biolandbau sowie Energie- und Klimaschutz koordiniert und relevante Gesetzgebungsschnittstellen gepflegt. Technisch werden EDV-Applikationen bereitgestellt und Kürzungsmassnahmen umgesetzt. Weitere Aufgaben umfassen die Bearbeitung von Stellungnahmen, Öffentlichkeitsarbeit sowie die Information und Einbindung relevanter Akteure."@de,
-        "The division implements direct payment programs in the areas of environment, animal welfare, and landscape, supports cantonal authorities, and monitors their enforcement. Furthermore, the ecological performance certificate (ÖLN) is being further developed, regulatory areas such as biodiversity strategy, organic farming, as well as energy and climate protection are coordinated, and relevant legislative interfaces are maintained. Technically, IT applications are provided, and reduction measures are implemented. Other tasks include processing statements, public relations, as well as informing and involving relevant stakeholders."@en,
-        "Le secteur met en œuvre des programmes de paiements directs dans les domaines de l’environnement, du bien-être animal et du paysage, soutient les autorités cantonales et surveille leur application. En outre, la preuve écologique de performance (ÖLN) est développée, les domaines réglementaires tels que la stratégie de biodiversité, l’agriculture biologique ainsi que la protection de l’énergie et du climat sont coordonnés, et les interfaces législatives pertinentes sont maintenues. Techniquement, des applications informatiques sont mises à disposition et des mesures de réduction sont mises en œuvre. D’autres tâches comprennent le traitement des avis, les relations publiques ainsi que l’information et l’implication des acteurs concernés."@fr,
-        "Il settore attua programmi di pagamenti diretti nei settori dell’ambiente, del benessere animale e del paesaggio, sostiene le autorità cantonali e ne controlla l’applicazione. Inoltre, viene sviluppata la certificazione ecologica delle prestazioni (ÖLN), vengono coordinati ambiti normativi come la strategia per la biodiversità, l’agricoltura biologica e la protezione dell’energia e del clima, e vengono mantenute le interfacce legislative pertinenti. Dal punto di vista tecnico, vengono fornite applicazioni informatiche e attuate misure di riduzione. Altri compiti includono l’elaborazione di pareri, le relazioni pubbliche e l’informazione e il coinvolgimento degli attori rilevanti."@it ;
+        "Settore Pagamenti diretti - Programmi"@it ;
+    schema:description """
+        Der Fachbereich setzt Direktzahlungsprogramme in den Bereichen Umwelt, Tierwohl und Landschaft um, unterstützt kantonale Stellen und überwacht deren Vollzug.  
+        Zudem wird der ökologische Leistungsnachweis (ÖLN) weiterentwickelt, Regelbereiche wie Biodiversitätsstrategie, Biolandbau sowie Energie- und Klimaschutz koordiniert und relevante Gesetzgebungsschnittstellen gepflegt.  
+        Technisch werden EDV-Applikationen bereitgestellt und Kürzungsmassnahmen umgesetzt. Weitere Aufgaben umfassen die Bearbeitung von Stellungnahmen, Öffentlichkeitsarbeit sowie die Information und Einbindung relevanter Akteure.  
+        """@de,
+        """
+        The division implements direct payment programs in the areas of environment, animal welfare, and landscape, supports cantonal authorities, and monitors their enforcement.  
+        Additionally, it develops the ecological performance record (ÖLN), coordinates regulatory areas such as biodiversity strategy, organic farming, and energy and climate protection, and maintains relevant legislative interfaces.  
+        On a technical level, IT applications are provided, and reduction measures are implemented. Other tasks include handling statements, public relations, and informing and involving relevant stakeholders.  
+        """@en,
+        """
+        Le secteur met en œuvre des programmes de paiements directs dans les domaines de l'environnement, du bien-être animal et du paysage, soutient les autorités cantonales et supervise leur application.  
+        De plus, il développe la preuve écologique de performance (ÖLN), coordonne des domaines réglementaires tels que la stratégie de biodiversité, l'agriculture biologique ainsi que la protection de l’énergie et du climat, et entretient les interfaces législatives pertinentes.  
+        Sur le plan technique, des applications informatiques sont mises à disposition et des mesures de réduction sont appliquées. D'autres tâches comprennent le traitement des avis, les relations publiques ainsi que l'information et l'implication des acteurs concernés.  
+        """@fr,
+        """
+        Il settore attua programmi di pagamenti diretti nei settori dell’ambiente, del benessere animale e del paesaggio, supporta le autorità cantonali e ne monitora l’attuazione.  
+        Inoltre, sviluppa la prova delle prestazioni ecologiche (ÖLN), coordina ambiti normativi come la strategia per la biodiversità, l’agricoltura biologica, la protezione dell’energia e del clima e gestisce le interfacce legislative pertinenti.  
+        A livello tecnico, vengono fornite applicazioni informatiche e implementate misure di riduzione. Altri compiti includono la gestione delle dichiarazioni, le relazioni pubbliche e il coinvolgimento degli attori interessati.  
+        """@it ;
     schema:name "Fachbereich Direktzahlungsprogramme"@de,
-        "Direct payment programs division"@en,
+        "Direct Payment Programs Division"@en,
         "Secteur Paiements directs - Programmes"@fr,
-        "Settore Pagamenti diretti Programmi"@it ;
+        "Settore Pagamenti diretti - Programmi"@it ;
     schema:parentOrganization systemmap:ORG006 ;
-    rdfs:comment "Der Fachbereich setzt Direktzahlungsprogramme in den Bereichen Umwelt, Tierwohl und Landschaft um, unterstützt kantonale Stellen und überwacht deren Vollzug. Zudem wird der ökologische Leistungsnachweis (ÖLN) weiterentwickelt, Regelbereiche wie Biodiversitätsstrategie, Biolandbau sowie Energie- und Klimaschutz koordiniert und relevante Gesetzgebungsschnittstellen gepflegt. Technisch werden EDV-Applikationen bereitgestellt und Kürzungsmassnahmen umgesetzt. Weitere Aufgaben umfassen die Bearbeitung von Stellungnahmen, Öffentlichkeitsarbeit sowie die Information und Einbindung relevanter Akteure."@de,
-        "The division implements direct payment programs in the areas of environment, animal welfare, and landscape, supports cantonal authorities, and monitors their enforcement. Furthermore, the ecological performance certificate (ÖLN) is being further developed, regulatory areas such as biodiversity strategy, organic farming, as well as energy and climate protection are coordinated, and relevant legislative interfaces are maintained. Technically, IT applications are provided, and reduction measures are implemented. Other tasks include processing statements, public relations, as well as informing and involving relevant stakeholders."@en,
-        "Le secteur met en œuvre des programmes de paiements directs dans les domaines de l’environnement, du bien-être animal et du paysage, soutient les autorités cantonales et surveille leur application. En outre, la preuve écologique de performance (ÖLN) est développée, les domaines réglementaires tels que la stratégie de biodiversité, l’agriculture biologique ainsi que la protection de l’énergie et du climat sont coordonnés, et les interfaces législatives pertinentes sont maintenues. Techniquement, des applications informatiques sont mises à disposition et des mesures de réduction sont mises en œuvre. D’autres tâches comprennent le traitement des avis, les relations publiques ainsi que l’information et l’implication des acteurs concernés."@fr,
-        "Il settore attua programmi di pagamenti diretti nei settori dell’ambiente, del benessere animale e del paesaggio, sostiene le autorità cantonali e ne controlla l’applicazione. Inoltre, viene sviluppata la certificazione ecologica delle prestazioni (ÖLN), vengono coordinati ambiti normativi come la strategia per la biodiversità, l’agricoltura biologica e la protezione dell’energia e del clima, e vengono mantenute le interfacce legislative pertinenti. Dal punto di vista tecnico, vengono fornite applicazioni informatiche e attuate misure di riduzione. Altri compiti includono l’elaborazione di pareri, le relazioni pubbliche e l’informazione e il coinvolgimento degli attori rilevanti."@it ;
+    rdfs:comment """
+        Der Fachbereich setzt Direktzahlungsprogramme in den Bereichen Umwelt, Tierwohl und Landschaft um, unterstützt kantonale Stellen und überwacht deren Vollzug.  
+        Zudem wird der ökologische Leistungsnachweis (ÖLN) weiterentwickelt, Regelbereiche wie Biodiversitätsstrategie, Biolandbau sowie Energie- und Klimaschutz koordiniert und relevante Gesetzgebungsschnittstellen gepflegt.  
+        Technisch werden EDV-Applikationen bereitgestellt und Kürzungsmassnahmen umgesetzt. Weitere Aufgaben umfassen die Bearbeitung von Stellungnahmen, Öffentlichkeitsarbeit sowie die Information und Einbindung relevanter Akteure.  
+        """@de,
+        """
+        The division implements direct payment programs in the areas of environment, animal welfare, and landscape, supports cantonal authorities, and monitors their enforcement.  
+        Additionally, it develops the ecological performance record (ÖLN), coordinates regulatory areas such as biodiversity strategy, organic farming, and energy and climate protection, and maintains relevant legislative interfaces.  
+        On a technical level, IT applications are provided, and reduction measures are implemented. Other tasks include handling statements, public relations, and informing and involving relevant stakeholders.  
+        """@en,
+        """
+        Le secteur met en œuvre des programmes de paiements directs dans les domaines de l'environnement, du bien-être animal et du paysage, soutient les autorités cantonales et supervise leur application.  
+        De plus, il développe la preuve écologique de performance (ÖLN), coordonne des domaines réglementaires tels que la stratégie de biodiversité, l'agriculture biologique ainsi que la protection de l’énergie et du climat, et entretient les interfaces législatives pertinentes.  
+        Sur le plan technique, des applications informatiques sont mises à disposition et des mesures de réduction sont appliquées. D'autres tâches comprennent le traitement des avis, les relations publiques ainsi que l'information et l'implication des acteurs concernés.  
+        """@fr,
+        """
+        Il settore attua programmi di pagamenti diretti nei settori dell’ambiente, del benessere animale e del paesaggio, supporta le autorità cantonali e ne monitora l’attuazione.  
+        Inoltre, sviluppa la prova delle prestazioni ecologiche (ÖLN), coordina ambiti normativi come la strategia per la biodiversità, l’agricoltura biologica, la protezione dell’energia e del clima e gestisce le interfacce legislative pertinenti.  
+        A livello tecnico, vengono fornite applicazioni informatiche e implementate misure di riduzione. Altri compiti includono la gestione delle dichiarazioni, le relazioni pubbliche e il coinvolgimento degli attori interessati.  
+        """@it ;
     systemmap:abbreviation "FBDP"@de,
         "FBDP"@en,
         "FBDP"@fr,
@@ -392,59 +465,239 @@ systemmap:ORG020 a schema:GovernmentOrganization,
 systemmap:ORG021 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
-    rdfs:label "Fachbereich Direktzahlungsgrundlagen"@de ;
-    schema:description """
-        Der Fachbereich Direktzahlungsgrundlagen ist zuständig für die Umsetzung und Weiterentwicklung des Direktzahlungssystems im Bereich der  Versorgungssicherheit,
-        der Kulturlandschaft, der Übergangsbeiträge, der landwirtschaftlichen Zonen und Gebiete, der Landwirtschaftlichen Begriffe sowie der Anerkennung von Betrieben und Betriebsformen.
-        """@de ;
-    schema:name "Fachbereich Direktzahlungsgrundlagen"@de ;
+    rdfs:label "Fachbereich Direktzahlungsgrundlagen"@de,
+        "Direct Payment Principles Division"@en,
+        "Secteur bases des paiements directs"@fr,
+        "Settore basi dei pagamenti diretti"@it ;
+    schema:description """  
+        Der Fachbereich Direktzahlungsgrundlagen ist zuständig für die Umsetzung und Weiterentwicklung des Direktzahlungssystems im Bereich der Versorgungssicherheit,  
+        der Kulturlandschaft, der Übergangsbeiträge, der landwirtschaftlichen Zonen und Gebiete, der landwirtschaftlichen Begriffe sowie der Anerkennung von Betrieben und Betriebsformen.  
+        """@de,
+        """  
+        The Direct Payment Principles Division is responsible for implementing and further developing the direct payment system  
+        in the areas of food security, cultural landscape, transitional payments, agricultural zones and areas, agricultural terminology,  
+        and the recognition of farms and farming models.  
+        """@en,
+        """  
+        Le secteur bases des paiements directs est responsable de la mise en œuvre et du développement du système des paiements directs  
+        dans les domaines de la sécurité de l'approvisionnement, du paysage culturel, des contributions transitoires,  
+        des zones et régions agricoles, de la terminologie agricole ainsi que de la reconnaissance des exploitations et des modèles d’exploitation.  
+        """@fr,
+        """  
+        Il settore basi dei pagamenti diretti è responsabile dell'attuazione e dello sviluppo del sistema dei pagamenti diretti  
+        nei settori della sicurezza dell'approvvigionamento, del paesaggio culturale, dei contributi transitori,  
+        delle zone e aree agricole, della terminologia agricola e del riconoscimento delle aziende e dei modelli aziendali.  
+        """@it ;
+    schema:name "Fachbereich Direktzahlungsgrundlagen"@de,
+        "Direct Payment Principles Division"@en,
+        "Secteur bases des paiements directs"@fr,
+        "Settore basi dei pagamenti diretti"@it ;
     schema:parentOrganization systemmap:ORG006 ;
-    rdfs:comment """
-        Der Fachbereich Direktzahlungsgrundlagen ist zuständig für die Umsetzung und Weiterentwicklung des Direktzahlungssystems im Bereich der  Versorgungssicherheit,
-        der Kulturlandschaft, der Übergangsbeiträge, der landwirtschaftlichen Zonen und Gebiete, der Landwirtschaftlichen Begriffe sowie der Anerkennung von Betrieben und Betriebsformen.
-        """@de ;
-    systemmap:abbreviation "FBDG"@de ;
+    rdfs:comment """  
+        Der Fachbereich Direktzahlungsgrundlagen ist zuständig für die Umsetzung und Weiterentwicklung des Direktzahlungssystems im Bereich der Versorgungssicherheit,  
+        der Kulturlandschaft, der Übergangsbeiträge, der landwirtschaftlichen Zonen und Gebiete, der landwirtschaftlichen Begriffe sowie der Anerkennung von Betrieben und Betriebsformen.  
+        """@de,
+        """  
+        The Direct Payment Principles Division is responsible for implementing and further developing the direct payment system  
+        in the areas of food security, cultural landscape, transitional payments, agricultural zones and areas, agricultural terminology,  
+        and the recognition of farms and farming models.  
+        """@en,
+        """  
+        Le secteur bases des paiements directs est responsable de la mise en œuvre et du développement du système des paiements directs  
+        dans les domaines de la sécurité de l'approvisionnement, du paysage culturel, des contributions transitoires,  
+        des zones et régions agricoles, de la terminologie agricole ainsi que de la reconnaissance des exploitations et des modèles d’exploitation.  
+        """@fr,
+        """  
+        Il settore basi dei pagamenti diretti è responsabile dell'attuazione e dello sviluppo del sistema dei pagamenti diretti  
+        nei settori della sicurezza dell'approvvigionamento, del paesaggio culturale, dei contributi transitori,  
+        delle zone e aree agricole, della terminologia agricola e del riconoscimento delle aziende e dei modelli aziendali.  
+        """@it ;
+    systemmap:abbreviation "FBDG"@de,
+        "FBDG"@en,
+        "FBDG"@fr,
+        "FBDG"@it ;
     systemmap:operates systemmap:SYS001 .
 
 systemmap:ORG030 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
-    rdfs:label "Genetische Ressourcen, Produktionssicherheit und Futtermittel"@de ;
-    schema:description """
-        The Fachbereich Genetische Ressourcen, Produktionssicherheit und Futtermittel ist verantwortlich für den Erhalt und die nachhaltige Nutzung pflanzengenetischer Ressourcen, die Überwachung der Gentechnologie in der Landwirtschaft sowie die Identifikation und Regulierung von Risiken in der landwirtschaftlichen Produktion.
-        Zudem übernimmt er das Ereignis- und Krisenmanagement bei ABCN-Ereignissen und koordiniert die Futtermittelkontrolle sowie die Weiterentwicklung der entsprechenden Verordnungen.
-        Ein weiterer Schwerpunkt liegt auf der Tiergesundheit, insbesondere durch die Förderung von Innovationen, Antibiotikaresistenzstrategien und den One-Health-Ansatz.
-        """@de ;
-    schema:name "Genetische Ressourcen, Produktionssicherheit und Futtermittel"@de ;
+    rdfs:label "Genetische Ressourcen, Produktionssicherheit und Futtermittel"@de,
+        "Genetic Resources, Production Safety and Animal Feed"@en,
+        "Ressources génétiques, sécurité de la production et aliments pour animaux"@fr,
+        "Risorse genetiche, sicurezza della produzione e mangimi"@it ;
+    schema:description """  
+        Der Fachbereich Genetische Ressourcen, Produktionssicherheit und Futtermittel ist verantwortlich für den Erhalt und die nachhaltige Nutzung pflanzengenetischer Ressourcen,  
+        die Überwachung der Gentechnologie in der Landwirtschaft sowie die Identifikation und Regulierung von Risiken in der landwirtschaftlichen Produktion.  
+        Zudem übernimmt er das Ereignis- und Krisenmanagement bei ABCN-Ereignissen und koordiniert die Futtermittelkontrolle sowie die Weiterentwicklung der entsprechenden Verordnungen.  
+        Ein weiterer Schwerpunkt liegt auf der Tiergesundheit, insbesondere durch die Förderung von Innovationen, Antibiotikaresistenzstrategien und den One-Health-Ansatz.  
+        """@de,
+        """  
+        The Genetic Resources, Production Safety and Animal Feed Division is responsible for the conservation and sustainable use of plant genetic resources,  
+        the monitoring of agricultural biotechnology, and the identification and regulation of risks in agricultural production.  
+        It also manages incident and crisis response for ABCN events and coordinates animal feed control and the development of relevant regulations.  
+        Another focus is on animal health, particularly through the promotion of innovations, antibiotic resistance strategies, and the One Health approach.  
+        """@en,
+        """  
+        Le secteur Ressources génétiques, sécurité de la production et aliments pour animaux est responsable de la conservation et de l'utilisation durable des ressources génétiques végétales,  
+        de la surveillance de la biotechnologie agricole et de l'identification et de la régulation des risques dans la production agricole.  
+        Il gère également la réponse aux incidents et aux crises en cas d’événements ABCN et coordonne le contrôle des aliments pour animaux ainsi que l'évolution des réglementations correspondantes.  
+        Un autre axe majeur concerne la santé animale, notamment à travers la promotion des innovations, des stratégies de lutte contre la résistance aux antibiotiques et l'approche One Health.  
+        """@fr,
+        """  
+        Il settore Risorse genetiche, sicurezza della produzione e mangimi è responsabile della conservazione e dell’uso sostenibile delle risorse genetiche vegetali,  
+        del monitoraggio delle biotecnologie agricole e dell’identificazione e regolamentazione dei rischi nella produzione agricola.  
+        Inoltre, gestisce la risposta a incidenti e crisi legati a eventi ABCN e coordina il controllo dei mangimi e lo sviluppo delle normative pertinenti.  
+        Un altro punto focale è la salute animale, in particolare attraverso la promozione di innovazioni, strategie contro la resistenza agli antibiotici e l’approccio One Health.  
+        """@it ;
+    schema:name "Genetische Ressourcen, Produktionssicherheit und Futtermittel"@de,
+        "Genetic Resources, Production Safety and Animal Feed"@en,
+        "Ressources génétiques, sécurité de la production et aliments pour animaux"@fr,
+        "Risorse genetiche, sicurezza della produzione e mangimi"@it ;
     schema:parentOrganization systemmap:ORG005 ;
-    rdfs:comment """
-        The Fachbereich Genetische Ressourcen, Produktionssicherheit und Futtermittel ist verantwortlich für den Erhalt und die nachhaltige Nutzung pflanzengenetischer Ressourcen, die Überwachung der Gentechnologie in der Landwirtschaft sowie die Identifikation und Regulierung von Risiken in der landwirtschaftlichen Produktion.
-        Zudem übernimmt er das Ereignis- und Krisenmanagement bei ABCN-Ereignissen und koordiniert die Futtermittelkontrolle sowie die Weiterentwicklung der entsprechenden Verordnungen.
-        Ein weiterer Schwerpunkt liegt auf der Tiergesundheit, insbesondere durch die Förderung von Innovationen, Antibiotikaresistenzstrategien und den One-Health-Ansatz.
-        """@de ;
-    systemmap:abbreviation "FBGRT"@de ;
+    rdfs:comment """  
+        Der Fachbereich Genetische Ressourcen, Produktionssicherheit und Futtermittel ist verantwortlich für den Erhalt und die nachhaltige Nutzung pflanzengenetischer Ressourcen,  
+        die Überwachung der Gentechnologie in der Landwirtschaft sowie die Identifikation und Regulierung von Risiken in der landwirtschaftlichen Produktion.  
+        Zudem übernimmt er das Ereignis- und Krisenmanagement bei ABCN-Ereignissen und koordiniert die Futtermittelkontrolle sowie die Weiterentwicklung der entsprechenden Verordnungen.  
+        Ein weiterer Schwerpunkt liegt auf der Tiergesundheit, insbesondere durch die Förderung von Innovationen, Antibiotikaresistenzstrategien und den One-Health-Ansatz.  
+        """@de,
+        """  
+        The Genetic Resources, Production Safety and Animal Feed Division is responsible for the conservation and sustainable use of plant genetic resources,  
+        the monitoring of agricultural biotechnology, and the identification and regulation of risks in agricultural production.  
+        It also manages incident and crisis response for ABCN events and coordinates animal feed control and the development of relevant regulations.  
+        Another focus is on animal health, particularly through the promotion of innovations, antibiotic resistance strategies, and the One Health approach.  
+        """@en,
+        """  
+        Le secteur Ressources génétiques, sécurité de la production et aliments pour animaux est responsable de la conservation et de l'utilisation durable des ressources génétiques végétales,  
+        de la surveillance de la biotechnologie agricole et de l'identification et de la régulation des risques dans la production agricole.  
+        Il gère également la réponse aux incidents et aux crises en cas d’événements ABCN et coordonne le contrôle des aliments pour animaux ainsi que l'évolution des réglementations correspondantes.  
+        Un autre axe majeur concerne la santé animale, notamment à travers la promotion des innovations, des stratégies de lutte contre la résistance aux antibiotiques et l'approche One Health.  
+        """@fr,
+        """  
+        Il settore Risorse genetiche, sicurezza della produzione e mangimi è responsabile della conservazione e dell’uso sostenibile delle risorse genetiche vegetali,  
+        del monitoraggio delle biotecnologie agricole e dell’identificazione e regolamentazione dei rischi nella produzione agricola.  
+        Inoltre, gestisce la risposta a incidenti e crisi legati a eventi ABCN e coordina il controllo dei mangimi e lo sviluppo delle normative pertinenti.  
+        Un altro punto focale è la salute animale, in particolare attraverso la promozione di innovazioni, strategie contro la resistenza agli antibiotici e l’approccio One Health.  
+        """@it ;
+    systemmap:abbreviation "FBGRT"@de,
+        "FBGRT"@en,
+        "FBGRT"@fr,
+        "FBGRT"@it ;
     systemmap:operates systemmap:SYS009 .
 
 systemmap:ORG031 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
-    rdfs:label "Fachbereich Pflanzengesundheit"@de ;
-    schema:description "Die Aufgabe des Fachbereiches Pflanzengesundheit (FBPG) ist es, die Einschleppung und Ausbreitung von (geregelten) besonders gefährlichen Schädlingen und Krankheiten von Pflanzen zu vermeiden. Dies ist wichtig, um wirtschaftliche, soziale und ökologische Schäden zu vermeiden. Der Eidgenössische Pflanzenschutzdienst (EPSD), der vom Fachbereich gemeinsam mit der Sektion Waldschutz und Waldgesundheit des Bundesamts für Umwelt (BAFU) geführt wird, ist für die Umsetzung dieser Aufgabe auf nationaler Ebene zuständig."@de ;
-    schema:name "Fachbereich Pflanzengesundheit"@de ;
+    rdfs:label "Fachbereich Pflanzengesundheit"@de,
+        "Plant Health Division"@en,
+        "Secteur santé des végétaux"@fr,
+        "Settore salute delle piante"@it ;
+    schema:description """  
+        Die Aufgabe des Fachbereiches Pflanzengesundheit (FBPG) ist es, die Einschleppung und Ausbreitung von (geregelten) besonders gefährlichen Schädlingen und Krankheiten von Pflanzen zu vermeiden.  
+        Dies ist wichtig, um wirtschaftliche, soziale und ökologische Schäden zu vermeiden.  
+        Der Eidgenössische Pflanzenschutzdienst (EPSD), der vom Fachbereich gemeinsam mit der Sektion Waldschutz und Waldgesundheit des Bundesamts für Umwelt (BAFU) geführt wird, ist für die Umsetzung dieser Aufgabe auf nationaler Ebene zuständig.  
+        """@de,
+        """  
+        The task of the Plant Health Division (FBPG) is to prevent the introduction and spread of (regulated) particularly dangerous plant pests and diseases.  
+        This is important to avoid economic, social, and environmental damage.  
+        The Swiss Plant Protection Service (EPSD), managed jointly by the division and the Forest Protection and Health Section of the Federal Office for the Environment (FOEN), is responsible for implementing this task at the national level.  
+        """@en,
+        """  
+        La mission du secteur santé des végétaux (FBPG) est d'éviter l'introduction et la propagation de ravageurs et de maladies des plantes particulièrement dangereux (réglementés).  
+        Cela est essentiel pour prévenir des dommages économiques, sociaux et environnementaux.  
+        Le Service fédéral de la protection des végétaux (EPSD), géré conjointement par le secteur et la section Protection et santé des forêts de l'Office fédéral de l'environnement (OFEV), est responsable de la mise en œuvre de cette mission au niveau national.  
+        """@fr,
+        """  
+        Il compito del settore salute delle piante (FBPG) è prevenire l'introduzione e la diffusione di parassiti e malattie delle piante particolarmente pericolosi (regolamentati).  
+        Questo è fondamentale per evitare danni economici, sociali e ambientali.  
+        Il Servizio fitosanitario federale (EPSD), gestito congiuntamente dal settore e dalla Sezione protezione e salute delle foreste dell'Ufficio federale dell'ambiente (UFAM), è responsabile dell'attuazione di questo compito a livello nazionale.  
+        """@it ;
+    schema:name "Fachbereich Pflanzengesundheit"@de,
+        "Plant Health Division"@en,
+        "Secteur santé des végétaux"@fr,
+        "Settore salute delle piante"@it ;
     schema:parentOrganization systemmap:ORG005 ;
-    rdfs:comment "Die Aufgabe des Fachbereiches Pflanzengesundheit (FBPG) ist es, die Einschleppung und Ausbreitung von (geregelten) besonders gefährlichen Schädlingen und Krankheiten von Pflanzen zu vermeiden. Dies ist wichtig, um wirtschaftliche, soziale und ökologische Schäden zu vermeiden. Der Eidgenössische Pflanzenschutzdienst (EPSD), der vom Fachbereich gemeinsam mit der Sektion Waldschutz und Waldgesundheit des Bundesamts für Umwelt (BAFU) geführt wird, ist für die Umsetzung dieser Aufgabe auf nationaler Ebene zuständig."@de ;
-    systemmap:abbreviation "FBPG"@de ;
+    rdfs:comment """  
+        Die Aufgabe des Fachbereiches Pflanzengesundheit (FBPG) ist es, die Einschleppung und Ausbreitung von (geregelten) besonders gefährlichen Schädlingen und Krankheiten von Pflanzen zu vermeiden.  
+        Dies ist wichtig, um wirtschaftliche, soziale und ökologische Schäden zu vermeiden.  
+        Der Eidgenössische Pflanzenschutzdienst (EPSD), der vom Fachbereich gemeinsam mit der Sektion Waldschutz und Waldgesundheit des Bundesamts für Umwelt (BAFU) geführt wird, ist für die Umsetzung dieser Aufgabe auf nationaler Ebene zuständig.  
+        """@de,
+        """  
+        The task of the Plant Health Division (FBPG) is to prevent the introduction and spread of (regulated) particularly dangerous plant pests and diseases.  
+        This is important to avoid economic, social, and environmental damage.  
+        The Swiss Plant Protection Service (EPSD), managed jointly by the division and the Forest Protection and Health Section of the Federal Office for the Environment (FOEN), is responsible for implementing this task at the national level.  
+        """@en,
+        """  
+        La mission du secteur santé des végétaux (FBPG) est d'éviter l'introduction et la propagation de ravageurs et de maladies des plantes particulièrement dangereux (réglementés).  
+        Cela est essentiel pour prévenir des dommages économiques, sociaux et environnementaux.  
+        Le Service fédéral de la protection des végétaux (EPSD), géré conjointement par le secteur et la section Protection et santé des forêts de l'Office fédéral de l'environnement (OFEV), est responsable de la mise en œuvre de cette mission au niveau national.  
+        """@fr,
+        """  
+        Il compito del settore salute delle piante (FBPG) è prevenire l'introduzione e la diffusione di parassiti e malattie delle piante particolarmente pericolosi (regolamentati).  
+        Questo è fondamentale per evitare danni economici, sociali e ambientali.  
+        Il Servizio fitosanitario federale (EPSD), gestito congiuntamente dal settore e dalla Sezione protezione e salute delle foreste dell'Ufficio federale dell'ambiente (UFAM), è responsabile dell'attuazione di questo compito a livello nazionale.  
+        """@it ;
+    systemmap:abbreviation "FBPG"@de,
+        "FBPG"@en,
+        "FBPG"@fr,
+        "FBPG"@it ;
     systemmap:operates systemmap:SYS005 .
 
 systemmap:ORG032 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
-    rdfs:label "Fachbereich nachhaltiger Pflanzenschutz und Sorten"@de ;
-    schema:description "Der Fachbereich nachhaltiger Pflanzenschutz und Sorten (FB NPS) sorgt für den Schutz der Kulturen, den Vollzug des Saatgutrechtes und den Sortenschutz. Dabei werden sowohl präventive als auch direkte Pflanzenschutzmassnahmen angewendet, um hochwertige Lebensmittel zu produzieren. Zudem ist das BLW für die Weiterentwicklung der Verordnungen zu Vermehrungsmaterial, den Nationalen Sortenkatalog und den Vollzug der Bestimmungen in Zusammenarbeit mit Agroscope verantwortlich."@de ;
-    schema:name "Fachbereich nachhaltiger Pflanzenschutz und Sorten"@de ;
+    rdfs:label "Fachbereich nachhaltiger Pflanzenschutz und Sorten"@de,
+        "Sustainable Plant Protection and Varieties Division"@en,
+        "Secteur protection durable des végétaux et variétés"@fr,
+        "Settore protezione sostenibile delle piante e varietà"@it ;
+    schema:description """  
+        Der Fachbereich nachhaltiger Pflanzenschutz und Sorten (FB NPS) sorgt für den Schutz der Kulturen, den Vollzug des Saatgutrechtes und den Sortenschutz.  
+        Dabei werden sowohl präventive als auch direkte Pflanzenschutzmassnahmen angewendet, um hochwertige Lebensmittel zu produzieren.  
+        Zudem ist das BLW für die Weiterentwicklung der Verordnungen zu Vermehrungsmaterial, den Nationalen Sortenkatalog und den Vollzug der Bestimmungen in Zusammenarbeit mit Agroscope verantwortlich.  
+        """@de,
+        """  
+        The Sustainable Plant Protection and Varieties Division (FBNPS) ensures crop protection, enforces seed law, and manages variety protection.  
+        Both preventive and direct plant protection measures are applied to produce high-quality food.  
+        Additionally, the FOAG is responsible for developing regulations on propagation material, maintaining the National Variety Catalogue, and enforcing regulations in collaboration with Agroscope.  
+        """@en,
+        """  
+        Le secteur protection durable des végétaux et variétés (FBNPS) assure la protection des cultures, l'application du droit des semences et la protection des variétés.  
+        Des mesures de protection des plantes, tant préventives que directes, sont mises en œuvre pour produire des denrées alimentaires de haute qualité.  
+        De plus, l'OFAG est responsable du développement des réglementations sur le matériel de multiplication, du catalogue national des variétés et de l'application des dispositions en collaboration avec Agroscope.  
+        """@fr,
+        """  
+        Il settore protezione sostenibile delle piante e varietà (FBNPS) garantisce la protezione delle colture, l'applicazione della legislazione sulle sementi e la tutela delle varietà.  
+        Vengono applicate misure di protezione delle piante sia preventive che dirette per produrre alimenti di alta qualità.  
+        Inoltre, l'UFAG è responsabile dello sviluppo delle normative sul materiale di propagazione, del catalogo nazionale delle varietà e dell'applicazione delle disposizioni in collaborazione con Agroscope.  
+        """@it ;
+    schema:name "Fachbereich nachhaltiger Pflanzenschutz und Sorten"@de,
+        "Sustainable Plant Protection and Varieties Division"@en,
+        "Secteur protection durable des végétaux et variétés"@fr,
+        "Settore protezione sostenibile delle piante e varietà"@it ;
     schema:parentOrganization systemmap:ORG005 ;
-    rdfs:comment "Der Fachbereich nachhaltiger Pflanzenschutz und Sorten (FB NPS) sorgt für den Schutz der Kulturen, den Vollzug des Saatgutrechtes und den Sortenschutz. Dabei werden sowohl präventive als auch direkte Pflanzenschutzmassnahmen angewendet, um hochwertige Lebensmittel zu produzieren. Zudem ist das BLW für die Weiterentwicklung der Verordnungen zu Vermehrungsmaterial, den Nationalen Sortenkatalog und den Vollzug der Bestimmungen in Zusammenarbeit mit Agroscope verantwortlich."@de ;
-    systemmap:abbreviation "FBNPS"@de ;
+    rdfs:comment """  
+        Der Fachbereich nachhaltiger Pflanzenschutz und Sorten (FB NPS) sorgt für den Schutz der Kulturen, den Vollzug des Saatgutrechtes und den Sortenschutz.  
+        Dabei werden sowohl präventive als auch direkte Pflanzenschutzmassnahmen angewendet, um hochwertige Lebensmittel zu produzieren.  
+        Zudem ist das BLW für die Weiterentwicklung der Verordnungen zu Vermehrungsmaterial, den Nationalen Sortenkatalog und den Vollzug der Bestimmungen in Zusammenarbeit mit Agroscope verantwortlich.  
+        """@de,
+        """  
+        The Sustainable Plant Protection and Varieties Division (FBNPS) ensures crop protection, enforces seed law, and manages variety protection.  
+        Both preventive and direct plant protection measures are applied to produce high-quality food.  
+        Additionally, the FOAG is responsible for developing regulations on propagation material, maintaining the National Variety Catalogue, and enforcing regulations in collaboration with Agroscope.  
+        """@en,
+        """  
+        Le secteur protection durable des végétaux et variétés (FBNPS) assure la protection des cultures, l'application du droit des semences et la protection des variétés.  
+        Des mesures de protection des plantes, tant préventives que directes, sont mises en œuvre pour produire des denrées alimentaires de haute qualité.  
+        De plus, l'OFAG est responsable du développement des réglementations sur le matériel de multiplication, du catalogue national des variétés et de l'application des dispositions en collaboration avec Agroscope.  
+        """@fr,
+        """  
+        Il settore protezione sostenibile delle piante e varietà (FBNPS) garantisce la protezione delle colture, l'applicazione della legislazione sulle sementi e la tutela delle varietà.  
+        Vengono applicate misure di protezione delle piante sia preventive che dirette per produrre alimenti di alta qualità.  
+        Inoltre, l'UFAG è responsabile dello sviluppo delle normative sul materiale di propagazione, del catalogo nazionale delle varietà e dell'applicazione delle disposizioni in collaborazione con Agroscope.  
+        """@it ;
+    systemmap:abbreviation "FBNPS"@de,
+        "FBNPS"@en,
+        "FBNPS"@fr,
+        "FBNPS"@it ;
     systemmap:operates systemmap:SYS011 .
 
 systemmap:ORG040 a schema:GovernmentOrganization,
@@ -553,16 +806,50 @@ systemmap:ORG210 a schema:GovernmentOrganization,
         "Federal Office for Customs and Border Security"@en,
         "Office fédéral de la douane et de la sécurité des frontières"@fr,
         "Ufficio federale della dogana e della sicurezza dei confini"@it ;
-    schema:description """
-        Das Bundesamt für Zoll und Grenzsicherheit ist mit über 4000 Mitarbeitenden die grösste Verwaltungseinheit des Finanzdepartements.
-        """@de ;
+    schema:description """  
+        Das Bundesamt für Zoll und Grenzsicherheit ist mit über 4000 Mitarbeitenden die grösste Verwaltungseinheit des Finanzdepartements.  
+        Die BAZG-Fachleute prüfen, ob die Güter korrekt angemeldet sind, setzen Steuern und Abgaben fest und sorgen für die Einhaltung zahlreicher Bestimmungen zum Schutz der Bevölkerung und Wirtschaft.  
+        Zusammen mit in- und ausländischen Partnerbehörden erfüllt das BAZG ebenfalls Aufgaben im Bereich Sicherheit und Migration sowohl im Grenzraum als auch im Bahnverkehr und an Flughäfen.  
+        """@de,
+        """  
+        The Federal Office for Customs and Border Security is the largest administrative unit of the Ministry of Finance, with over 4,000 employees.  
+        FOCBS experts check whether goods are properly declared, determine taxes and duties, and ensure compliance with numerous regulations to protect the population and economy.  
+        Together with national and international partner authorities, FOCBS also carries out security and migration-related tasks at borders, in rail transport, and at airports.  
+        """@en,
+        """  
+        L'Office fédéral de la douane et de la sécurité des frontières est la plus grande unité administrative du Département des finances, avec plus de 4 000 employés.  
+        Les experts de l'OFDF vérifient si les marchandises sont correctement déclarées, déterminent les taxes et redevances et veillent au respect de nombreuses réglementations visant à protéger la population et l'économie.  
+        En collaboration avec des autorités partenaires nationales et étrangères, l'OFDF remplit également des missions de sécurité et de migration aux frontières, dans le transport ferroviaire et dans les aéroports.  
+        """@fr,
+        """  
+        L'Ufficio federale della dogana e della sicurezza dei confini è la più grande unità amministrativa del Dipartimento delle finanze, con oltre 4.000 dipendenti.  
+        Gli esperti dell'UDSC verificano che le merci siano dichiarate correttamente, stabiliscono imposte e tasse e garantiscono il rispetto di numerose normative per proteggere la popolazione e l'economia.  
+        In collaborazione con autorità partner nazionali e internazionali, l'UDSC svolge anche compiti in materia di sicurezza e migrazione alle frontiere, nel trasporto ferroviario e negli aeroporti.  
+        """@it ;
     schema:name "Bundesamt für Zoll und Grenzsicherheit"@de,
         "Federal Office for Customs and Border Security"@en,
         "Office fédéral de la douane et de la sécurité des frontières"@fr,
         "Ufficio federale della dogana e della sicurezza dei confini"@it ;
-    rdfs:comment """
-        Das Bundesamt für Zoll und Grenzsicherheit ist mit über 4000 Mitarbeitenden die grösste Verwaltungseinheit des Finanzdepartements.
-        """@de ;
+    rdfs:comment """  
+        Das Bundesamt für Zoll und Grenzsicherheit ist mit über 4000 Mitarbeitenden die grösste Verwaltungseinheit des Finanzdepartements.  
+        Die BAZG-Fachleute prüfen, ob die Güter korrekt angemeldet sind, setzen Steuern und Abgaben fest und sorgen für die Einhaltung zahlreicher Bestimmungen zum Schutz der Bevölkerung und Wirtschaft.  
+        Zusammen mit in- und ausländischen Partnerbehörden erfüllt das BAZG ebenfalls Aufgaben im Bereich Sicherheit und Migration sowohl im Grenzraum als auch im Bahnverkehr und an Flughäfen.  
+        """@de,
+        """  
+        The Federal Office for Customs and Border Security is the largest administrative unit of the Ministry of Finance, with over 4,000 employees.  
+        FOCBS experts check whether goods are properly declared, determine taxes and duties, and ensure compliance with numerous regulations to protect the population and economy.  
+        Together with national and international partner authorities, FOCBS also carries out security and migration-related tasks at borders, in rail transport, and at airports.  
+        """@en,
+        """  
+        L'Office fédéral de la douane et de la sécurité des frontières est la plus grande unité administrative du Département des finances, avec plus de 4 000 employés.  
+        Les experts de l'OFDF vérifient si les marchandises sont correctement déclarées, déterminent les taxes et redevances et veillent au respect de nombreuses réglementations visant à protéger la population et l'économie.  
+        En collaboration avec des autorités partenaires nationales et étrangères, l'OFDF remplit également des missions de sécurité et de migration aux frontières, dans le transport ferroviaire et dans les aéroports.  
+        """@fr,
+        """  
+        L'Ufficio federale della dogana e della sicurezza dei confini è la più grande unità amministrativa del Dipartimento delle finanze, con oltre 4.000 dipendenti.  
+        Gli esperti dell'UDSC verificano che le merci siano dichiarate correttamente, stabiliscono imposte e tasse e garantiscono il rispetto di numerose normative per proteggere la popolazione e l'economia.  
+        In collaborazione con autorità partner nazionali e internazionali, l'UDSC svolge anche compiti in materia di sicurezza e migrazione alle frontiere, nel trasporto ferroviario e negli aeroporti.  
+        """@it ;
     owl:sameAs staatskalender:10008659 ;
     systemmap:abbreviation "BAZG"@de,
         "FOCBS"@en,
@@ -573,16 +860,55 @@ systemmap:ORG210 a schema:GovernmentOrganization,
 systemmap:ORG211 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
-    rdfs:label "Bundesamt für Lebensmittelsicherheit und Veterinärwesen"@de ;
-    schema:description "Hauptaufgabe des BLV ist es, die Gesundheit und das Wohlbefinden von Mensch und Tier aktiv zu fördern. Die Hauptpfeiler dafür sind beim Menschen Lebensmittelsicherheit und gesunde Ernährung und beim Tier Tierschutz und Tiergesundheit."@de ;
-    schema:name "Bundesamt für Lebensmittelsicherheit und Veterinärwesen"@de ;
+    rdfs:label "Bundesamt für Lebensmittelsicherheit und Veterinärwesen"@de,
+        "Federal Food Safety and Veterinary Office"@en,
+        "Office fédéral de la sécurité alimentaire et des affaires vétérinaires"@fr,
+        "Ufficio federale della sicurezza alimentare e di veterinaria"@it ;
+    schema:description """  
+        Hauptaufgabe des BLV ist es, die Gesundheit und das Wohlbefinden von Mensch und Tier aktiv zu fördern.  
+        Die Hauptpfeiler dafür sind beim Menschen Lebensmittelsicherheit und gesunde Ernährung und beim Tier Tierschutz und Tiergesundheit.  
+        """@de,
+        """  
+        The main task of the FSVO is to actively promote the health and well-being of humans and animals.  
+        The key pillars for this are food safety and healthy nutrition for humans, and animal welfare and health for animals.  
+        """@en,
+        """  
+        La principale mission de l'OSAV est de promouvoir activement la santé et le bien-être des humains et des animaux.  
+        Les piliers essentiels sont la sécurité alimentaire et une alimentation saine pour les humains, ainsi que la protection et la santé des animaux.  
+        """@fr,
+        """  
+        Il compito principale dell'USAV è promuovere attivamente la salute e il benessere di esseri umani e animali.  
+        I pilastri principali sono la sicurezza alimentare e un'alimentazione sana per gli esseri umani, nonché il benessere e la salute degli animali.  
+        """@it ;
+    schema:name "Bundesamt für Lebensmittelsicherheit und Veterinärwesen"@de,
+        "Federal Food Safety and Veterinary Office"@en,
+        "Office fédéral de la sécurité alimentaire et des affaires vétérinaires"@fr,
+        "Ufficio federale della sicurezza alimentare e di veterinaria"@it ;
     schema:subOrganization systemmap:ORG201,
         systemmap:ORG202,
         systemmap:ORG203,
         systemmap:ORG204 ;
-    rdfs:comment "Hauptaufgabe des BLV ist es, die Gesundheit und das Wohlbefinden von Mensch und Tier aktiv zu fördern. Die Hauptpfeiler dafür sind beim Menschen Lebensmittelsicherheit und gesunde Ernährung und beim Tier Tierschutz und Tiergesundheit."@de ;
+    rdfs:comment """  
+        Hauptaufgabe des BLV ist es, die Gesundheit und das Wohlbefinden von Mensch und Tier aktiv zu fördern.  
+        Die Hauptpfeiler dafür sind beim Menschen Lebensmittelsicherheit und gesunde Ernährung und beim Tier Tierschutz und Tiergesundheit.  
+        """@de,
+        """  
+        The main task of the FSVO is to actively promote the health and well-being of humans and animals.  
+        The key pillars for this are food safety and healthy nutrition for humans, and animal welfare and health for animals.  
+        """@en,
+        """  
+        La principale mission de l'OSAV est de promouvoir activement la santé et le bien-être des humains et des animaux.  
+        Les piliers essentiels sont la sécurité alimentaire et une alimentation saine pour les humains, ainsi que la protection et la santé des animaux.  
+        """@fr,
+        """  
+        Il compito principale dell'USAV è promuovere attivamente la salute e il benessere di esseri umani e animali.  
+        I pilastri principali sono la sicurezza alimentare e un'alimentazione sana per gli esseri umani, nonché il benessere e la salute degli animali.  
+        """@it ;
     owl:sameAs staatskalender:10008671 ;
-    systemmap:abbreviation "BLV"@de .
+    systemmap:abbreviation "BLV"@de,
+        "FSVO"@en,
+        "OSAV"@fr,
+        "USAV"@it .
 
 systemmap:ORG212 a schema:GovernmentOrganization,
         schema:Organization,
@@ -1416,6 +1742,48 @@ systemmap:ORG338 a schema:GovernmentOrganization,
     schema:name "Koordinationsstelle für das Adress- und Betriebsregister"@de ;
     schema:parentOrganization systemmap:ORG337 .
 
+<https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> a schema:Legislation .
+
+<https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_c> a schema:Legislation ;
+    rdfs:label "Art. 165c LwG"@de,
+        "Art. 165c AgricA"@en,
+        "Art. 165c LAgr"@fr,
+        "Art. 165c LAgr"@it ;
+    schema:name "Art. 165c LwG"@de,
+        "Art. 165c AgricA"@en,
+        "Art. 165c LAgr"@fr,
+        "Art. 165c LAgr"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_d> a schema:Legislation ;
+    rdfs:label "Art. 165d LwG"@de,
+        "Art. 165d AgricA"@en,
+        "Art. 165d LAgr"@fr,
+        "Art. 165d LAgr"@it ;
+    schema:name "Art. 165d LwG"@de,
+        "Art. 165d AgricA"@en,
+        "Art. 165d LAgr"@fr,
+        "Art. 165d LAgr"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_f> a schema:Legislation ;
+    rdfs:label "Art. 165f LwG"@de,
+        "Art. 165f AgricA"@en,
+        "Art. 165f LAgr"@fr,
+        "Art. 165f LAgr"@it ;
+    schema:name "Art. 165f LwG"@de,
+        "Art. 165f AgricA"@en,
+        "Art. 165f LAgr"@fr,
+        "Art. 165f LAgr"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_f_bis> a schema:Legislation ;
+    rdfs:label "Art. 165f bis LwG"@de,
+        "Art. 165f bis AgricA"@en,
+        "Art. 165f bis LAgr"@fr,
+        "Art. 165f bis LAgr"@it ;
+    schema:name "Art. 165f bis LwG"@de,
+        "Art. 165f bis AgricA"@en,
+        "Art. 165f bis LAgr"@fr,
+        "Art. 165f bis LAgr"@it .
+
 <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_27> a schema:Legislation ;
     rdfs:label "Art. 27 LwG"@de,
         "Art. 27 AgricA"@en,
@@ -1426,17 +1794,41 @@ systemmap:ORG338 a schema:GovernmentOrganization,
         "Art. 27 LAgr"@fr,
         "Art. 27 LAgr"@it .
 
+<https://www.fedlex.admin.ch/eli/cc/1998/3244_3244_3244> a schema:Legislation ;
+    rdfs:label "Verordnung über die Ein- und Ausfuhr von Gemüse, Obst und Gartenbauerzeugnissen (VEAGOG)"@de ;
+    schema:name "Verordnung über die Ein- und Ausfuhr von Gemüse, Obst und Gartenbauerzeugnissen (VEAGOG)"@de .
+
 <https://www.fedlex.admin.ch/eli/cc/1999/71> a schema:Legislation ;
     rdfs:label "Verordnung über die Marktbeobachtung im Landwirtschaftsbereich"@de,
+        "Ordinance on market observation in the agricultural sector"@en,
         "Ordonnance sur l’observation du marché dans le domaine de l’agriculture"@fr,
         "Ordinanza concernente il monitoraggio del mercato nel settore agricolo"@it ;
     schema:name "Verordnung über die Marktbeobachtung im Landwirtschaftsbereich"@de,
+        "Ordinance on market observation in the agricultural sector"@en,
         "Ordonnance sur l’observation du marché dans le domaine de l’agriculture"@fr,
         "Ordinanza concernente il monitoraggio del mercato nel settore agricolo"@it .
 
+<https://www.fedlex.admin.ch/eli/cc/2003/791> a schema:Legislation ;
+    rdfs:label "Verordnung über den Schlachtvieh- und Fleischmarkt (Schlachtviehverordnung, SV)"@de ;
+    schema:name "Verordnung über den Schlachtvieh- und Fleischmarkt (Schlachtviehverordnung, SV)"@de .
+
 <https://www.fedlex.admin.ch/eli/cc/2010/340> a schema:Legislation ;
-    rdfs:label "Verordnung über das Inverkehrbringen von Pflanzenschutzmitteln (Pflanzenschutzmittelverordnung, PSMV)"@de ;
-    schema:name "Verordnung über das Inverkehrbringen von Pflanzenschutzmitteln (Pflanzenschutzmittelverordnung, PSMV)"@de .
+    rdfs:label "Verordnung über das Inverkehrbringen von Pflanzenschutzmitteln (Pflanzenschutzmittelverordnung, PSMV)"@de,
+        "Ordinance on the placing on the market of plant protection products (Plant Protection Products Ordinance, PPP Ordinance)"@en,
+        "Ordonnance sur la mise en marché des produits phytosanitaires (Ordonnance sur les produits phytosanitaires, OPP)"@fr,
+        "Ordinanza sull'immissione sul mercato dei prodotti fitosanitari (Ordinanza sui prodotti fitosanitari, OPF)"@it ;
+    schema:name "Verordnung über das Inverkehrbringen von Pflanzenschutzmitteln (Pflanzenschutzmittelverordnung, PSMV)"@de,
+        "Ordinance on the placing on the market of plant protection products (Plant Protection Products Ordinance, PPP Ordinance)"@en,
+        "Ordonnance sur la mise en marché des produits phytosanitaires (Ordonnance sur les produits phytosanitaires, OPP)"@fr,
+        "Ordinanza sull'immissione sul mercato dei prodotti fitosanitari (Ordinanza sui prodotti fitosanitari, OPF)"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/2011/770> a schema:Legislation ;
+    rdfs:label "Verordnung über die Einfuhr von landwirtschaftlichen Erzeugnissen (Agrareinfuhrverordnung, AEV)"@de ;
+    schema:name "Verordnung über die Einfuhr von landwirtschaftlichen Erzeugnissen (Agrareinfuhrverordnung, AEV)"@de .
+
+<https://www.fedlex.admin.ch/eli/cc/2016/565> a schema:Legislation ;
+    rdfs:label "Verordnung des BLW über die Festlegung von Perioden und Fristen sowie die Freigabe von Zollkontingentsteilmengen für die Einfuhr von frischem Gemüse und frischem Obst (VEAGOG-Freigabeverordnung)"@de ;
+    schema:name "Verordnung des BLW über die Festlegung von Perioden und Fristen sowie die Freigabe von Zollkontingentsteilmengen für die Einfuhr von frischem Gemüse und frischem Obst (VEAGOG-Freigabeverordnung)"@de .
 
 systemmap:ORG099 a schema:Organization ;
     rdfs:label "Gemeinsame Anmeldestelle Chemikalien"@de,
@@ -1490,18 +1882,58 @@ systemmap:ORG100 a schema:Organization,
         "TSM Treuhand LLC"@en,
         "TSM Treuhand S. à r. l."@fr,
         "TSM Fiduciaria S. a g. l."@it ;
-    schema:description "Die TSM Treuhand GmbH erfüllt unterschiedliche öffentlich- und privatrechtliche Aufträge in der Agrar- und Lebensmittelbranche. TSM steht für Treuhand, Statistik und Management. Die Haupttätigkeit der TSM besteht in der Verwaltung der Datenbank dbmilch.ch. Zudem werden weitere Aufträge im Bereich Treuhand, Fondsverwaltungen, Statistiken und Exportkontrollen durchgeführt. Der Hauptauftraggeber der TSM ist das Bundesamt für Landwirtschaft (BLW)."@de,
-        "TSM Treuhand LLC carries out various public and private law mandates in the agricultural and food sector. TSM stands for Trust, Statistics, and Management. The main activity of TSM is the management of the dbmilch.ch database. In addition, further assignments in the areas of fiduciary services, fund management, statistics, and export controls are carried out. The main client of TSM is the Federal Office for Agriculture (BLW)."@en,
-        "TSM Fiduciaire S. à r. l. remplit divers mandats de droit public et privé dans le secteur agricole et alimentaire. TSM signifie Fiduciaire, Statistique et Management. L'activité principale de TSM est la gestion de la base de données dbmilch.ch. En outre, d'autres missions sont effectuées dans les domaines de la fiducie, de la gestion de fonds, des statistiques et des contrôles à l'exportation. Le principal client de TSM est l'Office fédéral de l'agriculture (OFAG)."@fr,
-        "TSM Treuhand GmbH svolge diversi mandati di diritto pubblico e privato nel settore agricolo e alimentare. TSM sta per Fiduciario, Statistica e Management. L'attività principale di TSM è la gestione del database dbmilch.ch. Inoltre, vengono svolti altri incarichi nei settori della fiduciaria, della gestione dei fondi, delle statistiche e dei controlli all'esportazione. Il principale committente di TSM è l'Ufficio federale dell'agricoltura (UFAG)."@it ;
+    schema:description """
+        Die TSM Treuhand GmbH erfüllt unterschiedliche öffentlich- und privatrechtliche Aufträge in der Agrar- und Lebensmittelbranche.
+        TSM steht für Treuhand, Statistik und Management. Die Haupttätigkeit der TSM besteht in der Verwaltung der Datenbank dbmilch.ch.
+        Zudem werden weitere Aufträge im Bereich Treuhand, Fondsverwaltungen, Statistiken und Exportkontrollen durchgeführt.
+        Der Hauptauftraggeber der TSM ist das Bundesamt für Landwirtschaft (BLW).
+        """@de,
+        """
+        TSM Treuhand LLC carries out various public and private law mandates in the agricultural and food sector.
+        TSM stands for Trust, Statistics, and Management. The main activity of TSM is the management of the dbmilch.ch database.
+        In addition, further assignments in the areas of fiduciary services, fund management, statistics, and export controls are carried out.
+        The main client of TSM is the Federal Office for Agriculture (BLW).
+        """@en,
+        """
+        TSM Fiduciaire S. à r. l. remplit divers mandats de droit public et privé dans le secteur agricole et alimentaire.
+        TSM signifie Fiduciaire, Statistique et Management. L'activité principale de TSM est la gestion de la base de données dbmilch.ch.
+        En outre, d'autres missions sont effectuées dans les domaines de la fiducie, de la gestion de fonds, des statistiques et des contrôles à l'exportation.
+        Le principal client de TSM est l'Office fédéral de l'agriculture (OFAG).
+        """@fr,
+        """
+        TSM Treuhand GmbH svolge diversi mandati di diritto pubblico e privato nel settore agricolo e alimentare.
+        TSM sta per Fiduciario, Statistica e Management. L'attività principale di TSM è la gestione del database dbmilch.ch.
+        Inoltre, vengono svolti altri incarichi nei settori della fiduciaria, della gestione dei fondi, delle statistiche e dei controlli all'esportazione.
+        Il principale committente di TSM è l'Ufficio federale dell'agricoltura (UFAG).
+        """@it ;
     schema:name "TSM Treuhand GmbH"@de,
         "TSM Treuhand LLC"@en,
         "TSM Treuhand S. à r. l."@fr,
         "TSM Fiduciaria S. a g. l."@it ;
-    rdfs:comment "Die TSM Treuhand GmbH erfüllt unterschiedliche öffentlich- und privatrechtliche Aufträge in der Agrar- und Lebensmittelbranche. TSM steht für Treuhand, Statistik und Management. Die Haupttätigkeit der TSM besteht in der Verwaltung der Datenbank dbmilch.ch. Zudem werden weitere Aufträge im Bereich Treuhand, Fondsverwaltungen, Statistiken und Exportkontrollen durchgeführt. Der Hauptauftraggeber der TSM ist das Bundesamt für Landwirtschaft (BLW)."@de,
-        "TSM Treuhand LLC carries out various public and private law mandates in the agricultural and food sector. TSM stands for Trust, Statistics, and Management. The main activity of TSM is the management of the dbmilch.ch database. In addition, further assignments in the areas of fiduciary services, fund management, statistics, and export controls are carried out. The main client of TSM is the Federal Office for Agriculture (BLW)."@en,
-        "TSM Fiduciaire S. à r. l. remplit divers mandats de droit public et privé dans le secteur agricole et alimentaire. TSM signifie Fiduciaire, Statistique et Management. L'activité principale de TSM est la gestion de la base de données dbmilch.ch. En outre, d'autres missions sont effectuées dans les domaines de la fiducie, de la gestion de fonds, des statistiques et des contrôles à l'exportation. Le principal client de TSM est l'Office fédéral de l'agriculture (OFAG)."@fr,
-        "TSM Treuhand GmbH svolge diversi mandati di diritto pubblico e privato nel settore agricolo e alimentare. TSM sta per Fiduciario, Statistica e Management. L'attività principale di TSM è la gestione del database dbmilch.ch. Inoltre, vengono svolti altri incarichi nei settori della fiduciaria, della gestione dei fondi, delle statistiche e dei controlli all'esportazione. Il principale committente di TSM è l'Ufficio federale dell'agricoltura (UFAG)."@it ;
+    rdfs:comment """
+        Die TSM Treuhand GmbH erfüllt unterschiedliche öffentlich- und privatrechtliche Aufträge in der Agrar- und Lebensmittelbranche.
+        TSM steht für Treuhand, Statistik und Management. Die Haupttätigkeit der TSM besteht in der Verwaltung der Datenbank dbmilch.ch.
+        Zudem werden weitere Aufträge im Bereich Treuhand, Fondsverwaltungen, Statistiken und Exportkontrollen durchgeführt.
+        Der Hauptauftraggeber der TSM ist das Bundesamt für Landwirtschaft (BLW).
+        """@de,
+        """
+        TSM Treuhand LLC carries out various public and private law mandates in the agricultural and food sector.
+        TSM stands for Trust, Statistics, and Management. The main activity of TSM is the management of the dbmilch.ch database.
+        In addition, further assignments in the areas of fiduciary services, fund management, statistics, and export controls are carried out.
+        The main client of TSM is the Federal Office for Agriculture (BLW).
+        """@en,
+        """
+        TSM Fiduciaire S. à r. l. remplit divers mandats de droit public et privé dans le secteur agricole et alimentaire.
+        TSM signifie Fiduciaire, Statistique et Management. L'activité principale de TSM est la gestion de la base de données dbmilch.ch.
+        En outre, d'autres missions sont effectuées dans les domaines de la fiducie, de la gestion de fonds, des statistiques et des contrôles à l'exportation.
+        Le principal client de TSM est l'Office fédéral de l'agriculture (OFAG).
+        """@fr,
+        """
+        TSM Treuhand GmbH svolge diversi mandati di diritto pubblico e privato nel settore agricolo e alimentare.
+        TSM sta per Fiduciario, Statistica e Management. L'attività principale di TSM è la gestione del database dbmilch.ch.
+        Inoltre, vengono svolti altri incarichi nei settori della fiduciaria, della gestione dei fondi, delle statistiche e dei controlli all'esportazione.
+        Il principale committente di TSM è l'Ufficio federale dell'agricoltura (UFAG).
+        """@it ;
     systemmap:operates systemmap:SYS021 .
 
 systemmap:ORG101 a schema:Organization,
@@ -1510,18 +1942,54 @@ systemmap:ORG101 a schema:Organization,
         "Identitas AG"@en,
         "Identitas AG"@fr,
         "Identitas AG"@it ;
-    schema:description "Die Identitas AG entwickelt und betreibt Informationssysteme für die Tierverkehrsdatenbank der Schweiz. Sie stellt Lösungen für die Rückverfolgbarkeit von Tieren, Tiergesundheit und Lebensmittelsicherheit bereit. Als IT-Dienstleister für Bund, Kantone und private Akteure bietet Identitas AG digitale Services zur Erfassung, Verarbeitung und Analyse von Tier- und Betriebsdaten an. Das Unternehmen hat seinen Sitz in Bern."@de,
-        "Identitas AG develops and operates information systems for Switzerland's animal traffic database. It provides solutions for animal traceability, animal health, and food safety. As an IT service provider for the federal government, cantons, and private actors, Identitas AG offers digital services for recording, processing, and analyzing animal and farm data. The company is based in Bern."@en,
-        "Identitas AG développe et exploite des systèmes d'information pour la base de données du trafic des animaux en Suisse. Elle propose des solutions pour la traçabilité des animaux, la santé animale et la sécurité alimentaire. En tant que prestataire de services informatiques pour la Confédération, les cantons et les acteurs privés, Identitas AG fournit des services numériques pour la saisie, le traitement et l'analyse des données animales et agricoles. L'entreprise est basée à Berne."@fr,
-        "Identitas AG sviluppa e gestisce sistemi informativi per la banca dati del traffico degli animali in Svizzera. Fornisce soluzioni per la tracciabilità degli animali, la salute animale e la sicurezza alimentare. In qualità di fornitore di servizi IT per la Confederazione, i cantoni e gli attori privati, Identitas AG offre servizi digitali per la registrazione, l'elaborazione e l'analisi dei dati sugli animali e sulle aziende agricole. L'azienda ha sede a Berna."@it ;
+    schema:description """
+        Die Identitas AG entwickelt und betreibt Informationssysteme für die Tierverkehrsdatenbank der Schweiz.
+        Sie stellt Lösungen für die Rückverfolgbarkeit von Tieren, Tiergesundheit und Lebensmittelsicherheit bereit.
+        Als IT-Dienstleister für Bund, Kantone und private Akteure bietet Identitas AG digitale Services zur Erfassung, Verarbeitung und Analyse von Tier- und Betriebsdaten an.
+        Das Unternehmen hat seinen Sitz in Bern.
+        """@de,
+        """
+        Identitas AG develops and operates information systems for Switzerland's animal traffic database.
+        It provides solutions for animal traceability, animal health, and food safety.
+        As an IT service provider for the federal government, cantons, and private actors, Identitas AG offers digital services for recording, processing, and analyzing animal and farm data.
+        The company is based in Bern."""@en,
+        """
+        Identitas AG développe et exploite des systèmes d'information pour la base de données du trafic des animaux en Suisse.
+        Elle propose des solutions pour la traçabilité des animaux, la santé animale et la sécurité alimentaire.
+        En tant que prestataire de services informatiques pour la Confédération, les cantons et les acteurs privés, Identitas AG fournit des services numériques pour la saisie, le traitement et l'analyse des données animales et agricoles.
+        L'entreprise est basée à Berne."""@fr,
+        """
+        Identitas AG sviluppa e gestisce sistemi informativi per la banca dati del traffico degli animali in Svizzera.
+        Fornisce soluzioni per la tracciabilità degli animali, la salute animale e la sicurezza alimentare.
+        In qualità di fornitore di servizi IT per la Confederazione, i cantoni e gli attori privati, Identitas AG offre servizi digitali per la registrazione, l'elaborazione e l'analisi dei dati sugli animali e sulle aziende agricole.
+        L'azienda ha sede a Berna.
+        """@it ;
     schema:name "Identitas AG"@de,
         "Identitas AG"@en,
         "Identitas AG"@fr,
         "Identitas AG"@it ;
-    rdfs:comment "Die Identitas AG entwickelt und betreibt Informationssysteme für die Tierverkehrsdatenbank der Schweiz. Sie stellt Lösungen für die Rückverfolgbarkeit von Tieren, Tiergesundheit und Lebensmittelsicherheit bereit. Als IT-Dienstleister für Bund, Kantone und private Akteure bietet Identitas AG digitale Services zur Erfassung, Verarbeitung und Analyse von Tier- und Betriebsdaten an. Das Unternehmen hat seinen Sitz in Bern."@de,
-        "Identitas AG develops and operates information systems for Switzerland's animal traffic database. It provides solutions for animal traceability, animal health, and food safety. As an IT service provider for the federal government, cantons, and private actors, Identitas AG offers digital services for recording, processing, and analyzing animal and farm data. The company is based in Bern."@en,
-        "Identitas AG développe et exploite des systèmes d'information pour la base de données du trafic des animaux en Suisse. Elle propose des solutions pour la traçabilité des animaux, la santé animale et la sécurité alimentaire. En tant que prestataire de services informatiques pour la Confédération, les cantons et les acteurs privés, Identitas AG fournit des services numériques pour la saisie, le traitement et l'analyse des données animales et agricoles. L'entreprise est basée à Berne."@fr,
-        "Identitas AG sviluppa e gestisce sistemi informativi per la banca dati del traffico degli animali in Svizzera. Fornisce soluzioni per la tracciabilità degli animali, la salute animale e la sicurezza alimentare. In qualità di fornitore di servizi IT per la Confederazione, i cantoni e gli attori privati, Identitas AG offre servizi digitali per la registrazione, l'elaborazione e l'analisi dei dati sugli animali e sulle aziende agricole. L'azienda ha sede a Berna."@it ;
+    rdfs:comment """
+        Die Identitas AG entwickelt und betreibt Informationssysteme für die Tierverkehrsdatenbank der Schweiz.
+        Sie stellt Lösungen für die Rückverfolgbarkeit von Tieren, Tiergesundheit und Lebensmittelsicherheit bereit.
+        Als IT-Dienstleister für Bund, Kantone und private Akteure bietet Identitas AG digitale Services zur Erfassung, Verarbeitung und Analyse von Tier- und Betriebsdaten an.
+        Das Unternehmen hat seinen Sitz in Bern.
+        """@de,
+        """
+        Identitas AG develops and operates information systems for Switzerland's animal traffic database.
+        It provides solutions for animal traceability, animal health, and food safety.
+        As an IT service provider for the federal government, cantons, and private actors, Identitas AG offers digital services for recording, processing, and analyzing animal and farm data.
+        The company is based in Bern."""@en,
+        """
+        Identitas AG développe et exploite des systèmes d'information pour la base de données du trafic des animaux en Suisse.
+        Elle propose des solutions pour la traçabilité des animaux, la santé animale et la sécurité alimentaire.
+        En tant que prestataire de services informatiques pour la Confédération, les cantons et les acteurs privés, Identitas AG fournit des services numériques pour la saisie, le traitement et l'analyse des données animales et agricoles.
+        L'entreprise est basée à Berne."""@fr,
+        """
+        Identitas AG sviluppa e gestisce sistemi informativi per la banca dati del traffico degli animali in Svizzera.
+        Fornisce soluzioni per la tracciabilità degli animali, la salute animale e la sicurezza alimentare.
+        In qualità di fornitore di servizi IT per la Confederazione, i cantoni e gli attori privati, Identitas AG offre servizi digitali per la registrazione, l'elaborazione e l'analisi dei dati sugli animali e sulle aziende agricole.
+        L'azienda ha sede a Berna.
+        """@it ;
     systemmap:operates systemmap:SYS020 .
 
 systemmap:ORG102 a schema:Organization,
@@ -1530,18 +1998,58 @@ systemmap:ORG102 a schema:Organization,
         "Barto AG"@en,
         "Barto AG"@fr,
         "Barto AG"@it ;
-    schema:description "Die Barto AG entwickelt und betreibt eine digitale Plattform für die Landwirtschaft. Sie bietet Landwirtinnen und Landwirten eine zentrale Lösung zur Betriebsführung, Dokumentation und Analyse von Betriebsdaten. Die Plattform integriert verschiedene agronomische und administrative Funktionen und ermöglicht eine effiziente Verwaltung von Ressourcen. Barto AG arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen. Der Sitz des Unternehmens befindet sich in der Schweiz."@de,
-        "Barto AG develops and operates a digital platform for agriculture. It provides farmers with a central solution for farm management, documentation, and analysis of operational data. The platform integrates various agronomic and administrative functions and enables efficient resource management. Barto AG collaborates with partners in the agricultural sector to provide innovative digital solutions. The company is based in Switzerland."@en,
-        "Barto AG développe et exploite une plateforme numérique pour l'agriculture. Elle offre aux agriculteurs une solution centrale pour la gestion des exploitations, la documentation et l'analyse des données d'exploitation. La plateforme intègre diverses fonctions agronomiques et administratives et permet une gestion efficace des ressources. Barto AG collabore avec des partenaires du secteur agricole pour proposer des solutions numériques innovantes. L'entreprise est basée en Suisse."@fr,
-        "Barto AG sviluppa e gestisce una piattaforma digitale per l'agricoltura. Fornisce agli agricoltori una soluzione centrale per la gestione aziendale, la documentazione e l'analisi dei dati operativi. La piattaforma integra varie funzioni agronomiche e amministrative e consente una gestione efficiente delle risorse. Barto AG collabora con partner del settore agricolo per fornire soluzioni digitali innovative. L'azienda ha sede in Svizzera."@it ;
+    schema:description """
+        Die Barto AG entwickelt und betreibt eine digitale Plattform für die Landwirtschaft.
+        Sie bietet Landwirtinnen und Landwirten eine zentrale Lösung zur Betriebsführung, Dokumentation und Analyse von Betriebsdaten.
+        Die Plattform integriert verschiedene agronomische und administrative Funktionen und ermöglicht eine effiziente Verwaltung von Ressourcen.
+        Barto AG arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen.
+        """@de,
+        """
+        Barto AG develops and operates a digital platform for agriculture.
+        It provides farmers with a central solution for farm management, documentation, and analysis of operational data.
+        The platform integrates various agronomic and administrative functions and enables efficient resource management.
+        Barto AG collaborates with partners in the agricultural sector to provide innovative digital solutions.
+        """@en,
+        """
+        Barto AG développe et exploite une plateforme numérique pour l'agriculture.
+        Elle offre aux agriculteurs une solution centrale pour la gestion des exploitations, la documentation et l'analyse des données d'exploitation.
+        La plateforme intègre diverses fonctions agronomiques et administratives et permet une gestion efficace des ressources.
+        Barto AG collabore avec des partenaires du secteur agricole pour proposer des solutions numériques innovantes.
+        """@fr,
+        """
+        Barto AG sviluppa e gestisce una piattaforma digitale per l'agricoltura.
+        Fornisce agli agricoltori una soluzione centrale per la gestione aziendale, la documentazione e l'analisi dei dati operativi
+        La piattaforma integra varie funzioni agronomiche e amministrative e consente una gestione efficiente delle risorse.
+        Barto AG collabora con partner del settore agricolo per fornire soluzioni digitali innovative.
+        """@it ;
     schema:name "Barto AG"@de,
         "Barto AG"@en,
         "Barto AG"@fr,
         "Barto AG"@it ;
-    rdfs:comment "Die Barto AG entwickelt und betreibt eine digitale Plattform für die Landwirtschaft. Sie bietet Landwirtinnen und Landwirten eine zentrale Lösung zur Betriebsführung, Dokumentation und Analyse von Betriebsdaten. Die Plattform integriert verschiedene agronomische und administrative Funktionen und ermöglicht eine effiziente Verwaltung von Ressourcen. Barto AG arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen. Der Sitz des Unternehmens befindet sich in der Schweiz."@de,
-        "Barto AG develops and operates a digital platform for agriculture. It provides farmers with a central solution for farm management, documentation, and analysis of operational data. The platform integrates various agronomic and administrative functions and enables efficient resource management. Barto AG collaborates with partners in the agricultural sector to provide innovative digital solutions. The company is based in Switzerland."@en,
-        "Barto AG développe et exploite une plateforme numérique pour l'agriculture. Elle offre aux agriculteurs une solution centrale pour la gestion des exploitations, la documentation et l'analyse des données d'exploitation. La plateforme intègre diverses fonctions agronomiques et administratives et permet une gestion efficace des ressources. Barto AG collabore avec des partenaires du secteur agricole pour proposer des solutions numériques innovantes. L'entreprise est basée en Suisse."@fr,
-        "Barto AG sviluppa e gestisce una piattaforma digitale per l'agricoltura. Fornisce agli agricoltori una soluzione centrale per la gestione aziendale, la documentazione e l'analisi dei dati operativi. La piattaforma integra varie funzioni agronomiche e amministrative e consente una gestione efficiente delle risorse. Barto AG collabora con partner del settore agricolo per fornire soluzioni digitali innovative. L'azienda ha sede in Svizzera."@it ;
+    rdfs:comment """
+        Die Barto AG entwickelt und betreibt eine digitale Plattform für die Landwirtschaft.
+        Sie bietet Landwirtinnen und Landwirten eine zentrale Lösung zur Betriebsführung, Dokumentation und Analyse von Betriebsdaten.
+        Die Plattform integriert verschiedene agronomische und administrative Funktionen und ermöglicht eine effiziente Verwaltung von Ressourcen.
+        Barto AG arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen.
+        """@de,
+        """
+        Barto AG develops and operates a digital platform for agriculture.
+        It provides farmers with a central solution for farm management, documentation, and analysis of operational data.
+        The platform integrates various agronomic and administrative functions and enables efficient resource management.
+        Barto AG collaborates with partners in the agricultural sector to provide innovative digital solutions.
+        """@en,
+        """
+        Barto AG développe et exploite une plateforme numérique pour l'agriculture.
+        Elle offre aux agriculteurs une solution centrale pour la gestion des exploitations, la documentation et l'analyse des données d'exploitation.
+        La plateforme intègre diverses fonctions agronomiques et administratives et permet une gestion efficace des ressources.
+        Barto AG collabore avec des partenaires du secteur agricole pour proposer des solutions numériques innovantes.
+        """@fr,
+        """
+        Barto AG sviluppa e gestisce una piattaforma digitale per l'agricoltura.
+        Fornisce agli agricoltori una soluzione centrale per la gestione aziendale, la documentazione e l'analisi dei dati operativi
+        La piattaforma integra varie funzioni agronomiche e amministrative e consente una gestione efficiente delle risorse.
+        Barto AG collabora con partner del settore agricolo per fornire soluzioni digitali innovative.
+        """@it ;
     systemmap:operates systemmap:SYS023 ;
     systemmap:ownedBy systemmap:ORG103 .
 
@@ -1551,18 +2059,58 @@ systemmap:ORG103 a schema:Organization,
         "Fenaco Cooperative"@en,
         "Coopérative Fenaco"@fr,
         "Cooperativa Fenaco"@it ;
-    schema:description "Die Fenaco Genossenschaft ist ein schweizerisches Agrarunternehmen, das die Landwirtinnen und Landwirte dabei unterstützt, ihre Betriebe wirtschaftlich erfolgreich zu führen. Sie ist in den Bereichen Agrarhandel, Lebensmittelproduktion, Detailhandel und Energie tätig. Fenaco ist Eigentümerin von Marken wie Landi, Volg, Agrola und diverse Lebensmittelproduzenten. Die Genossenschaft gehört Schweizer Landwirten und hat ihren Hauptsitz in Bern."@de,
-        "The Fenaco Cooperative is a Swiss agricultural company that supports farmers in running their businesses successfully. It operates in the areas of agricultural trade, food production, retail, and energy. Fenaco owns brands such as Landi, Volg, Agrola, and various food producers. The cooperative is owned by Swiss farmers and is headquartered in Bern."@en,
-        "La coopérative Fenaco est une entreprise agricole suisse qui aide les agriculteurs à gérer leurs exploitations avec succès. Elle est active dans les domaines du commerce agricole, de la production alimentaire, du commerce de détail et de l'énergie. Fenaco possède des marques telles que Landi, Volg, Agrola et divers producteurs alimentaires. La coopérative appartient aux agriculteurs suisses et son siège est à Berne."@fr,
-        "La cooperativa Fenaco è un'azienda agricola svizzera che supporta gli agricoltori nella gestione economica delle loro aziende. Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia. Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari. La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna."@it ;
+    schema:description """
+        Die Fenaco Genossenschaft ist ein schweizerisches Agrarunternehmen, das die Landwirtinnen und Landwirte dabei unterstützt, ihre Betriebe wirtschaftlich erfolgreich zu führen.
+        Sie ist in den Bereichen Agrarhandel, Lebensmittelproduktion, Detailhandel und Energie tätig.
+        Fenaco ist Eigentümerin von Marken wie Landi, Volg, Agrola und diverse Lebensmittelproduzenten.
+        Die Genossenschaft gehört Schweizer Landwirten und hat ihren Hauptsitz in Bern.
+        """@de,
+        """
+        The Fenaco Cooperative is a Swiss agricultural company that supports farmers in running their businesses successfully.
+        It operates in the areas of agricultural trade, food production, retail, and energy.
+        Fenaco owns brands such as Landi, Volg, Agrola, and various food producers.
+        The cooperative is owned by Swiss farmers and is headquartered in Bern.
+        """@en,
+        """
+        La coopérative Fenaco est une entreprise agricole suisse qui aide les agriculteurs à gérer leurs exploitations avec succès.
+        Elle est active dans les domaines du commerce agricole, de la production alimentaire, du commerce de détail et de l'énergie.
+        Fenaco possède des marques telles que Landi, Volg, Agrola et divers producteurs alimentaires.
+        La coopérative appartient aux agriculteurs suisses et son siège est à Berne.
+        """@fr,
+        """
+        La cooperativa Fenaco è un'azienda agricola svizzera che supporta gli agricoltori nella gestione economica delle loro aziende.
+        Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia.
+        Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari.
+        La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna.
+        """@it ;
     schema:name "Fenaco Genossenschaft"@de,
         "Fenaco Cooperative"@en,
         "Coopérative Fenaco"@fr,
         "Cooperativa Fenaco"@it ;
-    rdfs:comment "Die Fenaco Genossenschaft ist ein schweizerisches Agrarunternehmen, das die Landwirtinnen und Landwirte dabei unterstützt, ihre Betriebe wirtschaftlich erfolgreich zu führen. Sie ist in den Bereichen Agrarhandel, Lebensmittelproduktion, Detailhandel und Energie tätig. Fenaco ist Eigentümerin von Marken wie Landi, Volg, Agrola und diverse Lebensmittelproduzenten. Die Genossenschaft gehört Schweizer Landwirten und hat ihren Hauptsitz in Bern."@de,
-        "The Fenaco Cooperative is a Swiss agricultural company that supports farmers in running their businesses successfully. It operates in the areas of agricultural trade, food production, retail, and energy. Fenaco owns brands such as Landi, Volg, Agrola, and various food producers. The cooperative is owned by Swiss farmers and is headquartered in Bern."@en,
-        "La coopérative Fenaco est une entreprise agricole suisse qui aide les agriculteurs à gérer leurs exploitations avec succès. Elle est active dans les domaines du commerce agricole, de la production alimentaire, du commerce de détail et de l'énergie. Fenaco possède des marques telles que Landi, Volg, Agrola et divers producteurs alimentaires. La coopérative appartient aux agriculteurs suisses et son siège est à Berne."@fr,
-        "La cooperativa Fenaco è un'azienda agricola svizzera che supporta gli agricoltori nella gestione economica delle loro aziende. Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia. Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari. La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna."@it ;
+    rdfs:comment """
+        Die Fenaco Genossenschaft ist ein schweizerisches Agrarunternehmen, das die Landwirtinnen und Landwirte dabei unterstützt, ihre Betriebe wirtschaftlich erfolgreich zu führen.
+        Sie ist in den Bereichen Agrarhandel, Lebensmittelproduktion, Detailhandel und Energie tätig.
+        Fenaco ist Eigentümerin von Marken wie Landi, Volg, Agrola und diverse Lebensmittelproduzenten.
+        Die Genossenschaft gehört Schweizer Landwirten und hat ihren Hauptsitz in Bern.
+        """@de,
+        """
+        The Fenaco Cooperative is a Swiss agricultural company that supports farmers in running their businesses successfully.
+        It operates in the areas of agricultural trade, food production, retail, and energy.
+        Fenaco owns brands such as Landi, Volg, Agrola, and various food producers.
+        The cooperative is owned by Swiss farmers and is headquartered in Bern.
+        """@en,
+        """
+        La coopérative Fenaco est une entreprise agricole suisse qui aide les agriculteurs à gérer leurs exploitations avec succès.
+        Elle est active dans les domaines du commerce agricole, de la production alimentaire, du commerce de détail et de l'énergie.
+        Fenaco possède des marques telles que Landi, Volg, Agrola et divers producteurs alimentaires.
+        La coopérative appartient aux agriculteurs suisses et son siège est à Berne.
+        """@fr,
+        """
+        La cooperativa Fenaco è un'azienda agricola svizzera che supporta gli agricoltori nella gestione economica delle loro aziende.
+        Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia.
+        Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari.
+        La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna.
+        """@it ;
     systemmap:owns systemmap:ORG102 .
 
 systemmap:ORG200 a schema:Organization ;
@@ -1575,9 +2123,14 @@ systemmap:ORG200 a schema:Organization ;
         Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen.
         """@de,
         """The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland.
-        It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society."""@en,
-        "L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse. Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société."@fr,
-        "L'Unione internazionale per la protezione delle nuove varietà vegetali (UPOV) è un'organizzazione intergovernativa con sede a Ginevra, in Svizzera. È stata fondata nel 1961 e mira a promuovere un sistema efficace per la protezione del miglioramento genetico delle piante, al fine di sostenere lo sviluppo di nuove varietà vegetali a beneficio della società."@it ;
+        It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society.
+        """@en,
+        """L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse.
+        Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société.
+        """@fr,
+        """L'Unione internazionale per la protezione delle nuove varietà vegetali (UPOV) è un'organizzazione intergovernativa con sede a Ginevra, in Svizzera.
+        È stata fondata nel 1961 e mira a promuovere un sistema efficace per la protezione del miglioramento genetico delle piante, al fine di sostenere lo sviluppo di nuove varietà vegetali a beneficio della società.
+        """@it ;
     schema:name "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
         "International Union for the Protection of New Varieties of Plants"@en,
         "Union internationale pour la protection des obtentions végétales"@fr,
@@ -1587,9 +2140,14 @@ systemmap:ORG200 a schema:Organization ;
         Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen.
         """@de,
         """The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland.
-        It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society."""@en,
-        "L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse. Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société."@fr,
-        "L'Unione internazionale per la protezione delle nuove varietà vegetali (UPOV) è un'organizzazione intergovernativa con sede a Ginevra, in Svizzera. È stata fondata nel 1961 e mira a promuovere un sistema efficace per la protezione del miglioramento genetico delle piante, al fine di sostenere lo sviluppo di nuove varietà vegetali a beneficio della società."@it ;
+        It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society.
+        """@en,
+        """L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse.
+        Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société.
+        """@fr,
+        """L'Unione internazionale per la protezione delle nuove varietà vegetali (UPOV) è un'organizzazione intergovernativa con sede a Ginevra, in Svizzera.
+        È stata fondata nel 1961 e mira a promuovere un sistema efficace per la protezione del miglioramento genetico delle piante, al fine di sostenere lo sviluppo di nuove varietà vegetali a beneficio della società.
+        """@it ;
     systemmap:abbreviation "UPOV"@de,
         "UPOV"@en,
         "UPOV"@fr,
@@ -1601,18 +2159,53 @@ systemmap:SYS001 a schema:SoftwareApplication ;
         "Acontrol"@en,
         "Acontrol"@fr,
         "Acontrol"@it ;
-    schema:description "Acontrol ist das Informationssystem des BLW, das für die Planung, Erfassung und Verwaltung landwirtschaftlicher Inspektionen eingesetzt wird. Es vereinfacht die Kontrollprozesse durch eine zentrale Plattform für Dateneingabe und -abfrage. Auf diese Weise wird eine effiziente Überwachung und Einhaltung landwirtschaftlicher Standards gewährleistet."@de,
-        "Acontrol is the information system of the FOAG, used for the planning, recording, and management of agricultural inspections. It simplifies control processes through a central platform for data entry and retrieval. This ensures efficient monitoring and compliance with agricultural standards."@en,
-        "Acontrol est le système d'information de l'OFAG, utilisé pour la planification, l'enregistrement et la gestion des inspections agricoles. Il simplifie les processus de contrôle grâce à une plateforme centrale pour la saisie et la consultation des données. Cela permet d'assurer une surveillance efficace et le respect des normes agricoles."@fr,
-        "Acontrol è il sistema informativo dell'UFAG, utilizzato per la pianificazione, la registrazione e la gestione delle ispezioni agricole. Semplifica i processi di controllo attraverso una piattaforma centrale per l'inserimento e il recupero dei dati. In questo modo, garantisce un monitoraggio efficiente e il rispetto degli standard agricoli."@it ;
+    schema:description """
+        Acontrol ist das Informationssystem des BLW, das für die Planung, Erfassung und Verwaltung landwirtschaftlicher Inspektionen eingesetzt wird.
+        Es vereinfacht die Kontrollprozesse durch eine zentrale Plattform für Dateneingabe und -abfrage.
+        Auf diese Weise wird eine effiziente Überwachung und Einhaltung landwirtschaftlicher Standards gewährleistet.
+        """@de,
+        """
+        Acontrol is the information system of the FOAG, used for the planning, recording, and management of agricultural inspections.
+        It simplifies control processes through a central platform for data entry and retrieval.
+        This ensures efficient monitoring and compliance with agricultural standards.
+        """@en,
+        """
+        Acontrol est le système d'information de l'OFAG, utilisé pour la planification, l'enregistrement et la gestion des inspections agricoles.
+        Il simplifie les processus de contrôle grâce à une plateforme centrale pour la saisie et la consultation des données.
+        Cela permet d'assurer une surveillance efficace et le respect des normes agricoles.
+        """@fr,
+        """
+        Acontrol è il sistema informativo dell'UFAG, utilizzato per la pianificazione, la registrazione e la gestione delle ispezioni agricole.
+        Semplifica i processi di controllo attraverso una piattaforma centrale per l'inserimento e il recupero dei dati.
+        In questo modo, garantisce un monitoraggio efficiente e il rispetto degli standard agricoli.
+        """@it ;
     schema:name "Acontrol"@de,
         "Acontrol"@en,
         "Acontrol"@fr,
         "Acontrol"@it ;
-    rdfs:comment "Acontrol ist das Informationssystem des BLW, das für die Planung, Erfassung und Verwaltung landwirtschaftlicher Inspektionen eingesetzt wird. Es vereinfacht die Kontrollprozesse durch eine zentrale Plattform für Dateneingabe und -abfrage. Auf diese Weise wird eine effiziente Überwachung und Einhaltung landwirtschaftlicher Standards gewährleistet."@de,
-        "Acontrol is the information system of the FOAG, used for the planning, recording, and management of agricultural inspections. It simplifies control processes through a central platform for data entry and retrieval. This ensures efficient monitoring and compliance with agricultural standards."@en,
-        "Acontrol est le système d'information de l'OFAG, utilisé pour la planification, l'enregistrement et la gestion des inspections agricoles. Il simplifie les processus de contrôle grâce à une plateforme centrale pour la saisie et la consultation des données. Cela permet d'assurer une surveillance efficace et le respect des normes agricoles."@fr,
-        "Acontrol è il sistema informativo dell'UFAG, utilizzato per la pianificazione, la registrazione e la gestione delle ispezioni agricole. Semplifica i processi di controllo attraverso una piattaforma centrale per l'inserimento e il recupero dei dati. In questo modo, garantisce un monitoraggio efficiente e il rispetto degli standard agricoli."@it ;
+    rdfs:comment """
+        Acontrol ist das Informationssystem des BLW, das für die Planung, Erfassung und Verwaltung landwirtschaftlicher Inspektionen eingesetzt wird.
+        Es vereinfacht die Kontrollprozesse durch eine zentrale Plattform für Dateneingabe und -abfrage.
+        Auf diese Weise wird eine effiziente Überwachung und Einhaltung landwirtschaftlicher Standards gewährleistet.
+        """@de,
+        """
+        Acontrol is the information system of the FOAG, used for the planning, recording, and management of agricultural inspections.
+        It simplifies control processes through a central platform for data entry and retrieval.
+        This ensures efficient monitoring and compliance with agricultural standards.
+        """@en,
+        """
+        Acontrol est le système d'information de l'OFAG, utilisé pour la planification, l'enregistrement et la gestion des inspections agricoles.
+        Il simplifie les processus de contrôle grâce à une plateforme centrale pour la saisie et la consultation des données.
+        Cela permet d'assurer une surveillance efficace et le respect des normes agricoles.
+        """@fr,
+        """
+        Acontrol è il sistema informativo dell'UFAG, utilizzato per la pianificazione, la registrazione e la gestione delle ispezioni agricole.
+        Semplifica i processi di controllo attraverso una piattaforma centrale per l'inserimento e il recupero dei dati.
+        In questo modo, garantisce un monitoraggio efficiente e il rispetto degli standard agricoli.
+        """@it ;
+    systemmap:contains systemmap:INF043,
+        systemmap:INF044 ;
+    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_d> ;
     systemmap:operatedBy systemmap:ORG021 .
 
 systemmap:SYS002 a schema:SoftwareApplication ;
@@ -1661,6 +2254,7 @@ systemmap:SYS003 a schema:SoftwareApplication ;
         systemmap:INF016,
         systemmap:INF017,
         systemmap:INF018 ;
+    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_c> ;
     systemmap:operatedBy systemmap:ORG010 .
 
 systemmap:SYS004 a schema:SoftwareApplication ;
@@ -1758,20 +2352,56 @@ systemmap:SYS006 a schema:SoftwareApplication ;
         systemmap:INF034,
         systemmap:INF035,
         systemmap:INF036 ;
+    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_f>,
+        <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_f_bis> ;
     systemmap:operatedBy systemmap:ORG020 .
 
 systemmap:SYS007 a schema:SoftwareApplication ;
-    rdfs:label "eKontingente"@de ;
-    schema:description """
-        eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können.
-        Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet.
-        """@de ;
-    schema:name "eKontingente"@de ;
-    rdfs:comment """
-        eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können.
-        Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet.
-        """@de ;
+    rdfs:label "eKontingente"@de,
+        "eQuotas"@en,
+        "eContingents"@fr,
+        "eContingenti"@it ;
+    schema:description """  
+        eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können.  
+        Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet.  
+        """@de,
+        """  
+        eQuotas is a web-based application that allows users to apply for general import permits, participate in auctions, submit import requests, and manage allocated quota shares.  
+        It enables efficient management of import quotas. This ensures a fair and transparent allocation of import rights.  
+        """@en,
+        """  
+        eContingents est une application web permettant de demander des autorisations générales d'importation, de participer à des enchères, de soumettre des demandes d'importation et de gérer les parts de contingents attribuées.  
+        Elle permet une gestion efficace des contingents d'importation. Cela garantit une attribution équitable et transparente des droits d'importation.  
+        """@fr,
+        """  
+        eContingenti è un'applicazione web che consente di richiedere autorizzazioni generali all'importazione, partecipare ad aste, presentare domande di importazione e gestire le quote di contingenti assegnate.  
+        Consente una gestione efficiente dei contingenti di importazione. Ciò garantisce un'assegnazione equa e trasparente dei diritti di importazione.  
+        """@it ;
+    schema:name "eKontingente"@de,
+        "eQuotas"@en,
+        "eContingents"@fr,
+        "eContingenti"@it ;
+    rdfs:comment """  
+        eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können.  
+        Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet.  
+        """@de,
+        """  
+        eQuotas is a web-based application that allows users to apply for general import permits, participate in auctions, submit import requests, and manage allocated quota shares.  
+        It enables efficient management of import quotas. This ensures a fair and transparent allocation of import rights.  
+        """@en,
+        """  
+        eContingents est une application web permettant de demander des autorisations générales d'importation, de participer à des enchères, de soumettre des demandes d'importation et de gérer les parts de contingents attribuées.  
+        Elle permet une gestion efficace des contingents d'importation. Cela garantit une attribution équitable et transparente des droits d'importation.  
+        """@fr,
+        """  
+        eContingenti è un'applicazione web che consente di richiedere autorizzazioni generali all'importazione, partecipare ad aste, presentare domande di importazione e gestire le quote di contingenti assegnate.  
+        Consente una gestione efficiente dei contingenti di importazione. Ciò garantisce un'assegnazione equa e trasparente dei diritti di importazione.  
+        """@it ;
     systemmap:contains systemmap:INF032 ;
+    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1998/3244_3244_3244>,
+        <https://www.fedlex.admin.ch/eli/cc/2003/791>,
+        <https://www.fedlex.admin.ch/eli/cc/2011/770>,
+        <https://www.fedlex.admin.ch/eli/cc/2016/565> ;
     systemmap:operatedBy systemmap:ORG040 .
 
 systemmap:SYS008 a schema:SoftwareApplication ;
@@ -1779,18 +2409,50 @@ systemmap:SYS008 a schema:SoftwareApplication ;
         "My Agricultural Data Release"@en,
         "Ma libération des données agricoles"@fr,
         "Il mio rilascio dei dati agricoli"@it ;
-    schema:description "Meine Agrardatenfreigabe vereinfacht den Datenaustausch zwischen Betrieben und Datenempfängern wie zum Beispiel Labelorganisationen. Sie bietet eine Plattform zur Verwaltung von Zugriffsberechtigungen und Datenfreigabevereinbarungen. Damit wird die Zusammenarbeit und Datenweitergabe im Agrarsektor transparenter gestaltet."@de,
-        "My Agricultural Data Release simplifies data exchange between farms and data recipients such as label organizations. It provides a platform for managing access permissions and data-sharing agreements. This makes collaboration and data transfer in the agricultural sector more transparent."@en,
-        "Ma libération des données agricoles simplifie l'échange de données entre exploitations agricoles et destinataires de données, tels que les organisations de labels. Elle offre une plateforme pour gérer les autorisations d'accès et les accords de partage de données. Cela rend la collaboration et le transfert de données dans le secteur agricole plus transparents."@fr,
-        "Il mio rilascio dei dati agricoli semplifica lo scambio di dati tra aziende agricole e destinatari dei dati, come le organizzazioni di etichettatura. Fornisce una piattaforma per gestire i permessi di accesso e gli accordi di condivisione dei dati. Ciò rende più trasparente la collaborazione e il trasferimento dei dati nel settore agricolo."@it ;
+    schema:description """
+        Meine Agrardatenfreigabe vereinfacht den Datenaustausch zwischen Betrieben und Datenempfängern wie zum Beispiel Labelorganisationen.
+        Sie bietet eine Plattform zur Verwaltung von Zugriffsberechtigungen und Datenfreigabevereinbarungen.
+        Damit wird die Zusammenarbeit und Datenweitergabe im Agrarsektor transparenter gestaltet.
+        """@de,
+        """
+        My Agricultural Data Release simplifies data exchange between farms and data recipients such as label organizations.
+        It provides a platform for managing access permissions and data-sharing agreements.
+        This makes collaboration and data transfer in the agricultural sector more transparent.
+        """@en,
+        """
+        Ma libération des données agricoles simplifie l'échange de données entre exploitations agricoles et destinataires de données, tels que les organisations de labels.
+        Elle offre une plateforme pour gérer les autorisations d'accès et les accords de partage de données.
+        Cela rend la collaboration et le transfert de données dans le secteur agricole plus transparents.
+        """@fr,
+        """
+        Il mio rilascio dei dati agricoli semplifica lo scambio di dati tra aziende agricole e destinatari dei dati, come le organizzazioni di etichettatura.
+        Fornisce una piattaforma per gestire i permessi di accesso e gli accordi di condivisione dei dati.
+        Ciò rende più trasparente la collaborazione e il trasferimento dei dati nel settore agricolo.
+        """@it ;
     schema:name "Meine Agrardatenfreigabe"@de,
         "My Agricultural Data Release"@en,
         "Ma libération des données agricoles"@fr,
         "Il mio rilascio dei dati agricoli"@it ;
-    rdfs:comment "Meine Agrardatenfreigabe vereinfacht den Datenaustausch zwischen Betrieben und Datenempfängern wie zum Beispiel Labelorganisationen. Sie bietet eine Plattform zur Verwaltung von Zugriffsberechtigungen und Datenfreigabevereinbarungen. Damit wird die Zusammenarbeit und Datenweitergabe im Agrarsektor transparenter gestaltet."@de,
-        "My Agricultural Data Release simplifies data exchange between farms and data recipients such as label organizations. It provides a platform for managing access permissions and data-sharing agreements. This makes collaboration and data transfer in the agricultural sector more transparent."@en,
-        "Ma libération des données agricoles simplifie l'échange de données entre exploitations agricoles et destinataires de données, tels que les organisations de labels. Elle offre une plateforme pour gérer les autorisations d'accès et les accords de partage de données. Cela rend la collaboration et le transfert de données dans le secteur agricole plus transparents."@fr,
-        "Il mio rilascio dei dati agricoli semplifica lo scambio di dati tra aziende agricole e destinatari dei dati, come le organizzazioni di etichettatura. Fornisce una piattaforma per gestire i permessi di accesso e gli accordi di condivisione dei dati. Ciò rende più trasparente la collaborazione e il trasferimento dei dati nel settore agricolo."@it ;
+    rdfs:comment """
+        Meine Agrardatenfreigabe vereinfacht den Datenaustausch zwischen Betrieben und Datenempfängern wie zum Beispiel Labelorganisationen.
+        Sie bietet eine Plattform zur Verwaltung von Zugriffsberechtigungen und Datenfreigabevereinbarungen.
+        Damit wird die Zusammenarbeit und Datenweitergabe im Agrarsektor transparenter gestaltet.
+        """@de,
+        """
+        My Agricultural Data Release simplifies data exchange between farms and data recipients such as label organizations.
+        It provides a platform for managing access permissions and data-sharing agreements.
+        This makes collaboration and data transfer in the agricultural sector more transparent.
+        """@en,
+        """
+        Ma libération des données agricoles simplifie l'échange de données entre exploitations agricoles et destinataires de données, tels que les organisations de labels.
+        Elle offre une plateforme pour gérer les autorisations d'accès et les accords de partage de données.
+        Cela rend la collaboration et le transfert de données dans le secteur agricole plus transparents.
+        """@fr,
+        """
+        Il mio rilascio dei dati agricoli semplifica lo scambio di dati tra aziende agricole e destinatari dei dati, come le organizzazioni di etichettatura.
+        Fornisce una piattaforma per gestire i permessi di accesso e gli accordi di condivisione dei dati.
+        Ciò rende più trasparente la collaborazione e il trasferimento dei dati nel settore agricolo.
+        """@it ;
     systemmap:abbreviation "MAF"@de,
         "MADR"@en,
         "MLDA"@fr,
@@ -2151,16 +2813,28 @@ systemmap:SYS024 a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:ORG200 .
 
 systemmap:SYS025 a schema:SoftwareApplication ;
-    rdfs:label "Betriebs- und Unternehmensregister"@de ;
-    schema:description "Das Betriebs- und Unternehmensregister (BUR) umfasst alle Unternehmen und Betriebe des privaten und öffentlichen Rechts, die in der Schweiz domiziliert sind und eine wirtschaftliche Tätigkeit ausüben. Das BUR dient dem BFS als Adressregister für die statistischen Erhebungen bei Unternehmen und Arbeitsstätten. Auch andere Ämter der Bundesverwaltung und zahlreiche Kantone verwenden das BUR zu statistischen oder administrativen Zwecken."@de ;
-    schema:name "Betriebs- und Unternehmensregister"@de ;
-    rdfs:comment "Das Betriebs- und Unternehmensregister (BUR) umfasst alle Unternehmen und Betriebe des privaten und öffentlichen Rechts, die in der Schweiz domiziliert sind und eine wirtschaftliche Tätigkeit ausüben. Das BUR dient dem BFS als Adressregister für die statistischen Erhebungen bei Unternehmen und Arbeitsstätten. Auch andere Ämter der Bundesverwaltung und zahlreiche Kantone verwenden das BUR zu statistischen oder administrativen Zwecken."@de ;
-    systemmap:abbreviation "BUR"@de ;
+    rdfs:label "Betriebs- und Unternehmensregister"@de,
+        "Registre des entreprises et des établissements"@fr ;
+    schema:description """
+        Das Betriebs- und Unternehmensregister (BUR) umfasst alle Unternehmen und Betriebe des privaten und öffentlichen Rechts, die in der Schweiz domiziliert sind und eine wirtschaftliche Tätigkeit ausüben.
+        Das BUR dient dem BFS als Adressregister für die statistischen Erhebungen bei Unternehmen und Arbeitsstätten.
+        Auch andere Ämter der Bundesverwaltung und zahlreiche Kantone verwenden das BUR zu statistischen oder administrativen Zwecken.
+        """@de ;
+    schema:name "Betriebs- und Unternehmensregister"@de,
+        "Registre des entreprises et des établissements"@fr ;
+    rdfs:comment """
+        Das Betriebs- und Unternehmensregister (BUR) umfasst alle Unternehmen und Betriebe des privaten und öffentlichen Rechts, die in der Schweiz domiziliert sind und eine wirtschaftliche Tätigkeit ausüben.
+        Das BUR dient dem BFS als Adressregister für die statistischen Erhebungen bei Unternehmen und Arbeitsstätten.
+        Auch andere Ämter der Bundesverwaltung und zahlreiche Kantone verwenden das BUR zu statistischen oder administrativen Zwecken.
+        """@de ;
+    systemmap:abbreviation "BUR"@de,
+        "REE"@fr ;
     systemmap:contains systemmap:INF004,
         systemmap:INF027,
         systemmap:INF028,
         systemmap:INF029,
         systemmap:INF030 ;
+    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> ;
     systemmap:operatedBy systemmap:ORG212 .
 
 systemmap:SYS026 a schema:SoftwareApplication ;
@@ -2258,6 +2932,32 @@ systemmap:SYS029 a schema:SoftwareApplication ;
     rdfs:comment "Im Marktdaten Analyse- und Reporting-System werden Preis- und andere wichtige Agrarmarktdaten gesammelt, aggregiert, berechnet, analysiert und für Reports aufbereitet. MARS III ist in das BI BLW eingebunden."@de ;
     systemmap:abbreviation "MARS III"@de ;
     systemmap:operatedBy systemmap:ORG012 .
+
+systemmap:SYS030 a schema:SoftwareApplication ;
+    rdfs:label "Geografisches Informationssystem"@de ;
+    schema:name "Geografisches Informationssystem"@de ;
+    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_e> ;
+    systemmap:operatedBy systemmap:ORG010 .
+
+systemmap:SYS042 a schema:SoftwareApplication ;
+    rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
+        "DigiAgriFoodCH System Map"@en,
+        "Carte du système DigiAgriFoodCH"@fr,
+        "Mappa del sistema DigiAgriFoodCH"@it ;
+    schema:description "Ein Visualisierungstool für Informationen über IT-Systeme, die darin enthaltenen Daten und deren betreibende Organisationen im Schweizer Agrar- und Ernährungssektor."@de,
+        "A visualization tool for information about IT systems, the data those contain and their operating organizations in the Swiss agri-food sector."@en,
+        "Un outil de visualisation des informations sur les systèmes informatiques, les données qu'ils contiennent et les organisations qui les exploitent dans le secteur agroalimentaire suisse."@fr,
+        "Uno strumento di visualizzazione delle informazioni sui sistemi IT, i dati in essi contenuti e le organizzazioni che li gestiscono nel settore agroalimentare svizzero."@it ;
+    schema:name "DigiAgriFoodCH Systemlandkarte"@de,
+        "DigiAgriFoodCH System Map"@en,
+        "Carte du système DigiAgriFoodCH"@fr,
+        "Mappa del sistema DigiAgriFoodCH"@it ;
+    rdfs:comment "Ein Visualisierungstool für Informationen über IT-Systeme, die darin enthaltenen Daten und deren betreibende Organisationen im Schweizer Agrar- und Ernährungssektor."@de,
+        "A visualization tool for information about IT systems, the data those contain and their operating organizations in the Swiss agri-food sector."@en,
+        "Un outil de visualisation des informations sur les systèmes informatiques, les données qu'ils contiennent et les organisations qui les exploitent dans le secteur agroalimentaire suisse."@fr,
+        "Uno strumento di visualizzazione delle informazioni sui sistemi IT, i dati in essi contenuti e le organizzazioni che li gestiscono nel settore agroalimentare svizzero."@it ;
+    dcat:landingPage <https://blw-ofag-ufag.github.io/system-map/> ;
+    systemmap:operatedBy systemmap:ORG011 .
 
 schema:GovernmentOrganization a owl:Class ;
     rdfs:label "Öffentlich-rechtliche Organisation"@de,
@@ -2783,8 +3483,15 @@ systemmap:INF004 a systemmap:Identifier,
         systemmap:Information ;
     rdfs:label "BUR-Nummer"@de,
         "BUR-Number"@en ;
+    schema:description """
+        Die BUR-Nummer ist eine nichtsprechende 8-stellige Identifikationsnummer, die für jede Betriebsstätte eines Unternehmens vergeben wird.
+        """@de ;
     schema:name "BUR-Nummer"@de,
         "BUR-Number"@en ;
+    rdfs:comment """
+        Die BUR-Nummer ist eine nichtsprechende 8-stellige Identifikationsnummer, die für jede Betriebsstätte eines Unternehmens vergeben wird.
+        """@de ;
+    systemmap:abbreviation "BURNR"@de ;
     systemmap:containedIn systemmap:SYS025 .
 
 systemmap:INF001 a systemmap:Information,
@@ -2810,8 +3517,14 @@ systemmap:INF001 a systemmap:Information,
 
 systemmap:INF002 a systemmap:Information,
         systemmap:PersonInformation ;
-    rdfs:label "Informationen der Strukturdatenerhebung"@de ;
-    schema:name "Informationen der Strukturdatenerhebung"@de ;
+    rdfs:label "Informationen der Strukturdatenerhebung"@de,
+        "Information from the structural data survey"@en,
+        "Informations de l'enquête sur les données structurelles"@fr,
+        "Informazioni dall'indagine sui dati strutturali"@it ;
+    schema:name "Informationen der Strukturdatenerhebung"@de,
+        "Information from the structural data survey"@en,
+        "Informations de l'enquête sur les données structurelles"@fr,
+        "Informazioni dall'indagine sui dati strutturali"@it ;
     systemmap:containedIn systemmap:SYS012,
         systemmap:SYS013,
         systemmap:SYS014,
@@ -2821,30 +3534,152 @@ systemmap:INF002 a systemmap:Information,
 
 systemmap:INF005 a systemmap:Information ;
     rdfs:label "Tieridentifikationsdaten"@de ;
-    schema:description "Enthält grundlegende Identifikationsdaten der Tiere, wie eindeutige Ohrmarkennummern, Art, Geschlecht und Geburtsdatum. Diese Stammdaten bilden die Basis für die lückenlose Rückverfolgbarkeit im TVD."@de ;
+    schema:description """
+        Enthält grundlegende Identifikationsdaten der Tiere, wie eindeutige Ohrmarkennummern, Art, Geschlecht und Geburtsdatum.
+        Diese Stammdaten bilden die Basis für die lückenlose Rückverfolgbarkeit im TVD.
+        """@de ;
     schema:name "Tieridentifikationsdaten"@de ;
-    rdfs:comment "Enthält grundlegende Identifikationsdaten der Tiere, wie eindeutige Ohrmarkennummern, Art, Geschlecht und Geburtsdatum. Diese Stammdaten bilden die Basis für die lückenlose Rückverfolgbarkeit im TVD."@de ;
+    rdfs:comment """
+        Enthält grundlegende Identifikationsdaten der Tiere, wie eindeutige Ohrmarkennummern, Art, Geschlecht und Geburtsdatum.
+        Diese Stammdaten bilden die Basis für die lückenlose Rückverfolgbarkeit im TVD.
+        """@de ;
     systemmap:containedIn systemmap:SYS020 .
 
 systemmap:INF006 a systemmap:Information ;
-    rdfs:label "Tierereignisdaten"@de ;
-    schema:description "Erfasst alle dynamischen Ereignisse im Lebenszyklus der Tiere, darunter Geburts-, Bewegungs- und Schlachtdaten sowie Halterwechsel. Diese Informationen sind essenziell, um Standortwechsel, Transportschritte und Verarbeitungsprozesse nachvollziehen zu können."@de ;
-    schema:name "Tierereignisdaten"@de ;
-    rdfs:comment "Erfasst alle dynamischen Ereignisse im Lebenszyklus der Tiere, darunter Geburts-, Bewegungs- und Schlachtdaten sowie Halterwechsel. Diese Informationen sind essenziell, um Standortwechsel, Transportschritte und Verarbeitungsprozesse nachvollziehen zu können."@de ;
+    rdfs:label "Tierereignisdaten"@de,
+        "Animal event data"@en,
+        "Données d'événements animaux"@fr,
+        "Dati sugli eventi degli animali"@it ;
+    schema:description """
+        Erfasst alle dynamischen Ereignisse im Lebenszyklus der Tiere, darunter Geburts-, Bewegungs- und Schlachtdaten sowie Halterwechsel.
+        Diese Informationen sind essenziell, um Standortwechsel, Transportschritte und Verarbeitungsprozesse nachvollziehen zu können.
+        """@de,
+        """
+        Records all dynamic events in the life cycle of animals, including birth, movement, and slaughter data, as well as changes in ownership.
+        This information is essential for tracking location changes, transportation steps, and processing procedures.
+        """@en,
+        """
+        Enregistre tous les événements dynamiques du cycle de vie des animaux, y compris les données de naissance, de déplacement et d'abattage, ainsi que les changements de détenteur.
+        Ces informations sont essentielles pour retracer les changements de localisation, les étapes de transport et les processus de transformation.
+        """@fr,
+        """
+        Registra tutti gli eventi dinamici nel ciclo di vita degli animali, inclusi i dati di nascita, movimento e macellazione, nonché i cambi di detentore.
+        Queste informazioni sono essenziali per tracciare i cambi di posizione, le fasi di trasporto e i processi di lavorazione.
+        """@it ;
+    schema:name "Tierereignisdaten"@de,
+        "Animal event data"@en,
+        "Données d'événements animaux"@fr,
+        "Dati sugli eventi degli animali"@it ;
+    rdfs:comment """
+        Erfasst alle dynamischen Ereignisse im Lebenszyklus der Tiere, darunter Geburts-, Bewegungs- und Schlachtdaten sowie Halterwechsel.
+        Diese Informationen sind essenziell, um Standortwechsel, Transportschritte und Verarbeitungsprozesse nachvollziehen zu können.
+        """@de,
+        """
+        Records all dynamic events in the life cycle of animals, including birth, movement, and slaughter data, as well as changes in ownership.
+        This information is essential for tracking location changes, transportation steps, and processing procedures.
+        """@en,
+        """
+        Enregistre tous les événements dynamiques du cycle de vie des animaux, y compris les données de naissance, de déplacement et d'abattage, ainsi que les changements de détenteur.
+        Ces informations sont essentielles pour retracer les changements de localisation, les étapes de transport et les processus de transformation.
+        """@fr,
+        """
+        Registra tutti gli eventi dinamici nel ciclo di vita degli animali, inclusi i dati di nascita, movimento e macellazione, nonché i cambi di detentore.
+        Queste informazioni sono essenziali per tracciare i cambi di posizione, le fasi di trasporto e i processi di lavorazione.
+        """@it ;
     systemmap:containedIn systemmap:SYS020 .
 
 systemmap:INF007 a systemmap:Information ;
-    rdfs:label "Meldepflichtdaten (Schafe & Ziegen)"@de ;
-    schema:description "Beinhaltet spezifische Daten, die aufgrund erweiterter Meldepflichten für Schafe und Ziegen erfasst werden müssen. Dazu gehören Meldungen zu Geburten (innerhalb von 30 Tagen) sowie zu Verendungen, Zu- und Abgängen sowie Schlachtungen (innerhalb von 3 Tagen)."@de ;
-    schema:name "Meldepflichtdaten (Schafe & Ziegen)"@de ;
-    rdfs:comment "Beinhaltet spezifische Daten, die aufgrund erweiterter Meldepflichten für Schafe und Ziegen erfasst werden müssen. Dazu gehören Meldungen zu Geburten (innerhalb von 30 Tagen) sowie zu Verendungen, Zu- und Abgängen sowie Schlachtungen (innerhalb von 3 Tagen)."@de ;
+    rdfs:label "Meldepflichtdaten (Schafe & Ziegen)"@de,
+        "Mandatory reporting data (sheep & goats)"@en,
+        "Données à déclaration obligatoire (moutons & chèvres)"@fr,
+        "Dati soggetti a obbligo di notifica (pecore & capre)"@it ;
+    schema:description """
+        Beinhaltet spezifische Daten, die aufgrund erweiterter Meldepflichten für Schafe und Ziegen erfasst werden müssen.
+        Dazu gehören Meldungen zu Geburten (innerhalb von 30 Tagen) sowie zu Verendungen, Zu- und Abgängen sowie Schlachtungen (innerhalb von 3 Tagen).
+        """@de,
+        """
+        Includes specific data that must be recorded due to extended reporting obligations for sheep and goats.
+        This includes reports on births (within 30 days), as well as deaths, arrivals and departures, and slaughter (within 3 days).
+        """@en,
+        """
+        Contient des données spécifiques qui doivent être enregistrées en raison d'obligations de déclaration étendues pour les moutons et les chèvres.
+        Cela comprend les déclarations de naissances (dans les 30 jours), ainsi que les décès, arrivées et départs, et abattages (dans les 3 jours).
+        """@fr,
+        """
+        Contiene dati specifici che devono essere registrati a causa di obblighi di notifica estesi per pecore e capre.
+        Ciò include le segnalazioni di nascite (entro 30 giorni), nonché decessi, arrivi e partenze e macellazioni (entro 3 giorni).
+        """@it ;
+    schema:name "Meldepflichtdaten (Schafe & Ziegen)"@de,
+        "Mandatory reporting data (sheep & goats)"@en,
+        "Données à déclaration obligatoire (moutons & chèvres)"@fr,
+        "Dati soggetti a obbligo di notifica (pecore & capre)"@it ;
+    rdfs:comment """
+        Beinhaltet spezifische Daten, die aufgrund erweiterter Meldepflichten für Schafe und Ziegen erfasst werden müssen.
+        Dazu gehören Meldungen zu Geburten (innerhalb von 30 Tagen) sowie zu Verendungen, Zu- und Abgängen sowie Schlachtungen (innerhalb von 3 Tagen).
+        """@de,
+        """
+        Includes specific data that must be recorded due to extended reporting obligations for sheep and goats.
+        This includes reports on births (within 30 days), as well as deaths, arrivals and departures, and slaughter (within 3 days).
+        """@en,
+        """
+        Contient des données spécifiques qui doivent être enregistrées en raison d'obligations de déclaration étendues pour les moutons et les chèvres.
+        Cela comprend les déclarations de naissances (dans les 30 jours), ainsi que les décès, arrivées et départs, et abattages (dans les 3 jours).
+        """@fr,
+        """
+        Contiene dati specifici che devono essere registrati a causa di obblighi di notifica estesi per pecore e capre.
+        Ciò include le segnalazioni di nascite (entro 30 giorni), nonché decessi, arrivi e partenze e macellazioni (entro 3 giorni).
+        """@it ;
     systemmap:containedIn systemmap:SYS020 .
 
 systemmap:INF008 a systemmap:Information ;
-    rdfs:label "Daten zu Tierhaltern"@de ;
-    schema:description "Administrative Informationen zu den Tierhalterinnen und Tierhaltern. Dies umfasst die für die eindeutige Zuordnung erforderlichen Identifikationsdaten wie die TVD-Nummer bzw. Betriebsnummer sowie grundlegende Angaben zur Identität und Kontaktadresse der Person. Diese Daten gewährleisten, dass alle Tierbewegungen und -ereignisse korrekt einer Halterin bzw. einem Halter zugeordnet werden können, was für die Rückverfolgbarkeit und die Einhaltung gesetzlicher Anforderungen unerlässlich ist."@de ;
-    schema:name "Daten zu Tierhaltern"@de ;
-    rdfs:comment "Administrative Informationen zu den Tierhalterinnen und Tierhaltern. Dies umfasst die für die eindeutige Zuordnung erforderlichen Identifikationsdaten wie die TVD-Nummer bzw. Betriebsnummer sowie grundlegende Angaben zur Identität und Kontaktadresse der Person. Diese Daten gewährleisten, dass alle Tierbewegungen und -ereignisse korrekt einer Halterin bzw. einem Halter zugeordnet werden können, was für die Rückverfolgbarkeit und die Einhaltung gesetzlicher Anforderungen unerlässlich ist."@de ;
+    rdfs:label "Daten zu Tierhaltern"@de,
+        "Data on animal owners"@en,
+        "Données sur les détenteurs d’animaux"@fr,
+        "Dati sui detentori di animali"@it ;
+    schema:description """
+        Administrative Informationen zu den Tierhalterinnen und Tierhaltern.
+        Dies umfasst die für die eindeutige Zuordnung erforderlichen Identifikationsdaten wie die TVD-Nummer bzw. Betriebsnummer sowie grundlegende Angaben zur Identität und Kontaktadresse der Person.
+        Diese Daten gewährleisten, dass alle Tierbewegungen und -ereignisse korrekt einer Halterin bzw. einem Halter zugeordnet werden können, was für die Rückverfolgbarkeit und die Einhaltung gesetzlicher Anforderungen unerlässlich ist.
+        """@de,
+        """
+        Administrative information on animal owners.
+        This includes the identification data required for unique assignment, such as the TVD number or farm number, as well as basic details about the person's identity and contact address.
+        These data ensure that all animal movements and events can be correctly assigned to an owner, which is essential for traceability and compliance with legal requirements.
+        """@en,
+        """
+        Informations administratives sur les détenteurs d’animaux.
+        Cela comprend les données d’identification nécessaires pour une attribution unique, telles que le numéro TVD ou le numéro d’exploitation, ainsi que des informations de base sur l’identité et l’adresse de contact de la personne.
+        Ces données garantissent que tous les mouvements et événements liés aux animaux peuvent être correctement attribués à un détenteur, ce qui est essentiel pour la traçabilité et le respect des exigences légales.
+        """@fr,
+        """
+        Informazioni amministrative sui detentori di animali.
+        Ciò include i dati di identificazione necessari per l'assegnazione univoca, come il numero TVD o il numero dell'azienda agricola, nonché i dati di base sull'identità e l'indirizzo di contatto della persona.
+        Questi dati garantiscono che tutti i movimenti e gli eventi degli animali possano essere correttamente attribuiti a un detentore, essenziale per la tracciabilità e il rispetto dei requisiti legali.
+        """@it ;
+    schema:name "Daten zu Tierhaltern"@de,
+        "Data on animal owners"@en,
+        "Données sur les détenteurs d’animaux"@fr,
+        "Dati sui detentori di animali"@it ;
+    rdfs:comment """
+        Administrative Informationen zu den Tierhalterinnen und Tierhaltern.
+        Dies umfasst die für die eindeutige Zuordnung erforderlichen Identifikationsdaten wie die TVD-Nummer bzw. Betriebsnummer sowie grundlegende Angaben zur Identität und Kontaktadresse der Person.
+        Diese Daten gewährleisten, dass alle Tierbewegungen und -ereignisse korrekt einer Halterin bzw. einem Halter zugeordnet werden können, was für die Rückverfolgbarkeit und die Einhaltung gesetzlicher Anforderungen unerlässlich ist.
+        """@de,
+        """
+        Administrative information on animal owners.
+        This includes the identification data required for unique assignment, such as the TVD number or farm number, as well as basic details about the person's identity and contact address.
+        These data ensure that all animal movements and events can be correctly assigned to an owner, which is essential for traceability and compliance with legal requirements.
+        """@en,
+        """
+        Informations administratives sur les détenteurs d’animaux.
+        Cela comprend les données d’identification nécessaires pour une attribution unique, telles que le numéro TVD ou le numéro d’exploitation, ainsi que des informations de base sur l’identité et l’adresse de contact de la personne.
+        Ces données garantissent que tous les mouvements et événements liés aux animaux peuvent être correctement attribués à un détenteur, ce qui est essentiel pour la traçabilité et le respect des exigences légales.
+        """@fr,
+        """
+        Informazioni amministrative sui detentori di animali.
+        Ciò include i dati di identificazione necessari per l'assegnazione univoca, come il numero TVD o il numero dell'azienda agricola, nonché i dati di base sull'identità e l'indirizzo di contatto della persona.
+        Questi dati garantiscono che tutti i movimenti e gli eventi degli animali possano essere correttamente attribuiti a un detentore, essenziale per la tracciabilità e il rispetto dei requisiti legali.
+        """@it ;
     systemmap:containedIn systemmap:SYS020 ;
     systemmap:informedBy systemmap:INF014 .
 
@@ -2914,18 +3749,40 @@ systemmap:INF013 a systemmap:Information ;
         "Global variety catalog"@en,
         "Catalogue mondial des variétés"@fr,
         "Catalogo globale delle varietà"@it ;
-    schema:description "Informationen zu Pflanzensorten aus UPOV-Mitgliedsländern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD). Diese Sortenliste dient als zentrales Register für Sortenbezeichnungen und unterstützt bei der Überprüfung der Unterscheidbarkeit neuer Sorten."@de,
-        "Information on plant varieties from UPOV member countries as well as the Organisation for Economic Co-operation and Development (OECD). This variety list serves as a central register for variety denominations and supports the verification of the distinctness of new varieties."@en,
-        "Informations sur les variétés végétales des pays membres de l'UPOV ainsi que de l'Organisation de coopération et de développement économiques (OCDE). Cette liste de variétés sert de registre central pour les dénominations de variétés et aide à vérifier la distinction des nouvelles variétés."@fr,
-        "Informazioni sulle varietà vegetali provenienti dai paesi membri dell'UPOV e dall'Organizzazione per la cooperazione e lo sviluppo economico (OCSE). Questo elenco di varietà funge da registro centrale per le denominazioni varietali e supporta la verifica della distinzione delle nuove varietà."@it ;
+    schema:description """
+        Informationen zu Pflanzensorten aus UPOV-Mitgliedsländern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD).
+        Diese Sortenliste dient als zentrales Register für Sortenbezeichnungen und unterstützt bei der Überprüfung der Unterscheidbarkeit neuer Sorten."""@de,
+        """
+        Information on plant varieties from UPOV member countries as well as the Organisation for Economic Co-operation and Development (OECD).
+        This variety list serves as a central register for variety denominations and supports the verification of the distinctness of new varieties.
+        """@en,
+        """
+        Informations sur les variétés végétales des pays membres de l'UPOV ainsi que de l'Organisation de coopération et de développement économiques (OCDE).
+        Cette liste de variétés sert de registre central pour les dénominations de variétés et aide à vérifier la distinction des nouvelles variétés.
+        """@fr,
+        """
+        Informazioni sulle varietà vegetali provenienti dai paesi membri dell'UPOV e dall'Organizzazione per la cooperazione e lo sviluppo economico (OCSE).
+        Questo elenco di varietà funge da registro centrale per le denominazioni varietali e supporta la verifica della distinzione delle nuove varietà.
+        """@it ;
     schema:name "Globaler Sortenkatalog"@de,
         "Global variety catalog"@en,
         "Catalogue mondial des variétés"@fr,
         "Catalogo globale delle varietà"@it ;
-    rdfs:comment "Informationen zu Pflanzensorten aus UPOV-Mitgliedsländern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD). Diese Sortenliste dient als zentrales Register für Sortenbezeichnungen und unterstützt bei der Überprüfung der Unterscheidbarkeit neuer Sorten."@de,
-        "Information on plant varieties from UPOV member countries as well as the Organisation for Economic Co-operation and Development (OECD). This variety list serves as a central register for variety denominations and supports the verification of the distinctness of new varieties."@en,
-        "Informations sur les variétés végétales des pays membres de l'UPOV ainsi que de l'Organisation de coopération et de développement économiques (OCDE). Cette liste de variétés sert de registre central pour les dénominations de variétés et aide à vérifier la distinction des nouvelles variétés."@fr,
-        "Informazioni sulle varietà vegetali provenienti dai paesi membri dell'UPOV e dall'Organizzazione per la cooperazione e lo sviluppo economico (OCSE). Questo elenco di varietà funge da registro centrale per le denominazioni varietali e supporta la verifica della distinzione delle nuove varietà."@it ;
+    rdfs:comment """
+        Informationen zu Pflanzensorten aus UPOV-Mitgliedsländern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD).
+        Diese Sortenliste dient als zentrales Register für Sortenbezeichnungen und unterstützt bei der Überprüfung der Unterscheidbarkeit neuer Sorten."""@de,
+        """
+        Information on plant varieties from UPOV member countries as well as the Organisation for Economic Co-operation and Development (OECD).
+        This variety list serves as a central register for variety denominations and supports the verification of the distinctness of new varieties.
+        """@en,
+        """
+        Informations sur les variétés végétales des pays membres de l'UPOV ainsi que de l'Organisation de coopération et de développement économiques (OCDE).
+        Cette liste de variétés sert de registre central pour les dénominations de variétés et aide à vérifier la distinction des nouvelles variétés.
+        """@fr,
+        """
+        Informazioni sulle varietà vegetali provenienti dai paesi membri dell'UPOV e dall'Organizzazione per la cooperazione e lo sviluppo economico (OCSE).
+        Questo elenco di varietà funge da registro centrale per le denominazioni varietali e supporta la verifica della distinzione delle nuove varietà.
+        """@it ;
     systemmap:containedIn systemmap:SYS024 ;
     systemmap:informedBy systemmap:INF010 .
 
@@ -2966,27 +3823,135 @@ systemmap:INF015 a systemmap:Information ;
 
 systemmap:INF016 a systemmap:Information,
         systemmap:PersonInformation ;
-    rdfs:label "Beitragsdaten"@de ;
-    schema:description "Beinhaltet Daten zu finanziellen Zuwendungen an landwirtschaftliche Betriebe. Dies umfasst Informationen über die Beitragshöhen, Berechnungsgrundlagen, Auszahlungskriterien und -modalitäten sowie die zugrunde liegenden administrativen Prozesse."@de ;
-    schema:name "Beitragsdaten"@de ;
-    rdfs:comment "Beinhaltet Daten zu finanziellen Zuwendungen an landwirtschaftliche Betriebe. Dies umfasst Informationen über die Beitragshöhen, Berechnungsgrundlagen, Auszahlungskriterien und -modalitäten sowie die zugrunde liegenden administrativen Prozesse."@de ;
+    rdfs:label "Beitragsdaten"@de,
+        "Contribution data"@en,
+        "Données de contribution"@fr,
+        "Dati sui contributi"@it ;
+    schema:description """
+        Beinhaltet Daten zu finanziellen Zuwendungen an landwirtschaftliche Betriebe.
+        Dies umfasst Informationen über die Beitragshöhen, Berechnungsgrundlagen, Auszahlungskriterien und -modalitäten sowie die zugrunde liegenden administrativen Prozesse.
+        """@de,
+        """
+        Contains data on financial contributions to agricultural enterprises.
+        This includes information on contribution amounts, calculation bases, payment criteria and modalities, as well as the underlying administrative processes.
+        """@en,
+        """
+        Contient des données sur les contributions financières aux exploitations agricoles.
+        Cela comprend des informations sur les montants des contributions, les bases de calcul, les critères et modalités de paiement, ainsi que les processus administratifs sous-jacents.
+        """@fr,
+        """
+        Contiene dati sui contributi finanziari alle aziende agricole.
+        Ciò include informazioni sugli importi dei contributi, le basi di calcolo, i criteri e le modalità di pagamento, nonché i processi amministrativi sottostanti.
+        """@it ;
+    schema:name "Beitragsdaten"@de,
+        "Contribution data"@en,
+        "Données de contribution"@fr,
+        "Dati sui contributi"@it ;
+    rdfs:comment """
+        Beinhaltet Daten zu finanziellen Zuwendungen an landwirtschaftliche Betriebe.
+        Dies umfasst Informationen über die Beitragshöhen, Berechnungsgrundlagen, Auszahlungskriterien und -modalitäten sowie die zugrunde liegenden administrativen Prozesse.
+        """@de,
+        """
+        Contains data on financial contributions to agricultural enterprises.
+        This includes information on contribution amounts, calculation bases, payment criteria and modalities, as well as the underlying administrative processes.
+        """@en,
+        """
+        Contient des données sur les contributions financières aux exploitations agricoles.
+        Cela comprend des informations sur les montants des contributions, les bases de calcul, les critères et modalités de paiement, ainsi que les processus administratifs sous-jacents.
+        """@fr,
+        """
+        Contiene dati sui contributi finanziari alle aziende agricole.
+        Ciò include informazioni sugli importi dei contributi, le basi di calcolo, i criteri e le modalità di pagamento, nonché i processi amministrativi sottostanti.
+        """@it ;
     systemmap:containedIn systemmap:SYS003 .
 
 systemmap:INF017 a systemmap:Information,
         systemmap:PersonInformation,
         systemmap:SensitivePersonInformation ;
-    rdfs:label "Kürzungen von Direktzahlungen"@de ;
-    schema:description "Enthält Informationen über die Regelungen und Verfahren, nach denen Direktzahlungen an landwirtschaftliche Betriebe gekürzt werden. Die Daten umfassen Kriterien, Berechnungsgrundlagen, betroffene Zeiträume und administrative Abläufe, die zu solchen Kürzungen führen können."@de ;
-    schema:name "Kürzungen von Direktzahlungen"@de ;
-    rdfs:comment "Enthält Informationen über die Regelungen und Verfahren, nach denen Direktzahlungen an landwirtschaftliche Betriebe gekürzt werden. Die Daten umfassen Kriterien, Berechnungsgrundlagen, betroffene Zeiträume und administrative Abläufe, die zu solchen Kürzungen führen können."@de ;
+    rdfs:label "Kürzungen von Direktzahlungen"@de,
+        "Reductions in direct payments"@en,
+        "Réductions des paiements directs"@fr,
+        "Riduzioni dei pagamenti diretti"@it ;
+    schema:description """  
+        Enthält Informationen über die Regelungen und Verfahren, nach denen Direktzahlungen an landwirtschaftliche Betriebe gekürzt werden.  
+        Die Daten umfassen Kriterien, Berechnungsgrundlagen, betroffene Zeiträume und administrative Abläufe, die zu solchen Kürzungen führen können.  
+        """@de,
+        """  
+        Contains information on the regulations and procedures by which direct payments to agricultural enterprises are reduced.  
+        The data includes criteria, calculation bases, affected periods, and administrative processes that may lead to such reductions.  
+        """@en,
+        """  
+        Contient des informations sur les réglementations et procédures selon lesquelles les paiements directs aux exploitations agricoles sont réduits.  
+        Les données comprennent les critères, les bases de calcul, les périodes concernées et les processus administratifs pouvant entraîner de telles réductions.  
+        """@fr,
+        """  
+        Contiene informazioni sulle normative e le procedure in base alle quali i pagamenti diretti alle aziende agricole vengono ridotti.  
+        I dati includono criteri, basi di calcolo, periodi interessati e processi amministrativi che possono portare a tali riduzioni.  
+        """@it ;
+    schema:name "Kürzungen von Direktzahlungen"@de,
+        "Reductions in direct payments"@en,
+        "Réductions des paiements directs"@fr,
+        "Riduzioni dei pagamenti diretti"@it ;
+    rdfs:comment """  
+        Enthält Informationen über die Regelungen und Verfahren, nach denen Direktzahlungen an landwirtschaftliche Betriebe gekürzt werden.  
+        Die Daten umfassen Kriterien, Berechnungsgrundlagen, betroffene Zeiträume und administrative Abläufe, die zu solchen Kürzungen führen können.  
+        """@de,
+        """  
+        Contains information on the regulations and procedures by which direct payments to agricultural enterprises are reduced.  
+        The data includes criteria, calculation bases, affected periods, and administrative processes that may lead to such reductions.  
+        """@en,
+        """  
+        Contient des informations sur les réglementations et procédures selon lesquelles les paiements directs aux exploitations agricoles sont réduits.  
+        Les données comprennent les critères, les bases de calcul, les périodes concernées et les processus administratifs pouvant entraîner de telles réductions.  
+        """@fr,
+        """  
+        Contiene informazioni sulle normative e le procedure in base alle quali i pagamenti diretti alle aziende agricole vengono ridotti.  
+        I dati includono criteri, basi di calcolo, periodi interessati e processi amministrativi che possono portare a tali riduzioni.  
+        """@it ;
     systemmap:containedIn systemmap:SYS003 .
 
 systemmap:INF018 a systemmap:Information,
         systemmap:PersonInformation ;
-    rdfs:label "Anmeldungen für Direktzahlungsarten"@de ;
-    schema:description "Umfasst den Prozess und die zugehörigen Daten zur Registrierung für unterschiedliche Direktzahlungsarten. Enthalten sind Informationen zu Anmeldeverfahren, Fristen, Voraussetzungen und den verwendeten Formularen zur Antragstellung."@de ;
-    schema:name "Anmeldungen für Direktzahlungsarten"@de ;
-    rdfs:comment "Umfasst den Prozess und die zugehörigen Daten zur Registrierung für unterschiedliche Direktzahlungsarten. Enthalten sind Informationen zu Anmeldeverfahren, Fristen, Voraussetzungen und den verwendeten Formularen zur Antragstellung."@de ;
+    rdfs:label "Anmeldungen für Direktzahlungsarten"@de,
+        "Registrations for direct payment types"@en,
+        "Inscriptions pour les types de paiements directs"@fr,
+        "Iscrizioni per tipi di pagamenti diretti"@it ;
+    schema:description """
+        Umfasst den Prozess und die zugehörigen Daten zur Registrierung für unterschiedliche Direktzahlungsarten.
+        Enthalten sind Informationen zu Anmeldeverfahren, Fristen, Voraussetzungen und den verwendeten Formularen zur Antragstellung.
+        """@de,
+        """
+        Covers the process and related data for registration for different types of direct payments.
+        It includes information on registration procedures, deadlines, requirements, and the forms used for application.
+        """@en,
+        """
+        Couvre le processus et les données associées à l'inscription aux différents types de paiements directs.
+        Il comprend des informations sur les procédures d'inscription, les délais, les conditions requises et les formulaires utilisés pour la demande.
+        """@fr,
+        """
+        Copre il processo e i dati relativi alla registrazione per diversi tipi di pagamenti diretti.
+        Include informazioni sulle procedure di iscrizione, le scadenze, i requisiti e i moduli utilizzati per la richiesta.
+        """@it ;
+    schema:name "Anmeldungen für Direktzahlungsarten"@de,
+        "Registrations for direct payment types"@en,
+        "Inscriptions pour les types de paiements directs"@fr,
+        "Iscrizioni per tipi di pagamenti diretti"@it ;
+    rdfs:comment """
+        Umfasst den Prozess und die zugehörigen Daten zur Registrierung für unterschiedliche Direktzahlungsarten.
+        Enthalten sind Informationen zu Anmeldeverfahren, Fristen, Voraussetzungen und den verwendeten Formularen zur Antragstellung.
+        """@de,
+        """
+        Covers the process and related data for registration for different types of direct payments.
+        It includes information on registration procedures, deadlines, requirements, and the forms used for application.
+        """@en,
+        """
+        Couvre le processus et les données associées à l'inscription aux différents types de paiements directs.
+        Il comprend des informations sur les procédures d'inscription, les délais, les conditions requises et les formulaires utilisés pour la demande.
+        """@fr,
+        """
+        Copre il processo e i dati relativi alla registrazione per diversi tipi di pagamenti diretti.
+        Include informazioni sulle procedure di iscrizione, le scadenze, i requisiti e i moduli utilizzati per la richiesta.
+        """@it ;
     systemmap:containedIn systemmap:SYS003 .
 
 systemmap:INF020 a systemmap:Information,
@@ -3035,18 +4000,42 @@ systemmap:INF022 a systemmap:Information ;
         "Data on milk production"@en,
         "Données sur la production laitière"@fr,
         "Dati sulla produzione di latte"@it ;
-    schema:description "Monatliche Produktionsmengen (in kg) der im Vormonat gelieferten Kuh- und Büffelmilch von allen Milchproduzenten. Das BLW benötigt diese Information für die Ausrichtung der Zulage für Verkehrsmilch."@de,
-        "Monthly production quantities (in kg) of cow and buffalo milk delivered in the previous month by all milk producers. The BLW requires this information for the allocation of the subsidy for market milk."@en,
-        "Quantités de production mensuelles (en kg) du lait de vache et de bufflonne livré le mois précédent par tous les producteurs de lait. L'OFAG a besoin de ces informations pour l'octroi de la subvention pour le lait de consommation."@fr,
-        "Quantità di produzione mensili (in kg) del latte di mucca e bufala consegnato nel mese precedente da tutti i produttori di latte. L'UFAG necessita di queste informazioni per l'assegnazione del sussidio per il latte di consumo."@it ;
+    schema:description """
+        Monatliche Produktionsmengen (in kg) der im Vormonat gelieferten Kuh- und Büffelmilch von allen Milchproduzenten.
+        Das BLW benötigt diese Information für die Ausrichtung der Zulage für Verkehrsmilch.
+        """@de,
+        """
+        Monthly production quantities (in kg) of cow and buffalo milk delivered in the previous month by all milk producers.
+        The BLW requires this information for the allocation of the subsidy for market milk.
+        """@en,
+        """
+        Quantités de production mensuelles (en kg) du lait de vache et de bufflonne livré le mois précédent par tous les producteurs de lait.
+        L'OFAG a besoin de ces informations pour l'octroi de la subvention pour le lait de consommation.
+        """@fr,
+        """
+        Quantità di produzione mensili (in kg) del latte di mucca e bufala consegnato nel mese precedente da tutti i produttori di latte.
+        L'UFAG necessita di queste informazioni per l'assegnazione del sussidio per il latte di consumo.
+        """@it ;
     schema:name "Daten zur Milchproduktion"@de,
         "Data on milk production"@en,
         "Données sur la production laitière"@fr,
         "Dati sulla produzione di latte"@it ;
-    rdfs:comment "Monatliche Produktionsmengen (in kg) der im Vormonat gelieferten Kuh- und Büffelmilch von allen Milchproduzenten. Das BLW benötigt diese Information für die Ausrichtung der Zulage für Verkehrsmilch."@de,
-        "Monthly production quantities (in kg) of cow and buffalo milk delivered in the previous month by all milk producers. The BLW requires this information for the allocation of the subsidy for market milk."@en,
-        "Quantités de production mensuelles (en kg) du lait de vache et de bufflonne livré le mois précédent par tous les producteurs de lait. L'OFAG a besoin de ces informations pour l'octroi de la subvention pour le lait de consommation."@fr,
-        "Quantità di produzione mensili (in kg) del latte di mucca e bufala consegnato nel mese precedente da tutti i produttori di latte. L'UFAG necessita di queste informazioni per l'assegnazione del sussidio per il latte di consumo."@it ;
+    rdfs:comment """
+        Monatliche Produktionsmengen (in kg) der im Vormonat gelieferten Kuh- und Büffelmilch von allen Milchproduzenten.
+        Das BLW benötigt diese Information für die Ausrichtung der Zulage für Verkehrsmilch.
+        """@de,
+        """
+        Monthly production quantities (in kg) of cow and buffalo milk delivered in the previous month by all milk producers.
+        The BLW requires this information for the allocation of the subsidy for market milk.
+        """@en,
+        """
+        Quantités de production mensuelles (en kg) du lait de vache et de bufflonne livré le mois précédent par tous les producteurs de lait.
+        L'OFAG a besoin de ces informations pour l'octroi de la subvention pour le lait de consommation.
+        """@fr,
+        """
+        Quantità di produzione mensili (in kg) del latte di mucca e bufala consegnato nel mese precedente da tutti i produttori di latte.
+        L'UFAG necessita di queste informazioni per l'assegnazione del sussidio per il latte di consumo.
+        """@it ;
     systemmap:containedIn systemmap:SYS021 .
 
 systemmap:INF023 a systemmap:Information ;
@@ -3075,18 +4064,56 @@ systemmap:INF024 a systemmap:Information,
         "Results of milk testing"@en,
         "Résultats du contrôle du lait"@fr,
         "Risultati del controllo del latte"@it ;
-    schema:description "Ergebnisse der öffentlich-rechtlichen Milchprüfung. Bei der öffentlich-rechtlichen Milchprüfung wird die Kuhmilch zweimal monatlich auf die Prüfmerkmale Keimzahl, somatische Zellen und Hemmstoffe untersucht. Hygienisch ungenügende Resultate haben Beanstandungen und bei länger andauernden Hygienemängeln eine amtliche Milchliefersperre zur Folge. Die Ergebnisse der Milchprüfung werden über die Plattform dbmilch.ch an berechtigte Kreise bereitgestellt."@de,
-        "Results of the public milk testing. In public milk testing, cow’s milk is examined twice a month for the parameters germ count, somatic cells, and inhibitors. Hygienically insufficient results lead to complaints and, in case of prolonged hygiene deficiencies, an official milk delivery ban. The results of the milk testing are made available to authorized parties via the platform dbmilch.ch."@en,
-        "Résultats du contrôle public du lait. Lors du contrôle public du lait, le lait de vache est analysé deux fois par mois pour les paramètres suivants : nombre de germes, cellules somatiques et inhibiteurs. Des résultats hygiéniques insuffisants entraînent des réclamations et, en cas de carences hygiéniques prolongées, une interdiction officielle de livraison de lait. Les résultats du contrôle du lait sont mis à disposition des cercles autorisés via la plateforme dbmilch.ch."@fr,
-        "Risultati del controllo pubblico del latte. Nel controllo pubblico del latte, il latte di mucca viene analizzato due volte al mese per i seguenti parametri: conta dei germi, cellule somatiche e inibitori. Risultati igienicamente insufficienti comportano reclami e, in caso di carenze igieniche prolungate, un divieto ufficiale di consegna del latte. I risultati del controllo del latte sono resi disponibili ai soggetti autorizzati tramite la piattaforma dbmilch.ch."@it ;
+    schema:description """
+        Ergebnisse der öffentlich-rechtlichen Milchprüfung.
+        Bei der öffentlich-rechtlichen Milchprüfung wird die Kuhmilch zweimal monatlich auf die Prüfmerkmale Keimzahl, somatische Zellen und Hemmstoffe untersucht.
+        Hygienisch ungenügende Resultate haben Beanstandungen und bei länger andauernden Hygienemängeln eine amtliche Milchliefersperre zur Folge.
+        Die Ergebnisse der Milchprüfung werden über die Plattform dbmilch.ch an berechtigte Kreise bereitgestellt.
+        """@de,
+        """
+        Results of the public milk testing. In public milk testing, cow’s milk is examined twice a month for the parameters germ count, somatic cells, and inhibitors.
+        Hygienically insufficient results lead to complaints and, in case of prolonged hygiene deficiencies, an official milk delivery ban.
+        The results of the milk testing are made available to authorized parties via the platform dbmilch.ch.
+        """@en,
+        """
+        Résultats du contrôle public du lait.
+        Lors du contrôle public du lait, le lait de vache est analysé deux fois par mois pour les paramètres suivants : nombre de germes, cellules somatiques et inhibiteurs.
+        Des résultats hygiéniques insuffisants entraînent des réclamations et, en cas de carences hygiéniques prolongées, une interdiction officielle de livraison de lait.
+        Les résultats du contrôle du lait sont mis à disposition des cercles autorisés via la plateforme dbmilch.ch.
+        """@fr,
+        """
+        Risultati del controllo pubblico del latte.
+        Nel controllo pubblico del latte, il latte di mucca viene analizzato due volte al mese per i seguenti parametri: conta dei germi, cellule somatiche e inibitori.
+        Risultati igienicamente insufficienti comportano reclami e, in caso di carenze igieniche prolungate, un divieto ufficiale di consegna del latte.
+        I risultati del controllo del latte sono resi disponibili ai soggetti autorizzati tramite la piattaforma dbmilch.ch.
+        """@it ;
     schema:name "Resultate der Milchprüfung"@de,
         "Results of milk testing"@en,
         "Résultats du contrôle du lait"@fr,
         "Risultati del controllo del latte"@it ;
-    rdfs:comment "Ergebnisse der öffentlich-rechtlichen Milchprüfung. Bei der öffentlich-rechtlichen Milchprüfung wird die Kuhmilch zweimal monatlich auf die Prüfmerkmale Keimzahl, somatische Zellen und Hemmstoffe untersucht. Hygienisch ungenügende Resultate haben Beanstandungen und bei länger andauernden Hygienemängeln eine amtliche Milchliefersperre zur Folge. Die Ergebnisse der Milchprüfung werden über die Plattform dbmilch.ch an berechtigte Kreise bereitgestellt."@de,
-        "Results of the public milk testing. In public milk testing, cow’s milk is examined twice a month for the parameters germ count, somatic cells, and inhibitors. Hygienically insufficient results lead to complaints and, in case of prolonged hygiene deficiencies, an official milk delivery ban. The results of the milk testing are made available to authorized parties via the platform dbmilch.ch."@en,
-        "Résultats du contrôle public du lait. Lors du contrôle public du lait, le lait de vache est analysé deux fois par mois pour les paramètres suivants : nombre de germes, cellules somatiques et inhibiteurs. Des résultats hygiéniques insuffisants entraînent des réclamations et, en cas de carences hygiéniques prolongées, une interdiction officielle de livraison de lait. Les résultats du contrôle du lait sont mis à disposition des cercles autorisés via la plateforme dbmilch.ch."@fr,
-        "Risultati del controllo pubblico del latte. Nel controllo pubblico del latte, il latte di mucca viene analizzato due volte al mese per i seguenti parametri: conta dei germi, cellule somatiche e inibitori. Risultati igienicamente insufficienti comportano reclami e, in caso di carenze igieniche prolungate, un divieto ufficiale di consegna del latte. I risultati del controllo del latte sono resi disponibili ai soggetti autorizzati tramite la piattaforma dbmilch.ch."@it ;
+    rdfs:comment """
+        Ergebnisse der öffentlich-rechtlichen Milchprüfung.
+        Bei der öffentlich-rechtlichen Milchprüfung wird die Kuhmilch zweimal monatlich auf die Prüfmerkmale Keimzahl, somatische Zellen und Hemmstoffe untersucht.
+        Hygienisch ungenügende Resultate haben Beanstandungen und bei länger andauernden Hygienemängeln eine amtliche Milchliefersperre zur Folge.
+        Die Ergebnisse der Milchprüfung werden über die Plattform dbmilch.ch an berechtigte Kreise bereitgestellt.
+        """@de,
+        """
+        Results of the public milk testing. In public milk testing, cow’s milk is examined twice a month for the parameters germ count, somatic cells, and inhibitors.
+        Hygienically insufficient results lead to complaints and, in case of prolonged hygiene deficiencies, an official milk delivery ban.
+        The results of the milk testing are made available to authorized parties via the platform dbmilch.ch.
+        """@en,
+        """
+        Résultats du contrôle public du lait.
+        Lors du contrôle public du lait, le lait de vache est analysé deux fois par mois pour les paramètres suivants : nombre de germes, cellules somatiques et inhibiteurs.
+        Des résultats hygiéniques insuffisants entraînent des réclamations et, en cas de carences hygiéniques prolongées, une interdiction officielle de livraison de lait.
+        Les résultats du contrôle du lait sont mis à disposition des cercles autorisés via la plateforme dbmilch.ch.
+        """@fr,
+        """
+        Risultati del controllo pubblico del latte.
+        Nel controllo pubblico del latte, il latte di mucca viene analizzato due volte al mese per i seguenti parametri: conta dei germi, cellule somatiche e inibitori.
+        Risultati igienicamente insufficienti comportano reclami e, in caso di carenze igieniche prolungate, un divieto ufficiale di consegna del latte.
+        I risultati del controllo del latte sono resi disponibili ai soggetti autorizzati tramite la piattaforma dbmilch.ch.
+        """@it ;
     systemmap:containedIn systemmap:SYS021 .
 
 systemmap:INF025 a systemmap:Information ;
@@ -3148,10 +4175,38 @@ systemmap:INF027 a systemmap:Information,
     systemmap:containedIn systemmap:SYS025 .
 
 systemmap:INF028 a systemmap:Information ;
-    rdfs:label "Details zu Unternehmen"@de ;
-    schema:description "Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit, Grundkapital der Aktiengesellschaften, Umsatzzahlen, Datum des Eintrags oder der Löschung im Handelsregister, Datum der Bekanntgabe der Gründung oder Schliessung eines Unternehmens oder Betriebs."@de ;
-    schema:name "Details zu Unternehmen"@de ;
-    rdfs:comment "Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit, Grundkapital der Aktiengesellschaften, Umsatzzahlen, Datum des Eintrags oder der Löschung im Handelsregister, Datum der Bekanntgabe der Gründung oder Schliessung eines Unternehmens oder Betriebs."@de ;
+    rdfs:label "Details zu Unternehmen"@de,
+        "Company details"@en,
+        "Détails sur les entreprises"@fr,
+        "Dettagli sulle imprese"@it ;
+    schema:description """
+        Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit, Grundkapital der Aktiengesellschaften, Umsatzzahlen, Datum des Eintrags oder der Löschung im Handelsregister, Datum der Bekanntgabe der Gründung oder Schliessung eines Unternehmens oder Betriebs.
+        """@de,
+        """
+        Number of employees by gender and working hours, share capital of joint-stock companies, revenue figures, date of registration or deletion in the commercial register, date of announcement of the establishment or closure of a company or business.
+        """@en,
+        """
+        Nombre d'employés selon le sexe et le temps de travail, capital social des sociétés anonymes, chiffres d'affaires, date d'inscription ou de suppression au registre du commerce, date d'annonce de la création ou de la fermeture d'une entreprise ou d'un établissement.
+        """@fr,
+        """
+        Numero di dipendenti per genere e orario di lavoro, capitale sociale delle società per azioni, dati di fatturato, data di registrazione o cancellazione nel registro commerciale, data di annuncio della fondazione o chiusura di un'azienda o impresa.
+        """@it ;
+    schema:name "Details zu Unternehmen"@de,
+        "Company details"@en,
+        "Détails sur les entreprises"@fr,
+        "Dettagli sulle imprese"@it ;
+    rdfs:comment """
+        Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit, Grundkapital der Aktiengesellschaften, Umsatzzahlen, Datum des Eintrags oder der Löschung im Handelsregister, Datum der Bekanntgabe der Gründung oder Schliessung eines Unternehmens oder Betriebs.
+        """@de,
+        """
+        Number of employees by gender and working hours, share capital of joint-stock companies, revenue figures, date of registration or deletion in the commercial register, date of announcement of the establishment or closure of a company or business.
+        """@en,
+        """
+        Nombre d'employés selon le sexe et le temps de travail, capital social des sociétés anonymes, chiffres d'affaires, date d'inscription ou de suppression au registre du commerce, date d'annonce de la création ou de la fermeture d'une entreprise ou d'un établissement.
+        """@fr,
+        """
+        Numero di dipendenti per genere e orario di lavoro, capitale sociale delle società per azioni, dati di fatturato, data di registrazione o cancellazione nel registro commerciale, data di annuncio della fondazione o chiusura di un'azienda o impresa.
+        """@it ;
     systemmap:containedIn systemmap:SYS025 .
 
 systemmap:INF029 a systemmap:Information,
@@ -3202,48 +4257,138 @@ systemmap:INF031 a systemmap:Information,
         "Pesticide imports"@en,
         "Importations de produits phytosanitaires"@fr,
         "Importazioni di prodotti fitosanitari"@it ;
-    schema:description "Daten zu jedem Import von Pflanzenschutzmitteln mit UID und Namen des Importeurs, Datum des Imports, Importmenge, Warenbezeichnung (Freitext) sowie Zustelladresse."@de,
-        "Data on each import of pesticides, including UID and name of the importer, date of import, import quantity, product designation (free text), and delivery address."@en,
-        "Données sur chaque importation de produits phytosanitaires, y compris l'UID et le nom de l'importateur, la date d'importation, la quantité importée, la désignation du produit (texte libre) et l'adresse de livraison."@fr,
-        "Dati su ogni importazione di prodotti fitosanitari, compresi UID e nome dell'importatore, data di importazione, quantità importata, denominazione del prodotto (testo libero) e indirizzo di consegna."@it ;
+    schema:description """
+        Daten zu jedem Import von Pflanzenschutzmitteln mit UID und Namen des Importeurs, Datum des Imports, Importmenge, Warenbezeichnung (Freitext) sowie Zustelladresse.
+        """@de,
+        """
+        Data on each import of pesticides, including UID and name of the importer, date of import, import quantity, product designation (free text), and delivery address.
+        """@en,
+        """
+        Données sur chaque importation de produits phytosanitaires, y compris l'UID et le nom de l'importateur, la date d'importation, la quantité importée, la désignation du produit (texte libre) et l'adresse de livraison.
+        """@fr,
+        """
+        Dati su ogni importazione di prodotti fitosanitari, compresi UID e nome dell'importatore, data di importazione, quantità importata, denominazione del prodotto (testo libero) e indirizzo di consegna.
+        """@it ;
     schema:name "Pflanzenschutzmittel-Importe"@de,
         "Pesticide imports"@en,
         "Importations de produits phytosanitaires"@fr,
         "Importazioni di prodotti fitosanitari"@it ;
-    rdfs:comment "Daten zu jedem Import von Pflanzenschutzmitteln mit UID und Namen des Importeurs, Datum des Imports, Importmenge, Warenbezeichnung (Freitext) sowie Zustelladresse."@de,
-        "Data on each import of pesticides, including UID and name of the importer, date of import, import quantity, product designation (free text), and delivery address."@en,
-        "Données sur chaque importation de produits phytosanitaires, y compris l'UID et le nom de l'importateur, la date d'importation, la quantité importée, la désignation du produit (texte libre) et l'adresse de livraison."@fr,
-        "Dati su ogni importazione di prodotti fitosanitari, compresi UID e nome dell'importatore, data di importazione, quantità importata, denominazione del prodotto (testo libero) e indirizzo di consegna."@it ;
+    rdfs:comment """
+        Daten zu jedem Import von Pflanzenschutzmitteln mit UID und Namen des Importeurs, Datum des Imports, Importmenge, Warenbezeichnung (Freitext) sowie Zustelladresse.
+        """@de,
+        """
+        Data on each import of pesticides, including UID and name of the importer, date of import, import quantity, product designation (free text), and delivery address.
+        """@en,
+        """
+        Données sur chaque importation de produits phytosanitaires, y compris l'UID et le nom de l'importateur, la date d'importation, la quantité importée, la désignation du produit (texte libre) et l'adresse de livraison.
+        """@fr,
+        """
+        Dati su ogni importazione di prodotti fitosanitari, compresi UID e nome dell'importatore, data di importazione, quantità importata, denominazione del prodotto (testo libero) e indirizzo di consegna.
+        """@it ;
     systemmap:containedIn systemmap:SYS026 ;
     systemmap:informs systemmap:INF032 .
 
 systemmap:INF032 a systemmap:Information,
         systemmap:PersonInformation ;
-    rdfs:label "Informationen zur Einfuhr von PSM"@de ;
-    schema:name "Informationen zur Einfuhr von PSM"@de ;
+    rdfs:label "Informationen zur Einfuhr von PSM"@de,
+        "Information on the import of PPP"@en,
+        "Informations sur l'importation de PPP"@fr,
+        "Informazioni sull'importazione di PPP"@it ;
+    schema:description """
+        Informationen zum Einfuhrzeitpunkt, dem Produkt, dem Importeur und dem Empfänger eines Pflanzenschutzmittels (PSM).
+        """@de,
+        """
+        Information on the import date, the product, the importer, and the recipient of a plant protection product (PPP).
+        """@en,
+        """
+        Informations sur la date d'importation, le produit, l'importateur et le destinataire d'un produit phytosanitaire (PPP).
+        """@fr,
+        """
+        Informazioni sulla data di importazione, il prodotto, l'importatore e il destinatario di un prodotto fitosanitario (PPP).
+        """@it ;
+    schema:name "Informationen zur Einfuhr von PSM"@de,
+        "Information on the import of PPP"@en,
+        "Informations sur l'importation de PPP"@fr,
+        "Informazioni sull'importazione di PPP"@it ;
+    rdfs:comment """
+        Informationen zum Einfuhrzeitpunkt, dem Produkt, dem Importeur und dem Empfänger eines Pflanzenschutzmittels (PSM).
+        """@de,
+        """
+        Information on the import date, the product, the importer, and the recipient of a plant protection product (PPP).
+        """@en,
+        """
+        Informations sur la date d'importation, le produit, l'importateur et le destinataire d'un produit phytosanitaire (PPP).
+        """@fr,
+        """
+        Informazioni sulla data di importazione, il prodotto, l'importatore e il destinatario di un prodotto fitosanitario (PPP).
+        """@it ;
     systemmap:containedIn systemmap:SYS007 ;
     systemmap:informedBy systemmap:INF031 .
 
 systemmap:INF033 a systemmap:Information ;
-    rdfs:label "Produktekatalog"@de ;
-    schema:name "Produktekatalog"@de ;
+    rdfs:label "Produktekatalog"@de,
+        "Product catalog"@en,
+        "Catalogue de produits"@fr,
+        "Catalogo dei prodotti"@it ;
+    schema:description """
+        Sammlung von Informationen zu Pflanzenschutzmittel-, Futtermittel-, Mineraldünger-, Hof- und Recyclingdünger-Produkten.
+        Das beinhaltet jeweilige Identifikatoren, Namen, Beschreibungen, Inhaltsstoffe und Mengen etc.
+        """@de,
+        """
+        Collection of information on plant protection products, feed, mineral fertilizers, farm and recycled fertilizers.
+        This includes respective identifiers, names, descriptions, ingredients, and quantities, etc.
+        """@en,
+        """
+        Collection d'informations sur les produits phytosanitaires, les aliments pour animaux, les engrais minéraux, les engrais de ferme et les engrais recyclés.
+        Cela inclut les identifiants respectifs, les noms, les descriptions, les ingrédients et les quantités, etc.
+        """@fr,
+        """
+        Raccolta di informazioni sui prodotti fitosanitari, i mangimi, i fertilizzanti minerali, i fertilizzanti agricoli e quelli riciclati.
+        Ciò include gli identificatori, i nomi, le descrizioni, gli ingredienti e le quantità, ecc.
+        """@it ;
+    schema:name "Produktekatalog"@de,
+        "Product catalog"@en,
+        "Catalogue de produits"@fr,
+        "Catalogo dei prodotti"@it ;
+    rdfs:comment """
+        Sammlung von Informationen zu Pflanzenschutzmittel-, Futtermittel-, Mineraldünger-, Hof- und Recyclingdünger-Produkten.
+        Das beinhaltet jeweilige Identifikatoren, Namen, Beschreibungen, Inhaltsstoffe und Mengen etc.
+        """@de,
+        """
+        Collection of information on plant protection products, feed, mineral fertilizers, farm and recycled fertilizers.
+        This includes respective identifiers, names, descriptions, ingredients, and quantities, etc.
+        """@en,
+        """
+        Collection d'informations sur les produits phytosanitaires, les aliments pour animaux, les engrais minéraux, les engrais de ferme et les engrais recyclés.
+        Cela inclut les identifiants respectifs, les noms, les descriptions, les ingrédients et les quantités, etc.
+        """@fr,
+        """
+        Raccolta di informazioni sui prodotti fitosanitari, i mangimi, i fertilizzanti minerali, i fertilizzanti agricoli e quelli riciclati.
+        Ciò include gli identificatori, i nomi, le descrizioni, gli ingredienti e le quantità, ecc.
+        """@it ;
     systemmap:containedIn systemmap:SYS006 ;
     systemmap:informedBy systemmap:INF037,
         systemmap:INF042 .
 
 systemmap:INF034 a systemmap:Information ;
     rdfs:label "Verschiebung von Hof- und Recyclingdünger"@de ;
+    schema:description "Die Verschiebung von Verschiebung von Hof- und Recyclingdüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge von Verschiebung von Hof- und Recyclingdüngern, einschliesslich Käufe, Verkäufe und betrieblicher Transfers."@de ;
     schema:name "Verschiebung von Hof- und Recyclingdünger"@de ;
+    rdfs:comment "Die Verschiebung von Verschiebung von Hof- und Recyclingdüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge von Verschiebung von Hof- und Recyclingdüngern, einschliesslich Käufe, Verkäufe und betrieblicher Transfers."@de ;
     systemmap:containedIn systemmap:SYS006 .
 
 systemmap:INF035 a systemmap:Information ;
     rdfs:label "Verschiebung von Mineraldüngern"@de ;
+    schema:description "Die Verschiebung von Mineraldüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge mineralischer Düngemittel, einschliesslich Käufe, Verkäufe und betrieblicher Transfers."@de ;
     schema:name "Verschiebung von Mineraldüngern"@de ;
+    rdfs:comment "Die Verschiebung von Mineraldüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge mineralischer Düngemittel, einschliesslich Käufe, Verkäufe und betrieblicher Transfers."@de ;
     systemmap:containedIn systemmap:SYS006 .
 
 systemmap:INF036 a systemmap:Information ;
     rdfs:label "Verschiebung von Pflanzenschutzmitteln"@de ;
+    schema:description "Die Verschiebung von Pflanzenschutzmitteln umfasst die Erfassung und Meldung aller Zu- und Abgänge von Pflanzenschutzmitteln, einschliesslich Käufe, Verkäufe und betrieblicher Transfers."@de ;
     schema:name "Verschiebung von Pflanzenschutzmitteln"@de ;
+    rdfs:comment "Die Verschiebung von Pflanzenschutzmitteln umfasst die Erfassung und Meldung aller Zu- und Abgänge von Pflanzenschutzmitteln, einschliesslich Käufe, Verkäufe und betrieblicher Transfers."@de ;
     systemmap:containedIn systemmap:SYS006 .
 
 systemmap:INF037 a systemmap:Information ;
@@ -3285,4 +4430,29 @@ systemmap:INF042 a systemmap:Information ;
     rdfs:comment "Produkte zur Boden- und Pflanzendüngung."@de ;
     systemmap:containedIn systemmap:SYS028 ;
     systemmap:informs systemmap:INF033 .
+
+systemmap:INF043 a systemmap:Information,
+        systemmap:PersonInformation ;
+    rdfs:label "Daten über Kontrollen und Kontrollergebnisse"@de,
+        "Data on inspections and inspection results"@en,
+        "Données sur les contrôles et les résultats des contrôles"@fr,
+        "Dati sui controlli e sui risultati dei controlli"@it ;
+    schema:name "Daten über Kontrollen und Kontrollergebnisse"@de,
+        "Data on inspections and inspection results"@en,
+        "Données sur les contrôles et les résultats des contrôles"@fr,
+        "Dati sui controlli e sui risultati dei controlli"@it ;
+    systemmap:containedIn systemmap:SYS001 .
+
+systemmap:INF044 a systemmap:Information,
+        systemmap:PersonInformation,
+        systemmap:SensitivePersonInformation ;
+    rdfs:label "Daten über Verwaltungsmassnahmen und strafrechtliche Sanktionen"@de,
+        "Data on administrative measures and criminal sanctions"@en,
+        "Données sur les mesures administratives et les sanctions pénales"@fr,
+        "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
+    schema:name "Daten über Verwaltungsmassnahmen und strafrechtliche Sanktionen"@de,
+        "Data on administrative measures and criminal sanctions"@en,
+        "Données sur les mesures administratives et les sanctions pénales"@fr,
+        "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
+    systemmap:containedIn systemmap:SYS001 .
 

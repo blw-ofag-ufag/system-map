@@ -126,12 +126,23 @@ async function init() {
         };
     });    
 
-    const edges = edgesJson.results.bindings.map(row => ({
-        from: row.from.value,
-        to: row.to.value,
-        label: row.label.value,
-        comment: row.comment ? row.comment.value : ""
-    }));    
+    const edges = edgesJson.results.bindings.map(row => {
+        const edge = {
+            from: row.from.value,
+            to: row.to.value,
+            label: row.label.value,
+            comment: row.comment ? row.comment.value : ""
+        };
+        
+        // If this edge represents an "informs" relationship,
+        // add dashed styling and increase its length.
+        if (row.id.value === "https://agriculture.ld.admin.ch/system-map/informs" || row.id.value === "https://agriculture.ld.admin.ch/system-map/usesIdentifier") {
+            edge.dashes = [5, 10]; // Dash pattern: 5px dash, 5px gap
+            edge.length = 600;    // Increase edge length to allow more spacing
+        }
+        
+        return edge;
+    });
 
     // 3) Create Vis DataSets
     const nodesDataset = new vis.DataSet(nodes);

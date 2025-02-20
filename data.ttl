@@ -70,12 +70,12 @@ systemmap:ORG099 a schema:Organization ;
         systemmap:ORG097,
         systemmap:ORG098 ;
     rdfs:comment """
-        Die Gemeinsame Anmeldestelle Chemikalien ist die zentrale Anlaufstelle für Chemikalien in der Schweiz,
-        betrieben vom Bundesamt für Umwelt (BAFU), dem Bundesamt für Gesundheit (BAG) und dem Staatssekretariat für Wirtschaft (SECO).
+        Die Gemeinsame Anmeldestelle Chemikalien ist die zentrale Anlaufstelle für Chemikalien in der Schweiz.
+        Sie wird vom Bundesamt für Umwelt (BAFU), dem Bundesamt für Gesundheit (BAG) und dem Staatssekretariat für Wirtschaft (SECO) betrieben.
         """@de,
         """
-        The Common Notification Authority for Chemicals is the central contact point for chemicals in Switzerland,
-        operated by the Federal Office for the Environment (FOEN), the Federal Office of Public Health (FOPH), and the State Secretariat for Economic Affairs (SECO).
+        The Common Notification Authority for Chemicals is the central contact point for chemicals in Switzerland.
+        It is operated by the Federal Office for the Environment (FOEN), the Federal Office of Public Health (FOPH), and the State Secretariat for Economic Affairs (SECO).
         """@en,
         """
         L'Autorité commune de notification des produits chimiques est le point de contact central pour les produits chimiques en Suisse,

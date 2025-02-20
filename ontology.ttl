@@ -1,3 +1,4 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -169,6 +170,16 @@ schema:subOrganization a owl:ObjectProperty,
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization ;
     owl:inverseOf schema:parentOrganization .
+
+dcat:landingPage a owl:ObjectProperty ;
+    rdfs:label "hat Landingpage"@de,
+        "has landing page"@en,
+        "a page d'accueil"@fr,
+        "ha pagina di destinazione"@it ;
+    rdfs:comment "Eine Webseite, die in einem Webbrowser aufgerufen werden kann, um auf den Katalog, ein Dataset, seine Distributionen und/oder zusätzliche Informationen zuzugreifen."@de,
+        "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information."@en,
+        "Une page Web pouvant être consultée dans un navigateur pour accéder au catalogue, à un ensemble de données, à ses distributions et/ou à des informations supplémentaires."@fr,
+        "Una pagina Web che può essere visitata in un browser per accedere al catalogo, a un set di dati, alle sue distribuzioni e/o a informazioni aggiuntive."@it .
 
 systemmap:access a owl:ObjectProperty ;
     rdfs:label "hat Zugriff auf"@de,

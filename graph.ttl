@@ -1,3 +1,4 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -21,11 +22,8 @@ systemmap:ORG001 a schema:GovernmentOrganization,
         "Federal Office for Agriculture"@en,
         "Office fédéral de l'agriculture"@fr,
         "Ufficio federale dell'agricoltura"@it ;
-    schema:subOrganization systemmap:ORG002,
-        systemmap:ORG004,
-        systemmap:ORG005,
-        systemmap:ORG006,
-        systemmap:ORG007 ;
+    schema:subOrganization systemmap:ORG003,
+        systemmap:ORG008 ;
     rdfs:comment "Das Bundesamt für Landwirtschaft (BLW) ist das Kompetenzzentrum des Bundes für alle Kernfragen im Zusammenhang mit dem Agrarsektor."@de,
         "The Federal Office for Agriculture (FOAG) is the Confederation's competence centre for all core issues relating to the agricultural sector."@en,
         "L'Office fédéral de l'agriculture (OFAG) est le centre de compétence de la Confédération pour toutes les questions essentielles liées au secteur agricole."@fr,
@@ -52,7 +50,7 @@ systemmap:ORG002 a schema:GovernmentOrganization,
         "Directorate for Digitalization and Data Management"@en,
         "Unité de direction Transition numérique et gestion des données"@fr,
         "Unità di direzione Digitalizzazione e gestione dei dati"@it ;
-    schema:parentOrganization systemmap:ORG001 ;
+    schema:parentOrganization systemmap:ORG003 ;
     schema:subOrganization systemmap:ORG010,
         systemmap:ORG011,
         systemmap:ORG012,
@@ -69,6 +67,23 @@ systemmap:ORG002 a schema:GovernmentOrganization,
         "DBDD"@fr,
         "DBDD"@it .
 
+systemmap:ORG003 a schema:GovernmentOrganization,
+        schema:Organization,
+        systemmap:FederalOrganization ;
+    rdfs:label "Direktion BLW"@de,
+        "Direction OFAG"@fr,
+        "Direzione UFAG"@it ;
+    schema:name "Direktion BLW"@de,
+        "Direction OFAG"@fr,
+        "Direzione UFAG"@it ;
+    schema:parentOrganization systemmap:ORG001 ;
+    schema:subOrganization systemmap:ORG002,
+        systemmap:ORG004,
+        systemmap:ORG005,
+        systemmap:ORG006,
+        systemmap:ORG007 ;
+    owl:sameAs staatskalender:10003196 .
+
 systemmap:ORG004 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
@@ -84,7 +99,7 @@ systemmap:ORG004 a schema:GovernmentOrganization,
         "Directorate for Law, Resources, and Integral Security"@en,
         "Unité de direction Droit, ressources internes et sécurité intégrale"@fr,
         "Unità di direzione Digitalizzazione e gestione dei dati"@it ;
-    schema:parentOrganization systemmap:ORG001 ;
+    schema:parentOrganization systemmap:ORG003 ;
     rdfs:comment "Der Direktionsbereich Recht, Ressourcen und Integrale Sicherheit sichert die rechtliche Konformität der verschiedenen BLW-Massnahmen und ist insbesondere für die personellen Massnahmen des Amtes verantwortlich."@de,
         "The Directorate for Law, Resources, and Integral Security ensures the legal compliance of various BLW measures and is particularly responsible for the office’s personnel measures."@en,
         "La Direction du droit, des ressources et de la sécurité intégrale garantit la conformité juridique des différentes mesures de l'OFAG et est notamment responsable des mesures en matière de personnel du bureau."@fr,
@@ -109,7 +124,7 @@ systemmap:ORG005 a schema:GovernmentOrganization,
         "Directorate for Production Resources, Natural Resources and Research"@en,
         "Unité de direction Bases de production, ressources naturelles et recherche"@fr,
         "Unità di direzione Basi di produzione, risorse naturali e ricerca"@it ;
-    schema:parentOrganization systemmap:ORG001 ;
+    schema:parentOrganization systemmap:ORG003 ;
     schema:subOrganization systemmap:ORG030,
         systemmap:ORG031,
         systemmap:ORG032 ;
@@ -137,7 +152,7 @@ systemmap:ORG006 a schema:GovernmentOrganization,
         "Directorate for Direct Payments and Rural Development"@en,
         "Unité de direction Paiements directs et développement rural"@fr,
         "Unità di direzione Pagamenti diretti e sviluppo rurale"@it ;
-    schema:parentOrganization systemmap:ORG001 ;
+    schema:parentOrganization systemmap:ORG003 ;
     schema:subOrganization systemmap:ORG020,
         systemmap:ORG021 ;
     rdfs:comment "Die Landwirte und Landwirtinnen erbringen verschiedene Leistungen für die Allgemeinheit und werden deshalb mit finanziellen Beiträgen unterstützt. Dafür ist der Direktionsbereich Direktzahlungen und Ländliche Entwicklung zuständig. Er setzt sich zudem für die Vitalität des ländlichen Raums ein."@de,
@@ -161,7 +176,7 @@ systemmap:ORG007 a schema:GovernmentOrganization,
         "Directorate for Markets and International Affairs"@en,
         "Unité de direction Marchés et affaires internationales"@fr,
         "Unità di direzione Mercati e affari internazionali"@it ;
-    schema:parentOrganization systemmap:ORG001 ;
+    schema:parentOrganization systemmap:ORG003 ;
     schema:subOrganization systemmap:ORG040,
         systemmap:ORG041 ;
     rdfs:comment "Der Direktionsbereich Märkte und Internationales setzt sich dafür ein, dass die Landwirtschaft aus dem Verkauf ihrer Produkte eine möglichst hohe Wertschöpfung erzielen kann. Selbsthilfemassnahmen, Innovation und Vermarktung der verschiedenen Branchen werden unterstützt. Zudem engagiert sich dieser Direktionsbereich in internationalen Organisationen wie der UNO-Ernährungsorganisation FAO oder der Welthandelsorganisation WTO."@de,
@@ -169,6 +184,60 @@ systemmap:ORG007 a schema:GovernmentOrganization,
         "La Direction des marchés et des affaires internationales s'efforce de garantir que l'agriculture tire la plus grande valeur ajoutée possible de la vente de ses produits. Elle soutient les mesures d'auto-assistance, l'innovation et la commercialisation des différentes filières. De plus, cette direction est impliquée dans des organisations internationales telles que l'Organisation des Nations unies pour l'alimentation et l'agriculture (FAO) et l'Organisation mondiale du commerce (OMC)."@fr,
         "La Direzione dei mercati e degli affari internazionali si adopera affinché l'agricoltura ottenga il massimo valore aggiunto possibile dalla vendita dei suoi prodotti. Sostiene misure di auto-aiuto, innovazione e commercializzazione nei vari settori. Inoltre, questa direzione è coinvolta in organizzazioni internazionali come l'Organizzazione delle Nazioni Unite per l'alimentazione e l'agricoltura (FAO) e l'Organizzazione mondiale del commercio (OMC)."@it ;
     systemmap:abbreviation "DBMI"@de .
+
+systemmap:ORG008 a schema:GovernmentOrganization,
+        schema:Organization,
+        systemmap:FederalOrganization ;
+    rdfs:label "Agroscope"@de,
+        "Agroscope"@en,
+        "Agroscope"@fr,
+        "Agroscope"@it ;
+    schema:description """
+        Agroscope ist das Schweizer Kompetenzzentrum für landwirtschaftliche Forschung und engagiert sich für eine nachhaltige Landwirtschaft, hochwertige Lebensmittelproduktion und Umweltschutz.
+        Angeschlossen an das Bundesamt für Landwirtschaft, forscht es entlang der gesamten Wertschöpfungskette der Landwirtschafts- und Ernährungsbranche, von Pflanzenbau und Nutztierhaltung bis hin zu Lebensmitteln und Ernährung.
+        Neben der Forschung bietet Agroscope Politikberatung, Wissensaustausch und Technologietransfer, um ein wettbewerbsfähiges und multifunktionales Agrar- und Ernährungssystem in der Schweiz zu unterstützen.
+        """@de,
+        """
+        Agroscope is the Swiss centre of excellence for agricultural research, dedicated to advancing sustainable agriculture, high-quality food production, and environmental protection .
+        Affiliated with the Federal Office for Agriculture, it conducts research along the entire value chain of the agriculture and food sector, covering topics from plant production and livestock to food and nutrition .
+        In addition to research, Agroscope provides policy advice, knowledge exchange, and technology transfer to support a competitive and multifunctional agri-food system in Switzerland .
+        """@en,
+        """
+        Agroscope est le centre de compétence suisse pour la recherche agricole, dédié à l’agriculture durable, à la production alimentaire de qualité et à la protection de l’environnement.
+        Rattaché à l’Office fédéral de l’agriculture, il mène des recherches tout au long de la chaîne de valeur du secteur agricole et alimentaire, couvrant des sujets allant de la production végétale et de l’élevage à l’alimentation et la nutrition.
+        En plus de la recherche, Agroscope fournit des conseils politiques, des échanges de connaissances et un transfert de technologies pour soutenir un système agroalimentaire compétitif et multifonctionnel en Suisse.
+        """@fr,
+        """
+        Agroscope è il centro di competenza svizzero per la ricerca agricola, impegnato nell'agricoltura sostenibile, nella produzione alimentare di alta qualità e nella protezione ambientale.
+        Affiliato all'Ufficio federale dell'agricoltura, conduce ricerche lungo l'intera catena del valore del settore agricolo e alimentare, coprendo argomenti che vanno dalla produzione vegetale e dall'allevamento fino agli alimenti e alla nutrizione.
+        Oltre alla ricerca, Agroscope fornisce consulenza politica, scambio di conoscenze e trasferimento tecnologico per sostenere un sistema agroalimentare competitivo e multifunzionale in Svizzera.
+        """@it ;
+    schema:name "Agroscope"@de,
+        "Agroscope"@en,
+        "Agroscope"@fr,
+        "Agroscope"@it ;
+    schema:parentOrganization systemmap:ORG001 ;
+    rdfs:comment """
+        Agroscope ist das Schweizer Kompetenzzentrum für landwirtschaftliche Forschung und engagiert sich für eine nachhaltige Landwirtschaft, hochwertige Lebensmittelproduktion und Umweltschutz.
+        Angeschlossen an das Bundesamt für Landwirtschaft, forscht es entlang der gesamten Wertschöpfungskette der Landwirtschafts- und Ernährungsbranche, von Pflanzenbau und Nutztierhaltung bis hin zu Lebensmitteln und Ernährung.
+        Neben der Forschung bietet Agroscope Politikberatung, Wissensaustausch und Technologietransfer, um ein wettbewerbsfähiges und multifunktionales Agrar- und Ernährungssystem in der Schweiz zu unterstützen.
+        """@de,
+        """
+        Agroscope is the Swiss centre of excellence for agricultural research, dedicated to advancing sustainable agriculture, high-quality food production, and environmental protection .
+        Affiliated with the Federal Office for Agriculture, it conducts research along the entire value chain of the agriculture and food sector, covering topics from plant production and livestock to food and nutrition .
+        In addition to research, Agroscope provides policy advice, knowledge exchange, and technology transfer to support a competitive and multifunctional agri-food system in Switzerland .
+        """@en,
+        """
+        Agroscope est le centre de compétence suisse pour la recherche agricole, dédié à l’agriculture durable, à la production alimentaire de qualité et à la protection de l’environnement.
+        Rattaché à l’Office fédéral de l’agriculture, il mène des recherches tout au long de la chaîne de valeur du secteur agricole et alimentaire, couvrant des sujets allant de la production végétale et de l’élevage à l’alimentation et la nutrition.
+        En plus de la recherche, Agroscope fournit des conseils politiques, des échanges de connaissances et un transfert de technologies pour soutenir un système agroalimentaire compétitif et multifonctionnel en Suisse.
+        """@fr,
+        """
+        Agroscope è il centro di competenza svizzero per la ricerca agricola, impegnato nell'agricoltura sostenibile, nella produzione alimentare di alta qualità e nella protezione ambientale.
+        Affiliato all'Ufficio federale dell'agricoltura, conduce ricerche lungo l'intera catena del valore del settore agricolo e alimentare, coprendo argomenti che vanno dalla produzione vegetale e dall'allevamento fino agli alimenti e alla nutrizione.
+        Oltre alla ricerca, Agroscope fornisce consulenza politica, scambio di conoscenze e trasferimento tecnologico per sostenere un sistema agroalimentare competitivo e multifunzionale in Svizzera.
+        """@it ;
+    owl:sameAs staatskalender:10003634 .
 
 systemmap:ORG010 a schema:GovernmentOrganization,
         schema:Organization,
@@ -324,19 +393,35 @@ systemmap:ORG021 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Direktzahlungsgrundlagen"@de ;
-    schema:description "Der Fachbereich Direktzahlungsgrundlagen ist zuständig für die Umsetzung und Weiterentwicklung des Direktzahlungssystems im Bereich der  Versorgungssicherheit, der Kulturlandschaft, der Übergangsbeiträge, der landwirtschaftlichen Zonen und Gebiete, der Landwirtschaftlichen Begriffe sowie der Anerkennung von Betrieben und Betriebsformen."@de ;
+    schema:description """
+        Der Fachbereich Direktzahlungsgrundlagen ist zuständig für die Umsetzung und Weiterentwicklung des Direktzahlungssystems im Bereich der  Versorgungssicherheit,
+        der Kulturlandschaft, der Übergangsbeiträge, der landwirtschaftlichen Zonen und Gebiete, der Landwirtschaftlichen Begriffe sowie der Anerkennung von Betrieben und Betriebsformen.
+        """@de ;
     schema:name "Fachbereich Direktzahlungsgrundlagen"@de ;
     schema:parentOrganization systemmap:ORG006 ;
-    rdfs:comment "Der Fachbereich Direktzahlungsgrundlagen ist zuständig für die Umsetzung und Weiterentwicklung des Direktzahlungssystems im Bereich der  Versorgungssicherheit, der Kulturlandschaft, der Übergangsbeiträge, der landwirtschaftlichen Zonen und Gebiete, der Landwirtschaftlichen Begriffe sowie der Anerkennung von Betrieben und Betriebsformen."@de ;
+    rdfs:comment """
+        Der Fachbereich Direktzahlungsgrundlagen ist zuständig für die Umsetzung und Weiterentwicklung des Direktzahlungssystems im Bereich der  Versorgungssicherheit,
+        der Kulturlandschaft, der Übergangsbeiträge, der landwirtschaftlichen Zonen und Gebiete, der Landwirtschaftlichen Begriffe sowie der Anerkennung von Betrieben und Betriebsformen.
+        """@de ;
     systemmap:abbreviation "FBDG"@de ;
     systemmap:operates systemmap:SYS001 .
 
 systemmap:ORG030 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
-    rdfs:label "Fachbereich Genetische Ressourcen und Technologien"@de ;
-    schema:name "Fachbereich Genetische Ressourcen und Technologien"@de ;
+    rdfs:label "Genetische Ressourcen, Produktionssicherheit und Futtermittel"@de ;
+    schema:description """
+        The Fachbereich Genetische Ressourcen, Produktionssicherheit und Futtermittel ist verantwortlich für den Erhalt und die nachhaltige Nutzung pflanzengenetischer Ressourcen, die Überwachung der Gentechnologie in der Landwirtschaft sowie die Identifikation und Regulierung von Risiken in der landwirtschaftlichen Produktion.
+        Zudem übernimmt er das Ereignis- und Krisenmanagement bei ABCN-Ereignissen und koordiniert die Futtermittelkontrolle sowie die Weiterentwicklung der entsprechenden Verordnungen.
+        Ein weiterer Schwerpunkt liegt auf der Tiergesundheit, insbesondere durch die Förderung von Innovationen, Antibiotikaresistenzstrategien und den One-Health-Ansatz.
+        """@de ;
+    schema:name "Genetische Ressourcen, Produktionssicherheit und Futtermittel"@de ;
     schema:parentOrganization systemmap:ORG005 ;
+    rdfs:comment """
+        The Fachbereich Genetische Ressourcen, Produktionssicherheit und Futtermittel ist verantwortlich für den Erhalt und die nachhaltige Nutzung pflanzengenetischer Ressourcen, die Überwachung der Gentechnologie in der Landwirtschaft sowie die Identifikation und Regulierung von Risiken in der landwirtschaftlichen Produktion.
+        Zudem übernimmt er das Ereignis- und Krisenmanagement bei ABCN-Ereignissen und koordiniert die Futtermittelkontrolle sowie die Weiterentwicklung der entsprechenden Verordnungen.
+        Ein weiterer Schwerpunkt liegt auf der Tiergesundheit, insbesondere durch die Förderung von Innovationen, Antibiotikaresistenzstrategien und den One-Health-Ansatz.
+        """@de ;
     systemmap:abbreviation "FBGRT"@de ;
     systemmap:operates systemmap:SYS009 .
 
@@ -468,12 +553,16 @@ systemmap:ORG210 a schema:GovernmentOrganization,
         "Federal Office for Customs and Border Security"@en,
         "Office fédéral de la douane et de la sécurité des frontières"@fr,
         "Ufficio federale della dogana e della sicurezza dei confini"@it ;
-    schema:description "Das Bundesamt für Zoll und Grenzsicherheit ist mit über 4000 Mitarbeitenden die grösste Verwaltungseinheit des Finanzdepartements. Hier finden Sie die Mitglieder der Geschäftsleitung."@de ;
+    schema:description """
+        Das Bundesamt für Zoll und Grenzsicherheit ist mit über 4000 Mitarbeitenden die grösste Verwaltungseinheit des Finanzdepartements.
+        """@de ;
     schema:name "Bundesamt für Zoll und Grenzsicherheit"@de,
         "Federal Office for Customs and Border Security"@en,
         "Office fédéral de la douane et de la sécurité des frontières"@fr,
         "Ufficio federale della dogana e della sicurezza dei confini"@it ;
-    rdfs:comment "Das Bundesamt für Zoll und Grenzsicherheit ist mit über 4000 Mitarbeitenden die grösste Verwaltungseinheit des Finanzdepartements. Hier finden Sie die Mitglieder der Geschäftsleitung."@de ;
+    rdfs:comment """
+        Das Bundesamt für Zoll und Grenzsicherheit ist mit über 4000 Mitarbeitenden die grösste Verwaltungseinheit des Finanzdepartements.
+        """@de ;
     owl:sameAs staatskalender:10008659 ;
     systemmap:abbreviation "BAZG"@de,
         "FOCBS"@en,
@@ -498,40 +587,153 @@ systemmap:ORG211 a schema:GovernmentOrganization,
 systemmap:ORG212 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
-    rdfs:label "Bundesamt für Statistik"@de ;
-    schema:description "Als nationales Kompetenzzentrum der öffentlichen Statistik ist das Bundesamt für Statistik (BFS) der zentrale Knotenpunkt im Datennökosystem der Schweiz. Es unterstützt und stärkt die gesamte öffentliche Verwaltung im Umgang mit Daten."@de ;
-    schema:name "Bundesamt für Statistik"@de ;
-    rdfs:comment "Als nationales Kompetenzzentrum der öffentlichen Statistik ist das Bundesamt für Statistik (BFS) der zentrale Knotenpunkt im Datennökosystem der Schweiz. Es unterstützt und stärkt die gesamte öffentliche Verwaltung im Umgang mit Daten."@de ;
+    rdfs:label "Bundesamt für Statistik"@de,
+        "Federal Statistical Office"@en,
+        "Office fédéral de la statistique"@fr,
+        "Ufficio federale di statistica"@it ;
+    schema:description """
+        Als nationales Kompetenzzentrum der öffentlichen Statistik ist das Bundesamt für Statistik (BFS) der zentrale Knotenpunkt im Datennökosystem der Schweiz.
+        Es unterstützt und stärkt die gesamte öffentliche Verwaltung im Umgang mit Daten.
+        """@de,
+        """
+        As the national center of expertise for public statistics, the Federal Statistical Office (FSO) serves as the central hub in Switzerland's data ecosystem.
+        It supports and strengthens the entire public administration in handling data.
+        """@en,
+        """
+        En tant que centre national de compétence pour la statistique publique, l’Office fédéral de la statistique (OFS) est le nœud central de l’écosystème des données en Suisse.
+        Il soutient et renforce l’ensemble de l’administration publique dans la gestion des données.
+        """@fr,
+        """
+        In qualità di centro nazionale di competenza per la statistica pubblica, l'Ufficio federale di statistica (UST) è il nodo centrale dell'ecosistema dei dati in Svizzera.
+        Supporta e rafforza l'intera amministrazione pubblica nella gestione dei dati.
+        """@it ;
+    schema:name "Bundesamt für Statistik"@de,
+        "Federal Statistical Office"@en,
+        "Office fédéral de la statistique"@fr,
+        "Ufficio federale di statistica"@it ;
+    rdfs:comment """
+        Als nationales Kompetenzzentrum der öffentlichen Statistik ist das Bundesamt für Statistik (BFS) der zentrale Knotenpunkt im Datennökosystem der Schweiz.
+        Es unterstützt und stärkt die gesamte öffentliche Verwaltung im Umgang mit Daten.
+        """@de,
+        """
+        As the national center of expertise for public statistics, the Federal Statistical Office (FSO) serves as the central hub in Switzerland's data ecosystem.
+        It supports and strengthens the entire public administration in handling data.
+        """@en,
+        """
+        En tant que centre national de compétence pour la statistique publique, l’Office fédéral de la statistique (OFS) est le nœud central de l’écosystème des données en Suisse.
+        Il soutient et renforce l’ensemble de l’administration publique dans la gestion des données.
+        """@fr,
+        """
+        In qualità di centro nazionale di competenza per la statistica pubblica, l'Ufficio federale di statistica (UST) è il nodo centrale dell'ecosistema dei dati in Svizzera.
+        Supporta e rafforza l'intera amministrazione pubblica nella gestione dei dati.
+        """@it ;
     owl:sameAs staatskalender:10008742 ;
-    systemmap:abbreviation "BFS"@de ;
+    systemmap:abbreviation "BFS"@de,
+        "FSO"@en,
+        "OFS"@fr,
+        "UST"@it ;
     systemmap:operates systemmap:SYS025,
         systemmap:SYS027 .
 
 systemmap:ORG213 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
-    rdfs:label "Gruppe GEVER Services"@de ;
+    rdfs:label "Gruppe GEVER Services"@de,
+        "GEVER Services Group"@en,
+        "Groupe Services GEVER"@fr,
+        "Gruppo Servizi GEVER"@it ;
     schema:description """
         Die Gruppe GEVER Services ist für die physische und elektronische Postverteilung sowie die zentrale Adressverwaltung im BLW zuständig.
         Die Postverarbeitung erfolgt hauptsächlich über das GEVER-System, das eine strukturierte Bearbeitung und Archivierung digitaler Unterlagen ermöglicht. 
-        """@de ;
-    schema:name "Gruppe GEVER Services"@de ;
+        """@de,
+        """
+        The GEVER Services Group is responsible for physical and electronic mail distribution as well as central address management within the FOAG.
+        Mail processing is primarily carried out via the GEVER system, which enables structured handling and archiving of digital documents.
+        """@en,
+        """
+        Le Groupe Services GEVER est responsable de la distribution du courrier physique et électronique ainsi que de la gestion centralisée des adresses au sein de l’OFAG.
+        Le traitement du courrier est principalement effectué via le système GEVER, qui permet un traitement structuré et une archivage des documents numériques.
+        """@fr,
+        """
+        Il Gruppo Servizi GEVER è responsabile della distribuzione della posta fisica ed elettronica, nonché della gestione centralizzata degli indirizzi all'interno dell'UFAG.
+        L'elaborazione della posta avviene principalmente tramite il sistema GEVER, che consente una gestione strutturata e l'archiviazione dei documenti digitali.
+        """@it ;
+    schema:name "Gruppe GEVER Services"@de,
+        "GEVER Services Group"@en,
+        "Groupe Services GEVER"@fr,
+        "Gruppo Servizi GEVER"@it ;
     schema:parentOrganization systemmap:ORG002 ;
     rdfs:comment """
         Die Gruppe GEVER Services ist für die physische und elektronische Postverteilung sowie die zentrale Adressverwaltung im BLW zuständig.
         Die Postverarbeitung erfolgt hauptsächlich über das GEVER-System, das eine strukturierte Bearbeitung und Archivierung digitaler Unterlagen ermöglicht. 
-        """@de ;
+        """@de,
+        """
+        The GEVER Services Group is responsible for physical and electronic mail distribution as well as central address management within the FOAG.
+        Mail processing is primarily carried out via the GEVER system, which enables structured handling and archiving of digital documents.
+        """@en,
+        """
+        Le Groupe Services GEVER est responsable de la distribution du courrier physique et électronique ainsi que de la gestion centralisée des adresses au sein de l’OFAG.
+        Le traitement du courrier est principalement effectué via le système GEVER, qui permet un traitement structuré et une archivage des documents numériques.
+        """@fr,
+        """
+        Il Gruppo Servizi GEVER è responsabile della distribuzione della posta fisica ed elettronica, nonché della gestione centralizzata degli indirizzi all'interno dell'UFAG.
+        L'elaborazione della posta avviene principalmente tramite il sistema GEVER, che consente una gestione strutturata e l'archiviazione dei documenti digitali.
+        """@it ;
     owl:sameAs staatskalender:20032934 ;
-    systemmap:abbreviation "GRGS"@de .
+    systemmap:abbreviation "GRGS"@de,
+        "GSG"@en,
+        "GSG"@fr,
+        "GSG"@it .
 
 systemmap:ORG214 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:FederalOrganization ;
-    rdfs:label "Fachbereich Informatikführung"@de ;
-    schema:name "Fachbereich Informatikführung"@de ;
+    rdfs:label "Fachbereich Informatikführung"@de,
+        "Information Technology Management Division"@en,
+        "Secteur Gestion Informatique"@fr,
+        "Settore Gestione Informatica"@it ;
+    schema:description """
+        Der Fachbereich Informatikführung verantwortet die strategische Planung, Umsetzung und Sicherheit der Informatik im BLW, einschliesslich des Managements von Projekten, Budgets und Fachanwendungen.
+        Er fungiert als Schnittstelle zu Dienstleistern, koordiniert Change-Management-Prozesse und stellt die Ausbildung sowie die Verwaltung von Mutationen und Berechtigungen sicher.
+        """@de,
+        """
+        The Information Technology Management Division is responsible for the strategic planning, implementation, and security of IT within the FOAG, including the management of projects, budgets, and specialized applications.
+        It serves as an interface with service providers, coordinates change management processes, and ensures training as well as the administration of modifications and access rights.
+        """@en,
+        """
+        Le Secteur Gestion Informatique est responsable de la planification stratégique, de la mise en œuvre et de la sécurité de l’informatique au sein de l’OFAG, y compris la gestion des projets, des budgets et des applications spécialisées.
+        Il sert d’interface avec les prestataires de services, coordonne les processus de gestion du changement et assure la formation ainsi que l’administration des modifications et des droits d’accès.
+        """@fr,
+        """
+        Il Settore Gestione Informatica è responsabile della pianificazione strategica, dell’attuazione e della sicurezza dell’informatica all’interno dell’UFAG, compresa la gestione di progetti, budget e applicazioni specializzate.
+        Funziona come interfaccia con i fornitori di servizi, coordina i processi di gestione del cambiamento e garantisce la formazione nonché l’amministrazione delle modifiche e dei diritti di accesso.
+        """@it ;
+    schema:name "Fachbereich Informatikführung"@de,
+        "Information Technology Management Division"@en,
+        "Secteur Gestion Informatique"@fr,
+        "Settore Gestione Informatica"@it ;
     schema:parentOrganization systemmap:ORG002 ;
+    rdfs:comment """
+        Der Fachbereich Informatikführung verantwortet die strategische Planung, Umsetzung und Sicherheit der Informatik im BLW, einschliesslich des Managements von Projekten, Budgets und Fachanwendungen.
+        Er fungiert als Schnittstelle zu Dienstleistern, koordiniert Change-Management-Prozesse und stellt die Ausbildung sowie die Verwaltung von Mutationen und Berechtigungen sicher.
+        """@de,
+        """
+        The Information Technology Management Division is responsible for the strategic planning, implementation, and security of IT within the FOAG, including the management of projects, budgets, and specialized applications.
+        It serves as an interface with service providers, coordinates change management processes, and ensures training as well as the administration of modifications and access rights.
+        """@en,
+        """
+        Le Secteur Gestion Informatique est responsable de la planification stratégique, de la mise en œuvre et de la sécurité de l’informatique au sein de l’OFAG, y compris la gestion des projets, des budgets et des applications spécialisées.
+        Il sert d’interface avec les prestataires de services, coordonne les processus de gestion du changement et assure la formation ainsi que l’administration des modifications et des droits d’accès.
+        """@fr,
+        """
+        Il Settore Gestione Informatica è responsabile della pianificazione strategica, dell’attuazione e della sicurezza dell’informatica all’interno dell’UFAG, compresa la gestione di progetti, budget e applicazioni specializzate.
+        Funziona come interfaccia con i fornitori di servizi, coordina i processi di gestione del cambiamento e garantisce la formazione nonché l’amministrazione delle modifiche e dei diritti di accesso.
+        """@it ;
     owl:sameAs systemmap:ORG214 ;
-    systemmap:abbreviation "FBIF"@de ;
+    systemmap:abbreviation "FBIF"@de,
+        "ITMD"@en,
+        "SGI"@fr,
+        "SGI"@it ;
     systemmap:operates systemmap:SYS002 .
 
 systemmap:ORG300 a schema:GovernmentOrganization,
@@ -1232,6 +1434,10 @@ systemmap:ORG338 a schema:GovernmentOrganization,
         "Ordonnance sur l’observation du marché dans le domaine de l’agriculture"@fr,
         "Ordinanza concernente il monitoraggio del mercato nel settore agricolo"@it .
 
+<https://www.fedlex.admin.ch/eli/cc/2010/340> a schema:Legislation ;
+    rdfs:label "Verordnung über das Inverkehrbringen von Pflanzenschutzmitteln (Pflanzenschutzmittelverordnung, PSMV)"@de ;
+    schema:name "Verordnung über das Inverkehrbringen von Pflanzenschutzmitteln (Pflanzenschutzmittelverordnung, PSMV)"@de .
+
 systemmap:ORG099 a schema:Organization ;
     rdfs:label "Gemeinsame Anmeldestelle Chemikalien"@de,
         "Common Notification Authority for Chemicals"@en,
@@ -1364,8 +1570,10 @@ systemmap:ORG200 a schema:Organization ;
         "International Union for the Protection of New Varieties of Plants"@en,
         "Union internationale pour la protection des obtentions végétales"@fr,
         "Unione internazionale per la protezione delle nuove varietà vegetali"@it ;
-    schema:description """Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz.
-        Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen."""@de,
+    schema:description """
+        Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz.
+        Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen.
+        """@de,
         """The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland.
         It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society."""@en,
         "L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse. Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société."@fr,
@@ -1374,8 +1582,10 @@ systemmap:ORG200 a schema:Organization ;
         "International Union for the Protection of New Varieties of Plants"@en,
         "Union internationale pour la protection des obtentions végétales"@fr,
         "Unione internazionale per la protezione delle nuove varietà vegetali"@it ;
-    rdfs:comment """Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz.
-        Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen."""@de,
+    rdfs:comment """
+        Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz.
+        Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen.
+        """@de,
         """The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland.
         It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society."""@en,
         "L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse. Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société."@fr,
@@ -1500,18 +1710,50 @@ systemmap:SYS006 a schema:SoftwareApplication ;
         "digiFLUX"@en,
         "digiFLUX"@fr,
         "digiFLUX"@it ;
-    schema:description "digiFLUX ist eine Webanwendung, die zur Umsetzung der Meldepflicht für den Handel und die Anwendung von Pflanzenschutzmitteln sowie für den Handel mit Nährstoffen entwickelt wurde. Sie ermöglicht den Akteuren eine einheitliche Schnittstelle zur Eingabe aller erforderlichen Angaben. Dadurch wird Transparenz und Einhaltung gesetzlicher Vorschriften im Agrarbereich gewährleistet."@de,
-        "digiFLUX is a web application developed to implement the reporting obligation for the trade and use of plant protection products as well as for the trade of nutrients. It provides stakeholders with a unified interface for entering all required information. This ensures transparency and compliance with legal regulations in the agricultural sector."@en,
-        "digiFLUX est une application web développée pour mettre en œuvre l'obligation de déclaration du commerce et de l'utilisation des produits phytosanitaires ainsi que du commerce des nutriments. Elle offre aux acteurs une interface unifiée pour saisir toutes les informations requises. Cela garantit la transparence et le respect des réglementations légales dans le secteur agricole."@fr,
-        "digiFLUX è un'applicazione web sviluppata per attuare l'obbligo di segnalazione per il commercio e l'uso dei prodotti fitosanitari nonché per il commercio di nutrienti. Fornisce agli operatori un'interfaccia unificata per l'inserimento di tutte le informazioni richieste. Ciò garantisce trasparenza e conformità alle normative legali nel settore agricolo."@it ;
+    schema:description """
+        digiFLUX ist eine Webanwendung, die zur Umsetzung der Meldepflicht für den Handel und die Anwendung von Pflanzenschutzmitteln sowie für den Handel mit Nährstoffen entwickelt wurde.
+        Sie ermöglicht den Akteuren eine einheitliche Schnittstelle zur Eingabe aller erforderlichen Angaben.
+        Dadurch wird Transparenz und Einhaltung gesetzlicher Vorschriften im Agrarbereich gewährleistet.
+        """@de,
+        """
+        digiFLUX is a web application developed to implement the reporting obligation for the trade and use of plant protection products as well as for the trade of nutrients.
+        It provides stakeholders with a unified interface for entering all required information.
+        This ensures transparency and compliance with legal regulations in the agricultural sector.
+        """@en,
+        """
+        digiFLUX est une application web développée pour mettre en œuvre l'obligation de déclaration du commerce et de l'utilisation des produits phytosanitaires ainsi que du commerce des nutriments.
+        Elle offre aux acteurs une interface unifiée pour saisir toutes les informations requises.
+        Cela garantit la transparence et le respect des réglementations légales dans le secteur agricole.
+        """@fr,
+        """
+        digiFLUX è un'applicazione web sviluppata per attuare l'obbligo di segnalazione per il commercio e l'uso dei prodotti fitosanitari nonché per il commercio di nutrienti.
+        Fornisce agli operatori un'interfaccia unificata per l'inserimento di tutte le informazioni richieste.
+        Ciò garantisce trasparenza e conformità alle normative legali nel settore agricolo.
+        """@it ;
     schema:name "digiFLUX"@de,
         "digiFLUX"@en,
         "digiFLUX"@fr,
         "digiFLUX"@it ;
-    rdfs:comment "digiFLUX ist eine Webanwendung, die zur Umsetzung der Meldepflicht für den Handel und die Anwendung von Pflanzenschutzmitteln sowie für den Handel mit Nährstoffen entwickelt wurde. Sie ermöglicht den Akteuren eine einheitliche Schnittstelle zur Eingabe aller erforderlichen Angaben. Dadurch wird Transparenz und Einhaltung gesetzlicher Vorschriften im Agrarbereich gewährleistet."@de,
-        "digiFLUX is a web application developed to implement the reporting obligation for the trade and use of plant protection products as well as for the trade of nutrients. It provides stakeholders with a unified interface for entering all required information. This ensures transparency and compliance with legal regulations in the agricultural sector."@en,
-        "digiFLUX est une application web développée pour mettre en œuvre l'obligation de déclaration du commerce et de l'utilisation des produits phytosanitaires ainsi que du commerce des nutriments. Elle offre aux acteurs une interface unifiée pour saisir toutes les informations requises. Cela garantit la transparence et le respect des réglementations légales dans le secteur agricole."@fr,
-        "digiFLUX è un'applicazione web sviluppata per attuare l'obbligo di segnalazione per il commercio e l'uso dei prodotti fitosanitari nonché per il commercio di nutrienti. Fornisce agli operatori un'interfaccia unificata per l'inserimento di tutte le informazioni richieste. Ciò garantisce trasparenza e conformità alle normative legali nel settore agricolo."@it ;
+    rdfs:comment """
+        digiFLUX ist eine Webanwendung, die zur Umsetzung der Meldepflicht für den Handel und die Anwendung von Pflanzenschutzmitteln sowie für den Handel mit Nährstoffen entwickelt wurde.
+        Sie ermöglicht den Akteuren eine einheitliche Schnittstelle zur Eingabe aller erforderlichen Angaben.
+        Dadurch wird Transparenz und Einhaltung gesetzlicher Vorschriften im Agrarbereich gewährleistet.
+        """@de,
+        """
+        digiFLUX is a web application developed to implement the reporting obligation for the trade and use of plant protection products as well as for the trade of nutrients.
+        It provides stakeholders with a unified interface for entering all required information.
+        This ensures transparency and compliance with legal regulations in the agricultural sector.
+        """@en,
+        """
+        digiFLUX est une application web développée pour mettre en œuvre l'obligation de déclaration du commerce et de l'utilisation des produits phytosanitaires ainsi que du commerce des nutriments.
+        Elle offre aux acteurs une interface unifiée pour saisir toutes les informations requises.
+        Cela garantit la transparence et le respect des réglementations légales dans le secteur agricole.
+        """@fr,
+        """
+        digiFLUX è un'applicazione web sviluppata per attuare l'obbligo di segnalazione per il commercio e l'uso dei prodotti fitosanitari nonché per il commercio di nutrienti.
+        Fornisce agli operatori un'interfaccia unificata per l'inserimento di tutte le informazioni richieste.
+        Ciò garantisce trasparenza e conformità alle normative legali nel settore agricolo.
+        """@it ;
     systemmap:contains systemmap:INF033,
         systemmap:INF034,
         systemmap:INF035,
@@ -1520,9 +1762,15 @@ systemmap:SYS006 a schema:SoftwareApplication ;
 
 systemmap:SYS007 a schema:SoftwareApplication ;
     rdfs:label "eKontingente"@de ;
-    schema:description "eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können. Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet."@de ;
+    schema:description """
+        eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können.
+        Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet.
+        """@de ;
     schema:name "eKontingente"@de ;
-    rdfs:comment "eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können. Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet."@de ;
+    rdfs:comment """
+        eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können.
+        Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet.
+        """@de ;
     systemmap:contains systemmap:INF032 ;
     systemmap:operatedBy systemmap:ORG040 .
 
@@ -1575,14 +1823,14 @@ systemmap:SYS009 a schema:SoftwareApplication ;
 systemmap:SYS010 a schema:SoftwareApplication ;
     rdfs:label "HODUFLU"@de ;
     schema:description """
-    HODUFLU ist ein Internetprogramm zur einheitlichen Verwaltung von Hof- und Recyclingdüngerverschiebungen in der Landwirtschaft.
-    Auf dieser Seite finden Sie Zugang zur Anwendung und nützliche Dokumente wie das Benutzerhandbuch für HODUFLU.
-    """@de ;
+        HODUFLU ist ein Internetprogramm zur einheitlichen Verwaltung von Hof- und Recyclingdüngerverschiebungen in der Landwirtschaft.
+        Auf dieser Seite finden Sie Zugang zur Anwendung und nützliche Dokumente wie das Benutzerhandbuch für HODUFLU.
+        """@de ;
     schema:name "HODUFLU"@de ;
     rdfs:comment """
-    HODUFLU ist ein Internetprogramm zur einheitlichen Verwaltung von Hof- und Recyclingdüngerverschiebungen in der Landwirtschaft.
-    Auf dieser Seite finden Sie Zugang zur Anwendung und nützliche Dokumente wie das Benutzerhandbuch für HODUFLU.
-    """@de ;
+        HODUFLU ist ein Internetprogramm zur einheitlichen Verwaltung von Hof- und Recyclingdüngerverschiebungen in der Landwirtschaft.
+        Auf dieser Seite finden Sie Zugang zur Anwendung und nützliche Dokumente wie das Benutzerhandbuch für HODUFLU.
+        """@de ;
     systemmap:operatedBy systemmap:ORG020 .
 
 systemmap:SYS011 a schema:SoftwareApplication ;
@@ -1796,10 +2044,20 @@ systemmap:SYS016 a schema:SoftwareApplication ;
 
 systemmap:SYS017 a schema:SoftwareApplication ;
     rdfs:label "Pflanzenschutzmittelverzeichnis"@de ;
+    schema:description """
+        Die bewilligten Pflanzenschutzmittel werden im Pflanzenschutzmittelverzeichnis aufgelistet.
+        Das Verzeichnis enthält Angaben zur vorgesehenen Anwendung, zu Anwendungseinschränkungen, Aufwandmengen, Gefahrenkennzeichnung und zu Anwendungsauflagen.
+        """@de ;
     schema:name "Pflanzenschutzmittelverzeichnis"@de ;
+    rdfs:comment """
+        Die bewilligten Pflanzenschutzmittel werden im Pflanzenschutzmittelverzeichnis aufgelistet.
+        Das Verzeichnis enthält Angaben zur vorgesehenen Anwendung, zu Anwendungseinschränkungen, Aufwandmengen, Gefahrenkennzeichnung und zu Anwendungsauflagen.
+        """@de ;
+    dcat:landingPage <https://www.psm.admin.ch/> ;
     systemmap:contains systemmap:INF037,
         systemmap:INF038,
         systemmap:INF039 ;
+    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2010/340> ;
     systemmap:operatedBy systemmap:ORG204 .
 
 systemmap:SYS020 a schema:SoftwareApplication ;
@@ -2269,6 +2527,24 @@ schema:subOrganization a owl:ObjectProperty,
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization ;
     owl:inverseOf schema:parentOrganization .
+
+dcat:landingPage a owl:ObjectProperty ;
+    rdfs:label "hat Landingpage"@de,
+        "has landing page"@en,
+        "a page d'accueil"@fr,
+        "ha pagina di destinazione"@it ;
+    schema:description "Eine Webseite, die in einem Webbrowser aufgerufen werden kann, um auf den Katalog, ein Dataset, seine Distributionen und/oder zusätzliche Informationen zuzugreifen."@de,
+        "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information."@en,
+        "Une page Web pouvant être consultée dans un navigateur pour accéder au catalogue, à un ensemble de données, à ses distributions et/ou à des informations supplémentaires."@fr,
+        "Una pagina Web che può essere visitata in un browser per accedere al catalogo, a un set di dati, alle sue distribuzioni e/o a informazioni aggiuntive."@it ;
+    schema:name "hat Landingpage"@de,
+        "has landing page"@en,
+        "a page d'accueil"@fr,
+        "ha pagina di destinazione"@it ;
+    rdfs:comment "Eine Webseite, die in einem Webbrowser aufgerufen werden kann, um auf den Katalog, ein Dataset, seine Distributionen und/oder zusätzliche Informationen zuzugreifen."@de,
+        "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information."@en,
+        "Une page Web pouvant être consultée dans un navigateur pour accéder au catalogue, à un ensemble de données, à ses distributions et/ou à des informations supplémentaires."@fr,
+        "Una pagina Web che può essere visitata in un browser per accedere al catalogo, a un set di dati, alle sue distribuzioni e/o a informazioni aggiuntive."@it .
 
 systemmap:access a owl:ObjectProperty ;
     rdfs:label "hat Zugriff auf"@de,

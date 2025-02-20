@@ -12,6 +12,16 @@ schema:GovernmentOrganization a owl:Class ;
         "Organizzazione di diritto pubblico"@it ;
     rdfs:subClassOf schema:Organization .
 
+schema:Legislation a owl:Class ;
+    rdfs:label "Gesetzgebung"@de,
+        "Legislation"@en,
+        "Législation"@fr,
+        "Legislazione"@it ;
+    rdfs:comment "Ein Rechtsdokument wie ein Gesetz, Dekret, Entwurf etc. (vollstreckbar oder nicht) oder ein Bestandteil eines Rechtsakts (wie ein Artikel)."@de,
+        "A legal document such as an act, decree, bill, etc. (enforceable or not) or a component of a legal act (like an article)."@en,
+        "Un document juridique tel qu'une loi, un décret, un projet de loi, etc. (exécutoire ou non) ou une composante d'un acte juridique (comme un article)."@fr,
+        "Un documento legale come un atto, un decreto, un disegno di legge, ecc. (applicabile o meno) o una componente di un atto legale (come un articolo)."@it .
+
 schema:Organization a owl:Class ;
     rdfs:label "Organisation"@de,
         "Organization"@en,
@@ -197,6 +207,16 @@ systemmap:contains a owl:ObjectProperty ;
     rdfs:domain schema:SoftwareApplication ;
     rdfs:range systemmap:Information ;
     owl:inverseOf systemmap:containedIn .
+
+systemmap:hasLegalBasis a owl:ObjectProperty ;
+    rdfs:label "hat Rechtsgrundlage"@de,
+        "has legal basis"@en,
+        "a une base légale"@fr,
+        "ha una base legale"@it ;
+    rdfs:comment "Indicates that anything X has a legal basis in a (particular part of) legislation Y."@en,
+        "Indique que tout X a une base légale dans une (partie particulière de) législation Y."@fr,
+        "Indica che qualsiasi X ha una base legale in una (particolare parte di) legislazione Y."@it ;
+    rdfs:domain schema:Legislation .
 
 systemmap:informedBy a owl:ObjectProperty ;
     rdfs:label "erhält Informationen von"@de,

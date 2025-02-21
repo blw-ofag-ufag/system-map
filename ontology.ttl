@@ -11,6 +11,26 @@ schema:GovernmentOrganization a owl:Class ;
         "Public-sector organization"@en,
         "Organisation de droit public"@fr,
         "Organizzazione di diritto pubblico"@it ;
+    rdfs:comment """
+        Eine öffentlich-rechtliche Organisation ist eine juristische Person oder eine Untereinheit einer solchen des öffentlichen Rechts, die durch einen Hoheitsakt gegründet wurde.
+        Sie erfüllt öffentliche Aufgaben und ist dabei an gesetzliche Vorgaben gebunden.
+        Beispiele sind Gebietskörperschaften wie Gemeinden oder Körperschaften des öffentlichen Rechts wie Universitäten.
+        """@de,
+        """
+        A public-sector organization is a legal entity or a subunit of such an entity under public law, established by an act of authority.
+        It fulfills public tasks and is bound by legal regulations.
+        Examples include territorial authorities such as municipalities or public law corporations like universities.
+        """@en,
+        """
+        Une organisation de droit public est une entité juridique ou une sous-unité d'une telle entité de droit public, créée par un acte d'autorité.
+        Elle accomplit des missions publiques et est soumise aux dispositions légales.
+        Des exemples incluent les collectivités territoriales comme les communes ou les corporations de droit public telles que les universités.
+        """@fr,
+        """
+        Un'organizzazione di diritto pubblico è un'entità giuridica o una sua sotto-unità di diritto pubblico, istituita tramite un atto di autorità.
+        Svolge compiti pubblici ed è vincolata da disposizioni legali.
+        Esempi includono enti territoriali come i comuni o corporazioni di diritto pubblico come le università.
+        """@it ;
     rdfs:subClassOf schema:Organization .
 
 schema:Legislation a owl:Class ;
@@ -18,36 +38,80 @@ schema:Legislation a owl:Class ;
         "Legislation"@en,
         "Législation"@fr,
         "Legislazione"@it ;
-    rdfs:comment "Ein Rechtsdokument wie ein Gesetz, Dekret, Entwurf etc. (vollstreckbar oder nicht) oder ein Bestandteil eines Rechtsakts (wie ein Artikel)."@de,
-        "A legal document such as an act, decree, bill, etc. (enforceable or not) or a component of a legal act (like an article)."@en,
-        "Un document juridique tel qu'une loi, un décret, un projet de loi, etc. (exécutoire ou non) ou une composante d'un acte juridique (comme un article)."@fr,
-        "Un documento legale come un atto, un decreto, un disegno di legge, ecc. (applicabile o meno) o una componente di un atto legale (come un articolo)."@it .
+    rdfs:comment """
+        Ein Rechtsdokument wie ein Gesetz, Dekret, Entwurf etc. (vollstreckbar oder nicht) oder ein Bestandteil eines Rechtsakts (wie ein Artikel).
+        """@de,
+        """
+        A legal document such as an act, decree, bill, etc. (enforceable or not) or a component of a legal act (like an article).
+        """@en,
+        """
+        Un document juridique tel qu'une loi, un décret, un projet de loi, etc. (exécutoire ou non) ou un élément d'un acte juridique (comme un article).
+        """@fr,
+        """
+        Un documento giuridico come una legge, un decreto, un disegno di legge, ecc. (esecutivo o meno) o una parte di un atto giuridico (come un articolo).
+        """@it .
 
 schema:Organization a owl:Class ;
     rdfs:label "Organisation"@de,
         "Organization"@en,
         "Organisation"@fr,
         "Organizzazione"@it ;
-    rdfs:comment "Eine Einheit wie ein Unternehmen, eine Behörde oder eine NGO oder eine Untereinheit einer solchen."@de,
-        "An entity such as a company, an authority, or an NGO, or a subunit of such an entity."@en,
-        "Une entité telle qu'une entreprise, une autorité ou une ONG, ou une sous-unité d'une telle entité."@fr,
-        "Un'entità come un'azienda, un'autorità o un'ONG, o una sua sotto-unità."@it .
+    rdfs:comment """
+        Eine (juristische) Person wie ein Unternehmen, eine Behörde oder eine NGO oder eine Untereinheit einer solchen.
+        """@de,
+        """
+        A (legal) entity such as a company, an authority, or an NGO, or a subunit of such an entity.
+        """@en,
+        """
+        Une personne (juridique) telle qu'une entreprise, une autorité ou une ONG, ou une sous-unité d'une telle entité.
+        """@fr,
+        """
+        Una persona (giuridica) come un'azienda, un'autorità o un'ONG, o una sotto-unità di tale entità.
+        """@it .
 
 schema:SoftwareApplication a owl:Class ;
     rdfs:label "IT-System"@de,
         "IT system"@en,
         "Système informatique"@fr,
         "Sistema IT"@it ;
-    rdfs:comment "Jedes IT-System (im abstrakten Sinne), oft mit einer oder mehreren dazugehörigen Datenbanken."@de,
-        "Any IT system (in an abstract sense), often with one or more associated databases."@en,
-        "Tout système informatique (dans un sens abstrait), souvent avec une ou plusieurs bases de données associées."@fr,
-        "Qualsiasi sistema IT (in senso astratto), spesso con uno o più database associati."@it .
+    rdfs:comment """
+        Jedes IT-System (im abstrakten Sinne), oft mit einer oder mehreren dazugehörigen Datenbanken.
+        """@de,
+        """
+        Any IT system (in an abstract sense), often with one or more associated databases.
+        """@en,
+        """
+        Tout système informatique (au sens abstrait), souvent avec une ou plusieurs bases de données associées.
+        """@fr,
+        """
+        Qualsiasi sistema IT (in senso astratto), spesso con uno o più database associati.
+        """@it .
 
 systemmap:CantonalAgriculturalAdvisor a owl:Class ;
     rdfs:label "Kantonale Beratungsstelle"@de,
         "Cantonal advice center"@en,
         "Centre de conseil cantonal"@fr,
         "Centro di consulenza cantonale"@it ;
+    rdfs:comment """
+        Eine kantonale Beratungsstelle bietet landwirtschaftlichen Betrieben Unterstützung und Orientierungshilfen in einem sich rasch wandelnden agrarpolitischen Umfeld.
+        Sie fördert die beruflichen Qualifikationen und die Weiterentwicklung fachlicher sowie betriebswirtschaftlicher Kompetenzen der Landwirte.
+        Beispiele sind der Strickhof im Kanton Zürich oder das Inforama im Kanton Bern.
+        """@de,
+        """
+        A cantonal advice center provides agricultural enterprises with support and guidance in a rapidly changing agricultural policy environment.
+        It promotes the professional qualifications and the development of technical and business competencies of farmers.
+        Examples include the Strickhof in the canton of Zurich or the Inforama in the canton of Bern.
+        """@en,
+        """
+        Un centre de conseil cantonal offre aux exploitations agricoles un soutien et des orientations dans un environnement politique agricole en rapide évolution.
+        Il favorise les qualifications professionnelles et le développement des compétences techniques et de gestion des agriculteurs.
+        Des exemples incluent le Strickhof dans le canton de Zurich ou l'Inforama dans le canton de Berne.
+        """@fr,
+        """
+        Un centro di consulenza cantonale offre alle aziende agricole supporto e orientamento in un contesto politico agricolo in rapida evoluzione.
+        Promuove le qualifiche professionali e lo sviluppo delle competenze tecniche e gestionali degli agricoltori.
+        Esempi includono lo Strickhof nel canton Zurigo o l'Inforama nel canton Berna.
+        """@it ;
     rdfs:subClassOf systemmap:CantonalOrganization .
 
 systemmap:CantonalAgriculturalOffice a owl:Class ;
@@ -55,6 +119,26 @@ systemmap:CantonalAgriculturalOffice a owl:Class ;
         "Cantonal agricultural office"@en,
         "Office agricole cantonal"@fr,
         "Ufficio agricolo cantonale"@it ;
+    rdfs:comment """
+        Ein kantonales Landwirtschaftsamt ist die zuständige Behörde für die Umsetzung der Agrargesetzgebung auf kantonaler Ebene.
+        Es unterstützt Landwirte durch Beratung, Weiterbildung und finanzielle Beiträge und fördert eine nachhaltige und wettbewerbsfähige Landwirtschaft.
+        Beispiele sind das Amt für Landwirtschaft im Kanton Schwyz oder das Amt für Landwirtschaft und Natur im Kanton Bern.
+        """@de,
+        """
+        A cantonal agricultural office is the authority responsible for implementing agricultural legislation at the cantonal level.
+        It supports farmers through advice, training, and financial contributions, promoting a sustainable and competitive agriculture.
+        Examples include the Office of Agriculture in the canton of Schwyz or the Office for Agriculture and Nature in the canton of Bern.
+        """@en,
+        """
+        Un office agricole cantonal est l'autorité responsable de la mise en œuvre de la législation agricole au niveau cantonal.
+        Il soutient les agriculteurs par des conseils, des formations et des contributions financières, favorisant une agriculture durable et compétitive.
+        Des exemples incluent l'Office de l'agriculture dans le canton de Schwytz ou l'Office de l'agriculture et de la nature dans le canton de Berne.
+        """@fr,
+        """
+        Un ufficio agricolo cantonale è l'autorità responsabile dell'attuazione della legislazione agricola a livello cantonale.
+        Supporta gli agricoltori attraverso consulenza, formazione e contributi finanziari, promuovendo un'agricoltura sostenibile e competitiva.
+        Esempi includono l'Ufficio dell'Agricoltura nel cantone di Svitto o l'Ufficio per l'Agricoltura e la Natura nel cantone di Berna.
+        """@it ;
     rdfs:subClassOf systemmap:CantonalOrganization .
 
 systemmap:CantonalOrganization a owl:Class ;
@@ -62,6 +146,26 @@ systemmap:CantonalOrganization a owl:Class ;
         "Cantonal organization"@en,
         "Organisation cantonale"@fr,
         "Organizzazione cantonale"@it ;
+    rdfs:comment """
+        Eine kantonale Organisation ist eine Behörde oder Einrichtung, die im Auftrag eines Kantons öffentliche Aufgaben wahrnimmt.
+        Sie kann in verschiedenen Bereichen wie Bildung, Landwirtschaft oder Gesundheit tätig sein.
+        Beispiele sind kantonale Landwirtschaftsämter oder Bildungsdirektionen.
+        """@de,
+        """
+        A cantonal organization is an authority or institution that carries out public tasks on behalf of a canton.
+        It can operate in various fields such as education, agriculture, or health.
+        Examples include cantonal agricultural offices or education departments.
+        """@en,
+        """
+        Une organisation cantonale est une autorité ou une institution qui accomplit des missions publiques pour le compte d'un canton.
+        Elle peut intervenir dans divers domaines tels que l'éducation, l'agriculture ou la santé.
+        Des exemples incluent les offices agricoles cantonaux ou les directions de l'éducation.
+        """@fr,
+        """
+        Un'organizzazione cantonale è un'autorità o un'istituzione che svolge compiti pubblici per conto di un cantone.
+        Può operare in diversi settori come l'istruzione, l'agricoltura o la salute.
+        Esempi includono gli uffici agricoli cantonali o i dipartimenti dell'istruzione.
+        """@it ;
     rdfs:subClassOf schema:GovernmentOrganization .
 
 systemmap:CantonalVeterinaryService a owl:Class ;
@@ -96,6 +200,26 @@ systemmap:FederalOrganization a owl:Class ;
         "Federal organization"@en,
         "Organisation fédérale"@fr,
         "Organizzazione federale"@it ;
+    rdfs:comment """
+        Eine Organisation des Bundes ist eine Behörde oder Institution auf Bundesebene oder eine Untereinheit davon, die öffentliche Aufgaben wahrnimmt.
+        Sie kann in verschiedenen Bereichen wie Sicherheit, Finanzen oder Umwelt tätig sein.
+        Beispiele sind das Bundesamt für Umwelt oder das Staatssekretariat für Wirtschaft.
+        """@de,
+        """
+        A federal organization is an authority or institution at the federal level, or a subunit thereof, that carries out public tasks.
+        It can operate in various fields such as security, finance, or the environment.
+        Examples include the Federal Office for the Environment or the State Secretariat for Economic Affairs.
+        """@en,
+        """
+        Une organisation fédérale est une autorité ou une institution au niveau fédéral, ou une sous-unité de celle-ci, qui accomplit des missions publiques.
+        Elle peut intervenir dans divers domaines tels que la sécurité, les finances ou l'environnement.
+        Des exemples incluent l'Office fédéral de l'environnement ou le Secrétariat d'État à l'économie.
+        """@fr,
+        """
+        Un'organizzazione federale è un'autorità o un'istituzione a livello federale, o una sua sotto-unità, che svolge compiti pubblici.
+        Può operare in diversi settori come la sicurezza, le finanze o l'ambiente.
+        Esempi includono l'Ufficio federale dell'ambiente o la Segreteria di Stato dell'economia.
+        """@it ;
     rdfs:subClassOf schema:GovernmentOrganization .
 
 systemmap:Identifier a owl:Class ;
@@ -103,10 +227,22 @@ systemmap:Identifier a owl:Class ;
         "Identification number"@en,
         "Numéro d'identification"@fr,
         "Numero di identificazione"@it ;
-    rdfs:comment "Eine Art von Identifikationsnummer (ID). Damit ist nicht die ID selbst gemeint, sondern die Sammlung von Identifikationsnummern insgesamt. Unter 'BUR' wird also nicht '1234-5678' verstanden, sondern die Sammlung <i>aller</i> BUR-Identifikationsnummern."@de,
-        "A type of identification number (ID). This does not refer to the ID itself but to the collection of identification numbers as a whole. 'BUR' does not mean '1234-5678' but rather the collection of <i>all</i> BUR identification numbers."@en,
-        "Un type de numéro d'identification (ID). Cela ne fait pas référence à l'ID lui-même, mais à l'ensemble des numéros d'identification. 'BUR' ne signifie pas '1234-5678', mais plutôt la collection de <i>tous</i> les numéros d'identification BUR."@fr,
-        "Un tipo di numero di identificazione (ID). Questo non si riferisce al numero ID stesso, ma all'insieme dei numeri di identificazione. 'BUR' non significa '1234-5678', ma piuttosto l'insieme di <i>tutti</i> i numeri di identificazione BUR."@it ;
+    rdfs:comment """
+        Eine Art von Identifikationsnummer (ID). Damit ist nicht die ID selbst gemeint, sondern die Sammlung von Identifikationsnummern insgesamt.
+        Unter 'BUR' wird also nicht '1234-5678' verstanden, sondern die Sammlung <i>aller</i> BUR-Identifikationsnummern.
+        """@de,
+        """
+        A type of identification number (ID). This does not refer to the ID itself but to the collection of identification numbers as a whole.
+        'BUR' does not mean '1234-5678' but rather the collection of <i>all</i> BUR identification numbers.
+        """@en,
+        """
+        Un type de numéro d'identification (ID). Il ne s'agit pas de l'ID en soi, mais de l'ensemble des numéros d'identification.
+        'BUR' ne désigne donc pas '1234-5678', mais l'ensemble de <i>tous</i> les numéros d'identification BUR.
+        """@fr,
+        """
+        Un tipo di numero di identificazione (ID). Non si riferisce all'ID stesso, ma all'insieme dei numeri di identificazione.
+        'BUR' non significa quindi '1234-5678', ma l'insieme di <i>tutti</i> i numeri di identificazione BUR.
+        """@it ;
     rdfs:subClassOf systemmap:Information .
 
 systemmap:Information a owl:Class ;
@@ -114,16 +250,40 @@ systemmap:Information a owl:Class ;
         "Information unit"@en,
         "Unité d'information"@fr,
         "Unità di informazione"@it ;
-    rdfs:comment "Eine Information in einem IT-System. Das kann wirklich alles Mögliche sein."@de,
-        "A piece of information in an IT system. Could be anything, really."@en,
-        "Une information dans un système informatique. Cela peut vraiment être n'importe quoi."@fr,
-        "Un'informazione in un sistema IT. Potrebbe essere qualsiasi cosa."@it .
+    rdfs:comment """
+        Eine Information in einem IT-System. Das kann wirklich alles Mögliche sein.
+        Dazu gehören zum Beispiel Datenbanken, Teile von Datenbanken, Tabellen oder Dokumente.
+        """@de,
+        """
+        A piece of information in an IT system. Could be anything, really.
+        This includes, for example, databases, parts of databases, tables, or documents.
+        """@en,
+        """
+        Une information dans un système informatique. Cela peut vraiment être n'importe quoi.
+        Cela inclut, par exemple, des bases de données, des parties de bases de données, des tableaux ou des documents.
+        """@fr,
+        """
+        Un'informazione in un sistema IT. Potrebbe essere qualsiasi cosa.
+        Questo include, ad esempio, database, parti di database, tabelle o documenti.
+        """@it .
 
 systemmap:PersonInformation a owl:Class ;
     rdfs:label "Informationseinheit mit Personendaten"@de,
         "Information unit containing personal data"@en,
         "Unité d'information contenant des données personnelles"@fr,
         "Unità di informazione contenente dati personali"@it ;
+    rdfs:comment """
+        Eine Informationseinheit, die personenbezogene Daten enthält, wie im Datenschutzgesetz Art. 5 definiert.
+        """@de,
+        """
+        An information unit containing personal data, as defined in the Data Protection Act, Article 5.
+        """@en,
+        """
+        Une unité d'information contenant des données personnelles, telles que définies dans la loi sur la protection des données, article 5.
+        """@fr,
+        """
+        Un'unità di informazione contenente dati personali, come definito nella legge sulla protezione dei dati, articolo 5.
+        """@it ;
     rdfs:seeAlso <https://www.fedlex.admin.ch/eli/oc/2022/491/de#art_5> ;
     rdfs:subClassOf systemmap:Information .
 
@@ -132,6 +292,26 @@ systemmap:PrivateOrganization a owl:Class ;
         "Private-sector organization"@en,
         "Organisation de droit privé"@fr,
         "Organizzazione di diritto privato"@it ;
+    rdfs:comment """
+        Eine privatrechtliche Organisation ist eine juristische Person oder eine Untereinheit davon, die nach privatem Recht organisiert ist.
+        Dazu gehören Unternehmen, Vereine, Stiftungen oder Genossenschaften.
+        Beispiele sind Aktiengesellschaften, Sportvereine oder karitative Stiftungen.
+        """@de,
+        """
+        A private-sector organization is a legal entity or a subunit thereof that is organized under private law.
+        This includes companies, associations, foundations, or cooperatives.
+        Examples are corporations, sports clubs, or charitable foundations.
+        """@en,
+        """
+        Une organisation de droit privé est une entité juridique ou une sous-unité de celle-ci, organisée selon le droit privé.
+        Cela inclut les entreprises, les associations, les fondations ou les coopératives.
+        Des exemples sont les sociétés anonymes, les clubs sportifs ou les fondations caritatives.
+        """@fr,
+        """
+        Un'organizzazione di diritto privato è un'entità giuridica o una sua sotto-unità organizzata secondo il diritto privato.
+        Ciò include aziende, associazioni, fondazioni o cooperative.
+        Esempi sono le società per azioni, i club sportivi o le fondazioni di beneficenza.
+        """@it ;
     rdfs:subClassOf schema:Organization .
 
 systemmap:SensitivePersonInformation a owl:Class ;
@@ -139,6 +319,18 @@ systemmap:SensitivePersonInformation a owl:Class ;
         "Information unit containing sensitive personal data"@en,
         "Unité d'information contenant des données personnelles sensibles"@fr,
         "Unità di informazione contenente dati personali sensibili"@it ;
+    rdfs:comment """
+        Eine Informationseinheit, die besonders schützenswerte personenbezogene Daten enthält, wie im Datenschutzgesetz Art. 5 definiert.
+        """@de,
+        """
+        An information unit containing sensitive personal data, as defined in the Data Protection Act, Article 5.
+        """@en,
+        """
+        Une unité d'information contenant des données personnelles sensibles, telles que définies dans la loi sur la protection des données, article 5.
+        """@fr,
+        """
+        Un'unità di informazione contenente dati personali sensibili, come definito nella legge sulla protezione dei dati, articolo 5.
+        """@it ;
     rdfs:seeAlso <https://www.fedlex.admin.ch/eli/oc/2022/491/de#art_5> ;
     rdfs:subClassOf systemmap:PersonInformation .
 
@@ -147,6 +339,22 @@ systemmap:abbreviation a owl:DatatypeProperty ;
         "Abbreviation"@en,
         "Abréviation"@fr,
         "Abbreviazione"@it ;
+    rdfs:comment """
+        Eine Abkürzung wird nur angegeben, wenn sie nicht bereits der bevorzugte Name ist.
+        Beispiel: Die Fenaco Genossenschaft (fédération nationale des coopératives agricoles) wird üblicherweise als "Fenaco" bezeichnet, sodass keine separate Abkürzung erforderlich ist.
+        """@de,
+        """
+        An abbreviation is only provided if it is not already the preferred name.
+        Example: The Fenaco cooperative (fédération nationale des coopératives agricoles) is commonly referred to as "Fenaco," making a separate abbreviation unnecessary.
+        """@en,
+        """
+        Une abréviation n'est indiquée que si elle n'est pas déjà le nom préféré.
+        Exemple : La coopérative Fenaco (fédération nationale des coopératives agricoles) est couramment appelée "Fenaco", rendant une abréviation distincte superflue.
+        """@fr,
+        """
+        Un'abbreviazione viene specificata solo se non è già il nome preferito.
+        Esempio: La cooperativa Fenaco (fédération nationale des coopératives agricoles) è comunemente chiamata "Fenaco", rendendo superflua un'ulteriore abbreviazione.
+        """@it ;
     rdfs:range xsd:string .
 
 schema:member a owl:ObjectProperty ;
@@ -154,10 +362,26 @@ schema:member a owl:ObjectProperty ;
         "has member organizations"@en,
         "a des organisations membres"@fr,
         "ha organizzazioni membri"@it ;
-    rdfs:comment "Gibt an, dass eine Organisation X eine andere Organisation Y als Mitgliedsorganisation hat. Diese Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formellen Vereinigungen darstellen, bei denen Organisationen als Mitglieder teilnehmen. Informelle Beziehungen gehören nicht dazu."@de,
-        "Indicates that an organization X has another organization Y as a member organization. This relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en,
-        "Indique qu'une organisation X a une autre organisation Y comme organisation membre. Cette relation est utilisée pour représenter les adhésions à des organisations sectorielles, des associations professionnelles ou d'autres associations formelles dans lesquelles les organisations participent en tant que membres. Les relations informelles ne sont pas incluses."@fr,
-        "Indica che un'organizzazione X ha un'altra organizzazione Y come organizzazione membro. Questa relazione viene utilizzata per rappresentare l'appartenenza a organizzazioni di settore, associazioni professionali o altre associazioni formali in cui le organizzazioni partecipano come membri. Le relazioni informali non sono incluse."@it ;
+    rdfs:comment """
+        Gibt an, dass eine Organisation X eine andere Organisation Y als Mitgliedsorganisation hat.
+        Diese Beziehung stellt Mitgliedschaften in Branchenorganisationen, Berufsverbänden oder anderen formellen Vereinigungen dar, bei denen Organisationen als Mitglieder teilnehmen.
+        Informelle Beziehungen gehören nicht dazu.
+        """@de,
+        """
+        Indicates that an organization X has another organization Y as a member organization.
+        This relationship represents memberships in industry organizations, professional associations, or other formal unions where organizations participate as members.
+        Informal relationships are not included.
+        """@en,
+        """
+        Indique qu'une organisation X a une autre organisation Y comme organisation membre.
+        Cette relation représente l'adhésion à des organisations sectorielles, des associations professionnelles ou d'autres unions formelles où des organisations participent en tant que membres.
+        Les relations informelles ne sont pas incluses.
+        """@fr,
+        """
+        Indica che un'organizzazione X ha un'altra organizzazione Y come organizzazione membro.
+        Questa relazione rappresenta l'adesione a organizzazioni di settore, associazioni professionali o altre unioni formali in cui le organizzazioni partecipano come membri.
+        Le relazioni informali non sono incluse.
+        """@it ;
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization ;
     owl:inverseOf schema:memberOf .
@@ -167,10 +391,26 @@ schema:memberOf a owl:ObjectProperty ;
         "is a member organization of"@en,
         "est une organisation membre de"@fr,
         "è un'organizzazione membro di"@it ;
-    rdfs:comment "Gibt an, dass eine Organisation X eine Mitgliedsorganisation einer anderen Organisation Y ist. Die Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formellen Vereinigungen darstellen, bei denen Organisationen als Mitglieder teilnehmen. Informelle Beziehungen gehören nicht dazu."@de,
-        "Indicates that an organization X is a member organization of another organization Y. The relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members. Informal relationships are not included."@en,
-        "Indique qu'une organisation X est une organisation membre d'une autre organisation Y. La relation est utilisée pour représenter les adhésions à des organisations sectorielles, des associations professionnelles ou d'autres associations formelles dans lesquelles les organisations participent en tant que membres. Les relations informelles ne sont pas incluses."@fr,
-        "Indica che un'organizzazione X è un'organizzazione membro di un'altra organizzazione Y. La relazione viene utilizzata per rappresentare l'appartenenza a organizzazioni di settore, associazioni professionali o altre associazioni formali in cui le organizzazioni partecipano come membri. Le relazioni informali non sono incluse."@it ;
+    rdfs:comment """  
+        Gibt an, dass eine Organisation X eine Mitgliedsorganisation einer anderen Organisation Y ist.  
+        Die Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formellen Vereinigungen darstellen, bei denen Organisationen als Mitglieder teilnehmen.  
+        Informelle Beziehungen gehören nicht dazu.  
+        """@de,
+        """  
+        Indicates that an organization X is a member organization of another organization Y.  
+        The relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members.  
+        Informal relationships are not included.  
+        """@en,
+        """  
+        Indique qu'une organisation X est une organisation membre d'une autre organisation Y.  
+        La relation est utilisée pour représenter les adhésions à des organisations sectorielles, des associations professionnelles ou d'autres associations formelles dans lesquelles les organisations participent en tant que membres.  
+        Les relations informelles ne sont pas incluses.  
+        """@fr,
+        """  
+        Indica che un'organizzazione X è un'organizzazione membro di un'altra organizzazione Y.  
+        La relazione viene utilizzata per rappresentare l'appartenenza a organizzazioni di settore, associazioni professionali o altre associazioni formali in cui le organizzazioni partecipano come membri.  
+        Le relazioni informali non sono incluse.  
+        """@it ;
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization ;
     owl:inverseOf schema:member .
@@ -181,10 +421,18 @@ schema:parentOrganization a owl:ObjectProperty,
         "belongs to"@en,
         "fait partie de"@fr,
         "fa parte di"@it ;
-    rdfs:comment "Zeigt an, dass die (Teil-)Organisation ein Teil von einer (Über-)Organisation Y ist."@de,
-        "Indicates that the (sub-)organization is part of a (parent) organization Y."@en,
-        "Indique que l'(sous-)organisation fait partie d'une (organisation parent) Y."@fr,
-        "Indica che l'(sotto-)organizzazione fa parte di un'(organizzazione madre) Y."@it ;
+    rdfs:comment """  
+        Zeigt an, dass die (Teil-)Organisation ein Teil von einer (Über-)Organisation Y ist.  
+        """@de,
+        """  
+        Indicates that the (sub-)organization is part of a (parent) organization Y.  
+        """@en,
+        """  
+        Indique que l'(sous-)organisation fait partie d'une (organisation parent) Y.  
+        """@fr,
+        """  
+        Indica che l'(sotto-)organizzazione fa parte di un'(organizzazione madre) Y.  
+        """@it ;
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization .
 
@@ -194,6 +442,22 @@ schema:subOrganization a owl:ObjectProperty,
         "contains suborganization"@en,
         "contient une sous-organisation"@fr,
         "contiene un'organizzazione subordinata"@it ;
+    rdfs:comment """  
+        Gibt an, dass eine Organisation eine oder mehrere Suborganisationen unter sich hat.  
+        Diese Beziehung stellt eine hierarchische Struktur zwischen Organisationen dar.  
+        """@de,
+        """  
+        Indicates that an organization has one or more suborganizations under it.  
+        This relationship represents a hierarchical structure between organizations.  
+        """@en,
+        """  
+        Indique qu'une organisation a une ou plusieurs sous-organisations sous son autorité.  
+        Cette relation représente une structure hiérarchique entre les organisations.  
+        """@fr,
+        """  
+        Indica che un'organizzazione ha una o più organizzazioni subordinate sotto di sé.  
+        Questa relazione rappresenta una struttura gerarchica tra le organizzazioni.  
+        """@it ;
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization ;
     owl:inverseOf schema:parentOrganization .
@@ -203,20 +467,36 @@ dcat:landingPage a owl:ObjectProperty ;
         "has landing page"@en,
         "a page d'accueil"@fr,
         "ha pagina di destinazione"@it ;
-    rdfs:comment "Eine Webseite, die in einem Webbrowser aufgerufen werden kann, um auf den Katalog, ein Dataset, seine Distributionen und/oder zusätzliche Informationen zuzugreifen."@de,
-        "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information."@en,
-        "Une page Web pouvant être consultée dans un navigateur pour accéder au catalogue, à un ensemble de données, à ses distributions et/ou à des informations supplémentaires."@fr,
-        "Una pagina Web che può essere visitata in un browser per accedere al catalogo, a un set di dati, alle sue distribuzioni e/o a informazioni aggiuntive."@it .
+    rdfs:comment """  
+        Eine Webseite, die in einem Webbrowser aufgerufen werden kann, um auf den Katalog, ein Dataset, seine Distributionen und/oder zusätzliche Informationen zuzugreifen.  
+        """@de,
+        """  
+        A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.  
+        """@en,
+        """  
+        Une page Web pouvant être consultée dans un navigateur pour accéder au catalogue, à un ensemble de données, à ses distributions et/ou à des informations supplémentaires.  
+        """@fr,
+        """  
+        Una pagina Web che può essere visitata in un browser per accedere al catalogo, a un set di dati, alle sue distribuzioni e/o a informazioni aggiuntive.  
+        """@it .
 
 systemmap:access a owl:ObjectProperty ;
     rdfs:label "hat Zugriff auf"@de,
         "has access to"@en,
         "a accès à"@fr,
         "ha accesso a"@it ;
-    rdfs:comment "Zeigt an, dass eine Organisation X die Rechte zum Zugriff auf die Informationseinheit Y hat."@de,
-        "Indicates that an organization X has the rights to access the information unit Y."@en,
-        "Indique qu'une organisation X a le droit d'accéder à l'unité d'information Y."@fr,
-        "Indica che un'organizzazione X ha il diritto di accedere all'unità di informazione Y."@it ;
+    rdfs:comment """  
+        Zeigt an, dass eine Organisation X die Rechte zum Zugriff auf die Informationseinheit Y hat.  
+        """@de,
+        """  
+        Indicates that an organization X has the rights to access the information unit Y.  
+        """@en,
+        """  
+        Indique qu'une organisation X a le droit d'accéder à l'unité d'information Y.  
+        """@fr,
+        """  
+        Indica che un'organizzazione X ha il diritto di accedere all'unità di informazione Y.  
+        """@it ;
     rdfs:domain schema:Organization ;
     rdfs:range systemmap:Information .
 
@@ -225,10 +505,22 @@ systemmap:containedIn a owl:ObjectProperty ;
         "is contained in"@en,
         "est contenu dans"@fr,
         "è contenuto in"@it ;
-    rdfs:comment "Gibt an, dass eine Informationseinheit X im IT-System Y enthalten ist. Beispielsweise sind Informationen über landwirtschaftliche Flächen in der Schweiz in AGIS enthalten."@de,
-        "Indicates that an information unit X is contained in the IT system Y. For example, information about farming areas in Switzerland is contained in AGIS."@en,
-        "Indique qu'une unité d'information X est contenue dans le système informatique Y. Par exemple, les informations sur les surfaces agricoles en Suisse sont contenues dans AGIS."@fr,
-        "Indica che un'unità di informazione X è contenuta nel sistema IT Y. Ad esempio, le informazioni sulle superfici agricole in Svizzera sono contenute in AGIS."@it ;
+    rdfs:comment """  
+        Gibt an, dass eine Informationseinheit X im IT-System Y enthalten ist.  
+        Beispielsweise sind Informationen über landwirtschaftliche Flächen in der Schweiz in AGIS enthalten.  
+        """@de,
+        """  
+        Indicates that an information unit X is contained in the IT system Y.  
+        For example, information about farming areas in Switzerland is contained in AGIS.  
+        """@en,
+        """  
+        Indique qu'une unité d'information X est contenue dans le système informatique Y.  
+        Par exemple, les informations sur les surfaces agricoles en Suisse sont contenues dans AGIS.  
+        """@fr,
+        """  
+        Indica che un'unità di informazione X è contenuta nel sistema IT Y.  
+        Ad esempio, le informazioni sulle superfici agricole in Svizzera sono contenute in AGIS.  
+        """@it ;
     rdfs:domain systemmap:Information ;
     rdfs:range schema:SoftwareApplication ;
     owl:inverseOf systemmap:contains .
@@ -238,10 +530,22 @@ systemmap:contains a owl:ObjectProperty ;
         "contains"@en,
         "contient"@fr,
         "contiene"@it ;
-    rdfs:comment "Gibt an, dass ein IT-System X die Informationseinheit Y enthält. Beispielsweise enthält AGIS Informationen über landwirtschaftliche Flächen in der Schweiz."@de,
-        "Indicates that an IT system X contains the information unit Y. For example, AGIS contains information about farming areas in Switzerland."@en,
-        "Indique qu'un système informatique X contient l'unité d'information Y. Par exemple, AGIS contient des informations sur les surfaces agricoles en Suisse."@fr,
-        "Indica che un sistema IT X contiene l'unità di informazione Y. Ad esempio, AGIS contiene informazioni sulle superfici agricole in Svizzera."@it ;
+    rdfs:comment """  
+        Gibt an, dass ein IT-System X die Informationseinheit Y enthält.  
+        Beispielsweise enthält AGIS Informationen über landwirtschaftliche Flächen in der Schweiz.  
+        """@de,
+        """  
+        Indicates that an IT system X contains the information unit Y.  
+        For example, AGIS contains information about farming areas in Switzerland.  
+        """@en,
+        """  
+        Indique qu'un système informatique X contient l'unité d'information Y.  
+        Par exemple, AGIS contient des informations sur les surfaces agricoles en Suisse.  
+        """@fr,
+        """  
+        Indica che un sistema IT X contiene l'unità di informazione Y.  
+        Ad esempio, AGIS contiene informazioni sulle superfici agricole in Svizzera.  
+        """@it ;
     rdfs:domain schema:SoftwareApplication ;
     rdfs:range systemmap:Information ;
     owl:inverseOf systemmap:containedIn .
@@ -251,10 +555,18 @@ systemmap:hasLegalBasis a owl:ObjectProperty ;
         "has legal basis"@en,
         "a une base légale"@fr,
         "ha una base legale"@it ;
-    rdfs:comment "Zeigt an, dass irgendetwas X eine Rechtsgrundlage mit (einem bestimmten Teil) der Legislation Y hat."@de,
-    "Indicates that anything X has a legal basis in a (particular part of) legislation Y."@en,
-        "Indique que tout X a une base légale dans une (partie particulière de) législation Y."@fr,
-        "Indica che qualsiasi X ha una base legale in una (particolare parte di) legislazione Y."@it ;
+    rdfs:comment """  
+        Zeigt an, dass irgendetwas X eine Rechtsgrundlage mit (einem bestimmten Teil) der Legislation Y hat.  
+        """@de,
+        """  
+        Indicates that anything X has a legal basis in a (particular part of) legislation Y.  
+        """@en,
+        """  
+        Indique que tout X a une base légale dans une (partie particulière de) législation Y.  
+        """@fr,
+        """  
+        Indica che qualsiasi X ha una base legale in una (particolare parte di) legislazione Y.  
+        """@it ;
     rdfs:range schema:Legislation .
 
 systemmap:informedBy a owl:ObjectProperty ;
@@ -262,10 +574,26 @@ systemmap:informedBy a owl:ObjectProperty ;
         "gets information from"@en,
         "obtient des informations de"@fr,
         "ottiene informazioni da"@it ;
-    rdfs:comment "Zeigt an, dass eine Informationseinheit X von einer anderen Informationseinheit Y abgeleitet ist. Diese Beziehung wird gebraucht, um Informationsflüsse darzustellen. Diese müssen nicht zwingend (durch eine API oder Ähnliches) formalisiert sein."@de,
-        "Indicates that an information unit X is derived from another information unit Y. This relationship is used to represent information flows. These do not necessarily have to be formalized (through an API or similar means)."@en,
-        "Indique qu'une unité d'information X est dérivée d'une autre unité d'information Y. Cette relation est utilisée pour représenter les flux d'information. Ceux-ci ne doivent pas nécessairement être formalisés (par une API ou un moyen similaire)."@fr,
-        "Indica che un'unità di informazione X è derivata da un'altra unità di informazione Y. Questa relazione viene utilizzata per rappresentare i flussi di informazioni. Questi non devono necessariamente essere formalizzati (tramite un'API o mezzi simili)."@it ;
+    rdfs:comment """  
+        Zeigt an, dass eine Informationseinheit X von einer anderen Informationseinheit Y abgeleitet ist.  
+        Diese Beziehung wird gebraucht, um Informationsflüsse darzustellen.  
+        Diese müssen nicht zwingend (durch eine API oder Ähnliches) formalisiert sein.  
+        """@de,
+        """  
+        Indicates that an information unit X is derived from another information unit Y.  
+        This relationship is used to represent information flows.  
+        These do not necessarily have to be formalized (through an API or similar means).  
+        """@en,
+        """  
+        Indique qu'une unité d'information X est dérivée d'une autre unité d'information Y.  
+        Cette relation est utilisée pour représenter les flux d'information.  
+        Ceux-ci ne doivent pas nécessairement être formalisés (par une API ou un moyen similaire).  
+        """@fr,
+        """  
+        Indica che un'unità di informazione X è derivata da un'altra unità di informazione Y.  
+        Questa relazione viene utilizzata per rappresentare i flussi di informazioni.  
+        Questi non devono necessariamente essere formalizzati (tramite un'API o mezzi simili).  
+        """@it ;
     rdfs:domain systemmap:Information ;
     rdfs:range systemmap:Information ;
     owl:inverseOf systemmap:informs .
@@ -300,10 +628,22 @@ systemmap:operatedBy a owl:ObjectProperty ;
         "is operated by"@en,
         "est exploité par"@fr,
         "è gestito da"@it ;
-    rdfs:comment "Gibt an, dass ein IT-System X durch eine Organisation Y betrieben wird; i.e. dass die Organisation Y für den Betrieb von System X zuständig ist."@de,
-        "Indicates that an IT system X is operated by an organization Y; i.e., that organization Y is responsible for operating system X."@en,
-        "Indique qu'un système informatique X est exploité par une organisation Y, c'est-à-dire que l'organisation Y est responsable de l'exploitation du système X."@fr,
-        "Indica che un sistema IT X è gestito da un'organizzazione Y, ovvero che l'organizzazione Y è responsabile della gestione del sistema X."@it ;
+    rdfs:comment """  
+        Gibt an, dass ein IT-System X durch eine Organisation Y betrieben wird.  
+        Das bedeutet, dass die Organisation Y für den Betrieb von System X zuständig ist.  
+        """@de,
+        """  
+        Indicates that an IT system X is operated by an organization Y.  
+        This means that organization Y is responsible for operating system X.  
+        """@en,
+        """  
+        Indique qu'un système informatique X est exploité par une organisation Y.  
+        Cela signifie que l'organisation Y est responsable de l'exploitation du système X.  
+        """@fr,
+        """  
+        Indica che un sistema IT X è gestito da un'organizzazione Y.  
+        Ciò significa che l'organizzazione Y è responsabile della gestione del sistema X.  
+        """@it ;
     rdfs:domain schema:SoftwareApplication ;
     rdfs:range schema:Organization ;
     owl:inverseOf systemmap:operates .
@@ -313,10 +653,26 @@ systemmap:operates a owl:ObjectProperty ;
         "operates"@en,
         "exploite"@fr,
         "gestisce"@it ;
-    rdfs:comment "Diese Beziehung zeigt an, dass Organisation X für das Betriebssystem Y verantwortlich ist. Wenn Organisation Y den Betrieb eines Systems X an einen Dienstleister Z auslagert, verwenden Sie weiterhin diese Betriebsbeziehung zwischen X und Y, da sie eher die Verantwortlichkeit als den technischen Betrieb widerspiegelt. Die Beziehung ist auf niedrigstmöglicher Organisationsebene zu verwenden."@de,
-        "This relationship indicates that organization X is in charge of operating system Y. If organization Y outsources the operation of a system X to a service provider Z, still use this operating relationship between X and Y since it reflects responsibility rather than technical operation. Also, use this on the lowest organizational level possible."@en,
-        "Cette relation indique que l'organisation X est responsable de l'exploitation du système Y. Si l'organisation Y externalise l'exploitation d'un système X à un prestataire de services Z, utilisez toujours cette relation d'exploitation entre X et Y, car elle reflète la responsabilité plutôt que l'exploitation technique. Utilisez cette relation au niveau organisationnel le plus bas possible."@fr,
-        "Questa relazione indica che l'organizzazione X è responsabile della gestione del sistema Y. Se l'organizzazione Y esternalizza la gestione di un sistema X a un fornitore di servizi Z, continua a utilizzare questa relazione operativa tra X e Y, poiché riflette la responsabilità piuttosto che l'operazione tecnica. Inoltre, usa questa relazione al livello organizzativo più basso possibile."@it ;
+    rdfs:comment """
+        Diese Beziehung zeigt an, dass Organisation X für das Betriebssystem Y verantwortlich ist.
+        Wenn Organisation Y den Betrieb eines Systems X an einen Dienstleister Z auslagert, verwenden Sie weiterhin diese Betriebsbeziehung zwischen X und Y, da sie eher die Verantwortlichkeit als den technischen Betrieb widerspiegelt.
+        Die Beziehung ist auf niedrigstmöglicher Organisationsebene zu verwenden.
+        """@de,
+        """
+        This relationship indicates that organization X is in charge of operating system Y.
+        If organization Y outsources the operation of a system X to a service provider Z, still use this operating relationship between X and Y since it reflects responsibility rather than technical operation.
+        Also, use this on the lowest organizational level possible.
+        """@en,
+        """
+        Cette relation indique que l'organisation X est responsable de l'exploitation du système Y.
+        Si l'organisation Y externalise l'exploitation d'un système X à un prestataire de services Z, utilisez toujours cette relation d'exploitation entre X et Y, car elle reflète la responsabilité plutôt que l'exploitation technique.
+        Utilisez cette relation au niveau organisationnel le plus bas possible.
+        """@fr,
+        """
+        Questa relazione indica che l'organizzazione X è responsabile della gestione del sistema Y.
+        Se l'organizzazione Y esternalizza la gestione di un sistema X a un fornitore di servizi Z, continua a utilizzare questa relazione operativa tra X e Y, poiché riflette la responsabilità piuttosto che l'operazione tecnica.
+        Inoltre, usa questa relazione al livello organizzativo più basso possibile.
+        """@it ;
     rdfs:domain schema:Organization ;
     rdfs:range schema:SoftwareApplication ;
     owl:inverseOf systemmap:operatedBy .
@@ -326,7 +682,18 @@ systemmap:ownedBy a owl:ObjectProperty ;
         "is (partially) owned by"@en,
         "est (partiellement) détenu par"@fr,
         "è (parzialmente) di proprietà di"@it ;
-    rdfs:comment "Diese Beziehung zeigt an, dass eine Organisation X (teilweise) im Besitz einer anderen Organisation Y ist."@de ;
+    rdfs:comment """
+        Diese Beziehung zeigt an, dass eine Organisation X (teilweise) im Besitz einer anderen Organisation Y ist.
+        """@de,
+        """
+        This relationship indicates that an organization X is (partially) owned by another organization Y.
+        """@en,
+        """
+        Cette relation indique qu'une organisation X est (partiellement) détenue par une autre organisation Y.
+        """@fr,
+        """
+        Questa relazione indica che un'organizzazione X è (parzialmente) di proprietà di un'altra organizzazione Y.
+        """@it ;
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization ;
     owl:inverseOf systemmap:owns .
@@ -336,7 +703,18 @@ systemmap:owns a owl:ObjectProperty ;
         "(partially) owns"@en,
         "possède (partiellement)"@fr,
         "possiede (parzialmente)"@it ;
-    rdfs:comment "Diese Beziehung zeigt an, dass eine Organisation X eine andere Organisation Y (teilweise) besitzt."@de ;
+    rdfs:comment """
+        Diese Beziehung zeigt an, dass eine Organisation X eine andere Organisation Y (teilweise) besitzt.
+        """@de,
+        """
+        This relationship indicates that an organization X (partially) owns another organization Y.
+        """@en,
+        """
+        Cette relation indique qu'une organisation X possède (partiellement) une autre organisation Y.
+        """@fr,
+        """
+        Questa relazione indica che un'organizzazione X possiede (parzialmente) un'altra organizzazione Y.
+        """@it ;
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization ;
     owl:inverseOf systemmap:ownedBy .
@@ -346,19 +724,35 @@ systemmap:usesIdentifier a owl:ObjectProperty ;
         "uses ID"@en,
         "utilise ID"@fr,
         "utilizza ID"@it ;
-    rdfs:comment "Diese Beziehung zeigt an, dass eine Informationseinheit X für die Identifikation von einem <i>Business Object</i> eine Art von Identifikationsnummer Y verwendet."@de,
-        "This relationship indicates that an information unit X uses some kind of identification number Y for the identification of a <i>Business Object</i>."@en,
-        "Cette relation indique qu'une unité d'information X utilise un certain type de numéro d'identification Y pour identifier un <i>Business Object</i>."@fr,
-        "Questa relazione indica che un'unità di informazione X utilizza un certo tipo di numero di identificazione Y per l'identificazione di un <i>Business Object</i>."@it ;
+    rdfs:comment """
+        Diese Beziehung zeigt an, dass eine Informationseinheit X für die Identifikation von einem <i>Business Object</i> eine Art von Identifikationsnummer Y verwendet.
+        """@de,
+        """
+        This relationship indicates that an information unit X uses some kind of identification number Y for the identification of a <i>Business Object</i>.
+        """@en,
+        """
+        Cette relation indique qu'une unité d'information X utilise un certain type de numéro d'identification Y pour identifier un <i>Business Object</i>.
+        """@fr,
+        """
+        Questa relazione indica che un'unità di informazione X utilizza un certo tipo di numero di identificazione Y per l'identificazione di un <i>Business Object</i>.
+        """@it ;
     rdfs:domain systemmap:Information ;
     rdfs:range systemmap:Identifier .
 
 systemmap: a owl:Ontology ;
     dcterms:creator "Federal Office for Agriculture" ;
-    dcterms:description "Eine Ontologie zur Modellierung von Organisationen, IT-Systemen und Daten für das Schweizer Bundesamt für Landwirtschaft (FOAG)."@de,
-        "An ontology to model organizations, IT systems and data for the Swiss Federal Office for Agriculture FOAG."@en,
-        "Une ontologie pour modéliser les organisations, les systèmes informatiques et les données pour l'Office fédéral de l'agriculture (OFAG) suisse."@fr,
-        "Un'ontologia per modellare le organizzazioni, i sistemi IT e i dati per l'Ufficio federale dell'agricoltura (UFAG) svizzero."@it ;
+    dcterms:description """
+        Eine Ontologie zur Modellierung von Organisationen, IT-Systemen und Daten für das Schweizer Bundesamt für Landwirtschaft (FOAG).
+        """@de,
+        """
+        An ontology to model organizations, IT systems and data for the Swiss Federal Office for Agriculture FOAG.
+        """@en,
+        """
+        Une ontologie pour modéliser les organisations, les systèmes informatiques et les données pour l'Office fédéral de l'agriculture (OFAG) suisse.
+        """@fr,
+        """
+        Un'ontologia per modellare le organizzazioni, i sistemi IT e i dati per l'Ufficio federale dell'agricoltura (UFAG) svizzero.
+        """@it ;
     dcterms:title "DigiAgriFoodCH Systemlandkarte"@de,
         "DigiAgriFoodCH System Map"@en,
         "Carte du système DigiAgriFoodCH"@fr,

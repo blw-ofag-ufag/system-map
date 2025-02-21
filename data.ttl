@@ -587,7 +587,7 @@ systemmap:ORG301 a systemmap:CantonalOrganization ;
     schema:parentOrganization systemmap:ORG300 .
 
 systemmap:ORG302 a systemmap:CantonalOrganization ;
-    rdfs:label "Landwirtschaft"@de ;
+    rdfs:label "Landwirtschaft Aargau"@de ;
     schema:parentOrganization systemmap:ORG301 .
 
 systemmap:ORG303 a systemmap:CantonalOrganization ;
@@ -607,7 +607,12 @@ systemmap:ORG304 a systemmap:CantonalOrganization ;
 
 systemmap:ORG305 a systemmap:CantonalOrganization ;
     rdfs:label "Amt für Landwirtschaft"@de ;
-    schema:parentOrganization systemmap:ORG304 .
+    schema:parentOrganization systemmap:ORG304 ;
+    rdfs:comment """
+        Das Amt für Landwirtschaft des Kantons Appenzell Ausserrhoden unterstützt die landwirtschaftlichen Betriebe in der Region durch Beratung, Fördermassnahmen und administrative Dienstleistungen.
+        Es setzt sich für eine nachhaltige und wirtschaftlich tragfähige Landwirtschaft ein und ist für die Umsetzung agrarpolitischer Vorgaben zuständig.
+        Zudem betreut es Bereiche wie Direktzahlungen, Strukturverbesserungen und Ausbildung in der Landwirtschaft.
+        """@de .
 
 systemmap:ORG306 a systemmap:CantonalOrganization ;
     rdfs:label "Direktzahlungen und Tierzucht"@de ;
@@ -911,6 +916,35 @@ systemmap:ORG337 a systemmap:CantonalOrganization ;
 systemmap:ORG338 a systemmap:CantonalOrganization ;
     rdfs:label "Koordinationsstelle für das Adress- und Betriebsregister"@de ;
     schema:parentOrganization systemmap:ORG337 .
+
+systemmap:ORG339 a systemmap:CantonalOrganization ;
+    rdfs:label "Departement Gesundheit und Soziales"@de ;
+    schema:parentOrganization systemmap:ORG300 .
+
+systemmap:ORG341 a systemmap:CantonalOrganization ;
+    rdfs:label "Strategie und Planung"@de ;
+    schema:parentOrganization systemmap:ORG302 .
+
+systemmap:ORG342 a systemmap:CantonalOrganization ;
+    rdfs:label "Zentrale Dienste"@de ;
+    schema:parentOrganization systemmap:ORG302 .
+
+systemmap:ORG343 a systemmap:CantonalOrganization ;
+    rdfs:label "Landwirtschaftliches Zentrum Liebegg"@de ;
+    schema:parentOrganization systemmap:ORG302 .
+
+systemmap:ORG344 a systemmap:CantonalOrganization ;
+    rdfs:label "Direktzahlungen und Beiträge"@de ;
+    schema:parentOrganization systemmap:ORG302 .
+
+systemmap:ORG345 a systemmap:CantonalOrganization ;
+    rdfs:label "Strukturverbesserungen und Raumnutzung"@de ;
+    schema:parentOrganization systemmap:ORG302 .
+
+systemmap:ORG340 a systemmap:CantonalVeterinaryService ;
+    rdfs:label "Kantonaler Veterinärdienst Aargau"@de ;
+    schema:parentOrganization systemmap:ORG339 ;
+    dcat:landingPage <https://www.ag.ch/de/verwaltung/dgs/verbraucherschutz/veterinaerdienst> .
 
 systemmap:ORG001 a systemmap:FederalOrganization ;
     rdfs:label "Bundesamt für Landwirtschaft"@de,

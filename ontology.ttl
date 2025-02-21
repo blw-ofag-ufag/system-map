@@ -64,6 +64,33 @@ systemmap:CantonalOrganization a owl:Class ;
         "Organizzazione cantonale"@it ;
     rdfs:subClassOf schema:GovernmentOrganization .
 
+systemmap:CantonalVeterinaryService a owl:Class ;
+    rdfs:label "Kantonaler Veterinärdienst"@de,
+        "Cantonal Veterinary Service"@en,
+        "Service vétérinaire cantonal"@fr,
+        "Servizio veterinario cantonale"@it ;
+    rdfs:comment """
+        Der Kantonale Veterinärdienst ist eine kantonale Behörde, die für den Vollzug der Tierseuchen- und Tierschutzgesetzgebung sowie der Lebensmittel- und Heilmittelgesetzgebung im Veterinärbereich zuständig ist.
+        Seine Aufgaben umfassen den Schutz der Tiergesundheit, die Überwachung des Tierschutzes und die Sicherstellung der Lebensmittelsicherheit tierischer Herkunft.
+        Zudem ist er für die Kontrolle des Viehhandels, die Fleischhygiene und die Bewilligung von Tierversuchen verantwortlich.
+        """@de,
+        """
+        The Cantonal Veterinary Service is a cantonal authority responsible for enforcing animal disease and welfare legislation, as well as food and drug laws related to veterinary matters.
+        Its tasks include protecting animal health, monitoring animal welfare, and ensuring the safety of food of animal origin.
+        Additionally, it oversees livestock trade control, meat hygiene, and the authorization of animal experiments.
+        """@en,
+        """
+        Le Service vétérinaire cantonal est une autorité cantonale chargée de l'application des lois sur les épizooties et la protection des animaux, ainsi que des législations sur les denrées alimentaires et les médicaments en matière vétérinaire.
+        Ses tâches incluent la protection de la santé animale, la surveillance du bien-être animal et la garantie de la sécurité des denrées alimentaires d'origine animale.
+        De plus, il est responsable du contrôle du commerce du bétail, de l'hygiène de la viande et de l'autorisation des expériences sur les animaux.
+        """@fr,
+        """
+        Il Servizio veterinario cantonale è un'autorità cantonale responsabile dell'applicazione della legislazione sulle epizoozie e sul benessere degli animali, nonché delle leggi su alimenti e medicinali in ambito veterinario.
+        I suoi compiti includono la protezione della salute animale, il monitoraggio del benessere degli animali e la garanzia della sicurezza degli alimenti di origine animale.
+        Inoltre, sovrintende al controllo del commercio del bestiame, all'igiene della carne e all'autorizzazione degli esperimenti sugli animali.
+        """@it ;
+    rdfs:subClassOf systemmap:CantonalOrganization .
+
 systemmap:FederalOrganization a owl:Class ;
     rdfs:label "Organisation des Bundes"@de,
         "Federal organization"@en,

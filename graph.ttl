@@ -1077,7 +1077,8 @@ systemmap:ORG300 a schema:GovernmentOrganization,
         "Canton of Aargau"@en,
         "Canton d'Argovie"@fr,
         "Cantone Argovia"@it ;
-    schema:subOrganization systemmap:ORG301 ;
+    schema:subOrganization systemmap:ORG301,
+        systemmap:ORG339 ;
     rdfs:comment "Die kantonale Verwaltung von Aargau."@de,
         "The cantonal administration of Aargau."@en,
         "L'administration cantonale d'Argovie."@fr,
@@ -1095,9 +1096,14 @@ systemmap:ORG301 a schema:GovernmentOrganization,
 systemmap:ORG302 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:CantonalOrganization ;
-    rdfs:label "Landwirtschaft"@de ;
-    schema:name "Landwirtschaft"@de ;
+    rdfs:label "Landwirtschaft Aargau"@de ;
+    schema:name "Landwirtschaft Aargau"@de ;
     schema:parentOrganization systemmap:ORG301 ;
+    schema:subOrganization systemmap:ORG341,
+        systemmap:ORG342,
+        systemmap:ORG343,
+        systemmap:ORG344,
+        systemmap:ORG345 ;
     systemmap:operates systemmap:SYS013 .
 
 systemmap:ORG303 a schema:GovernmentOrganization,
@@ -1134,9 +1140,19 @@ systemmap:ORG305 a schema:GovernmentOrganization,
         schema:Organization,
         systemmap:CantonalOrganization ;
     rdfs:label "Amt für Landwirtschaft"@de ;
+    schema:description """
+        Das Amt für Landwirtschaft des Kantons Appenzell Ausserrhoden unterstützt die landwirtschaftlichen Betriebe in der Region durch Beratung, Fördermassnahmen und administrative Dienstleistungen.
+        Es setzt sich für eine nachhaltige und wirtschaftlich tragfähige Landwirtschaft ein und ist für die Umsetzung agrarpolitischer Vorgaben zuständig.
+        Zudem betreut es Bereiche wie Direktzahlungen, Strukturverbesserungen und Ausbildung in der Landwirtschaft.
+        """@de ;
     schema:name "Amt für Landwirtschaft"@de ;
     schema:parentOrganization systemmap:ORG304 ;
-    schema:subOrganization systemmap:ORG306 .
+    schema:subOrganization systemmap:ORG306 ;
+    rdfs:comment """
+        Das Amt für Landwirtschaft des Kantons Appenzell Ausserrhoden unterstützt die landwirtschaftlichen Betriebe in der Region durch Beratung, Fördermassnahmen und administrative Dienstleistungen.
+        Es setzt sich für eine nachhaltige und wirtschaftlich tragfähige Landwirtschaft ein und ist für die Umsetzung agrarpolitischer Vorgaben zuständig.
+        Zudem betreut es Bereiche wie Direktzahlungen, Strukturverbesserungen und Ausbildung in der Landwirtschaft.
+        """@de .
 
 systemmap:ORG306 a schema:GovernmentOrganization,
         schema:Organization,
@@ -1741,6 +1757,58 @@ systemmap:ORG338 a schema:GovernmentOrganization,
     rdfs:label "Koordinationsstelle für das Adress- und Betriebsregister"@de ;
     schema:name "Koordinationsstelle für das Adress- und Betriebsregister"@de ;
     schema:parentOrganization systemmap:ORG337 .
+
+systemmap:ORG339 a schema:GovernmentOrganization,
+        schema:Organization,
+        systemmap:CantonalOrganization ;
+    rdfs:label "Departement Gesundheit und Soziales"@de ;
+    schema:name "Departement Gesundheit und Soziales"@de ;
+    schema:parentOrganization systemmap:ORG300 ;
+    schema:subOrganization systemmap:ORG340 .
+
+systemmap:ORG340 a schema:GovernmentOrganization,
+        schema:Organization,
+        systemmap:CantonalOrganization,
+        systemmap:CantonalVeterinaryService ;
+    rdfs:label "Kantonaler Veterinärdienst Aargau"@de ;
+    schema:name "Kantonaler Veterinärdienst Aargau"@de ;
+    schema:parentOrganization systemmap:ORG339 ;
+    dcat:landingPage <https://www.ag.ch/de/verwaltung/dgs/verbraucherschutz/veterinaerdienst> .
+
+systemmap:ORG341 a schema:GovernmentOrganization,
+        schema:Organization,
+        systemmap:CantonalOrganization ;
+    rdfs:label "Strategie und Planung"@de ;
+    schema:name "Strategie und Planung"@de ;
+    schema:parentOrganization systemmap:ORG302 .
+
+systemmap:ORG342 a schema:GovernmentOrganization,
+        schema:Organization,
+        systemmap:CantonalOrganization ;
+    rdfs:label "Zentrale Dienste"@de ;
+    schema:name "Zentrale Dienste"@de ;
+    schema:parentOrganization systemmap:ORG302 .
+
+systemmap:ORG343 a schema:GovernmentOrganization,
+        schema:Organization,
+        systemmap:CantonalOrganization ;
+    rdfs:label "Landwirtschaftliches Zentrum Liebegg"@de ;
+    schema:name "Landwirtschaftliches Zentrum Liebegg"@de ;
+    schema:parentOrganization systemmap:ORG302 .
+
+systemmap:ORG344 a schema:GovernmentOrganization,
+        schema:Organization,
+        systemmap:CantonalOrganization ;
+    rdfs:label "Direktzahlungen und Beiträge"@de ;
+    schema:name "Direktzahlungen und Beiträge"@de ;
+    schema:parentOrganization systemmap:ORG302 .
+
+systemmap:ORG345 a schema:GovernmentOrganization,
+        schema:Organization,
+        systemmap:CantonalOrganization ;
+    rdfs:label "Strukturverbesserungen und Raumnutzung"@de ;
+    schema:name "Strukturverbesserungen und Raumnutzung"@de ;
+    schema:parentOrganization systemmap:ORG302 .
 
 <https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> a schema:Legislation .
 
@@ -3057,6 +3125,57 @@ systemmap:CantonalOrganization a owl:Class ;
         "Organizzazione cantonale"@it ;
     rdfs:subClassOf schema:GovernmentOrganization .
 
+systemmap:CantonalVeterinaryService a owl:Class ;
+    rdfs:label "Kantonaler Veterinärdienst"@de,
+        "Cantonal Veterinary Service"@en,
+        "Service vétérinaire cantonal"@fr,
+        "Servizio veterinario cantonale"@it ;
+    schema:description """
+        Der Kantonale Veterinärdienst ist eine kantonale Behörde, die für den Vollzug der Tierseuchen- und Tierschutzgesetzgebung sowie der Lebensmittel- und Heilmittelgesetzgebung im Veterinärbereich zuständig ist.
+        Seine Aufgaben umfassen den Schutz der Tiergesundheit, die Überwachung des Tierschutzes und die Sicherstellung der Lebensmittelsicherheit tierischer Herkunft.
+        Zudem ist er für die Kontrolle des Viehhandels, die Fleischhygiene und die Bewilligung von Tierversuchen verantwortlich.
+        """@de,
+        """
+        The Cantonal Veterinary Service is a cantonal authority responsible for enforcing animal disease and welfare legislation, as well as food and drug laws related to veterinary matters.
+        Its tasks include protecting animal health, monitoring animal welfare, and ensuring the safety of food of animal origin.
+        Additionally, it oversees livestock trade control, meat hygiene, and the authorization of animal experiments.
+        """@en,
+        """
+        Le Service vétérinaire cantonal est une autorité cantonale chargée de l'application des lois sur les épizooties et la protection des animaux, ainsi que des législations sur les denrées alimentaires et les médicaments en matière vétérinaire.
+        Ses tâches incluent la protection de la santé animale, la surveillance du bien-être animal et la garantie de la sécurité des denrées alimentaires d'origine animale.
+        De plus, il est responsable du contrôle du commerce du bétail, de l'hygiène de la viande et de l'autorisation des expériences sur les animaux.
+        """@fr,
+        """
+        Il Servizio veterinario cantonale è un'autorità cantonale responsabile dell'applicazione della legislazione sulle epizoozie e sul benessere degli animali, nonché delle leggi su alimenti e medicinali in ambito veterinario.
+        I suoi compiti includono la protezione della salute animale, il monitoraggio del benessere degli animali e la garanzia della sicurezza degli alimenti di origine animale.
+        Inoltre, sovrintende al controllo del commercio del bestiame, all'igiene della carne e all'autorizzazione degli esperimenti sugli animali.
+        """@it ;
+    schema:name "Kantonaler Veterinärdienst"@de,
+        "Cantonal Veterinary Service"@en,
+        "Service vétérinaire cantonal"@fr,
+        "Servizio veterinario cantonale"@it ;
+    rdfs:comment """
+        Der Kantonale Veterinärdienst ist eine kantonale Behörde, die für den Vollzug der Tierseuchen- und Tierschutzgesetzgebung sowie der Lebensmittel- und Heilmittelgesetzgebung im Veterinärbereich zuständig ist.
+        Seine Aufgaben umfassen den Schutz der Tiergesundheit, die Überwachung des Tierschutzes und die Sicherstellung der Lebensmittelsicherheit tierischer Herkunft.
+        Zudem ist er für die Kontrolle des Viehhandels, die Fleischhygiene und die Bewilligung von Tierversuchen verantwortlich.
+        """@de,
+        """
+        The Cantonal Veterinary Service is a cantonal authority responsible for enforcing animal disease and welfare legislation, as well as food and drug laws related to veterinary matters.
+        Its tasks include protecting animal health, monitoring animal welfare, and ensuring the safety of food of animal origin.
+        Additionally, it oversees livestock trade control, meat hygiene, and the authorization of animal experiments.
+        """@en,
+        """
+        Le Service vétérinaire cantonal est une autorité cantonale chargée de l'application des lois sur les épizooties et la protection des animaux, ainsi que des législations sur les denrées alimentaires et les médicaments en matière vétérinaire.
+        Ses tâches incluent la protection de la santé animale, la surveillance du bien-être animal et la garantie de la sécurité des denrées alimentaires d'origine animale.
+        De plus, il est responsable du contrôle du commerce du bétail, de l'hygiène de la viande et de l'autorisation des expériences sur les animaux.
+        """@fr,
+        """
+        Il Servizio veterinario cantonale è un'autorità cantonale responsabile dell'applicazione della legislazione sulle epizoozie e sul benessere degli animali, nonché delle leggi su alimenti e medicinali in ambito veterinario.
+        I suoi compiti includono la protezione della salute animale, il monitoraggio del benessere degli animali e la garanzia della sicurezza degli alimenti di origine animale.
+        Inoltre, sovrintende al controllo del commercio del bestiame, all'igiene della carne e all'autorizzazione degli esperimenti sugli animali.
+        """@it ;
+    rdfs:subClassOf systemmap:CantonalOrganization .
+
 systemmap:FederalOrganization a owl:Class ;
     rdfs:label "Organisation des Bundes"@de,
         "Federal organization"@en,
@@ -3354,19 +3473,19 @@ systemmap:informs a owl:ObjectProperty ;
     schema:description """
         Zeigt auf, dass Informationseinheit X durch eine andere Informationseinheit Y <i>informiert</i> wird; d.h. dass <i>irgendwie</i> Daten fliessen.  
         Das kann über manuelles Abschreiben, E-Mail-Versandt von Tabellen, APIs etc. geschehen.  
-    """@de,
+        """@de,
         """
         Indicates that information unit X is <i>informed</i> by another information unit Y, meaning that data flows <i>in some way</i>.  
         This can happen through manual copying, emailing tables, APIs, etc.  
-    """@en,
+        """@en,
         """
         Indique que l'unité d'information X est <i>informée</i> par une autre unité d'information Y, ce qui signifie que des données circulent <i>d'une manière ou d'une autre</i>.  
         Cela peut se produire par copie manuelle, envoi de tableaux par e-mail, API, etc.  
-    """@fr,
+        """@fr,
         """
         Indica che l'unità di informazione X è <i>informata</i> da un'altra unità di informazione Y, il che significa che i dati fluiscono <i>in qualche modo</i>.  
         Ciò può avvenire tramite copia manuale, invio di tabelle via e-mail, API, ecc.  
-    """@it ;
+        """@it ;
     schema:name "informiert"@de,
         "informs"@en,
         "informe"@fr,
@@ -3374,19 +3493,19 @@ systemmap:informs a owl:ObjectProperty ;
     rdfs:comment """
         Zeigt auf, dass Informationseinheit X durch eine andere Informationseinheit Y <i>informiert</i> wird; d.h. dass <i>irgendwie</i> Daten fliessen.  
         Das kann über manuelles Abschreiben, E-Mail-Versandt von Tabellen, APIs etc. geschehen.  
-    """@de,
+        """@de,
         """
         Indicates that information unit X is <i>informed</i> by another information unit Y, meaning that data flows <i>in some way</i>.  
         This can happen through manual copying, emailing tables, APIs, etc.  
-    """@en,
+        """@en,
         """
         Indique que l'unité d'information X est <i>informée</i> par une autre unité d'information Y, ce qui signifie que des données circulent <i>d'une manière ou d'une autre</i>.  
         Cela peut se produire par copie manuelle, envoi de tableaux par e-mail, API, etc.  
-    """@fr,
+        """@fr,
         """
         Indica che l'unità di informazione X è <i>informata</i> da un'altra unità di informazione Y, il che significa che i dati fluiscono <i>in qualche modo</i>.  
         Ciò può avvenire tramite copia manuale, invio di tabelle via e-mail, API, ecc.  
-    """@it ;
+        """@it ;
     rdfs:domain systemmap:Information ;
     rdfs:range systemmap:Information ;
     owl:inverseOf systemmap:informedBy .

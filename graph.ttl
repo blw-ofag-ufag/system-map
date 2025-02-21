@@ -1836,12 +1836,12 @@ systemmap:ORG099 a schema:Organization ;
         "Autorité commune de notification des produits chimiques"@fr,
         "Autorità comune di notifica delle sostanze chimiche"@it ;
     schema:description """
-        Die Gemeinsame Anmeldestelle Chemikalien ist die zentrale Anlaufstelle für Chemikalien in der Schweiz,
-        betrieben vom Bundesamt für Umwelt (BAFU), dem Bundesamt für Gesundheit (BAG) und dem Staatssekretariat für Wirtschaft (SECO).
+        Die Gemeinsame Anmeldestelle Chemikalien ist die zentrale Anlaufstelle für Chemikalien in der Schweiz.
+        Sie wird vom Bundesamt für Umwelt (BAFU), dem Bundesamt für Gesundheit (BAG) und dem Staatssekretariat für Wirtschaft (SECO) betrieben.
         """@de,
         """
-        The Common Notification Authority for Chemicals is the central contact point for chemicals in Switzerland,
-        operated by the Federal Office for the Environment (FOEN), the Federal Office of Public Health (FOPH), and the State Secretariat for Economic Affairs (SECO).
+        The Common Notification Authority for Chemicals is the central contact point for chemicals in Switzerland.
+        It is operated by the Federal Office for the Environment (FOEN), the Federal Office of Public Health (FOPH), and the State Secretariat for Economic Affairs (SECO).
         """@en,
         """
         L'Autorité commune de notification des produits chimiques est le point de contact central pour les produits chimiques en Suisse,
@@ -1859,12 +1859,12 @@ systemmap:ORG099 a schema:Organization ;
         "Autorité commune de notification des produits chimiques"@fr,
         "Autorità comune di notifica delle sostanze chimiche"@it ;
     rdfs:comment """
-        Die Gemeinsame Anmeldestelle Chemikalien ist die zentrale Anlaufstelle für Chemikalien in der Schweiz,
-        betrieben vom Bundesamt für Umwelt (BAFU), dem Bundesamt für Gesundheit (BAG) und dem Staatssekretariat für Wirtschaft (SECO).
+        Die Gemeinsame Anmeldestelle Chemikalien ist die zentrale Anlaufstelle für Chemikalien in der Schweiz.
+        Sie wird vom Bundesamt für Umwelt (BAFU), dem Bundesamt für Gesundheit (BAG) und dem Staatssekretariat für Wirtschaft (SECO) betrieben.
         """@de,
         """
-        The Common Notification Authority for Chemicals is the central contact point for chemicals in Switzerland,
-        operated by the Federal Office for the Environment (FOEN), the Federal Office of Public Health (FOPH), and the State Secretariat for Economic Affairs (SECO).
+        The Common Notification Authority for Chemicals is the central contact point for chemicals in Switzerland.
+        It is operated by the Federal Office for the Environment (FOEN), the Federal Office of Public Health (FOPH), and the State Secretariat for Economic Affairs (SECO).
         """@en,
         """
         L'Autorité commune de notification des produits chimiques est le point de contact central pour les produits chimiques en Suisse,
@@ -3351,12 +3351,42 @@ systemmap:informs a owl:ObjectProperty ;
         "informs"@en,
         "informe"@fr,
         "informa"@it ;
-    schema:description "Zeigt auf, dass Informationseinheit X durch eine andere Informationseinheit Y <i>informiert</i> wird; d.h. dass <i>irgendwie</i> Daten fliessen. Das kann über manuelles Abschreiben, E-Mail-Versandt von Tabellen, APIs etc. geschehen."@de ;
+    schema:description """
+        Zeigt auf, dass Informationseinheit X durch eine andere Informationseinheit Y <i>informiert</i> wird; d.h. dass <i>irgendwie</i> Daten fliessen.  
+        Das kann über manuelles Abschreiben, E-Mail-Versandt von Tabellen, APIs etc. geschehen.  
+    """@de,
+        """
+        Indicates that information unit X is <i>informed</i> by another information unit Y, meaning that data flows <i>in some way</i>.  
+        This can happen through manual copying, emailing tables, APIs, etc.  
+    """@en,
+        """
+        Indique que l'unité d'information X est <i>informée</i> par une autre unité d'information Y, ce qui signifie que des données circulent <i>d'une manière ou d'une autre</i>.  
+        Cela peut se produire par copie manuelle, envoi de tableaux par e-mail, API, etc.  
+    """@fr,
+        """
+        Indica che l'unità di informazione X è <i>informata</i> da un'altra unità di informazione Y, il che significa che i dati fluiscono <i>in qualche modo</i>.  
+        Ciò può avvenire tramite copia manuale, invio di tabelle via e-mail, API, ecc.  
+    """@it ;
     schema:name "informiert"@de,
         "informs"@en,
         "informe"@fr,
         "informa"@it ;
-    rdfs:comment "Zeigt auf, dass Informationseinheit X durch eine andere Informationseinheit Y <i>informiert</i> wird; d.h. dass <i>irgendwie</i> Daten fliessen. Das kann über manuelles Abschreiben, E-Mail-Versandt von Tabellen, APIs etc. geschehen."@de ;
+    rdfs:comment """
+        Zeigt auf, dass Informationseinheit X durch eine andere Informationseinheit Y <i>informiert</i> wird; d.h. dass <i>irgendwie</i> Daten fliessen.  
+        Das kann über manuelles Abschreiben, E-Mail-Versandt von Tabellen, APIs etc. geschehen.  
+    """@de,
+        """
+        Indicates that information unit X is <i>informed</i> by another information unit Y, meaning that data flows <i>in some way</i>.  
+        This can happen through manual copying, emailing tables, APIs, etc.  
+    """@en,
+        """
+        Indique que l'unité d'information X est <i>informée</i> par une autre unité d'information Y, ce qui signifie que des données circulent <i>d'une manière ou d'une autre</i>.  
+        Cela peut se produire par copie manuelle, envoi de tableaux par e-mail, API, etc.  
+    """@fr,
+        """
+        Indica che l'unità di informazione X è <i>informata</i> da un'altra unità di informazione Y, il che significa che i dati fluiscono <i>in qualche modo</i>.  
+        Ciò può avvenire tramite copia manuale, invio di tabelle via e-mail, API, ecc.  
+    """@it ;
     rdfs:domain systemmap:Information ;
     rdfs:range systemmap:Information ;
     owl:inverseOf systemmap:informedBy .

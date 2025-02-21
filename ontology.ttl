@@ -247,7 +247,22 @@ systemmap:informs a owl:ObjectProperty ;
         "informs"@en,
         "informe"@fr,
         "informa"@it ;
-    rdfs:comment "Zeigt auf, dass Informationseinheit X durch eine andere Informationseinheit Y <i>informiert</i> wird; d.h. dass <i>irgendwie</i> Daten fliessen. Das kann über manuelles Abschreiben, E-Mail-Versandt von Tabellen, APIs etc. geschehen."@de ;
+    rdfs:comment """
+        Zeigt auf, dass Informationseinheit X durch eine andere Informationseinheit Y <i>informiert</i> wird; d.h. dass <i>irgendwie</i> Daten fliessen.  
+        Das kann über manuelles Abschreiben, E-Mail-Versandt von Tabellen, APIs etc. geschehen.  
+        """@de,
+        """
+        Indicates that information unit X is <i>informed</i> by another information unit Y, meaning that data flows <i>in some way</i>.  
+        This can happen through manual copying, emailing tables, APIs, etc.  
+        """@en,
+        """
+        Indique que l'unité d'information X est <i>informée</i> par une autre unité d'information Y, ce qui signifie que des données circulent <i>d'une manière ou d'une autre</i>.  
+        Cela peut se produire par copie manuelle, envoi de tableaux par e-mail, API, etc.  
+        """@fr,
+        """
+        Indica che l'unità di informazione X è <i>informata</i> da un'altra unità di informazione Y, il che significa che i dati fluiscono <i>in qualche modo</i>.  
+        Ciò può avvenire tramite copia manuale, invio di tabelle via e-mail, API, ecc.  
+        """@it ;
     rdfs:domain systemmap:Information ;
     rdfs:range systemmap:Information ;
     owl:inverseOf systemmap:informedBy .

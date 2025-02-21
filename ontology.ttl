@@ -251,10 +251,11 @@ systemmap:hasLegalBasis a owl:ObjectProperty ;
         "has legal basis"@en,
         "a une base légale"@fr,
         "ha una base legale"@it ;
-    rdfs:comment "Indicates that anything X has a legal basis in a (particular part of) legislation Y."@en,
+    rdfs:comment "Zeigt an, dass irgendetwas X eine Rechtsgrundlage mit (einem bestimmten Teil) der Legislation Y hat."@de,
+    "Indicates that anything X has a legal basis in a (particular part of) legislation Y."@en,
         "Indique que tout X a une base légale dans une (partie particulière de) législation Y."@fr,
         "Indica che qualsiasi X ha una base legale in una (particolare parte di) legislazione Y."@it ;
-    rdfs:domain schema:Legislation .
+    rdfs:range schema:Legislation .
 
 systemmap:informedBy a owl:ObjectProperty ;
     rdfs:label "erhält Informationen von"@de,

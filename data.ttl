@@ -293,11 +293,26 @@ systemmap:SYS009 a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:ORG030 .
 
 systemmap:SYS010 a schema:SoftwareApplication ;
-    rdfs:label "HODUFLU"@de ;
+    rdfs:label "HODUFLU"@de,
+        "HODUFLU"@en,
+        "HODUFLU"@fr,
+        "HODUFLU"@it ;
     rdfs:comment """
         HODUFLU ist ein Internetprogramm zur einheitlichen Verwaltung von Hof- und Recyclingdüngerverschiebungen in der Landwirtschaft.
         Auf dieser Seite finden Sie Zugang zur Anwendung und nützliche Dokumente wie das Benutzerhandbuch für HODUFLU.
-        """@de ;
+        """@de,
+        """
+        HODUFLU is an internet-based program for the standardized management of farmyard and recycled fertilizer transfers in agriculture.
+        On this page, you will find access to the application and useful documents such as the user manual for HODUFLU.
+        """@en,
+        """
+        HODUFLU est un programme en ligne pour la gestion standardisée des transferts d'engrais de ferme et recyclés en agriculture.
+        Sur cette page, vous trouverez l'accès à l'application ainsi que des documents utiles comme le manuel d'utilisation de HODUFLU.
+        """@fr,
+        """
+        HODUFLU è un programma online per la gestione standardizzata degli spostamenti di fertilizzanti aziendali e riciclati in agricoltura.
+        Su questa pagina troverete l'accesso all'applicazione e documenti utili come il manuale utente di HODUFLU.
+        """@it ;
     systemmap:operatedBy systemmap:ORG020 .
 
 systemmap:SYS011 a schema:SoftwareApplication ;
@@ -328,26 +343,68 @@ systemmap:SYS011 a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:ORG032 .
 
 systemmap:SYS012 a schema:SoftwareApplication ;
-    rdfs:label "Gesamtlösung EDV Landwirtschaft & Natur"@de ;
+    rdfs:label "Gesamtlösung EDV Landwirtschaft & Natur"@de,
+        "Comprehensive IT Solution for Agriculture & Nature"@en,
+        "Solution informatique globale pour l'agriculture et la nature"@fr,
+        "Soluzione informatica globale per l'agricoltura e la natura"@it ;
     rdfs:comment """
         Das Agrarinformationssystem GELAN steht seit 1999 in den Kantonen Bern, Fribourg und Solothurn im Einsatz.
         Es wurde seither auf 15 vollständig integrierte Teilsysteme erweitert und die Erfassung von Flächendaten erfolgt in einem Geographischen Informationssystem (GIS).
         Nebst den Direktzahlungen unterstützt GELAN unter anderem folgende Vollzugsbereiche:
         Strukturverbesserungen, Ressourcenprojekte, Naturschutz, Tierschutz, Tierseuchenrecht, Gewässerschutz und Kontrollwesen.
-        """@de ;
-    systemmap:abbreviation "GELAN"@de ;
+        """@de,
+        """
+        The agricultural information system GELAN has been in use since 1999 in the cantons of Bern, Fribourg, and Solothurn.
+        Since then, it has been expanded to include 15 fully integrated subsystems, and area data collection takes place within a Geographic Information System (GIS).
+        In addition to direct payments, GELAN supports the following regulatory areas: structural improvements, resource projects, nature conservation, animal welfare, animal disease law, water protection, and inspection services.
+        """@en,
+        """
+        Le système d'information agricole GELAN est en service depuis 1999 dans les cantons de Berne, Fribourg et Soleure.
+        Depuis, il a été étendu à 15 sous-systèmes entièrement intégrés, et la collecte des données de surface s'effectue dans un système d'information géographique (SIG).
+        Outre les paiements directs, GELAN soutient notamment les domaines suivants: améliorations structurelles, projets de ressources, protection de la nature, bien-être animal, droit des épizooties, protection des eaux et contrôle.
+        """@fr,
+        """
+        Il sistema di informazione agricola GELAN è in uso dal 1999 nei cantoni di Berna, Friburgo e Soletta.
+        Da allora è stato ampliato fino a includere 15 sottosistemi completamente integrati, e la raccolta dei dati sulle superfici avviene tramite un Sistema Informativo Geografico (GIS).
+        Oltre ai pagamenti diretti, GELAN supporta le seguenti aree di esecuzione: miglioramenti strutturali, progetti di risorse, protezione della natura, benessere animale, legislazione sulle epizoozie, protezione delle acque e controllo.
+        """@it ;
+    systemmap:abbreviation "GELAN"@de,
+        "GELAN"@en,
+        "GELAN"@fr,
+        "GELAN"@it ;
     systemmap:operatedBy systemmap:ORG311,
         systemmap:ORG322,
         systemmap:ORG336 .
 
 systemmap:SYS013 a schema:SoftwareApplication ;
-    rdfs:label "AGRICOLA"@de ;
+    rdfs:label "AGRICOLA"@de,
+        "AGRICOLA"@en,
+        "AGRICOLA"@fr,
+        "AGRICOLA"@it ;
     rdfs:comment """
         AGRICOLA kommt in 12 Kantonen zum Einsatz, darunter Aargau, Zürich, St. Gallen und Graubünden.
         Es besteht aus verschiedenen Softwareprodukten für Datenverwaltung, Dateneingabe, mobile Kontrollen und GIS.
         Neben Direktzahlungen unterstützt es auch Bereiche wie Strukturverbesserung, Boden- und Pachtrecht sowie Naturschutz.
-        Über 21.000 Landwirte und 1.000 Verwaltungsmitarbeiter nutzen das System, das Finanzflüsse von über 1 Milliarde Franken jährlich verwaltet.
-        """@de ;
+        Über 21'000 Landwirte und 1000 Verwaltungsmitarbeiter nutzen das System, das Finanzflüsse von über 1 Milliarde Franken jährlich verwaltet.
+        """@de,
+        """
+        AGRICOLA is used in 12 cantons, including Aargau, Zurich, St. Gallen, and Graubünden.
+        It consists of various software products for data management, data entry, mobile inspections, and GIS.
+        In addition to direct payments, it also supports areas such as structural improvements, land and lease law, and nature conservation.
+        More than 21,000 farmers and 1,000 administrative employees use the system, which manages financial flows of over 1 billion Swiss francs annually.
+        """@en,
+        """
+        AGRICOLA est utilisé dans 12 cantons, dont Argovie, Zurich, Saint-Gall et les Grisons.
+        Il se compose de divers logiciels pour la gestion des données, la saisie des données, les contrôles mobiles et le SIG.
+        En plus des paiements directs, il prend également en charge des domaines tels que les améliorations structurelles, le droit foncier et locatif ainsi que la protection de la nature.
+        Plus de 21 000 agriculteurs et 1 000 employés administratifs utilisent le système, qui gère des flux financiers de plus d'un milliard de francs suisses par an.
+        """@fr,
+        """
+        AGRICOLA è utilizzato in 12 cantoni, tra cui Argovia, Zurigo, San Gallo e Grigioni.
+        È composto da diversi software per la gestione dei dati, l'inserimento dei dati, i controlli mobili e i sistemi GIS.
+        Oltre ai pagamenti diretti, supporta anche settori come i miglioramenti strutturali, il diritto fondiario e degli affitti, nonché la protezione della natura.
+        Più di 21.000 agricoltori e 1.000 dipendenti amministrativi utilizzano il sistema, che gestisce flussi finanziari di oltre 1 miliardo di franchi svizzeri all'anno.
+        """@it ;
     systemmap:operatedBy systemmap:ORG302,
         systemmap:ORG306,
         systemmap:ORG313,
@@ -362,12 +419,30 @@ systemmap:SYS013 a schema:SoftwareApplication ;
         systemmap:ORG332 .
 
 systemmap:SYS014 a schema:SoftwareApplication ;
-    rdfs:label "Acorda"@de ;
+    rdfs:label "Acorda"@de,
+        "Acorda"@en,
+        "Acorda"@fr,
+        "Acorda"@it ;
     rdfs:comment """
         ACORDA wird von den Kantonen Waadt, Neuenburg, Genf und Jura genutzt.
         Das System bietet Funktionen wie die Erfassung von Strukturdaten, Berechnung und Auszahlung von Direktzahlungen, Georeferenzierung und Datenaustausch mit Bundessystemen.
         Zusätzlich verfügt es über spezielle Module für Bereiche wie Bienenzucht, Weinbau und Kontrollen.
-        """@de ;
+        """@de,
+        """
+        ACORDA is used by the cantons of Vaud, Neuchâtel, Geneva, and Jura.
+        The system offers features such as the collection of structural data, calculation and payment of direct subsidies, georeferencing, and data exchange with federal systems.
+        Additionally, it includes specialized modules for areas such as beekeeping, viticulture, and inspections.
+        """@en,
+        """
+        ACORDA est utilisé par les cantons de Vaud, Neuchâtel, Genève et Jura.
+        Le système offre des fonctionnalités telles que la collecte de données structurelles, le calcul et le paiement des subventions directes, la géoréférencement et l'échange de données avec les systèmes fédéraux.
+        De plus, il comprend des modules spécialisés pour des domaines comme l'apiculture, la viticulture et les contrôles.
+        """@fr,
+        """
+        ACORDA è utilizzato dai cantoni di Vaud, Neuchâtel, Ginevra e Giura.
+        Il sistema offre funzionalità come la raccolta di dati strutturali, il calcolo e il pagamento dei sussidi diretti, la georeferenziazione e lo scambio di dati con i sistemi federali.
+        Inoltre, include moduli specializzati per settori come l'apicoltura, la viticoltura e i controlli.
+        """@it ;
     systemmap:operatedBy systemmap:ORG312,
         systemmap:ORG315,
         systemmap:ORG317,
@@ -415,32 +490,83 @@ systemmap:SYS015 a schema:SoftwareApplication ;
 
 systemmap:SYS016 a schema:SoftwareApplication ;
     rdfs:label "SAP Wallis"@de,
-        "SAP Valais"@fr ;
+        "SAP Valais"@en,
+        "SAP Valais"@fr,
+        "SAP Vallese"@it ;
     rdfs:comment """
         SAP Agri Valais ist das Agrarinformationssystem des Kanton Wallis und damit eine spezifische Lösung basierend auf SAP, die in das kantonale IT-Netzwerk integriert ist.
         Eine Web-Schnittstelle (ePDir) ermöglicht externen Nutzern die Dateneingabe.
         Das System wird von Landwirtschaftsbetrieben, Gemeindeverwaltungen und Kontrollorganisationen genutzt und dient der Verwaltung von Bundes- und kantonalen Daten, Direktzahlungen und Statistiken.
-        """@de ;
+        """@de,
+        """
+        SAP Agri Valais is the agricultural information system of the canton of Valais, providing a specific SAP-based solution integrated into the cantonal IT network.
+        A web interface (ePDir) allows external users to enter data.
+        The system is used by farms, municipal administrations, and control organizations and serves to manage federal and cantonal data, direct payments, and statistics.
+        """@en,
+        """
+        SAP Agri Valais est le système d'information agricole du canton du Valais, offrant une solution spécifique basée sur SAP et intégrée au réseau informatique cantonal.
+        Une interface web (ePDir) permet aux utilisateurs externes de saisir des données.
+        Le système est utilisé par les exploitations agricoles, les administrations communales et les organismes de contrôle et sert à gérer les données fédérales et cantonales, les paiements directs et les statistiques.
+        """@fr,
+        """
+        SAP Agri Vallese è il sistema di informazione agricola del Canton Vallese, una soluzione specifica basata su SAP e integrata nella rete informatica cantonale.
+        Un'interfaccia web (ePDir) consente agli utenti esterni di inserire i dati.
+        Il sistema è utilizzato dalle aziende agricole, dalle amministrazioni comunali e dalle organizzazioni di controllo ed è impiegato per la gestione dei dati federali e cantonali, dei pagamenti diretti e delle statistiche.
+        """@it ;
     systemmap:operatedBy systemmap:ORG328 .
 
 systemmap:SYS017 a schema:SoftwareApplication ;
-    rdfs:label "Pflanzenschutzmittelverzeichnis"@de ;
+    rdfs:label "Pflanzenschutzmittelverzeichnis"@de,
+        "Plant Protection Products Directory"@en,
+        "Répertoire des produits phytosanitaires"@fr,
+        "Elenco dei prodotti fitosanitari"@it ;
     rdfs:comment """
         Die bewilligten Pflanzenschutzmittel werden im Pflanzenschutzmittelverzeichnis aufgelistet.
         Das Verzeichnis enthält Angaben zur vorgesehenen Anwendung, zu Anwendungseinschränkungen, Aufwandmengen, Gefahrenkennzeichnung und zu Anwendungsauflagen.
-        """@de ;
+        """@de,
+        """
+        The approved plant protection products are listed in the Plant Protection Products Directory.
+        The directory contains information on intended use, application restrictions, dosage rates, hazard labeling, and application requirements.
+        """@en,
+        """
+        Les produits phytosanitaires autorisés sont répertoriés dans le répertoire des produits phytosanitaires.
+        Le répertoire contient des informations sur l'utilisation prévue, les restrictions d'application, les doses, l'étiquetage des dangers et les conditions d'application.
+        """@fr,
+        """
+        I prodotti fitosanitari autorizzati sono elencati nell'elenco dei prodotti fitosanitari.
+        L'elenco contiene informazioni sull'uso previsto, sulle restrizioni di applicazione, sulle dosi, sull'etichettatura dei pericoli e sulle condizioni d'uso.
+        """@it ;
     dcat:landingPage <https://www.psm.admin.ch/> ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2010/340> ;
     systemmap:operatedBy systemmap:ORG204 .
 
 systemmap:SYS020 a schema:SoftwareApplication ;
     rdfs:label "Tierverkehrsdatenbank"@de,
+        "Animal Traffic Database"@en,
         "Banque de données sur le trafic des animaux"@fr,
         "Banca dati sul traffico di animali"@it ;
-    rdfs:comment "Die Tierverkehrsdatenbank (TVD) ist ein schweizerisches System zur Registrierung und Nachverfolgung von Nutztieren, wie Rinder, Schweine, Schafe, Ziegen und in Gehege gehaltenes Wild. Dies ist u.a. ein wichtiger Beitrag für die Lebensmittelsicherheit und zu der Eindämmung von Tierseuchen. Dank einem zweckmässigen Erfassungssystem werden in der Datenbank Informationen wie Geburts-, Bewegungs- und Schlachtdaten sowie Halterwechsel erfasst."@de,
-        "La banque de données sur le trafic des animaux (BDTA) est un système suisse d’enregistrement et de suivi des animaux de rente, tels que les bovins, les porcs, les ovins, les caprins ou le gibier détenu en enclos. Ce système contribue notamment à la sécurité des denrées alimentaires et à l’enraiement des épizooties. Le système de saisie judicieux permet d’enregistrer des informations relatives à la naissance, aux déplacements et à l’abattage des animaux de rente ou encore aux changements de propriétaires."@fr,
-        "La Banca dati sul traffico di animali (BDTA) è un sistema svizzero per la registrazione e la tracciabilità di animali da reddito come bovini, suini, ovini, caprini e selvaggina allevata in recinti. Tale sistema contribuisce in modo significativo anche alla sicurezza alimentare e al contenimento delle epizoozie. Grazie a un sistema di registrazione mirato, nella BDTA vengono registrati i dati relativi alla nascita, agli spostamenti, alla macellazione e al cambiamento del detentore."@it ;
+    rdfs:comment """
+        Die Tierverkehrsdatenbank (TVD) ist ein schweizerisches System zur Registrierung und Nachverfolgung von Nutztieren, wie Rinder, Schweine, Schafe, Ziegen und in Gehege gehaltenes Wild.
+        Dies ist u.a. ein wichtiger Beitrag für die Lebensmittelsicherheit und zu der Eindämmung von Tierseuchen.
+        Dank einem zweckmässigen Erfassungssystem werden in der Datenbank Informationen wie Geburts-, Bewegungs- und Schlachtdaten sowie Halterwechsel erfasst.
+        """@de,
+        """
+        The Animal Traffic Database (TVD) is a Swiss system for the registration and tracking of livestock, such as cattle, pigs, sheep, goats, and game kept in enclosures.
+        This system makes an important contribution to food safety and the containment of animal diseases.
+        Thanks to an efficient recording system, the database collects information such as birth, movement, and slaughter data, as well as ownership changes.
+        """@en,
+        """
+        La banque de données sur le trafic des animaux (BDTA) est un système suisse d’enregistrement et de suivi des animaux de rente, tels que les bovins, les porcs, les ovins, les caprins ou le gibier détenu en enclos.
+        Ce système contribue notamment à la sécurité des denrées alimentaires et à l’enraiement des épizooties.
+        Le système de saisie judicieux permet d’enregistrer des informations relatives à la naissance, aux déplacements et à l’abattage des animaux de rente ou encore aux changements de propriétaires.
+        """@fr,
+        """
+        La Banca dati sul traffico di animali (BDTA) è un sistema svizzero per la registrazione e la tracciabilità di animali da reddito come bovini, suini, ovini, caprini e selvaggina allevata in recinti.
+        Tale sistema contribuisce in modo significativo anche alla sicurezza alimentare e al contenimento delle epizoozie.
+        Grazie a un sistema di registrazione mirato, nella BDTA vengono registrati i dati relativi alla nascita, agli spostamenti, alla macellazione e al cambiamento del detentore.
+        """@it ;
     systemmap:abbreviation "TVD"@de,
+        "TVD"@en,
         "BDTA"@fr,
         "BDTA"@it ;
     systemmap:operatedBy systemmap:ORG101 .
@@ -450,10 +576,26 @@ systemmap:SYS021 a schema:SoftwareApplication ;
         "Milk Database"@en,
         "Base de données lait"@fr,
         "Database latte"@it ;
-    rdfs:comment "Die Datenbank Milch (dbmilch.ch) ist eine Webapplikation der TSM Treuhand GmbH. Sie ist die Online-Plattform der Akteure der Schweizer Milchwirtschaft. Die von der Bedag Solutions AG entwickelte Lösung kann von den kantonalen Veterinär- und Landwirtschaftsämtern oder auch anderen Organisationen in Verbindung mit Acontrol genutzt werden."@de,
-        "The Milk Database (dbmilch.ch) is a web application of TSM Treuhand GmbH. It is the online platform for actors in the Swiss dairy industry. The solution developed by Bedag Solutions AG can be used by cantonal veterinary and agricultural offices or other organizations in conjunction with Acontrol."@en,
-        "La base de données lait (dbmilch.ch) est une application web de TSM Treuhand GmbH. Elle est la plateforme en ligne des acteurs de l'industrie laitière suisse. La solution développée par Bedag Solutions AG peut être utilisée par les offices vétérinaires et agricoles cantonaux ou par d'autres organisations en lien avec Acontrol."@fr,
-        "La database latte (dbmilch.ch) è un'applicazione web di TSM Treuhand GmbH. È la piattaforma online per gli attori dell'industria lattiero-casearia svizzera. La soluzione sviluppata da Bedag Solutions AG può essere utilizzata dagli uffici veterinari e agricoli cantonali o da altre organizzazioni in combinazione con Acontrol."@it ;
+    rdfs:comment """
+        Die Datenbank Milch (dbmilch.ch) ist eine Webapplikation der TSM Treuhand GmbH.
+        Sie ist die Online-Plattform der Akteure der Schweizer Milchwirtschaft.
+        Die von der Bedag Solutions AG entwickelte Lösung kann von den kantonalen Veterinär- und Landwirtschaftsämtern oder auch anderen Organisationen in Verbindung mit Acontrol genutzt werden.
+        """@de,
+        """
+        The Milk Database (dbmilch.ch) is a web application developed by TSM Treuhand GmbH.
+        It serves as the online platform for stakeholders in the Swiss dairy industry.
+        The solution, developed by Bedag Solutions AG, can be used by cantonal veterinary and agricultural offices or other organizations in connection with Acontrol.
+        """@en,
+        """
+        La base de données lait (dbmilch.ch) est une application web de TSM Treuhand GmbH.
+        Elle est la plateforme en ligne des acteurs de l'industrie laitière suisse.
+        La solution développée par Bedag Solutions AG peut être utilisée par les offices vétérinaires et agricoles cantonaux ou par d'autres organisations en lien avec Acontrol.
+        """@fr,
+        """
+        La database latte (dbmilch.ch) è un'applicazione web di TSM Treuhand GmbH.
+        È la piattaforma online per gli attori dell'industria lattiero-casearia svizzera.
+        La soluzione sviluppata da Bedag Solutions AG può essere utilizzata dagli uffici veterinari e agricoli cantonali o da altre organizzazioni in combinazione con Acontrol.
+        """@it ;
     systemmap:abbreviation "dbmilch"@de,
         "dbmilch"@en,
         "dbmilch"@fr,
@@ -461,12 +603,48 @@ systemmap:SYS021 a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:ORG100 .
 
 systemmap:SYS022 a schema:SoftwareApplication ;
-    rdfs:label "ACmobile"@de ;
-    rdfs:comment "ACmobile ist eine plattformunabhängige, mobile Lösung für die elektronische Erfassung von Kontrollergebnissen und Massnahmen."@de .
+    rdfs:label "ACmobile"@de,
+        "ACmobile"@en,
+        "ACmobile"@fr,
+        "ACmobile"@it ;
+    rdfs:comment """
+        ACmobile ist eine plattformunabhängige, mobile Lösung für die elektronische Erfassung von Kontrollergebnissen und Massnahmen.
+        """@de,
+        """
+        ACmobile is a platform-independent mobile solution for the electronic recording of inspection results and measures.
+        """@en,
+        """
+        ACmobile est une solution mobile indépendante de la plateforme pour l'enregistrement électronique des résultats de contrôle et des mesures.
+        """@fr,
+        """
+        ACmobile è una soluzione mobile indipendente dalla piattaforma per la registrazione elettronica dei risultati delle ispezioni e delle misure.
+        """@it .
 
 systemmap:SYS023 a schema:SoftwareApplication ;
-    rdfs:label "Barto"@de ;
-    rdfs:comment "Barto ist eine digitale Plattform für die Landwirtschaft, die eine effiziente Betriebsführung, Dokumentation und Analyse von Betriebsdaten ermöglicht. Sie integriert verschiedene agronomische und administrative Funktionen und bietet Landwirtinnen und Landwirten eine zentrale Lösung für die Verwaltung ihres Betriebs. Barto wird von der Barto AG betrieben und arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen."@de ;
+    rdfs:label "Barto"@de,
+        "Barto"@en,
+        "Barto"@fr,
+        "Barto"@it ;
+    rdfs:comment """
+        Barto ist eine digitale Plattform für die Landwirtschaft, die eine effiziente Betriebsführung, Dokumentation und Analyse von Betriebsdaten ermöglicht.
+        Sie integriert verschiedene agronomische und administrative Funktionen und bietet Landwirtinnen und Landwirten eine zentrale Lösung für die Verwaltung ihres Betriebs.
+        Barto wird von der Barto AG betrieben und arbeitet mit Partnern aus der Agrarbranche zusammen, um innovative digitale Lösungen bereitzustellen.
+        """@de,
+        """
+        Barto is a digital platform for agriculture that enables efficient farm management, documentation, and analysis of farm data.
+        It integrates various agronomic and administrative functions and provides farmers with a central solution for managing their operations.
+        Barto is operated by Barto AG and collaborates with partners from the agricultural sector to provide innovative digital solutions.
+        """@en,
+        """
+        Barto est une plateforme numérique pour l'agriculture qui permet une gestion efficace des exploitations, la documentation et l'analyse des données agricoles.
+        Elle intègre diverses fonctions agronomiques et administratives et offre aux agriculteurs une solution centrale pour la gestion de leur exploitation.
+        Barto est exploitée par Barto AG et collabore avec des partenaires du secteur agricole pour fournir des solutions numériques innovantes.
+        """@fr,
+        """
+        Barto è una piattaforma digitale per l'agricoltura che consente una gestione aziendale efficiente, la documentazione e l'analisi dei dati aziendali.
+        Integra diverse funzioni agronomiche e amministrative e offre agli agricoltori una soluzione centrale per la gestione della loro azienda.
+        Barto è gestita da Barto AG e collabora con partner del settore agricolo per fornire soluzioni digitali innovative.
+        """@it ;
     systemmap:operatedBy systemmap:ORG102 .
 
 systemmap:SYS024 a schema:SoftwareApplication ;
@@ -486,14 +664,33 @@ systemmap:SYS024 a schema:SoftwareApplication ;
 
 systemmap:SYS025 a schema:SoftwareApplication ;
     rdfs:label "Betriebs- und Unternehmensregister"@de,
-        "Registre des entreprises et des établissements"@fr ;
+        "Register of Enterprises and Establishments"@en,
+        "Registre des entreprises et des établissements"@fr,
+        "Registro delle imprese e degli stabilimenti"@it ;
     rdfs:comment """
         Das Betriebs- und Unternehmensregister (BUR) umfasst alle Unternehmen und Betriebe des privaten und öffentlichen Rechts, die in der Schweiz domiziliert sind und eine wirtschaftliche Tätigkeit ausüben.
         Das BUR dient dem BFS als Adressregister für die statistischen Erhebungen bei Unternehmen und Arbeitsstätten.
         Auch andere Ämter der Bundesverwaltung und zahlreiche Kantone verwenden das BUR zu statistischen oder administrativen Zwecken.
-        """@de ;
+        """@de,
+        """
+        The Register of Enterprises and Establishments (BUR) includes all private and public legal entities domiciled in Switzerland that engage in economic activity.
+        The BUR serves the FSO as an address register for statistical surveys of businesses and workplaces.
+        Other federal administration offices and numerous cantons also use the BUR for statistical or administrative purposes.
+        """@en,
+        """
+        Le Registre des entreprises et des établissements (REE) recense toutes les entreprises et établissements de droit privé et public domiciliés en Suisse et exerçant une activité économique.
+        Le REE sert de registre d'adresses pour les enquêtes statistiques menées par l'OFS auprès des entreprises et des lieux de travail.
+        D'autres offices de l'administration fédérale ainsi que de nombreux cantons utilisent également le REE à des fins statistiques ou administratives.
+        """@fr,
+        """
+        Il Registro delle imprese e degli stabilimenti (BUR) comprende tutte le imprese e gli stabilimenti di diritto privato e pubblico domiciliati in Svizzera che svolgono un'attività economica.
+        Il BUR serve all'UST come registro degli indirizzi per le rilevazioni statistiche su imprese e luoghi di lavoro.
+        Anche altri uffici dell'amministrazione federale e numerosi cantoni utilizzano il BUR a fini statistici o amministrativi.
+        """@it ;
     systemmap:abbreviation "BUR"@de,
-        "REE"@fr ;
+        "BUR"@en,
+        "REE"@fr,
+        "BUR"@it ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> ;
     systemmap:operatedBy systemmap:ORG212 .
 
@@ -513,8 +710,30 @@ systemmap:SYS026 a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:ORG210 .
 
 systemmap:SYS027 a schema:SoftwareApplication ;
-    rdfs:label "UID-Register"@de ;
-    rdfs:comment "Das UID-Register ist eine zentrale Datenbank des Bundesamts für Statistik (BFS), die der eindeutigen Identifikation von Unternehmen in der Schweiz dient. Jedes in der Schweiz aktive Unternehmen erhält eine einheitliche Unternehmens-Identifikationsnummer (UID), die administrative Abläufe vereinfacht und die Zusammenarbeit zwischen Behörden effizienter gestaltet. Die im UID-Register enthaltenen Daten beschränken sich auf das für die Identifikation notwendige Minimum."@de ;
+    rdfs:label "UID-Register"@de,
+        "UID Register"@en,
+        "Registre UID"@fr,
+        "Registro UID"@it ;
+    rdfs:comment """
+        Das UID-Register ist eine zentrale Datenbank des Bundesamts für Statistik (BFS), die der eindeutigen Identifikation von Unternehmen in der Schweiz dient.
+        Jedes in der Schweiz aktive Unternehmen erhält eine einheitliche Unternehmens-Identifikationsnummer (UID), die administrative Abläufe vereinfacht und die Zusammenarbeit zwischen Behörden effizienter gestaltet.
+        Die im UID-Register enthaltenen Daten beschränken sich auf das für die Identifikation notwendige Minimum.
+        """@de,
+        """
+        The UID Register is a central database of the Federal Statistical Office (FSO) that serves the unique identification of companies in Switzerland.
+        Every company active in Switzerland receives a unique Business Identification Number (UID), which simplifies administrative processes and enhances collaboration between authorities.
+        The data contained in the UID Register is limited to the minimum necessary for identification.
+        """@en,
+        """
+        Le registre UID est une base de données centrale de l'Office fédéral de la statistique (OFS) qui sert à l'identification unique des entreprises en Suisse.
+        Chaque entreprise active en Suisse reçoit un numéro d'identification des entreprises (UID) unique, ce qui simplifie les processus administratifs et améliore la collaboration entre les autorités.
+        Les données contenues dans le registre UID se limitent au minimum nécessaire pour l'identification.
+        """@fr,
+        """
+        Il registro UID è una banca dati centrale dell'Ufficio federale di statistica (UST) che serve all'identificazione univoca delle imprese in Svizzera.
+        Ogni impresa attiva in Svizzera riceve un numero d'identificazione aziendale (UID) unico, che semplifica i processi amministrativi e migliora la collaborazione tra le autorità.
+        I dati contenuti nel registro UID sono limitati al minimo necessario per l'identificazione.
+        """@it ;
     rdfs:seeAlso <https://www.ech.ch/ech/ech-0108>,
         <https://www.uid.admin.ch/> ;
     systemmap:operatedBy systemmap:ORG212 .
@@ -549,13 +768,33 @@ systemmap:SYS028 a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:ORG099 .
 
 systemmap:SYS029 a schema:SoftwareApplication ;
-    rdfs:label "Marktdaten Analyse- und Reporting-System"@de ;
-    rdfs:comment "Im Marktdaten Analyse- und Reporting-System werden Preis- und andere wichtige Agrarmarktdaten gesammelt, aggregiert, berechnet, analysiert und für Reports aufbereitet. MARS III ist in das BI BLW eingebunden."@de ;
-    systemmap:abbreviation "MARS III"@de ;
+    rdfs:label "Marktdaten Analyse- und Reporting-System"@de,
+        "Market Data Analysis and Reporting System"@en,
+        "Système d'analyse et de reporting des données de marché"@fr,
+        "Sistema di analisi e reportistica dei dati di mercato"@it ;
+    rdfs:comment """
+        Im Marktdaten Analyse- und Reporting-System (MARS III) werden Preis- und andere wichtige Agrarmarktdaten gesammelt, aggregiert, berechnet, analysiert und für Berichte aufbereitet.
+        """@de,
+        """
+        The Market Data Analysis and Reporting System (MARS III) collects, aggregates, calculates, analyzes, and prepares price and other important agricultural market data for reports.
+        """@en,
+        """
+        Le Système d'analyse et de reporting des données de marché (MARS III) collecte, agrège, calcule, analyse et prépare les données de prix et autres données importantes du marché agricole pour des rapports.
+        """@fr,
+        """
+        Il Sistema di analisi e reportistica dei dati di mercato (MARS III) raccoglie, aggrega, calcola, analizza e prepara i dati sui prezzi e altri dati importanti del mercato agricolo per i rapporti.
+        """@it ;
+    systemmap:abbreviation "MARS III"@de,
+        "MARS III"@en,
+        "MARS III"@fr,
+        "MARS III"@it ;
     systemmap:operatedBy systemmap:ORG012 .
 
 systemmap:SYS030 a schema:SoftwareApplication ;
-    rdfs:label "Geografisches Informationssystem"@de ;
+    rdfs:label "Geografisches Informationssystem"@de,
+        "Geographic Information System"@en,
+        "Système d'information géographique"@fr,
+        "Sistema informativo geografico"@it ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_e> ;
     systemmap:operatedBy systemmap:ORG010 .
 
@@ -980,6 +1219,7 @@ systemmap:ORG002 a systemmap:FederalOrganization ;
 
 systemmap:ORG003 a systemmap:FederalOrganization ;
     rdfs:label "Direktion BLW"@de,
+        "Directorate FOAG"@en,
         "Direction OFAG"@fr,
         "Direzione UFAG"@it ;
     schema:parentOrganization systemmap:ORG001 ;
@@ -1316,13 +1556,29 @@ systemmap:ORG032 a systemmap:FederalOrganization ;
         "FBNPS"@it .
 
 systemmap:ORG040 a systemmap:FederalOrganization ;
-    rdfs:label "Fachbereich Ein- und Ausfuhr"@de ;
+    rdfs:label "Fachbereich Ein- und Ausfuhr"@de,
+        "Specialized Unit for Import and Export"@en,
+        "Secteur Importations et exportations"@fr,
+        "Settore Importazioni ed esportazioni"@it ;
     schema:parentOrganization systemmap:ORG007 ;
     rdfs:comment """
         Zu den Hauptaufgaben des Fachbereichs Ein- und Ausfuhr (FBEA) gehören die Verwaltung der Zollkontingente, die Erteilung von Einfuhrbewilligungen, die Zuteilung von Kontingentsanteilen, die Koordination mit der Oberzolldirektion sowie die Durchführung von internen und externen Kontrollen.
         Zudem kümmert sich der FBEA um die Gebührenverwaltung, den Betrieb und die Wartung von Fachapplikationen, die Bearbeitung von Gesuchen im Veredelungsverkehr und um Exportberatungen.
-        """@de ;
-    systemmap:abbreviation "FBEA"@de .
+        """@de,
+        """
+        The main tasks of the Specialized Unit for Import and Export (FBEA) include the management of tariff quotas, the issuance of import permits, the allocation of quota shares, coordination with the Federal Customs Directorate, and the execution of internal and external controls.
+        Additionally, the FBEA handles fee management, the operation and maintenance of specialized applications, the processing of applications for inward processing, and export consulting.
+        """@en,
+        """
+        Les principales tâches de l'Unité spécialisée Importation et Exportation (FBEA) comprennent la gestion des contingents tarifaires, la délivrance des autorisations d'importation, l'attribution des parts de contingent, la coordination avec la Direction générale des douanes et l'exécution des contrôles internes et externes.
+        De plus, le FBEA s'occupe de la gestion des taxes, de l'exploitation et de la maintenance des applications spécialisées, du traitement des demandes dans le cadre du perfectionnement actif et du conseil en exportation.
+        """@fr,
+        """
+        I principali compiti dell'Unità specializzata Importazione ed Esportazione (FBEA) comprendono la gestione delle contingenti tariffari, il rilascio delle autorizzazioni all'importazione, l'assegnazione delle quote di contingente, il coordinamento con la Direzione Generale delle Dogane e l'esecuzione di controlli interni ed esterni.
+        Inoltre, il FBEA si occupa della gestione delle tasse, del funzionamento e della manutenzione delle applicazioni specializzate, dell'elaborazione delle domande nel traffico di perfezionamento attivo e della consulenza all'esportazione.
+        """@it ;
+    systemmap:abbreviation "FBEA"@de,
+        "SIE"@fr .
 
 systemmap:ORG041 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Tierische Produkte und Tierzucht"@de,
@@ -1344,32 +1600,209 @@ systemmap:ORG041 a systemmap:FederalOrganization ;
         systemmap:INF023 .
 
 systemmap:ORG096 a systemmap:FederalOrganization ;
-    rdfs:label "Bundesamt für Umwelt"@de ;
-    systemmap:abbreviation "BAFU"@de .
+    rdfs:label "Bundesamt für Umwelt"@de,
+        "Federal Office for the Environment"@en,
+        "Office fédéral de l'environnement"@fr,
+        "Ufficio federale dell'ambiente"@it ;
+    rdfs:comment """
+        Das Bundesamt für Umwelt (BAFU) ist die Umweltfachstelle der Schweiz und gehört zum Eidgenössischen Departement für Umwelt, Verkehr, Energie und Kommunikation (UVEK).
+        Es ist verantwortlich für die nachhaltige Nutzung der natürlichen Ressourcen sowie den Schutz des Menschen vor Naturgefahren und übermässigen Umweltbelastungen.
+        Gegründet 1971, hat das BAFU seinen Hauptsitz in Bern.
+        """@de,
+        """
+        The Federal Office for the Environment (FOEN) is Switzerland's environmental agency and is part of the Federal Department of the Environment, Transport, Energy and Communications (DETEC).
+        It is responsible for the sustainable use of natural resources and the protection of the population from natural hazards and excessive environmental burdens.
+        Founded in 1971, the FOEN is headquartered in Bern.
+        """@en,
+        """
+        L'Office fédéral de l'environnement (OFEV) est l'autorité environnementale de la Suisse et fait partie du Département fédéral de l'environnement, des transports, de l'énergie et de la communication (DETEC).
+        Il est responsable de l'utilisation durable des ressources naturelles ainsi que de la protection de la population contre les dangers naturels et les charges environnementales excessives.
+        Fondé en 1971, l'OFEV a son siège principal à Berne.
+        """@fr,
+        """
+        L'Ufficio federale dell'ambiente (UFAM) è l'agenzia ambientale della Svizzera e fa parte del Dipartimento federale dell'ambiente, dei trasporti, dell'energia e delle comunicazioni (DATEC).
+        È responsabile dell'uso sostenibile delle risorse naturali e della protezione della popolazione dai pericoli naturali e dalle eccessive pressioni ambientali.
+        Fondato nel 1971, l'UFAM ha la sua sede principale a Berna.
+        """@it ;
+    owl:sameAs staatskalender:10008758 ;
+    systemmap:abbreviation "BAFU"@de,
+        "FOEN"@en,
+        "OFEV"@fr,
+        "UFAM"@it .
 
 systemmap:ORG097 a systemmap:FederalOrganization ;
-    rdfs:label "Bundesamt für Gesundheit"@de ;
-    systemmap:abbreviation "BAG"@de .
+    rdfs:label "Bundesamt für Gesundheit"@de,
+        "Federal Office of Public Health"@en,
+        "Office fédéral de la santé publique"@fr,
+        "Ufficio federale della sanità pubblica"@it ;
+    rdfs:comment """
+        Das Bundesamt für Gesundheit (BAG) ist verantwortlich für die nationale Gesundheitspolitik der Schweiz und fördert die Gesundheit der Bevölkerung in Zusammenarbeit mit den Kantonen.
+        Es setzt sich für ein leistungsfähiges und bezahlbares Gesundheitssystem ein.
+        Zudem vertritt das BAG die Schweiz in internationalen gesundheitspolitischen Belangen.
+        """@de,
+        """
+        The Federal Office of Public Health (FOPH) is responsible for Switzerland's national health policy and promotes public health in collaboration with the cantons.
+        It is committed to an efficient and affordable healthcare system.
+        Additionally, the FOPH represents Switzerland in international public health matters.
+        """@en,
+        """
+        L'Office fédéral de la santé publique (OFSP) est responsable de la politique de santé nationale de la Suisse et promeut la santé de la population en collaboration avec les cantons.
+        Il s'engage pour un système de santé performant et abordable.
+        De plus, l'OFSP représente la Suisse dans les affaires de santé publique internationales.
+        """@fr,
+        """
+        L'Ufficio federale della sanità pubblica (UFSP) è responsabile della politica sanitaria nazionale della Svizzera e promuove la salute della popolazione in collaborazione con i cantoni.
+        Si impegna per un sistema sanitario efficiente e accessibile.
+        Inoltre, l'UFSP rappresenta la Svizzera nelle questioni di salute pubblica a livello internazionale.
+        """@it ;
+    owl:sameAs staatskalender:10008684 ;
+    systemmap:abbreviation "BAG"@de,
+        "FOPH"@en,
+        "OFSP"@fr,
+        "UFSP"@it .
 
 systemmap:ORG098 a systemmap:FederalOrganization ;
-    rdfs:label "Staatssektretariat für Wirtschaft"@de ;
-    systemmap:abbreviation "SECO"@de .
+    rdfs:label "Staatssekretariat für Wirtschaft"@de,
+        "State Secretariat for Economic Affairs"@en,
+        "Secrétariat d'État à l'économie"@fr,
+        "Segretariato di Stato dell'economia"@it ;
+    rdfs:comment """
+        Das Staatssekretariat für Wirtschaft (SECO) ist das Kompetenzzentrum des Bundes für alle Kernfragen der Wirtschaftspolitik.
+        Es fördert nachhaltiges Wirtschaftswachstum und schafft die notwendigen ordnungs- und wirtschaftspolitischen Rahmenbedingungen.
+        Zudem koordiniert es die wirtschaftlichen Beziehungen der Schweiz im In- und Ausland.
+        """@de,
+        """
+        The State Secretariat for Economic Affairs (SECO) is the federal government's competence center for all key issues of economic policy.
+        It promotes sustainable economic growth and establishes the necessary regulatory and economic frameworks.
+        Additionally, it coordinates Switzerland's economic relations both domestically and internationally.
+        """@en,
+        """
+        Le Secrétariat d'État à l'économie (SECO) est le centre de compétence de la Confédération pour toutes les questions clés de la politique économique.
+        Il promeut une croissance économique durable et établit les cadres réglementaires et économiques nécessaires.
+        De plus, il coordonne les relations économiques de la Suisse au niveau national et international.
+        """@fr,
+        """
+        Il Segretariato di Stato dell'economia (SECO) è il centro di competenza della Confederazione per tutte le questioni chiave della politica economica.
+        Promuove una crescita economica sostenibile e crea le necessarie condizioni quadro normative ed economiche.
+        Inoltre, coordina le relazioni economiche della Svizzera a livello nazionale e internazionale.
+        """@it ;
+    owl:sameAs staatskalender:10008856 ;
+    systemmap:abbreviation "SECO"@de,
+        "SECO"@en,
+        "SECO"@fr,
+        "SECO"@it .
 
 systemmap:ORG201 a systemmap:FederalOrganization ;
-    rdfs:label "Wissensgrundlagen"@de ;
-    schema:parentOrganization systemmap:ORG211 .
+    rdfs:label "Abteilung Wissensgrundlagen"@de,
+        "Knowledge Foundations Division"@en,
+        "Département des bases de connaissances"@fr,
+        "Dipartimento delle basi di conoscenza"@it ;
+    schema:parentOrganization systemmap:ORG211 ;
+    rdfs:comment """
+        Die Abteilung Wissensgrundlagen unterstützt das Bundesamt für Lebensmittelsicherheit und Veterinärwesen (BLV) durch Förderung der Verfügbarkeit und Nutzung von Daten, Kompetenzen, Verfahren und Wissen.
+        Sie beurteilt gesundheitliche Risiken für Mensch und Tier und stellt sicher, dass der aktuelle Wissensstand erfasst und bei Bedarf durch externe Expertise ergänzt wird.
+        Dadurch werden Risiken frühzeitig erkannt und wissenschaftlich eingeordnet.
+        """@de,
+        """
+        The Knowledge Foundations Division supports the Federal Food Safety and Veterinary Office (FSVO) by promoting the availability and use of data, skills, processes, and knowledge.
+        It assesses health risks to humans and animals and ensures that current knowledge is recorded and supplemented by external expertise when necessary.
+        This enables early identification and scientific classification of risks.
+        """@en,
+        """
+        Le Département des bases de connaissances soutient l'Office fédéral de la sécurité alimentaire et des affaires vétérinaires (OSAV) en favorisant la disponibilité et l'utilisation des données, compétences, processus et connaissances.
+        Il évalue les risques sanitaires pour l'homme et l'animal et veille à ce que les connaissances actuelles soient recensées et, si nécessaire, complétées par des expertises externes.
+        Ainsi, les risques sont identifiés et classés scientifiquement à un stade précoce.
+        """@fr,
+        """
+        Il Dipartimento delle basi di conoscenza supporta l'Ufficio federale della sicurezza alimentare e di veterinaria (USAV) promuovendo la disponibilità e l'utilizzo di dati, competenze, processi e conoscenze.
+        Valuta i rischi per la salute di uomini e animali e garantisce che le conoscenze attuali siano registrate e, se necessario, integrate da competenze esterne.
+        In questo modo, i rischi possono essere identificati e classificati scientificamente in una fase precoce.
+        """@it ;
+    owl:sameAs staatskalender:20035163 .
 
 systemmap:ORG202 a systemmap:FederalOrganization ;
-    rdfs:label "Tiergesundheit und Tierschutz"@de ;
-    schema:parentOrganization systemmap:ORG211 .
+    rdfs:label "Abteilung Tiergesundheit und Tierschutz"@de,
+        "Animal Health and Welfare Division"@en,
+        "Département de la santé et de la protection des animaux"@fr,
+        "Dipartimento della salute e della protezione degli animali"@it ;
+    schema:parentOrganization systemmap:ORG211 ;
+    rdfs:comment """
+        Die Abteilung Tiergesundheit und Tierschutz des Bundesamts für Lebensmittelsicherheit und Veterinärwesen (BLV) fördert die Gesundheit und das Wohlbefinden von Tieren.
+        Sie arbeitet eng mit Tierhalterorganisationen und Vollzugsorganen zusammen, basierend auf wissenschaftlichen Grundlagen.
+        Die Abteilung ist in sechs Fachbereiche unterteilt: Tierseuchenprävention, Tierseuchenbekämpfung, Tierarzneimittel, Nutztierhaltung, Tierschutz Haus- und Wildtiere sowie Tierversuche.
+        """@de,
+        """
+        The Animal Health and Welfare Division of the Federal Food Safety and Veterinary Office (FSVO) promotes the health and well-being of animals.
+        It collaborates closely with animal owner organizations and enforcement bodies, based on scientific foundations.
+        The division is divided into six specialized areas: epizootic disease prevention, epizootic disease control, veterinary medicines, livestock farming, protection of domestic and wild animals, and animal experimentation.
+        """@en,
+        """
+        Le Département de la santé et de la protection des animaux de l'Office fédéral de la sécurité alimentaire et des affaires vétérinaires (OSAV) promeut la santé et le bien-être des animaux.
+        Il collabore étroitement avec les organisations d'éleveurs et les organes d'exécution, en s'appuyant sur des bases scientifiques.
+        Le département est divisé en six domaines spécialisés : prévention des épizooties, lutte contre les épizooties, médicaments vétérinaires, élevage des animaux de rente, protection des animaux domestiques et sauvages, ainsi que les expériences sur animaux.
+        """@fr,
+        """
+        Il Dipartimento della salute e della protezione degli animali dell'Ufficio federale della sicurezza alimentare e di veterinaria (USAV) promuove la salute e il benessere degli animali.
+        Collabora strettamente con le organizzazioni di allevatori e gli organi di esecuzione, basandosi su fondamenti scientifici.
+        Il dipartimento è suddiviso in sei settori specialistici: prevenzione delle epizoozie, lotta contro le epizoozie, medicinali veterinari, allevamento degli animali da reddito, protezione degli animali domestici e selvatici, nonché sperimentazione animale.
+        """@it ;
+    owl:sameAs staatskalender:20035164 .
 
 systemmap:ORG203 a systemmap:FederalOrganization ;
-    rdfs:label "Lebensmittel und Ernährung"@de ;
-    schema:parentOrganization systemmap:ORG211 .
+    rdfs:label "Abteilung Lebensmittel und Ernährung"@de,
+        "Food and Nutrition Division"@en,
+        "Département denrées alimentaires et nutrition"@fr,
+        "Dipartimento alimenti e nutrizione"@it ;
+    schema:parentOrganization systemmap:ORG211 ;
+    rdfs:comment """
+        Die Abteilung Lebensmittel und Ernährung des Bundesamts für Lebensmittelsicherheit und Veterinärwesen (BLV) ist verantwortlich für die Sicherheit und Qualität von Lebensmitteln sowie die Förderung einer gesunden Ernährung.
+        Sie entwickelt Richtlinien und überwacht die Einhaltung von Standards, um die Gesundheit der Bevölkerung zu schützen.
+        Zudem informiert sie die Öffentlichkeit über ernährungsrelevante Themen und arbeitet mit nationalen sowie internationalen Partnern zusammen.
+        """@de,
+        """
+        The Food and Nutrition Division of the Federal Food Safety and Veterinary Office (FSVO) is responsible for the safety and quality of food products, as well as promoting healthy nutrition.
+        It develops guidelines and monitors compliance with standards to protect public health.
+        Additionally, it informs the public about nutritional issues and collaborates with national and international partners.
+        """@en,
+        """
+        Le Département denrées alimentaires et nutrition de l'Office fédéral de la sécurité alimentaire et des affaires vétérinaires (OSAV) est responsable de la sécurité et de la qualité des denrées alimentaires ainsi que de la promotion d'une alimentation saine.
+        Il élabore des directives et surveille le respect des normes afin de protéger la santé de la population.
+        De plus, il informe le public sur les questions nutritionnelles et collabore avec des partenaires nationaux et internationaux.
+        """@fr,
+        """
+        Il Dipartimento alimenti e nutrizione dell'Ufficio federale della sicurezza alimentare e di veterinaria (USAV) è responsabile della sicurezza e della qualità degli alimenti, nonché della promozione di una sana alimentazione.
+        Sviluppa linee guida e monitora il rispetto degli standard per proteggere la salute della popolazione.
+        Inoltre, informa il pubblico su temi nutrizionali e collabora con partner nazionali e internazionali.
+        """@it ;
+    owl:sameAs staatskalender:20035162 .
 
 systemmap:ORG204 a systemmap:FederalOrganization ;
-    rdfs:label "Zulassungsstelle Pflanzenschutzmittel"@de ;
-    schema:parentOrganization systemmap:ORG211 .
+    rdfs:label "Zulassungsstelle Pflanzenschutzmittel"@de,
+        "Plant Protection Products Registration Authority"@en,
+        "Autorité d'homologation des produits phytosanitaires"@fr,
+        "Autorità di omologazione dei prodotti fitosanitari"@it ;
+    schema:parentOrganization systemmap:ORG211 ;
+    rdfs:comment """
+        Die Zulassungsstelle Pflanzenschutzmittel des Bundesamts für Lebensmittelsicherheit und Veterinärwesen (BLV) ist für die Zulassung und Überprüfung von Pflanzenschutzmitteln in der Schweiz verantwortlich.
+        Sie stellt sicher, dass nur sichere und wirksame Pflanzenschutzmittel auf den Markt gelangen, indem sie deren gesundheitliche und ökologische Auswirkungen sorgfältig bewertet.
+        Seit dem 1. Januar 2022 liegt die Zuständigkeit für die Zulassung von Pflanzenschutzmitteln beim BLV, während das Bundesamt für Umwelt (BAFU) die Hauptverantwortung für die Beurteilung der Umweltrisiken übernimmt.
+        """@de,
+        """
+        The Plant Protection Products Registration Authority of the Federal Food Safety and Veterinary Office (FSVO) is responsible for the authorization and review of plant protection products in Switzerland.
+        It ensures that only safe and effective products are placed on the market by carefully evaluating their health and ecological impacts.
+        Since January 1, 2022, the responsibility for the authorization of plant protection products lies with the FSVO, while the Federal Office for the Environment (FOEN) assumes primary responsibility for assessing environmental risks.
+        """@en,
+        """
+        L'Autorité d'homologation des produits phytosanitaires de l'Office fédéral de la sécurité alimentaire et des affaires vétérinaires (OSAV) est responsable de l'autorisation et de la révision des produits phytosanitaires en Suisse.
+        Elle veille à ce que seuls des produits sûrs et efficaces soient mis sur le marché en évaluant soigneusement leurs impacts sanitaires et écologiques.
+        Depuis le 1er janvier 2022, la compétence pour l'autorisation des produits phytosanitaires relève de l'OSAV, tandis que l'Office fédéral de l'environnement (OFEV) assume la responsabilité principale de l'évaluation des risques environnementaux.
+        """@fr,
+        """
+        L'Autorità di omologazione dei prodotti fitosanitari dell'Ufficio federale della sicurezza alimentare e di veterinaria (USAV) è responsabile dell'autorizzazione e della revisione dei prodotti fitosanitari in Svizzera.
+        Garantisce che solo prodotti sicuri ed efficaci siano immessi sul mercato, valutando attentamente i loro impatti sulla salute e sull'ecologia.
+        Dal 1° gennaio 2022, la competenza per l'autorizzazione dei prodotti fitosanitari spetta all'USAV, mentre l'Ufficio federale dell'ambiente (UFAM) ha la responsabilità principale della valutazione dei rischi ambientali.
+        """@it ;
+    owl:sameAs staatskalender:20049676 .
 
 systemmap:ORG210 a systemmap:FederalOrganization ;
     rdfs:label "Bundesamt für Zoll und Grenzsicherheit"@de,
@@ -1513,28 +1946,76 @@ systemmap:ORG214 a systemmap:FederalOrganization ;
         "SGI"@it .
 
 systemmap:INF003 a systemmap:Identifier ;
-    rdfs:label "UID-Nummer"@de ;
+    rdfs:label "UID-Nummer"@de,
+        "UID Number"@en,
+        "Numéro UID"@fr,
+        "Numero UID"@it ;
     rdfs:comment """
         Jedes in der Schweiz aktive Unternehmen erhält eine einheitliche Unternehmens-Identifikationsnummer (UID).
         Die Verwendung der UID ermöglicht eine administrative Entlastung der Unternehmen sowie eine effizientere Zusammenarbeit zwischen den Behörden.
-        """@de ;
+        """@de,
+        """
+        Every company active in Switzerland receives a unique Business Identification Number (UID).
+        The use of the UID facilitates administrative relief for companies and enables more efficient collaboration between authorities.
+        """@en,
+        """
+        Chaque entreprise active en Suisse reçoit un numéro d'identification des entreprises (UID) unique.
+        L'utilisation de l'UID permet un allègement administratif pour les entreprises et une collaboration plus efficace entre les autorités.
+        """@fr,
+        """
+        Ogni azienda attiva in Svizzera riceve un numero d'identificazione aziendale (UID) unico.
+        L'uso dell'UID facilita l'alleggerimento amministrativo per le aziende e consente una collaborazione più efficiente tra le autorità.
+        """@it ;
     systemmap:containedIn systemmap:SYS027 .
 
 systemmap:INF004 a systemmap:Identifier ;
     rdfs:label "BUR-Nummer"@de,
-        "BUR-Number"@en ;
+        "BUR Number"@en,
+        "Numéro BUR"@fr,
+        "Numero BUR"@it ;
     rdfs:comment """
         Die BUR-Nummer ist eine nichtsprechende 8-stellige Identifikationsnummer, die für jede Betriebsstätte eines Unternehmens vergeben wird.
-        """@de ;
-    systemmap:abbreviation "BURNR"@de ;
+        Sie dient der eindeutigen Identifikation von Betriebsstätten im Betriebs- und Unternehmensregister (BUR) des Bundesamts für Statistik (BFS).
+        """@de,
+        """
+        The BUR number is a non-descriptive 8-digit identification number assigned to each establishment of a company.
+        It serves the unique identification of establishments in the Business and Enterprise Register (BUR) of the Federal Statistical Office (FSO).
+        """@en,
+        """
+        Le numéro BUR est un numéro d'identification non descriptif à 8 chiffres attribué à chaque établissement d'une entreprise.
+        Il sert à l'identification unique des établissements dans le Registre des entreprises et des établissements (BUR) de l'Office fédéral de la statistique (OFS).
+        """@fr,
+        """
+        Il numero BUR è un numero di identificazione non descrittivo di 8 cifre assegnato a ciascuna sede di un'azienda.
+        Serve all'identificazione univoca delle sedi nel Registro delle imprese e degli stabilimenti (BUR) dell'Ufficio federale di statistica (UST).
+        """@it ;
+    systemmap:abbreviation "BURNR"@de,
+        "BURNR"@en,
+        "BURNR"@fr,
+        "BURNR"@it ;
     systemmap:containedIn systemmap:SYS025 .
 
 systemmap:INF005 a systemmap:Information ;
-    rdfs:label "Tieridentifikationsdaten"@de ;
+    rdfs:label "Tieridentifikationsdaten"@de,
+        "Animal identification data"@en,
+        "Données d'identification des animaux"@fr,
+        "Dati di identificazione degli animali"@it ;
     rdfs:comment """
         Enthält grundlegende Identifikationsdaten der Tiere, wie eindeutige Ohrmarkennummern, Art, Geschlecht und Geburtsdatum.
         Diese Stammdaten bilden die Basis für die lückenlose Rückverfolgbarkeit im TVD.
-        """@de ;
+        """@de,
+        """
+        Contains basic identification data of animals, such as unique ear tag numbers, species, gender, and date of birth.
+        These master data form the basis for seamless traceability in the TVD.
+        """@en,
+        """
+        Contient des données d'identification de base des animaux, telles que les numéros de marque auriculaire uniques, l'espèce, le sexe et la date de naissance.
+        Ces données de base constituent la base de la traçabilité sans faille dans le TVD.
+        """@fr,
+        """
+        Contiene i dati di identificazione di base degli animali, come i numeri univoci delle marche auricolari, la specie, il sesso e la data di nascita.
+        Questi dati principali costituiscono la base per la tracciabilità senza interruzioni nel TVD.
+        """@it ;
     systemmap:containedIn systemmap:SYS020 .
 
 systemmap:INF006 a systemmap:Information ;
@@ -1628,10 +2109,30 @@ systemmap:INF012 a systemmap:Information ;
         "Global plant list"@en,
         "Liste globale des plantes"@fr,
         "Elenco globale delle piante"@it ;
-    rdfs:comment "Liste aller möglichen Pflanzenarten mit entsprechenden Pflanzenarten-Codes. UPOV verwendet ein spezifisches Codesystem, um Pflanzenarten und -gattungen eindeutig zu identifizieren. Diese sogenannten UPOV-Codes bestehen in der Regel aus fünf Buchstaben für die Gattung und drei Buchstaben für die Art, zum Beispiel steht <tt>PRUNU_ARM</tt> für <i>Prunus armeniaca</i> (Aprikose). Dieses System erleichtert die Klassifizierung und den Informationsaustausch über Pflanzensorten."@de,
-        "List of all possible plant species with corresponding plant species codes. UPOV uses a specific coding system to uniquely identify plant species and genera. These so-called UPOV codes usually consist of five letters for the genus and three letters for the species. For example, <tt>PRUNU_ARM</tt> stands for <i>Prunus armeniaca</i> (apricot). This system facilitates the classification and exchange of information on plant varieties."@en,
-        "Liste de toutes les espèces végétales possibles avec les codes d'espèces correspondants. L'UPOV utilise un système de codage spécifique pour identifier de manière unique les espèces et genres de plantes. Ces codes UPOV se composent généralement de cinq lettres pour le genre et de trois lettres pour l'espèce. Par exemple, <tt>PRUNU_ARM</tt> représente <i>Prunus armeniaca</i> (abricot). Ce système facilite la classification et l'échange d'informations sur les variétés de plantes."@fr,
-        "Elenco di tutte le possibili specie vegetali con i relativi codici di specie. L'UPOV utilizza un sistema di codifica specifico per identificare in modo univoco le specie e i generi di piante. Questi cosiddetti codici UPOV sono generalmente composti da cinque lettere per il genere e tre lettere per la specie. Ad esempio, <tt>PRUNU_ARM</tt> rappresenta <i>Prunus armeniaca</i> (albicocco). Questo sistema facilita la classificazione e lo scambio di informazioni sulle varietà vegetali."@it ;
+    rdfs:comment """
+        Liste aller möglichen Pflanzenarten mit entsprechenden Pflanzenarten-Codes.
+        UPOV verwendet ein spezifisches Codesystem, um Pflanzenarten und -gattungen eindeutig zu identifizieren.
+        Diese sogenannten UPOV-Codes bestehen in der Regel aus fünf Buchstaben für die Gattung und drei Buchstaben für die Art, zum Beispiel steht <tt>PRUNU_ARM</tt> für <i>Prunus armeniaca</i> (Aprikose).
+        Dieses System erleichtert die Klassifizierung und den Informationsaustausch über Pflanzensorten.
+        """@de,
+        """
+        List of all possible plant species with corresponding plant species codes.
+        UPOV uses a specific coding system to uniquely identify plant species and genera.
+        These so-called UPOV codes usually consist of five letters for the genus and three letters for the species. For example, <tt>PRUNU_ARM</tt> stands for <i>Prunus armeniaca</i> (apricot).
+        This system facilitates the classification and exchange of information on plant varieties.
+        """@en,
+        """
+        Liste de toutes les espèces végétales possibles avec les codes d'espèces correspondants.
+        L'UPOV utilise un système de codage spécifique pour identifier de manière unique les espèces et genres de plantes.
+        Ces codes UPOV se composent généralement de cinq lettres pour le genre et de trois lettres pour l'espèce. Par exemple, <tt>PRUNU_ARM</tt> représente <i>Prunus armeniaca</i> (abricot).
+        Ce système facilite la classification et l'échange d'informations sur les variétés de plantes.
+        """@fr,
+        """
+        Elenco di tutte le possibili specie vegetali con i relativi codici di specie.
+        L'UPOV utilizza un sistema di codifica specifico per identificare in modo univoco le specie e i generi di piante.
+        Questi cosiddetti codici UPOV sono generalmente composti da cinque lettere per il genere e tre lettere per la specie. Ad esempio, <tt>PRUNU_ARM</tt> rappresenta <i>Prunus armeniaca</i> (albicocco).
+        Questo sistema facilita la classificazione e lo scambio di informazioni sulle varietà vegetali.
+        """@it ;
     systemmap:containedIn systemmap:SYS024 .
 
 systemmap:INF013 a systemmap:Information ;
@@ -1658,9 +2159,30 @@ systemmap:INF013 a systemmap:Information ;
     systemmap:informedBy systemmap:INF010 .
 
 systemmap:INF015 a systemmap:Information ;
-    rdfs:label "Strukturdaten"@de ;
-    rdfs:comment """Die landwirtschaftliche Strukturerhebung erfasst jährlich seit 1997 die Struktur aller Landwirtschaftsbetriebe in der Schweiz und basiert hauptsächlich auf administrativen Daten.
-        Sie deckt nahezu 100 % der Betriebe ab und erfasst Variablen wie Betriebsgrössen, Anbauflächen, Nutztierbestände und Beschäftigte. Die Erhebung dient der statistischen Analyse der Landwirtschaft, der Aktualisierung des Betriebsregisters und der agrarpolitischen Entscheidungsfindung."""@de ;
+    rdfs:label "Strukturdaten"@de,
+        "Structural data"@en,
+        "Données structurelles"@fr,
+        "Dati strutturali"@it ;
+    rdfs:comment """
+        Die landwirtschaftliche Strukturerhebung erfasst jährlich seit 1997 die Struktur aller Landwirtschaftsbetriebe in der Schweiz und basiert hauptsächlich auf administrativen Daten.
+        Sie deckt nahezu 100 % der Betriebe ab und erfasst Variablen wie Betriebsgrössen, Anbauflächen, Nutztierbestände und Beschäftigte.
+        Die Erhebung dient der statistischen Analyse der Landwirtschaft, der Aktualisierung des Betriebsregisters und der agrarpolitischen Entscheidungsfindung.
+        """@de,
+        """
+        The agricultural structural survey has been conducted annually since 1997 and records the structure of all farms in Switzerland, mainly based on administrative data.
+        It covers nearly 100% of farms and collects variables such as farm sizes, cultivated areas, livestock populations, and employees.
+        The survey serves statistical analysis of agriculture, the updating of the farm register, and agricultural policy decision-making.
+        """@en,
+        """
+        L'enquête structurelle agricole est menée chaque année depuis 1997 et enregistre la structure de toutes les exploitations agricoles en Suisse, principalement sur la base de données administratives.
+        Elle couvre près de 100 % des exploitations et collecte des variables telles que les tailles d'exploitation, les surfaces cultivées, les effectifs d'animaux d'élevage et les employés.
+        L'enquête sert à l'analyse statistique de l'agriculture, à la mise à jour du registre des exploitations et à la prise de décision en matière de politique agricole.
+        """@fr,
+        """
+        L'indagine strutturale agricola viene condotta annualmente dal 1997 e registra la struttura di tutte le aziende agricole in Svizzera, principalmente sulla base di dati amministrativi.
+        Copre quasi il 100% delle aziende e raccoglie variabili come le dimensioni aziendali, le superfici coltivate, il numero di animali da allevamento e gli occupati.
+        L'indagine serve per l'analisi statistica dell'agricoltura, l'aggiornamento del registro delle aziende e le decisioni di politica agricola.
+        """@it ;
     systemmap:containedIn systemmap:SYS003 ;
     systemmap:informs systemmap:INF030 .
 
@@ -1765,46 +2287,174 @@ systemmap:INF033 a systemmap:Information ;
         systemmap:INF042 .
 
 systemmap:INF034 a systemmap:Information ;
-    rdfs:label "Verschiebung von Hof- und Recyclingdünger"@de ;
-    rdfs:comment "Die Verschiebung von Verschiebung von Hof- und Recyclingdüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge von Verschiebung von Hof- und Recyclingdüngern, einschliesslich Käufe, Verkäufe und betrieblicher Transfers."@de ;
+    rdfs:label "Verschiebung von Hof- und Recyclingdünger"@de,
+        "Movement of Farmyard and Recycled Fertilizers"@en,
+        "Déplacement des engrais de ferme et recyclés"@fr,
+        "Spostamento dei fertilizzanti aziendali e riciclati"@it ;
+    rdfs:comment """
+        Die Verschiebung von Hof- und Recyclingdüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
+        """@de,
+        """
+        The movement of farmyard and recycled fertilizers includes the recording and reporting of all inflows and outflows, including purchases, sales, and internal transfers.
+        """@en,
+        """
+        Le déplacement des engrais de ferme et recyclés comprend l'enregistrement et la déclaration de toutes les entrées et sorties, y compris les achats, les ventes et les transferts internes.
+        """@fr,
+        """
+        Lo spostamento dei fertilizzanti aziendali e riciclati include la registrazione e la segnalazione di tutti gli afflussi e deflussi, compresi acquisti, vendite e trasferimenti interni.
+        """@it ;
     systemmap:containedIn systemmap:SYS006 .
 
 systemmap:INF035 a systemmap:Information ;
-    rdfs:label "Verschiebung von Mineraldüngern"@de ;
-    rdfs:comment "Die Verschiebung von Mineraldüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge mineralischer Düngemittel, einschliesslich Käufe, Verkäufe und betrieblicher Transfers."@de ;
+    rdfs:label "Verschiebung von Mineraldüngern"@de,
+        "Movement of Mineral Fertilizers"@en,
+        "Déplacement des engrais minéraux"@fr,
+        "Spostamento dei fertilizzanti minerali"@it ;
+    rdfs:comment """
+        Die Verschiebung von Mineraldüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge mineralischer Düngemittel, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
+        """@de,
+        """
+        The movement of mineral fertilizers includes the recording and reporting of all inflows and outflows of mineral fertilizers, including purchases, sales, and internal transfers.
+        """@en,
+        """
+        Le déplacement des engrais minéraux comprend l'enregistrement et la déclaration de toutes les entrées et sorties d'engrais minéraux, y compris les achats, les ventes et les transferts internes.
+        """@fr,
+        """
+        Lo spostamento dei fertilizzanti minerali include la registrazione e la segnalazione di tutti gli afflussi e deflussi di fertilizzanti minerali, compresi acquisti, vendite e trasferimenti interni.
+        """@it ;
     systemmap:containedIn systemmap:SYS006 .
 
 systemmap:INF036 a systemmap:Information ;
-    rdfs:label "Verschiebung von Pflanzenschutzmitteln"@de ;
-    rdfs:comment "Die Verschiebung von Pflanzenschutzmitteln umfasst die Erfassung und Meldung aller Zu- und Abgänge von Pflanzenschutzmitteln, einschliesslich Käufe, Verkäufe und betrieblicher Transfers."@de ;
+    rdfs:label "Verschiebung von Pflanzenschutzmitteln"@de,
+        "Movement of Plant Protection Products"@en,
+        "Déplacement des produits phytosanitaires"@fr,
+        "Spostamento dei prodotti fitosanitari"@it ;
+    rdfs:comment """
+        Die Verschiebung von Pflanzenschutzmitteln umfasst die Erfassung und Meldung aller Zu- und Abgänge von Pflanzenschutzmitteln, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
+        """@de,
+        """
+        The movement of plant protection products includes the recording and reporting of all inflows and outflows, including purchases, sales, and internal transfers.
+        """@en,
+        """
+        Le déplacement des produits phytosanitaires comprend l'enregistrement et la déclaration de toutes les entrées et sorties, y compris les achats, les ventes et les transferts internes.
+        """@fr,
+        """
+        Lo spostamento dei prodotti fitosanitari include la registrazione e la segnalazione di tutti gli afflussi e deflussi, compresi acquisti, vendite e trasferimenti interni.
+        """@it ;
     systemmap:containedIn systemmap:SYS006 .
 
 systemmap:INF037 a systemmap:Information ;
-    rdfs:label "Pflanzenschutzmittel"@de ;
-    rdfs:comment "Liste der in der Schweiz erlaubten Pflanzenschutzmittel, deren chemische Zusammensetzung, W-Nummern und Bewilligungsinhaber."@de ;
+    rdfs:label "Pflanzenschutzmittel"@de,
+        "Plant Protection Products"@en,
+        "Produits phytosanitaires"@fr,
+        "Prodotti fitosanitari"@it ;
+    rdfs:comment """
+        Liste der in der Schweiz erlaubten Pflanzenschutzmittel, deren chemische Zusammensetzung, W-Nummern und Bewilligungsinhaber.
+        """@de,
+        """
+        List of plant protection products authorized in Switzerland, including their chemical composition, W-numbers, and authorization holders.
+        """@en,
+        """
+        Liste des produits phytosanitaires autorisés en Suisse, y compris leur composition chimique, numéros W et titulaires d'autorisation.
+        """@fr,
+        """
+        Elenco dei prodotti fitosanitari autorizzati in Svizzera, inclusa la loro composizione chimica, i numeri W e i titolari dell'autorizzazione.
+        """@it ;
     systemmap:containedIn systemmap:SYS017 .
 
 systemmap:INF038 a systemmap:Information ;
-    rdfs:label "Kulturen und Schaderreger"@de ;
+    rdfs:label "Kulturen und Schaderreger"@de,
+        "Crops and Pests"@en,
+        "Cultures et organismes nuisibles"@fr,
+        "Colture e organismi nocivi"@it ;
+    rdfs:comment """
+        Liste der Kulturen und Schaderreger, für die in der Schweiz bereits eine Pflanzenschutzmittelbewilligung erteilt wurde.
+        """@de,
+        """
+        List of crops and pests for which a plant protection product authorization has already been granted in Switzerland.
+        """@en,
+        """
+        Liste des cultures et organismes nuisibles pour lesquels une autorisation de produit phytosanitaire a déjà été accordée en Suisse.
+        """@fr,
+        """
+        Elenco delle colture e degli organismi nocivi per i quali è già stata concessa un'autorizzazione per un prodotto fitosanitario in Svizzera.
+        """@it ;
     systemmap:containedIn systemmap:SYS017 .
 
 systemmap:INF039 a systemmap:Information ;
-    rdfs:label "Auflagen zur Anwendung von PSM"@de ;
+    rdfs:label "Auflagen zur Anwendung von Pflanzenschutzmitteln"@de,
+        "Conditions for the Use of Plant Protection Products"@en,
+        "Conditions d'utilisation des produits phytosanitaires"@fr,
+        "Condizioni per l'uso dei prodotti fitosanitari"@it ;
+    rdfs:comment """
+        Bestimmungen und Einschränkungen, die bei der Anwendung von Pflanzenschutzmitteln zu beachten sind, einschliesslich Dosierung, Anwendungszeitpunkt und Schutzmassnahmen.
+        """@de,
+        """
+        Regulations and restrictions to be observed when using plant protection products, including dosage, application timing, and protective measures.
+        """@en,
+        """
+        Règlements et restrictions à respecter lors de l'utilisation de produits phytosanitaires, y compris le dosage, le moment de l'application et les mesures de protection.
+        """@fr,
+        """
+        Regolamenti e restrizioni da osservare nell'uso dei prodotti fitosanitari, inclusi dosaggio, tempistica dell'applicazione e misure protettive.
+        """@it ;
     systemmap:containedIn systemmap:SYS017 .
 
 systemmap:INF040 a systemmap:Information ;
-    rdfs:label "Zubereitungen"@de ;
-    rdfs:comment "Mischungen oder Lösungen aus zwei oder mehr Stoffen."@de ;
+    rdfs:label "Zubereitungen"@de,
+        "Preparations"@en,
+        "Préparations"@fr,
+        "Preparazioni"@it ;
+    rdfs:comment """
+        Mischungen oder Lösungen aus zwei oder mehr Stoffen.
+        """@de,
+        """
+        Mixtures or solutions composed of two or more substances.
+        """@en,
+        """
+        Mélanges ou solutions composés de deux ou plusieurs substances.
+        """@fr,
+        """
+        Miscele o soluzioni composte da due o più sostanze.
+        """@it ;
     systemmap:containedIn systemmap:SYS028 .
 
 systemmap:INF041 a systemmap:Information ;
-    rdfs:label "Biozide"@de ;
-    rdfs:comment "Produkte zur Bekämpfung von Schadorganismen. Mitenthalten sind auch Parallelimportierte von Pflanzenschutzmittel, also Pflanzenschutzmittel, die aus anderen Ländern importiert werden."@de ;
+    rdfs:label "Biozide"@de,
+        "Biocides"@en,
+        "Biocides"@fr,
+        "Biocidi"@it ;
+    rdfs:comment """
+        Produkte zur Bekämpfung von Schadorganismen. Mitenthalten sind auch parallel importierte Pflanzenschutzmittel, also solche, die aus anderen Ländern eingeführt werden.
+        """@de,
+        """
+        Products used to combat harmful organisms. This also includes parallel-imported plant protection products, meaning those imported from other countries.
+        """@en,
+        """
+        Produits utilisés pour lutter contre les organismes nuisibles. Cela inclut également les produits phytosanitaires importés en parallèle, c'est-à-dire en provenance d'autres pays.
+        """@fr,
+        """
+        Prodotti utilizzati per combattere gli organismi nocivi. Sono inclusi anche i prodotti fitosanitari importati parallelamente da altri paesi.
+        """@it ;
     systemmap:containedIn systemmap:SYS028 .
 
 systemmap:INF042 a systemmap:Information ;
-    rdfs:label "Dünger"@de ;
-    rdfs:comment "Produkte zur Boden- und Pflanzendüngung."@de ;
+    rdfs:label "Dünger"@de,
+        "Fertilizers"@en,
+        "Engrais"@fr,
+        "Fertilizzanti"@it ;
+    rdfs:comment """
+        Produkte zur Boden- und Pflanzendüngung.
+        """@de,
+        """
+        Products for soil and plant fertilization.
+        """@en,
+        """
+        Produits pour la fertilisation des sols et des plantes.
+        """@fr,
+        """
+        Prodotti per la fertilizzazione del suolo e delle piante.
+        """@it ;
     systemmap:containedIn systemmap:SYS028 .
 
 systemmap:INF001 a systemmap:PersonInformation ;

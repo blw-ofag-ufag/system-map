@@ -795,6 +795,34 @@ systemmap:SYS030 a schema:SoftwareApplication ;
         "Geographic Information System"@en,
         "Système d'information géographique"@fr,
         "Sistema informativo geografico"@it ;
+    rdfs:comment """
+        Viele Arbeiten und Projekte des BLW haben einen Raumbezug.
+        Das GIS dient der Aufbereitung, Analyse, Auswertung und Darstellung raumbezogener landwirtschaftlicher Daten.
+        Das GIS dient im BLW insbesondere der Nachführung der landwirtschaftlichen Zonengrenzen und Hanglagen.
+        Zudem werden verschiedene andere thematische raumbezogene Fragestellungen im Zusammenhang mit dem Vollzug und der Weiterentwicklung der Agrarpolitik mit dem GIS bearbeitet.
+        """@de,
+        """
+        Many tasks and projects of the FOAG have a spatial reference.
+        The GIS is used for processing, analyzing, evaluating, and visualizing spatial agricultural data.
+        In the FOAG, the GIS is particularly used for updating agricultural zone boundaries and slope areas.
+        In addition, various other thematic spatial issues related to the implementation and further development of agricultural policy are addressed with the GIS.
+        """@en,
+        """
+        De nombreuses tâches et projets de l'OFAG ont une référence spatiale.
+        Le SIG sert à traiter, analyser, évaluer et visualiser les données agricoles spatiales.
+        À l'OFAG, le SIG est notamment utilisé pour la mise à jour des limites des zones agricoles et des pentes.
+        De plus, diverses autres questions spatiales thématiques en lien avec l'exécution et le développement de la politique agricole sont traitées avec le SIG.
+        """@fr,
+        """
+        Molti compiti e progetti dell'UFAG hanno un riferimento spaziale.
+        Il GIS viene utilizzato per l'elaborazione, l'analisi, la valutazione e la visualizzazione dei dati agricoli spaziali.
+        All'UFAG, il GIS è utilizzato in particolare per l'aggiornamento dei confini delle zone agricole e delle aree in pendenza.
+        Inoltre, con il GIS vengono affrontate diverse altre questioni tematiche spaziali legate all'attuazione e allo sviluppo della politica agricola.
+        """@it ;
+    systemmap:abbreviation "GIS-BLW"@de,
+        "GIS-BLW"@en,
+        "GIS-BLW"@fr,
+        "GIS-BLW"@it ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_e> ;
     systemmap:operatedBy systemmap:ORG010 .
 

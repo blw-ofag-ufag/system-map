@@ -33,7 +33,7 @@ Here's a table of the possible URL parameters, descriptions and their default va
 - [Is there (sensitive) personal data in a system?](https://s.zazuko.com/2xyqSxz)
 - [Table of Cantons, their agricultural IT-Systems and the respective operating agency (if given)](https://s.zazuko.com/2vz9Y8X)
 - [Table of federal offices, suborganizations and information they have access to](https://s.zazuko.com/2Upq8Qj)
-- [Label and comment length for all objects](https://s.zazuko.com/3t2wKbt)
+- [Label and comment length for all objects](https://s.zazuko.com/2aYzkVt)
 
 # 💭 Reasoning with python
 

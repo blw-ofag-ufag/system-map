@@ -457,6 +457,7 @@ systemmap:ORG020 a schema:GovernmentOrganization,
         Inoltre, sviluppa la prova delle prestazioni ecologiche (ÖLN), coordina ambiti normativi come la strategia per la biodiversità, l’agricoltura biologica, la protezione dell’energia e del clima e gestisce le interfacce legislative pertinenti.  
         A livello tecnico, vengono fornite applicazioni informatiche e implementate misure di riduzione. Altri compiti includono la gestione delle dichiarazioni, le relazioni pubbliche e il coinvolgimento degli attori interessati.  
         """@it ;
+    owl:sameAs staatskalender:10003227 ;
     systemmap:abbreviation "FBDP"@de,
         "FBDP"@en,
         "FBDP"@fr,
@@ -514,6 +515,7 @@ systemmap:ORG021 a schema:GovernmentOrganization,
         nei settori della sicurezza dell'approvvigionamento, del paesaggio culturale, dei contributi transitori,  
         delle zone e aree agricole, della terminologia agricola e del riconoscimento delle aziende e dei modelli aziendali.  
         """@it ;
+    owl:sameAs staatskalender:10003228 ;
     systemmap:abbreviation "FBDG"@de,
         "FBDG"@en,
         "FBDG"@fr,
@@ -580,6 +582,7 @@ systemmap:ORG030 a schema:GovernmentOrganization,
         Inoltre, gestisce la risposta a incidenti e crisi legati a eventi ABCN e coordina il controllo dei mangimi e lo sviluppo delle normative pertinenti.  
         Un altro punto focale è la salute animale, in particolare attraverso la promozione di innovazioni, strategie contro la resistenza agli antibiotici e l’approccio One Health.  
         """@it ;
+    owl:sameAs staatskalender:20011808 ;
     systemmap:abbreviation "FBGRT"@de,
         "FBGRT"@en,
         "FBGRT"@fr,
@@ -746,6 +749,7 @@ systemmap:ORG040 a schema:GovernmentOrganization,
         I principali compiti dell'Unità specializzata Importazione ed Esportazione (FBEA) comprendono la gestione delle contingenti tariffari, il rilascio delle autorizzazioni all'importazione, l'assegnazione delle quote di contingente, il coordinamento con la Direzione Generale delle Dogane e l'esecuzione di controlli interni ed esterni.
         Inoltre, il FBEA si occupa della gestione delle tasse, del funzionamento e della manutenzione delle applicazioni specializzate, dell'elaborazione delle domande nel traffico di perfezionamento attivo e della consulenza all'esportazione.
         """@it ;
+    owl:sameAs staatskalender:10003223 ;
     systemmap:abbreviation "FBEA"@de,
         "SIE"@fr ;
     systemmap:operates systemmap:SYS007 .
@@ -770,6 +774,7 @@ systemmap:ORG041 a schema:GovernmentOrganization,
         "The design and further development of agricultural policy framework conditions in the field of animal products and breeding are among the core tasks of the SPAE. Furthermore, it ensures the smooth and correct implementation of the relevant provisions of the Agricultural Act and the following Federal Council ordinances: Milk Price Support Ordinance, Slaughter Livestock Ordinance, Egg Ordinance, Ordinance on Identitas AG and the Animal Traffic Database, Disposal Contribution Ordinance, Agricultural Declaration Ordinance, Maximum Stock Ordinance, Ordinance on Sector and Producer Organizations, Sheep Wool Ordinance, and Breeding Ordinance."@en,
         "La conception et le développement des cadres politiques agricoles dans le domaine des produits animaux et de l'élevage font partie des missions principales du SPAE. Il veille également à la mise en œuvre correcte et sans heurts des dispositions pertinentes de la loi agricole et des ordonnances suivantes du Conseil fédéral : Ordonnance sur le soutien des prix du lait, Ordonnance sur le bétail de boucherie, Ordonnance sur les œufs, Ordonnance sur Identitas AG et la base de données sur le trafic des animaux, Ordonnance sur la contribution à l'élimination, Ordonnance sur la déclaration agricole, Ordonnance sur le nombre maximal d'animaux, Ordonnance sur les organisations de filières et de producteurs, Ordonnance sur la laine de mouton et Ordonnance sur l'élevage."@fr,
         "La progettazione e lo sviluppo del quadro politico agricolo nel settore dei prodotti animali e dell'allevamento sono tra i compiti principali dello SPAA. Inoltre, garantisce l'attuazione fluida e corretta delle disposizioni pertinenti della legge sull'agricoltura e delle seguenti ordinanze del Consiglio federale: Ordinanza sul sostegno del prezzo del latte, Ordinanza sul bestiame da macello, Ordinanza sulle uova, Ordinanza su Identitas AG e la banca dati sul traffico degli animali, Ordinanza sul contributo per lo smaltimento, Ordinanza sulla dichiarazione agricola, Ordinanza sul numero massimo di capi, Ordinanza sulle organizzazioni di settore e di produttori, Ordinanza sulla lana di pecora e Ordinanza sulla selezione degli animali."@it ;
+    owl:sameAs staatskalender:10003217 ;
     systemmap:abbreviation "FBTT"@de,
         "FBTT"@en,
         "SPAE"@fr,
@@ -985,6 +990,10 @@ systemmap:ORG201 a schema:GovernmentOrganization,
         "Département des bases de connaissances"@fr,
         "Dipartimento delle basi di conoscenza"@it ;
     schema:parentOrganization systemmap:ORG211 ;
+    schema:subOrganization systemmap:ORG205,
+        systemmap:ORG206,
+        systemmap:ORG207,
+        systemmap:ORG208 ;
     rdfs:comment """
         Die Abteilung Wissensgrundlagen unterstützt das Bundesamt für Lebensmittelsicherheit und Veterinärwesen (BLV) durch Förderung der Verfügbarkeit und Nutzung von Daten, Kompetenzen, Verfahren und Wissen.
         Sie beurteilt gesundheitliche Risiken für Mensch und Tier und stellt sicher, dass der aktuelle Wissensstand erfasst und bei Bedarf durch externe Expertise ergänzt wird.
@@ -1169,6 +1178,41 @@ systemmap:ORG204 a schema:GovernmentOrganization,
         """@it ;
     owl:sameAs staatskalender:20049676 ;
     systemmap:operates systemmap:SYS017 .
+
+systemmap:ORG205 a schema:GovernmentOrganization,
+        schema:Organization,
+        systemmap:FederalOrganization ;
+    rdfs:label "Kompetenzzentrum Daten"@de ;
+    schema:name "Kompetenzzentrum Daten"@de ;
+    schema:parentOrganization systemmap:ORG201 ;
+    owl:sameAs staatskalender:20051877 ;
+    systemmap:abbreviation "DCC"@de ;
+    systemmap:operates systemmap:SYS031,
+        systemmap:SYS032 .
+
+systemmap:ORG206 a schema:GovernmentOrganization,
+        schema:Organization,
+        systemmap:FederalOrganization ;
+    rdfs:label "Toxikologie Pflanzenschutzmittel"@de ;
+    schema:name "Toxikologie Pflanzenschutzmittel"@de ;
+    schema:parentOrganization systemmap:ORG201 ;
+    owl:sameAs staatskalender:20035173 .
+
+systemmap:ORG207 a schema:GovernmentOrganization,
+        schema:Organization,
+        systemmap:FederalOrganization ;
+    rdfs:label "Risikobewertung"@de ;
+    schema:name "Risikobewertung"@de ;
+    schema:parentOrganization systemmap:ORG201 ;
+    owl:sameAs staatskalender:20050577 .
+
+systemmap:ORG208 a schema:GovernmentOrganization,
+        schema:Organization,
+        systemmap:FederalOrganization ;
+    rdfs:label "Bildung & Forschung"@de ;
+    schema:name "Bildung & Forschung"@de ;
+    schema:parentOrganization systemmap:ORG201 ;
+    owl:sameAs staatskalender:20035170 .
 
 systemmap:ORG210 a schema:GovernmentOrganization,
         schema:Organization,
@@ -1426,7 +1470,7 @@ systemmap:ORG214 a schema:GovernmentOrganization,
         Il Settore Gestione Informatica è responsabile della pianificazione strategica, dell’attuazione e della sicurezza dell’informatica all’interno dell’UFAG, compresa la gestione di progetti, budget e applicazioni specializzate.
         Funziona come interfaccia con i fornitori di servizi, coordina i processi di gestione del cambiamento e garantisce la formazione nonché l’amministrazione delle modifiche e dei diritti di accesso.
         """@it ;
-    owl:sameAs systemmap:ORG214 ;
+    owl:sameAs staatskalender:10003237 ;
     systemmap:abbreviation "FBIF"@de,
         "ITMD"@en,
         "SGI"@fr,
@@ -3898,6 +3942,59 @@ systemmap:SYS030 a schema:SoftwareApplication ;
         "GIS-BLW"@it ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_e> ;
     systemmap:operatedBy systemmap:ORG010 .
+
+systemmap:SYS031 a schema:SoftwareApplication ;
+    rdfs:label "Auswertung/Analyse, Lebensmittelsicherheit, Veterinärwesen, Public Health"@de ;
+    schema:description """
+        ALVPH ist das Datawarehouse des Veterinärdienstes Schweiz.
+        Es dient als zentrale Datenplattform, die flexible Abfragen, Standarberichterstattung und statistische Auswertungen über mehrere Datenquellen ermöglicht.
+        Ausserdem verfügt ALVPH über viele graphische Funktionen, die eine attraktive Präsentation der Daten erlauben.
+        """@de ;
+    schema:name "Auswertung/Analyse, Lebensmittelsicherheit, Veterinärwesen, Public Health"@de ;
+    rdfs:comment """
+        ALVPH ist das Datawarehouse des Veterinärdienstes Schweiz.
+        Es dient als zentrale Datenplattform, die flexible Abfragen, Standarberichterstattung und statistische Auswertungen über mehrere Datenquellen ermöglicht.
+        Ausserdem verfügt ALVPH über viele graphische Funktionen, die eine attraktive Präsentation der Daten erlauben.
+        """@de ;
+    systemmap:abbreviation "ALVPH"@de ;
+    systemmap:operatedBy systemmap:ORG205 .
+
+systemmap:SYS032 a schema:SoftwareApplication ;
+    rdfs:label "Information system for cases of notifiable diseases"@en ;
+    schema:description """
+        Dashboard for the visualization and filtering of linked animal diseases data published by the Swiss Federal Food Safety and Veterinary Office.
+        """@en ;
+    schema:name "Information system for cases of notifiable diseases"@en ;
+    rdfs:comment """
+        Dashboard for the visualization and filtering of linked animal diseases data published by the Swiss Federal Food Safety and Veterinary Office.
+        """@en ;
+    rdfs:seeAlso <https://github.com/digital-sustainability/blv-infosm> ;
+    dcat:landingPage <https://www.dashboard.blv.admin.ch/> ;
+    systemmap:abbreviation "InfoSM"@en ;
+    systemmap:operatedBy systemmap:ORG205 .
+
+systemmap:SYS033 a schema:SoftwareApplication ;
+    rdfs:label "Apinella"@de ;
+    schema:description """
+        Software insbesondere für die Früherkennungsprogramm des kleiner Beutenkäfer bei Bienen.
+        """@de ;
+    schema:name "Apinella"@de ;
+    rdfs:comment """
+        Software insbesondere für die Früherkennungsprogramm des kleiner Beutenkäfer bei Bienen.
+        """@de ;
+    dcat:landingPage <https://www.apinella.ch/> .
+
+systemmap:SYS034 a schema:SoftwareApplication ;
+    rdfs:label "Traces"@de ;
+    schema:description """
+        Alle Personen und Firmen, die am Import- oder Exportprozess für den internationalen Handel von Tieren, Waren tierischen Ursprungs und gewissen Produkten nicht-tierischen Ursprungs beteiligt sind, müssen sich in Traces registrieren lassen.
+        Es handelt sich um ein eine Webanwendung der Eu-ropäischen Union und unterstützt den grenzüberschreitenden Verkehr von Tieren, Lebensmitteln und tierischen Nebenprodukten.
+        """@de ;
+    schema:name "Traces"@de ;
+    rdfs:comment """
+        Alle Personen und Firmen, die am Import- oder Exportprozess für den internationalen Handel von Tieren, Waren tierischen Ursprungs und gewissen Produkten nicht-tierischen Ursprungs beteiligt sind, müssen sich in Traces registrieren lassen.
+        Es handelt sich um ein eine Webanwendung der Eu-ropäischen Union und unterstützt den grenzüberschreitenden Verkehr von Tieren, Lebensmitteln und tierischen Nebenprodukten.
+        """@de .
 
 systemmap:SYS042 a schema:SoftwareApplication ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,

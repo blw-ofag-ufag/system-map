@@ -1,15 +1,23 @@
+@prefix LwG: <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
-@prefix LwG: <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#> .
+
+<https://www.fedlex.admin.ch/eli/cc/1986/926_926_926> a schema:Legislation .
+
+<https://www.fedlex.admin.ch/eli/cc/1993/1410_1410_1410> a schema:Legislation .
+
+<https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> a schema:Legislation .
+
+<https://www.fedlex.admin.ch/eli/cc/1993/274_274_274> a schema:Legislation .
 
 LwG: a schema:Legislation ;
-    rdfs:label "Bundesgesetz über die Landwirtschaft"@de;
-    schema:alternateName "Landwirtschaftsgesetz"@de;
-    systammap:abbreviation "LwG"@de .
+    rdfs:label "Bundesgesetz über die Landwirtschaft"@de ;
+    schema:alternateName "Landwirtschaftsgesetz"@de ;
+    systemmap:abbreviation "LwG"@de .
 
 LwG:art_165_c a schema:Legislation ;
     rdfs:label "Art. 165c LwG"@de,
@@ -40,14 +48,6 @@ LwG:art_27 a schema:Legislation ;
         "Art. 27 AgricA"@en,
         "Art. 27 LAgr"@fr,
         "Art. 27 LAgr"@it .
-
-<https://www.fedlex.admin.ch/eli/cc/1993/1410_1410_1410> a schema:Legislation .
-
-<https://www.fedlex.admin.ch/eli/cc/1986/926_926_926> a schema:Legislation .
-
-<https://www.fedlex.admin.ch/eli/cc/1993/274_274_274> a schema:Legislation .
-
-<https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> a schema:Legislation .
 
 <https://www.fedlex.admin.ch/eli/cc/1998/3244_3244_3244> a schema:Legislation ;
     rdfs:label "Verordnung über die Ein- und Ausfuhr von Gemüse, Obst und Gartenbauerzeugnissen (VEAGOG)"@de .
@@ -1437,7 +1437,7 @@ systemmap:ORG012 a systemmap:FederalOrganization ;
         "MAD"@en,
         "SAM"@fr,
         "SAM"@it ;
-    systemmap:hasLegalBasis LwG:art_27 ,
+    systemmap:hasLegalBasis LwG:art_27,
         <https://www.fedlex.admin.ch/eli/cc/1999/71> .
 
 systemmap:ORG013 a systemmap:FederalOrganization ;

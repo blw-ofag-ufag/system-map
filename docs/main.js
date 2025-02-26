@@ -292,23 +292,17 @@ async function init() {
         infoPanel.innerHTML = "";
         infoPanel.classList.remove("fixed");
     }
-    
 
-    // 7) Hover => BFS highlight + show panel
-    network.on("hoverNode", (params) => {
-        const hoveredId = params.node;
-    
-        // BFS up to 2 hops for nodes
-        const distMap = getDistancesUpToTwoHops(network, hoveredId);
-    
-        // Update node colors (existing code)
+    function updateDimmingEffect(startId) {
+        const distMap = getDistancesUpToTwoHops(network, startId);
+        // Update nodes
         const updates = nodes.map(node => {
             const dist = distMap[node.id];
-            let ratio = 1; // default: fully dimmed
+            let ratio = 1;
             if (dist === 0 || dist === 1) {
-                ratio = 0; // no dimming for nearby nodes
+                ratio = 0;
             } else if (dist === 2) {
-                ratio = 0.5; // partially dimmed
+                ratio = 0.5;
             }
             const { background, border, fontColor } = originalStyles[node.id];
             const dimBG = "#F8F8F8";
@@ -327,25 +321,15 @@ async function init() {
         });
         nodesDataset.update(updates);
     
-        // Update edge labels based on the positions of their endpoints.
-        // Helper: compute a ratio for a given node id.
-        const computeRatio = (nodeId) => {
-            const dist = distMap[nodeId];
-            if (dist === 0 || dist === 1) return 0;
-            if (dist === 2) return 0.5;
-            return 1; // not in the BFS range → fully dim
-        };
-    
-        // For each edge, take the maximum ratio of its endpoints.
+        // Update edges
         const edgeUpdates = edgesDataset.get().map(edge => {
-            const ratioFrom = computeRatio(edge.from);
-            const ratioTo = computeRatio(edge.to);
+            const ratioFrom = (distMap[edge.from] === 0 || distMap[edge.from] === 1) ? 0 :
+                              (distMap[edge.from] === 2 ? 0.5 : 1);
+            const ratioTo = (distMap[edge.to] === 0 || distMap[edge.to] === 1) ? 0 :
+                            (distMap[edge.to] === 2 ? 0.5 : 1);
             const ratioEdge = Math.max(ratioFrom, ratioTo);
-    
-            // Original edge font color (assumed) and the dim color.
             const originalEdgeFontColor = "#000000";
             const dimEdgeFontColor = "#CCCCCC";
-    
             return {
                 id: edge.id,
                 font: {
@@ -354,19 +338,23 @@ async function init() {
             };
         });
         edgesDataset.update(edgeUpdates);
-    
-        // Show the info panel if no node is pinned
-        if (!pinnedNodeId) {
-            const hoveredNodeData = nodesDataset.get(hoveredId);
-            if (hoveredNodeData && hoveredNodeData.data) {
-                showNodeInfo(hoveredNodeData);
-            }
-        }
-    });    
+    }
 
-    // Blur => restore colors + hide panel
+    network.on("hoverNode", (params) => {
+        // If a node is pinned, do not update the dimming effect on hover.
+        if (pinnedNodeId) return;
+        const hoveredId = params.node;
+        updateDimmingEffect(hoveredId);
+        const hoveredNodeData = nodesDataset.get(hoveredId);
+        if (hoveredNodeData && hoveredNodeData.data) {
+            showNodeInfo(hoveredNodeData);
+        }
+    });
+    
     network.on("blurNode", () => {
-        // Restore node styles (existing code)
+        // When a node is pinned, leave the dimming effect intact.
+        if (pinnedNodeId) return;
+        // Restore original styles since no node is pinned.
         const restoreArray = nodes.map(node => {
             const { background, border, fontColor } = originalStyles[node.id];
             return {
@@ -376,19 +364,13 @@ async function init() {
             };
         });
         nodesDataset.update(restoreArray);
-    
-        // Restore edge label color (existing code)
         const edgeRestore = edgesDataset.get().map(edge => ({
             id: edge.id,
             font: { color: "#000000" }
         }));
         edgesDataset.update(edgeRestore);
-    
-        // Only hide the info panel if no node is pinned
-        if (!pinnedNodeId) {
-            hideNodeInfo();
-        }
-    });
+        hideNodeInfo();
+    });    
 
     // When hovering over an edge, show its info (unless an entity is pinned)
     network.on("hoverEdge", (params) => {
@@ -409,7 +391,7 @@ async function init() {
     
     network.on("click", (params) => {
         if (params.nodes.length > 0) {
-            // A node was clicked—pin its info panel.
+            // A node was clicked — pin its info panel and fix the dimming.
             pinnedNodeId = params.nodes[0];
             pinnedEdgeId = null; // Clear any pinned edge.
             const nodeData = nodesDataset.get(pinnedNodeId);
@@ -417,8 +399,10 @@ async function init() {
                 showNodeInfo(nodeData);
             }
             infoPanel.classList.add("fixed");
+            // Fix the dimming effect based on the clicked node.
+            updateDimmingEffect(pinnedNodeId);
         } else if (params.edges.length > 0) {
-            // An edge was clicked—pin its info panel.
+            // An edge was clicked — pin its info panel.
             pinnedEdgeId = params.edges[0];
             pinnedNodeId = null; // Clear any pinned node.
             const edgeData = edgesDataset.get(pinnedEdgeId);
@@ -427,11 +411,25 @@ async function init() {
             }
             infoPanel.classList.add("fixed");
         } else {
-            // Clicked on empty space—unpin any info panel.
+            // Clicked on empty space — unpin and restore original styles.
             pinnedNodeId = null;
             pinnedEdgeId = null;
-            hideNodeInfo(); // (hideNodeInfo and hideEdgeInfo perform the same DOM reset)
+            hideNodeInfo();
             infoPanel.classList.remove("fixed");
+            const restoreArray = nodes.map(node => {
+                const { background, border, fontColor } = originalStyles[node.id];
+                return {
+                    id: node.id,
+                    color: { background, border },
+                    font: { color: fontColor }
+                };
+            });
+            nodesDataset.update(restoreArray);
+            const edgeRestore = edgesDataset.get().map(edge => ({
+                id: edge.id,
+                font: { color: "#000000" }
+            }));
+            edgesDataset.update(edgeRestore);
         }
     });
 

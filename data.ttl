@@ -4,38 +4,50 @@
 @prefix schema: <http://schema.org/> .
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
+@prefix LwG: <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#> .
 
-<https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> a schema:Legislation .
+LwG: a schema:Legislation ;
+    rdfs:label "Bundesgesetz über die Landwirtschaft"@de;
+    schema:alternateName "Landwirtschaftsgesetz"@de;
+    systammap:abbreviation "LwG"@de .
 
-<https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_c> a schema:Legislation ;
+LwG:art_165_c a schema:Legislation ;
     rdfs:label "Art. 165c LwG"@de,
         "Art. 165c AgricA"@en,
         "Art. 165c LAgr"@fr,
         "Art. 165c LAgr"@it .
 
-<https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_d> a schema:Legislation ;
+LwG:art_165_d a schema:Legislation ;
     rdfs:label "Art. 165d LwG"@de,
         "Art. 165d AgricA"@en,
         "Art. 165d LAgr"@fr,
         "Art. 165d LAgr"@it .
 
-<https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_f> a schema:Legislation ;
+LwG:art_165_f a schema:Legislation ;
     rdfs:label "Art. 165f LwG"@de,
         "Art. 165f AgricA"@en,
         "Art. 165f LAgr"@fr,
         "Art. 165f LAgr"@it .
 
-<https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_f_bis> a schema:Legislation ;
+LwG:art_165_f_bis a schema:Legislation ;
     rdfs:label "Art. 165f bis LwG"@de,
         "Art. 165f bis AgricA"@en,
         "Art. 165f bis LAgr"@fr,
         "Art. 165f bis LAgr"@it .
 
-<https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_27> a schema:Legislation ;
+LwG:art_27 a schema:Legislation ;
     rdfs:label "Art. 27 LwG"@de,
         "Art. 27 AgricA"@en,
         "Art. 27 LAgr"@fr,
         "Art. 27 LAgr"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/1993/1410_1410_1410> a schema:Legislation .
+
+<https://www.fedlex.admin.ch/eli/cc/1986/926_926_926> a schema:Legislation .
+
+<https://www.fedlex.admin.ch/eli/cc/1993/274_274_274> a schema:Legislation .
+
+<https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> a schema:Legislation .
 
 <https://www.fedlex.admin.ch/eli/cc/1998/3244_3244_3244> a schema:Legislation ;
     rdfs:label "Verordnung über die Ein- und Ausfuhr von Gemüse, Obst und Gartenbauerzeugnissen (VEAGOG)"@de .
@@ -134,7 +146,7 @@ systemmap:SYS001 a schema:SoftwareApplication ;
         Semplifica i processi di controllo attraverso una piattaforma centrale per l'inserimento e il recupero dei dati.
         In questo modo, garantisce un monitoraggio efficiente e il rispetto degli standard agricoli.
         """@it ;
-    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_d> ;
+    systemmap:hasLegalBasis LwG:art_165_d ;
     systemmap:operatedBy systemmap:ORG021 .
 
 systemmap:SYS002 a schema:SoftwareApplication ;
@@ -161,7 +173,7 @@ systemmap:SYS003 a schema:SoftwareApplication ;
         "AGIS"@en,
         "SIPA"@fr,
         "AGIS"@it ;
-    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_c> ;
+    systemmap:hasLegalBasis LwG:art_165_c ;
     systemmap:operatedBy systemmap:ORG010 .
 
 systemmap:SYS004 a schema:SoftwareApplication ;
@@ -215,8 +227,8 @@ systemmap:SYS006 a schema:SoftwareApplication ;
         Fornisce agli operatori un'interfaccia unificata per l'inserimento di tutte le informazioni richieste.
         Ciò garantisce trasparenza e conformità alle normative legali nel settore agricolo.
         """@it ;
-    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_f>,
-        <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_f_bis> ;
+    systemmap:hasLegalBasis LwG:art_165_f,
+        LwG:art_165_f_bis ;
     systemmap:operatedBy systemmap:ORG020 .
 
 systemmap:SYS007 a schema:SoftwareApplication ;
@@ -823,7 +835,7 @@ systemmap:SYS030 a schema:SoftwareApplication ;
         "GIS-BLW"@en,
         "GIS-BLW"@fr,
         "GIS-BLW"@it ;
-    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_165_e> ;
+    systemmap:hasLegalBasis LwG:art_165_e ;
     systemmap:operatedBy systemmap:ORG010 .
 
 systemmap:SYS031 a schema:SoftwareApplication ;
@@ -1425,7 +1437,7 @@ systemmap:ORG012 a systemmap:FederalOrganization ;
         "MAD"@en,
         "SAM"@fr,
         "SAM"@it ;
-    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#art_27>,
+    systemmap:hasLegalBasis LwG:art_27 ,
         <https://www.fedlex.admin.ch/eli/cc/1999/71> .
 
 systemmap:ORG013 a systemmap:FederalOrganization ;

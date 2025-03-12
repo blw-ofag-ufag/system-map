@@ -123,9 +123,9 @@ def reason_subclass_and_inverse(ontology_graph: Graph, data_graph: Graph) -> Gra
 
 if __name__ == "__main__":
     # Paths
-    ontology_path = "ontology.ttl"
-    data_path = "data.ttl"
-    output_path = "graph.ttl"
+    ontology_path = "rdf/ontology.ttl"
+    data_path = "rdf/data.ttl"
+    output_path = "rdf/graph.ttl"
 
     # 1) Load and sort the individual TTL files
     #    This step ensures the source TTL files are also "cleanly" sorted

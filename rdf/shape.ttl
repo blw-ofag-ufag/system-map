@@ -1,0 +1,88 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://agriculture.ld.admin.ch/system-map/shapes/> .
+
+# ------------------------------------------------------------------------------
+# 1. Multilingual Labels for Key Entities
+#    - For every instance of:
+#      schema:Organization, schema:SoftwareApplication, systemmap:Information
+#      => Must have at least one rdfs:label @de and at least one rdfs:label @fr
+# ------------------------------------------------------------------------------
+
+:MultilingualLabelShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Organization,
+                   schema:SoftwareApplication,
+                   systemmap:Information ;
+
+    # Must have at least one label in German
+    sh:property [
+        sh:path rdfs:label ;
+
+        # We use a qualifiedValueShape to say: among all rdfs:label values,
+        # at least one must match "languageIn ('de')".
+        sh:qualifiedValueShape [
+            sh:datatype rdf:langString ;
+            sh:languageIn ("de") ;
+        ] ;
+        sh:qualifiedMinCount 1 ;
+
+        sh:message "A label in German is required (rdfs:label @de)."
+    ] .
+
+# ------------------------------------------------------------------------------
+# 2. Multilingual Comments for IT Systems
+#    - Every instance of schema:SoftwareApplication => Must have
+#      at least one rdfs:comment @de AND at least one @fr
+# ------------------------------------------------------------------------------
+
+:SoftwareApplicationMultilingualCommentShape
+    a sh:NodeShape ;
+    sh:targetClass schema:SoftwareApplication ;
+
+    # Must have at least one comment in German
+    sh:property [
+        sh:path rdfs:comment ;
+        sh:qualifiedValueShape [
+            sh:datatype rdf:langString ;
+            sh:languageIn ("de") ;
+        ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:message "A comment in German is required (rdfs:comment @de)."
+    ] .
+
+# ------------------------------------------------------------------------------
+# 3. Operating Organization for IT Systems
+#    - Every instance of schema:SoftwareApplication => Must have
+#      systemmap:operatedBy => at least one schema:Organization
+# ------------------------------------------------------------------------------
+
+:SoftwareApplicationOperatingOrgShape
+    a sh:NodeShape ;
+    sh:targetClass schema:SoftwareApplication ;
+    sh:property [
+        sh:path systemmap:operatedBy ;
+        sh:class schema:Organization ;
+        sh:minCount 1 ;
+        sh:message "Every software application must be operated by at least one organization (schema:Organization)."
+    ] .
+
+# ------------------------------------------------------------------------------
+# 4. Containment of Information within IT Systems
+#    - Every instance of systemmap:Information => Must be linked
+#      via systemmap:containedIn => schema:SoftwareApplication
+# ------------------------------------------------------------------------------
+
+:InformationContainedInITSystemShape
+    a sh:NodeShape ;
+    sh:targetClass systemmap:Information ;
+    sh:property [
+        sh:path systemmap:containedIn ;
+        sh:class schema:SoftwareApplication ;
+        sh:minCount 1 ;
+        sh:message "Every piece of information (systemmap:Information) must be contained in at least one IT system (schema:SoftwareApplication)."
+    ] .

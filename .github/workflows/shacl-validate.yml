@@ -1,0 +1,23 @@
+name: SHACL Validation
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-shacl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'
+      - name: Install pyshacl
+        run: |
+          pip install pyshacl rdflib
+      - name: Run validation
+        run: |
+          python scripts/validate.py

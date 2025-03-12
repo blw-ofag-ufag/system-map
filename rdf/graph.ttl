@@ -1665,7 +1665,8 @@ systemmap:ORG310 a schema:GovernmentOrganization,
         "The cantonal administration of Bern."@en,
         "L'administration cantonale de Berne."@fr,
         "L'amministrazione cantonale di Berna."@it ;
-    systemmap:abbreviation "BE" .
+    systemmap:abbreviation "BE" ;
+    systemmap:operates systemmap:SYS022 .
 
 systemmap:ORG311 a schema:GovernmentOrganization,
         schema:Organization,
@@ -3590,7 +3591,8 @@ systemmap:SYS022 a schema:SoftwareApplication ;
         """@fr,
         """
         ACmobile è una soluzione mobile indipendente dalla piattaforma per la registrazione elettronica dei risultati delle ispezioni e delle misure.
-        """@it .
+        """@it ;
+    systemmap:operatedBy systemmap:ORG310 .
 
 systemmap:SYS023 a schema:SoftwareApplication ;
     rdfs:label "Barto"@de,

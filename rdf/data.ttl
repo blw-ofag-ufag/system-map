@@ -121,6 +121,10 @@ systemmap:ORG200 a schema:Organization ;
         "UPOV"@fr,
         "UPOV"@it .
 
+systemmap:ORG999 a schema:Organization ;
+    rdfs:label "Europäische Kommission"@de,
+        "European Commission"@en .
+
 systemmap:SYS001 a schema:SoftwareApplication ;
     rdfs:label "Acontrol"@de,
         "Acontrol"@en,
@@ -878,14 +882,16 @@ systemmap:SYS033 a schema:SoftwareApplication ;
     rdfs:comment """
         Software insbesondere für die Früherkennungsprogramm des kleiner Beutenkäfer bei Bienen.
         """@de ;
-    dcat:landingPage <https://www.apinella.ch/> .
+    dcat:landingPage <https://www.apinella.ch/> ;
+    systemmap:operatedBy systemmap:ORG211 .
 
 systemmap:SYS034 a schema:SoftwareApplication ;
     rdfs:label "Traces"@de ;
     rdfs:comment """
         Alle Personen und Firmen, die am Import- oder Exportprozess für den internationalen Handel von Tieren, Waren tierischen Ursprungs und gewissen Produkten nicht-tierischen Ursprungs beteiligt sind, müssen sich in Traces registrieren lassen.
-        Es handelt sich um ein eine Webanwendung der Eu-ropäischen Union und unterstützt den grenzüberschreitenden Verkehr von Tieren, Lebensmitteln und tierischen Nebenprodukten.
-        """@de .
+        Es handelt sich um ein eine Webanwendung der Europäischen Union und unterstützt den grenzüberschreitenden Verkehr von Tieren, Lebensmitteln und tierischen Nebenprodukten.
+        """@de ;
+    systemmap:operatedBy systemmap:ORG999 .
 
 systemmap:SYS042 a schema:SoftwareApplication ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,

@@ -121,6 +121,10 @@ systemmap:ORG200 a schema:Organization ;
         "UPOV"@fr,
         "UPOV"@it .
 
+systemmap:ORG999 a schema:Organization ;
+    rdfs:label "Europäische Kommission"@de,
+        "European Commission"@en .
+
 systemmap:SYS001 a schema:SoftwareApplication ;
     rdfs:label "Acontrol"@de,
         "Acontrol"@en,
@@ -630,7 +634,8 @@ systemmap:SYS022 a schema:SoftwareApplication ;
         """@fr,
         """
         ACmobile è una soluzione mobile indipendente dalla piattaforma per la registrazione elettronica dei risultati delle ispezioni e delle misure.
-        """@it .
+        """@it ;
+    systemmap:operatedBy systemmap:ORG310 .
 
 systemmap:SYS023 a schema:SoftwareApplication ;
     rdfs:label "Barto"@de,
@@ -849,13 +854,28 @@ systemmap:SYS031 a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:ORG205 .
 
 systemmap:SYS032 a schema:SoftwareApplication ;
-    rdfs:label "Information system for cases of notifiable diseases"@en ;
+    rdfs:label "Informationssystem für meldepflichtige Krankheiten"@de,
+        "Information system for cases of notifiable diseases"@en,
+        "Système d'information pour les maladies à déclaration obligatoire"@fr,
+        "Sistema informativo per le malattie soggette a notifica"@it ;
     rdfs:comment """
+        Dashboard zur Visualisierung und Filterung verknüpfter Tierseuchendaten, die vom Bundesamt für Lebensmittelsicherheit und Veterinärwesen veröffentlicht werden.
+        """@de,
+        """
         Dashboard for the visualization and filtering of linked animal diseases data published by the Swiss Federal Food Safety and Veterinary Office.
-        """@en ;
+        """@en,
+        """
+        Tableau de bord pour la visualisation et le filtrage des données liées aux maladies animales publiées par l'Office fédéral de la sécurité alimentaire et des affaires vétérinaires.
+        """@fr,
+        """
+        Dashboard per la visualizzazione e il filtraggio dei dati sulle malattie animali pubblicati dall'Ufficio federale della sicurezza alimentare e di veterinaria.
+        """@it ;
     rdfs:seeAlso <https://github.com/digital-sustainability/blv-infosm> ;
     dcat:landingPage <https://www.dashboard.blv.admin.ch/> ;
-    systemmap:abbreviation "InfoSM"@en ;
+    systemmap:abbreviation "InfoSM"@de,
+        "InfoSM"@en,
+        "InfoSM"@fr,
+        "InfoSM"@it ;
     systemmap:operatedBy systemmap:ORG205 .
 
 systemmap:SYS033 a schema:SoftwareApplication ;
@@ -863,14 +883,16 @@ systemmap:SYS033 a schema:SoftwareApplication ;
     rdfs:comment """
         Software insbesondere für die Früherkennungsprogramm des kleiner Beutenkäfer bei Bienen.
         """@de ;
-    dcat:landingPage <https://www.apinella.ch/> .
+    dcat:landingPage <https://www.apinella.ch/> ;
+    systemmap:operatedBy systemmap:ORG211 .
 
 systemmap:SYS034 a schema:SoftwareApplication ;
     rdfs:label "Traces"@de ;
     rdfs:comment """
         Alle Personen und Firmen, die am Import- oder Exportprozess für den internationalen Handel von Tieren, Waren tierischen Ursprungs und gewissen Produkten nicht-tierischen Ursprungs beteiligt sind, müssen sich in Traces registrieren lassen.
-        Es handelt sich um ein eine Webanwendung der Eu-ropäischen Union und unterstützt den grenzüberschreitenden Verkehr von Tieren, Lebensmitteln und tierischen Nebenprodukten.
-        """@de .
+        Es handelt sich um ein eine Webanwendung der Europäischen Union und unterstützt den grenzüberschreitenden Verkehr von Tieren, Lebensmitteln und tierischen Nebenprodukten.
+        """@de ;
+    systemmap:operatedBy systemmap:ORG999 .
 
 systemmap:SYS042 a schema:SoftwareApplication ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,

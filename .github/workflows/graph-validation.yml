@@ -1,4 +1,4 @@
-name: Graph validation
+name: Graph validation tests
 
 on:
   pull_request:
@@ -8,6 +8,7 @@ on:
 
 jobs:
   validate-ttl-syntax:
+    name: Validate turtle files (`.ttl`) syntax
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,13 +21,12 @@ jobs:
       - name: Install RDF library
         run: pip install rdflib
 
-      - name: Validate TTL syntax with annotations
+      - name: Validate turtle syntax of all `.ttl` files
         run: |
-          # This script should output errors using the GitHub Actions annotation syntax,
-          # e.g., ::error file=path/to/file,line=1::Syntax error message.
           python scripts/validate-syntax.py
 
   validate-graph-shacl:
+    name: Validate shape of `rdf/graph.ttl`
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -39,7 +39,6 @@ jobs:
       - name: Install RDF and SHACL libraries
         run: pip install pyshacl rdflib
 
-      - name: Validate graph shape with SHACL and annotations
+      - name: Validate graph shape with SHACL
         run: |
-          # Likewise, this script should print annotations on errors.
           python scripts/validate-shape.py

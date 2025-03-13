@@ -1,4 +1,4 @@
-name: SHACL Validation
+name: Graph validation
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  validate-shacl:
+  graph-validation:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,9 +15,12 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.12'
-      - name: Install pyshacl
+      - name: Install RDF and SHACL libraries
         run: |
           pip install pyshacl rdflib
-      - name: Run validation
+      - name: Validate TTL syntax
+        run: |
+          python scripts/validate-syntax.py
+      - name: Validate graph shape with SHACL
         run: |
           python scripts/validate.py

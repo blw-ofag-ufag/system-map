@@ -50,12 +50,14 @@ LwG:art_27 a schema:Legislation ;
         "Art. 27 LAgr"@it .
 
 <https://www.fedlex.admin.ch/eli/cc/1998/3244_3244_3244> a schema:Legislation ;
-    rdfs:label "Verordnung über die Ein- und Ausfuhr von Gemüse, Obst und Gartenbauerzeugnissen (VEAGOG)"@de .
+    rdfs:label "Ordinanza concernente l'importazione e l'esportazione di verdura, frutta e prodotti della floricoltura",
+        "Verordnung über die Ein- und Ausfuhr von Gemüse, Obst und Gartenbauerzeugnissen (VEAGOG)"@de,
+        "Ordonnance sur l'importation et l'exportation de légumes, de fruits et de plantes horticoles"@fr .
 
 <https://www.fedlex.admin.ch/eli/cc/1999/71> a schema:Legislation ;
     rdfs:label "Verordnung über die Marktbeobachtung im Landwirtschaftsbereich"@de,
         "Ordinance on market observation in the agricultural sector"@en,
-        "Ordonnance sur l’observation du marché dans le domaine de l’agriculture"@fr,
+        "Ordonnance sur l'observation du marché dans le domaine de l'agriculture"@fr,
         "Ordinanza concernente il monitoraggio del mercato nel settore agricolo"@it .
 
 <https://www.fedlex.admin.ch/eli/cc/2003/791> a schema:Legislation ;
@@ -68,7 +70,9 @@ LwG:art_27 a schema:Legislation ;
         "Ordinanza sull'immissione sul mercato dei prodotti fitosanitari (Ordinanza sui prodotti fitosanitari, OPF)"@it .
 
 <https://www.fedlex.admin.ch/eli/cc/2011/770> a schema:Legislation ;
-    rdfs:label "Verordnung über die Einfuhr von landwirtschaftlichen Erzeugnissen (Agrareinfuhrverordnung, AEV)"@de .
+    rdfs:label "Verordnung über die Einfuhr von landwirtschaftlichen Erzeugnissen (Agrareinfuhrverordnung, AEV)"@de,
+        "Ordonnance sur l’importation de produits agricoles"@fr,
+        "Ordinanza concernente l’importazione di prodotti agricoli"@it .
 
 <https://www.fedlex.admin.ch/eli/cc/2016/565> a schema:Legislation ;
     rdfs:label "Verordnung des BLW über die Festlegung von Perioden und Fristen sowie die Freigabe von Zollkontingentsteilmengen für die Einfuhr von frischem Gemüse und frischem Obst (VEAGOG-Freigabeverordnung)"@de .

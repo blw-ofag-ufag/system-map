@@ -22,15 +22,15 @@ def main():
         debug=False
     )
 
-    # Print the overall results
+    # Print overall results
     print("Conforms:", conforms)
     print(results_text)
 
-    # If not conforming, exit with a non-zero code so CI will fail
     if not conforms:
-        # Optionally, you could parse the results_graph to find how many violations there are,
-        # but just a non-zero exit is enough for many CI setups.
-        sys.exit(1)  # Return an error code so that the pipeline fails
+        # Print GitHub Actions annotation to clearly indicate a SHACL validation failure.
+        # This annotation will be parsed by GitHub and shown inline on the PR.
+        print(f"::error title=SHACL Validation Failed::Graph does not conform to SHACL shapes. Details: {results_text}")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()

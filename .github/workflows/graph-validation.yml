@@ -7,20 +7,39 @@ on:
       - main
 
 jobs:
-  graph-validation:
+  validate-ttl-syntax:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.12'
-      - name: Install RDF and SHACL libraries
+      
+      - name: Install RDF library
+        run: pip install rdflib
+
+      - name: Validate TTL syntax with annotations
         run: |
-          pip install pyshacl rdflib
-      - name: Validate TTL syntax
-        run: |
+          # This script should output errors using the GitHub Actions annotation syntax,
+          # e.g., ::error file=path/to/file,line=1::Syntax error message.
           python scripts/validate-syntax.py
-      - name: Validate graph shape with SHACL
+
+  validate-graph-shacl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'
+      
+      - name: Install RDF and SHACL libraries
+        run: pip install pyshacl rdflib
+
+      - name: Validate graph shape with SHACL and annotations
         run: |
+          # Likewise, this script should print annotations on errors.
           python scripts/validate-shape.py

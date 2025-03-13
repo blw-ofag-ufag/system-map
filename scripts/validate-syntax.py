@@ -17,7 +17,8 @@ def main():
         try:
             g.parse(ttl_file, format="turtle")
         except Exception as e:
-            print(f"Error in {ttl_file}: {e}")
+            # Print GitHub Actions annotation for syntax error
+            print(f"::error file={ttl_file},line=1::Syntax error in {ttl_file}: {e}")
             all_valid = False
     
     if all_valid:

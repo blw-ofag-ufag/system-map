@@ -9,8 +9,8 @@ This repository is set up to gather and visualize information about IT systems, 
 
 If instead you are interested in the *actual* data, you can have a look at the following files:
 
-- [**`ontology.ttl`**](ontology.ttl) contains information about how the data is structured.
-- [**`data.ttl`**](data.ttl) contains information about the organizations, systems and information units themselves.
+- [**`ontology.ttl`**](https://github.com/blw-ofag-ufag/system-map/blob/main/rdf/ontology.ttl) contains information about how the data is structured.
+- [**`data.ttl`**](https://github.com/blw-ofag-ufag/system-map/blob/main/rdf/data.ttl) contains information about the organizations, systems and information units themselves.
 
 Actually, there is a python script *reasoning* over the two files. This is described in more detail below.
 

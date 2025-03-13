@@ -898,6 +898,18 @@ systemmap:SYS034 a schema:SoftwareApplication ;
         """@de ;
     systemmap:operatedBy systemmap:ORG999 .
 
+systemmap:SYS041 a schema:SoftwareApplication ;
+    rdfs:label "Zentrale Auswertung von Agrarumweltindikatoren"@de ;
+    rdfs:comment """
+        Die 'ZA-AUI: Betriebsrückmeldung' ermöglicht den Teilnehmenden am Projekt ZA-AUI die berechneten Agrarumweltindikatoren (AUI) ihres Betriebs online abzurufen, für welche sie jährlich Daten an Agroscope liefern.
+        Die eigenen Betriebsergebnisse können mit den AUI-Ergebnissen desselben Betriebstyps aus dem ZA-AUI-Betriebsnetz verglichen werden.
+        """@de ;
+    dcat:landingPage <https://apps.agroscope.info/sp/za-aui/2/app/datenreihe>,
+        <https://www.agrarumweltindikatoren.ch>,
+        <https://www.za-aui.ch> ;
+    systemmap:abbreviation "ZA-AUI"@de ;
+    systemmap:operatedBy staatskalender:20050530 .
+
 systemmap:SYS042 a schema:SoftwareApplication ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
         "DigiAgriFoodCH System Map"@en,
@@ -2070,6 +2082,9 @@ systemmap:ORG214 a systemmap:FederalOrganization ;
         "ITMD"@en,
         "SGI"@fr,
         "SGI"@it .
+
+staatskalender:20050530 a systemmap:FederalOrganization ;
+    rdfs:label "Monitoring des Agrarumweltsystems Schweiz MAUS"@de .
 
 systemmap:INF003 a systemmap:Identifier ;
     rdfs:label "UID-Nummer"@de,

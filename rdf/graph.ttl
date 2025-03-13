@@ -2228,6 +2228,13 @@ systemmap:ORG345 a schema:GovernmentOrganization,
     schema:name "Strukturverbesserungen und Raumnutzung"@de ;
     schema:parentOrganization systemmap:ORG302 .
 
+staatskalender:20050530 a schema:GovernmentOrganization,
+        schema:Organization,
+        systemmap:FederalOrganization ;
+    rdfs:label "Monitoring des Agrarumweltsystems Schweiz MAUS"@de ;
+    schema:name "Monitoring des Agrarumweltsystems Schweiz MAUS"@de ;
+    systemmap:operates systemmap:SYS041 .
+
 <https://www.fedlex.admin.ch/eli/cc/1986/926_926_926> a schema:Legislation .
 
 <https://www.fedlex.admin.ch/eli/cc/1993/1410_1410_1410> a schema:Legislation .
@@ -4055,6 +4062,23 @@ systemmap:SYS034 a schema:SoftwareApplication ;
         Es handelt sich um ein eine Webanwendung der Europäischen Union und unterstützt den grenzüberschreitenden Verkehr von Tieren, Lebensmitteln und tierischen Nebenprodukten.
         """@de ;
     systemmap:operatedBy systemmap:ORG999 .
+
+systemmap:SYS041 a schema:SoftwareApplication ;
+    rdfs:label "Zentrale Auswertung von Agrarumweltindikatoren"@de ;
+    schema:description """
+        Die 'ZA-AUI: Betriebsrückmeldung' ermöglicht den Teilnehmenden am Projekt ZA-AUI die berechneten Agrarumweltindikatoren (AUI) ihres Betriebs online abzurufen, für welche sie jährlich Daten an Agroscope liefern.
+        Die eigenen Betriebsergebnisse können mit den AUI-Ergebnissen desselben Betriebstyps aus dem ZA-AUI-Betriebsnetz verglichen werden.
+        """@de ;
+    schema:name "Zentrale Auswertung von Agrarumweltindikatoren"@de ;
+    rdfs:comment """
+        Die 'ZA-AUI: Betriebsrückmeldung' ermöglicht den Teilnehmenden am Projekt ZA-AUI die berechneten Agrarumweltindikatoren (AUI) ihres Betriebs online abzurufen, für welche sie jährlich Daten an Agroscope liefern.
+        Die eigenen Betriebsergebnisse können mit den AUI-Ergebnissen desselben Betriebstyps aus dem ZA-AUI-Betriebsnetz verglichen werden.
+        """@de ;
+    dcat:landingPage <https://apps.agroscope.info/sp/za-aui/2/app/datenreihe>,
+        <https://www.agrarumweltindikatoren.ch>,
+        <https://www.za-aui.ch> ;
+    systemmap:abbreviation "ZA-AUI"@de ;
+    systemmap:operatedBy staatskalender:20050530 .
 
 systemmap:SYS042 a schema:SoftwareApplication ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,

@@ -6,13 +6,17 @@
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
 
-<https://www.fedlex.admin.ch/eli/cc/1986/926_926_926> a schema:Legislation .
+<https://www.fedlex.admin.ch/eli/cc/1986/926_926_926> a schema:Legislation ;
+    rdfs:label "Bundesgesetz über die landwirtschaftliche Pacht"@de .
 
-<https://www.fedlex.admin.ch/eli/cc/1993/1410_1410_1410> a schema:Legislation .
+<https://www.fedlex.admin.ch/eli/cc/1993/1410_1410_1410> a schema:Legislation ;
+    rdfs:label "Bundesgesetz über das bäuerliche Bodenrecht"@de .
 
-<https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> a schema:Legislation .
+<https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> a schema:Legislation ;
+    rdfs:label "Verordnung über das Betriebs- und Unternehmensregister"@de .
 
-<https://www.fedlex.admin.ch/eli/cc/1993/274_274_274> a schema:Legislation .
+<https://www.fedlex.admin.ch/eli/cc/1993/274_274_274> a schema:Legislation ;
+    rdfs:label "Bundesgesetz über den Schutz von Marken und Herkunftsangaben"@de .
 
 LwG: a schema:Legislation ;
     rdfs:label "Bundesgesetz über die Landwirtschaft"@de ;

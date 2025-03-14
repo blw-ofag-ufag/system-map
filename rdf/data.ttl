@@ -35,6 +35,12 @@ LwG:art_165_d a schema:Legislation ;
         "Art. 165d LAgr"@fr,
         "Art. 165d LAgr"@it .
 
+LwG:art_165_e a schema:Legislation ;
+    rdfs:label "Art. 165e LwG"@de,
+        "Art. 165e AgricA"@en,
+        "Art. 165e LAgr"@fr,
+        "Art. 165e LAgr"@it .
+
 LwG:art_165_f a schema:Legislation ;
     rdfs:label "Art. 165f LwG"@de,
         "Art. 165f AgricA"@en,

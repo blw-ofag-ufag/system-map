@@ -10,14 +10,15 @@
 # 1. Multilingual Labels for Key Entities
 #    - For every instance of:
 #      schema:Organization, schema:SoftwareApplication, systemmap:Information
-#      => Must have at least one rdfs:label @de and at least one rdfs:label @fr
+#      => Must have at least one rdfs:label @de
 # ------------------------------------------------------------------------------
 
 :MultilingualLabelShape
     a sh:NodeShape ;
     sh:targetClass schema:Organization,
-                   schema:SoftwareApplication,
-                   systemmap:Information ;
+        schema:Legislation,
+        schema:SoftwareApplication,
+        systemmap:Information ;
 
     # Must have at least one label in German
     sh:property [
@@ -37,7 +38,7 @@
 # ------------------------------------------------------------------------------
 # 2. Multilingual Comments for IT Systems
 #    - Every instance of schema:SoftwareApplication => Must have
-#      at least one rdfs:comment @de AND at least one @fr
+#      at least one rdfs:comment @de
 # ------------------------------------------------------------------------------
 
 :SoftwareApplicationMultilingualCommentShape

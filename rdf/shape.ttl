@@ -87,3 +87,27 @@
         sh:minCount 1 ;
         sh:message "Every piece of information (systemmap:Information) must be contained in at least one IT system (schema:SoftwareApplication)."
     ] .
+
+# ------------------------------------------------------------------------------
+# 5. Unique Language Constraint for rdfs:label and rdfs:comment
+#    - Every node can have at most one rdfs:label per language and at most one
+#      rdfs:comment per language.
+# ------------------------------------------------------------------------------
+
+:UniqueLangLabelShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf rdfs:label ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:uniqueLang true ;
+        sh:message "Each node must have at most one rdfs:label per language."
+    ] .
+
+:UniqueLangCommentShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf rdfs:comment ;
+    sh:property [
+        sh:path rdfs:comment ;
+        sh:uniqueLang true ;
+        sh:message "Each node must have at most one rdfs:comment per language."
+    ] .

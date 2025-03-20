@@ -2613,76 +2613,78 @@ systemmap:ORG103 a schema:Organization,
 
 systemmap:ORG200 a schema:Organization ;
     rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
-        "Schweizer Bundesarchiv"@de,
         "International Union for the Protection of New Varieties of Plants"@en,
+        "Union internationale pour la protection des obtentions végétales"@fr,
+        "Unione internazionale per la protezione delle nuove varietà vegetali"@it ;
+    schema:description """\r
+        Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz.\r
+        Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen.\r
+        """@de,
+        """The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland.\r
+        It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society.\r
+        """@en,
+        """L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse.\r
+        Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société.\r
+        """@fr,
+        """L'Unione internazionale per la protezione delle nuove varietà vegetali (UPOV) è un'organizzazione intergovernativa con sede a Ginevra, in Svizzera.\r
+        È stata fondata nel 1961 e mira a promuovere un sistema efficace per la protezione del miglioramento genetico delle piante, al fine di sostenere lo sviluppo di nuove varietà vegetali a beneficio della società.\r
+        """@it ;
+    schema:name "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
+        "International Union for the Protection of New Varieties of Plants"@en,
+        "Union internationale pour la protection des obtentions végétales"@fr,
+        "Unione internazionale per la protezione delle nuove varietà vegetali"@it ;
+    rdfs:comment """\r
+        Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz.\r
+        Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen.\r
+        """@de,
+        """The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland.\r
+        It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society.\r
+        """@en,
+        """L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse.\r
+        Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société.\r
+        """@fr,
+        """L'Unione internazionale per la protezione delle nuove varietà vegetali (UPOV) è un'organizzazione intergovernativa con sede a Ginevra, in Svizzera.\r
+        È stata fondata nel 1961 e mira a promuovere un sistema efficace per la protezione del miglioramento genetico delle piante, al fine di sostenere lo sviluppo di nuove varietà vegetali a beneficio della società.\r
+        """@it ;
+    systemmap:abbreviation "UPOV"@de,
+        "UPOV"@en,
+        "UPOV"@fr,
+        "UPOV"@it ;
+    systemmap:operates systemmap:SYS024 .
+
+systemmap:ORG215 a schema:Organization ;
+    rdfs:label "Schweizerische Bundesarchiv"@de,
         "Swiss Federal Archives"@en,
         "Archives fédérales suisses"@fr,
-        "Union internationale pour la protection des obtentions végétales"@fr,
-        "Archivio federale svizzero"@it,
-        "Unione internazionale per la protezione delle nuove varietà vegetali"@it ;
+        "Archivio federale svizzero"@it ;
     schema:description """\r
         Das Schweizerische Bundesarchiv (BAR) sichert die Dokumentation staatlichen Handelns und macht diese zugänglich.\r
         """@de,
-        """\r
-        Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz.\r
-        Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen.\r
-        """@de,
-        """The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland.\r
-        It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society.\r
-        """@en,
         """The Swiss Federal Archives (SFA) preserve the documentation of government actions and make it accessible.\r
         """@en,
-        """L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse.\r
-        Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société.\r
-        """@fr,
         """Les Archives fédérales suisses (AFS) garantissent la conservation et l’accès des documents en lien avec les activités de l’Etat.\r
         """@fr,
-        """L'Unione internazionale per la protezione delle nuove varietà vegetali (UPOV) è un'organizzazione intergovernativa con sede a Ginevra, in Svizzera.\r
-        È stata fondata nel 1961 e mira a promuovere un sistema efficace per la protezione del miglioramento genetico delle piante, al fine di sostenere lo sviluppo di nuove varietà vegetali a beneficio della società.\r
-        """@it,
         """L’Archivio federale svizzero (AFS) assicura la conservazione e l’accessibilità della documentazione dell’operato dello Stato.\r
         """@it ;
-    schema:name "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
-        "Schweizer Bundesarchiv"@de,
-        "International Union for the Protection of New Varieties of Plants"@en,
+    schema:name "Schweizerische Bundesarchiv"@de,
         "Swiss Federal Archives"@en,
         "Archives fédérales suisses"@fr,
-        "Union internationale pour la protection des obtentions végétales"@fr,
-        "Archivio federale svizzero"@it,
-        "Unione internazionale per la protezione delle nuove varietà vegetali"@it ;
+        "Archivio federale svizzero"@it ;
     rdfs:comment """\r
         Das Schweizerische Bundesarchiv (BAR) sichert die Dokumentation staatlichen Handelns und macht diese zugänglich.\r
         """@de,
-        """\r
-        Die Internationale Union zum Schutz von Pflanzenzüchtungen (UPOV) ist eine zwischenstaatliche Organisation mit Sitz in Genf, Schweiz.\r
-        Sie wurde 1961 gegründet und hat das Ziel, ein wirksames System zum Schutz von Pflanzenzüchtungen zu fördern, um die Entwicklung neuer Pflanzensorten zum Nutzen der Gesellschaft zu unterstützen.\r
-        """@de,
-        """The International Union for the Protection of New Varieties of Plants (UPOV) is an intergovernmental organization based in Geneva, Switzerland.\r
-        It was founded in 1961 and aims to promote an effective system for the protection of plant breeding in order to support the development of new plant varieties for the benefit of society.\r
-        """@en,
         """The Swiss Federal Archives (SFA) preserve the documentation of government actions and make it accessible.\r
         """@en,
-        """L'Union internationale pour la protection des obtentions végétales (UPOV) est une organisation intergouvernementale basée à Genève, en Suisse.\r
-        Elle a été fondée en 1961 et vise à promouvoir un système efficace de protection des obtentions végétales afin de soutenir le développement de nouvelles variétés végétales au bénéfice de la société.\r
-        """@fr,
         """Les Archives fédérales suisses (AFS) garantissent la conservation et l’accès des documents en lien avec les activités de l’Etat.\r
         """@fr,
-        """L'Unione internazionale per la protezione delle nuove varietà vegetali (UPOV) è un'organizzazione intergovernativa con sede a Ginevra, in Svizzera.\r
-        È stata fondata nel 1961 e mira a promuovere un sistema efficace per la protezione del miglioramento genetico delle piante, al fine di sostenere lo sviluppo di nuove varietà vegetali a beneficio della società.\r
-        """@it,
         """L’Archivio federale svizzero (AFS) assicura la conservazione e l’accessibilità della documentazione dell’operato dello Stato.\r
         """@it ;
     systemmap:abbreviation "BAR"@de,
-        "UPOV"@de,
         "SFA"@en,
-        "UPOV"@en,
         "AFS"@fr,
-        "UPOV"@fr,
-        "AFS"@it,
-        "UPOV"@it ;
+        "AFS"@it ;
     systemmap:operates systemmap:SYS018,
-        systemmap:SYS019,
-        systemmap:SYS024 .
+        systemmap:SYS019 .
 
 systemmap:ORG999 a schema:Organization ;
     rdfs:label "Europäische Kommission"@de,
@@ -3488,7 +3490,7 @@ systemmap:SYS018 a schema:SoftwareApplication ;
         "Avec les services Linked Data LINDAS, les administrations publiques peuvent publier leurs données sous forme de graphe de connaissances et les rendre accessibles via https://lindas.admin.ch."@fr,
         "Con i Linked Data Services LINDAS, le pubbliche amministrazioni possono pubblicare i loro dati sotto forma di grafi di conoscenza e renderli accessibili attraverso https://lindas.admin.ch."@it ;
     systemmap:informs systemmap:SYS019 ;
-    systemmap:operatedBy systemmap:ORG200 .
+    systemmap:operatedBy systemmap:ORG215 .
 
 systemmap:SYS019 a schema:SoftwareApplication ;
     rdfs:label "Visualize"@de,
@@ -3508,7 +3510,7 @@ systemmap:SYS019 a schema:SoftwareApplication ;
         "Créez et intégrez des visualisations à partir des jeux de données du service LINDAS (Linked Data)."@fr,
         "Crea ed incorpora visualizzazioni partendo dai dataset forniti dal servizio LINDAS (Linked Data)."@it ;
     systemmap:informedBy systemmap:SYS018 ;
-    systemmap:operatedBy systemmap:ORG200 .
+    systemmap:operatedBy systemmap:ORG215 .
 
 systemmap:SYS020 a schema:SoftwareApplication ;
     rdfs:label "Tierverkehrsdatenbank"@de,

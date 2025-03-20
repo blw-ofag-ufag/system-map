@@ -595,7 +595,6 @@ systemmap:SYS019 a schema:SoftwareApplication ;
         "Create and embed visualizations from any dataset provided by the LINDAS Linked Data Service."@en,
         "Créez et intégrez des visualisations à partir des jeux de données du service LINDAS (Linked Data)."@fr,
         "Crea ed incorpora visualizzazioni partendo dai dataset forniti dal servizio LINDAS (Linked Data)."@it ;
-    systemmap:informedBy systemmap:SYS018 ;
     systemmap:operatedBy systemmap:ORG215 .
 
 systemmap:SYS020 a schema:SoftwareApplication ;

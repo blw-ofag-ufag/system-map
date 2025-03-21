@@ -6,13 +6,17 @@
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
 
-<https://www.fedlex.admin.ch/eli/cc/1986/926_926_926> a schema:Legislation .
+<https://www.fedlex.admin.ch/eli/cc/1986/926_926_926> a schema:Legislation ;
+    rdfs:label "Bundesgesetz über die landwirtschaftliche Pacht"@de .
 
-<https://www.fedlex.admin.ch/eli/cc/1993/1410_1410_1410> a schema:Legislation .
+<https://www.fedlex.admin.ch/eli/cc/1993/1410_1410_1410> a schema:Legislation ;
+    rdfs:label "Bundesgesetz über das bäuerliche Bodenrecht"@de .
 
-<https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> a schema:Legislation .
+<https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> a schema:Legislation ;
+    rdfs:label "Verordnung über das Betriebs- und Unternehmensregister"@de .
 
-<https://www.fedlex.admin.ch/eli/cc/1993/274_274_274> a schema:Legislation .
+<https://www.fedlex.admin.ch/eli/cc/1993/274_274_274> a schema:Legislation ;
+    rdfs:label "Bundesgesetz über den Schutz von Marken und Herkunftsangaben"@de .
 
 LwG: a schema:Legislation ;
     rdfs:label "Bundesgesetz über die Landwirtschaft"@de ;
@@ -30,6 +34,12 @@ LwG:art_165_d a schema:Legislation ;
         "Art. 165d AgricA"@en,
         "Art. 165d LAgr"@fr,
         "Art. 165d LAgr"@it .
+
+LwG:art_165_e a schema:Legislation ;
+    rdfs:label "Art. 165e LwG"@de,
+        "Art. 165e AgricA"@en,
+        "Art. 165e LAgr"@fr,
+        "Art. 165e LAgr"@it .
 
 LwG:art_165_f a schema:Legislation ;
     rdfs:label "Art. 165f LwG"@de,
@@ -50,12 +60,14 @@ LwG:art_27 a schema:Legislation ;
         "Art. 27 LAgr"@it .
 
 <https://www.fedlex.admin.ch/eli/cc/1998/3244_3244_3244> a schema:Legislation ;
-    rdfs:label "Verordnung über die Ein- und Ausfuhr von Gemüse, Obst und Gartenbauerzeugnissen (VEAGOG)"@de .
+    rdfs:label "Ordinanza concernente l'importazione e l'esportazione di verdura, frutta e prodotti della floricoltura",
+        "Verordnung über die Ein- und Ausfuhr von Gemüse, Obst und Gartenbauerzeugnissen (VEAGOG)"@de,
+        "Ordonnance sur l'importation et l'exportation de légumes, de fruits et de plantes horticoles"@fr .
 
 <https://www.fedlex.admin.ch/eli/cc/1999/71> a schema:Legislation ;
     rdfs:label "Verordnung über die Marktbeobachtung im Landwirtschaftsbereich"@de,
         "Ordinance on market observation in the agricultural sector"@en,
-        "Ordonnance sur l’observation du marché dans le domaine de l’agriculture"@fr,
+        "Ordonnance sur l'observation du marché dans le domaine de l'agriculture"@fr,
         "Ordinanza concernente il monitoraggio del mercato nel settore agricolo"@it .
 
 <https://www.fedlex.admin.ch/eli/cc/2003/791> a schema:Legislation ;
@@ -68,7 +80,9 @@ LwG:art_27 a schema:Legislation ;
         "Ordinanza sull'immissione sul mercato dei prodotti fitosanitari (Ordinanza sui prodotti fitosanitari, OPF)"@it .
 
 <https://www.fedlex.admin.ch/eli/cc/2011/770> a schema:Legislation ;
-    rdfs:label "Verordnung über die Einfuhr von landwirtschaftlichen Erzeugnissen (Agrareinfuhrverordnung, AEV)"@de .
+    rdfs:label "Verordnung über die Einfuhr von landwirtschaftlichen Erzeugnissen (Agrareinfuhrverordnung, AEV)"@de,
+        "Ordonnance sur l’importation de produits agricoles"@fr,
+        "Ordinanza concernente l’importazione di prodotti agricoli"@it .
 
 <https://www.fedlex.admin.ch/eli/cc/2016/565> a schema:Legislation ;
     rdfs:label "Verordnung des BLW über die Festlegung von Perioden und Fristen sowie die Freigabe von Zollkontingentsteilmengen für die Einfuhr von frischem Gemüse und frischem Obst (VEAGOG-Freigabeverordnung)"@de .
@@ -934,6 +948,18 @@ systemmap:SYS034 a schema:SoftwareApplication ;
         Es handelt sich um ein eine Webanwendung der Europäischen Union und unterstützt den grenzüberschreitenden Verkehr von Tieren, Lebensmitteln und tierischen Nebenprodukten.\r
         """@de ;
     systemmap:operatedBy systemmap:ORG999 .
+
+systemmap:SYS041 a schema:SoftwareApplication ;
+    rdfs:label "Zentrale Auswertung von Agrarumweltindikatoren"@de ;
+    rdfs:comment """
+        Die 'ZA-AUI: Betriebsrückmeldung' ermöglicht den Teilnehmenden am Projekt ZA-AUI die berechneten Agrarumweltindikatoren (AUI) ihres Betriebs online abzurufen, für welche sie jährlich Daten an Agroscope liefern.
+        Die eigenen Betriebsergebnisse können mit den AUI-Ergebnissen desselben Betriebstyps aus dem ZA-AUI-Betriebsnetz verglichen werden.
+        """@de ;
+    dcat:landingPage <https://apps.agroscope.info/sp/za-aui/2/app/datenreihe>,
+        <https://www.agrarumweltindikatoren.ch>,
+        <https://www.za-aui.ch> ;
+    systemmap:abbreviation "ZA-AUI"@de ;
+    systemmap:operatedBy staatskalender:20050530 .
 
 systemmap:SYS042 a schema:SoftwareApplication ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
@@ -2107,6 +2133,9 @@ systemmap:ORG214 a systemmap:FederalOrganization ;
         "ITMD"@en,
         "SGI"@fr,
         "SGI"@it .
+
+staatskalender:20050530 a systemmap:FederalOrganization ;
+    rdfs:label "Monitoring des Agrarumweltsystems Schweiz MAUS"@de .
 
 systemmap:INF003 a systemmap:Identifier ;
     rdfs:label "UID-Nummer"@de,

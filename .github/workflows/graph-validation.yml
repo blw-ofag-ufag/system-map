@@ -1,4 +1,4 @@
-name: Graph validation
+name: Graph validation tests
 
 on:
   pull_request:
@@ -7,20 +7,38 @@ on:
       - main
 
 jobs:
-  graph-validation:
+  validate-ttl-syntax:
+    name: Validate turtle files (`.ttl`) syntax
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.12'
-      - name: Install RDF and SHACL libraries
-        run: |
-          pip install pyshacl rdflib
-      - name: Validate TTL syntax
+      
+      - name: Install RDF library
+        run: pip install rdflib
+
+      - name: Validate turtle syntax of all `.ttl` files
         run: |
           python scripts/validate-syntax.py
+
+  validate-graph-shacl:
+    name: Validate shape of `rdf/graph.ttl`
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'
+      
+      - name: Install RDF and SHACL libraries
+        run: pip install pyshacl rdflib
+
       - name: Validate graph shape with SHACL
         run: |
-          python scripts/validate.py
+          python scripts/validate-shape.py

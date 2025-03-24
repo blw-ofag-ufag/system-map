@@ -2650,7 +2650,11 @@ systemmap:INF042 a systemmap:Information ;
     systemmap:containedIn systemmap:SYS028 .
 
 systemmap:INF045 a systemmap:Information ;
-    rdfs:label "Marktdaten enthalten Preise, Mengen, Produktionssysteme."@de,
+    rdfs:label "Agrarmarktdaten"@de,
+        "agricultural market data"@en,
+        "données du marché agricole"@fr,
+        "dati di mercato agricolo"@it ;
+    rdfs:comment "Marktdaten enthalten Preise, Mengen, Produktionssysteme."@de,
         "Market data includes prices, quantities, production systems."@en,
         "Les données de marché comprennent les prix, les quantités, les systèmes de production."@fr,
         "I dati di mercato comprendono prezzi, quantità e sistemi di produzione."@it ;

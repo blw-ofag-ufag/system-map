@@ -2654,16 +2654,16 @@ systemmap:INF045 a systemmap:Information ;
         "Data on administrative measures and criminal sanctions"@en,
         "Données sur les mesures administratives et les sanctions pénales"@fr,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
-    systemmap:containedIn systemmap:SYS019 ;
-    systemmap:informs systemmap:SYS018 .
+    systemmap:containedIn systemmap:SYS018,
+        systemmap:SYS019 .
 
 systemmap:INF046 a systemmap:Information ;
     rdfs:label "Linked Data"@de,
         "Linked Data"@en,
         "Linked Data"@fr,
         "Linked Data"@it ;
-    systemmap:containedIn systemmap:SYS018 ;
-    systemmap:informs systemmap:SYS019 .
+    systemmap:containedIn systemmap:SYS018,
+        systemmap:SYS019 .
 
 systemmap:INF001 a systemmap:PersonInformation ;
     rdfs:label "Kontaktdaten Bewirtschaftenden"@de,

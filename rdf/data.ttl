@@ -135,6 +135,25 @@ systemmap:ORG200 a schema:Organization ;
         "UPOV"@fr,
         "UPOV"@it .
 
+systemmap:ORG215 a schema:Organization ;
+    rdfs:label "Schweizer Bundesarchiv"@de,
+        "Swiss Federal Archives"@en,
+        "Archives fédérales suisses"@fr,
+        "Archivio federale svizzero"@it ;
+    rdfs:comment """
+        Das Schweizerische Bundesarchiv (BAR) sichert die Dokumentation staatlichen Handelns und macht diese zugänglich.
+        """@de,
+        """The Swiss Federal Archives (SFA) preserve the documentation of government actions and make it accessible.
+        """@en,
+        """Les Archives fédérales suisses (AFS) garantissent la conservation et l’accès des documents en lien avec les activités de l’Etat.
+        """@fr,
+        """L’Archivio federale svizzero (AFS) assicura la conservazione e l’accessibilità della documentazione dell’operato dello Stato.
+        """@it ;
+    systemmap:abbreviation "BAR"@de,
+        "SFA"@en,
+        "AFS"@fr,
+        "AFS"@it .
+
 systemmap:ORG999 a schema:Organization ;
     rdfs:label "Europäische Kommission"@de,
         "European Commission"@en .
@@ -569,6 +588,28 @@ systemmap:SYS017 a schema:SoftwareApplication ;
     dcat:landingPage <https://www.psm.admin.ch/> ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2010/340> ;
     systemmap:operatedBy systemmap:ORG204 .
+
+systemmap:SYS018 a schema:SoftwareApplication ;
+    rdfs:label "LINDAS"@de,
+        "LINDAS"@en,
+        "LINDAS"@fr,
+        "LINDAS"@it ;
+    rdfs:comment "Mit den Linked Data Services LINDAS können öffentliche Verwaltungen ihre Daten in Form von Knowledge Graphs veröffentlichen und diese über https://lindas.admin.ch zugänglich machen."@de,
+        "Linked Data Services LINDAS allow public administrations to publish their data in the form of Knowledge Graphs and make them accessible via https://lindas.admin.ch"@en,
+        "Avec les services Linked Data LINDAS, les administrations publiques peuvent publier leurs données sous forme de graphe de connaissances et les rendre accessibles via https://lindas.admin.ch."@fr,
+        "Con i Linked Data Services LINDAS, le pubbliche amministrazioni possono pubblicare i loro dati sotto forma di grafi di conoscenza e renderli accessibili attraverso https://lindas.admin.ch."@it ;
+    systemmap:operatedBy systemmap:ORG200 .
+
+systemmap:SYS019 a schema:SoftwareApplication ;
+    rdfs:label "Visualize"@de,
+        "Visualize"@en,
+        "Visualize"@fr,
+        "Visualize"@it ;
+    rdfs:comment "Erstellen Sie Visualisierungen von Datensätzen, welche durch den Linked-Data Dienst (LINDAS) des Bundesarchivs bereitgestellt werden und betten Sie diese in Ihre Webseite ein."@de,
+        "Create and embed visualizations from any dataset provided by the LINDAS Linked Data Service."@en,
+        "Créez et intégrez des visualisations à partir des jeux de données du service LINDAS (Linked Data)."@fr,
+        "Crea ed incorpora visualizzazioni partendo dai dataset forniti dal servizio LINDAS (Linked Data)."@it ;
+    systemmap:operatedBy systemmap:ORG215 .
 
 systemmap:SYS020 a schema:SoftwareApplication ;
     rdfs:label "Tierverkehrsdatenbank"@de,
@@ -2607,6 +2648,22 @@ systemmap:INF042 a systemmap:Information ;
         Prodotti per la fertilizzazione del suolo e delle piante.
         """@it ;
     systemmap:containedIn systemmap:SYS028 .
+
+systemmap:INF046 a systemmap:LinkedData ;
+    rdfs:label "Linked Data"@de,
+        "Linked Data"@en,
+        "Linked Data"@fr,
+        "Linked Data"@it ;
+    systemmap:containedIn systemmap:SYS018 ;
+    systemmap:informs systemmap:SYS019 .
+
+systemmap:INF045 a systemmap:Marktdaten ;
+    rdfs:label "Marktdaten enthalten Preise, Mengen, Produktionssysteme."@de,
+        "Data on administrative measures and criminal sanctions"@en,
+        "Données sur les mesures administratives et les sanctions pénales"@fr,
+        "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
+    systemmap:containedIn systemmap:SYS029 ;
+    systemmap:informs systemmap:SYS018 .
 
 systemmap:INF001 a systemmap:PersonInformation ;
     rdfs:label "Kontaktdaten Bewirtschaftenden"@de,

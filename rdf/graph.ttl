@@ -841,7 +841,8 @@ systemmap:ORG096 a schema:GovernmentOrganization,
     systemmap:abbreviation "BAFU"@de,
         "FOEN"@en,
         "OFEV"@fr,
-        "UFAM"@it .
+        "UFAM"@it ;
+    systemmap:operates systemmap:SYS019 .
 
 systemmap:ORG097 a schema:GovernmentOrganization,
         schema:Organization,
@@ -2236,16 +2237,20 @@ staatskalender:20050530 a schema:GovernmentOrganization,
     systemmap:operates systemmap:SYS041 .
 
 <https://www.fedlex.admin.ch/eli/cc/1986/926_926_926> a schema:Legislation ;
-    rdfs:label "Bundesgesetz über die landwirtschaftliche Pacht"@de .
+    rdfs:label "Bundesgesetz über die landwirtschaftliche Pacht"@de ;
+    schema:name "Bundesgesetz über die landwirtschaftliche Pacht"@de .
 
 <https://www.fedlex.admin.ch/eli/cc/1993/1410_1410_1410> a schema:Legislation ;
-    rdfs:label "Bundesgesetz über das bäuerliche Bodenrecht"@de .
+    rdfs:label "Bundesgesetz über das bäuerliche Bodenrecht"@de ;
+    schema:name "Bundesgesetz über das bäuerliche Bodenrecht"@de .
 
 <https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> a schema:Legislation ;
-    rdfs:label "Verordnung über das Betriebs- und Unternehmensregister"@de .
+    rdfs:label "Verordnung über das Betriebs- und Unternehmensregister"@de ;
+    schema:name "Verordnung über das Betriebs- und Unternehmensregister"@de .
 
 <https://www.fedlex.admin.ch/eli/cc/1993/274_274_274> a schema:Legislation ;
-    rdfs:label "Bundesgesetz über den Schutz von Marken und Herkunftsangaben"@de .
+    rdfs:label "Bundesgesetz über den Schutz von Marken und Herkunftsangaben"@de ;
+    schema:name "Bundesgesetz über den Schutz von Marken und Herkunftsangaben"@de .
 
 LwG: a schema:Legislation ;
     rdfs:label "Bundesgesetz über die Landwirtschaft"@de ;
@@ -2275,6 +2280,10 @@ LwG:art_165_d a schema:Legislation ;
 
 LwG:art_165_e a schema:Legislation ;
     rdfs:label "Art. 165e LwG"@de,
+        "Art. 165e AgricA"@en,
+        "Art. 165e LAgr"@fr,
+        "Art. 165e LAgr"@it ;
+    schema:name "Art. 165e LwG"@de,
         "Art. 165e AgricA"@en,
         "Art. 165e LAgr"@fr,
         "Art. 165e LAgr"@it .
@@ -2676,6 +2685,39 @@ systemmap:ORG200 a schema:Organization ;
         "UPOV"@fr,
         "UPOV"@it ;
     systemmap:operates systemmap:SYS024 .
+
+systemmap:ORG215 a schema:Organization ;
+    rdfs:label "Schweizer Bundesarchiv"@de,
+        "Swiss Federal Archives"@en,
+        "Archives fédérales suisses"@fr,
+        "Archivio federale svizzero"@it ;
+    schema:description """
+        Das Schweizerische Bundesarchiv (BAR) sichert die Dokumentation staatlichen Handelns und macht diese zugänglich.
+        """@de,
+        """The Swiss Federal Archives (SFA) preserve the documentation of government actions and make it accessible.
+        """@en,
+        """Les Archives fédérales suisses (AFS) garantissent la conservation et l’accès des documents en lien avec les activités de l’Etat.
+        """@fr,
+        """L’Archivio federale svizzero (AFS) assicura la conservazione e l’accessibilità della documentazione dell’operato dello Stato.
+        """@it ;
+    schema:name "Schweizer Bundesarchiv"@de,
+        "Swiss Federal Archives"@en,
+        "Archives fédérales suisses"@fr,
+        "Archivio federale svizzero"@it ;
+    rdfs:comment """
+        Das Schweizerische Bundesarchiv (BAR) sichert die Dokumentation staatlichen Handelns und macht diese zugänglich.
+        """@de,
+        """The Swiss Federal Archives (SFA) preserve the documentation of government actions and make it accessible.
+        """@en,
+        """Les Archives fédérales suisses (AFS) garantissent la conservation et l’accès des documents en lien avec les activités de l’Etat.
+        """@fr,
+        """L’Archivio federale svizzero (AFS) assicura la conservazione e l’accessibilità della documentazione dell’operato dello Stato.
+        """@it ;
+    systemmap:abbreviation "BAR"@de,
+        "SFA"@en,
+        "AFS"@fr,
+        "AFS"@it ;
+    systemmap:operates systemmap:SYS018 .
 
 systemmap:ORG999 a schema:Organization ;
     rdfs:label "Europäische Kommission"@de,
@@ -3463,6 +3505,46 @@ systemmap:SYS017 a schema:SoftwareApplication ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2010/340> ;
     systemmap:operatedBy systemmap:ORG204 .
 
+systemmap:SYS018 a schema:SoftwareApplication ;
+    rdfs:label "LINDAS"@de,
+        "LINDAS"@en,
+        "LINDAS"@fr,
+        "LINDAS"@it ;
+    schema:description "Mit den Linked Data Services LINDAS können öffentliche Verwaltungen ihre Daten in Form von Knowledge Graphs veröffentlichen und diese über https://lindas.admin.ch zugänglich machen."@de,
+        "Linked Data Services LINDAS allow public administrations to publish their data in the form of Knowledge Graphs and make them accessible via https://lindas.admin.ch"@en,
+        "Avec les services Linked Data LINDAS, les administrations publiques peuvent publier leurs données sous forme de graphe de connaissances et les rendre accessibles via https://lindas.admin.ch."@fr,
+        "Con i Linked Data Services LINDAS, le pubbliche amministrazioni possono pubblicare i loro dati sotto forma di grafi di conoscenza e renderli accessibili attraverso https://lindas.admin.ch."@it ;
+    schema:name "LINDAS"@de,
+        "LINDAS"@en,
+        "LINDAS"@fr,
+        "LINDAS"@it ;
+    rdfs:comment "Mit den Linked Data Services LINDAS können öffentliche Verwaltungen ihre Daten in Form von Knowledge Graphs veröffentlichen und diese über https://lindas.admin.ch zugänglich machen."@de,
+        "Linked Data Services LINDAS allow public administrations to publish their data in the form of Knowledge Graphs and make them accessible via https://lindas.admin.ch"@en,
+        "Avec les services Linked Data LINDAS, les administrations publiques peuvent publier leurs données sous forme de graphe de connaissances et les rendre accessibles via https://lindas.admin.ch."@fr,
+        "Con i Linked Data Services LINDAS, le pubbliche amministrazioni possono pubblicare i loro dati sotto forma di grafi di conoscenza e renderli accessibili attraverso https://lindas.admin.ch."@it ;
+    systemmap:contains systemmap:INF046 ;
+    systemmap:operatedBy systemmap:ORG215 .
+
+systemmap:SYS019 a schema:SoftwareApplication ;
+    rdfs:label "Visualize"@de,
+        "Visualize"@en,
+        "Visualize"@fr,
+        "Visualize"@it ;
+    schema:description "Erstellen Sie Visualisierungen von Datensätzen, welche durch den Linked-Data Dienst (LINDAS) des Bundesarchivs bereitgestellt werden und betten Sie diese in Ihre Webseite ein."@de,
+        "Create and embed visualizations from any dataset provided by the LINDAS Linked Data Service."@en,
+        "Créez et intégrez des visualisations à partir des jeux de données du service LINDAS (Linked Data)."@fr,
+        "Crea ed incorpora visualizzazioni partendo dai dataset forniti dal servizio LINDAS (Linked Data)."@it ;
+    schema:name "Visualize"@de,
+        "Visualize"@en,
+        "Visualize"@fr,
+        "Visualize"@it ;
+    rdfs:comment "Erstellen Sie Visualisierungen von Datensätzen, welche durch den Linked-Data Dienst (LINDAS) des Bundesarchivs bereitgestellt werden und betten Sie diese in Ihre Webseite ein."@de,
+        "Create and embed visualizations from any dataset provided by the LINDAS Linked Data Service."@en,
+        "Créez et intégrez des visualisations à partir des jeux de données du service LINDAS (Linked Data)."@fr,
+        "Crea ed incorpora visualizzazioni partendo dai dataset forniti dal servizio LINDAS (Linked Data)."@it ;
+    systemmap:contains systemmap:INF046 ;
+    systemmap:operatedBy systemmap:ORG096 .
+
 systemmap:SYS020 a schema:SoftwareApplication ;
     rdfs:label "Tierverkehrsdatenbank"@de,
         "Animal Traffic Database"@en,
@@ -3925,6 +4007,7 @@ systemmap:SYS029 a schema:SoftwareApplication ;
         "MARS III"@en,
         "MARS III"@fr,
         "MARS III"@it ;
+    systemmap:contains systemmap:INF045 ;
     systemmap:operatedBy systemmap:ORG012 .
 
 systemmap:SYS030 a schema:SoftwareApplication ;
@@ -6900,4 +6983,37 @@ systemmap:INF044 a systemmap:Information,
         "Données sur les mesures administratives et les sanctions pénales"@fr,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
     systemmap:containedIn systemmap:SYS001 .
+
+systemmap:INF045 a systemmap:Information ;
+    rdfs:label "Agrarmarktdaten"@de,
+        "agricultural market data"@en,
+        "données du marché agricole"@fr,
+        "dati di mercato agricolo"@it ;
+    schema:description "Marktdaten enthalten Preise, Mengen, Produktionssysteme."@de,
+        "Market data includes prices, quantities, production systems."@en,
+        "Les données de marché comprennent les prix, les quantités, les systèmes de production."@fr,
+        "I dati di mercato comprendono prezzi, quantità e sistemi di produzione."@it ;
+    schema:name "Agrarmarktdaten"@de,
+        "agricultural market data"@en,
+        "données du marché agricole"@fr,
+        "dati di mercato agricolo"@it ;
+    rdfs:comment "Marktdaten enthalten Preise, Mengen, Produktionssysteme."@de,
+        "Market data includes prices, quantities, production systems."@en,
+        "Les données de marché comprennent les prix, les quantités, les systèmes de production."@fr,
+        "I dati di mercato comprendono prezzi, quantità e sistemi di produzione."@it ;
+    systemmap:containedIn systemmap:SYS029 ;
+    systemmap:informs systemmap:INF046 .
+
+systemmap:INF046 a systemmap:Information ;
+    rdfs:label "Linked Data"@de,
+        "Linked Data"@en,
+        "Linked Data"@fr,
+        "Linked Data"@it ;
+    schema:name "Linked Data"@de,
+        "Linked Data"@en,
+        "Linked Data"@fr,
+        "Linked Data"@it ;
+    systemmap:containedIn systemmap:SYS018,
+        systemmap:SYS019 ;
+    systemmap:informedBy systemmap:INF045 .
 

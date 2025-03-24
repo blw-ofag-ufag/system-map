@@ -2651,11 +2651,11 @@ systemmap:INF042 a systemmap:Information ;
 
 systemmap:INF045 a systemmap:Information ;
     rdfs:label "Marktdaten enthalten Preise, Mengen, Produktionssysteme."@de,
-        "Data on administrative measures and criminal sanctions"@en,
-        "Données sur les mesures administratives et les sanctions pénales"@fr,
-        "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
-    systemmap:containedIn systemmap:SYS018,
-        systemmap:SYS019 .
+        "Market data includes prices, quantities, production systems."@en,
+        "Les données de marché comprennent les prix, les quantités, les systèmes de production."@fr,
+        "I dati di mercato comprendono prezzi, quantità e sistemi di produzione."@it ;
+    systemmap:containedIn systemmap:SYS029 ;
+    systemmap:informs systemmap:INF046 .
 
 systemmap:INF046 a systemmap:Information ;
     rdfs:label "Linked Data"@de,

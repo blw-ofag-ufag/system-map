@@ -3522,8 +3522,7 @@ systemmap:SYS018 a schema:SoftwareApplication ;
         "Linked Data Services LINDAS allow public administrations to publish their data in the form of Knowledge Graphs and make them accessible via https://lindas.admin.ch"@en,
         "Avec les services Linked Data LINDAS, les administrations publiques peuvent publier leurs données sous forme de graphe de connaissances et les rendre accessibles via https://lindas.admin.ch."@fr,
         "Con i Linked Data Services LINDAS, le pubbliche amministrazioni possono pubblicare i loro dati sotto forma di grafi di conoscenza e renderli accessibili attraverso https://lindas.admin.ch."@it ;
-    systemmap:contains systemmap:INF045,
-        systemmap:INF046 ;
+    systemmap:contains systemmap:INF046 ;
     systemmap:operatedBy systemmap:ORG215 .
 
 systemmap:SYS019 a schema:SoftwareApplication ;
@@ -3543,8 +3542,7 @@ systemmap:SYS019 a schema:SoftwareApplication ;
         "Create and embed visualizations from any dataset provided by the LINDAS Linked Data Service."@en,
         "Créez et intégrez des visualisations à partir des jeux de données du service LINDAS (Linked Data)."@fr,
         "Crea ed incorpora visualizzazioni partendo dai dataset forniti dal servizio LINDAS (Linked Data)."@it ;
-    systemmap:contains systemmap:INF045,
-        systemmap:INF046 ;
+    systemmap:contains systemmap:INF046 ;
     systemmap:operatedBy systemmap:ORG215 .
 
 systemmap:SYS020 a schema:SoftwareApplication ;
@@ -4009,6 +4007,7 @@ systemmap:SYS029 a schema:SoftwareApplication ;
         "MARS III"@en,
         "MARS III"@fr,
         "MARS III"@it ;
+    systemmap:contains systemmap:INF045 ;
     systemmap:operatedBy systemmap:ORG012 .
 
 systemmap:SYS030 a schema:SoftwareApplication ;
@@ -6987,15 +6986,15 @@ systemmap:INF044 a systemmap:Information,
 
 systemmap:INF045 a systemmap:Information ;
     rdfs:label "Marktdaten enthalten Preise, Mengen, Produktionssysteme."@de,
-        "Data on administrative measures and criminal sanctions"@en,
-        "Données sur les mesures administratives et les sanctions pénales"@fr,
-        "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
+        "Market data includes prices, quantities, production systems."@en,
+        "Les données de marché comprennent les prix, les quantités, les systèmes de production."@fr,
+        "I dati di mercato comprendono prezzi, quantità e sistemi di produzione."@it ;
     schema:name "Marktdaten enthalten Preise, Mengen, Produktionssysteme."@de,
-        "Data on administrative measures and criminal sanctions"@en,
-        "Données sur les mesures administratives et les sanctions pénales"@fr,
-        "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
-    systemmap:containedIn systemmap:SYS018,
-        systemmap:SYS019 .
+        "Market data includes prices, quantities, production systems."@en,
+        "Les données de marché comprennent les prix, les quantités, les systèmes de production."@fr,
+        "I dati di mercato comprendono prezzi, quantità e sistemi di produzione."@it ;
+    systemmap:containedIn systemmap:SYS029 ;
+    systemmap:informs systemmap:INF046 .
 
 systemmap:INF046 a systemmap:Information ;
     rdfs:label "Linked Data"@de,
@@ -7007,5 +7006,6 @@ systemmap:INF046 a systemmap:Information ;
         "Linked Data"@fr,
         "Linked Data"@it ;
     systemmap:containedIn systemmap:SYS018,
-        systemmap:SYS019 .
+        systemmap:SYS019 ;
+    systemmap:informedBy systemmap:INF045 .
 

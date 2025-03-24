@@ -2683,8 +2683,7 @@ systemmap:ORG200 a schema:Organization ;
         "UPOV"@en,
         "UPOV"@fr,
         "UPOV"@it ;
-    systemmap:operates systemmap:SYS018,
-        systemmap:SYS024 .
+    systemmap:operates systemmap:SYS024 .
 
 systemmap:ORG215 a schema:Organization ;
     rdfs:label "Schweizer Bundesarchiv"@de,
@@ -2717,7 +2716,8 @@ systemmap:ORG215 a schema:Organization ;
         "SFA"@en,
         "AFS"@fr,
         "AFS"@it ;
-    systemmap:operates systemmap:SYS019 .
+    systemmap:operates systemmap:SYS018,
+        systemmap:SYS019 .
 
 systemmap:ORG999 a schema:Organization ;
     rdfs:label "Europäische Kommission"@de,
@@ -3524,7 +3524,7 @@ systemmap:SYS018 a schema:SoftwareApplication ;
         "Con i Linked Data Services LINDAS, le pubbliche amministrazioni possono pubblicare i loro dati sotto forma di grafi di conoscenza e renderli accessibili attraverso https://lindas.admin.ch."@it ;
     systemmap:contains systemmap:INF046 ;
     systemmap:informedBy systemmap:INF045 ;
-    systemmap:operatedBy systemmap:ORG200 .
+    systemmap:operatedBy systemmap:ORG215 .
 
 systemmap:SYS019 a schema:SoftwareApplication ;
     rdfs:label "Visualize"@de,
@@ -3543,6 +3543,7 @@ systemmap:SYS019 a schema:SoftwareApplication ;
         "Create and embed visualizations from any dataset provided by the LINDAS Linked Data Service."@en,
         "Créez et intégrez des visualisations à partir des jeux de données du service LINDAS (Linked Data)."@fr,
         "Crea ed incorpora visualizzazioni partendo dai dataset forniti dal servizio LINDAS (Linked Data)."@it ;
+    systemmap:contains systemmap:INF045 ;
     systemmap:informedBy systemmap:INF046 ;
     systemmap:operatedBy systemmap:ORG215 .
 
@@ -4008,7 +4009,6 @@ systemmap:SYS029 a schema:SoftwareApplication ;
         "MARS III"@en,
         "MARS III"@fr,
         "MARS III"@it ;
-    systemmap:contains systemmap:INF045 ;
     systemmap:operatedBy systemmap:ORG012 .
 
 systemmap:SYS030 a schema:SoftwareApplication ;
@@ -6985,7 +6985,19 @@ systemmap:INF044 a systemmap:Information,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
     systemmap:containedIn systemmap:SYS001 .
 
-systemmap:INF046 a systemmap:LinkedData ;
+systemmap:INF045 a systemmap:Information ;
+    rdfs:label "Marktdaten enthalten Preise, Mengen, Produktionssysteme."@de,
+        "Data on administrative measures and criminal sanctions"@en,
+        "Données sur les mesures administratives et les sanctions pénales"@fr,
+        "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
+    schema:name "Marktdaten enthalten Preise, Mengen, Produktionssysteme."@de,
+        "Data on administrative measures and criminal sanctions"@en,
+        "Données sur les mesures administratives et les sanctions pénales"@fr,
+        "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
+    systemmap:containedIn systemmap:SYS019 ;
+    systemmap:informs systemmap:SYS018 .
+
+systemmap:INF046 a systemmap:Information ;
     rdfs:label "Linked Data"@de,
         "Linked Data"@en,
         "Linked Data"@fr,
@@ -6996,16 +7008,4 @@ systemmap:INF046 a systemmap:LinkedData ;
         "Linked Data"@it ;
     systemmap:containedIn systemmap:SYS018 ;
     systemmap:informs systemmap:SYS019 .
-
-systemmap:INF045 a systemmap:Marktdaten ;
-    rdfs:label "Marktdaten enthalten Preise, Mengen, Produktionssysteme."@de,
-        "Data on administrative measures and criminal sanctions"@en,
-        "Données sur les mesures administratives et les sanctions pénales"@fr,
-        "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
-    schema:name "Marktdaten enthalten Preise, Mengen, Produktionssysteme."@de,
-        "Data on administrative measures and criminal sanctions"@en,
-        "Données sur les mesures administratives et les sanctions pénales"@fr,
-        "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
-    systemmap:containedIn systemmap:SYS029 ;
-    systemmap:informs systemmap:SYS018 .
 

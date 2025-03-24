@@ -841,7 +841,8 @@ systemmap:ORG096 a schema:GovernmentOrganization,
     systemmap:abbreviation "BAFU"@de,
         "FOEN"@en,
         "OFEV"@fr,
-        "UFAM"@it .
+        "UFAM"@it ;
+    systemmap:operates systemmap:SYS019 .
 
 systemmap:ORG097 a schema:GovernmentOrganization,
         schema:Organization,
@@ -2716,8 +2717,7 @@ systemmap:ORG215 a schema:Organization ;
         "SFA"@en,
         "AFS"@fr,
         "AFS"@it ;
-    systemmap:operates systemmap:SYS018,
-        systemmap:SYS019 .
+    systemmap:operates systemmap:SYS018 .
 
 systemmap:ORG999 a schema:Organization ;
     rdfs:label "Europäische Kommission"@de,
@@ -3543,7 +3543,7 @@ systemmap:SYS019 a schema:SoftwareApplication ;
         "Créez et intégrez des visualisations à partir des jeux de données du service LINDAS (Linked Data)."@fr,
         "Crea ed incorpora visualizzazioni partendo dai dataset forniti dal servizio LINDAS (Linked Data)."@it ;
     systemmap:contains systemmap:INF046 ;
-    systemmap:operatedBy systemmap:ORG215 .
+    systemmap:operatedBy systemmap:ORG096 .
 
 systemmap:SYS020 a schema:SoftwareApplication ;
     rdfs:label "Tierverkehrsdatenbank"@de,

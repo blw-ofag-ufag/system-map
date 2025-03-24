@@ -3,7 +3,10 @@ from rdflib import Graph, RDF, RDFS, OWL, URIRef, Namespace
 from rdflib.namespace import NamespaceManager
 from otsrdflib import OrderedTurtleSerializer
 
-SCHEMA = Namespace("http://schema.org/") # set schema prefix to the old, outdated http://... prefix because LINDAS works with these
+SCHEMA = Namespace(
+    "http://schema.org/"
+)  # set schema prefix to the old, outdated http://... prefix because LINDAS works with these
+
 
 def sort_and_overwrite_turtle(graph: Graph, file_path: str):
     """
@@ -37,6 +40,7 @@ def sort_and_overwrite_turtle(graph: Graph, file_path: str):
 
     print(f"File '{file_path}': Triples sorted and overwritten.")
 
+
 def load_and_sort_ttl(file_path: str) -> Graph:
     """
     Loads a TTL file into an RDF graph, sorts it, and overwrites the original file.
@@ -47,6 +51,7 @@ def load_and_sort_ttl(file_path: str) -> Graph:
     # Sort the file's content, overwriting the original.
     sort_and_overwrite_turtle(g, file_path)
     return g
+
 
 def reason_subclass_and_inverse(ontology_graph: Graph, data_graph: Graph) -> Graph:
     """
@@ -76,14 +81,14 @@ def reason_subclass_and_inverse(ontology_graph: Graph, data_graph: Graph) -> Gra
         existing_triples = set(g)
 
         # 1) Inverse property expansions
-        for (s, p, o) in list(existing_triples):
+        for s, p, o in list(existing_triples):
             p_inv = inverse_of.get(p)
             if p_inv and (o, p_inv, s) not in g:
                 g.add((o, p_inv, s))
 
         # 2) Subclass expansions
         # If we see (x rdf:type A), and A rdfs:subClassOf B, add (x rdf:type B)
-        for (x, rdf_type, classA) in list(existing_triples):
+        for x, rdf_type, classA in list(existing_triples):
             if rdf_type == RDF.type and classA in subclass_of:
                 for classB in subclass_of[classA]:
                     if (x, RDF.type, classB) not in g:
@@ -121,11 +126,12 @@ def reason_subclass_and_inverse(ontology_graph: Graph, data_graph: Graph) -> Gra
     print(f"File 'graph.ttl': Finished reasoning, added new triples.")
     return g
 
+
 if __name__ == "__main__":
     # Paths
-    ontology_path = "rdf/ontology.ttl"
-    data_path = "rdf/data.ttl"
-    output_path = "rdf/graph.ttl"
+    ontology_path = "../rdf/ontology.ttl"
+    data_path = "../rdf/data.ttl"
+    output_path = "../rdf/graph.ttl"
 
     # 1) Load and sort the individual TTL files
     #    This step ensures the source TTL files are also "cleanly" sorted

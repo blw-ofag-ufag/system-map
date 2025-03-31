@@ -1,4 +1,4 @@
-name: Graph validation tests
+name: Graph processing and deployment
 
 on:
   push:

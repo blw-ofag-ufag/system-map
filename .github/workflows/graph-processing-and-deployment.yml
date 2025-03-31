@@ -35,7 +35,7 @@ jobs:
             -X DELETE \
             "https://stardog.cluster.ldbar.ch/lindas?graph=https://lindas.admin.ch/foag/system-map"
       
-      - nam: Upload new turtle file to LINDAS PROD
+      - name: Upload new turtle file to LINDAS PROD
         run: |
           curl \
             --user lindas-foag:${{ secrets.LINDAS_PROD_PASSWORD }} \

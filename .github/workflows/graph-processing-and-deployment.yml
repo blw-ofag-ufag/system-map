@@ -1,0 +1,45 @@
+name: Graph processing and deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  graph-processing-and-deployment:
+    name: Graph processing and deployment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'
+      
+      - name: Install RDF library
+        run: pip install rdflib
+
+      - name: Validate turtle syntax of all `.ttl` files
+        run: |
+          python scripts/validate-syntax.py
+
+      - name: Run reasoning script to construct an extended graph
+        run: |
+          python scripts/reason.py
+      
+      - name: Clear the old graph on LINDAS PROD
+        run: |
+          curl \
+            --user lindas-foag:${{ secrets.LINDAS_PROD_PASSWORD }} \
+            -X DELETE \
+            "https://stardog.cluster.ldbar.ch/lindas?graph=https://lindas.admin.ch/foag/system-map"
+      
+      - nam: Upload new turtle file to LINDAS PROD
+        run: |
+          curl \
+            --user lindas-foag:${{ secrets.LINDAS_PROD_PASSWORD }} \
+            -X POST \
+            -H "Content-Type: text/turtle" \
+            --data-binary @rdf/graph.ttl \
+            "https://stardog.cluster.ldbar.ch/lindas?graph=https://lindas.admin.ch/foag/system-map"

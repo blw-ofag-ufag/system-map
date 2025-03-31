@@ -38,6 +38,10 @@ jobs:
       
       - name: Install RDF and SHACL libraries
         run: pip install pyshacl rdflib
+      
+      - name: Run reasoning script to construct an extended graph
+        run: |
+          python scripts/reason.py
 
       - name: Validate graph shape with SHACL
         run: |

@@ -949,6 +949,15 @@ systemmap:SYS034 a schema:SoftwareApplication ;
         """@de ;
     systemmap:operatedBy systemmap:ORG999 .
 
+systemmap:SYS035 a schema:SoftwareApplication ;
+    rdfs:label "eMapis"@de ;
+    rdfs:comment """
+        eMapis wurde entwickelt, um die veraltete MAPIS-Applikation abzulösen und die digitale Verwaltung von Finanzhilfegesuchen, wie Bundesbeiträge und zinslose Darlehen, zu ermöglichen.
+        Das System zentralisiert die Erfassung und Verwaltung von Daten sowie Dokumenten, wodurch Doppelerfassungen vermieden werden.
+        Mit automatisierten Workflows, einer zentralen Benutzerverwaltung und der Integration von GIS-Daten (sowie zukünftig Betriebsdaten) verbessert eMapis die Transparenz und Effizienz in der Bearbeitung der Finanzhilfefälle.
+        """@de ;
+    systemmap:operatedBy systemmap:ORG022 .
+
 systemmap:SYS041 a schema:SoftwareApplication ;
     rdfs:label "Zentrale Auswertung von Agrarumweltindikatoren"@de ;
     rdfs:comment """
@@ -1622,6 +1631,16 @@ systemmap:ORG021 a systemmap:FederalOrganization ;
         "FBDG"@en,
         "FBDG"@fr,
         "FBDG"@it .
+
+systemmap:ORG022 a systemmap:FederalOrganization ;
+    rdfs:label "Fachbereich Meliorationen"@de ;
+    rdfs:comment """
+        Der Fachbereich Meliorationen ist in der Verbundaufgabe mit den Kantonen im ländlichen Tiefbau (Bodenverbesserungen) tätig.
+        Er ist bundesintern verfahrensleitende Behörde, beurteilt die Gesuche und übt die Oberaufsicht aus.
+        Zudem behandelt er Fragen der Raumplanung und der Infrastrukturen.
+        Weitere Themen sind Management natürlicher Ressourcen, Klimawandel mit Blick auf Boden/Wasserhaushalt.
+        """@de ;
+    schema:parentOrganization systemmap:ORG006 .
 
 systemmap:ORG030 a systemmap:FederalOrganization ;
     rdfs:label "Genetische Ressourcen, Produktionssicherheit und Futtermittel"@de,
@@ -3043,4 +3062,3 @@ systemmap:INF044 a systemmap:SensitivePersonInformation ;
         "Données sur les mesures administratives et les sanctions pénales"@fr,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
     systemmap:containedIn systemmap:SYS001 .
-

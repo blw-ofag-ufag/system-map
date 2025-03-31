@@ -37,7 +37,7 @@ jobs:
           python-version: '3.12'
       
       - name: Install RDF and SHACL libraries
-        run: pip install pyshacl rdflib
+        run: pip install pyshacl rdflib otsrdflib
       
       - name: Run reasoning script to construct an extended graph
         run: |

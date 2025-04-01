@@ -434,44 +434,62 @@ async function init() {
     });
 
     function buildLegend(classRows) {
-    // Grab the legend <div>
-    const legendEl = document.getElementById("legend");
-    
-    // We'll accumulate HTML
-    let html = "";
-    
-    classRows.forEach(row => {
-        // Each row: row.iri.value, row.label.value, row.comment.value, etc.
-        const iri = row.iri.value;
-        const label = row.label.value;
-        const comment = row.comment.value || "";
-    
-        // Convert IRI to group name using the same function you use for nodes
-        const groupName = mapClassIriToGroup(iri);
-    
-        // Look up the color in your groupColors map
-        // Make sure it's the same `groupColors` used to color your nodes
-        const c = groupColors[groupName];
-        // If it's not recognized, fallback to groupColors.Other
-        const color = c || groupColors.Other;
-    
-        // We'll show a color box + label. Optionally also show comment.
-        html += `
-        <div class="legend-item">
-            <div class="legend-swatch" style="background: ${color.background}; border-color: ${color.border}"></div>
-            <div>
-            <strong>${label}</strong>
-            <br>
-            <small>${comment}</small>
+        // Grab the legend <div>
+        const legendEl = document.getElementById("legend");
+
+        // We'll accumulate HTML
+        let html = "";
+
+        const params = new URLSearchParams(window.location.search);
+
+        classRows.forEach(row => {
+            // Each row: row.iri.value, row.label.value, row.comment.value, etc.
+            const iri = row.iri.value;
+            const label = row.label.value;
+            const comment = row.comment.value || "";
+
+            // Convert IRI to group name using the same function you use for nodes
+            const groupName = mapClassIriToGroup(iri);
+
+            // Check if these objects are hidden based on URL params
+            const hidden = params.has(groupName.toLowerCase(), false);
+
+            // Look up the color in your groupColors map
+            // Make sure it's the same `groupColors` used to color your nodes
+            const c = groupColors[groupName];
+            // If it's not recognized, fallback to groupColors.Other
+            const color = c || groupColors.Other;
+
+            // We'll show a color box + label. Optionally also show comment.
+            html += `
+            <div class="legend-item">
+                <div class="legend-swatch" style="background: ${color.background}; border-color: ${color.border}"></div>
+                <div>
+                <strong class="${hidden ? "faded" : ""}">${label}</strong>
+                <input type="checkbox" ${hidden ? "" : "checked"} data-group='${JSON.stringify(groupName)}' onclick="toggleGroup(this)" />
+                <br style="${hidden ? "display: none;" : ""}">
+                <small style="${hidden ? "display: none;" : ""}">${comment}</small>
+                </div>
             </div>
-        </div>
-        `;
-    });
-    
-    legendEl.innerHTML = html;
-    }      
+            `;
+        });
+
+        legendEl.innerHTML = html;
+    }
 
     buildLegend(classesJson.results.bindings);
+}
+
+function toggleGroup(element) {
+    const groupName = JSON.parse(element.getAttribute("data-group"));
+    const checked = element.checked
+
+    const params = new URLSearchParams(window.location.search);
+
+    params.set(groupName.toLowerCase(), checked)
+
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.location.href = newUrl;
 }
 
 // Kick off init() once page loads

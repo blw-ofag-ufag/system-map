@@ -74,6 +74,10 @@ html, body {
   margin-top: 3px;
  /* Move it down */
 }
+.legend-item strong.faded {
+  color: #707070;
+}
+
 .systemmap-title {
   position: absolute;
   top: 10px;
@@ -85,6 +89,41 @@ html, body {
  /* Adjust size as needed */
   z-index: 100;
  /* Ensure it sits on top of other elements */
+}
+
+select.select-flat {
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 16px;
+
+  /* Design */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+select.select-flat::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #007bff;
+}
+
+select.select-flat:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
+select.language-select {
+  /* Positioning */
+  position: absolute;
+  top: 80px;
+  left: 10px;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -13,6 +13,14 @@
 </head>
 <body>
   <h1 id="systemmapTitle" class="systemmap-title"></h1>
+  <div class="language-select">
+    <select id="languageSelect" onchange="changeLanguage(this)">
+      <option value="de">Deutsch</option>
+      <option value="fr">Français</option>
+      <option value="it">Italiano</option>
+      <option value="en">English</option>
+    </select>
+  </div>
   <div id="network"></div>
   <div id="infoPanel" class="info-panel hidden"></div>
   <div id="legend" class="legend"></div>

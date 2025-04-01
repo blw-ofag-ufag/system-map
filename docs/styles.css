@@ -74,6 +74,10 @@ html, body {
   margin-top: 3px;
  /* Move it down */
 }
+.legend-item strong.faded {
+  color: #707070;
+}
+
 .systemmap-title {
   position: absolute;
   top: 10px;
@@ -86,6 +90,45 @@ html, body {
   z-index: 100;
  /* Ensure it sits on top of other elements */
 }
+
+.language-select {
+  position: absolute;
+  top: 75px;
+  left: 10px;
+  z-index: 100;
+  display: inline-block;
+  width: 150px;
+}
+
+.language-select select {
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.language-select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/*.language-select {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+}*/
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0.8em;   /* Adjust value as needed */

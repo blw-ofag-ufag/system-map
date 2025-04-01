@@ -74,7 +74,7 @@ window.CLASS_QUERY = `
   SELECT ?iri ?label ?comment
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/system-map> {
-      VALUES ?iri { ${organization} ${system} ${information} }
+      VALUES ?iri { schema:Organization schema:SoftwareApplication systemmap:Information }
       ?iri rdfs:label ?label .
       ?iri rdfs:comment ?comment .    
       FILTER(LANG(?label) = "${lang}" && LANG(?comment) = "${lang}")

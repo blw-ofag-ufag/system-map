@@ -70,6 +70,48 @@ function blendHexColors(c1, c2, ratio) {
 }
 
 /**
+ * Helper func to get value of an URL param
+ * @param {string} name name of the URL param
+ * @returns value of the URL param with given name
+ */
+function getParam(name) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(name)
+}
+
+/**
+ * Helper func to set value of an URL param and redirects
+ * @param {string} name name of the URL param
+ * @param {string} value value of the URL param
+ */
+function setParamRedirect(name, value) {
+    const params = new URLSearchParams(window.location.search);
+    params.set(name, value)
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.location.href = newUrl;
+}
+
+/**
+ * Event-function to show or hide certain classes, called by checkboxes
+ * @param {*} element DOM-element of a checkbox input
+ */
+function toggleGroup(element) {
+    const groupName = JSON.parse(element.getAttribute("data-group"));
+    const checked = element.checked
+    setParamRedirect(groupName.toLowerCase(), checked)
+}
+
+/**
+ * Event-function to change the language of the webapp
+ * @param {*} element DOM-element of the language select
+ */
+function changeLanguage(element) {
+    const lang = element.value
+    setParamRedirect("lang", lang)
+}
+
+
+/**
  * Build the network and set up the BFS highlight + info panel
  */
 async function init() {
@@ -78,6 +120,7 @@ async function init() {
     let pinnedNodeId = null;
     let pinnedEdgeId = null;
 
+    setLanguageOption()
 
     async function fetchAndDisplayTitle() {
         try {
@@ -98,9 +141,9 @@ async function init() {
     await fetchAndDisplayTitle();
     
     // 1) Fetch node & edge data from your queries (defined in query.js)
+    const classesJson = await getSparqlData(CLASS_QUERY);
     const nodesJson = await getSparqlData(NODE_QUERY);
     const edgesJson = await getSparqlData(EDGE_QUERY);
-    const classesJson = await getSparqlData(CLASS_QUERY);
 
     // 2) Parse them into Vis-friendly arrays
     const nodes = nodesJson.results.bindings.map(row => {
@@ -340,6 +383,14 @@ async function init() {
         edgesDataset.update(edgeUpdates);
     }
 
+    function setLanguageOption() {
+        const selectBox = document.querySelector("#languageSelect")
+        langParam = getParam("lang")
+        if(langParam) {
+            selectBox.value = langParam
+        }
+    }
+
     network.on("hoverNode", (params) => {
         // If a node is pinned, do not update the dimming effect on hover.
         if (pinnedNodeId) return;
@@ -434,42 +485,46 @@ async function init() {
     });
 
     function buildLegend(classRows) {
-    // Grab the legend <div>
-    const legendEl = document.getElementById("legend");
-    
-    // We'll accumulate HTML
-    let html = "";
-    
-    classRows.forEach(row => {
-        // Each row: row.iri.value, row.label.value, row.comment.value, etc.
-        const iri = row.iri.value;
-        const label = row.label.value;
-        const comment = row.comment.value || "";
-    
-        // Convert IRI to group name using the same function you use for nodes
-        const groupName = mapClassIriToGroup(iri);
-    
-        // Look up the color in your groupColors map
-        // Make sure it's the same `groupColors` used to color your nodes
-        const c = groupColors[groupName];
-        // If it's not recognized, fallback to groupColors.Other
-        const color = c || groupColors.Other;
-    
-        // We'll show a color box + label. Optionally also show comment.
-        html += `
-        <div class="legend-item">
-            <div class="legend-swatch" style="background: ${color.background}; border-color: ${color.border}"></div>
-            <div>
-            <strong>${label}</strong>
-            <br>
-            <small>${comment}</small>
+        // Grab the legend <div>
+        const legendEl = document.getElementById("legend");
+
+        // We'll accumulate HTML
+        let html = "";
+
+        classRows.forEach(row => {
+            // Each row: row.iri.value, row.label.value, row.comment.value, etc.
+            const iri = row.iri.value;
+            const label = row.label.value;
+            const comment = row.comment.value || "";
+
+            // Convert IRI to group name using the same function you use for nodes
+            const groupName = mapClassIriToGroup(iri);
+
+            // Check if these objects are hidden based on URL params
+            const hidden = getParam(groupName.toLowerCase()) === "false"
+
+            // Look up the color in your groupColors map
+            // Make sure it's the same `groupColors` used to color your nodes
+            const c = groupColors[groupName];
+            // If it's not recognized, fallback to groupColors.Other
+            const color = c || groupColors.Other;
+
+            // We'll show a color box + label. Optionally also show comment.
+            html += `
+            <div class="legend-item">
+                <div class="legend-swatch" style="background: ${color.background}; border-color: ${color.border}"></div>
+                <div>
+                <strong class="${hidden ? "faded" : ""}">${label}</strong>
+                <input type="checkbox" ${hidden ? "" : "checked"} data-group='${JSON.stringify(groupName)}' onclick="toggleGroup(this)" />
+                <br style="${hidden ? "display: none;" : ""}">
+                <small style="${hidden ? "display: none;" : ""}">${comment}</small>
+                </div>
             </div>
-        </div>
-        `;
-    });
-    
-    legendEl.innerHTML = html;
-    }      
+            `;
+        });
+
+        legendEl.innerHTML = html;
+    }
 
     buildLegend(classesJson.results.bindings);
 }

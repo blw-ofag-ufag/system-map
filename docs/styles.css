@@ -91,40 +91,44 @@ html, body {
  /* Ensure it sits on top of other elements */
 }
 
-select.select-flat {
-  border: 2px solid #007bff;
-  border-radius: 5px;
-  background-color: white;
-  font-size: 16px;
+.language-select {
+  position: absolute;
+  top: 75px;
+  left: 10px;
+  z-index: 100;
+  display: inline-block;
+  width: 150px;
+}
 
-  /* Design */
+.language-select select {
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  cursor: pointer;
+
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
 }
 
-select.select-flat::after {
-  content: "▼";
+.language-select::after {
+  content: '\25BC';
   position: absolute;
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
   pointer-events: none;
-  color: #007bff;
 }
 
-select.select-flat:focus {
-  outline: none;
-  border-color: #0056b3;
-}
-
-select.language-select {
-  /* Positioning */
+/*.language-select {
   position: absolute;
   top: 80px;
   left: 10px;
-}
+}*/
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0.8em;   /* Adjust value as needed */

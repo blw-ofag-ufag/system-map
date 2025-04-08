@@ -5,6 +5,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
+@prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
 
 <https://www.fedlex.admin.ch/eli/cc/1986/926_926_926> a schema:Legislation ;
     rdfs:label "Bundesgesetz über die landwirtschaftliche Pacht"@de .
@@ -157,6 +158,10 @@ systemmap:ORG215 a schema:Organization ;
 systemmap:ORG999 a schema:Organization ;
     rdfs:label "Europäische Kommission"@de,
         "European Commission"@en .
+
+systemmap:1f309b91ad564bcb99dd6c8c30bbc0dc a schema:SoftwareApplication ;
+    rdfs:label "Troup'O Herdenmanager"@de ;
+    systemmap:operatedBy zefix:505628 .
 
 systemmap:SYS001 a schema:SoftwareApplication ;
     rdfs:label "Acontrol"@de,
@@ -981,6 +986,10 @@ systemmap:SYS042 a schema:SoftwareApplication ;
         "Uno strumento di visualizzazione delle informazioni sui sistemi IT, i dati in essi contenuti e le organizzazioni che li gestiscono nel settore agroalimentare svizzero."@it ;
     dcat:landingPage <https://blw-ofag-ufag.github.io/system-map/> ;
     systemmap:operatedBy systemmap:ORG011 .
+
+systemmap:f4c51499ef7f40e6ac4ec446f508a9bb a schema:SoftwareApplication ;
+    rdfs:label "Mooh Intranet"@de ;
+    systemmap:operatedBy zefix:1256441 .
 
 systemmap:ORG300 a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Aargau"@de,
@@ -2912,7 +2921,8 @@ systemmap:ORG100 a systemmap:PrivateOrganization ;
         TSM sta per Fiduciario, Statistica e Management. L'attività principale di TSM è la gestione del database dbmilch.ch.
         Inoltre, vengono svolti altri incarichi nei settori della fiduciaria, della gestione dei fondi, delle statistiche e dei controlli all'esportazione.
         Il principale committente di TSM è l'Ufficio federale dell'agricoltura (UFAG).
-        """@it .
+        """@it ;
+    owl:sameAs zefix:427931 .
 
 systemmap:ORG101 a systemmap:PrivateOrganization ;
     rdfs:label "Identitas AG"@de,
@@ -2940,7 +2950,8 @@ systemmap:ORG101 a systemmap:PrivateOrganization ;
         Fornisce soluzioni per la tracciabilità degli animali, la salute animale e la sicurezza alimentare.
         In qualità di fornitore di servizi IT per la Confederazione, i cantoni e gli attori privati, Identitas AG offre servizi digitali per la registrazione, l'elaborazione e l'analisi dei dati sugli animali e sulle aziende agricole.
         L'azienda ha sede a Berna.
-        """@it .
+        """@it ;
+    owl:sameAs zefix:449781 .
 
 systemmap:ORG102 a systemmap:PrivateOrganization ;
     rdfs:label "Barto AG"@de,
@@ -3002,6 +3013,12 @@ systemmap:ORG103 a systemmap:PrivateOrganization ;
         Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari.
         La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna.
         """@it .
+
+zefix:1256441 a systemmap:PrivateOrganization .
+
+zefix:2595 a systemmap:PrivateOrganization .
+
+zefix:505628 a systemmap:PrivateOrganization .
 
 systemmap:INF017 a systemmap:SensitivePersonInformation ;
     rdfs:label "Kürzungen von Direktzahlungen"@de,

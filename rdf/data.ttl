@@ -88,31 +88,6 @@ LwG:art_27 a schema:Legislation ;
 <https://www.fedlex.admin.ch/eli/cc/2016/565> a schema:Legislation ;
     rdfs:label "Verordnung des BLW über die Festlegung von Perioden und Fristen sowie die Freigabe von Zollkontingentsteilmengen für die Einfuhr von frischem Gemüse und frischem Obst (VEAGOG-Freigabeverordnung)"@de .
 
-systemmap:ORG099 a schema:Organization ;
-    rdfs:label "Gemeinsame Anmeldestelle Chemikalien"@de,
-        "Common Notification Authority for Chemicals"@en,
-        "Autorité commune de notification des produits chimiques"@fr,
-        "Autorità comune di notifica delle sostanze chimiche"@it ;
-    schema:member systemmap:ORG096,
-        systemmap:ORG097,
-        systemmap:ORG098 ;
-    rdfs:comment """
-        Die Gemeinsame Anmeldestelle Chemikalien ist die zentrale Anlaufstelle für Chemikalien in der Schweiz.
-        Sie wird vom Bundesamt für Umwelt (BAFU), dem Bundesamt für Gesundheit (BAG) und dem Staatssekretariat für Wirtschaft (SECO) betrieben.
-        """@de,
-        """
-        The Common Notification Authority for Chemicals is the central contact point for chemicals in Switzerland.
-        It is operated by the Federal Office for the Environment (FOEN), the Federal Office of Public Health (FOPH), and the State Secretariat for Economic Affairs (SECO).
-        """@en,
-        """
-        L'Autorité commune de notification des produits chimiques est le point de contact central pour les produits chimiques en Suisse,
-        géré par l'Office fédéral de l'environnement (OFEV), l'Office fédéral de la santé publique (OFSP) et le Secrétariat d'État à l'économie (SECO).
-        """@fr,
-        """
-        L'Autorità comune di notifica delle sostanze chimiche è il punto di contatto centrale per le sostanze chimiche in Svizzera,
-        gestito dall'Ufficio federale dell'ambiente (UFAM), dall'Ufficio federale della sanità pubblica (UFSP) e dalla Segreteria di Stato dell'economia (SECO).
-        """@it .
-
 systemmap:ORG200 a schema:Organization ;
     rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
         "International Union for the Protection of New Varieties of Plants"@en,
@@ -158,6 +133,31 @@ systemmap:ORG215 a schema:Organization ;
 systemmap:ORG999 a schema:Organization ;
     rdfs:label "Europäische Kommission"@de,
         "European Commission"@en .
+
+systemmap:daccec1f3b64441f98b234bdd8b874dd a schema:Organization ;
+    rdfs:label "Gemeinsame Anmeldestelle Chemikalien"@de,
+        "Common Notification Authority for Chemicals"@en,
+        "Autorité commune de notification des produits chimiques"@fr,
+        "Autorità comune di notifica delle sostanze chimiche"@it ;
+    schema:member systemmap:101f4674d4654b12bc25fa4a3143f32a,
+        systemmap:4e8ca1ec6eeb4786808a5f71486c4bbf,
+        systemmap:5044e9f5dc4347288f5506de98be40af ;
+    rdfs:comment """
+        Die Gemeinsame Anmeldestelle Chemikalien ist die zentrale Anlaufstelle für Chemikalien in der Schweiz.
+        Sie wird vom Bundesamt für Umwelt (BAFU), dem Bundesamt für Gesundheit (BAG) und dem Staatssekretariat für Wirtschaft (SECO) betrieben.
+        """@de,
+        """
+        The Common Notification Authority for Chemicals is the central contact point for chemicals in Switzerland.
+        It is operated by the Federal Office for the Environment (FOEN), the Federal Office of Public Health (FOPH), and the State Secretariat for Economic Affairs (SECO).
+        """@en,
+        """
+        L'Autorité commune de notification des produits chimiques est le point de contact central pour les produits chimiques en Suisse,
+        géré par l'Office fédéral de l'environnement (OFEV), l'Office fédéral de la santé publique (OFSP) et le Secrétariat d'État à l'économie (SECO).
+        """@fr,
+        """
+        L'Autorità comune di notifica delle sostanze chimiche è il punto di contatto centrale per le sostanze chimiche in Svizzera,
+        gestito dall'Ufficio federale dell'ambiente (UFAM), dall'Ufficio federale della sanità pubblica (UFSP) e dalla Segreteria di Stato dell'economia (SECO).
+        """@it .
 
 systemmap:1f309b91ad564bcb99dd6c8c30bbc0dc a schema:SoftwareApplication ;
     rdfs:label "Troup'O Herdenmanager"@de ;
@@ -614,7 +614,7 @@ systemmap:SYS019 a schema:SoftwareApplication ;
         "Create and embed visualizations from any dataset provided by the LINDAS Linked Data Service."@en,
         "Créez et intégrez des visualisations à partir des jeux de données du service LINDAS (Linked Data)."@fr,
         "Crea ed incorpora visualizzazioni partendo dai dataset forniti dal servizio LINDAS (Linked Data)."@it ;
-    systemmap:operatedBy systemmap:ORG096 .
+    systemmap:operatedBy systemmap:4e8ca1ec6eeb4786808a5f71486c4bbf .
 
 systemmap:SYS020 a schema:SoftwareApplication ;
     rdfs:label "Tierverkehrsdatenbank"@de,
@@ -842,7 +842,7 @@ systemmap:SYS028 a schema:SoftwareApplication ;
         "CPR"@en,
         "RPC"@fr,
         "RPC"@it ;
-    systemmap:operatedBy systemmap:ORG099 .
+    systemmap:operatedBy systemmap:daccec1f3b64441f98b234bdd8b874dd .
 
 systemmap:SYS029 a schema:SoftwareApplication ;
     rdfs:label "Marktdaten Analyse- und Reporting-System"@de,
@@ -1366,6 +1366,99 @@ systemmap:ORG340 a systemmap:CantonalVeterinaryService ;
     schema:parentOrganization systemmap:ORG339 ;
     dcat:landingPage <https://www.ag.ch/de/verwaltung/dgs/verbraucherschutz/veterinaerdienst> .
 
+systemmap:101f4674d4654b12bc25fa4a3143f32a a systemmap:FederalOrganization ;
+    rdfs:label "Staatssekretariat für Wirtschaft"@de,
+        "State Secretariat for Economic Affairs"@en,
+        "Secrétariat d'État à l'économie"@fr,
+        "Segretariato di Stato dell'economia"@it ;
+    rdfs:comment """
+        Das Staatssekretariat für Wirtschaft (SECO) ist das Kompetenzzentrum des Bundes für alle Kernfragen der Wirtschaftspolitik.
+        Es fördert nachhaltiges Wirtschaftswachstum und schafft die notwendigen ordnungs- und wirtschaftspolitischen Rahmenbedingungen.
+        Zudem koordiniert es die wirtschaftlichen Beziehungen der Schweiz im In- und Ausland.
+        """@de,
+        """
+        The State Secretariat for Economic Affairs (SECO) is the federal government's competence center for all key issues of economic policy.
+        It promotes sustainable economic growth and establishes the necessary regulatory and economic frameworks.
+        Additionally, it coordinates Switzerland's economic relations both domestically and internationally.
+        """@en,
+        """
+        Le Secrétariat d'État à l'économie (SECO) est le centre de compétence de la Confédération pour toutes les questions clés de la politique économique.
+        Il promeut une croissance économique durable et établit les cadres réglementaires et économiques nécessaires.
+        De plus, il coordonne les relations économiques de la Suisse au niveau national et international.
+        """@fr,
+        """
+        Il Segretariato di Stato dell'economia (SECO) è il centro di competenza della Confederazione per tutte le questioni chiave della politica economica.
+        Promuove una crescita economica sostenibile e crea le necessarie condizioni quadro normative ed economiche.
+        Inoltre, coordina le relazioni economiche della Svizzera a livello nazionale e internazionale.
+        """@it ;
+    owl:sameAs staatskalender:10008856 ;
+    systemmap:abbreviation "SECO"@de,
+        "SECO"@en,
+        "SECO"@fr,
+        "SECO"@it .
+
+systemmap:4e8ca1ec6eeb4786808a5f71486c4bbf a systemmap:FederalOrganization ;
+    rdfs:label "Bundesamt für Umwelt"@de,
+        "Federal Office for the Environment"@en,
+        "Office fédéral de l'environnement"@fr,
+        "Ufficio federale dell'ambiente"@it ;
+    rdfs:comment """
+        Das Bundesamt für Umwelt (BAFU) ist die Umweltfachstelle der Schweiz und gehört zum Eidgenössischen Departement für Umwelt, Verkehr, Energie und Kommunikation (UVEK).
+        Es ist verantwortlich für die nachhaltige Nutzung der natürlichen Ressourcen sowie den Schutz des Menschen vor Naturgefahren und übermässigen Umweltbelastungen.
+        Gegründet 1971, hat das BAFU seinen Hauptsitz in Bern.
+        """@de,
+        """
+        The Federal Office for the Environment (FOEN) is Switzerland's environmental agency and is part of the Federal Department of the Environment, Transport, Energy and Communications (DETEC).
+        It is responsible for the sustainable use of natural resources and the protection of the population from natural hazards and excessive environmental burdens.
+        Founded in 1971, the FOEN is headquartered in Bern.
+        """@en,
+        """
+        L'Office fédéral de l'environnement (OFEV) est l'autorité environnementale de la Suisse et fait partie du Département fédéral de l'environnement, des transports, de l'énergie et de la communication (DETEC).
+        Il est responsable de l'utilisation durable des ressources naturelles ainsi que de la protection de la population contre les dangers naturels et les charges environnementales excessives.
+        Fondé en 1971, l'OFEV a son siège principal à Berne.
+        """@fr,
+        """
+        L'Ufficio federale dell'ambiente (UFAM) è l'agenzia ambientale della Svizzera e fa parte del Dipartimento federale dell'ambiente, dei trasporti, dell'energia e delle comunicazioni (DATEC).
+        È responsabile dell'uso sostenibile delle risorse naturali e della protezione della popolazione dai pericoli naturali e dalle eccessive pressioni ambientali.
+        Fondato nel 1971, l'UFAM ha la sua sede principale a Berna.
+        """@it ;
+    owl:sameAs staatskalender:10008758 ;
+    systemmap:abbreviation "BAFU"@de,
+        "FOEN"@en,
+        "OFEV"@fr,
+        "UFAM"@it .
+
+systemmap:5044e9f5dc4347288f5506de98be40af a systemmap:FederalOrganization ;
+    rdfs:label "Bundesamt für Gesundheit"@de,
+        "Federal Office of Public Health"@en,
+        "Office fédéral de la santé publique"@fr,
+        "Ufficio federale della sanità pubblica"@it ;
+    rdfs:comment """
+        Das Bundesamt für Gesundheit (BAG) ist verantwortlich für die nationale Gesundheitspolitik der Schweiz und fördert die Gesundheit der Bevölkerung in Zusammenarbeit mit den Kantonen.
+        Es setzt sich für ein leistungsfähiges und bezahlbares Gesundheitssystem ein.
+        Zudem vertritt das BAG die Schweiz in internationalen gesundheitspolitischen Belangen.
+        """@de,
+        """
+        The Federal Office of Public Health (FOPH) is responsible for Switzerland's national health policy and promotes public health in collaboration with the cantons.
+        It is committed to an efficient and affordable healthcare system.
+        Additionally, the FOPH represents Switzerland in international public health matters.
+        """@en,
+        """
+        L'Office fédéral de la santé publique (OFSP) est responsable de la politique de santé nationale de la Suisse et promeut la santé de la population en collaboration avec les cantons.
+        Il s'engage pour un système de santé performant et abordable.
+        De plus, l'OFSP représente la Suisse dans les affaires de santé publique internationales.
+        """@fr,
+        """
+        L'Ufficio federale della sanità pubblica (UFSP) è responsabile della politica sanitaria nazionale della Svizzera e promuove la salute della popolazione in collaborazione con i cantoni.
+        Si impegna per un sistema sanitario efficiente e accessibile.
+        Inoltre, l'UFSP rappresenta la Svizzera nelle questioni di salute pubblica a livello internazionale.
+        """@it ;
+    owl:sameAs staatskalender:10008684 ;
+    systemmap:abbreviation "BAG"@de,
+        "FOPH"@en,
+        "OFSP"@fr,
+        "UFSP"@it .
+
 systemmap:ORG001 a systemmap:FederalOrganization ;
     rdfs:label "Bundesamt für Landwirtschaft"@de,
         "Federal Office for Agriculture"@en,
@@ -1794,99 +1887,6 @@ systemmap:ORG041 a systemmap:FederalOrganization ;
         systemmap:INF021,
         systemmap:INF022,
         systemmap:INF023 .
-
-systemmap:ORG096 a systemmap:FederalOrganization ;
-    rdfs:label "Bundesamt für Umwelt"@de,
-        "Federal Office for the Environment"@en,
-        "Office fédéral de l'environnement"@fr,
-        "Ufficio federale dell'ambiente"@it ;
-    rdfs:comment """
-        Das Bundesamt für Umwelt (BAFU) ist die Umweltfachstelle der Schweiz und gehört zum Eidgenössischen Departement für Umwelt, Verkehr, Energie und Kommunikation (UVEK).
-        Es ist verantwortlich für die nachhaltige Nutzung der natürlichen Ressourcen sowie den Schutz des Menschen vor Naturgefahren und übermässigen Umweltbelastungen.
-        Gegründet 1971, hat das BAFU seinen Hauptsitz in Bern.
-        """@de,
-        """
-        The Federal Office for the Environment (FOEN) is Switzerland's environmental agency and is part of the Federal Department of the Environment, Transport, Energy and Communications (DETEC).
-        It is responsible for the sustainable use of natural resources and the protection of the population from natural hazards and excessive environmental burdens.
-        Founded in 1971, the FOEN is headquartered in Bern.
-        """@en,
-        """
-        L'Office fédéral de l'environnement (OFEV) est l'autorité environnementale de la Suisse et fait partie du Département fédéral de l'environnement, des transports, de l'énergie et de la communication (DETEC).
-        Il est responsable de l'utilisation durable des ressources naturelles ainsi que de la protection de la population contre les dangers naturels et les charges environnementales excessives.
-        Fondé en 1971, l'OFEV a son siège principal à Berne.
-        """@fr,
-        """
-        L'Ufficio federale dell'ambiente (UFAM) è l'agenzia ambientale della Svizzera e fa parte del Dipartimento federale dell'ambiente, dei trasporti, dell'energia e delle comunicazioni (DATEC).
-        È responsabile dell'uso sostenibile delle risorse naturali e della protezione della popolazione dai pericoli naturali e dalle eccessive pressioni ambientali.
-        Fondato nel 1971, l'UFAM ha la sua sede principale a Berna.
-        """@it ;
-    owl:sameAs staatskalender:10008758 ;
-    systemmap:abbreviation "BAFU"@de,
-        "FOEN"@en,
-        "OFEV"@fr,
-        "UFAM"@it .
-
-systemmap:ORG097 a systemmap:FederalOrganization ;
-    rdfs:label "Bundesamt für Gesundheit"@de,
-        "Federal Office of Public Health"@en,
-        "Office fédéral de la santé publique"@fr,
-        "Ufficio federale della sanità pubblica"@it ;
-    rdfs:comment """
-        Das Bundesamt für Gesundheit (BAG) ist verantwortlich für die nationale Gesundheitspolitik der Schweiz und fördert die Gesundheit der Bevölkerung in Zusammenarbeit mit den Kantonen.
-        Es setzt sich für ein leistungsfähiges und bezahlbares Gesundheitssystem ein.
-        Zudem vertritt das BAG die Schweiz in internationalen gesundheitspolitischen Belangen.
-        """@de,
-        """
-        The Federal Office of Public Health (FOPH) is responsible for Switzerland's national health policy and promotes public health in collaboration with the cantons.
-        It is committed to an efficient and affordable healthcare system.
-        Additionally, the FOPH represents Switzerland in international public health matters.
-        """@en,
-        """
-        L'Office fédéral de la santé publique (OFSP) est responsable de la politique de santé nationale de la Suisse et promeut la santé de la population en collaboration avec les cantons.
-        Il s'engage pour un système de santé performant et abordable.
-        De plus, l'OFSP représente la Suisse dans les affaires de santé publique internationales.
-        """@fr,
-        """
-        L'Ufficio federale della sanità pubblica (UFSP) è responsabile della politica sanitaria nazionale della Svizzera e promuove la salute della popolazione in collaborazione con i cantoni.
-        Si impegna per un sistema sanitario efficiente e accessibile.
-        Inoltre, l'UFSP rappresenta la Svizzera nelle questioni di salute pubblica a livello internazionale.
-        """@it ;
-    owl:sameAs staatskalender:10008684 ;
-    systemmap:abbreviation "BAG"@de,
-        "FOPH"@en,
-        "OFSP"@fr,
-        "UFSP"@it .
-
-systemmap:ORG098 a systemmap:FederalOrganization ;
-    rdfs:label "Staatssekretariat für Wirtschaft"@de,
-        "State Secretariat for Economic Affairs"@en,
-        "Secrétariat d'État à l'économie"@fr,
-        "Segretariato di Stato dell'economia"@it ;
-    rdfs:comment """
-        Das Staatssekretariat für Wirtschaft (SECO) ist das Kompetenzzentrum des Bundes für alle Kernfragen der Wirtschaftspolitik.
-        Es fördert nachhaltiges Wirtschaftswachstum und schafft die notwendigen ordnungs- und wirtschaftspolitischen Rahmenbedingungen.
-        Zudem koordiniert es die wirtschaftlichen Beziehungen der Schweiz im In- und Ausland.
-        """@de,
-        """
-        The State Secretariat for Economic Affairs (SECO) is the federal government's competence center for all key issues of economic policy.
-        It promotes sustainable economic growth and establishes the necessary regulatory and economic frameworks.
-        Additionally, it coordinates Switzerland's economic relations both domestically and internationally.
-        """@en,
-        """
-        Le Secrétariat d'État à l'économie (SECO) est le centre de compétence de la Confédération pour toutes les questions clés de la politique économique.
-        Il promeut une croissance économique durable et établit les cadres réglementaires et économiques nécessaires.
-        De plus, il coordonne les relations économiques de la Suisse au niveau national et international.
-        """@fr,
-        """
-        Il Segretariato di Stato dell'economia (SECO) è il centro di competenza della Confederazione per tutte le questioni chiave della politica economica.
-        Promuove una crescita economica sostenibile e crea le necessarie condizioni quadro normative ed economiche.
-        Inoltre, coordina le relazioni economiche della Svizzera a livello nazionale e internazionale.
-        """@it ;
-    owl:sameAs staatskalender:10008856 ;
-    systemmap:abbreviation "SECO"@de,
-        "SECO"@en,
-        "SECO"@fr,
-        "SECO"@it .
 
 systemmap:ORG201 a systemmap:FederalOrganization ;
     rdfs:label "Abteilung Wissensgrundlagen"@de,
@@ -2893,6 +2893,10 @@ systemmap:INF043 a systemmap:PersonInformation ;
         "Dati sui controlli e sui risultati dei controlli"@it ;
     systemmap:containedIn systemmap:SYS001 .
 
+systemmap:48aba87e20664cdf98243337e6c6b5c9 a systemmap:PrivateOrganization ;
+    rdfs:label "Agroline"@de ;
+    systemmap:ownedBy systemmap:dd44a374e6ab40f4b692ffefdae72165 .
+
 systemmap:ORG100 a systemmap:PrivateOrganization ;
     rdfs:label "TSM Treuhand GmbH"@de,
         "TSM Treuhand LLC"@en,
@@ -2982,9 +2986,9 @@ systemmap:ORG102 a systemmap:PrivateOrganization ;
         La piattaforma integra varie funzioni agronomiche e amministrative e consente una gestione efficiente delle risorse.
         Barto AG collabora con partner del settore agricolo per fornire soluzioni digitali innovative.
         """@it ;
-    systemmap:ownedBy systemmap:ORG103 .
+    systemmap:ownedBy systemmap:dd44a374e6ab40f4b692ffefdae72165 .
 
-systemmap:ORG103 a systemmap:PrivateOrganization ;
+systemmap:dd44a374e6ab40f4b692ffefdae72165 a systemmap:PrivateOrganization ;
     rdfs:label "Fenaco Genossenschaft"@de,
         "Fenaco Cooperative"@en,
         "Coopérative Fenaco"@fr,
@@ -3012,13 +3016,45 @@ systemmap:ORG103 a systemmap:PrivateOrganization ;
         Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia.
         Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari.
         La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna.
-        """@it .
+        """@it ;
+    owl:sameAs zefix:328631 .
 
-zefix:1256441 a systemmap:PrivateOrganization .
+zefix:1256441 a systemmap:PrivateOrganization ;
+    rdfs:label "mooh Genossenschaft"@de .
 
-zefix:2595 a systemmap:PrivateOrganization .
+zefix:2595 a systemmap:PrivateOrganization ;
+    rdfs:label "ASF Tiervermarktung AG"@de .
 
-zefix:505628 a systemmap:PrivateOrganization .
+zefix:330180 a systemmap:PrivateOrganization ;
+    rdfs:label "Bison Schweiz AG"@de ;
+    systemmap:ownedBy systemmap:dd44a374e6ab40f4b692ffefdae72165 .
+
+zefix:371013 a systemmap:PrivateOrganization ;
+    rdfs:label "Ernst Sutter AG"@de ;
+    systemmap:ownedBy systemmap:dd44a374e6ab40f4b692ffefdae72165 .
+
+zefix:432768 a systemmap:PrivateOrganization ;
+    rdfs:label "TRAVECO Transporte AG"@de ;
+    systemmap:ownedBy systemmap:dd44a374e6ab40f4b692ffefdae72165 .
+
+zefix:446080 a systemmap:PrivateOrganization ;
+    rdfs:label "frigemo ag"@de ;
+    systemmap:ownedBy systemmap:dd44a374e6ab40f4b692ffefdae72165 .
+
+zefix:505628 a systemmap:PrivateOrganization ;
+    rdfs:label "Isagri GmbH"@de .
+
+zefix:7011 a systemmap:PrivateOrganization ;
+    rdfs:label "Anicom AG"@de ;
+    systemmap:ownedBy systemmap:dd44a374e6ab40f4b692ffefdae72165 .
+
+zefix:76693 a systemmap:PrivateOrganization ;
+    rdfs:label "Halag Chemie AG"@de ;
+    systemmap:ownedBy systemmap:dd44a374e6ab40f4b692ffefdae72165 .
+
+zefix:787227 a systemmap:PrivateOrganization ;
+    rdfs:label "RAMSEIER Suisse AG"@de ;
+    systemmap:ownedBy systemmap:dd44a374e6ab40f4b692ffefdae72165 .
 
 systemmap:INF017 a systemmap:SensitivePersonInformation ;
     rdfs:label "Kürzungen von Direktzahlungen"@de,

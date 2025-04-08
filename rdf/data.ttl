@@ -161,6 +161,11 @@ systemmap:daccec1f3b64441f98b234bdd8b874dd a schema:Organization ;
 
 systemmap:1f309b91ad564bcb99dd6c8c30bbc0dc a schema:SoftwareApplication ;
     rdfs:label "Troup'O Herdenmanager"@de ;
+    rdfs:comment """
+        Troup'O ist eine Herdenmanagement-Software für Milchvieh-, Mutterkuh- und Mastbetriebe, die eine zentrale Verwaltung von Zuchtdaten, eine übersichtliche Tierkartei und grafische Analysen bietet.
+        Die dazugehörige Smartphone-App ermöglicht es, Ereignisse wie Reproduktion, Behandlungen und Tierbewegungen in Echtzeit zu dokumentieren und funktioniert auch ohne Netzwerkabdeckung.
+        Dank RFID-Kompatibilität und einer intuitiven Benutzeroberfläche erleichtert Troup'O das Herdenmanagement und steigert die Betriebseffizienz.
+        """@de ;
     systemmap:operatedBy zefix:505628 .
 
 systemmap:SYS001 a schema:SoftwareApplication ;
@@ -989,6 +994,10 @@ systemmap:SYS042 a schema:SoftwareApplication ;
 
 systemmap:f4c51499ef7f40e6ac4ec446f508a9bb a schema:SoftwareApplication ;
     rdfs:label "Mooh Intranet"@de ;
+    rdfs:comment """
+        Intranet-Seite der Mooh Genossenschaft.
+        """@de ;
+    dcat:landingPage <https://intranet.mooh.swiss/> ;
     systemmap:operatedBy zefix:1256441 .
 
 systemmap:ORG300 a systemmap:CantonalOrganization ;

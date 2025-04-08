@@ -37,6 +37,7 @@ The DigiAgriFoodCH System Map graph on LINDAS can be queried to return various t
 - [Table of Cantons, their agricultural IT-Systems and the respective operating agency (if given)](https://s.zazuko.com/2vz9Y8X)
 - [Table of federal offices, suborganizations and information they have access to](https://s.zazuko.com/2Upq8Qj)
 - [Label and comment length for all objects](https://s.zazuko.com/2aYzkVt)
+- [Get the name and address of all the companies](https://s.zazuko.com/3jQpKD3)
 
 # 📚 Further documentation
 

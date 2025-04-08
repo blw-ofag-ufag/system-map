@@ -1634,13 +1634,13 @@ systemmap:ORG021 a systemmap:FederalOrganization ;
 
 systemmap:ORG022 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Meliorationen"@de ;
+    schema:parentOrganization systemmap:ORG006 ;
     rdfs:comment """
         Der Fachbereich Meliorationen ist in der Verbundaufgabe mit den Kantonen im ländlichen Tiefbau (Bodenverbesserungen) tätig.
         Er ist bundesintern verfahrensleitende Behörde, beurteilt die Gesuche und übt die Oberaufsicht aus.
         Zudem behandelt er Fragen der Raumplanung und der Infrastrukturen.
         Weitere Themen sind Management natürlicher Ressourcen, Klimawandel mit Blick auf Boden/Wasserhaushalt.
-        """@de ;
-    schema:parentOrganization systemmap:ORG006 .
+        """@de .
 
 systemmap:ORG030 a systemmap:FederalOrganization ;
     rdfs:label "Genetische Ressourcen, Produktionssicherheit und Futtermittel"@de,
@@ -3062,3 +3062,4 @@ systemmap:INF044 a systemmap:SensitivePersonInformation ;
         "Données sur les mesures administratives et les sanctions pénales"@fr,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
     systemmap:containedIn systemmap:SYS001 .
+

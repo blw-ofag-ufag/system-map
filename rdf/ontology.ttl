@@ -740,7 +740,11 @@ systemmap:usesIdentifier a owl:ObjectProperty ;
     rdfs:range systemmap:Identifier .
 
 systemmap: a owl:Ontology ;
-    dcterms:creator "Federal Office for Agriculture" ;
+    rdfs:label "Ontologie der DigiAgriFoodCH Systemlandkarte"@de,
+        "DigiAgriFoodCH System Map Ontology"@en,
+        "Ontologie de la carte du système DigiAgriFoodCH"@fr,
+        "Ontologia della mappa del sistema DigiAgriFoodCH"@it ;
+    dcterms:creator "Federal Office for Agriculture"@en ;
     dcterms:description """
         Eine Ontologie zur Modellierung von Organisationen, IT-Systemen und Daten für das Schweizer Bundesamt für Landwirtschaft (FOAG).
         """@de,
@@ -753,9 +757,9 @@ systemmap: a owl:Ontology ;
         """
         Un'ontologia per modellare le organizzazioni, i sistemi IT e i dati per l'Ufficio federale dell'agricoltura (UFAG) svizzero.
         """@it ;
-    dcterms:title "DigiAgriFoodCH Systemlandkarte"@de,
-        "DigiAgriFoodCH System Map"@en,
-        "Carte du système DigiAgriFoodCH"@fr,
-        "Mappa del sistema DigiAgriFoodCH"@it ;
+    dcterms:title "Ontologie der DigiAgriFoodCH Systemlandkarte"@de,
+        "DigiAgriFoodCH System Map Ontology"@en,
+        "Ontologie de la carte du système DigiAgriFoodCH"@fr,
+        "Ontologia della mappa del sistema DigiAgriFoodCH"@it ;
     owl:versionInfo "0.3.0" .
 

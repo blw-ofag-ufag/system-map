@@ -1,7 +1,6 @@
 @prefix LwG: <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ns1: <http://schema.org/schema:> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -19,9 +18,10 @@ systemmap:metadata a void:Dataset ;
     void:sparqlEndpoint <https://register.ld.admin.ch/query/> ;
     schema:contactPoint staatskalender:10008654 ;
     schema:creator staatskalender:10008654 ;
+    schema:dateCreated "2025-01-29"^^xsd:date ;
     schema:dateModified "2025-04-09"^^xsd:date ;
     schema:datePublished "2025-02-24"^^xsd:date ;
-    ns1:dateCreated "2025-01-29"^^xsd:date ;
+    schema:workExample <https://blw-ofag-ufag.github.io/system-map> ;
     rdfs:comment """
         Eine Sammlung von Organisationen, Informationssystemen und Informationseinheiten (Daten) im Schweizer Agrar- und Lebensmittelsektor.
         """@de,

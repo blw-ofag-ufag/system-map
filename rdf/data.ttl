@@ -88,7 +88,7 @@ LwG:art_27 a schema:Legislation ;
 <https://www.fedlex.admin.ch/eli/cc/2016/565> a schema:Legislation ;
     rdfs:label "Verordnung des BLW über die Festlegung von Perioden und Fristen sowie die Freigabe von Zollkontingentsteilmengen für die Einfuhr von frischem Gemüse und frischem Obst (VEAGOG-Freigabeverordnung)"@de .
 
-systemmap:Q6VSaFePQaMGqU8vD a schema:Organization ;
+systemmap:S6VSaFePQaMGqU8vD a schema:Organization ;
     rdfs:label "Schweizer Bundesarchiv"@de,
         "Swiss Federal Archives"@en,
         "Archives fédérales suisses"@fr,
@@ -107,7 +107,7 @@ systemmap:Q6VSaFePQaMGqU8vD a schema:Organization ;
         "AFS"@fr,
         "AFS"@it .
 
-systemmap:QBLH2G6TSKaqhqk4n a schema:Organization ;
+systemmap:SBLH2G6TSKaqhqk4n a schema:Organization ;
     rdfs:label "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
         "International Union for the Protection of New Varieties of Plants"@en,
         "Union internationale pour la protection des obtentions végétales"@fr,
@@ -130,14 +130,14 @@ systemmap:QBLH2G6TSKaqhqk4n a schema:Organization ;
         "UPOV"@fr,
         "UPOV"@it .
 
-systemmap:QGayLcAMcywbigd3M a schema:Organization ;
+systemmap:SGayLcAMcywbigd3M a schema:Organization ;
     rdfs:label "Gemeinsame Anmeldestelle Chemikalien"@de,
         "Common Notification Authority for Chemicals"@en,
         "Autorité commune de notification des produits chimiques"@fr,
         "Autorità comune di notifica delle sostanze chimiche"@it ;
-    schema:member systemmap:Q2QF8BOhJczC0PGhe,
-        systemmap:Q8WjMkerPw98ZkWA7,
-        systemmap:QwlgSr7ukziL6iHsP ;
+    schema:member systemmap:S2QF8BOhJczC0PGhe,
+        systemmap:S8WjMkerPw98ZkWA7,
+        systemmap:SwlgSr7ukziL6iHsP ;
     rdfs:comment """
         Die Gemeinsame Anmeldestelle Chemikalien ist die zentrale Anlaufstelle für Chemikalien in der Schweiz.
         Sie wird vom Bundesamt für Umwelt (BAFU), dem Bundesamt für Gesundheit (BAG) und dem Staatssekretariat für Wirtschaft (SECO) betrieben.
@@ -155,11 +155,11 @@ systemmap:QGayLcAMcywbigd3M a schema:Organization ;
         gestito dall'Ufficio federale dell'ambiente (UFAM), dall'Ufficio federale della sanità pubblica (UFSP) e dalla Segreteria di Stato dell'economia (SECO).
         """@it .
 
-systemmap:QhM5kJNFhO8vOAEdK a schema:Organization ;
+systemmap:ShM5kJNFhO8vOAEdK a schema:Organization ;
     rdfs:label "Europäische Kommission"@de,
         "European Commission"@en .
 
-systemmap:Q4gV9U3dvmENkSnj a schema:SoftwareApplication ;
+systemmap:S4gV9U3dvmENkSnj a schema:SoftwareApplication ;
     rdfs:label "Informationssystem für meldepflichtige Krankheiten"@de,
         "Information system for cases of notifiable diseases"@en,
         "Système d'information pour les maladies à déclaration obligatoire"@fr,
@@ -182,9 +182,9 @@ systemmap:Q4gV9U3dvmENkSnj a schema:SoftwareApplication ;
         "InfoSM"@en,
         "InfoSM"@fr,
         "InfoSM"@it ;
-    systemmap:operatedBy systemmap:QsFdxnjM8hgUdzVT5 .
+    systemmap:operatedBy systemmap:SsFdxnjM8hgUdzVT5 .
 
-systemmap:Q6J4iyI6nMI2RCXSY a schema:SoftwareApplication ;
+systemmap:S6J4iyI6nMI2RCXSY a schema:SoftwareApplication ;
     rdfs:label "CePa"@de,
         "CePa"@en,
         "CePa"@fr,
@@ -193,9 +193,9 @@ systemmap:Q6J4iyI6nMI2RCXSY a schema:SoftwareApplication ;
         "CePa is an IT application for the digital management of procedures and correspondence within the framework of the plant passport system and the official certification of propagation material. It optimizes certification processes and ensures compliance with plant health regulations. In this way, it supports traceability and quality control of plant material."@en,
         "CePa est une application informatique pour la gestion numérique des procédures et de la correspondance dans le cadre du système de passeport phytosanitaire ainsi que de la certification officielle du matériel de multiplication. Elle optimise les processus de certification et garantit le respect des réglementations phytosanitaires. De cette manière, elle soutient la traçabilité et le contrôle de la qualité du matériel végétal."@fr,
         "CePa è un'applicazione IT per la gestione digitale delle procedure e della corrispondenza nell'ambito del sistema del passaporto delle piante e della certificazione ufficiale del materiale di propagazione. Ottimizza i processi di certificazione e garantisce il rispetto delle normative fitosanitarie. In questo modo, supporta la tracciabilità e il controllo della qualità del materiale vegetale."@it ;
-    systemmap:operatedBy systemmap:QFL2DYxeNnVaFsv64 .
+    systemmap:operatedBy systemmap:SFL2DYxeNnVaFsv64 .
 
-systemmap:Q7u1Bh6qfXUbSDkv a schema:SoftwareApplication ;
+systemmap:S7u1Bh6qfXUbSDkv a schema:SoftwareApplication ;
     rdfs:label "e-Deklaration"@de,
         "e-declaration"@en,
         "e-déclaration"@fr,
@@ -208,9 +208,9 @@ systemmap:Q7u1Bh6qfXUbSDkv a schema:SoftwareApplication ;
         "e-dec"@en,
         "e-dec"@fr,
         "e-dec"@it ;
-    systemmap:operatedBy systemmap:QFKPRpdGa5UISiJlx .
+    systemmap:operatedBy systemmap:SFKPRpdGa5UISiJlx .
 
-systemmap:Q9SbhGAwWjtvcRIZ a schema:SoftwareApplication ;
+systemmap:S9SbhGAwWjtvcRIZ a schema:SoftwareApplication ;
     rdfs:label "Geografisches Informationssystem"@de,
         "Geographic Information System"@en,
         "Système d'information géographique"@fr,
@@ -244,9 +244,9 @@ systemmap:Q9SbhGAwWjtvcRIZ a schema:SoftwareApplication ;
         "GIS-BLW"@fr,
         "GIS-BLW"@it ;
     systemmap:hasLegalBasis LwG:art_165_e ;
-    systemmap:operatedBy systemmap:QE8y4MuFWW5BKqK92 .
+    systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
 
-systemmap:Q9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
+systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
     rdfs:label "Acontrol"@de,
         "Acontrol"@en,
         "Acontrol"@fr,
@@ -272,9 +272,9 @@ systemmap:Q9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
         In questo modo, garantisce un monitoraggio efficiente e il rispetto degli standard agricoli.
         """@it ;
     systemmap:hasLegalBasis LwG:art_165_d ;
-    systemmap:operatedBy systemmap:QcoeXHl4TgJbke1Yf .
+    systemmap:operatedBy systemmap:ScoeXHl4TgJbke1Yf .
 
-systemmap:QBx5yiPz9Nxy2Wnue a schema:SoftwareApplication ;
+systemmap:SBx5yiPz9Nxy2Wnue a schema:SoftwareApplication ;
     rdfs:label "Mooh Intranet"@de ;
     rdfs:comment """
         Intranet-Seite der Mooh Genossenschaft.
@@ -282,7 +282,7 @@ systemmap:QBx5yiPz9Nxy2Wnue a schema:SoftwareApplication ;
     dcat:landingPage <https://intranet.mooh.swiss/> ;
     systemmap:operatedBy zefix:1256441 .
 
-systemmap:QE5DY78J7vgfoiDLj a schema:SoftwareApplication ;
+systemmap:SE5DY78J7vgfoiDLj a schema:SoftwareApplication ;
     rdfs:label "Protection Variété"@de,
         "Protection Variété"@en,
         "Protection Variété"@fr,
@@ -307,9 +307,9 @@ systemmap:QE5DY78J7vgfoiDLj a schema:SoftwareApplication ;
         "ProVar"@en,
         "ProVar"@fr,
         "ProVar"@it ;
-    systemmap:operatedBy systemmap:QfX7h09MplFWwb4LK .
+    systemmap:operatedBy systemmap:SfX7h09MplFWwb4LK .
 
-systemmap:QGdyOoksCnRRZwi2Q a schema:SoftwareApplication ;
+systemmap:SGdyOoksCnRRZwi2Q a schema:SoftwareApplication ;
     rdfs:label "Agate"@de,
         "Agate"@en,
         "Agate"@fr,
@@ -318,9 +318,9 @@ systemmap:QGdyOoksCnRRZwi2Q a schema:SoftwareApplication ;
         "Agate is an online portal that allows access to various agricultural applications with just one login. It facilitates data exchange in the agricultural and food sector, thereby increasing user convenience. This centralized access point simplifies administrative processes for all stakeholders."@en,
         "Agate est un portail en ligne qui permet d'accéder à diverses applications agricoles avec un seul identifiant. Il facilite l'échange de données dans le secteur agricole et alimentaire, augmentant ainsi le confort des utilisateurs. Ce point d'accès centralisé simplifie les processus administratifs pour toutes les parties prenantes."@fr,
         "Agate è un portale online che consente l'accesso a diverse applicazioni agricole con un solo login. Facilita lo scambio di dati nel settore agricolo e alimentare, aumentando così la comodità per gli utenti. Questo punto di accesso centralizzato semplifica i processi amministrativi per tutte le parti interessate."@it ;
-    systemmap:operatedBy systemmap:QQbNLiw8h9MnSXuyo .
+    systemmap:operatedBy systemmap:SQbNLiw8h9MnSXuyo .
 
-systemmap:QHEaRYIgvZ3xrDLo a schema:SoftwareApplication ;
+systemmap:SHEaRYIgvZ3xrDLo a schema:SoftwareApplication ;
     rdfs:label "Produkteregister Chemikalien"@de,
         "Chemical Products Register"@en,
         "Registre des produits chimiques"@fr,
@@ -347,9 +347,9 @@ systemmap:QHEaRYIgvZ3xrDLo a schema:SoftwareApplication ;
         "CPR"@en,
         "RPC"@fr,
         "RPC"@it ;
-    systemmap:operatedBy systemmap:QGayLcAMcywbigd3M .
+    systemmap:operatedBy systemmap:SGayLcAMcywbigd3M .
 
-systemmap:QHFSc6xgsHF70IlUd a schema:SoftwareApplication ;
+systemmap:SHFSc6xgsHF70IlUd a schema:SoftwareApplication ;
     rdfs:label "LINDAS"@de,
         "LINDAS"@en,
         "LINDAS"@fr,
@@ -358,9 +358,9 @@ systemmap:QHFSc6xgsHF70IlUd a schema:SoftwareApplication ;
         "Linked Data Services LINDAS allow public administrations to publish their data in the form of Knowledge Graphs and make them accessible via https://lindas.admin.ch"@en,
         "Avec les services Linked Data LINDAS, les administrations publiques peuvent publier leurs données sous forme de graphe de connaissances et les rendre accessibles via https://lindas.admin.ch."@fr,
         "Con i Linked Data Services LINDAS, le pubbliche amministrazioni possono pubblicare i loro dati sotto forma di grafi di conoscenza e renderli accessibili attraverso https://lindas.admin.ch."@it ;
-    systemmap:operatedBy systemmap:Q6VSaFePQaMGqU8vD .
+    systemmap:operatedBy systemmap:S6VSaFePQaMGqU8vD .
 
-systemmap:QHyBeGX0LsQwjJ6Z a schema:SoftwareApplication ;
+systemmap:SHyBeGX0LsQwjJ6Z a schema:SoftwareApplication ;
     rdfs:label "Betriebs- und Unternehmensregister"@de,
         "Register of Enterprises and Establishments"@en,
         "Registre des entreprises et des établissements"@fr,
@@ -390,9 +390,9 @@ systemmap:QHyBeGX0LsQwjJ6Z a schema:SoftwareApplication ;
         "REE"@fr,
         "BUR"@it ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> ;
-    systemmap:operatedBy systemmap:QNbhMvt3Btta1U1d6 .
+    systemmap:operatedBy systemmap:SNbhMvt3Btta1U1d6 .
 
-systemmap:QLxeXHOfmC6DkBGl a schema:SoftwareApplication ;
+systemmap:SLxeXHOfmC6DkBGl a schema:SoftwareApplication ;
     rdfs:label "Zentrale Auswertung von Agrarumweltindikatoren"@de ;
     rdfs:comment """
         Die 'ZA-AUI: Betriebsrückmeldung' ermöglicht den Teilnehmenden am Projekt ZA-AUI die berechneten Agrarumweltindikatoren (AUI) ihres Betriebs online abzurufen, für welche sie jährlich Daten an Agroscope liefern.
@@ -404,7 +404,7 @@ systemmap:QLxeXHOfmC6DkBGl a schema:SoftwareApplication ;
     systemmap:abbreviation "ZA-AUI"@de ;
     systemmap:operatedBy staatskalender:20050530 .
 
-systemmap:QMjqlEoVCR9wpTyN1 a schema:SoftwareApplication ;
+systemmap:SMjqlEoVCR9wpTyN1 a schema:SoftwareApplication ;
     rdfs:label "Acorda"@de,
         "Acorda"@en,
         "Acorda"@fr,
@@ -429,12 +429,12 @@ systemmap:QMjqlEoVCR9wpTyN1 a schema:SoftwareApplication ;
         Il sistema offre funzionalità come la raccolta di dati strutturali, il calcolo e il pagamento dei sussidi diretti, la georeferenziazione e lo scambio di dati con i sistemi federali.
         Inoltre, include moduli specializzati per settori come l'apicoltura, la viticoltura e i controlli.
         """@it ;
-    systemmap:operatedBy systemmap:Q7eiByZp1HPEEO9Ty,
-        systemmap:QTBfdlLfF2K2AJypD,
-        systemmap:QTg0zUHrhEWXotIau,
-        systemmap:Qqo5ZJtzXw1gg3RYC .
+    systemmap:operatedBy systemmap:S7eiByZp1HPEEO9Ty,
+        systemmap:STBfdlLfF2K2AJypD,
+        systemmap:STg0zUHrhEWXotIau,
+        systemmap:Sqo5ZJtzXw1gg3RYC .
 
-systemmap:QNQSYR7J0IEZpyFT a schema:SoftwareApplication ;
+systemmap:SNQSYR7J0IEZpyFT a schema:SoftwareApplication ;
     rdfs:label "Auswertung/Analyse, Lebensmittelsicherheit, Veterinärwesen, Public Health"@de ;
     rdfs:comment """
         ALVPH ist das Datawarehouse des Veterinärdienstes Schweiz.
@@ -442,17 +442,17 @@ systemmap:QNQSYR7J0IEZpyFT a schema:SoftwareApplication ;
         Ausserdem verfügt ALVPH über viele graphische Funktionen, die eine attraktive Präsentation der Daten erlauben.
         """@de ;
     systemmap:abbreviation "ALVPH"@de ;
-    systemmap:operatedBy systemmap:QsFdxnjM8hgUdzVT5 .
+    systemmap:operatedBy systemmap:SsFdxnjM8hgUdzVT5 .
 
-systemmap:QOL6kHAvPFNIuM9E a schema:SoftwareApplication ;
+systemmap:SOL6kHAvPFNIuM9E a schema:SoftwareApplication ;
     rdfs:label "Traces"@de ;
     rdfs:comment """
         Alle Personen und Firmen, die am Import- oder Exportprozess für den internationalen Handel von Tieren, Waren tierischen Ursprungs und gewissen Produkten nicht-tierischen Ursprungs beteiligt sind, müssen sich in Traces registrieren lassen.
         Es handelt sich um ein eine Webanwendung der Europäischen Union und unterstützt den grenzüberschreitenden Verkehr von Tieren, Lebensmitteln und tierischen Nebenprodukten.
         """@de ;
-    systemmap:operatedBy systemmap:QhM5kJNFhO8vOAEdK .
+    systemmap:operatedBy systemmap:ShM5kJNFhO8vOAEdK .
 
-systemmap:QPWOFHR512FuAc25b a schema:SoftwareApplication ;
+systemmap:SPWOFHR512FuAc25b a schema:SoftwareApplication ;
     rdfs:label "Gesamtlösung EDV Landwirtschaft & Natur"@de,
         "Comprehensive IT Solution for Agriculture & Nature"@en,
         "Solution informatique globale pour l'agriculture et la nature"@fr,
@@ -482,11 +482,11 @@ systemmap:QPWOFHR512FuAc25b a schema:SoftwareApplication ;
         "GELAN"@en,
         "GELAN"@fr,
         "GELAN"@it ;
-    systemmap:operatedBy systemmap:QnUxOsahtIQHfvRH9,
-        systemmap:Qp5pkmAETRpXrudck,
-        systemmap:QyTRdNaA9EH12lhiE .
+    systemmap:operatedBy systemmap:SnUxOsahtIQHfvRH9,
+        systemmap:Sp5pkmAETRpXrudck,
+        systemmap:SyTRdNaA9EH12lhiE .
 
-systemmap:QQfl1MHnNpsAj3WP a schema:SoftwareApplication ;
+systemmap:SQfl1MHnNpsAj3WP a schema:SoftwareApplication ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
         "DigiAgriFoodCH System Map"@en,
         "Carte du système DigiAgriFoodCH"@fr,
@@ -496,9 +496,9 @@ systemmap:QQfl1MHnNpsAj3WP a schema:SoftwareApplication ;
         "Un outil de visualisation des informations sur les systèmes informatiques, les données qu'ils contiennent et les organisations qui les exploitent dans le secteur agroalimentaire suisse."@fr,
         "Uno strumento di visualizzazione delle informazioni sui sistemi IT, i dati in essi contenuti e le organizzazioni che li gestiscono nel settore agroalimentare svizzero."@it ;
     dcat:landingPage <https://blw-ofag-ufag.github.io/system-map/> ;
-    systemmap:operatedBy systemmap:QFAwQAwxBcNnaURgO .
+    systemmap:operatedBy systemmap:SFAwQAwxBcNnaURgO .
 
-systemmap:QU88cJmqj8nBRl2KZ a schema:SoftwareApplication ;
+systemmap:SU88cJmqj8nBRl2KZ a schema:SoftwareApplication ;
     rdfs:label "Tierverkehrsdatenbank"@de,
         "Animal Traffic Database"@en,
         "Banque de données sur le trafic des animaux"@fr,
@@ -527,9 +527,9 @@ systemmap:QU88cJmqj8nBRl2KZ a schema:SoftwareApplication ;
         "TVD"@en,
         "BDTA"@fr,
         "BDTA"@it ;
-    systemmap:operatedBy systemmap:QHObqf1JYpt7KGLFS .
+    systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS .
 
-systemmap:QXcby9KwakDGhBdP a schema:SoftwareApplication ;
+systemmap:SXcby9KwakDGhBdP a schema:SoftwareApplication ;
     rdfs:label "ACmobile"@de,
         "ACmobile"@en,
         "ACmobile"@fr,
@@ -546,9 +546,9 @@ systemmap:QXcby9KwakDGhBdP a schema:SoftwareApplication ;
         """
         ACmobile è una soluzione mobile indipendente dalla piattaforma per la registrazione elettronica dei risultati delle ispezioni e delle misure.
         """@it ;
-    systemmap:operatedBy systemmap:QmI5VgF2mECWT74i2 .
+    systemmap:operatedBy systemmap:SmI5VgF2mECWT74i2 .
 
-systemmap:QYOd1TkacTh6cr0xP a schema:SoftwareApplication ;
+systemmap:SYOd1TkacTh6cr0xP a schema:SoftwareApplication ;
     rdfs:label "Datenbank Milch"@de,
         "Milk Database"@en,
         "Base de données lait"@fr,
@@ -577,9 +577,9 @@ systemmap:QYOd1TkacTh6cr0xP a schema:SoftwareApplication ;
         "dbmilch"@en,
         "dbmilch"@fr,
         "dbmilch"@it ;
-    systemmap:operatedBy systemmap:QQ3N7dTc23t2wzXr2 .
+    systemmap:operatedBy systemmap:SQ3N7dTc23t2wzXr2 .
 
-systemmap:QZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
+systemmap:SZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
     rdfs:label "AGRICOLA"@de,
         "AGRICOLA"@en,
         "AGRICOLA"@fr,
@@ -608,20 +608,20 @@ systemmap:QZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
         Oltre ai pagamenti diretti, supporta anche settori come i miglioramenti strutturali, il diritto fondiario e degli affitti, nonché la protezione della natura.
         Più di 21.000 agricoltori e 1.000 dipendenti amministrativi utilizzano il sistema, che gestisce flussi finanziari di oltre 1 miliardo di franchi svizzeri all'anno.
         """@it ;
-    systemmap:operatedBy systemmap:QAz4vX5eiySS4vwuk,
-        systemmap:QDMGFgrGMHxc0eoLM,
-        systemmap:QDp3fNLQF81wWfMDp,
-        systemmap:QEoV4sz2peVmH5wY0,
-        systemmap:QJJVVNtVPxf8nt8VM,
-        systemmap:QNWHuNKVk7ijs7Cbc,
-        systemmap:QTqW9eQHHZNwyCH8i,
-        systemmap:QU0OUwGdItzXRya4Q,
-        systemmap:QU6T65pDC37fWWSHG,
-        systemmap:QUqub30lwOqlTtDN2,
-        systemmap:QVpDMEiTfIVQsNzT8,
-        systemmap:QoVAiCrMPYG2LJxsA .
+    systemmap:operatedBy systemmap:SAz4vX5eiySS4vwuk,
+        systemmap:SDMGFgrGMHxc0eoLM,
+        systemmap:SDp3fNLQF81wWfMDp,
+        systemmap:SEoV4sz2peVmH5wY0,
+        systemmap:SJJVVNtVPxf8nt8VM,
+        systemmap:SNWHuNKVk7ijs7Cbc,
+        systemmap:STqW9eQHHZNwyCH8i,
+        systemmap:SU0OUwGdItzXRya4Q,
+        systemmap:SU6T65pDC37fWWSHG,
+        systemmap:SUqub30lwOqlTtDN2,
+        systemmap:SVpDMEiTfIVQsNzT8,
+        systemmap:SoVAiCrMPYG2LJxsA .
 
-systemmap:Qc6kZqxTyS0gFGCY a schema:SoftwareApplication ;
+systemmap:Sc6kZqxTyS0gFGCY a schema:SoftwareApplication ;
     rdfs:label "Marktdaten Analyse- und Reporting-System"@de,
         "Market Data Analysis and Reporting System"@en,
         "Système d'analyse et de reporting des données de marché"@fr,
@@ -642,9 +642,9 @@ systemmap:Qc6kZqxTyS0gFGCY a schema:SoftwareApplication ;
         "MARS III"@en,
         "MARS III"@fr,
         "MARS III"@it ;
-    systemmap:operatedBy systemmap:QaVyVVsIDkiDMtQq4 .
+    systemmap:operatedBy systemmap:SaVyVVsIDkiDMtQq4 .
 
-systemmap:QeJ36zAhO3AJJix8t a schema:SoftwareApplication ;
+systemmap:SeJ36zAhO3AJJix8t a schema:SoftwareApplication ;
     rdfs:label "Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft"@de,
         "National Information System for Plant Genetic Resources for Food and Agriculture"@en,
         "Système national d'information sur les ressources phytogénétiques pour l'alimentation et l'agriculture"@fr,
@@ -657,9 +657,9 @@ systemmap:QeJ36zAhO3AJJix8t a schema:SoftwareApplication ;
         "NIS-PGRFA"@en,
         "SNIRPAA"@fr,
         "SIN-RGVA"@it ;
-    systemmap:operatedBy systemmap:QMnIieexlpOQHsGvN .
+    systemmap:operatedBy systemmap:SMnIieexlpOQHsGvN .
 
-systemmap:Qfv81BPRW0TSnKhGg a schema:SoftwareApplication ;
+systemmap:Sfv81BPRW0TSnKhGg a schema:SoftwareApplication ;
     rdfs:label "Troup'O Herdenmanager"@de ;
     rdfs:comment """
         Troup'O ist eine Herdenmanagement-Software für Milchvieh-, Mutterkuh- und Mastbetriebe, die eine zentrale Verwaltung von Zuchtdaten, eine übersichtliche Tierkartei und grafische Analysen bietet.
@@ -668,15 +668,15 @@ systemmap:Qfv81BPRW0TSnKhGg a schema:SoftwareApplication ;
         """@de ;
     systemmap:operatedBy zefix:505628 .
 
-systemmap:Qfwx1dZMcl5OXtzb a schema:SoftwareApplication ;
+systemmap:Sfwx1dZMcl5OXtzb a schema:SoftwareApplication ;
     rdfs:label "Apinella"@de ;
     rdfs:comment """
         Software insbesondere für die Früherkennungsprogramm des kleiner Beutenkäfer bei Bienen.
         """@de ;
     dcat:landingPage <https://www.apinella.ch/> ;
-    systemmap:operatedBy systemmap:Q3Rf79NI3Pm1rfOlN .
+    systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN .
 
-systemmap:QgjZ0efLbuCR2HvN a schema:SoftwareApplication ;
+systemmap:SgjZ0efLbuCR2HvN a schema:SoftwareApplication ;
     rdfs:label "Pflanzensorten-Datenbank"@de,
         "Plant Variety Database"@en,
         "Base de données des variétés de plantes"@fr,
@@ -689,9 +689,9 @@ systemmap:QgjZ0efLbuCR2HvN a schema:SoftwareApplication ;
         "PLUTO"@en,
         "PLUTO"@fr,
         "PLUTO"@it ;
-    systemmap:operatedBy systemmap:QBLH2G6TSKaqhqk4n .
+    systemmap:operatedBy systemmap:SBLH2G6TSKaqhqk4n .
 
-systemmap:QhZO092di7cBnOm7F a schema:SoftwareApplication ;
+systemmap:ShZO092di7cBnOm7F a schema:SoftwareApplication ;
     rdfs:label "Business-Intelligence-System"@de,
         "Business Intelligence System"@en,
         "Système de Business Intelligence"@fr,
@@ -704,9 +704,9 @@ systemmap:QhZO092di7cBnOm7F a schema:SoftwareApplication ;
         "ASTAT"@en,
         "ASTAT"@fr,
         "ASTAT"@it ;
-    systemmap:operatedBy systemmap:QieZtzwlMAxzFY1op .
+    systemmap:operatedBy systemmap:SieZtzwlMAxzFY1op .
 
-systemmap:Qhhoiq8azX3SHGL3W a schema:SoftwareApplication ;
+systemmap:Shhoiq8azX3SHGL3W a schema:SoftwareApplication ;
     rdfs:label "Pflanzenschutzmittelverzeichnis"@de,
         "Plant Protection Products Directory"@en,
         "Répertoire des produits phytosanitaires"@fr,
@@ -729,9 +729,9 @@ systemmap:Qhhoiq8azX3SHGL3W a schema:SoftwareApplication ;
         """@it ;
     dcat:landingPage <https://www.psm.admin.ch/> ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2010/340> ;
-    systemmap:operatedBy systemmap:QoqmfoevPVgr3d0AA .
+    systemmap:operatedBy systemmap:SoqmfoevPVgr3d0AA .
 
-systemmap:QjCVTMrYaOTygNcqF a schema:SoftwareApplication ;
+systemmap:SjCVTMrYaOTygNcqF a schema:SoftwareApplication ;
     rdfs:label "digiFLUX"@de,
         "digiFLUX"@en,
         "digiFLUX"@fr,
@@ -758,9 +758,9 @@ systemmap:QjCVTMrYaOTygNcqF a schema:SoftwareApplication ;
         """@it ;
     systemmap:hasLegalBasis LwG:art_165_f,
         LwG:art_165_f_bis ;
-    systemmap:operatedBy systemmap:QyfZhzeyT1CqJU0BP .
+    systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP .
 
-systemmap:QlTSOXsBC2LN7Qkp a schema:SoftwareApplication ;
+systemmap:SlTSOXsBC2LN7Qkp a schema:SoftwareApplication ;
     rdfs:label "Barto"@de,
         "Barto"@en,
         "Barto"@fr,
@@ -785,9 +785,9 @@ systemmap:QlTSOXsBC2LN7Qkp a schema:SoftwareApplication ;
         Integra diverse funzioni agronomiche e amministrative e offre agli agricoltori una soluzione centrale per la gestione della loro azienda.
         Barto è gestita da Barto AG e collabora con partner del settore agricolo per fornire soluzioni digitali innovative.
         """@it ;
-    systemmap:operatedBy systemmap:QDetpcQhSMo4IAeAb .
+    systemmap:operatedBy systemmap:SDetpcQhSMo4IAeAb .
 
-systemmap:QlfheulBjlQDwuaIM a schema:SoftwareApplication ;
+systemmap:SlfheulBjlQDwuaIM a schema:SoftwareApplication ;
     rdfs:label "HODUFLU"@de,
         "HODUFLU"@en,
         "HODUFLU"@fr,
@@ -808,9 +808,9 @@ systemmap:QlfheulBjlQDwuaIM a schema:SoftwareApplication ;
         HODUFLU è un programma online per la gestione standardizzata degli spostamenti di fertilizzanti aziendali e riciclati in agricoltura.
         Su questa pagina troverete l'accesso all'applicazione e documenti utili come il manuale utente di HODUFLU.
         """@it ;
-    systemmap:operatedBy systemmap:QyfZhzeyT1CqJU0BP .
+    systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP .
 
-systemmap:QmWEQ8lVlDS9ZwPkY a schema:SoftwareApplication ;
+systemmap:SmWEQ8lVlDS9ZwPkY a schema:SoftwareApplication ;
     rdfs:label "LAWIS"@de,
         "LAWIS"@en,
         "LAWIS"@fr,
@@ -843,14 +843,14 @@ systemmap:QmWEQ8lVlDS9ZwPkY a schema:SoftwareApplication ;
         Offre funzionalità GIS e soluzioni mobili per i controlli.
         Il sistema gestisce circa 26.000 aziende agricole e 180.000 particelle e dispone di moduli aggiuntivi per la viticoltura (passaporto dell'uva) e la silvicoltura (portale forestale).
         """@it ;
-    systemmap:operatedBy systemmap:Q3wI1gDSK1eZB4l36,
-        systemmap:Q4uUJh3cptyvoesgV,
-        systemmap:QI9jTsa43C0A052y9,
-        systemmap:QRtndZW3LnFXhrQUR,
-        systemmap:QXdYExDt1RcJOS7AY,
-        systemmap:QkaW2ahXWYw9ueeOp .
+    systemmap:operatedBy systemmap:S3wI1gDSK1eZB4l36,
+        systemmap:S4uUJh3cptyvoesgV,
+        systemmap:SI9jTsa43C0A052y9,
+        systemmap:SRtndZW3LnFXhrQUR,
+        systemmap:SXdYExDt1RcJOS7AY,
+        systemmap:SkaW2ahXWYw9ueeOp .
 
-systemmap:QnM0KdtMBmniYOY8f a schema:SoftwareApplication ;
+systemmap:SnM0KdtMBmniYOY8f a schema:SoftwareApplication ;
     rdfs:label "Meine Agrardatenfreigabe"@de,
         "My Agricultural Data Release"@en,
         "Ma libération des données agricoles"@fr,
@@ -879,9 +879,9 @@ systemmap:QnM0KdtMBmniYOY8f a schema:SoftwareApplication ;
         "MADR"@en,
         "MLDA"@fr,
         "MRDA"@it ;
-    systemmap:operatedBy systemmap:QFAwQAwxBcNnaURgO .
+    systemmap:operatedBy systemmap:SFAwQAwxBcNnaURgO .
 
-systemmap:QpLZd1ojPxF0CvH28 a schema:SoftwareApplication ;
+systemmap:SpLZd1ojPxF0CvH28 a schema:SoftwareApplication ;
     rdfs:label "Visualize"@de,
         "Visualize"@en,
         "Visualize"@fr,
@@ -890,9 +890,9 @@ systemmap:QpLZd1ojPxF0CvH28 a schema:SoftwareApplication ;
         "Create and embed visualizations from any dataset provided by the LINDAS Linked Data Service."@en,
         "Créez et intégrez des visualisations à partir des jeux de données du service LINDAS (Linked Data)."@fr,
         "Crea ed incorpora visualizzazioni partendo dai dataset forniti dal servizio LINDAS (Linked Data)."@it ;
-    systemmap:operatedBy systemmap:QwlgSr7ukziL6iHsP .
+    systemmap:operatedBy systemmap:SwlgSr7ukziL6iHsP .
 
-systemmap:QpR2aDraNmiUXz55J a schema:SoftwareApplication ;
+systemmap:SpR2aDraNmiUXz55J a schema:SoftwareApplication ;
     rdfs:label "SAP Wallis"@de,
         "SAP Valais"@en,
         "SAP Valais"@fr,
@@ -917,18 +917,18 @@ systemmap:QpR2aDraNmiUXz55J a schema:SoftwareApplication ;
         Un'interfaccia web (ePDir) consente agli utenti esterni di inserire i dati.
         Il sistema è utilizzato dalle aziende agricole, dalle amministrazioni comunali e dalle organizzazioni di controllo ed è impiegato per la gestione dei dati federali e cantonali, dei pagamenti diretti e delle statistiche.
         """@it ;
-    systemmap:operatedBy systemmap:QG5yBV3kE5E5NMM7j .
+    systemmap:operatedBy systemmap:SG5yBV3kE5E5NMM7j .
 
-systemmap:QtGKp6nS3OwEm4I0 a schema:SoftwareApplication ;
+systemmap:StGKp6nS3OwEm4I0 a schema:SoftwareApplication ;
     rdfs:label "eMapis"@de ;
     rdfs:comment """
         eMapis wurde entwickelt, um die veraltete MAPIS-Applikation abzulösen und die digitale Verwaltung von Finanzhilfegesuchen, wie Bundesbeiträge und zinslose Darlehen, zu ermöglichen.
         Das System zentralisiert die Erfassung und Verwaltung von Daten sowie Dokumenten, wodurch Doppelerfassungen vermieden werden.
         Mit automatisierten Workflows, einer zentralen Benutzerverwaltung und der Integration von GIS-Daten (sowie zukünftig Betriebsdaten) verbessert eMapis die Transparenz und Effizienz in der Bearbeitung der Finanzhilfefälle.
         """@de ;
-    systemmap:operatedBy systemmap:QG8fSveeGZNcYzoUN .
+    systemmap:operatedBy systemmap:SG8fSveeGZNcYzoUN .
 
-systemmap:QuEtT7joC8HXVSfF a schema:SoftwareApplication ;
+systemmap:SuEtT7joC8HXVSfF a schema:SoftwareApplication ;
     rdfs:label "UID-Register"@de,
         "UID Register"@en,
         "Registre UID"@fr,
@@ -955,9 +955,9 @@ systemmap:QuEtT7joC8HXVSfF a schema:SoftwareApplication ;
         """@it ;
     rdfs:seeAlso <https://www.ech.ch/ech/ech-0108>,
         <https://www.uid.admin.ch/> ;
-    systemmap:operatedBy systemmap:QNbhMvt3Btta1U1d6 .
+    systemmap:operatedBy systemmap:SNbhMvt3Btta1U1d6 .
 
-systemmap:QvDlxaJ5YMkuZGH6k a schema:SoftwareApplication ;
+systemmap:SvDlxaJ5YMkuZGH6k a schema:SoftwareApplication ;
     rdfs:label "Agrarpolitisches Informationssystem"@de,
         "Agricultural Policy Information System"@en,
         "Système d'information sur la politique agricole"@fr,
@@ -971,9 +971,9 @@ systemmap:QvDlxaJ5YMkuZGH6k a schema:SoftwareApplication ;
         "SIPA"@fr,
         "AGIS"@it ;
     systemmap:hasLegalBasis LwG:art_165_c ;
-    systemmap:operatedBy systemmap:QE8y4MuFWW5BKqK92 .
+    systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
 
-systemmap:QywklUB91myTH0cvS a schema:SoftwareApplication ;
+systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
     rdfs:label "eKontingente"@de,
         "eQuotas"@en,
         "eContingents"@fr,
@@ -998,13 +998,13 @@ systemmap:QywklUB91myTH0cvS a schema:SoftwareApplication ;
         <https://www.fedlex.admin.ch/eli/cc/2003/791>,
         <https://www.fedlex.admin.ch/eli/cc/2011/770>,
         <https://www.fedlex.admin.ch/eli/cc/2016/565> ;
-    systemmap:operatedBy systemmap:QRu4rav1Rlm2mUMWr .
+    systemmap:operatedBy systemmap:SRu4rav1Rlm2mUMWr .
 
-systemmap:Q1KtKkrBMoK25AKVA a systemmap:CantonalOrganization ;
+systemmap:S1KtKkrBMoK25AKVA a systemmap:CantonalOrganization ;
     rdfs:label "Direktzahlungen und Beiträge"@de ;
-    schema:parentOrganization systemmap:QDMGFgrGMHxc0eoLM .
+    schema:parentOrganization systemmap:SDMGFgrGMHxc0eoLM .
 
-systemmap:Q3wI1gDSK1eZB4l36 a systemmap:CantonalOrganization ;
+systemmap:S3wI1gDSK1eZB4l36 a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Thurgau"@de,
         "Canton of Thurgau"@en,
         "Canton de Thurgovie"@fr,
@@ -1015,16 +1015,16 @@ systemmap:Q3wI1gDSK1eZB4l36 a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Turgovia."@it ;
     systemmap:abbreviation "TG" .
 
-systemmap:Q4uUJh3cptyvoesgV a systemmap:CantonalOrganization ;
+systemmap:S4uUJh3cptyvoesgV a systemmap:CantonalOrganization ;
     rdfs:label "Landwirtschaft"@de ;
-    schema:parentOrganization systemmap:QtD442ueFttFeM59d .
+    schema:parentOrganization systemmap:StD442ueFttFeM59d .
 
-systemmap:Q5PQMffJ6VPs6c4Eg a systemmap:CantonalOrganization ;
+systemmap:S5PQMffJ6VPs6c4Eg a systemmap:CantonalOrganization ;
     rdfs:label "Land- und Forstwirtschaftsdepartement"@de ;
-    schema:parentOrganization systemmap:QP3XCaL5d9GyKtg5H ;
+    schema:parentOrganization systemmap:SP3XCaL5d9GyKtg5H ;
     systemmap:abbreviation "LFD"@de .
 
-systemmap:Q7eiByZp1HPEEO9Ty a systemmap:CantonalOrganization ;
+systemmap:S7eiByZp1HPEEO9Ty a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Waadt"@de,
         "Canton of Vaud"@en,
         "Canton de Vaud"@fr,
@@ -1035,7 +1035,7 @@ systemmap:Q7eiByZp1HPEEO9Ty a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Vaud."@it ;
     systemmap:abbreviation "VD" .
 
-systemmap:QAz4vX5eiySS4vwuk a systemmap:CantonalOrganization ;
+systemmap:SAz4vX5eiySS4vwuk a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Obwalden"@de,
         "Canton of Obwalden"@en,
         "Canton d'Obwald"@fr,
@@ -1046,7 +1046,7 @@ systemmap:QAz4vX5eiySS4vwuk a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Obvaldo."@it ;
     systemmap:abbreviation "OW" .
 
-systemmap:QCC189KCYnABsbian a systemmap:CantonalOrganization ;
+systemmap:SCC189KCYnABsbian a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Appenzell Ausserrhoden"@de,
         "Canton of Appenzell Ausserrhoden"@en,
         "Canton d'Appenzell Rhodes-Extérieures"@fr,
@@ -1057,11 +1057,11 @@ systemmap:QCC189KCYnABsbian a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Appenzell Esterno."@it ;
     systemmap:abbreviation "AR" .
 
-systemmap:QDMGFgrGMHxc0eoLM a systemmap:CantonalOrganization ;
+systemmap:SDMGFgrGMHxc0eoLM a systemmap:CantonalOrganization ;
     rdfs:label "Landwirtschaft Aargau"@de ;
-    schema:parentOrganization systemmap:QXgifgY4eK6N4W9jr .
+    schema:parentOrganization systemmap:SXgifgY4eK6N4W9jr .
 
-systemmap:QDp3fNLQF81wWfMDp a systemmap:CantonalOrganization ;
+systemmap:SDp3fNLQF81wWfMDp a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Tessin"@de,
         "Canton of Ticino"@en,
         "Canton du Tessin"@fr,
@@ -1072,7 +1072,7 @@ systemmap:QDp3fNLQF81wWfMDp a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Ticino."@it ;
     systemmap:abbreviation "TI" .
 
-systemmap:QEoV4sz2peVmH5wY0 a systemmap:CantonalOrganization ;
+systemmap:SEoV4sz2peVmH5wY0 a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Schwyz"@de,
         "Canton of Schwyz"@en,
         "Canton de Schwytz"@fr,
@@ -1083,7 +1083,7 @@ systemmap:QEoV4sz2peVmH5wY0 a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Svitto."@it ;
     systemmap:abbreviation "SZ" .
 
-systemmap:QG5yBV3kE5E5NMM7j a systemmap:CantonalOrganization ;
+systemmap:SG5yBV3kE5E5NMM7j a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Wallis"@de,
         "Canton of Valais"@en,
         "Canton du Valais"@fr,
@@ -1094,7 +1094,7 @@ systemmap:QG5yBV3kE5E5NMM7j a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale del Vallese."@it ;
     systemmap:abbreviation "VS" .
 
-systemmap:QGkAVZIrJPw0HqHLs a systemmap:CantonalOrganization ;
+systemmap:SGkAVZIrJPw0HqHLs a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Aargau"@de,
         "Canton of Aargau"@en,
         "Canton d'Argovie"@fr,
@@ -1105,7 +1105,7 @@ systemmap:QGkAVZIrJPw0HqHLs a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Argovia."@it ;
     systemmap:abbreviation "AG" .
 
-systemmap:QI9jTsa43C0A052y9 a systemmap:CantonalOrganization ;
+systemmap:SI9jTsa43C0A052y9 a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Schaffhausen"@de,
         "Canton of Schaffhausen"@en,
         "Canton de Schaffhouse"@fr,
@@ -1116,7 +1116,7 @@ systemmap:QI9jTsa43C0A052y9 a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Schaffhausen."@it ;
     systemmap:abbreviation "SH" .
 
-systemmap:QJJVVNtVPxf8nt8VM a systemmap:CantonalOrganization ;
+systemmap:SJJVVNtVPxf8nt8VM a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Uri"@de,
         "Canton of Uri"@en,
         "Canton d'Uri"@fr,
@@ -1127,20 +1127,20 @@ systemmap:QJJVVNtVPxf8nt8VM a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Uri."@it ;
     systemmap:abbreviation "UR" .
 
-systemmap:QKUAYpzZ9E3EItXRv a systemmap:CantonalOrganization ;
+systemmap:SKUAYpzZ9E3EItXRv a systemmap:CantonalOrganization ;
     rdfs:label "Koordinationsstelle für das Adress- und Betriebsregister"@de ;
-    schema:parentOrganization systemmap:QSTWtmHeK8GuPkomQ .
+    schema:parentOrganization systemmap:SSTWtmHeK8GuPkomQ .
 
-systemmap:QNR9jjxZTYmU0qC1N a systemmap:CantonalOrganization ;
+systemmap:SNR9jjxZTYmU0qC1N a systemmap:CantonalOrganization ;
     rdfs:label "Amt für Landwirtschaft"@de ;
-    schema:parentOrganization systemmap:QX3LDErwHN1dlwmGS ;
+    schema:parentOrganization systemmap:SX3LDErwHN1dlwmGS ;
     rdfs:comment """
         Das Amt für Landwirtschaft des Kantons Appenzell Ausserrhoden unterstützt die landwirtschaftlichen Betriebe in der Region durch Beratung, Fördermassnahmen und administrative Dienstleistungen.
         Es setzt sich für eine nachhaltige und wirtschaftlich tragfähige Landwirtschaft ein und ist für die Umsetzung agrarpolitischer Vorgaben zuständig.
         Zudem betreut es Bereiche wie Direktzahlungen, Strukturverbesserungen und Ausbildung in der Landwirtschaft.
         """@de .
 
-systemmap:QNWHuNKVk7ijs7Cbc a systemmap:CantonalOrganization ;
+systemmap:SNWHuNKVk7ijs7Cbc a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Graubünden"@de,
         "Canton of Graubünden"@en,
         "Canton des Grisons"@fr,
@@ -1151,7 +1151,7 @@ systemmap:QNWHuNKVk7ijs7Cbc a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale dei Grigioni."@it ;
     systemmap:abbreviation "GR" .
 
-systemmap:QP3XCaL5d9GyKtg5H a systemmap:CantonalOrganization ;
+systemmap:SP3XCaL5d9GyKtg5H a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Appenzell Innerrhoden"@de,
         "Canton of Appenzell Innerrhoden"@en,
         "Canton d'Appenzell Rhodes-Intérieures"@fr,
@@ -1162,7 +1162,7 @@ systemmap:QP3XCaL5d9GyKtg5H a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Appenzell Interno."@it ;
     systemmap:abbreviation "AI" .
 
-systemmap:QRtndZW3LnFXhrQUR a systemmap:CantonalOrganization ;
+systemmap:SRtndZW3LnFXhrQUR a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Zug"@de,
         "Canton of Zug"@en,
         "Canton de Zoug"@fr,
@@ -1173,11 +1173,11 @@ systemmap:QRtndZW3LnFXhrQUR a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Zugo."@it ;
     systemmap:abbreviation "ZG" .
 
-systemmap:QSTWtmHeK8GuPkomQ a systemmap:CantonalOrganization ;
+systemmap:SSTWtmHeK8GuPkomQ a systemmap:CantonalOrganization ;
     rdfs:label "Abteilung Direktzahlungen"@de ;
-    schema:parentOrganization systemmap:QnUxOsahtIQHfvRH9 .
+    schema:parentOrganization systemmap:SnUxOsahtIQHfvRH9 .
 
-systemmap:QTBfdlLfF2K2AJypD a systemmap:CantonalOrganization ;
+systemmap:STBfdlLfF2K2AJypD a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Jura"@de,
         "Canton of Jura"@en,
         "Canton du Jura"@fr,
@@ -1188,7 +1188,7 @@ systemmap:QTBfdlLfF2K2AJypD a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale del Giura."@it ;
     systemmap:abbreviation "JU" .
 
-systemmap:QTg0zUHrhEWXotIau a systemmap:CantonalOrganization ;
+systemmap:STg0zUHrhEWXotIau a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Neuenburg"@de,
         "Canton of Neuchâtel"@en,
         "Canton de Neuchâtel"@fr,
@@ -1199,7 +1199,7 @@ systemmap:QTg0zUHrhEWXotIau a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Neuchâtel."@it ;
     systemmap:abbreviation "NE" .
 
-systemmap:QTqW9eQHHZNwyCH8i a systemmap:CantonalOrganization ;
+systemmap:STqW9eQHHZNwyCH8i a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Zürich"@de,
         "Canton of Zurich"@en,
         "Canton de Zurich"@fr,
@@ -1210,7 +1210,7 @@ systemmap:QTqW9eQHHZNwyCH8i a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Zurigo."@it ;
     systemmap:abbreviation "ZH" .
 
-systemmap:QU0OUwGdItzXRya4Q a systemmap:CantonalOrganization ;
+systemmap:SU0OUwGdItzXRya4Q a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Nidwalden"@de,
         "Canton of Nidwalden"@en,
         "Canton de Nidwald"@fr,
@@ -1221,11 +1221,11 @@ systemmap:QU0OUwGdItzXRya4Q a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Nidvaldo."@it ;
     systemmap:abbreviation "NW" .
 
-systemmap:QU6T65pDC37fWWSHG a systemmap:CantonalOrganization ;
+systemmap:SU6T65pDC37fWWSHG a systemmap:CantonalOrganization ;
     rdfs:label "Landwirtschaftsamt"@de ;
-    schema:parentOrganization systemmap:Q5PQMffJ6VPs6c4Eg .
+    schema:parentOrganization systemmap:S5PQMffJ6VPs6c4Eg .
 
-systemmap:QUqub30lwOqlTtDN2 a systemmap:CantonalOrganization ;
+systemmap:SUqub30lwOqlTtDN2 a systemmap:CantonalOrganization ;
     rdfs:label "Kanton St. Gallen"@de,
         "Canton of St. Gallen"@en,
         "Canton de Saint-Gall"@fr,
@@ -1236,19 +1236,19 @@ systemmap:QUqub30lwOqlTtDN2 a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di San Gallo."@it ;
     systemmap:abbreviation "SG" .
 
-systemmap:QVpDMEiTfIVQsNzT8 a systemmap:CantonalOrganization ;
+systemmap:SVpDMEiTfIVQsNzT8 a systemmap:CantonalOrganization ;
     rdfs:label "Direktzahlungen und Tierzucht"@de ;
-    schema:parentOrganization systemmap:QNR9jjxZTYmU0qC1N .
+    schema:parentOrganization systemmap:SNR9jjxZTYmU0qC1N .
 
-systemmap:QVziLYQkMiRWMaajH a systemmap:CantonalOrganization ;
+systemmap:SVziLYQkMiRWMaajH a systemmap:CantonalOrganization ;
     rdfs:label "Zentrale Dienste"@de ;
-    schema:parentOrganization systemmap:QDMGFgrGMHxc0eoLM .
+    schema:parentOrganization systemmap:SDMGFgrGMHxc0eoLM .
 
-systemmap:QX3LDErwHN1dlwmGS a systemmap:CantonalOrganization ;
+systemmap:SX3LDErwHN1dlwmGS a systemmap:CantonalOrganization ;
     rdfs:label "Departement Bau und Volkswirtschaft"@de ;
-    schema:parentOrganization systemmap:QCC189KCYnABsbian .
+    schema:parentOrganization systemmap:SCC189KCYnABsbian .
 
-systemmap:QXdYExDt1RcJOS7AY a systemmap:CantonalOrganization ;
+systemmap:SXdYExDt1RcJOS7AY a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Luzern"@de,
         "Canton of Lucerne"@en,
         "Canton de Lucerne"@fr,
@@ -1259,11 +1259,11 @@ systemmap:QXdYExDt1RcJOS7AY a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Lucerna."@it ;
     systemmap:abbreviation "LU" .
 
-systemmap:QXgifgY4eK6N4W9jr a systemmap:CantonalOrganization ;
+systemmap:SXgifgY4eK6N4W9jr a systemmap:CantonalOrganization ;
     rdfs:label "Departement Finanzen und Ressourcen"@de ;
-    schema:parentOrganization systemmap:QGkAVZIrJPw0HqHLs .
+    schema:parentOrganization systemmap:SGkAVZIrJPw0HqHLs .
 
-systemmap:QfCWpkO67ty1HLzmK a systemmap:CantonalOrganization ;
+systemmap:SfCWpkO67ty1HLzmK a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Basel-Stadt"@de,
         "Canton of Basel-Stadt"@en,
         "Canton de Bâle-Ville"@fr,
@@ -1274,20 +1274,20 @@ systemmap:QfCWpkO67ty1HLzmK a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Basilea Città."@it ;
     systemmap:abbreviation "BS" .
 
-systemmap:QjozrVSzUVos5diiL a systemmap:CantonalOrganization ;
+systemmap:SjozrVSzUVos5diiL a systemmap:CantonalOrganization ;
     rdfs:label "Landwirtschaftliches Zentrum Liebegg"@de ;
-    schema:parentOrganization systemmap:QDMGFgrGMHxc0eoLM .
+    schema:parentOrganization systemmap:SDMGFgrGMHxc0eoLM .
 
-systemmap:QkaW2ahXWYw9ueeOp a systemmap:CantonalOrganization ;
+systemmap:SkaW2ahXWYw9ueeOp a systemmap:CantonalOrganization ;
     rdfs:label "Ebenrain-Zentrum für Landwirtschaft, Natur und Ernährung"@de ;
-    schema:parentOrganization systemmap:QzHOtHCVjJXECjyDj ;
+    schema:parentOrganization systemmap:SzHOtHCVjJXECjyDj ;
     rdfs:comment "Das Ebenrain-Zentrum für Landwirtschaft, Natur und Ernährung mit Sitz in Sissach übernimmt die Aufgaben des Kantons zugunsten von Landwirtschaft, Natur und Ernährung. Der Ebenrain führt eine landwirtschaftliche Schule zur Ausbildung der Landwirte und Landwirtinnen, die Brücke Ebenrain sowie einen Kursgarten für die praktische Bildungsarbeit. Mit Kursen und Beratung sorgt er dafür, dass die Landwirtinnen und Landwirte fachlich fit für die Zukunft sind. Er fördert eine gesunde und ausgewogene Ernährung in der Gemeinschaftsgastronomie und in der breiten Bevölkerung."@de .
 
-systemmap:Qlsq3Et7cyDrThfMW a systemmap:CantonalOrganization ;
+systemmap:Slsq3Et7cyDrThfMW a systemmap:CantonalOrganization ;
     rdfs:label "Departement Gesundheit und Soziales"@de ;
-    schema:parentOrganization systemmap:QGkAVZIrJPw0HqHLs .
+    schema:parentOrganization systemmap:SGkAVZIrJPw0HqHLs .
 
-systemmap:QmI5VgF2mECWT74i2 a systemmap:CantonalOrganization ;
+systemmap:SmI5VgF2mECWT74i2 a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Bern"@de,
         "Canton of Bern"@en,
         "Canton de Berne"@fr,
@@ -1298,12 +1298,12 @@ systemmap:QmI5VgF2mECWT74i2 a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Berna."@it ;
     systemmap:abbreviation "BE" .
 
-systemmap:QnUxOsahtIQHfvRH9 a systemmap:CantonalOrganization ;
+systemmap:SnUxOsahtIQHfvRH9 a systemmap:CantonalOrganization ;
     rdfs:label "Amt für Landwirtschaft und Natur"@de ;
-    schema:parentOrganization systemmap:QmI5VgF2mECWT74i2 ;
+    schema:parentOrganization systemmap:SmI5VgF2mECWT74i2 ;
     systemmap:abbreviation "LANAT"@de .
 
-systemmap:QoVAiCrMPYG2LJxsA a systemmap:CantonalOrganization ;
+systemmap:SoVAiCrMPYG2LJxsA a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Glarus"@de,
         "Canton of Glarus"@en,
         "Canton de Glaris"@fr,
@@ -1314,7 +1314,7 @@ systemmap:QoVAiCrMPYG2LJxsA a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Glarus."@it ;
     systemmap:abbreviation "GL" .
 
-systemmap:Qp5pkmAETRpXrudck a systemmap:CantonalOrganization ;
+systemmap:Sp5pkmAETRpXrudck a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Freiburg"@de,
         "Canton of Fribourg"@en,
         "Canton de Fribourg"@fr,
@@ -1325,11 +1325,11 @@ systemmap:Qp5pkmAETRpXrudck a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Friburgo."@it ;
     systemmap:abbreviation "FR" .
 
-systemmap:QpJ9AAjLlCAkFBhVU a systemmap:CantonalOrganization ;
+systemmap:SpJ9AAjLlCAkFBhVU a systemmap:CantonalOrganization ;
     rdfs:label "Strategie und Planung"@de ;
-    schema:parentOrganization systemmap:QDMGFgrGMHxc0eoLM .
+    schema:parentOrganization systemmap:SDMGFgrGMHxc0eoLM .
 
-systemmap:Qqo5ZJtzXw1gg3RYC a systemmap:CantonalOrganization ;
+systemmap:Sqo5ZJtzXw1gg3RYC a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Genf"@de,
         "Canton of Geneva"@en,
         "Canton de Genève"@fr,
@@ -1340,15 +1340,15 @@ systemmap:Qqo5ZJtzXw1gg3RYC a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Ginevra."@it ;
     systemmap:abbreviation "GE" .
 
-systemmap:QtD442ueFttFeM59d a systemmap:CantonalOrganization ;
+systemmap:StD442ueFttFeM59d a systemmap:CantonalOrganization ;
     rdfs:label "Amt für Umwelt und Energie"@de ;
-    schema:parentOrganization systemmap:QfCWpkO67ty1HLzmK .
+    schema:parentOrganization systemmap:SfCWpkO67ty1HLzmK .
 
-systemmap:QxYQ8wqWnYpmVR7FT a systemmap:CantonalOrganization ;
+systemmap:SxYQ8wqWnYpmVR7FT a systemmap:CantonalOrganization ;
     rdfs:label "Strukturverbesserungen und Raumnutzung"@de ;
-    schema:parentOrganization systemmap:QDMGFgrGMHxc0eoLM .
+    schema:parentOrganization systemmap:SDMGFgrGMHxc0eoLM .
 
-systemmap:QyTRdNaA9EH12lhiE a systemmap:CantonalOrganization ;
+systemmap:SyTRdNaA9EH12lhiE a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Solothurn"@de,
         "Canton of Solothurn"@en,
         "Canton de Soleure"@fr,
@@ -1359,7 +1359,7 @@ systemmap:QyTRdNaA9EH12lhiE a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Soletta."@it ;
     systemmap:abbreviation "SO" .
 
-systemmap:QzHOtHCVjJXECjyDj a systemmap:CantonalOrganization ;
+systemmap:SzHOtHCVjJXECjyDj a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Basel-Landschaft"@de,
         "Canton of Basel-Landschaft"@en,
         "Canton de Bâle-Campagne"@fr,
@@ -1370,17 +1370,17 @@ systemmap:QzHOtHCVjJXECjyDj a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Basilea Campagna."@it ;
     systemmap:abbreviation "BL" .
 
-systemmap:QY0h92GbLVkapqnQt a systemmap:CantonalVeterinaryService ;
+systemmap:SY0h92GbLVkapqnQt a systemmap:CantonalVeterinaryService ;
     rdfs:label "Kantonaler Veterinärdienst Aargau"@de ;
-    schema:parentOrganization systemmap:Qlsq3Et7cyDrThfMW ;
+    schema:parentOrganization systemmap:Slsq3Et7cyDrThfMW ;
     dcat:landingPage <https://www.ag.ch/de/verwaltung/dgs/verbraucherschutz/veterinaerdienst> .
 
-systemmap:Q1JvEmah9Tl0698au a systemmap:FederalOrganization ;
+systemmap:S1JvEmah9Tl0698au a systemmap:FederalOrganization ;
     rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de,
         "Directorate for Digitalization and Data Management"@en,
         "Unité de direction Transition numérique et gestion des données"@fr,
         "Unità di direzione Digitalizzazione e gestione dei dati"@it ;
-    schema:parentOrganization systemmap:QqeNr0H0FGL6Uv5Rr ;
+    schema:parentOrganization systemmap:SqeNr0H0FGL6Uv5Rr ;
     rdfs:comment "Der Direktionsbereich Digitalisierung und Datenmanagement setzt sich dafür ein, dass die digitale Transformation und das Datenmanagement in der Land- und Ernährungswirtschaft ziel- und zukunftsgerichtet gefördert werden."@de,
         "The Directorate for Digitalization and Data Management is committed to ensuring that digital transformation and data management in the agricultural and food sector are promoted in a goal-oriented and forward-looking manner."@en,
         "La Direction de la numérisation et de la gestion des données s'engage à ce que la transformation numérique et la gestion des données dans le secteur agricole et alimentaire soient encouragées de manière ciblée et tournée vers l'avenir."@fr,
@@ -1391,7 +1391,7 @@ systemmap:Q1JvEmah9Tl0698au a systemmap:FederalOrganization ;
         "DBDD"@fr,
         "DBDD"@it .
 
-systemmap:Q2QF8BOhJczC0PGhe a systemmap:FederalOrganization ;
+systemmap:S2QF8BOhJczC0PGhe a systemmap:FederalOrganization ;
     rdfs:label "Staatssekretariat für Wirtschaft"@de,
         "State Secretariat for Economic Affairs"@en,
         "Secrétariat d'État à l'économie"@fr,
@@ -1422,7 +1422,7 @@ systemmap:Q2QF8BOhJczC0PGhe a systemmap:FederalOrganization ;
         "SECO"@fr,
         "SECO"@it .
 
-systemmap:Q2tIdqNmt3uS5Ny6D a systemmap:FederalOrganization ;
+systemmap:S2tIdqNmt3uS5Ny6D a systemmap:FederalOrganization ;
     rdfs:label "Bundesamt für Landwirtschaft"@de,
         "Federal Office for Agriculture"@en,
         "Office fédéral de l'agriculture"@fr,
@@ -1438,7 +1438,7 @@ systemmap:Q2tIdqNmt3uS5Ny6D a systemmap:FederalOrganization ;
         "OFAG"@fr,
         "UFAG"@it .
 
-systemmap:Q3Rf79NI3Pm1rfOlN a systemmap:FederalOrganization ;
+systemmap:S3Rf79NI3Pm1rfOlN a systemmap:FederalOrganization ;
     rdfs:label "Bundesamt für Lebensmittelsicherheit und Veterinärwesen"@de,
         "Federal Food Safety and Veterinary Office"@en,
         "Office fédéral de la sécurité alimentaire et des affaires vétérinaires"@fr,
@@ -1465,7 +1465,7 @@ systemmap:Q3Rf79NI3Pm1rfOlN a systemmap:FederalOrganization ;
         "OSAV"@fr,
         "USAV"@it .
 
-systemmap:Q8WjMkerPw98ZkWA7 a systemmap:FederalOrganization ;
+systemmap:S8WjMkerPw98ZkWA7 a systemmap:FederalOrganization ;
     rdfs:label "Bundesamt für Gesundheit"@de,
         "Federal Office of Public Health"@en,
         "Office fédéral de la santé publique"@fr,
@@ -1496,12 +1496,12 @@ systemmap:Q8WjMkerPw98ZkWA7 a systemmap:FederalOrganization ;
         "OFSP"@fr,
         "UFSP"@it .
 
-systemmap:QE8y4MuFWW5BKqK92 a systemmap:FederalOrganization ;
+systemmap:SE8y4MuFWW5BKqK92 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Agrarinformationssysteme"@de,
         "Agricultural Information Systems Division"@en,
         "Secteur d'information sur l'agriculture"@fr,
         "Settore Sistemi d’informazione sull’agricoltura"@it ;
-    schema:parentOrganization systemmap:Q1JvEmah9Tl0698au ;
+    schema:parentOrganization systemmap:S1JvEmah9Tl0698au ;
     rdfs:comment "Der Fachbereich Agrarinformationssysteme ist die zentrale Drehscheibe für Agrardaten. Er ist zuständig für das Portal Agate – den Online-Schalter für die Landwirtschaft – sowie für die zentralen Informationssysteme. Er setzt die fachlichen Vorgaben in technische Lösungen um und gewährleistet eine hohe Datenqualität. Dabei setzen wir auf medienbruchfreie, digitale Prozesse und Standards. FBAIS bietet Schnittstellen an für den Bezug und die Weitergabe der Daten an andere Bundesämter und auch an Dritte ausserhalb der Verwaltung."@de,
         "The Agricultural Information Systems Division is the central hub for agricultural data. It is responsible for the Agate portal – the online gateway for agriculture – as well as for central information systems. It implements professional requirements into technical solutions and ensures high data quality. We rely on seamless, digital processes and standards. FBAIS provides interfaces for retrieving and sharing data with other federal offices and third parties outside the administration."@en,
         "L'Unité des systèmes d'information agricole est la plaque tournante centrale des données agricoles. Elle est responsable du portail Agate – la plateforme en ligne pour l'agriculture – ainsi que des systèmes d'information centraux. Elle met en œuvre les exigences professionnelles en solutions techniques et garantit une haute qualité des données. Nous misons sur des processus et des standards numériques sans rupture. FBAIS propose des interfaces pour l'accès et la transmission des données à d'autres offices fédéraux ainsi qu'à des tiers en dehors de l'administration."@fr,
@@ -1511,12 +1511,12 @@ systemmap:QE8y4MuFWW5BKqK92 a systemmap:FederalOrganization ;
         "FBAIS"@fr,
         "FBAIS"@it .
 
-systemmap:QFAwQAwxBcNnaURgO a systemmap:FederalOrganization ;
+systemmap:SFAwQAwxBcNnaURgO a systemmap:FederalOrganization ;
     rdfs:label "Kompetenzzentrum für die digitale Transformation"@de,
         "Competence Center for Digital Transformation"@en,
         "Centre de compétence pour la transformation numérique"@fr,
         "Centro di competenza per la trasformazione digitale"@it ;
-    schema:parentOrganization systemmap:Q1JvEmah9Tl0698au ;
+    schema:parentOrganization systemmap:S1JvEmah9Tl0698au ;
     rdfs:comment "Das Kompetenzzentrum für die digitale Transformation widmet sich der Standardisierung und Harmonisierung von Daten im Agrar- und Ernährungssektor und ermöglicht deren Mehrfachnutzung nach dem Once-Only-Prinzip. Es führt und koordiniert die digitale Transformation des Sektors, indem es rechtliche, semantische, technische und organisatorische Herausforderungen angeht. Darüber hinaus fördert es die Kommunikation zwischen den Akteuren, um einen reibungslosen und effektiven Übergang zu digitalen Prozessen zu gewährleisten."@de,
         "The Competence Center for Digital Transformation is dedicated to standardizing and harmonizing data in the agri-food sector while enabling multiple data uses through the Once-Only Principle. It leads and coordinates the sector’s digital transformation by addressing legal, semantic, technical, and organizational challenges. Additionally, it fosters communication among stakeholders to ensure a smooth and effective transition to digital processes."@en,
         "Le Centre de compétence pour la transformation numérique se consacre à la standardisation et à l'harmonisation des données dans le secteur agroalimentaire, tout en permettant leur réutilisation multiple selon le principe du « Once-Only ». Il dirige et coordonne la transformation numérique du secteur en relevant les défis juridiques, sémantiques, techniques et organisationnels. De plus, il favorise la communication entre les parties prenantes afin d'assurer une transition fluide et efficace vers des processus numériques."@fr,
@@ -1526,7 +1526,7 @@ systemmap:QFAwQAwxBcNnaURgO a systemmap:FederalOrganization ;
         "GRKDT"@fr,
         "GRKDT"@it .
 
-systemmap:QFKPRpdGa5UISiJlx a systemmap:FederalOrganization ;
+systemmap:SFKPRpdGa5UISiJlx a systemmap:FederalOrganization ;
     rdfs:label "Bundesamt für Zoll und Grenzsicherheit"@de,
         "Federal Office for Customs and Border Security"@en,
         "Office fédéral de la douane et de la sécurité des frontières"@fr,
@@ -1557,12 +1557,12 @@ systemmap:QFKPRpdGa5UISiJlx a systemmap:FederalOrganization ;
         "OFDF"@fr,
         "UDSC"@it .
 
-systemmap:QFL2DYxeNnVaFsv64 a systemmap:FederalOrganization ;
+systemmap:SFL2DYxeNnVaFsv64 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Pflanzengesundheit"@de,
         "Plant Health Division"@en,
         "Secteur santé des végétaux"@fr,
         "Settore salute delle piante"@it ;
-    schema:parentOrganization systemmap:QzXI1C2DYjDriK2F8 ;
+    schema:parentOrganization systemmap:SzXI1C2DYjDriK2F8 ;
     rdfs:comment """  
         Die Aufgabe des Fachbereiches Pflanzengesundheit (FBPG) ist es, die Einschleppung und Ausbreitung von (geregelten) besonders gefährlichen Schädlingen und Krankheiten von Pflanzen zu vermeiden.  
         Dies ist wichtig, um wirtschaftliche, soziale und ökologische Schäden zu vermeiden.  
@@ -1588,9 +1588,9 @@ systemmap:QFL2DYxeNnVaFsv64 a systemmap:FederalOrganization ;
         "FBPG"@fr,
         "FBPG"@it .
 
-systemmap:QG8fSveeGZNcYzoUN a systemmap:FederalOrganization ;
+systemmap:SG8fSveeGZNcYzoUN a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Meliorationen"@de ;
-    schema:parentOrganization systemmap:QsJ9OfSkUgPD8dkz3 ;
+    schema:parentOrganization systemmap:SsJ9OfSkUgPD8dkz3 ;
     rdfs:comment """
         Der Fachbereich Meliorationen ist in der Verbundaufgabe mit den Kantonen im ländlichen Tiefbau (Bodenverbesserungen) tätig.
         Er ist bundesintern verfahrensleitende Behörde, beurteilt die Gesuche und übt die Oberaufsicht aus.
@@ -1598,12 +1598,12 @@ systemmap:QG8fSveeGZNcYzoUN a systemmap:FederalOrganization ;
         Weitere Themen sind Management natürlicher Ressourcen, Klimawandel mit Blick auf Boden/Wasserhaushalt.
         """@de .
 
-systemmap:QIo1a8l3IT4lBqBJE a systemmap:FederalOrganization ;
+systemmap:SIo1a8l3IT4lBqBJE a systemmap:FederalOrganization ;
     rdfs:label "Agroscope"@de,
         "Agroscope"@en,
         "Agroscope"@fr,
         "Agroscope"@it ;
-    schema:parentOrganization systemmap:Q2tIdqNmt3uS5Ny6D ;
+    schema:parentOrganization systemmap:S2tIdqNmt3uS5Ny6D ;
     rdfs:comment """
         Agroscope ist das Schweizer Kompetenzzentrum für landwirtschaftliche Forschung und engagiert sich für eine nachhaltige Landwirtschaft, hochwertige Lebensmittelproduktion und Umweltschutz.
         Angeschlossen an das Bundesamt für Landwirtschaft, forscht es entlang der gesamten Wertschöpfungskette der Landwirtschafts- und Ernährungsbranche, von Pflanzenbau und Nutztierhaltung bis hin zu Lebensmitteln und Ernährung.
@@ -1626,12 +1626,12 @@ systemmap:QIo1a8l3IT4lBqBJE a systemmap:FederalOrganization ;
         """@it ;
     owl:sameAs staatskalender:10003634 .
 
-systemmap:QMnIieexlpOQHsGvN a systemmap:FederalOrganization ;
+systemmap:SMnIieexlpOQHsGvN a systemmap:FederalOrganization ;
     rdfs:label "Genetische Ressourcen, Produktionssicherheit und Futtermittel"@de,
         "Genetic Resources, Production Safety and Animal Feed"@en,
         "Ressources génétiques, sécurité de la production et aliments pour animaux"@fr,
         "Risorse genetiche, sicurezza della produzione e mangimi"@it ;
-    schema:parentOrganization systemmap:QzXI1C2DYjDriK2F8 ;
+    schema:parentOrganization systemmap:SzXI1C2DYjDriK2F8 ;
     rdfs:comment """  
         Der Fachbereich Genetische Ressourcen, Produktionssicherheit und Futtermittel ist verantwortlich für den Erhalt und die nachhaltige Nutzung pflanzengenetischer Ressourcen,  
         die Überwachung der Gentechnologie in der Landwirtschaft sowie die Identifikation und Regulierung von Risiken in der landwirtschaftlichen Produktion.  
@@ -1662,7 +1662,7 @@ systemmap:QMnIieexlpOQHsGvN a systemmap:FederalOrganization ;
         "FBGRT"@fr,
         "FBGRT"@it .
 
-systemmap:QNbhMvt3Btta1U1d6 a systemmap:FederalOrganization ;
+systemmap:SNbhMvt3Btta1U1d6 a systemmap:FederalOrganization ;
     rdfs:label "Bundesamt für Statistik"@de,
         "Federal Statistical Office"@en,
         "Office fédéral de la statistique"@fr,
@@ -1689,12 +1689,12 @@ systemmap:QNbhMvt3Btta1U1d6 a systemmap:FederalOrganization ;
         "OFS"@fr,
         "UST"@it .
 
-systemmap:QQbNLiw8h9MnSXuyo a systemmap:FederalOrganization ;
+systemmap:SQbNLiw8h9MnSXuyo a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Informatikführung"@de,
         "Information Technology Management Division"@en,
         "Secteur Gestion Informatique"@fr,
         "Settore Gestione Informatica"@it ;
-    schema:parentOrganization systemmap:Q1JvEmah9Tl0698au ;
+    schema:parentOrganization systemmap:S1JvEmah9Tl0698au ;
     rdfs:comment """
         Der Fachbereich Informatikführung verantwortet die strategische Planung, Umsetzung und Sicherheit der Informatik im BLW, einschliesslich des Managements von Projekten, Budgets und Fachanwendungen.
         Er fungiert als Schnittstelle zu Dienstleistern, koordiniert Change-Management-Prozesse und stellt die Ausbildung sowie die Verwaltung von Mutationen und Berechtigungen sicher.
@@ -1717,12 +1717,12 @@ systemmap:QQbNLiw8h9MnSXuyo a systemmap:FederalOrganization ;
         "SGI"@fr,
         "SGI"@it .
 
-systemmap:QRu4rav1Rlm2mUMWr a systemmap:FederalOrganization ;
+systemmap:SRu4rav1Rlm2mUMWr a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Ein- und Ausfuhr"@de,
         "Specialized Unit for Import and Export"@en,
         "Secteur Importations et exportations"@fr,
         "Settore Importazioni ed esportazioni"@it ;
-    schema:parentOrganization systemmap:QhkERubSSrICbOshu ;
+    schema:parentOrganization systemmap:ShkERubSSrICbOshu ;
     rdfs:comment """
         Zu den Hauptaufgaben des Fachbereichs Ein- und Ausfuhr (FBEA) gehören die Verwaltung der Zollkontingente, die Erteilung von Einfuhrbewilligungen, die Zuteilung von Kontingentsanteilen, die Koordination mit der Oberzolldirektion sowie die Durchführung von internen und externen Kontrollen.
         Zudem kümmert sich der FBEA um die Gebührenverwaltung, den Betrieb und die Wartung von Fachapplikationen, die Bearbeitung von Gesuchen im Veredelungsverkehr und um Exportberatungen.
@@ -1743,12 +1743,12 @@ systemmap:QRu4rav1Rlm2mUMWr a systemmap:FederalOrganization ;
     systemmap:abbreviation "FBEA"@de,
         "SIE"@fr .
 
-systemmap:QW5qcGjvfz5WXYTVl a systemmap:FederalOrganization ;
+systemmap:SW5qcGjvfz5WXYTVl a systemmap:FederalOrganization ;
     rdfs:label "Abteilung Lebensmittel und Ernährung"@de,
         "Food and Nutrition Division"@en,
         "Département denrées alimentaires et nutrition"@fr,
         "Dipartimento alimenti e nutrizione"@it ;
-    schema:parentOrganization systemmap:Q3Rf79NI3Pm1rfOlN ;
+    schema:parentOrganization systemmap:S3Rf79NI3Pm1rfOlN ;
     rdfs:comment """
         Die Abteilung Lebensmittel und Ernährung des Bundesamts für Lebensmittelsicherheit und Veterinärwesen (BLV) ist verantwortlich für die Sicherheit und Qualität von Lebensmitteln sowie die Förderung einer gesunden Ernährung.
         Sie entwickelt Richtlinien und überwacht die Einhaltung von Standards, um die Gesundheit der Bevölkerung zu schützen.
@@ -1771,12 +1771,12 @@ systemmap:QW5qcGjvfz5WXYTVl a systemmap:FederalOrganization ;
         """@it ;
     owl:sameAs staatskalender:20035162 .
 
-systemmap:QaVyVVsIDkiDMtQq4 a systemmap:FederalOrganization ;
+systemmap:SaVyVVsIDkiDMtQq4 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Marktanalyse"@de,
         "Market Analysis Division"@en,
         "Secteur analyses du marché"@fr,
         "Settore analisi di mercato"@it ;
-    schema:parentOrganization systemmap:Q1JvEmah9Tl0698au ;
+    schema:parentOrganization systemmap:S1JvEmah9Tl0698au ;
     rdfs:comment """
         Der Fachbereich Marktanalysen informiert regelmässig über die Preisentwicklung in den Agrarmärkten mit dem Ziel, die Markttransparenz zu erhöhen und langfristige Entwicklungen aufzuzeigen.
         Dazu werden in verschiedenen Marktbereichen Preise entlang der Wertschöpfungsketten erhoben und ausgewiesen sowie datengestützte Marktanalysen erstellt.
@@ -1800,12 +1800,12 @@ systemmap:QaVyVVsIDkiDMtQq4 a systemmap:FederalOrganization ;
     systemmap:hasLegalBasis LwG:art_27,
         <https://www.fedlex.admin.ch/eli/cc/1999/71> .
 
-systemmap:QcVJ3tNOuwZ1juXuE a systemmap:FederalOrganization ;
+systemmap:ScVJ3tNOuwZ1juXuE a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Tierische Produkte und Tierzucht"@de,
         "Sector Animal Products and Breeding"@en,
         "Secteur Produits animaux et élevage"@fr,
         "Settore Prodotti animali e allevamento"@it ;
-    schema:parentOrganization systemmap:QhkERubSSrICbOshu ;
+    schema:parentOrganization systemmap:ShkERubSSrICbOshu ;
     rdfs:comment "Die Mitgestaltung der agrarpolitischen Rahmenbedingungen und deren Weiterentwicklung im Bereich der tierischen Produkte und der Tierzucht gehören zu den Kernaufgaben des FBTT. Weiter stellt er den reibungslosen und korrekten Vollzug der einschlägigen Bestimmungen des Landwirtschaftsgesetzes und folgender Bundesratsverordnungen sicher: Milchpreisstützungsverordnung, Schlachtviehverordnung, Eierverordnung, Verordnung über die Identitas AG und die Tierverkehrsdatenbank, Entsorgungsbeitragsverordnung, Landwirtschaftliche Deklarationsverordnung, Höchstbestandesverordnung, Verordnung über die Branchen- und Produzentenorganisationen, Schafwollverordnung und Tierzuchtverordnung."@de,
         "The design and further development of agricultural policy framework conditions in the field of animal products and breeding are among the core tasks of the SPAE. Furthermore, it ensures the smooth and correct implementation of the relevant provisions of the Agricultural Act and the following Federal Council ordinances: Milk Price Support Ordinance, Slaughter Livestock Ordinance, Egg Ordinance, Ordinance on Identitas AG and the Animal Traffic Database, Disposal Contribution Ordinance, Agricultural Declaration Ordinance, Maximum Stock Ordinance, Ordinance on Sector and Producer Organizations, Sheep Wool Ordinance, and Breeding Ordinance."@en,
         "La conception et le développement des cadres politiques agricoles dans le domaine des produits animaux et de l'élevage font partie des missions principales du SPAE. Il veille également à la mise en œuvre correcte et sans heurts des dispositions pertinentes de la loi agricole et des ordonnances suivantes du Conseil fédéral : Ordonnance sur le soutien des prix du lait, Ordonnance sur le bétail de boucherie, Ordonnance sur les œufs, Ordonnance sur Identitas AG et la base de données sur le trafic des animaux, Ordonnance sur la contribution à l'élimination, Ordonnance sur la déclaration agricole, Ordonnance sur le nombre maximal d'animaux, Ordonnance sur les organisations de filières et de producteurs, Ordonnance sur la laine de mouton et Ordonnance sur l'élevage."@fr,
@@ -1815,17 +1815,17 @@ systemmap:QcVJ3tNOuwZ1juXuE a systemmap:FederalOrganization ;
         "FBTT"@en,
         "SPAE"@fr,
         "SPAA"@it ;
-    systemmap:access systemmap:QLXw4VofhYbzXVNKC,
-        systemmap:Qe6Nt3cqogxz2d10g,
-        systemmap:QoY82Q0qEk9k0s3w3,
-        systemmap:Qutd0KIj3Rf8GlSwq .
+    systemmap:access systemmap:SLXw4VofhYbzXVNKC,
+        systemmap:Se6Nt3cqogxz2d10g,
+        systemmap:SoY82Q0qEk9k0s3w3,
+        systemmap:Sutd0KIj3Rf8GlSwq .
 
-systemmap:QcoeXHl4TgJbke1Yf a systemmap:FederalOrganization ;
+systemmap:ScoeXHl4TgJbke1Yf a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Direktzahlungsgrundlagen"@de,
         "Direct Payment Principles Division"@en,
         "Secteur bases des paiements directs"@fr,
         "Settore basi dei pagamenti diretti"@it ;
-    schema:parentOrganization systemmap:QsJ9OfSkUgPD8dkz3 ;
+    schema:parentOrganization systemmap:SsJ9OfSkUgPD8dkz3 ;
     rdfs:comment """  
         Der Fachbereich Direktzahlungsgrundlagen ist zuständig für die Umsetzung und Weiterentwicklung des Direktzahlungssystems im Bereich der Versorgungssicherheit,  
         der Kulturlandschaft, der Übergangsbeiträge, der landwirtschaftlichen Zonen und Gebiete, der landwirtschaftlichen Begriffe sowie der Anerkennung von Betrieben und Betriebsformen.  
@@ -1851,12 +1851,12 @@ systemmap:QcoeXHl4TgJbke1Yf a systemmap:FederalOrganization ;
         "FBDG"@fr,
         "FBDG"@it .
 
-systemmap:QfX7h09MplFWwb4LK a systemmap:FederalOrganization ;
+systemmap:SfX7h09MplFWwb4LK a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich nachhaltiger Pflanzenschutz und Sorten"@de,
         "Sustainable Plant Protection and Varieties Division"@en,
         "Secteur protection durable des végétaux et variétés"@fr,
         "Settore protezione sostenibile delle piante e varietà"@it ;
-    schema:parentOrganization systemmap:QzXI1C2DYjDriK2F8 ;
+    schema:parentOrganization systemmap:SzXI1C2DYjDriK2F8 ;
     rdfs:comment """  
         Der Fachbereich nachhaltiger Pflanzenschutz und Sorten (FB NPS) sorgt für den Schutz der Kulturen, den Vollzug des Saatgutrechtes und den Sortenschutz.  
         Dabei werden sowohl präventive als auch direkte Pflanzenschutzmassnahmen angewendet, um hochwertige Lebensmittel zu produzieren.  
@@ -1882,12 +1882,12 @@ systemmap:QfX7h09MplFWwb4LK a systemmap:FederalOrganization ;
         "FBNPS"@fr,
         "FBNPS"@it .
 
-systemmap:Qg6T9dU4npL98bHrb a systemmap:FederalOrganization ;
+systemmap:Sg6T9dU4npL98bHrb a systemmap:FederalOrganization ;
     rdfs:label "Abteilung Tiergesundheit und Tierschutz"@de,
         "Animal Health and Welfare Division"@en,
         "Département de la santé et de la protection des animaux"@fr,
         "Dipartimento della salute e della protezione degli animali"@it ;
-    schema:parentOrganization systemmap:Q3Rf79NI3Pm1rfOlN ;
+    schema:parentOrganization systemmap:S3Rf79NI3Pm1rfOlN ;
     rdfs:comment """
         Die Abteilung Tiergesundheit und Tierschutz des Bundesamts für Lebensmittelsicherheit und Veterinärwesen (BLV) fördert die Gesundheit und das Wohlbefinden von Tieren.
         Sie arbeitet eng mit Tierhalterorganisationen und Vollzugsorganen zusammen, basierend auf wissenschaftlichen Grundlagen.
@@ -1910,24 +1910,24 @@ systemmap:Qg6T9dU4npL98bHrb a systemmap:FederalOrganization ;
         """@it ;
     owl:sameAs staatskalender:20035164 .
 
-systemmap:QhkERubSSrICbOshu a systemmap:FederalOrganization ;
+systemmap:ShkERubSSrICbOshu a systemmap:FederalOrganization ;
     rdfs:label "Direktionsbereich Märkte und Internationales"@de,
         "Directorate for Markets and International Affairs"@en,
         "Unité de direction Marchés et affaires internationales"@fr,
         "Unità di direzione Mercati e affari internazionali"@it ;
-    schema:parentOrganization systemmap:QqeNr0H0FGL6Uv5Rr ;
+    schema:parentOrganization systemmap:SqeNr0H0FGL6Uv5Rr ;
     rdfs:comment "Der Direktionsbereich Märkte und Internationales setzt sich dafür ein, dass die Landwirtschaft aus dem Verkauf ihrer Produkte eine möglichst hohe Wertschöpfung erzielen kann. Selbsthilfemassnahmen, Innovation und Vermarktung der verschiedenen Branchen werden unterstützt. Zudem engagiert sich dieser Direktionsbereich in internationalen Organisationen wie der UNO-Ernährungsorganisation FAO oder der Welthandelsorganisation WTO."@de,
         "The Directorate for Markets and International Affairs works to ensure that agriculture achieves the highest possible added value from the sale of its products. It supports self-help measures, innovation, and the marketing of various sectors. Additionally, this directorate is involved in international organizations such as the UN Food and Agriculture Organization (FAO) and the World Trade Organization (WTO)."@en,
         "La Direction des marchés et des affaires internationales s'efforce de garantir que l'agriculture tire la plus grande valeur ajoutée possible de la vente de ses produits. Elle soutient les mesures d'auto-assistance, l'innovation et la commercialisation des différentes filières. De plus, cette direction est impliquée dans des organisations internationales telles que l'Organisation des Nations unies pour l'alimentation et l'agriculture (FAO) et l'Organisation mondiale du commerce (OMC)."@fr,
         "La Direzione dei mercati e degli affari internazionali si adopera affinché l'agricoltura ottenga il massimo valore aggiunto possibile dalla vendita dei suoi prodotti. Sostiene misure di auto-aiuto, innovazione e commercializzazione nei vari settori. Inoltre, questa direzione è coinvolta in organizzazioni internazionali come l'Organizzazione delle Nazioni Unite per l'alimentazione e l'agricoltura (FAO) e l'Organizzazione mondiale del commercio (OMC)."@it ;
     systemmap:abbreviation "DBMI"@de .
 
-systemmap:QieZtzwlMAxzFY1op a systemmap:FederalOrganization ;
+systemmap:SieZtzwlMAxzFY1op a systemmap:FederalOrganization ;
     rdfs:label "Business Intelligence Competence Center"@de,
         "Business Intelligence Competence Center"@en,
         "Centre de compétence Business Intelligence"@fr,
         "Centro di competenza Business Intelligence"@it ;
-    schema:parentOrganization systemmap:Q1JvEmah9Tl0698au ;
+    schema:parentOrganization systemmap:S1JvEmah9Tl0698au ;
     rdfs:comment """  
         Das Business Intelligence Competence Center (BI) ist verantwortlich für die Entwicklung und Umsetzung der BI-Strategie sowie die Planung und Durchführung von BI-Projekten.  
         Zu seinen Aufgaben gehören die Datenvisualisierung, das Reporting, die Beratung und Schulung von BI-Fachanwendern sowie die Analyse, Modellierung und Integration von Daten.  
@@ -1953,12 +1953,12 @@ systemmap:QieZtzwlMAxzFY1op a systemmap:FederalOrganization ;
         "GRBI"@fr,
         "GRBI"@it .
 
-systemmap:QntetIp00hrUGsnj5 a systemmap:FederalOrganization ;
+systemmap:SntetIp00hrUGsnj5 a systemmap:FederalOrganization ;
     rdfs:label "Direktionsbereich Recht, Ressourcen und Integrale Sicherheit"@de,
         "Directorate for Law, Resources, and Integral Security"@en,
         "Unité de direction Droit, ressources internes et sécurité intégrale"@fr,
         "Unità di direzione Digitalizzazione e gestione dei dati"@it ;
-    schema:parentOrganization systemmap:QqeNr0H0FGL6Uv5Rr ;
+    schema:parentOrganization systemmap:SqeNr0H0FGL6Uv5Rr ;
     rdfs:comment "Der Direktionsbereich Recht, Ressourcen und Integrale Sicherheit sichert die rechtliche Konformität der verschiedenen BLW-Massnahmen und ist insbesondere für die personellen Massnahmen des Amtes verantwortlich."@de,
         "The Directorate for Law, Resources, and Integral Security ensures the legal compliance of various BLW measures and is particularly responsible for the office’s personnel measures."@en,
         "La Direction du droit, des ressources et de la sécurité intégrale garantit la conformité juridique des différentes mesures de l'OFAG et est notamment responsable des mesures en matière de personnel du bureau."@fr,
@@ -1968,12 +1968,12 @@ systemmap:QntetIp00hrUGsnj5 a systemmap:FederalOrganization ;
         "DBRRIS"@fr,
         "DBRRIS"@it .
 
-systemmap:QoqmfoevPVgr3d0AA a systemmap:FederalOrganization ;
+systemmap:SoqmfoevPVgr3d0AA a systemmap:FederalOrganization ;
     rdfs:label "Zulassungsstelle Pflanzenschutzmittel"@de,
         "Plant Protection Products Registration Authority"@en,
         "Autorité d'homologation des produits phytosanitaires"@fr,
         "Autorità di omologazione dei prodotti fitosanitari"@it ;
-    schema:parentOrganization systemmap:Q3Rf79NI3Pm1rfOlN ;
+    schema:parentOrganization systemmap:S3Rf79NI3Pm1rfOlN ;
     rdfs:comment """
         Die Zulassungsstelle Pflanzenschutzmittel des Bundesamts für Lebensmittelsicherheit und Veterinärwesen (BLV) ist für die Zulassung und Überprüfung von Pflanzenschutzmitteln in der Schweiz verantwortlich.
         Sie stellt sicher, dass nur sichere und wirksame Pflanzenschutzmittel auf den Markt gelangen, indem sie deren gesundheitliche und ökologische Auswirkungen sorgfältig bewertet.
@@ -1996,12 +1996,12 @@ systemmap:QoqmfoevPVgr3d0AA a systemmap:FederalOrganization ;
         """@it ;
     owl:sameAs staatskalender:20049676 .
 
-systemmap:Qou0GnQeSqCPHGhze a systemmap:FederalOrganization ;
+systemmap:Sou0GnQeSqCPHGhze a systemmap:FederalOrganization ;
     rdfs:label "Abteilung Wissensgrundlagen"@de,
         "Knowledge Foundations Division"@en,
         "Département des bases de connaissances"@fr,
         "Dipartimento delle basi di conoscenza"@it ;
-    schema:parentOrganization systemmap:Q3Rf79NI3Pm1rfOlN ;
+    schema:parentOrganization systemmap:S3Rf79NI3Pm1rfOlN ;
     rdfs:comment """
         Die Abteilung Wissensgrundlagen unterstützt das Bundesamt für Lebensmittelsicherheit und Veterinärwesen (BLV) durch Förderung der Verfügbarkeit und Nutzung von Daten, Kompetenzen, Verfahren und Wissen.
         Sie beurteilt gesundheitliche Risiken für Mensch und Tier und stellt sicher, dass der aktuelle Wissensstand erfasst und bei Bedarf durch externe Expertise ergänzt wird.
@@ -2024,38 +2024,38 @@ systemmap:Qou0GnQeSqCPHGhze a systemmap:FederalOrganization ;
         """@it ;
     owl:sameAs staatskalender:20035163 .
 
-systemmap:QqeNr0H0FGL6Uv5Rr a systemmap:FederalOrganization ;
+systemmap:SqeNr0H0FGL6Uv5Rr a systemmap:FederalOrganization ;
     rdfs:label "Direktion BLW"@de,
         "Directorate FOAG"@en,
         "Direction OFAG"@fr,
         "Direzione UFAG"@it ;
-    schema:parentOrganization systemmap:Q2tIdqNmt3uS5Ny6D ;
+    schema:parentOrganization systemmap:S2tIdqNmt3uS5Ny6D ;
     owl:sameAs staatskalender:10003196 .
 
-systemmap:QsFdxnjM8hgUdzVT5 a systemmap:FederalOrganization ;
+systemmap:SsFdxnjM8hgUdzVT5 a systemmap:FederalOrganization ;
     rdfs:label "Kompetenzzentrum Daten"@de ;
-    schema:parentOrganization systemmap:Qou0GnQeSqCPHGhze ;
+    schema:parentOrganization systemmap:Sou0GnQeSqCPHGhze ;
     owl:sameAs staatskalender:20051877 ;
     systemmap:abbreviation "DCC"@de .
 
-systemmap:QsJ9OfSkUgPD8dkz3 a systemmap:FederalOrganization ;
+systemmap:SsJ9OfSkUgPD8dkz3 a systemmap:FederalOrganization ;
     rdfs:label "Direktionsbereich Direktzahlungen und Ländliche Entwicklung"@de,
         "Directorate for Direct Payments and Rural Development"@en,
         "Unité de direction Paiements directs et développement rural"@fr,
         "Unità di direzione Pagamenti diretti e sviluppo rurale"@it ;
-    schema:parentOrganization systemmap:QqeNr0H0FGL6Uv5Rr ;
+    schema:parentOrganization systemmap:SqeNr0H0FGL6Uv5Rr ;
     rdfs:comment "Die Landwirte und Landwirtinnen erbringen verschiedene Leistungen für die Allgemeinheit und werden deshalb mit finanziellen Beiträgen unterstützt. Dafür ist der Direktionsbereich Direktzahlungen und Ländliche Entwicklung zuständig. Er setzt sich zudem für die Vitalität des ländlichen Raums ein."@de,
         "Farmers provide various services for the general public and are therefore supported with financial contributions. The Directorate for Direct Payments and Rural Development is responsible for this. It also works to ensure the vitality of rural areas."@en,
         "Les agriculteurs fournissent divers services à la collectivité et sont donc soutenus par des contributions financières. La Direction des paiements directs et du développement rural en est responsable. Elle s'engage également pour la vitalité des zones rurales."@fr,
         "Gli agricoltori forniscono vari servizi alla collettività e sono quindi sostenuti con contributi finanziari. La Direzione dei pagamenti diretti e dello sviluppo rurale è responsabile di questo. Inoltre, si impegna per la vitalità delle aree rurali."@it ;
     systemmap:abbreviation "DBDLE"@de .
 
-systemmap:QtL8MElzDJHAjtyXL a systemmap:FederalOrganization ;
+systemmap:StL8MElzDJHAjtyXL a systemmap:FederalOrganization ;
     rdfs:label "Gruppe GEVER Services"@de,
         "GEVER Services Group"@en,
         "Groupe Services GEVER"@fr,
         "Gruppo Servizi GEVER"@it ;
-    schema:parentOrganization systemmap:Q1JvEmah9Tl0698au ;
+    schema:parentOrganization systemmap:S1JvEmah9Tl0698au ;
     rdfs:comment """
         Die Gruppe GEVER Services ist für die physische und elektronische Postverteilung sowie die zentrale Adressverwaltung im BLW zuständig.
         Die Postverarbeitung erfolgt hauptsächlich über das GEVER-System, das eine strukturierte Bearbeitung und Archivierung digitaler Unterlagen ermöglicht. 
@@ -2078,17 +2078,17 @@ systemmap:QtL8MElzDJHAjtyXL a systemmap:FederalOrganization ;
         "GSG"@fr,
         "GSG"@it .
 
-systemmap:QuodJifeNVNW8c4Tj a systemmap:FederalOrganization ;
+systemmap:SuodJifeNVNW8c4Tj a systemmap:FederalOrganization ;
     rdfs:label "Bildung & Forschung"@de ;
-    schema:parentOrganization systemmap:Qou0GnQeSqCPHGhze ;
+    schema:parentOrganization systemmap:Sou0GnQeSqCPHGhze ;
     owl:sameAs staatskalender:20035170 .
 
-systemmap:QvCD295luQEx4jnuB a systemmap:FederalOrganization ;
+systemmap:SvCD295luQEx4jnuB a systemmap:FederalOrganization ;
     rdfs:label "Toxikologie Pflanzenschutzmittel"@de ;
-    schema:parentOrganization systemmap:Qou0GnQeSqCPHGhze ;
+    schema:parentOrganization systemmap:Sou0GnQeSqCPHGhze ;
     owl:sameAs staatskalender:20035173 .
 
-systemmap:QwlgSr7ukziL6iHsP a systemmap:FederalOrganization ;
+systemmap:SwlgSr7ukziL6iHsP a systemmap:FederalOrganization ;
     rdfs:label "Bundesamt für Umwelt"@de,
         "Federal Office for the Environment"@en,
         "Office fédéral de l'environnement"@fr,
@@ -2119,12 +2119,12 @@ systemmap:QwlgSr7ukziL6iHsP a systemmap:FederalOrganization ;
         "OFEV"@fr,
         "UFAM"@it .
 
-systemmap:QyfZhzeyT1CqJU0BP a systemmap:FederalOrganization ;
+systemmap:SyfZhzeyT1CqJU0BP a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Direktzahlungsprogramme"@de,
         "Direct Payment Programs Division"@en,
         "Secteur Paiements directs - Programmes"@fr,
         "Settore Pagamenti diretti - Programmi"@it ;
-    schema:parentOrganization systemmap:QsJ9OfSkUgPD8dkz3 ;
+    schema:parentOrganization systemmap:SsJ9OfSkUgPD8dkz3 ;
     rdfs:comment """
         Der Fachbereich setzt Direktzahlungsprogramme in den Bereichen Umwelt, Tierwohl und Landschaft um, unterstützt kantonale Stellen und überwacht deren Vollzug.  
         Zudem wird der ökologische Leistungsnachweis (ÖLN) weiterentwickelt, Regelbereiche wie Biodiversitätsstrategie, Biolandbau sowie Energie- und Klimaschutz koordiniert und relevante Gesetzgebungsschnittstellen gepflegt.  
@@ -2151,17 +2151,17 @@ systemmap:QyfZhzeyT1CqJU0BP a systemmap:FederalOrganization ;
         "FBDP"@fr,
         "FBDP"@it .
 
-systemmap:Qym1u44hA9FMZOdyT a systemmap:FederalOrganization ;
+systemmap:Sym1u44hA9FMZOdyT a systemmap:FederalOrganization ;
     rdfs:label "Risikobewertung"@de ;
-    schema:parentOrganization systemmap:Qou0GnQeSqCPHGhze ;
+    schema:parentOrganization systemmap:Sou0GnQeSqCPHGhze ;
     owl:sameAs staatskalender:20050577 .
 
-systemmap:QzXI1C2DYjDriK2F8 a systemmap:FederalOrganization ;
+systemmap:SzXI1C2DYjDriK2F8 a systemmap:FederalOrganization ;
     rdfs:label "Direktionsbereich Produktionsgrundlagen, natürliche Ressourcen und Forschung"@de,
         "Directorate for Production Resources, Natural Resources and Research"@en,
         "Unité de direction Bases de production, ressources naturelles et recherche"@fr,
         "Unità di direzione Basi di produzione, risorse naturali e ricerca"@it ;
-    schema:parentOrganization systemmap:QqeNr0H0FGL6Uv5Rr ;
+    schema:parentOrganization systemmap:SqeNr0H0FGL6Uv5Rr ;
     rdfs:comment "Widerstandsfähige Produktions- und Ökosysteme stehen im Zentrum des Direktionsbereichs Produktionsgrundlagen, natürliche Ressourcen und Forschung. So ist er unter anderem dafür zuständig, dass Pflanzen nachhaltig geschützt und Tiere optimal ernährt werden können. Desweitern fördert dieser Bereich verschiedene Forschungs- und Beratungsprojekte in der Schweiz, aber auch international."@de,
         "Resilient production and ecosystem systems are at the center of the Directorate for Production Resources, Natural Resources and Research. Among other things, it is responsible for ensuring that plants are sustainably protected and animals are optimally fed. Furthermore, this directorate promotes various research and advisory projects in Switzerland and internationally."@en,
         "Les systèmes de production et les écosystèmes résilients sont au cœur de la Direction des bases de production, des ressources naturelles et de la recherche. Elle est notamment chargée de garantir que les plantes soient protégées durablement et que les animaux soient nourris de manière optimale. De plus, cette direction soutient divers projets de recherche et de conseil en Suisse et à l'international."@fr,
@@ -2174,7 +2174,7 @@ systemmap:QzXI1C2DYjDriK2F8 a systemmap:FederalOrganization ;
 staatskalender:20050530 a systemmap:FederalOrganization ;
     rdfs:label "Monitoring des Agrarumweltsystems Schweiz MAUS"@de .
 
-systemmap:Q3jZwzvmFKsXRWiI a systemmap:Identifier ;
+systemmap:S3jZwzvmFKsXRWiI a systemmap:Identifier ;
     rdfs:label "BUR-Nummer"@de,
         "BUR Number"@en,
         "Numéro BUR"@fr,
@@ -2199,9 +2199,9 @@ systemmap:Q3jZwzvmFKsXRWiI a systemmap:Identifier ;
         "BURNR"@en,
         "BURNR"@fr,
         "BURNR"@it ;
-    systemmap:containedIn systemmap:QHyBeGX0LsQwjJ6Z .
+    systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
-systemmap:QDLEUPczkJ9AWZeC a systemmap:Identifier ;
+systemmap:SDLEUPczkJ9AWZeC a systemmap:Identifier ;
     rdfs:label "UID-Nummer"@de,
         "UID Number"@en,
         "Numéro UID"@fr,
@@ -2222,9 +2222,9 @@ systemmap:QDLEUPczkJ9AWZeC a systemmap:Identifier ;
         Ogni azienda attiva in Svizzera riceve un numero d'identificazione aziendale (UID) unico.
         L'uso dell'UID facilita l'alleggerimento amministrativo per le aziende e consente una collaborazione più efficiente tra le autorità.
         """@it ;
-    systemmap:containedIn systemmap:QuEtT7joC8HXVSfF .
+    systemmap:containedIn systemmap:SuEtT7joC8HXVSfF .
 
-systemmap:Q1AkhvKmzBiJFCTc a systemmap:Information ;
+systemmap:S1AkhvKmzBiJFCTc a systemmap:Information ;
     rdfs:label "Agrarmarktdaten"@de,
         "agricultural market data"@en,
         "données du marché agricole"@fr,
@@ -2233,10 +2233,10 @@ systemmap:Q1AkhvKmzBiJFCTc a systemmap:Information ;
         "Market data includes prices, quantities, production systems."@en,
         "Les données de marché comprennent les prix, les quantités, les systèmes de production."@fr,
         "I dati di mercato comprendono prezzi, quantità e sistemi di produzione."@it ;
-    systemmap:containedIn systemmap:Qc6kZqxTyS0gFGCY ;
-    systemmap:informs systemmap:QRT6X0n1ML8vwHUW .
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
+    systemmap:informs systemmap:SRT6X0n1ML8vwHUW .
 
-systemmap:Q4BoMPavXD5gIObm a systemmap:Information ;
+systemmap:S4BoMPavXD5gIObm a systemmap:Information ;
     rdfs:label "Tieridentifikationsdaten"@de,
         "Animal identification data"@en,
         "Données d'identification des animaux"@fr,
@@ -2257,9 +2257,9 @@ systemmap:Q4BoMPavXD5gIObm a systemmap:Information ;
         Contiene i dati di identificazione di base degli animali, come i numeri univoci delle marche auricolari, la specie, il sesso e la data di nascita.
         Questi dati principali costituiscono la base per la tracciabilità senza interruzioni nel TVD.
         """@it ;
-    systemmap:containedIn systemmap:QU88cJmqj8nBRl2KZ .
+    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
-systemmap:Q4hqylQaEIsYGXMo a systemmap:Information ;
+systemmap:S4hqylQaEIsYGXMo a systemmap:Information ;
     rdfs:label "Verschiebung von Mineraldüngern"@de,
         "Movement of Mineral Fertilizers"@en,
         "Déplacement des engrais minéraux"@fr,
@@ -2276,9 +2276,9 @@ systemmap:Q4hqylQaEIsYGXMo a systemmap:Information ;
         """
         Lo spostamento dei fertilizzanti minerali include la registrazione e la segnalazione di tutti gli afflussi e deflussi di fertilizzanti minerali, compresi acquisti, vendite e trasferimenti interni.
         """@it ;
-    systemmap:containedIn systemmap:QjCVTMrYaOTygNcqF .
+    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
 
-systemmap:Q7mhWQjPZiSFc8dU a systemmap:Information ;
+systemmap:S7mhWQjPZiSFc8dU a systemmap:Information ;
     rdfs:label "Tierereignisdaten"@de,
         "Animal event data"@en,
         "Données d'événements animaux"@fr,
@@ -2299,9 +2299,9 @@ systemmap:Q7mhWQjPZiSFc8dU a systemmap:Information ;
         Registra tutti gli eventi dinamici nel ciclo di vita degli animali, inclusi i dati di nascita, movimento e macellazione, nonché i cambi di detentore.
         Queste informazioni sono essenziali per tracciare i cambi di posizione, le fasi di trasporto e i processi di lavorazione.
         """@it ;
-    systemmap:containedIn systemmap:QU88cJmqj8nBRl2KZ .
+    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
-systemmap:Q8JpqvyO4LQwEM5s a systemmap:Information ;
+systemmap:S8JpqvyO4LQwEM5s a systemmap:Information ;
     rdfs:label "Globaler Sortenkatalog"@de,
         "Global variety catalog"@en,
         "Catalogue mondial des variétés"@fr,
@@ -2321,10 +2321,10 @@ systemmap:Q8JpqvyO4LQwEM5s a systemmap:Information ;
         Informazioni sulle varietà vegetali provenienti dai paesi membri dell'UPOV e dall'Organizzazione per la cooperazione e lo sviluppo economico (OCSE).
         Questo elenco di varietà funge da registro centrale per le denominazioni varietali e supporta la verifica della distinzione delle nuove varietà.
         """@it ;
-    systemmap:containedIn systemmap:QgjZ0efLbuCR2HvN ;
-    systemmap:informedBy systemmap:Qpqrv6Ul05KJySTs .
+    systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN ;
+    systemmap:informedBy systemmap:Spqrv6Ul05KJySTs .
 
-systemmap:Q8cKNg0hfPy97TUB a systemmap:Information ;
+systemmap:S8cKNg0hfPy97TUB a systemmap:Information ;
     rdfs:label "Details zu Unternehmen"@de,
         "Company details"@en,
         "Détails sur les entreprises"@fr,
@@ -2341,9 +2341,9 @@ systemmap:Q8cKNg0hfPy97TUB a systemmap:Information ;
         """
         Numero di dipendenti per genere e orario di lavoro, capitale sociale delle società per azioni, dati di fatturato, data di registrazione o cancellazione nel registro commerciale, data di annuncio della fondazione o chiusura di un'azienda o impresa.
         """@it ;
-    systemmap:containedIn systemmap:QHyBeGX0LsQwjJ6Z .
+    systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
-systemmap:Q9J1HTMKIxnCgmYc a systemmap:Information ;
+systemmap:S9J1HTMKIxnCgmYc a systemmap:Information ;
     rdfs:label "Pflanzenschutzmittel"@de,
         "Plant Protection Products"@en,
         "Produits phytosanitaires"@fr,
@@ -2360,9 +2360,9 @@ systemmap:Q9J1HTMKIxnCgmYc a systemmap:Information ;
         """
         Elenco dei prodotti fitosanitari autorizzati in Svizzera, inclusa la loro composizione chimica, i numeri W e i titolari dell'autorizzazione.
         """@it ;
-    systemmap:containedIn systemmap:Qhhoiq8azX3SHGL3W .
+    systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
-systemmap:QAUWzyCpeGZ6vVil a systemmap:Information ;
+systemmap:SAUWzyCpeGZ6vVil a systemmap:Information ;
     rdfs:label "Daten zu Tierhaltern"@de,
         "Data on animal owners"@en,
         "Données sur les détenteurs d’animaux"@fr,
@@ -2387,10 +2387,10 @@ systemmap:QAUWzyCpeGZ6vVil a systemmap:Information ;
         Ciò include i dati di identificazione necessari per l'assegnazione univoca, come il numero TVD o il numero dell'azienda agricola, nonché i dati di base sull'identità e l'indirizzo di contatto della persona.
         Questi dati garantiscono che tutti i movimenti e gli eventi degli animali possano essere correttamente attribuiti a un detentore, essenziale per la tracciabilità e il rispetto dei requisiti legali.
         """@it ;
-    systemmap:containedIn systemmap:QU88cJmqj8nBRl2KZ ;
-    systemmap:informedBy systemmap:QvNriWslaOR5xkdw .
+    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ ;
+    systemmap:informedBy systemmap:SvNriWslaOR5xkdw .
 
-systemmap:QDmJeWK7EOnMqRLs a systemmap:Information ;
+systemmap:SDmJeWK7EOnMqRLs a systemmap:Information ;
     rdfs:label "Auflagen zur Anwendung von Pflanzenschutzmitteln"@de,
         "Conditions for the Use of Plant Protection Products"@en,
         "Conditions d'utilisation des produits phytosanitaires"@fr,
@@ -2407,9 +2407,9 @@ systemmap:QDmJeWK7EOnMqRLs a systemmap:Information ;
         """
         Regolamenti e restrizioni da osservare nell'uso dei prodotti fitosanitari, inclusi dosaggio, tempistica dell'applicazione e misure protettive.
         """@it ;
-    systemmap:containedIn systemmap:Qhhoiq8azX3SHGL3W .
+    systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
-systemmap:QECM4KqStG9yBva6 a systemmap:Information ;
+systemmap:SECM4KqStG9yBva6 a systemmap:Information ;
     rdfs:label "Verschiebung von Hof- und Recyclingdünger"@de,
         "Movement of Farmyard and Recycled Fertilizers"@en,
         "Déplacement des engrais de ferme et recyclés"@fr,
@@ -2426,9 +2426,9 @@ systemmap:QECM4KqStG9yBva6 a systemmap:Information ;
         """
         Lo spostamento dei fertilizzanti aziendali e riciclati include la registrazione e la segnalazione di tutti gli afflussi e deflussi, compresi acquisti, vendite e trasferimenti interni.
         """@it ;
-    systemmap:containedIn systemmap:QjCVTMrYaOTygNcqF .
+    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
 
-systemmap:QFyGV7l0kN4qgA8u a systemmap:Information ;
+systemmap:SFyGV7l0kN4qgA8u a systemmap:Information ;
     rdfs:label "Kulturen und Schaderreger"@de,
         "Crops and Pests"@en,
         "Cultures et organismes nuisibles"@fr,
@@ -2445,9 +2445,9 @@ systemmap:QFyGV7l0kN4qgA8u a systemmap:Information ;
         """
         Elenco delle colture e degli organismi nocivi per i quali è già stata concessa un'autorizzazione per un prodotto fitosanitario in Svizzera.
         """@it ;
-    systemmap:containedIn systemmap:Qhhoiq8azX3SHGL3W .
+    systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
-systemmap:QIsQ6LSUJc3xbG9B a systemmap:Information ;
+systemmap:SIsQ6LSUJc3xbG9B a systemmap:Information ;
     rdfs:label "Biozide"@de,
         "Biocides"@en,
         "Biocides"@fr,
@@ -2464,9 +2464,9 @@ systemmap:QIsQ6LSUJc3xbG9B a systemmap:Information ;
         """
         Prodotti utilizzati per combattere gli organismi nocivi. Sono inclusi anche i prodotti fitosanitari importati parallelamente da altri paesi.
         """@it ;
-    systemmap:containedIn systemmap:QHEaRYIgvZ3xrDLo .
+    systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
-systemmap:QLXw4VofhYbzXVNKC a systemmap:Information ;
+systemmap:SLXw4VofhYbzXVNKC a systemmap:Information ;
     rdfs:label "Daten zur Milchverwertung"@de,
         "Data on milk utilization"@en,
         "Données sur la valorisation du lait"@fr,
@@ -2475,9 +2475,9 @@ systemmap:QLXw4VofhYbzXVNKC a systemmap:Information ;
         "These data are essential for the calculation and payment of subsidies for cheesed milk as well as for feeding without silage by the Federal Office for Agriculture (BLW)."@en,
         "Ces données sont essentielles pour le calcul et le paiement des subventions pour le lait transformé en fromage ainsi que pour l'alimentation sans ensilage par l'Office fédéral de l'agriculture (OFAG)."@fr,
         "Questi dati sono essenziali per il calcolo e il pagamento dei sussidi per il latte trasformato in formaggio e per l'alimentazione senza insilato da parte dell'Ufficio federale dell'agricoltura (UFAG)."@it ;
-    systemmap:containedIn systemmap:QYOd1TkacTh6cr0xP .
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:QPCig1xdekUHDV4r a systemmap:Information ;
+systemmap:SPCig1xdekUHDV4r a systemmap:Information ;
     rdfs:label "Milchstatistik"@de,
         "Milk statistics"@en,
         "Statistiques du lait"@fr,
@@ -2486,17 +2486,17 @@ systemmap:QPCig1xdekUHDV4r a systemmap:Information ;
         "Monthly statistics and multi-year comparisons containing information on the milk produced and its processing into different product groups."@en,
         "Statistiques mensuelles et comparaisons pluriannuelles contenant des informations sur le lait produit et sa transformation en différentes catégories de produits."@fr,
         "Statistiche mensili e confronti pluriennali contenenti informazioni sul latte prodotto e sulla sua trasformazione in diverse categorie di prodotti."@it ;
-    systemmap:containedIn systemmap:QYOd1TkacTh6cr0xP .
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:QRT6X0n1ML8vwHUW a systemmap:Information ;
+systemmap:SRT6X0n1ML8vwHUW a systemmap:Information ;
     rdfs:label "Linked Data"@de,
         "Linked Data"@en,
         "Linked Data"@fr,
         "Linked Data"@it ;
-    systemmap:containedIn systemmap:QHFSc6xgsHF70IlUd,
-        systemmap:QpLZd1ojPxF0CvH28 .
+    systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd,
+        systemmap:SpLZd1ojPxF0CvH28 .
 
-systemmap:QUZP05KJlIyCX9A8 a systemmap:Information ;
+systemmap:SUZP05KJlIyCX9A8 a systemmap:Information ;
     rdfs:label "Zubereitungen"@de,
         "Preparations"@en,
         "Préparations"@fr,
@@ -2513,9 +2513,9 @@ systemmap:QUZP05KJlIyCX9A8 a systemmap:Information ;
         """
         Miscele o soluzioni composte da due o più sostanze.
         """@it ;
-    systemmap:containedIn systemmap:QHEaRYIgvZ3xrDLo .
+    systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
-systemmap:QUlfRYzH3b0gx7VX a systemmap:Information ;
+systemmap:SUlfRYzH3b0gx7VX a systemmap:Information ;
     rdfs:label "Verschiebung von Pflanzenschutzmitteln"@de,
         "Movement of Plant Protection Products"@en,
         "Déplacement des produits phytosanitaires"@fr,
@@ -2532,9 +2532,9 @@ systemmap:QUlfRYzH3b0gx7VX a systemmap:Information ;
         """
         Lo spostamento dei prodotti fitosanitari include la registrazione e la segnalazione di tutti gli afflussi e deflussi, compresi acquisti, vendite e trasferimenti interni.
         """@it ;
-    systemmap:containedIn systemmap:QjCVTMrYaOTygNcqF .
+    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
 
-systemmap:QZBHsREMx369FArg a systemmap:Information ;
+systemmap:SZBHsREMx369FArg a systemmap:Information ;
     rdfs:label "Dünger"@de,
         "Fertilizers"@en,
         "Engrais"@fr,
@@ -2551,9 +2551,9 @@ systemmap:QZBHsREMx369FArg a systemmap:Information ;
         """
         Prodotti per la fertilizzazione del suolo e delle piante.
         """@it ;
-    systemmap:containedIn systemmap:QHEaRYIgvZ3xrDLo .
+    systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
-systemmap:Qb2FM7pKN60PrRwU a systemmap:Information ;
+systemmap:Sb2FM7pKN60PrRwU a systemmap:Information ;
     rdfs:label "Globale Pflanzenliste"@de,
         "Global plant list"@en,
         "Liste globale des plantes"@fr,
@@ -2582,9 +2582,9 @@ systemmap:Qb2FM7pKN60PrRwU a systemmap:Information ;
         Questi cosiddetti codici UPOV sono generalmente composti da cinque lettere per il genere e tre lettere per la specie. Ad esempio, <tt>PRUNU_ARM</tt> rappresenta <i>Prunus armeniaca</i> (albicocco).
         Questo sistema facilita la classificazione e lo scambio di informazioni sulle varietà vegetali.
         """@it ;
-    systemmap:containedIn systemmap:QgjZ0efLbuCR2HvN .
+    systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN .
 
-systemmap:Qe6Nt3cqogxz2d10g a systemmap:Information ;
+systemmap:Se6Nt3cqogxz2d10g a systemmap:Information ;
     rdfs:label "Daten zur Milchproduktion"@de,
         "Data on milk production"@en,
         "Données sur la production laitière"@fr,
@@ -2605,9 +2605,9 @@ systemmap:Qe6Nt3cqogxz2d10g a systemmap:Information ;
         Quantità di produzione mensili (in kg) del latte di mucca e bufala consegnato nel mese precedente da tutti i produttori di latte.
         L'UFAG necessita di queste informazioni per l'assegnazione del sussidio per il latte di consumo.
         """@it ;
-    systemmap:containedIn systemmap:QYOd1TkacTh6cr0xP .
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:Ql5KyePu7JtGiE3V a systemmap:Information ;
+systemmap:Sl5KyePu7JtGiE3V a systemmap:Information ;
     rdfs:label "Produktekatalog"@de,
         "Product catalog"@en,
         "Catalogue de produits"@fr,
@@ -2628,11 +2628,11 @@ systemmap:Ql5KyePu7JtGiE3V a systemmap:Information ;
         Raccolta di informazioni sui prodotti fitosanitari, i mangimi, i fertilizzanti minerali, i fertilizzanti agricoli e quelli riciclati.
         Ciò include gli identificatori, i nomi, le descrizioni, gli ingredienti e le quantità, ecc.
         """@it ;
-    systemmap:containedIn systemmap:QjCVTMrYaOTygNcqF ;
-    systemmap:informedBy systemmap:Q9J1HTMKIxnCgmYc,
-        systemmap:QZBHsREMx369FArg .
+    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF ;
+    systemmap:informedBy systemmap:S9J1HTMKIxnCgmYc,
+        systemmap:SZBHsREMx369FArg .
 
-systemmap:QoBRgq7STLbZfEze a systemmap:Information ;
+systemmap:SoBRgq7STLbZfEze a systemmap:Information ;
     rdfs:label "Meldepflichtdaten (Schafe & Ziegen)"@de,
         "Mandatory reporting data (sheep & goats)"@en,
         "Données à déclaration obligatoire (moutons & chèvres)"@fr,
@@ -2653,9 +2653,9 @@ systemmap:QoBRgq7STLbZfEze a systemmap:Information ;
         Contiene dati specifici che devono essere registrati a causa di obblighi di notifica estesi per pecore e capre.
         Ciò include le segnalazioni di nascite (entro 30 giorni), nonché decessi, arrivi e partenze e macellazioni (entro 3 giorni).
         """@it ;
-    systemmap:containedIn systemmap:QU88cJmqj8nBRl2KZ .
+    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
-systemmap:Qpqrv6Ul05KJySTs a systemmap:Information ;
+systemmap:Spqrv6Ul05KJySTs a systemmap:Information ;
     rdfs:label "Nationaler Sortenkatalog"@de,
         "National variety catalog"@en,
         "Catalogue national des variétés"@fr,
@@ -2664,10 +2664,10 @@ systemmap:Qpqrv6Ul05KJySTs a systemmap:Information ;
         "Catalog of recognized agricultural plant varieties used in Switzerland. The information is recorded by breeders."@en,
         "Catalogue des variétés de plantes agricoles reconnues utilisées en Suisse. Les informations sont enregistrées par les sélectionneurs."@fr,
         "Catalogo delle varietà di piante agricole riconosciute utilizzate in Svizzera. Le informazioni sono registrate dai selezionatori."@it ;
-    systemmap:containedIn systemmap:QE5DY78J7vgfoiDLj ;
-    systemmap:informedBy systemmap:Qb2FM7pKN60PrRwU .
+    systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj ;
+    systemmap:informedBy systemmap:Sb2FM7pKN60PrRwU .
 
-systemmap:QzcK9O3XZFxVW1IS a systemmap:Information ;
+systemmap:SzcK9O3XZFxVW1IS a systemmap:Information ;
     rdfs:label "Daten zur Milchsegmentierung"@de,
         "Data on milk segmentation"@en,
         "Données sur la segmentation du lait"@fr,
@@ -2676,9 +2676,9 @@ systemmap:QzcK9O3XZFxVW1IS a systemmap:Information ;
         "Data on the segmentation of milk utilization according to the BOM1 regulation."@en,
         "Données sur la segmentation de la valorisation du lait selon le règlement BOM1."@fr,
         "Dati sulla segmentazione dell'utilizzo del latte secondo il regolamento BOM1."@it ;
-    systemmap:containedIn systemmap:QYOd1TkacTh6cr0xP .
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:QzuDlnYUQMk3HaCb a systemmap:Information ;
+systemmap:SzuDlnYUQMk3HaCb a systemmap:Information ;
     rdfs:label "Strukturdaten"@de,
         "Structural data"@en,
         "Données structurelles"@fr,
@@ -2703,10 +2703,10 @@ systemmap:QzuDlnYUQMk3HaCb a systemmap:Information ;
         Copre quasi il 100% delle aziende e raccoglie variabili come le dimensioni aziendali, le superfici coltivate, il numero di animali da allevamento e gli occupati.
         L'indagine serve per l'analisi statistica dell'agricoltura, l'aggiornamento del registro delle aziende e le decisioni di politica agricola.
         """@it ;
-    systemmap:containedIn systemmap:QvDlxaJ5YMkuZGH6k ;
-    systemmap:informs systemmap:QX1qchbxSZKWI6Up .
+    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
+    systemmap:informs systemmap:SX1qchbxSZKWI6Up .
 
-systemmap:Q6ILF4g1j5sNf9aG a systemmap:PersonInformation ;
+systemmap:S6ILF4g1j5sNf9aG a systemmap:PersonInformation ;
     rdfs:label "Informationen zur Einfuhr von PSM"@de,
         "Information on the import of PPP"@en,
         "Informations sur l'importation de PPP"@fr,
@@ -2723,10 +2723,10 @@ systemmap:Q6ILF4g1j5sNf9aG a systemmap:PersonInformation ;
         """
         Informazioni sulla data di importazione, il prodotto, l'importatore e il destinatario di un prodotto fitosanitario (PPP).
         """@it ;
-    systemmap:containedIn systemmap:QywklUB91myTH0cvS ;
-    systemmap:informedBy systemmap:QfQ6BN8rDjKhTWL4 .
+    systemmap:containedIn systemmap:SywklUB91myTH0cvS ;
+    systemmap:informedBy systemmap:SfQ6BN8rDjKhTWL4 .
 
-systemmap:Q6aBblr7qNp15tGw a systemmap:PersonInformation ;
+systemmap:S6aBblr7qNp15tGw a systemmap:PersonInformation ;
     rdfs:label "Kontaktdaten Bewirtschaftenden"@de,
         "Contact details of farm managers"@en,
         "Coordonnées des exploitants agricoles"@fr,
@@ -2735,9 +2735,9 @@ systemmap:Q6aBblr7qNp15tGw a systemmap:PersonInformation ;
         "Information on the contact details of farm managers, such as email addresses or phone numbers."@en,
         "Informations sur les coordonnées des exploitants agricoles, telles que les adresses e-mail ou les numéros de téléphone."@fr,
         "Informazioni sui dati di contatto dei gestori agricoli, come indirizzi e-mail o numeri di telefono."@it ;
-    systemmap:containedIn systemmap:QvDlxaJ5YMkuZGH6k .
+    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
-systemmap:QJuklUVKfEwj2Xpc a systemmap:PersonInformation ;
+systemmap:SJuklUVKfEwj2Xpc a systemmap:PersonInformation ;
     rdfs:label "Kontaktdaten Züchter"@de,
         "Contact details of breeders"@en,
         "Coordonnées des sélectionneurs"@fr,
@@ -2746,9 +2746,9 @@ systemmap:QJuklUVKfEwj2Xpc a systemmap:PersonInformation ;
         "Contact details of breeders who provide information about the varieties to ProVar."@en,
         "Coordonnées des sélectionneurs qui fournissent des informations sur les variétés à ProVar."@fr,
         "Dati di contatto dei selezionatori che forniscono informazioni sulle varietà a ProVar."@it ;
-    systemmap:containedIn systemmap:QE5DY78J7vgfoiDLj .
+    systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj .
 
-systemmap:QQ2MIhpz1CvdqK6f a systemmap:PersonInformation ;
+systemmap:SQ2MIhpz1CvdqK6f a systemmap:PersonInformation ;
     rdfs:label "Beitragsdaten"@de,
         "Contribution data"@en,
         "Données de contribution"@fr,
@@ -2769,9 +2769,9 @@ systemmap:QQ2MIhpz1CvdqK6f a systemmap:PersonInformation ;
         Contiene dati sui contributi finanziari alle aziende agricole.
         Ciò include informazioni sugli importi dei contributi, le basi di calcolo, i criteri e le modalità di pagamento, nonché i processi amministrativi sottostanti.
         """@it ;
-    systemmap:containedIn systemmap:QvDlxaJ5YMkuZGH6k .
+    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
-systemmap:QX1qchbxSZKWI6Up a systemmap:PersonInformation ;
+systemmap:SX1qchbxSZKWI6Up a systemmap:PersonInformation ;
     rdfs:label "Informationen zu Landwirtschaftsbetrieben"@de,
         "Information about agricultural enterprises"@en,
         "Informations sur les exploitations agricoles"@fr,
@@ -2780,16 +2780,16 @@ systemmap:QX1qchbxSZKWI6Up a systemmap:PersonInformation ;
         "Number of large livestock units, information on land use, occupation and age of the farm manager."@en,
         "Nombre d'unités de gros bétail, informations sur l'utilisation des sols, la profession et l'âge du directeur ou de la directrice d'exploitation."@fr,
         "Numero di unità di bestiame grosso, informazioni sull'uso del suolo, la professione e l'età del gestore aziendale."@it ;
-    systemmap:containedIn systemmap:QHyBeGX0LsQwjJ6Z .
+    systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
-systemmap:QY9n2yTOBWXtZ6se a systemmap:PersonInformation ;
+systemmap:SY9n2yTOBWXtZ6se a systemmap:PersonInformation ;
     rdfs:label "Daten über Kontrollen und Kontrollergebnisse"@de,
         "Data on inspections and inspection results"@en,
         "Données sur les contrôles et les résultats des contrôles"@fr,
         "Dati sui controlli e sui risultati dei controlli"@it ;
-    systemmap:containedIn systemmap:Q9VcxLSoIIwQjoexY .
+    systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
 
-systemmap:QYlOxcohgWiXr61M a systemmap:PersonInformation ;
+systemmap:SYlOxcohgWiXr61M a systemmap:PersonInformation ;
     rdfs:label "Informationen zu Forstbetrieben"@de,
         "Information about forestry enterprises"@en,
         "Informations sur les entreprises forestières"@fr,
@@ -2798,21 +2798,21 @@ systemmap:QYlOxcohgWiXr61M a systemmap:PersonInformation ;
         "Number of employed persons by gender and working time."@en,
         "Nombre de personnes employées selon le sexe et le temps de travail."@fr,
         "Numero di persone impiegate per genere e orario di lavoro."@it ;
-    systemmap:containedIn systemmap:QHyBeGX0LsQwjJ6Z .
+    systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
-systemmap:QakCt52w8AKrsSXi a systemmap:PersonInformation ;
+systemmap:SakCt52w8AKrsSXi a systemmap:PersonInformation ;
     rdfs:label "Informationen der Strukturdatenerhebung"@de,
         "Information from the structural data survey"@en,
         "Informations de l'enquête sur les données structurelles"@fr,
         "Informazioni dall'indagine sui dati strutturali"@it ;
-    systemmap:containedIn systemmap:QMjqlEoVCR9wpTyN1,
-        systemmap:QPWOFHR512FuAc25b,
-        systemmap:QZ9LRAuSt2EOvBpqY,
-        systemmap:QmWEQ8lVlDS9ZwPkY,
-        systemmap:QpR2aDraNmiUXz55J ;
-    systemmap:informs systemmap:QzuDlnYUQMk3HaCb .
+    systemmap:containedIn systemmap:SMjqlEoVCR9wpTyN1,
+        systemmap:SPWOFHR512FuAc25b,
+        systemmap:SZ9LRAuSt2EOvBpqY,
+        systemmap:SmWEQ8lVlDS9ZwPkY,
+        systemmap:SpR2aDraNmiUXz55J ;
+    systemmap:informs systemmap:SzuDlnYUQMk3HaCb .
 
-systemmap:QeUFazO70bpqCYJ5 a systemmap:PersonInformation ;
+systemmap:SeUFazO70bpqCYJ5 a systemmap:PersonInformation ;
     rdfs:label "Stammdaten und Identifikatoren"@de,
         "Master data and identifiers"@en,
         "Données de base et identifiants"@fr,
@@ -2821,9 +2821,9 @@ systemmap:QeUFazO70bpqCYJ5 a systemmap:PersonInformation ;
         "Name and address of the company or business, municipality numbers, BUR number (non-speaking 8-digit identification number), company identification number (UID), type of economic activity (NOGA), legal form of the company."@en,
         "Nom et adresse de l'entreprise ou de l'exploitation, numéros de commune, numéro BUR (numéro d'identification à 8 chiffres non parlant), numéro d'identification de l'entreprise (UID), type d'activité économique (NOGA), forme juridique de l'entreprise."@fr,
         "Nome e indirizzo dell'azienda o dell'impresa, numeri dei comuni, numero BUR (numero di identificazione a 8 cifre non parlante), numero di identificazione aziendale (UID), tipo di attività economica (NOGA), forma giuridica dell'azienda."@it ;
-    systemmap:containedIn systemmap:QHyBeGX0LsQwjJ6Z .
+    systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
-systemmap:QfQ6BN8rDjKhTWL4 a systemmap:PersonInformation ;
+systemmap:SfQ6BN8rDjKhTWL4 a systemmap:PersonInformation ;
     rdfs:label "Pflanzenschutzmittel-Importe"@de,
         "Pesticide imports"@en,
         "Importations de produits phytosanitaires"@fr,
@@ -2840,9 +2840,9 @@ systemmap:QfQ6BN8rDjKhTWL4 a systemmap:PersonInformation ;
         """
         Dati su ogni importazione di prodotti fitosanitari, compresi UID e nome dell'importatore, data di importazione, quantità importata, denominazione del prodotto (testo libero) e indirizzo di consegna.
         """@it ;
-    systemmap:containedIn systemmap:Q7u1Bh6qfXUbSDkv .
+    systemmap:containedIn systemmap:S7u1Bh6qfXUbSDkv .
 
-systemmap:QldiTYOuXQmoC3SV a systemmap:PersonInformation ;
+systemmap:SldiTYOuXQmoC3SV a systemmap:PersonInformation ;
     rdfs:label "Anmeldungen für Direktzahlungsarten"@de,
         "Registrations for direct payment types"@en,
         "Inscriptions pour les types de paiements directs"@fr,
@@ -2863,9 +2863,9 @@ systemmap:QldiTYOuXQmoC3SV a systemmap:PersonInformation ;
         Copre il processo e i dati relativi alla registrazione per diversi tipi di pagamenti diretti.
         Include informazioni sulle procedure di iscrizione, le scadenze, i requisiti e i moduli utilizzati per la richiesta.
         """@it ;
-    systemmap:containedIn systemmap:QvDlxaJ5YMkuZGH6k .
+    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
-systemmap:QoY82Q0qEk9k0s3w3 a systemmap:PersonInformation ;
+systemmap:SoY82Q0qEk9k0s3w3 a systemmap:PersonInformation ;
     rdfs:label "Kontaktdaten Milchproduzenten"@de,
         "Contact details of milk producers"@en,
         "Coordonnées des producteurs de lait"@fr,
@@ -2874,10 +2874,10 @@ systemmap:QoY82Q0qEk9k0s3w3 a systemmap:PersonInformation ;
         "Contact details of milk producers, such as addresses, TVD number, AGIS number of the farm, AGIS number of the operator, and payment information for the subsidy for cheesed milk and the subsidy for feeding without silage. If possible, these contact details are obtained from AGIS."@en,
         "Coordonnées des producteurs de lait, telles que les adresses, le numéro TVD, le numéro AGIS de l'exploitation, le numéro AGIS de l'exploitant et les informations de paiement pour la subvention pour le lait transformé en fromage et la subvention pour l'alimentation sans ensilage. Si possible, ces coordonnées sont obtenues auprès d'AGIS."@fr,
         "Dati di contatto dei produttori di latte, come indirizzi, numero TVD, numero AGIS dell'azienda, numero AGIS del gestore e informazioni di pagamento per il sussidio per il latte trasformato in formaggio e il sussidio per l'alimentazione senza insilato. Se possibile, questi dati di contatto vengono ottenuti da AGIS."@it ;
-    systemmap:containedIn systemmap:QYOd1TkacTh6cr0xP ;
-    systemmap:informedBy systemmap:Q6aBblr7qNp15tGw .
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP ;
+    systemmap:informedBy systemmap:S6aBblr7qNp15tGw .
 
-systemmap:Qutd0KIj3Rf8GlSwq a systemmap:PersonInformation ;
+systemmap:Sutd0KIj3Rf8GlSwq a systemmap:PersonInformation ;
     rdfs:label "Kontaktdaten Milchverarbeiter"@de,
         "Contact details of milk processors"@en,
         "Coordonnées des transformateurs de lait"@fr,
@@ -2886,9 +2886,9 @@ systemmap:Qutd0KIj3Rf8GlSwq a systemmap:PersonInformation ;
         "Contact details of milk processors, such as addresses or identification numbers."@en,
         "Coordonnées des transformateurs de lait, telles que les adresses ou les numéros d'identification."@fr,
         "Dati di contatto dei trasformatori di latte, come indirizzi o numeri di identificazione."@it ;
-    systemmap:containedIn systemmap:QYOd1TkacTh6cr0xP .
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:QvNriWslaOR5xkdw a systemmap:PersonInformation ;
+systemmap:SvNriWslaOR5xkdw a systemmap:PersonInformation ;
     rdfs:label "Betriebsdaten (Person, Betrieb)"@de,
         "Operational data (Person, Business)"@en,
         "Données opérationnelles (Personne, Entreprise)"@fr,
@@ -2897,12 +2897,12 @@ systemmap:QvNriWslaOR5xkdw a systemmap:PersonInformation ;
         "Contains basic information about agricultural businesses and related individuals. This includes identification data, organizational structures, and details about individuals involved in the business (e.g., farm managers, family members, and employees)."@en,
         "Contient des informations de base sur les exploitations agricoles et les personnes associées. Cela inclut les données d'identification, les structures organisationnelles et les détails sur les personnes impliquées dans l'exploitation (p. ex. gestionnaires de ferme, membres de la famille et employés)."@fr,
         "Contiene informazioni di base sulle aziende agricole e sulle persone ad esse associate. Ciò include dati identificativi, strutture organizzative e dettagli sulle persone coinvolte nell'azienda (ad es. gestori dell'azienda, familiari e dipendenti)."@it ;
-    systemmap:containedIn systemmap:QvDlxaJ5YMkuZGH6k ;
-    systemmap:informs systemmap:QX1qchbxSZKWI6Up ;
-    systemmap:usesIdentifier systemmap:Q3jZwzvmFKsXRWiI,
-        systemmap:QDLEUPczkJ9AWZeC .
+    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
+    systemmap:informs systemmap:SX1qchbxSZKWI6Up ;
+    systemmap:usesIdentifier systemmap:S3jZwzvmFKsXRWiI,
+        systemmap:SDLEUPczkJ9AWZeC .
 
-systemmap:QDetpcQhSMo4IAeAb a systemmap:PrivateOrganization ;
+systemmap:SDetpcQhSMo4IAeAb a systemmap:PrivateOrganization ;
     rdfs:label "Barto AG"@de,
         "Barto AG"@en,
         "Barto AG"@fr,
@@ -2931,9 +2931,9 @@ systemmap:QDetpcQhSMo4IAeAb a systemmap:PrivateOrganization ;
         La piattaforma integra varie funzioni agronomiche e amministrative e consente una gestione efficiente delle risorse.
         Barto AG collabora con partner del settore agricolo per fornire soluzioni digitali innovative.
         """@it ;
-    systemmap:ownedBy systemmap:QFAcWHo27bji7sVts .
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
 
-systemmap:QFAcWHo27bji7sVts a systemmap:PrivateOrganization ;
+systemmap:SFAcWHo27bji7sVts a systemmap:PrivateOrganization ;
     rdfs:label "Fenaco Genossenschaft"@de,
         "Fenaco Cooperative"@en,
         "Coopérative Fenaco"@fr,
@@ -2964,7 +2964,7 @@ systemmap:QFAcWHo27bji7sVts a systemmap:PrivateOrganization ;
         """@it ;
     owl:sameAs zefix:328631 .
 
-systemmap:QHObqf1JYpt7KGLFS a systemmap:PrivateOrganization ;
+systemmap:SHObqf1JYpt7KGLFS a systemmap:PrivateOrganization ;
     rdfs:label "Identitas AG"@de,
         "Identitas AG"@en,
         "Identitas AG"@fr,
@@ -2993,7 +2993,7 @@ systemmap:QHObqf1JYpt7KGLFS a systemmap:PrivateOrganization ;
         """@it ;
     owl:sameAs zefix:449781 .
 
-systemmap:QQ3N7dTc23t2wzXr2 a systemmap:PrivateOrganization ;
+systemmap:SQ3N7dTc23t2wzXr2 a systemmap:PrivateOrganization ;
     rdfs:label "TSM Treuhand GmbH"@de,
         "TSM Treuhand LLC"@en,
         "TSM Treuhand S. à r. l."@fr,
@@ -3024,9 +3024,9 @@ systemmap:QQ3N7dTc23t2wzXr2 a systemmap:PrivateOrganization ;
         """@it ;
     owl:sameAs zefix:427931 .
 
-systemmap:QWdllcNbPnjdcm7om a systemmap:PrivateOrganization ;
+systemmap:SWdllcNbPnjdcm7om a systemmap:PrivateOrganization ;
     rdfs:label "Agroline"@de ;
-    systemmap:ownedBy systemmap:QFAcWHo27bji7sVts .
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
 
 zefix:1256441 a systemmap:PrivateOrganization ;
     rdfs:label "mooh Genossenschaft"@de .
@@ -3036,36 +3036,36 @@ zefix:2595 a systemmap:PrivateOrganization ;
 
 zefix:330180 a systemmap:PrivateOrganization ;
     rdfs:label "Bison Schweiz AG"@de ;
-    systemmap:ownedBy systemmap:QFAcWHo27bji7sVts .
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
 
 zefix:371013 a systemmap:PrivateOrganization ;
     rdfs:label "Ernst Sutter AG"@de ;
-    systemmap:ownedBy systemmap:QFAcWHo27bji7sVts .
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
 
 zefix:432768 a systemmap:PrivateOrganization ;
     rdfs:label "TRAVECO Transporte AG"@de ;
-    systemmap:ownedBy systemmap:QFAcWHo27bji7sVts .
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
 
 zefix:446080 a systemmap:PrivateOrganization ;
     rdfs:label "frigemo ag"@de ;
-    systemmap:ownedBy systemmap:QFAcWHo27bji7sVts .
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
 
 zefix:505628 a systemmap:PrivateOrganization ;
     rdfs:label "Isagri GmbH"@de .
 
 zefix:7011 a systemmap:PrivateOrganization ;
     rdfs:label "Anicom AG"@de ;
-    systemmap:ownedBy systemmap:QFAcWHo27bji7sVts .
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
 
 zefix:76693 a systemmap:PrivateOrganization ;
     rdfs:label "Halag Chemie AG"@de ;
-    systemmap:ownedBy systemmap:QFAcWHo27bji7sVts .
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
 
 zefix:787227 a systemmap:PrivateOrganization ;
     rdfs:label "RAMSEIER Suisse AG"@de ;
-    systemmap:ownedBy systemmap:QFAcWHo27bji7sVts .
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
 
-systemmap:QDqb9NPoB6n3MZf2 a systemmap:SensitivePersonInformation ;
+systemmap:SDqb9NPoB6n3MZf2 a systemmap:SensitivePersonInformation ;
     rdfs:label "Kürzungen von Direktzahlungen"@de,
         "Reductions in direct payments"@en,
         "Réductions des paiements directs"@fr,
@@ -3086,9 +3086,9 @@ systemmap:QDqb9NPoB6n3MZf2 a systemmap:SensitivePersonInformation ;
         Contiene informazioni sulle normative e le procedure in base alle quali i pagamenti diretti alle aziende agricole vengono ridotti.  
         I dati includono criteri, basi di calcolo, periodi interessati e processi amministrativi che possono portare a tali riduzioni.  
         """@it ;
-    systemmap:containedIn systemmap:QvDlxaJ5YMkuZGH6k .
+    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
-systemmap:QLvuxq7SeZ6X0GYA a systemmap:SensitivePersonInformation ;
+systemmap:SLvuxq7SeZ6X0GYA a systemmap:SensitivePersonInformation ;
     rdfs:label "Resultate der Milchprüfung"@de,
         "Results of milk testing"@en,
         "Résultats du contrôle du lait"@fr,
@@ -3116,12 +3116,12 @@ systemmap:QLvuxq7SeZ6X0GYA a systemmap:SensitivePersonInformation ;
         Risultati igienicamente insufficienti comportano reclami e, in caso di carenze igieniche prolungate, un divieto ufficiale di consegna del latte.
         I risultati del controllo del latte sono resi disponibili ai soggetti autorizzati tramite la piattaforma dbmilch.ch.
         """@it ;
-    systemmap:containedIn systemmap:QYOd1TkacTh6cr0xP .
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:QfXioR1gkj8eDuTF a systemmap:SensitivePersonInformation ;
+systemmap:SfXioR1gkj8eDuTF a systemmap:SensitivePersonInformation ;
     rdfs:label "Daten über Verwaltungsmassnahmen und strafrechtliche Sanktionen"@de,
         "Data on administrative measures and criminal sanctions"@en,
         "Données sur les mesures administratives et les sanctions pénales"@fr,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
-    systemmap:containedIn systemmap:Q9VcxLSoIIwQjoexY .
+    systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
 

@@ -60,7 +60,7 @@
     const CHAR_SET = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 
     function generateNanoid(length = 16) {
-      let result = 'Q';
+      let result = 'S';
       for (let i = 0; i < length; i++) {
         result += CHAR_SET.charAt(Math.floor(Math.random() * CHAR_SET.length));
       }

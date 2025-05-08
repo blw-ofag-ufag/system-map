@@ -7,10 +7,10 @@ function getQueryParam(name, defaultValue) {
 // language code used in the queries
 window.lang = getQueryParam("lang", "de");
 
-// should schema:Organization, schema:SoftwareApplication and systemmap:Information be displayed
+// should schema:Organization, schema:SoftwareApplication and dcat:Dataset be displayed
 window.organization = getQueryParam("organization", "true") === "true" ? "schema:Organization" : "";
 window.system = getQueryParam("system", "true") === "true" ? "schema:SoftwareApplication" : "";
-window.information = getQueryParam("information", "true") === "true" ? "systemmap:Information" : "";
+window.information = getQueryParam("information", "true") === "true" ? "dcat:Dataset" : "";
 
 // set SPARQL endpoint
 window.ENDPOINT = "https://lindas.admin.ch/query";
@@ -74,7 +74,7 @@ window.CLASS_QUERY = `
   SELECT ?iri ?label ?comment
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/system-map> {
-      VALUES ?iri { schema:Organization schema:SoftwareApplication systemmap:Information }
+      VALUES ?iri { schema:Organization schema:SoftwareApplication dcat:Dataset }
       ?iri rdfs:label ?label .
       ?iri rdfs:comment ?comment .    
       FILTER(LANG(?label) = "${lang}" && LANG(?comment) = "${lang}")

@@ -6,6 +6,41 @@
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+dcat:Dataset a rdfs:Class, owl:Class ;
+  rdfs:label "Dataset"@en,
+    "Dataset"@it,
+    "Jeu de données"@fr,
+    "Datensatz"@de ;
+  rdfs:comment """
+    A collection of data, published or curated by a single source, and available for access or download in one or more representations.
+    """@en,
+    """
+    Raccolta di dati, pubblicati o curati da un'unica fonte, disponibili per l'accesso o il download in uno o più formati.
+    """@it,
+    """
+    Une collection de données, publiée ou élaborée par une seule source, et disponible pour accès ou téléchargement dans un ou plusieurs formats.
+    """@fr,
+    """
+    Eine Sammlung von Daten, die von einer einzigen Quelle veröffentlicht oder kuratiert wurde und in einer oder mehreren Darstellungen zugänglich oder herunterladbar ist.
+    """@de ;
+  skos:scopeNote """
+    The notion of dataset in DCAT is broad and inclusive, with the intention of accommodating resource types arising from all communities.
+    Data comes in many forms including numbers, text, pixels, imagery, sound and other multi-media, and potentially other types, any of which might be collected into a dataset.
+    """@en,
+    """
+    Il concetto di dataset in DCAT è ampio e inclusivo, con l'intenzione di includere tipi di risorse provenienti da tutte le comunità.
+    I dati possono assumere molte forme, inclusi numeri, testo, pixel, immagini, suoni e altri media, e potenzialmente altri tipi, che possono essere raccolti in un dataset.
+    """@it,
+    """
+    La notion de jeu de données dans DCAT est large et inclusive, avec l'objectif d'inclure les types de ressources issus de toutes les communautés.
+    Les données peuvent prendre de nombreuses formes, y compris des chiffres, du texte, des pixels, des images, des sons et d'autres médias, voire d'autres types, qui peuvent être regroupés dans un jeu de données.
+    """@fr,
+    """
+    Der Begriff des Datensatzes im DCAT ist breit gefasst und inklusiv, um Ressourcentypen aus allen Gemeinschaften zu berücksichtigen.
+    Daten können viele Formen annehmen, darunter Zahlen, Text, Pixel, Bilder, Ton und andere Multimediaformate sowie möglicherweise weitere Typen, die in einem Datensatz zusammengefasst werden können.
+    """@de ;
+  rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
+
 schema:GovernmentOrganization a owl:Class ;
     rdfs:label "Öffentlich-rechtliche Organisation"@de,
         "Public-sector organization"@en,
@@ -243,29 +278,7 @@ systemmap:Identifier a owl:Class ;
         Un tipo di numero di identificazione (ID). Non si riferisce all'ID stesso, ma all'insieme dei numeri di identificazione.
         'BUR' non significa quindi '1234-5678', ma l'insieme di <i>tutti</i> i numeri di identificazione BUR.
         """@it ;
-    rdfs:subClassOf systemmap:Information .
-
-systemmap:Information a owl:Class ;
-    rdfs:label "Informationseinheit"@de,
-        "Information unit"@en,
-        "Unité d'information"@fr,
-        "Unità di informazione"@it ;
-    rdfs:comment """
-        Eine Information in einem IT-System. Das kann wirklich alles Mögliche sein.
-        Dazu gehören zum Beispiel Datenbanken, Teile von Datenbanken, Tabellen oder Dokumente.
-        """@de,
-        """
-        A piece of information in an IT system. Could be anything, really.
-        This includes, for example, databases, parts of databases, tables, or documents.
-        """@en,
-        """
-        Une information dans un système informatique. Cela peut vraiment être n'importe quoi.
-        Cela inclut, par exemple, des bases de données, des parties de bases de données, des tableaux ou des documents.
-        """@fr,
-        """
-        Un'informazione in un sistema IT. Potrebbe essere qualsiasi cosa.
-        Questo include, ad esempio, database, parti di database, tabelle o documenti.
-        """@it .
+    rdfs:subClassOf dcat:Dataset .
 
 systemmap:PersonInformation a owl:Class ;
     rdfs:label "Informationseinheit mit Personendaten"@de,
@@ -285,7 +298,7 @@ systemmap:PersonInformation a owl:Class ;
         Un'unità di informazione contenente dati personali, come definito nella legge sulla protezione dei dati, articolo 5.
         """@it ;
     rdfs:seeAlso <https://www.fedlex.admin.ch/eli/oc/2022/491/de#art_5> ;
-    rdfs:subClassOf systemmap:Information .
+    rdfs:subClassOf dcat:Dataset .
 
 systemmap:PrivateOrganization a owl:Class ;
     rdfs:label "Privatrechtliche Organisation"@de,
@@ -498,7 +511,7 @@ systemmap:access a owl:ObjectProperty ;
         Indica che un'organizzazione X ha il diritto di accedere all'unità di informazione Y.  
         """@it ;
     rdfs:domain schema:Organization ;
-    rdfs:range systemmap:Information .
+    rdfs:range dcat:Dataset .
 
 systemmap:containedIn a owl:ObjectProperty ;
     rdfs:label "ist beinhaltet in"@de,
@@ -521,7 +534,7 @@ systemmap:containedIn a owl:ObjectProperty ;
         Indica che un'unità di informazione X è contenuta nel sistema IT Y.  
         Ad esempio, le informazioni sulle superfici agricole in Svizzera sono contenute in AGIS.  
         """@it ;
-    rdfs:domain systemmap:Information ;
+    rdfs:domain dcat:Dataset ;
     rdfs:range schema:SoftwareApplication ;
     owl:inverseOf systemmap:contains .
 
@@ -547,7 +560,7 @@ systemmap:contains a owl:ObjectProperty ;
         Ad esempio, AGIS contiene informazioni sulle superfici agricole in Svizzera.  
         """@it ;
     rdfs:domain schema:SoftwareApplication ;
-    rdfs:range systemmap:Information ;
+    rdfs:range dcat:Dataset ;
     owl:inverseOf systemmap:containedIn .
 
 systemmap:hasLegalBasis a owl:ObjectProperty ;
@@ -594,8 +607,8 @@ systemmap:informedBy a owl:ObjectProperty ;
         Questa relazione viene utilizzata per rappresentare i flussi di informazioni.  
         Questi non devono necessariamente essere formalizzati (tramite un'API o mezzi simili).  
         """@it ;
-    rdfs:domain systemmap:Information ;
-    rdfs:range systemmap:Information ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range dcat:Dataset ;
     owl:inverseOf systemmap:informs .
 
 systemmap:informs a owl:ObjectProperty ;
@@ -619,8 +632,8 @@ systemmap:informs a owl:ObjectProperty ;
         Indica che l'unità di informazione X è <i>informata</i> da un'altra unità di informazione Y, il che significa che i dati fluiscono <i>in qualche modo</i>.  
         Ciò può avvenire tramite copia manuale, invio di tabelle via e-mail, API, ecc.  
         """@it ;
-    rdfs:domain systemmap:Information ;
-    rdfs:range systemmap:Information ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range dcat:Dataset ;
     owl:inverseOf systemmap:informedBy .
 
 systemmap:operatedBy a owl:ObjectProperty ;
@@ -736,7 +749,7 @@ systemmap:usesIdentifier a owl:ObjectProperty ;
         """
         Questa relazione indica che un'unità di informazione X utilizza un certo tipo di numero di identificazione Y per l'identificazione di un <i>Business Object</i>.
         """@it ;
-    rdfs:domain systemmap:Information ;
+    rdfs:domain dcat:Dataset ;
     rdfs:range systemmap:Identifier .
 
 systemmap: a owl:Ontology ;

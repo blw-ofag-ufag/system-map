@@ -2224,7 +2224,7 @@ systemmap:SDLEUPczkJ9AWZeC a systemmap:Identifier ;
         """@it ;
     systemmap:containedIn systemmap:SuEtT7joC8HXVSfF .
 
-systemmap:S1AkhvKmzBiJFCTc a systemmap:Information ;
+systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
     rdfs:label "Agrarmarktdaten"@de,
         "agricultural market data"@en,
         "données du marché agricole"@fr,
@@ -2236,7 +2236,7 @@ systemmap:S1AkhvKmzBiJFCTc a systemmap:Information ;
     systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
     systemmap:informs systemmap:SRT6X0n1ML8vwHUW .
 
-systemmap:S4BoMPavXD5gIObm a systemmap:Information ;
+systemmap:S4BoMPavXD5gIObm a dcat:Dataset ;
     rdfs:label "Tieridentifikationsdaten"@de,
         "Animal identification data"@en,
         "Données d'identification des animaux"@fr,
@@ -2259,7 +2259,7 @@ systemmap:S4BoMPavXD5gIObm a systemmap:Information ;
         """@it ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
-systemmap:S4hqylQaEIsYGXMo a systemmap:Information ;
+systemmap:S4hqylQaEIsYGXMo a dcat:Dataset ;
     rdfs:label "Verschiebung von Mineraldüngern"@de,
         "Movement of Mineral Fertilizers"@en,
         "Déplacement des engrais minéraux"@fr,
@@ -2278,7 +2278,7 @@ systemmap:S4hqylQaEIsYGXMo a systemmap:Information ;
         """@it ;
     systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
 
-systemmap:S7mhWQjPZiSFc8dU a systemmap:Information ;
+systemmap:S7mhWQjPZiSFc8dU a dcat:Dataset ;
     rdfs:label "Tierereignisdaten"@de,
         "Animal event data"@en,
         "Données d'événements animaux"@fr,
@@ -2301,7 +2301,7 @@ systemmap:S7mhWQjPZiSFc8dU a systemmap:Information ;
         """@it ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
-systemmap:S8JpqvyO4LQwEM5s a systemmap:Information ;
+systemmap:S8JpqvyO4LQwEM5s a dcat:Dataset ;
     rdfs:label "Globaler Sortenkatalog"@de,
         "Global variety catalog"@en,
         "Catalogue mondial des variétés"@fr,
@@ -2324,7 +2324,7 @@ systemmap:S8JpqvyO4LQwEM5s a systemmap:Information ;
     systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN ;
     systemmap:informedBy systemmap:Spqrv6Ul05KJySTs .
 
-systemmap:S8cKNg0hfPy97TUB a systemmap:Information ;
+systemmap:S8cKNg0hfPy97TUB a dcat:Dataset ;
     rdfs:label "Details zu Unternehmen"@de,
         "Company details"@en,
         "Détails sur les entreprises"@fr,
@@ -2343,7 +2343,7 @@ systemmap:S8cKNg0hfPy97TUB a systemmap:Information ;
         """@it ;
     systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
-systemmap:S9J1HTMKIxnCgmYc a systemmap:Information ;
+systemmap:S9J1HTMKIxnCgmYc a dcat:Dataset ;
     rdfs:label "Pflanzenschutzmittel"@de,
         "Plant Protection Products"@en,
         "Produits phytosanitaires"@fr,
@@ -2362,7 +2362,7 @@ systemmap:S9J1HTMKIxnCgmYc a systemmap:Information ;
         """@it ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
-systemmap:SAUWzyCpeGZ6vVil a systemmap:Information ;
+systemmap:SAUWzyCpeGZ6vVil a dcat:Dataset ;
     rdfs:label "Daten zu Tierhaltern"@de,
         "Data on animal owners"@en,
         "Données sur les détenteurs d’animaux"@fr,
@@ -2390,7 +2390,7 @@ systemmap:SAUWzyCpeGZ6vVil a systemmap:Information ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ ;
     systemmap:informedBy systemmap:SvNriWslaOR5xkdw .
 
-systemmap:SDmJeWK7EOnMqRLs a systemmap:Information ;
+systemmap:SDmJeWK7EOnMqRLs a dcat:Dataset ;
     rdfs:label "Auflagen zur Anwendung von Pflanzenschutzmitteln"@de,
         "Conditions for the Use of Plant Protection Products"@en,
         "Conditions d'utilisation des produits phytosanitaires"@fr,
@@ -2409,7 +2409,7 @@ systemmap:SDmJeWK7EOnMqRLs a systemmap:Information ;
         """@it ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
-systemmap:SECM4KqStG9yBva6 a systemmap:Information ;
+systemmap:SECM4KqStG9yBva6 a dcat:Dataset ;
     rdfs:label "Verschiebung von Hof- und Recyclingdünger"@de,
         "Movement of Farmyard and Recycled Fertilizers"@en,
         "Déplacement des engrais de ferme et recyclés"@fr,
@@ -2428,7 +2428,7 @@ systemmap:SECM4KqStG9yBva6 a systemmap:Information ;
         """@it ;
     systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
 
-systemmap:SFyGV7l0kN4qgA8u a systemmap:Information ;
+systemmap:SFyGV7l0kN4qgA8u a dcat:Dataset ;
     rdfs:label "Kulturen und Schaderreger"@de,
         "Crops and Pests"@en,
         "Cultures et organismes nuisibles"@fr,
@@ -2447,7 +2447,7 @@ systemmap:SFyGV7l0kN4qgA8u a systemmap:Information ;
         """@it ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
-systemmap:SIsQ6LSUJc3xbG9B a systemmap:Information ;
+systemmap:SIsQ6LSUJc3xbG9B a dcat:Dataset ;
     rdfs:label "Biozide"@de,
         "Biocides"@en,
         "Biocides"@fr,
@@ -2466,7 +2466,7 @@ systemmap:SIsQ6LSUJc3xbG9B a systemmap:Information ;
         """@it ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
-systemmap:SLXw4VofhYbzXVNKC a systemmap:Information ;
+systemmap:SLXw4VofhYbzXVNKC a dcat:Dataset ;
     rdfs:label "Daten zur Milchverwertung"@de,
         "Data on milk utilization"@en,
         "Données sur la valorisation du lait"@fr,
@@ -2477,7 +2477,7 @@ systemmap:SLXw4VofhYbzXVNKC a systemmap:Information ;
         "Questi dati sono essenziali per il calcolo e il pagamento dei sussidi per il latte trasformato in formaggio e per l'alimentazione senza insilato da parte dell'Ufficio federale dell'agricoltura (UFAG)."@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:SPCig1xdekUHDV4r a systemmap:Information ;
+systemmap:SPCig1xdekUHDV4r a dcat:Dataset ;
     rdfs:label "Milchstatistik"@de,
         "Milk statistics"@en,
         "Statistiques du lait"@fr,
@@ -2488,7 +2488,7 @@ systemmap:SPCig1xdekUHDV4r a systemmap:Information ;
         "Statistiche mensili e confronti pluriennali contenenti informazioni sul latte prodotto e sulla sua trasformazione in diverse categorie di prodotti."@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:SRT6X0n1ML8vwHUW a systemmap:Information ;
+systemmap:SRT6X0n1ML8vwHUW a dcat:Dataset ;
     rdfs:label "Linked Data"@de,
         "Linked Data"@en,
         "Linked Data"@fr,
@@ -2496,7 +2496,7 @@ systemmap:SRT6X0n1ML8vwHUW a systemmap:Information ;
     systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd,
         systemmap:SpLZd1ojPxF0CvH28 .
 
-systemmap:SUZP05KJlIyCX9A8 a systemmap:Information ;
+systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
     rdfs:label "Zubereitungen"@de,
         "Preparations"@en,
         "Préparations"@fr,
@@ -2515,7 +2515,7 @@ systemmap:SUZP05KJlIyCX9A8 a systemmap:Information ;
         """@it ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
-systemmap:SUlfRYzH3b0gx7VX a systemmap:Information ;
+systemmap:SUlfRYzH3b0gx7VX a dcat:Dataset ;
     rdfs:label "Verschiebung von Pflanzenschutzmitteln"@de,
         "Movement of Plant Protection Products"@en,
         "Déplacement des produits phytosanitaires"@fr,
@@ -2534,7 +2534,7 @@ systemmap:SUlfRYzH3b0gx7VX a systemmap:Information ;
         """@it ;
     systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
 
-systemmap:SZBHsREMx369FArg a systemmap:Information ;
+systemmap:SZBHsREMx369FArg a dcat:Dataset ;
     rdfs:label "Dünger"@de,
         "Fertilizers"@en,
         "Engrais"@fr,
@@ -2553,7 +2553,7 @@ systemmap:SZBHsREMx369FArg a systemmap:Information ;
         """@it ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
-systemmap:Sb2FM7pKN60PrRwU a systemmap:Information ;
+systemmap:Sb2FM7pKN60PrRwU a dcat:Dataset ;
     rdfs:label "Globale Pflanzenliste"@de,
         "Global plant list"@en,
         "Liste globale des plantes"@fr,
@@ -2584,7 +2584,7 @@ systemmap:Sb2FM7pKN60PrRwU a systemmap:Information ;
         """@it ;
     systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN .
 
-systemmap:Se6Nt3cqogxz2d10g a systemmap:Information ;
+systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
     rdfs:label "Daten zur Milchproduktion"@de,
         "Data on milk production"@en,
         "Données sur la production laitière"@fr,
@@ -2607,7 +2607,7 @@ systemmap:Se6Nt3cqogxz2d10g a systemmap:Information ;
         """@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:Sl5KyePu7JtGiE3V a systemmap:Information ;
+systemmap:Sl5KyePu7JtGiE3V a dcat:Dataset ;
     rdfs:label "Produktekatalog"@de,
         "Product catalog"@en,
         "Catalogue de produits"@fr,
@@ -2632,7 +2632,7 @@ systemmap:Sl5KyePu7JtGiE3V a systemmap:Information ;
     systemmap:informedBy systemmap:S9J1HTMKIxnCgmYc,
         systemmap:SZBHsREMx369FArg .
 
-systemmap:SoBRgq7STLbZfEze a systemmap:Information ;
+systemmap:SoBRgq7STLbZfEze a dcat:Dataset ;
     rdfs:label "Meldepflichtdaten (Schafe & Ziegen)"@de,
         "Mandatory reporting data (sheep & goats)"@en,
         "Données à déclaration obligatoire (moutons & chèvres)"@fr,
@@ -2655,7 +2655,7 @@ systemmap:SoBRgq7STLbZfEze a systemmap:Information ;
         """@it ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
-systemmap:Spqrv6Ul05KJySTs a systemmap:Information ;
+systemmap:Spqrv6Ul05KJySTs a dcat:Dataset ;
     rdfs:label "Nationaler Sortenkatalog"@de,
         "National variety catalog"@en,
         "Catalogue national des variétés"@fr,
@@ -2667,7 +2667,7 @@ systemmap:Spqrv6Ul05KJySTs a systemmap:Information ;
     systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj ;
     systemmap:informedBy systemmap:Sb2FM7pKN60PrRwU .
 
-systemmap:SzcK9O3XZFxVW1IS a systemmap:Information ;
+systemmap:SzcK9O3XZFxVW1IS a dcat:Dataset ;
     rdfs:label "Daten zur Milchsegmentierung"@de,
         "Data on milk segmentation"@en,
         "Données sur la segmentation du lait"@fr,
@@ -2678,7 +2678,7 @@ systemmap:SzcK9O3XZFxVW1IS a systemmap:Information ;
         "Dati sulla segmentazione dell'utilizzo del latte secondo il regolamento BOM1."@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:SzuDlnYUQMk3HaCb a systemmap:Information ;
+systemmap:SzuDlnYUQMk3HaCb a dcat:Dataset ;
     rdfs:label "Strukturdaten"@de,
         "Structural data"@en,
         "Données structurelles"@fr,

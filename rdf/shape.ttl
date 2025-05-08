@@ -9,7 +9,7 @@
 # ------------------------------------------------------------------------------
 # 1. Multilingual Labels for Key Entities
 #    - For every instance of:
-#      schema:Organization, schema:SoftwareApplication, systemmap:Information
+#      schema:Organization, schema:SoftwareApplication, dcat:Dataset
 #      => Must have at least one rdfs:label @de
 # ------------------------------------------------------------------------------
 
@@ -18,7 +18,7 @@
     sh:targetClass schema:Organization,
         schema:Legislation,
         schema:SoftwareApplication,
-        systemmap:Information ;
+        dcat:Dataset ;
 
     # Must have at least one label in German
     sh:property [
@@ -74,18 +74,18 @@
 
 # ------------------------------------------------------------------------------
 # 4. Containment of Information within IT Systems
-#    - Every instance of systemmap:Information => Must be linked
+#    - Every instance of dcat:Dataset => Must be linked
 #      via systemmap:containedIn => schema:SoftwareApplication
 # ------------------------------------------------------------------------------
 
 :InformationContainedInITSystemShape
     a sh:NodeShape ;
-    sh:targetClass systemmap:Information ;
+    sh:targetClass dcat:Dataset ;
     sh:property [
         sh:path systemmap:containedIn ;
         sh:class schema:SoftwareApplication ;
         sh:minCount 1 ;
-        sh:message "Every piece of information (systemmap:Information) must be contained in at least one IT system (schema:SoftwareApplication)."
+        sh:message "Every piece of information (dcat:Dataset) must be contained in at least one IT system (schema:SoftwareApplication)."
     ] .
 
 # ------------------------------------------------------------------------------

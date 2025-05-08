@@ -5,7 +5,8 @@
 @prefix schema: <http://schema.org/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix termdat: <https://register.ld.admin.ch/termdat/>
+@prefix termdat: <https://register.ld.admin.ch/termdat/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 dcat:Dataset a rdfs:Class, owl:Class ;
   rdfs:label "Dataset"@en,

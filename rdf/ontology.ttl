@@ -283,6 +283,19 @@ systemmap:Identifier a owl:Class ;
     rdfs:subClassOf dcat:Dataset .
 
 termdat:52451 a owl:Class ;
+    rdfs:label "Personendaten"@de, "Données personnelles"@fr, "Dati personali"@it, "Personal data"@en ;
+    rdfs:comment """
+        Angaben, die sich auf eine bestimmte oder bestimmbare natürliche Person beziehen.
+        """@de,
+        """
+        Informations concernant une personne physique identifiée ou identifiable.
+        """@fr,
+        """
+        Informazioni concernenti una persona fisica identificata o identificabile.
+        """@it,
+        """
+        Information relating to an identified or identifiable natural person.
+        """@en ;
     rdfs:subClassOf dcat:Dataset .
 
 systemmap:PrivateOrganization a owl:Class ;
@@ -313,6 +326,22 @@ systemmap:PrivateOrganization a owl:Class ;
     rdfs:subClassOf schema:Organization .
 
 termdat:52453 a owl:Class ;
+    rdfs:label "Besonders schützenswerte Personendaten"@de,
+        "Données personnelles sensibles"@fr,
+        "Dati personali degni di particolare protezione"@it,
+        "Sensitive personal data"@en ;
+    rdfs:comment """
+        Personendaten über religiöse, weltanschauliche, politische oder gewerkschaftliche Ansichten oder Tätigkeiten, über die Gesundheit, Intimsphäre, Ethnien- oder Rassenzugehörigkeit, über verwaltungs- und strafrechtliche Verfolgungen oder Sanktionen und Massnahmen der sozialen Hilfe sowie genetische oder biometrische Daten, die eine natürliche Person eindeutig identifizien.
+        """@de,
+        """
+        Données personnelles portant sur des opinions ou des activités religieuses, philosophiques, politiques, ou syndicales, sur la santé, la sphère intime ou sur l'origine raciale ou ethnique, sur des poursuites ou des sanctions pénales et administratives, des mesures d'aide sociale ainsi que données génétiques ou biométriques identifiant une personne physique de manière univoque.
+        """@fr,
+        """
+        Dati personali concernenti le opinioni o attività religiose, filosofiche, politiche o sindacali, la salute, la sfera intima o l'appartenenza a una razza o a un'etnia, perseguimenti e sanzioni di natura amministrativa e penale, le misure d'assistenza sociale e i dati genetici o biometrici, che identificano in modo univoco una persona fisica.
+        """@it,
+        """
+        Personal data concerning religious, philosophical, ideological, political or trade union-related views or activities, health, the private sphere, affiliation to a race or ethnicity, administrative or criminal proceedings and sanctions, social assistance measures and genetic or biometric data that uniquely identifies a natural person.
+        """@en ;
     rdfs:subClassOf termdat:52451 .
 
 systemmap:abbreviation a owl:DatatypeProperty ;

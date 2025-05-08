@@ -5,6 +5,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix termdat: <https://register.ld.admin.ch/termdat/>
 
 dcat:Dataset a rdfs:Class, owl:Class ;
   rdfs:label "Dataset"@en,
@@ -280,24 +281,7 @@ systemmap:Identifier a owl:Class ;
         """@it ;
     rdfs:subClassOf dcat:Dataset .
 
-systemmap:PersonInformation a owl:Class ;
-    rdfs:label "Informationseinheit mit Personendaten"@de,
-        "Information unit containing personal data"@en,
-        "Unité d'information contenant des données personnelles"@fr,
-        "Unità di informazione contenente dati personali"@it ;
-    rdfs:comment """
-        Eine Informationseinheit, die personenbezogene Daten enthält, wie im Datenschutzgesetz Art. 5 definiert.
-        """@de,
-        """
-        An information unit containing personal data, as defined in the Data Protection Act, Article 5.
-        """@en,
-        """
-        Une unité d'information contenant des données personnelles, telles que définies dans la loi sur la protection des données, article 5.
-        """@fr,
-        """
-        Un'unità di informazione contenente dati personali, come definito nella legge sulla protezione dei dati, articolo 5.
-        """@it ;
-    rdfs:seeAlso <https://www.fedlex.admin.ch/eli/oc/2022/491/de#art_5> ;
+termdat:52451 a owl:Class ;
     rdfs:subClassOf dcat:Dataset .
 
 systemmap:PrivateOrganization a owl:Class ;
@@ -327,25 +311,8 @@ systemmap:PrivateOrganization a owl:Class ;
         """@it ;
     rdfs:subClassOf schema:Organization .
 
-systemmap:SensitivePersonInformation a owl:Class ;
-    rdfs:label "Informationseinheit mit besonders schützenswerten Personendaten"@de,
-        "Information unit containing sensitive personal data"@en,
-        "Unité d'information contenant des données personnelles sensibles"@fr,
-        "Unità di informazione contenente dati personali sensibili"@it ;
-    rdfs:comment """
-        Eine Informationseinheit, die besonders schützenswerte personenbezogene Daten enthält, wie im Datenschutzgesetz Art. 5 definiert.
-        """@de,
-        """
-        An information unit containing sensitive personal data, as defined in the Data Protection Act, Article 5.
-        """@en,
-        """
-        Une unité d'information contenant des données personnelles sensibles, telles que définies dans la loi sur la protection des données, article 5.
-        """@fr,
-        """
-        Un'unità di informazione contenente dati personali sensibili, come definito nella legge sulla protezione dei dati, articolo 5.
-        """@it ;
-    rdfs:seeAlso <https://www.fedlex.admin.ch/eli/oc/2022/491/de#art_5> ;
-    rdfs:subClassOf systemmap:PersonInformation .
+termdat:52453 a owl:Class ;
+    rdfs:subClassOf termdat:52451 .
 
 systemmap:abbreviation a owl:DatatypeProperty ;
     rdfs:label "Abkürzung"@de,

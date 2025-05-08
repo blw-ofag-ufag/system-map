@@ -2706,7 +2706,7 @@ systemmap:SzuDlnYUQMk3HaCb a dcat:Dataset ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
     systemmap:informs systemmap:SX1qchbxSZKWI6Up .
 
-systemmap:S6ILF4g1j5sNf9aG a systemmap:PersonInformation ;
+systemmap:S6ILF4g1j5sNf9aG a termdat:52451 ;
     rdfs:label "Informationen zur Einfuhr von PSM"@de,
         "Information on the import of PPP"@en,
         "Informations sur l'importation de PPP"@fr,
@@ -2726,7 +2726,7 @@ systemmap:S6ILF4g1j5sNf9aG a systemmap:PersonInformation ;
     systemmap:containedIn systemmap:SywklUB91myTH0cvS ;
     systemmap:informedBy systemmap:SfQ6BN8rDjKhTWL4 .
 
-systemmap:S6aBblr7qNp15tGw a systemmap:PersonInformation ;
+systemmap:S6aBblr7qNp15tGw a termdat:52451 ;
     rdfs:label "Kontaktdaten Bewirtschaftenden"@de,
         "Contact details of farm managers"@en,
         "Coordonnées des exploitants agricoles"@fr,
@@ -2737,7 +2737,7 @@ systemmap:S6aBblr7qNp15tGw a systemmap:PersonInformation ;
         "Informazioni sui dati di contatto dei gestori agricoli, come indirizzi e-mail o numeri di telefono."@it ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
-systemmap:SJuklUVKfEwj2Xpc a systemmap:PersonInformation ;
+systemmap:SJuklUVKfEwj2Xpc a termdat:52451 ;
     rdfs:label "Kontaktdaten Züchter"@de,
         "Contact details of breeders"@en,
         "Coordonnées des sélectionneurs"@fr,
@@ -2748,7 +2748,7 @@ systemmap:SJuklUVKfEwj2Xpc a systemmap:PersonInformation ;
         "Dati di contatto dei selezionatori che forniscono informazioni sulle varietà a ProVar."@it ;
     systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj .
 
-systemmap:SQ2MIhpz1CvdqK6f a systemmap:PersonInformation ;
+systemmap:SQ2MIhpz1CvdqK6f a termdat:52451 ;
     rdfs:label "Beitragsdaten"@de,
         "Contribution data"@en,
         "Données de contribution"@fr,
@@ -2771,7 +2771,7 @@ systemmap:SQ2MIhpz1CvdqK6f a systemmap:PersonInformation ;
         """@it ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
-systemmap:SX1qchbxSZKWI6Up a systemmap:PersonInformation ;
+systemmap:SX1qchbxSZKWI6Up a termdat:52451 ;
     rdfs:label "Informationen zu Landwirtschaftsbetrieben"@de,
         "Information about agricultural enterprises"@en,
         "Informations sur les exploitations agricoles"@fr,
@@ -2782,14 +2782,14 @@ systemmap:SX1qchbxSZKWI6Up a systemmap:PersonInformation ;
         "Numero di unità di bestiame grosso, informazioni sull'uso del suolo, la professione e l'età del gestore aziendale."@it ;
     systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
-systemmap:SY9n2yTOBWXtZ6se a systemmap:PersonInformation ;
+systemmap:SY9n2yTOBWXtZ6se a termdat:52451 ;
     rdfs:label "Daten über Kontrollen und Kontrollergebnisse"@de,
         "Data on inspections and inspection results"@en,
         "Données sur les contrôles et les résultats des contrôles"@fr,
         "Dati sui controlli e sui risultati dei controlli"@it ;
     systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
 
-systemmap:SYlOxcohgWiXr61M a systemmap:PersonInformation ;
+systemmap:SYlOxcohgWiXr61M a termdat:52451 ;
     rdfs:label "Informationen zu Forstbetrieben"@de,
         "Information about forestry enterprises"@en,
         "Informations sur les entreprises forestières"@fr,
@@ -2800,7 +2800,7 @@ systemmap:SYlOxcohgWiXr61M a systemmap:PersonInformation ;
         "Numero di persone impiegate per genere e orario di lavoro."@it ;
     systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
-systemmap:SakCt52w8AKrsSXi a systemmap:PersonInformation ;
+systemmap:SakCt52w8AKrsSXi a termdat:52451 ;
     rdfs:label "Informationen der Strukturdatenerhebung"@de,
         "Information from the structural data survey"@en,
         "Informations de l'enquête sur les données structurelles"@fr,
@@ -2812,7 +2812,7 @@ systemmap:SakCt52w8AKrsSXi a systemmap:PersonInformation ;
         systemmap:SpR2aDraNmiUXz55J ;
     systemmap:informs systemmap:SzuDlnYUQMk3HaCb .
 
-systemmap:SeUFazO70bpqCYJ5 a systemmap:PersonInformation ;
+systemmap:SeUFazO70bpqCYJ5 a termdat:52451 ;
     rdfs:label "Stammdaten und Identifikatoren"@de,
         "Master data and identifiers"@en,
         "Données de base et identifiants"@fr,
@@ -2823,7 +2823,7 @@ systemmap:SeUFazO70bpqCYJ5 a systemmap:PersonInformation ;
         "Nome e indirizzo dell'azienda o dell'impresa, numeri dei comuni, numero BUR (numero di identificazione a 8 cifre non parlante), numero di identificazione aziendale (UID), tipo di attività economica (NOGA), forma giuridica dell'azienda."@it ;
     systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
-systemmap:SfQ6BN8rDjKhTWL4 a systemmap:PersonInformation ;
+systemmap:SfQ6BN8rDjKhTWL4 a termdat:52451 ;
     rdfs:label "Pflanzenschutzmittel-Importe"@de,
         "Pesticide imports"@en,
         "Importations de produits phytosanitaires"@fr,
@@ -2842,7 +2842,7 @@ systemmap:SfQ6BN8rDjKhTWL4 a systemmap:PersonInformation ;
         """@it ;
     systemmap:containedIn systemmap:S7u1Bh6qfXUbSDkv .
 
-systemmap:SldiTYOuXQmoC3SV a systemmap:PersonInformation ;
+systemmap:SldiTYOuXQmoC3SV a termdat:52451 ;
     rdfs:label "Anmeldungen für Direktzahlungsarten"@de,
         "Registrations for direct payment types"@en,
         "Inscriptions pour les types de paiements directs"@fr,
@@ -2865,7 +2865,7 @@ systemmap:SldiTYOuXQmoC3SV a systemmap:PersonInformation ;
         """@it ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
-systemmap:SoY82Q0qEk9k0s3w3 a systemmap:PersonInformation ;
+systemmap:SoY82Q0qEk9k0s3w3 a termdat:52451 ;
     rdfs:label "Kontaktdaten Milchproduzenten"@de,
         "Contact details of milk producers"@en,
         "Coordonnées des producteurs de lait"@fr,
@@ -2877,7 +2877,7 @@ systemmap:SoY82Q0qEk9k0s3w3 a systemmap:PersonInformation ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP ;
     systemmap:informedBy systemmap:S6aBblr7qNp15tGw .
 
-systemmap:Sutd0KIj3Rf8GlSwq a systemmap:PersonInformation ;
+systemmap:Sutd0KIj3Rf8GlSwq a termdat:52451 ;
     rdfs:label "Kontaktdaten Milchverarbeiter"@de,
         "Contact details of milk processors"@en,
         "Coordonnées des transformateurs de lait"@fr,
@@ -2888,7 +2888,7 @@ systemmap:Sutd0KIj3Rf8GlSwq a systemmap:PersonInformation ;
         "Dati di contatto dei trasformatori di latte, come indirizzi o numeri di identificazione."@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:SvNriWslaOR5xkdw a systemmap:PersonInformation ;
+systemmap:SvNriWslaOR5xkdw a termdat:52451 ;
     rdfs:label "Betriebsdaten (Person, Betrieb)"@de,
         "Operational data (Person, Business)"@en,
         "Données opérationnelles (Personne, Entreprise)"@fr,
@@ -3065,7 +3065,7 @@ zefix:787227 a systemmap:PrivateOrganization ;
     rdfs:label "RAMSEIER Suisse AG"@de ;
     systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
 
-systemmap:SDqb9NPoB6n3MZf2 a systemmap:SensitivePersonInformation ;
+systemmap:SDqb9NPoB6n3MZf2 a termdat:52453 ;
     rdfs:label "Kürzungen von Direktzahlungen"@de,
         "Reductions in direct payments"@en,
         "Réductions des paiements directs"@fr,
@@ -3088,7 +3088,7 @@ systemmap:SDqb9NPoB6n3MZf2 a systemmap:SensitivePersonInformation ;
         """@it ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
-systemmap:SLvuxq7SeZ6X0GYA a systemmap:SensitivePersonInformation ;
+systemmap:SLvuxq7SeZ6X0GYA a termdat:52453 ;
     rdfs:label "Resultate der Milchprüfung"@de,
         "Results of milk testing"@en,
         "Résultats du contrôle du lait"@fr,
@@ -3118,7 +3118,7 @@ systemmap:SLvuxq7SeZ6X0GYA a systemmap:SensitivePersonInformation ;
         """@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:SfXioR1gkj8eDuTF a systemmap:SensitivePersonInformation ;
+systemmap:SfXioR1gkj8eDuTF a termdat:52453 ;
     rdfs:label "Daten über Verwaltungsmassnahmen und strafrechtliche Sanktionen"@de,
         "Data on administrative measures and criminal sanctions"@en,
         "Données sur les mesures administratives et les sanctions pénales"@fr,

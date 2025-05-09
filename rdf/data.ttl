@@ -22,6 +22,7 @@ systemmap:metadata a void:Dataset ;
     schema:dateModified "2025-04-09"^^xsd:date ;
     schema:datePublished "2025-02-24"^^xsd:date ;
     schema:workExample <https://blw-ofag-ufag.github.io/system-map> ;
+    rdfs:seeAlso <https://github.com/blw-ofag-ufag/metadata/blob/main/data/raw/datasets/83f93ff4-ef3f-43f1-af2c-83f18952283e.json> ;
     rdfs:comment """
         Eine Sammlung von Organisationen, Informationssystemen und Informationseinheiten (Daten) im Schweizer Agrar- und Lebensmittelsektor.
         """@de,

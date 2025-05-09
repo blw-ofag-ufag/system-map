@@ -1,11 +1,42 @@
 @prefix LwG: <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
 @prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+systemmap:metadata a void:Dataset ;
+    rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
+        "DigiAgriFoodCH System Map"@en,
+        "Carte du système DigiAgriFoodCH"@fr,
+        "Mappa del sistema DigiAgriFoodCH"@it ;
+    dcterms:accrualPeriodicity <https://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    void:sparqlEndpoint <https://register.ld.admin.ch/query/> ;
+    schema:contactPoint staatskalender:10008654 ;
+    schema:creator staatskalender:10008654 ;
+    schema:dateCreated "2025-01-29"^^xsd:date ;
+    schema:dateModified "2025-04-09"^^xsd:date ;
+    schema:datePublished "2025-02-24"^^xsd:date ;
+    schema:workExample <https://blw-ofag-ufag.github.io/system-map> ;
+    rdfs:seeAlso <https://github.com/blw-ofag-ufag/metadata/blob/main/data/raw/datasets/83f93ff4-ef3f-43f1-af2c-83f18952283e.json> ;
+    rdfs:comment """
+        Eine Sammlung von Organisationen, Informationssystemen und Informationseinheiten (Daten) im Schweizer Agrar- und Lebensmittelsektor.
+        """@de,
+        """
+        A collection of organizations, information systems and information units (data) in the Swiss agri-food sector.
+        """@en,
+        """
+        Une collection d’organisations, de systèmes d’information et d’unités d’information (données) dans le secteur agroalimentaire suisse.
+        """@fr,
+        """
+        Una raccolta di organizzazioni, sistemi informativi e unità informative (dati) nel settore agroalimentare svizzero.
+        """@it ;
+    dcat:landingPage <https://github.com/blw-ofag-ufag/system-map> .
 
 <https://www.fedlex.admin.ch/eli/cc/1986/926_926_926> a schema:Legislation ;
     rdfs:label "Bundesgesetz über die landwirtschaftliche Pacht"@de .

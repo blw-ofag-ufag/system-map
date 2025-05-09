@@ -1,4 +1,5 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/applicableLegislation> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -266,19 +267,19 @@ systemmap:Identifier a owl:Class ;
         "Numero di identificazione"@it ;
     rdfs:comment """
         Eine Art von Identifikationsnummer (ID). Damit ist nicht die ID selbst gemeint, sondern die Sammlung von Identifikationsnummern insgesamt.
-        Unter 'BUR' wird also nicht '1234-5678' verstanden, sondern die Sammlung <i>aller</i> BUR-Identifikationsnummern.
+        Unter 'BUR' wird also nicht '1234-5678' verstanden, sondern die Sammlung aller BUR-Identifikationsnummern.
         """@de,
         """
         A type of identification number (ID). This does not refer to the ID itself but to the collection of identification numbers as a whole.
-        'BUR' does not mean '1234-5678' but rather the collection of <i>all</i> BUR identification numbers.
+        'BUR' does not mean '1234-5678' but rather the collection of all BUR identification numbers.
         """@en,
         """
         Un type de numéro d'identification (ID). Il ne s'agit pas de l'ID en soi, mais de l'ensemble des numéros d'identification.
-        'BUR' ne désigne donc pas '1234-5678', mais l'ensemble de <i>tous</i> les numéros d'identification BUR.
+        'BUR' ne désigne donc pas '1234-5678', mais l'ensemble de tous les numéros d'identification BUR.
         """@fr,
         """
         Un tipo di numero di identificazione (ID). Non si riferisce all'ID stesso, ma all'insieme dei numeri di identificazione.
-        'BUR' non significa quindi '1234-5678', ma l'insieme di <i>tutti</i> i numeri di identificazione BUR.
+        'BUR' non significa quindi '1234-5678', ma l'insieme di tutti i numeri di identificazione BUR.
         """@it ;
     rdfs:subClassOf dcat:Dataset .
 
@@ -402,24 +403,24 @@ schema:memberOf a owl:ObjectProperty ;
         "est une organisation membre de"@fr,
         "è un'organizzazione membro di"@it ;
     rdfs:comment """  
-        Gibt an, dass eine Organisation X eine Mitgliedsorganisation einer anderen Organisation Y ist.  
-        Die Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formellen Vereinigungen darstellen, bei denen Organisationen als Mitglieder teilnehmen.  
-        Informelle Beziehungen gehören nicht dazu.  
+        Gibt an, dass eine Organisation X eine Mitgliedsorganisation einer anderen Organisation Y ist.
+        Die Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formellen Vereinigungen darstellen, bei denen Organisationen als Mitglieder teilnehmen.
+        Informelle Beziehungen gehören nicht dazu.
         """@de,
         """  
-        Indicates that an organization X is a member organization of another organization Y.  
-        The relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members.  
-        Informal relationships are not included.  
+        Indicates that an organization X is a member organization of another organization Y.
+        The relationship is used to represent memberships of industry organizations, professional associations, or other formal associations in which organizations participate as members.
+        Informal relationships are not included.
         """@en,
         """  
-        Indique qu'une organisation X est une organisation membre d'une autre organisation Y.  
-        La relation est utilisée pour représenter les adhésions à des organisations sectorielles, des associations professionnelles ou d'autres associations formelles dans lesquelles les organisations participent en tant que membres.  
-        Les relations informelles ne sont pas incluses.  
+        Indique qu'une organisation X est une organisation membre d'une autre organisation Y.
+        La relation est utilisée pour représenter les adhésions à des organisations sectorielles, des associations professionnelles ou d'autres associations formelles dans lesquelles les organisations participent en tant que membres.
+        Les relations informelles ne sont pas incluses.
         """@fr,
         """  
-        Indica che un'organizzazione X è un'organizzazione membro di un'altra organizzazione Y.  
-        La relazione viene utilizzata per rappresentare l'appartenenza a organizzazioni di settore, associazioni professionali o altre associazioni formali in cui le organizzazioni partecipano come membri.  
-        Le relazioni informali non sono incluse.  
+        Indica che un'organizzazione X è un'organizzazione membro di un'altra organizzazione Y.
+        La relazione viene utilizzata per rappresentare l'appartenenza a organizzazioni di settore, associazioni professionali o altre associazioni formali in cui le organizzazioni partecipano come membri.
+        Le relazioni informali non sono incluse.
         """@it ;
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization ;
@@ -432,16 +433,16 @@ schema:parentOrganization a owl:ObjectProperty,
         "fait partie de"@fr,
         "fa parte di"@it ;
     rdfs:comment """  
-        Zeigt an, dass die (Teil-)Organisation ein Teil von einer (Über-)Organisation Y ist.  
+        Zeigt an, dass die (Teil-)Organisation ein Teil von einer (Über-)Organisation Y ist.
         """@de,
         """  
-        Indicates that the (sub-)organization is part of a (parent) organization Y.  
+        Indicates that the (sub-)organization is part of a (parent) organization Y.
         """@en,
         """  
-        Indique que l'(sous-)organisation fait partie d'une (organisation parent) Y.  
+        Indique que l'(sous-)organisation fait partie d'une (organisation parent) Y.
         """@fr,
         """  
-        Indica che l'(sotto-)organizzazione fa parte di un'(organizzazione madre) Y.  
+        Indica che l'(sotto-)organizzazione fa parte di un'(organizzazione madre) Y.
         """@it ;
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization .
@@ -453,20 +454,20 @@ schema:subOrganization a owl:ObjectProperty,
         "contient une sous-organisation"@fr,
         "contiene un'organizzazione subordinata"@it ;
     rdfs:comment """  
-        Gibt an, dass eine Organisation eine oder mehrere Suborganisationen unter sich hat.  
-        Diese Beziehung stellt eine hierarchische Struktur zwischen Organisationen dar.  
+        Gibt an, dass eine Organisation eine oder mehrere Suborganisationen unter sich hat.
+        Diese Beziehung stellt eine hierarchische Struktur zwischen Organisationen dar.
         """@de,
         """  
-        Indicates that an organization has one or more suborganizations under it.  
-        This relationship represents a hierarchical structure between organizations.  
+        Indicates that an organization has one or more suborganizations under it.
+        This relationship represents a hierarchical structure between organizations.
         """@en,
         """  
-        Indique qu'une organisation a une ou plusieurs sous-organisations sous son autorité.  
-        Cette relation représente une structure hiérarchique entre les organisations.  
+        Indique qu'une organisation a une ou plusieurs sous-organisations sous son autorité.
+        Cette relation représente une structure hiérarchique entre les organisations.
         """@fr,
         """  
-        Indica che un'organizzazione ha una o più organizzazioni subordinate sotto di sé.  
-        Questa relazione rappresenta una struttura gerarchica tra le organizzazioni.  
+        Indica che un'organizzazione ha una o più organizzazioni subordinate sotto di sé.
+        Questa relazione rappresenta una struttura gerarchica tra le organizzazioni.
         """@it ;
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization ;
@@ -478,16 +479,16 @@ dcat:landingPage a owl:ObjectProperty ;
         "a page d'accueil"@fr,
         "ha pagina di destinazione"@it ;
     rdfs:comment """  
-        Eine Webseite, die in einem Webbrowser aufgerufen werden kann, um auf den Katalog, ein Dataset, seine Distributionen und/oder zusätzliche Informationen zuzugreifen.  
+        Eine Webseite, die in einem Webbrowser aufgerufen werden kann, um auf den Katalog, ein Dataset, seine Distributionen und/oder zusätzliche Informationen zuzugreifen.
         """@de,
         """  
-        A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.  
+        A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.
         """@en,
         """  
-        Une page Web pouvant être consultée dans un navigateur pour accéder au catalogue, à un ensemble de données, à ses distributions et/ou à des informations supplémentaires.  
+        Une page Web pouvant être consultée dans un navigateur pour accéder au catalogue, à un ensemble de données, à ses distributions et/ou à des informations supplémentaires.
         """@fr,
         """  
-        Una pagina Web che può essere visitata in un browser per accedere al catalogo, a un set di dati, alle sue distribuzioni e/o a informazioni aggiuntive.  
+        Una pagina Web che può essere visitata in un browser per accedere al catalogo, a un set di dati, alle sue distribuzioni e/o a informazioni aggiuntive.
         """@it .
 
 systemmap:access a owl:ObjectProperty ;
@@ -496,16 +497,16 @@ systemmap:access a owl:ObjectProperty ;
         "a accès à"@fr,
         "ha accesso a"@it ;
     rdfs:comment """  
-        Zeigt an, dass eine Organisation X die Rechte zum Zugriff auf die Informationseinheit Y hat.  
+        Zeigt an, dass eine Organisation X die Rechte zum Zugriff auf die Informationseinheit Y hat.
         """@de,
         """  
-        Indicates that an organization X has the rights to access the information unit Y.  
+        Indicates that an organization X has the rights to access the information unit Y.
         """@en,
         """  
-        Indique qu'une organisation X a le droit d'accéder à l'unité d'information Y.  
+        Indique qu'une organisation X a le droit d'accéder à l'unité d'information Y.
         """@fr,
         """  
-        Indica che un'organizzazione X ha il diritto di accedere all'unità di informazione Y.  
+        Indica che un'organizzazione X ha il diritto di accedere all'unità di informazione Y.
         """@it ;
     rdfs:domain schema:Organization ;
     rdfs:range dcat:Dataset .
@@ -516,20 +517,20 @@ systemmap:containedIn a owl:ObjectProperty ;
         "est contenu dans"@fr,
         "è contenuto in"@it ;
     rdfs:comment """  
-        Gibt an, dass eine Informationseinheit X im IT-System Y enthalten ist.  
-        Beispielsweise sind Informationen über landwirtschaftliche Flächen in der Schweiz in AGIS enthalten.  
+        Gibt an, dass eine Informationseinheit X im IT-System Y enthalten ist.
+        Beispielsweise sind Informationen über landwirtschaftliche Flächen in der Schweiz in AGIS enthalten.
         """@de,
         """  
-        Indicates that an information unit X is contained in the IT system Y.  
-        For example, information about farming areas in Switzerland is contained in AGIS.  
+        Indicates that an information unit X is contained in the IT system Y.
+        For example, information about farming areas in Switzerland is contained in AGIS.
         """@en,
         """  
-        Indique qu'une unité d'information X est contenue dans le système informatique Y.  
-        Par exemple, les informations sur les surfaces agricoles en Suisse sont contenues dans AGIS.  
+        Indique qu'une unité d'information X est contenue dans le système informatique Y.
+        Par exemple, les informations sur les surfaces agricoles en Suisse sont contenues dans AGIS.
         """@fr,
         """  
-        Indica che un'unità di informazione X è contenuta nel sistema IT Y.  
-        Ad esempio, le informazioni sulle superfici agricole in Svizzera sono contenute in AGIS.  
+        Indica che un'unità di informazione X è contenuta nel sistema IT Y.
+        Ad esempio, le informazioni sulle superfici agricole in Svizzera sono contenute in AGIS.
         """@it ;
     rdfs:domain dcat:Dataset ;
     rdfs:range schema:SoftwareApplication ;
@@ -541,20 +542,20 @@ systemmap:contains a owl:ObjectProperty ;
         "contient"@fr,
         "contiene"@it ;
     rdfs:comment """  
-        Gibt an, dass ein IT-System X die Informationseinheit Y enthält.  
-        Beispielsweise enthält AGIS Informationen über landwirtschaftliche Flächen in der Schweiz.  
+        Gibt an, dass ein IT-System X die Informationseinheit Y enthält.
+        Beispielsweise enthält AGIS Informationen über landwirtschaftliche Flächen in der Schweiz.
         """@de,
         """  
-        Indicates that an IT system X contains the information unit Y.  
-        For example, AGIS contains information about farming areas in Switzerland.  
+        Indicates that an IT system X contains the information unit Y.
+        For example, AGIS contains information about farming areas in Switzerland.
         """@en,
         """  
-        Indique qu'un système informatique X contient l'unité d'information Y.  
-        Par exemple, AGIS contient des informations sur les surfaces agricoles en Suisse.  
+        Indique qu'un système informatique X contient l'unité d'information Y.
+        Par exemple, AGIS contient des informations sur les surfaces agricoles en Suisse.
         """@fr,
         """  
-        Indica che un sistema IT X contiene l'unità di informazione Y.  
-        Ad esempio, AGIS contiene informazioni sulle superfici agricole in Svizzera.  
+        Indica che un sistema IT X contiene l'unità di informazione Y.
+        Ad esempio, AGIS contiene informazioni sulle superfici agricole in Svizzera.
         """@it ;
     rdfs:domain schema:SoftwareApplication ;
     rdfs:range dcat:Dataset ;
@@ -566,16 +567,16 @@ systemmap:hasLegalBasis a owl:ObjectProperty ;
         "a une base légale"@fr,
         "ha una base legale"@it ;
     rdfs:comment """  
-        Zeigt an, dass irgendetwas X eine Rechtsgrundlage mit (einem bestimmten Teil) der Legislation Y hat.  
+        Zeigt an, dass irgendetwas X eine Rechtsgrundlage mit (einem bestimmten Teil) der Legislation Y hat.
         """@de,
         """  
-        Indicates that anything X has a legal basis in a (particular part of) legislation Y.  
+        Indicates that anything X has a legal basis in a (particular part of) legislation Y.
         """@en,
         """  
-        Indique que tout X a une base légale dans une (partie particulière de) législation Y.  
+        Indique que tout X a une base légale dans une (partie particulière de) législation Y.
         """@fr,
         """  
-        Indica che qualsiasi X ha una base legale in una (particolare parte di) legislazione Y.  
+        Indica che qualsiasi X ha una base legale in una (particolare parte di) legislazione Y.
         """@it ;
     rdfs:range schema:Legislation .
 
@@ -585,24 +586,24 @@ systemmap:informedBy a owl:ObjectProperty ;
         "obtient des informations de"@fr,
         "ottiene informazioni da"@it ;
     rdfs:comment """  
-        Zeigt an, dass eine Informationseinheit X von einer anderen Informationseinheit Y abgeleitet ist.  
-        Diese Beziehung wird gebraucht, um Informationsflüsse darzustellen.  
-        Diese müssen nicht zwingend (durch eine API oder Ähnliches) formalisiert sein.  
+        Zeigt an, dass eine Informationseinheit X von einer anderen Informationseinheit Y abgeleitet ist.
+        Diese Beziehung wird gebraucht, um Informationsflüsse darzustellen.
+        Diese müssen nicht zwingend (durch eine API oder Ähnliches) formalisiert sein.
         """@de,
         """  
-        Indicates that an information unit X is derived from another information unit Y.  
-        This relationship is used to represent information flows.  
-        These do not necessarily have to be formalized (through an API or similar means).  
+        Indicates that an information unit X is derived from another information unit Y.
+        This relationship is used to represent information flows.
+        These do not necessarily have to be formalized (through an API or similar means).
         """@en,
         """  
-        Indique qu'une unité d'information X est dérivée d'une autre unité d'information Y.  
-        Cette relation est utilisée pour représenter les flux d'information.  
-        Ceux-ci ne doivent pas nécessairement être formalisés (par une API ou un moyen similaire).  
+        Indique qu'une unité d'information X est dérivée d'une autre unité d'information Y.
+        Cette relation est utilisée pour représenter les flux d'information.
+        Ceux-ci ne doivent pas nécessairement être formalisés (par une API ou un moyen similaire).
         """@fr,
         """  
-        Indica che un'unità di informazione X è derivata da un'altra unità di informazione Y.  
-        Questa relazione viene utilizzata per rappresentare i flussi di informazioni.  
-        Questi non devono necessariamente essere formalizzati (tramite un'API o mezzi simili).  
+        Indica che un'unità di informazione X è derivata da un'altra unità di informazione Y.
+        Questa relazione viene utilizzata per rappresentare i flussi di informazioni.
+        Questi non devono necessariamente essere formalizzati (tramite un'API o mezzi simili).
         """@it ;
     rdfs:domain dcat:Dataset ;
     rdfs:range dcat:Dataset ;
@@ -614,20 +615,20 @@ systemmap:informs a owl:ObjectProperty ;
         "informe"@fr,
         "informa"@it ;
     rdfs:comment """
-        Zeigt auf, dass Informationseinheit X durch eine andere Informationseinheit Y <i>informiert</i> wird; d.h. dass <i>irgendwie</i> Daten fliessen.  
-        Das kann über manuelles Abschreiben, E-Mail-Versandt von Tabellen, APIs etc. geschehen.  
+        Zeigt auf, dass Informationseinheit X durch eine andere Informationseinheit Y informiert wird; d.h. dass irgendwie Daten fliessen.
+        Das kann über manuelles Abschreiben, E-Mail-Versandt von Tabellen, APIs etc. geschehen.
         """@de,
         """
-        Indicates that information unit X is <i>informed</i> by another information unit Y, meaning that data flows <i>in some way</i>.  
-        This can happen through manual copying, emailing tables, APIs, etc.  
+        Indicates that information unit X is informed by another information unit Y, meaning that data flows in some way.
+        This can happen through manual copying, emailing tables, APIs, etc.
         """@en,
         """
-        Indique que l'unité d'information X est <i>informée</i> par une autre unité d'information Y, ce qui signifie que des données circulent <i>d'une manière ou d'une autre</i>.  
-        Cela peut se produire par copie manuelle, envoi de tableaux par e-mail, API, etc.  
+        Indique que l'unité d'information X est informée par une autre unité d'information Y, ce qui signifie que des données circulent d'une manière ou d'une autre.
+        Cela peut se produire par copie manuelle, envoi de tableaux par e-mail, API, etc.
         """@fr,
         """
-        Indica che l'unità di informazione X è <i>informata</i> da un'altra unità di informazione Y, il che significa che i dati fluiscono <i>in qualche modo</i>.  
-        Ciò può avvenire tramite copia manuale, invio di tabelle via e-mail, API, ecc.  
+        Indica che l'unità di informazione X è informata da un'altra unità di informazione Y, il che significa che i dati fluiscono in qualche modo.
+        Ciò può avvenire tramite copia manuale, invio di tabelle via e-mail, API, ecc.
         """@it ;
     rdfs:domain dcat:Dataset ;
     rdfs:range dcat:Dataset ;
@@ -639,20 +640,20 @@ systemmap:operatedBy a owl:ObjectProperty ;
         "est exploité par"@fr,
         "è gestito da"@it ;
     rdfs:comment """  
-        Gibt an, dass ein IT-System X durch eine Organisation Y betrieben wird.  
-        Das bedeutet, dass die Organisation Y für den Betrieb von System X zuständig ist.  
+        Gibt an, dass ein IT-System X durch eine Organisation Y betrieben wird.
+        Das bedeutet, dass die Organisation Y für den Betrieb von System X zuständig ist.
         """@de,
         """  
-        Indicates that an IT system X is operated by an organization Y.  
-        This means that organization Y is responsible for operating system X.  
+        Indicates that an IT system X is operated by an organization Y.
+        This means that organization Y is responsible for operating system X.
         """@en,
         """  
-        Indique qu'un système informatique X est exploité par une organisation Y.  
-        Cela signifie que l'organisation Y est responsable de l'exploitation du système X.  
+        Indique qu'un système informatique X est exploité par une organisation Y.
+        Cela signifie que l'organisation Y est responsable de l'exploitation du système X.
         """@fr,
         """  
-        Indica che un sistema IT X è gestito da un'organizzazione Y.  
-        Ciò significa che l'organizzazione Y è responsabile della gestione del sistema X.  
+        Indica che un sistema IT X è gestito da un'organizzazione Y.
+        Ciò significa che l'organizzazione Y è responsabile della gestione del sistema X.
         """@it ;
     rdfs:domain schema:SoftwareApplication ;
     rdfs:range schema:Organization ;
@@ -735,16 +736,16 @@ systemmap:usesIdentifier a owl:ObjectProperty ;
         "utilise ID"@fr,
         "utilizza ID"@it ;
     rdfs:comment """
-        Diese Beziehung zeigt an, dass eine Informationseinheit X für die Identifikation von einem <i>Business Object</i> eine Art von Identifikationsnummer Y verwendet.
+        Diese Beziehung zeigt an, dass eine Informationseinheit X für die Identifikation von einem Business Object eine Art von Identifikationsnummer Y verwendet.
         """@de,
         """
-        This relationship indicates that an information unit X uses some kind of identification number Y for the identification of a <i>Business Object</i>.
+        This relationship indicates that an information unit X uses some kind of identification number Y for the identification of a Business Object.
         """@en,
         """
-        Cette relation indique qu'une unité d'information X utilise un certain type de numéro d'identification Y pour identifier un <i>Business Object</i>.
+        Cette relation indique qu'une unité d'information X utilise un certain type de numéro d'identification Y pour identifier un Business Object.
         """@fr,
         """
-        Questa relazione indica che un'unità di informazione X utilizza un certo tipo di numero di identificazione Y per l'identificazione di un <i>Business Object</i>.
+        Questa relazione indica che un'unità di informazione X utilizza un certo tipo di numero di identificazione Y per l'identificazione di un Business Object.
         """@it ;
     rdfs:domain dcat:Dataset ;
     rdfs:range systemmap:Identifier .

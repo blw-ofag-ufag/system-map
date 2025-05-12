@@ -49,7 +49,7 @@ async function loadSystemTable() {
         WHERE {
           ?system systemmap:contains ?info .
           OPTIONAL {
-            ?info a systemmap:PersonInformation .
+            ?info a termdat:52451 .
             BIND(?info AS ?pi)
           }
         }
@@ -62,7 +62,7 @@ async function loadSystemTable() {
         WHERE {
           ?system systemmap:contains ?info .
           OPTIONAL {
-            ?info a systemmap:SensitivePersonInformation .
+            ?info a termdat:52453 .
             BIND(?info AS ?pi)
           }
         }

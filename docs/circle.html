@@ -137,7 +137,7 @@
       WHERE {
         GRAPH <https://lindas.admin.ch/foag/system-map> {
           ?id a ?group .
-          VALUES ?group { schema:Organization schema:SoftwareApplication systemmap:Information }
+          VALUES ?group { schema:Organization schema:SoftwareApplication dcat:Dataset }
           ?id rdfs:label ?label .
           FILTER(LANG(?label)="de")
         }
@@ -156,7 +156,7 @@
         GRAPH <https://lindas.admin.ch/foag/system-map> {
           ?subject ?predicate ?object .
           ?subject a ?group .
-          VALUES ?group { schema:Organization schema:SoftwareApplication systemmap:Information }
+          VALUES ?group { schema:Organization schema:SoftwareApplication dcat:Dataset }
         }
       }
     `;

@@ -1,48 +1,60 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dcatap: <http://data.europa.eu/r5r/applicableLegislation> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
-@prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix termdat: <https://register.ld.admin.ch/termdat/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
+@prefix termdat: <https://register.ld.admin.ch/termdat/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-dcat:Dataset a rdfs:Class, owl:Class ;
-  rdfs:label "Dataset"@en,
-    "Dataset"@it,
-    "Jeu de données"@fr,
-    "Datensatz"@de ;
-  rdfs:comment """
-    A collection of data, published or curated by a single source, and available for access or download in one or more representations.
-    """@en,
-    """
-    Raccolta di dati, pubblicati o curati da un'unica fonte, disponibili per l'accesso o il download in uno o più formati.
-    """@it,
-    """
-    Une collection de données, publiée ou élaborée par une seule source, et disponible pour accès ou téléchargement dans un ou plusieurs formats.
-    """@fr,
-    """
-    Eine Sammlung von Daten, die von einer einzigen Quelle veröffentlicht oder kuratiert wurde und in einer oder mehreren Darstellungen zugänglich oder herunterladbar ist.
-    """@de ;
-  skos:scopeNote """
-    The notion of dataset in DCAT is broad and inclusive, with the intention of accommodating resource types arising from all communities.
-    Data comes in many forms including numbers, text, pixels, imagery, sound and other multi-media, and potentially other types, any of which might be collected into a dataset.
-    """@en,
-    """
-    Il concetto di dataset in DCAT è ampio e inclusivo, con l'intenzione di includere tipi di risorse provenienti da tutte le comunità.
-    I dati possono assumere molte forme, inclusi numeri, testo, pixel, immagini, suoni e altri media, e potenzialmente altri tipi, che possono essere raccolti in un dataset.
-    """@it,
-    """
-    La notion de jeu de données dans DCAT est large et inclusive, avec l'objectif d'inclure les types de ressources issus de toutes les communautés.
-    Les données peuvent prendre de nombreuses formes, y compris des chiffres, du texte, des pixels, des images, des sons et d'autres médias, voire d'autres types, qui peuvent être regroupés dans un jeu de données.
-    """@fr,
-    """
-    Der Begriff des Datensatzes im DCAT ist breit gefasst und inklusiv, um Ressourcentypen aus allen Gemeinschaften zu berücksichtigen.
-    Daten können viele Formen annehmen, darunter Zahlen, Text, Pixel, Bilder, Ton und andere Multimediaformate sowie möglicherweise weitere Typen, die in einem Datensatz zusammengefasst werden können.
-    """@de ;
-  rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> .
+dcat:Dataset a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Datensatz"@de,
+        "Dataset"@en,
+        "Jeu de données"@fr,
+        "Dataset"@it ;
+    rdfs:comment """
+        Eine Sammlung von Daten, die von einer einzigen Quelle veröffentlicht oder kuratiert wurde und in einer oder mehreren Darstellungen zugänglich oder herunterladbar ist.
+        """@de,
+        """
+        A collection of data, published or curated by a single source, and available for access or download in one or more representations.
+        """@en,
+        """
+        Une collection de données, publiée ou élaborée par une seule source, et disponible pour accès ou téléchargement dans un ou plusieurs formats.
+        """@fr,
+        """
+        Raccolta di dati, pubblicati o curati da un'unica fonte, disponibili per l'accesso o il download in uno o più formati.
+        """@it ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+    skos:scopeNote """
+        Der Begriff des Datensatzes im DCAT ist breit gefasst und inklusiv, um Ressourcentypen aus allen Gemeinschaften zu berücksichtigen.
+        Daten können viele Formen annehmen, darunter Zahlen, Text, Pixel, Bilder, Ton und andere Multimediaformate sowie möglicherweise weitere Typen, die in einem Datensatz zusammengefasst werden können.
+        """@de,
+        """
+        The notion of dataset in DCAT is broad and inclusive, with the intention of accommodating resource types arising from all communities.
+        Data comes in many forms including numbers, text, pixels, imagery, sound and other multi-media, and potentially other types, any of which might be collected into a dataset.
+        """@en,
+        """
+        La notion de jeu de données dans DCAT est large et inclusive, avec l'objectif d'inclure les types de ressources issus de toutes les communautés.
+        Les données peuvent prendre de nombreuses formes, y compris des chiffres, du texte, des pixels, des images, des sons et d'autres médias, voire d'autres types, qui peuvent être regroupés dans un jeu de données.
+        """@fr,
+        """
+        Il concetto di dataset in DCAT è ampio e inclusivo, con l'intenzione di includere tipi di risorse provenienti da tutte le comunità.
+        I dati possono assumere molte forme, inclusi numeri, testo, pixel, immagini, suoni e altri media, e potenzialmente altri tipi, che possono essere raccolti in un dataset.
+        """@it .
+
+schema:DefinedTermSet a owl:Class ;
+    rdfs:label "Reference data"@en ;
+    rdfs:comment """
+        Codelists are a specific form of reference data, where reference data is structured as a list consisting codes and their associated meanings.
+        In the FOAG context, the terms codelist and reference data are often used interchangeably, as the concept of codelist is more readily understood.
+        """@en ;
+    rdfs:subClassOf dcat:Dataset ;
+    skos:altLabel "Defined term set",
+        "Code list"@en,
+        "Enumerated type list"@en .
 
 schema:GovernmentOrganization a owl:Class ;
     rdfs:label "Öffentlich-rechtliche Organisation"@de,
@@ -260,42 +272,13 @@ systemmap:FederalOrganization a owl:Class ;
         """@it ;
     rdfs:subClassOf schema:GovernmentOrganization .
 
-systemmap:Identifier a owl:Class ;
-    rdfs:label "Identifikationsnummer"@de,
-        "Identification number"@en,
-        "Numéro d'identification"@fr,
-        "Numero di identificazione"@it ;
+systemmap:MasterData a owl:Class ;
+    rdfs:label "Stammdaten"@de,
+        "Masterdata"@en ;
     rdfs:comment """
-        Eine Art von Identifikationsnummer (ID). Damit ist nicht die ID selbst gemeint, sondern die Sammlung von Identifikationsnummern insgesamt.
-        Unter 'BUR' wird also nicht '1234-5678' verstanden, sondern die Sammlung aller BUR-Identifikationsnummern.
-        """@de,
-        """
-        A type of identification number (ID). This does not refer to the ID itself but to the collection of identification numbers as a whole.
-        'BUR' does not mean '1234-5678' but rather the collection of all BUR identification numbers.
-        """@en,
-        """
-        Un type de numéro d'identification (ID). Il ne s'agit pas de l'ID en soi, mais de l'ensemble des numéros d'identification.
-        'BUR' ne désigne donc pas '1234-5678', mais l'ensemble de tous les numéros d'identification BUR.
-        """@fr,
-        """
-        Un tipo di numero di identificazione (ID). Non si riferisce all'ID stesso, ma all'insieme dei numeri di identificazione.
-        'BUR' non significa quindi '1234-5678', ma l'insieme di tutti i numeri di identificazione BUR.
-        """@it ;
-    rdfs:subClassOf dcat:Dataset .
-
-termdat:52451 a owl:Class ;
-    rdfs:label "Personendaten"@de, "Données personnelles"@fr, "Dati personali"@it, "Personal data"@en ;
-    rdfs:comment """
-        Angaben, die sich auf eine bestimmte oder bestimmbare natürliche Person beziehen.
-        """@de,
-        """
-        Informations concernant une personne physique identifiée ou identifiable.
-        """@fr,
-        """
-        Informazioni concernenti una persona fisica identificata o identificabile.
-        """@it,
-        """
-        Information relating to an identified or identifiable natural person.
+        Master data describes core business entities such as customers, products, suppliers, and employees but also, in the FOAG context, animals or plant varieties.
+        Master data needs to be consistent across the entire organization.
+        It ensures consistency and accuracy across business processes and systems, allowing different parts of the organization to refer to well-identified entities that can be enriched for specific business purposes.
         """@en ;
     rdfs:subClassOf dcat:Dataset .
 
@@ -326,23 +309,51 @@ systemmap:PrivateOrganization a owl:Class ;
         """@it ;
     rdfs:subClassOf schema:Organization .
 
+systemmap:TransactionalData a owl:Class ;
+    rdfs:label "Transactional data"@en ;
+    rdfs:comment """
+        Transactional data is generated from day-to-day business operations.
+        It represents the facts that usually come to mind when we think about data.
+        Transactional data can be generated by various events and is gathered or measured by dedicated systems.
+        """@en ;
+    rdfs:subClassOf dcat:Dataset .
+
+termdat:52451 a owl:Class ;
+    rdfs:label "Personendaten"@de,
+        "Personal data"@en,
+        "Données personnelles"@fr,
+        "Dati personali"@it ;
+    rdfs:comment """
+        Angaben, die sich auf eine bestimmte oder bestimmbare natürliche Person beziehen.
+        """@de,
+        """
+        Information relating to an identified or identifiable natural person.
+        """@en,
+        """
+        Informations concernant une personne physique identifiée ou identifiable.
+        """@fr,
+        """
+        Informazioni concernenti una persona fisica identificata o identificabile.
+        """@it ;
+    rdfs:subClassOf dcat:Dataset .
+
 termdat:52453 a owl:Class ;
     rdfs:label "Besonders schützenswerte Personendaten"@de,
+        "Sensitive personal data"@en,
         "Données personnelles sensibles"@fr,
-        "Dati personali degni di particolare protezione"@it,
-        "Sensitive personal data"@en ;
+        "Dati personali degni di particolare protezione"@it ;
     rdfs:comment """
         Personendaten über religiöse, weltanschauliche, politische oder gewerkschaftliche Ansichten oder Tätigkeiten, über die Gesundheit, Intimsphäre, Ethnien- oder Rassenzugehörigkeit, über verwaltungs- und strafrechtliche Verfolgungen oder Sanktionen und Massnahmen der sozialen Hilfe sowie genetische oder biometrische Daten, die eine natürliche Person eindeutig identifizien.
         """@de,
+        """
+        Personal data concerning religious, philosophical, ideological, political or trade union-related views or activities, health, the private sphere, affiliation to a race or ethnicity, administrative or criminal proceedings and sanctions, social assistance measures and genetic or biometric data that uniquely identifies a natural person.
+        """@en,
         """
         Données personnelles portant sur des opinions ou des activités religieuses, philosophiques, politiques, ou syndicales, sur la santé, la sphère intime ou sur l'origine raciale ou ethnique, sur des poursuites ou des sanctions pénales et administratives, des mesures d'aide sociale ainsi que données génétiques ou biométriques identifiant une personne physique de manière univoque.
         """@fr,
         """
         Dati personali concernenti le opinioni o attività religiose, filosofiche, politiche o sindacali, la salute, la sfera intima o l'appartenenza a una razza o a un'etnia, perseguimenti e sanzioni di natura amministrativa e penale, le misure d'assistenza sociale e i dati genetici o biometrici, che identificano in modo univoco una persona fisica.
-        """@it,
-        """
-        Personal data concerning religious, philosophical, ideological, political or trade union-related views or activities, health, the private sphere, affiliation to a race or ethnicity, administrative or criminal proceedings and sanctions, social assistance measures and genetic or biometric data that uniquely identifies a natural person.
-        """@en ;
+        """@it ;
     rdfs:subClassOf termdat:52451 .
 
 systemmap:abbreviation a owl:DatatypeProperty ;
@@ -491,6 +502,35 @@ dcat:landingPage a owl:ObjectProperty ;
         Una pagina Web che può essere visitata in un browser per accedere al catalogo, a un set di dati, alle sue distribuzioni e/o a informazioni aggiuntive.
         """@it .
 
+prov:wasDerivedFrom a owl:ObjectProperty ;
+    rdfs:label "wurde abgeleitet von"@de,
+        "was derived from"@en,
+        "a été dérivé de"@fr,
+        "è stato derivato da"@it ;
+    rdfs:comment """
+        Eine Ableitung ist die Transformation einer Entität in eine andere, 
+        eine Aktualisierung einer Entität, die zu einer neuen führt, 
+        oder die Konstruktion einer neuen Entität auf der Grundlage einer bereits existierenden.
+        """@de,
+        """
+        A derivation is a transformation of an entity into another, 
+        an update of an entity resulting in a new one, 
+        or the construction of a new entity based on a pre-existing entity.
+        """@en,
+        """
+        Une dérivation est une transformation d'une entité en une autre, 
+        une mise à jour d'une entité aboutissant à une nouvelle, 
+        ou la construction d'une nouvelle entité basée sur une entité préexistante.
+        """@fr,
+        """
+        Una derivazione è una trasformazione di un'entità in un'altra, 
+        un aggiornamento di un'entità che ne produce una nuova, 
+        o la costruzione di una nuova entità basata su una preesistente.
+        """@it ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range dcat:Dataset ;
+    owl:inverseOf systemmap:informs .
+
 systemmap:access a owl:ObjectProperty ;
     rdfs:label "hat Zugriff auf"@de,
         "has access to"@en,
@@ -580,34 +620,11 @@ systemmap:hasLegalBasis a owl:ObjectProperty ;
         """@it ;
     rdfs:range schema:Legislation .
 
-systemmap:informedBy a owl:ObjectProperty ;
-    rdfs:label "erhält Informationen von"@de,
-        "gets information from"@en,
-        "obtient des informations de"@fr,
-        "ottiene informazioni da"@it ;
-    rdfs:comment """  
-        Zeigt an, dass eine Informationseinheit X von einer anderen Informationseinheit Y abgeleitet ist.
-        Diese Beziehung wird gebraucht, um Informationsflüsse darzustellen.
-        Diese müssen nicht zwingend (durch eine API oder Ähnliches) formalisiert sein.
-        """@de,
-        """  
-        Indicates that an information unit X is derived from another information unit Y.
-        This relationship is used to represent information flows.
-        These do not necessarily have to be formalized (through an API or similar means).
-        """@en,
-        """  
-        Indique qu'une unité d'information X est dérivée d'une autre unité d'information Y.
-        Cette relation est utilisée pour représenter les flux d'information.
-        Ceux-ci ne doivent pas nécessairement être formalisés (par une API ou un moyen similaire).
-        """@fr,
-        """  
-        Indica che un'unità di informazione X è derivata da un'altra unità di informazione Y.
-        Questa relazione viene utilizzata per rappresentare i flussi di informazioni.
-        Questi non devono necessariamente essere formalizzati (tramite un'API o mezzi simili).
-        """@it ;
+systemmap:hasMaster a owl:ObjectProperty ;
+    rdfs:label "hat Masterdaten"@de,
+        "has master data"@en ;
     rdfs:domain dcat:Dataset ;
-    rdfs:range dcat:Dataset ;
-    owl:inverseOf systemmap:informs .
+    rdfs:range systemmap:MasterData .
 
 systemmap:informs a owl:ObjectProperty ;
     rdfs:label "informiert"@de,
@@ -632,7 +649,7 @@ systemmap:informs a owl:ObjectProperty ;
         """@it ;
     rdfs:domain dcat:Dataset ;
     rdfs:range dcat:Dataset ;
-    owl:inverseOf systemmap:informedBy .
+    owl:inverseOf prov:wasDerivedFrom .
 
 systemmap:operatedBy a owl:ObjectProperty ;
     rdfs:label "wird betrieben von"@de,
@@ -730,30 +747,16 @@ systemmap:owns a owl:ObjectProperty ;
     rdfs:range schema:Organization ;
     owl:inverseOf systemmap:ownedBy .
 
-systemmap:usesIdentifier a owl:ObjectProperty ;
-    rdfs:label "nutzt ID"@de,
-        "uses ID"@en,
-        "utilise ID"@fr,
-        "utilizza ID"@it ;
-    rdfs:comment """
-        Diese Beziehung zeigt an, dass eine Informationseinheit X für die Identifikation von einem Business Object eine Art von Identifikationsnummer Y verwendet.
-        """@de,
-        """
-        This relationship indicates that an information unit X uses some kind of identification number Y for the identification of a Business Object.
-        """@en,
-        """
-        Cette relation indique qu'une unité d'information X utilise un certain type de numéro d'identification Y pour identifier un Business Object.
-        """@fr,
-        """
-        Questa relazione indica che un'unità di informazione X utilizza un certo tipo di numero di identificazione Y per l'identificazione di un Business Object.
-        """@it ;
+systemmap:references a owl:ObjectProperty ;
+    rdfs:label "referenziert"@de,
+        "references"@en ;
     rdfs:domain dcat:Dataset ;
-    rdfs:range systemmap:Identifier .
+    rdfs:range systemmap:MasterData .
 
 systemmap: a owl:Ontology ;
     dcterms:creator "Federal Office for Agriculture" ;
     dcterms:description """
-        Eine Ontologie zur Modellierung von Organisationen, IT-Systemen und Daten für das Schweizer Bundesamt für Landwirtschaft (FOAG).
+        Eine Ontologie zur Modellierung von Organisationen, IT-Systemen und Daten für das Bundesamt für Landwirtschaft (BLW).
         """@de,
         """
         An ontology to model organizations, IT systems and data for the Swiss Federal Office for Agriculture FOAG.

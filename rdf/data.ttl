@@ -1,10 +1,12 @@
 @prefix LwG: <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
+@prefix termdat: <https://register.ld.admin.ch/termdat/> .
 @prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
 
 <https://www.fedlex.admin.ch/eli/cc/1986/926_926_926> a schema:Legislation ;
@@ -999,6 +1001,488 @@ systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
         <https://www.fedlex.admin.ch/eli/cc/2011/770>,
         <https://www.fedlex.admin.ch/eli/cc/2016/565> ;
     systemmap:operatedBy systemmap:SRu4rav1Rlm2mUMWr .
+
+systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
+    rdfs:label "Agrarmarktdaten"@de,
+        "agricultural market data"@en,
+        "données du marché agricole"@fr,
+        "dati di mercato agricolo"@it ;
+    rdfs:comment "Marktdaten enthalten Preise, Mengen, Produktionssysteme."@de,
+        "Market data includes prices, quantities, production systems."@en,
+        "Les données de marché comprennent les prix, les quantités, les systèmes de production."@fr,
+        "I dati di mercato comprendono prezzi, quantità e sistemi di produzione."@it ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
+    systemmap:informs systemmap:SRT6X0n1ML8vwHUW .
+
+systemmap:S4BoMPavXD5gIObm a dcat:Dataset ;
+    rdfs:label "Tieridentifikationsdaten"@de,
+        "Animal identification data"@en,
+        "Données d'identification des animaux"@fr,
+        "Dati di identificazione degli animali"@it ;
+    rdfs:comment """
+        Enthält grundlegende Identifikationsdaten der Tiere, wie eindeutige Ohrmarkennummern, Art, Geschlecht und Geburtsdatum.
+        Diese Stammdaten bilden die Basis für die lückenlose Rückverfolgbarkeit im TVD.
+        """@de,
+        """
+        Contains basic identification data of animals, such as unique ear tag numbers, species, gender, and date of birth.
+        These master data form the basis for seamless traceability in the TVD.
+        """@en,
+        """
+        Contient des données d'identification de base des animaux, telles que les numéros de marque auriculaire uniques, l'espèce, le sexe et la date de naissance.
+        Ces données de base constituent la base de la traçabilité sans faille dans le TVD.
+        """@fr,
+        """
+        Contiene i dati di identificazione di base degli animali, come i numeri univoci delle marche auricolari, la specie, il sesso e la data di nascita.
+        Questi dati principali costituiscono la base per la tracciabilità senza interruzioni nel TVD.
+        """@it ;
+    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
+
+systemmap:S4hqylQaEIsYGXMo a dcat:Dataset ;
+    rdfs:label "Verschiebung von Mineraldüngern"@de,
+        "Movement of Mineral Fertilizers"@en,
+        "Déplacement des engrais minéraux"@fr,
+        "Spostamento dei fertilizzanti minerali"@it ;
+    rdfs:comment """
+        Die Verschiebung von Mineraldüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge mineralischer Düngemittel, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
+        """@de,
+        """
+        The movement of mineral fertilizers includes the recording and reporting of all inflows and outflows of mineral fertilizers, including purchases, sales, and internal transfers.
+        """@en,
+        """
+        Le déplacement des engrais minéraux comprend l'enregistrement et la déclaration de toutes les entrées et sorties d'engrais minéraux, y compris les achats, les ventes et les transferts internes.
+        """@fr,
+        """
+        Lo spostamento dei fertilizzanti minerali include la registrazione e la segnalazione di tutti gli afflussi e deflussi di fertilizzanti minerali, compresi acquisti, vendite e trasferimenti interni.
+        """@it ;
+    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
+
+systemmap:S7mhWQjPZiSFc8dU a dcat:Dataset ;
+    rdfs:label "Tierereignisdaten"@de,
+        "Animal event data"@en,
+        "Données d'événements animaux"@fr,
+        "Dati sugli eventi degli animali"@it ;
+    rdfs:comment """
+        Erfasst alle dynamischen Ereignisse im Lebenszyklus der Tiere, darunter Geburts-, Bewegungs- und Schlachtdaten sowie Halterwechsel.
+        Diese Informationen sind essenziell, um Standortwechsel, Transportschritte und Verarbeitungsprozesse nachvollziehen zu können.
+        """@de,
+        """
+        Records all dynamic events in the life cycle of animals, including birth, movement, and slaughter data, as well as changes in ownership.
+        This information is essential for tracking location changes, transportation steps, and processing procedures.
+        """@en,
+        """
+        Enregistre tous les événements dynamiques du cycle de vie des animaux, y compris les données de naissance, de déplacement et d'abattage, ainsi que les changements de détenteur.
+        Ces informations sont essentielles pour retracer les changements de localisation, les étapes de transport et les processus de transformation.
+        """@fr,
+        """
+        Registra tutti gli eventi dinamici nel ciclo di vita degli animali, inclusi i dati di nascita, movimento e macellazione, nonché i cambi di detentore.
+        Queste informazioni sono essenziali per tracciare i cambi di posizione, le fasi di trasporto e i processi di lavorazione.
+        """@it ;
+    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
+
+systemmap:S8JpqvyO4LQwEM5s a dcat:Dataset ;
+    rdfs:label "Globaler Sortenkatalog"@de,
+        "Global variety catalog"@en,
+        "Catalogue mondial des variétés"@fr,
+        "Catalogo globale delle varietà"@it ;
+    rdfs:comment """
+        Informationen zu Pflanzensorten aus UPOV-Mitgliedsländern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD).
+        Diese Sortenliste dient als zentrales Register für Sortenbezeichnungen und unterstützt bei der Überprüfung der Unterscheidbarkeit neuer Sorten."""@de,
+        """
+        Information on plant varieties from UPOV member countries as well as the Organisation for Economic Co-operation and Development (OECD).
+        This variety list serves as a central register for variety denominations and supports the verification of the distinctness of new varieties.
+        """@en,
+        """
+        Informations sur les variétés végétales des pays membres de l'UPOV ainsi que de l'Organisation de coopération et de développement économiques (OCDE).
+        Cette liste de variétés sert de registre central pour les dénominations de variétés et aide à vérifier la distinction des nouvelles variétés.
+        """@fr,
+        """
+        Informazioni sulle varietà vegetali provenienti dai paesi membri dell'UPOV e dall'Organizzazione per la cooperazione e lo sviluppo economico (OCSE).
+        Questo elenco di varietà funge da registro centrale per le denominazioni varietali e supporta la verifica della distinzione delle nuove varietà.
+        """@it ;
+    prov:wasDerivedFrom systemmap:Spqrv6Ul05KJySTs ;
+    systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN .
+
+systemmap:S8cKNg0hfPy97TUB a dcat:Dataset ;
+    rdfs:label "Details zu Unternehmen"@de,
+        "Company details"@en,
+        "Détails sur les entreprises"@fr,
+        "Dettagli sulle imprese"@it ;
+    rdfs:comment """
+        Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit, Grundkapital der Aktiengesellschaften, Umsatzzahlen, Datum des Eintrags oder der Löschung im Handelsregister, Datum der Bekanntgabe der Gründung oder Schliessung eines Unternehmens oder Betriebs.
+        """@de,
+        """
+        Number of employees by gender and working hours, share capital of joint-stock companies, revenue figures, date of registration or deletion in the commercial register, date of announcement of the establishment or closure of a company or business.
+        """@en,
+        """
+        Nombre d'employés selon le sexe et le temps de travail, capital social des sociétés anonymes, chiffres d'affaires, date d'inscription ou de suppression au registre du commerce, date d'annonce de la création ou de la fermeture d'une entreprise ou d'un établissement.
+        """@fr,
+        """
+        Numero di dipendenti per genere e orario di lavoro, capitale sociale delle società per azioni, dati di fatturato, data di registrazione o cancellazione nel registro commerciale, data di annuncio della fondazione o chiusura di un'azienda o impresa.
+        """@it ;
+    systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
+
+systemmap:S9J1HTMKIxnCgmYc a dcat:Dataset ;
+    rdfs:label "Pflanzenschutzmittel"@de,
+        "Plant Protection Products"@en,
+        "Produits phytosanitaires"@fr,
+        "Prodotti fitosanitari"@it ;
+    rdfs:comment """
+        Liste der in der Schweiz erlaubten Pflanzenschutzmittel, deren chemische Zusammensetzung, W-Nummern und Bewilligungsinhaber.
+        """@de,
+        """
+        List of plant protection products authorized in Switzerland, including their chemical composition, W-numbers, and authorization holders.
+        """@en,
+        """
+        Liste des produits phytosanitaires autorisés en Suisse, y compris leur composition chimique, numéros W et titulaires d'autorisation.
+        """@fr,
+        """
+        Elenco dei prodotti fitosanitari autorizzati in Svizzera, inclusa la loro composizione chimica, i numeri W e i titolari dell'autorizzazione.
+        """@it ;
+    systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
+
+systemmap:SAUWzyCpeGZ6vVil a dcat:Dataset ;
+    rdfs:label "Daten zu Tierhaltern"@de,
+        "Data on animal owners"@en,
+        "Données sur les détenteurs d’animaux"@fr,
+        "Dati sui detentori di animali"@it ;
+    rdfs:comment """
+        Administrative Informationen zu den Tierhalterinnen und Tierhaltern.
+        Dies umfasst die für die eindeutige Zuordnung erforderlichen Identifikationsdaten wie die TVD-Nummer bzw. Betriebsnummer sowie grundlegende Angaben zur Identität und Kontaktadresse der Person.
+        Diese Daten gewährleisten, dass alle Tierbewegungen und -ereignisse korrekt einer Halterin bzw. einem Halter zugeordnet werden können, was für die Rückverfolgbarkeit und die Einhaltung gesetzlicher Anforderungen unerlässlich ist.
+        """@de,
+        """
+        Administrative information on animal owners.
+        This includes the identification data required for unique assignment, such as the TVD number or farm number, as well as basic details about the person's identity and contact address.
+        These data ensure that all animal movements and events can be correctly assigned to an owner, which is essential for traceability and compliance with legal requirements.
+        """@en,
+        """
+        Informations administratives sur les détenteurs d’animaux.
+        Cela comprend les données d’identification nécessaires pour une attribution unique, telles que le numéro TVD ou le numéro d’exploitation, ainsi que des informations de base sur l’identité et l’adresse de contact de la personne.
+        Ces données garantissent que tous les mouvements et événements liés aux animaux peuvent être correctement attribués à un détenteur, ce qui est essentiel pour la traçabilité et le respect des exigences légales.
+        """@fr,
+        """
+        Informazioni amministrative sui detentori di animali.
+        Ciò include i dati di identificazione necessari per l'assegnazione univoca, come il numero TVD o il numero dell'azienda agricola, nonché i dati di base sull'identità e l'indirizzo di contatto della persona.
+        Questi dati garantiscono che tutti i movimenti e gli eventi degli animali possano essere correttamente attribuiti a un detentore, essenziale per la tracciabilità e il rispetto dei requisiti legali.
+        """@it ;
+    prov:wasDerivedFrom systemmap:SvNriWslaOR5xkdw ;
+    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
+
+systemmap:SDmJeWK7EOnMqRLs a dcat:Dataset ;
+    rdfs:label "Auflagen zur Anwendung von Pflanzenschutzmitteln"@de,
+        "Conditions for the Use of Plant Protection Products"@en,
+        "Conditions d'utilisation des produits phytosanitaires"@fr,
+        "Condizioni per l'uso dei prodotti fitosanitari"@it ;
+    rdfs:comment """
+        Bestimmungen und Einschränkungen, die bei der Anwendung von Pflanzenschutzmitteln zu beachten sind, einschliesslich Dosierung, Anwendungszeitpunkt und Schutzmassnahmen.
+        """@de,
+        """
+        Regulations and restrictions to be observed when using plant protection products, including dosage, application timing, and protective measures.
+        """@en,
+        """
+        Règlements et restrictions à respecter lors de l'utilisation de produits phytosanitaires, y compris le dosage, le moment de l'application et les mesures de protection.
+        """@fr,
+        """
+        Regolamenti e restrizioni da osservare nell'uso dei prodotti fitosanitari, inclusi dosaggio, tempistica dell'applicazione e misure protettive.
+        """@it ;
+    systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
+
+systemmap:SECM4KqStG9yBva6 a dcat:Dataset ;
+    rdfs:label "Verschiebung von Hof- und Recyclingdünger"@de,
+        "Movement of Farmyard and Recycled Fertilizers"@en,
+        "Déplacement des engrais de ferme et recyclés"@fr,
+        "Spostamento dei fertilizzanti aziendali e riciclati"@it ;
+    rdfs:comment """
+        Die Verschiebung von Hof- und Recyclingdüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
+        """@de,
+        """
+        The movement of farmyard and recycled fertilizers includes the recording and reporting of all inflows and outflows, including purchases, sales, and internal transfers.
+        """@en,
+        """
+        Le déplacement des engrais de ferme et recyclés comprend l'enregistrement et la déclaration de toutes les entrées et sorties, y compris les achats, les ventes et les transferts internes.
+        """@fr,
+        """
+        Lo spostamento dei fertilizzanti aziendali e riciclati include la registrazione e la segnalazione di tutti gli afflussi e deflussi, compresi acquisti, vendite e trasferimenti interni.
+        """@it ;
+    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
+
+systemmap:SFyGV7l0kN4qgA8u a dcat:Dataset ;
+    rdfs:label "Kulturen und Schaderreger"@de,
+        "Crops and Pests"@en,
+        "Cultures et organismes nuisibles"@fr,
+        "Colture e organismi nocivi"@it ;
+    rdfs:comment """
+        Liste der Kulturen und Schaderreger, für die in der Schweiz bereits eine Pflanzenschutzmittelbewilligung erteilt wurde.
+        """@de,
+        """
+        List of crops and pests for which a plant protection product authorization has already been granted in Switzerland.
+        """@en,
+        """
+        Liste des cultures et organismes nuisibles pour lesquels une autorisation de produit phytosanitaire a déjà été accordée en Suisse.
+        """@fr,
+        """
+        Elenco delle colture e degli organismi nocivi per i quali è già stata concessa un'autorizzazione per un prodotto fitosanitario in Svizzera.
+        """@it ;
+    systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
+
+systemmap:SIsQ6LSUJc3xbG9B a dcat:Dataset ;
+    rdfs:label "Biozide"@de,
+        "Biocides"@en,
+        "Biocides"@fr,
+        "Biocidi"@it ;
+    rdfs:comment """
+        Produkte zur Bekämpfung von Schadorganismen. Mitenthalten sind auch parallel importierte Pflanzenschutzmittel, also solche, die aus anderen Ländern eingeführt werden.
+        """@de,
+        """
+        Products used to combat harmful organisms. This also includes parallel-imported plant protection products, meaning those imported from other countries.
+        """@en,
+        """
+        Produits utilisés pour lutter contre les organismes nuisibles. Cela inclut également les produits phytosanitaires importés en parallèle, c'est-à-dire en provenance d'autres pays.
+        """@fr,
+        """
+        Prodotti utilizzati per combattere gli organismi nocivi. Sono inclusi anche i prodotti fitosanitari importati parallelamente da altri paesi.
+        """@it ;
+    systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
+
+systemmap:SLXw4VofhYbzXVNKC a dcat:Dataset ;
+    rdfs:label "Daten zur Milchverwertung"@de,
+        "Data on milk utilization"@en,
+        "Données sur la valorisation du lait"@fr,
+        "Dati sull'utilizzo del latte"@it ;
+    rdfs:comment "Diese Daten sind essenziell für die Berechnung und Auszahlung von Zulagen für verkäste Milch sowie für die Fütterung ohne Silage durch das Bundesamt für Landwirtschaft (BLW)."@de,
+        "These data are essential for the calculation and payment of subsidies for cheesed milk as well as for feeding without silage by the Federal Office for Agriculture (BLW)."@en,
+        "Ces données sont essentielles pour le calcul et le paiement des subventions pour le lait transformé en fromage ainsi que pour l'alimentation sans ensilage par l'Office fédéral de l'agriculture (OFAG)."@fr,
+        "Questi dati sono essenziali per il calcolo e il pagamento dei sussidi per il latte trasformato in formaggio e per l'alimentazione senza insilato da parte dell'Ufficio federale dell'agricoltura (UFAG)."@it ;
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
+
+systemmap:SPCig1xdekUHDV4r a dcat:Dataset ;
+    rdfs:label "Milchstatistik"@de,
+        "Milk statistics"@en,
+        "Statistiques du lait"@fr,
+        "Statistiche del latte"@it ;
+    rdfs:comment "Monatliche Statistiken und Mehrjahresvergleiche, die Angaben über die produzierte Milch und deren Verarbeitung in verschiedene Produktgruppen enthalten."@de,
+        "Monthly statistics and multi-year comparisons containing information on the milk produced and its processing into different product groups."@en,
+        "Statistiques mensuelles et comparaisons pluriannuelles contenant des informations sur le lait produit et sa transformation en différentes catégories de produits."@fr,
+        "Statistiche mensili e confronti pluriennali contenenti informazioni sul latte prodotto e sulla sua trasformazione in diverse categorie di prodotti."@it ;
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
+
+systemmap:SRT6X0n1ML8vwHUW a dcat:Dataset ;
+    rdfs:label "Linked Data"@de,
+        "Linked Data"@en,
+        "Linked Data"@fr,
+        "Linked Data"@it ;
+    systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd,
+        systemmap:SpLZd1ojPxF0CvH28 .
+
+systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
+    rdfs:label "Zubereitungen"@de,
+        "Preparations"@en,
+        "Préparations"@fr,
+        "Preparazioni"@it ;
+    rdfs:comment """
+        Mischungen oder Lösungen aus zwei oder mehr Stoffen.
+        """@de,
+        """
+        Mixtures or solutions composed of two or more substances.
+        """@en,
+        """
+        Mélanges ou solutions composés de deux ou plusieurs substances.
+        """@fr,
+        """
+        Miscele o soluzioni composte da due o più sostanze.
+        """@it ;
+    systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
+
+systemmap:SUlfRYzH3b0gx7VX a dcat:Dataset ;
+    rdfs:label "Verschiebung von Pflanzenschutzmitteln"@de,
+        "Movement of Plant Protection Products"@en,
+        "Déplacement des produits phytosanitaires"@fr,
+        "Spostamento dei prodotti fitosanitari"@it ;
+    rdfs:comment """
+        Die Verschiebung von Pflanzenschutzmitteln umfasst die Erfassung und Meldung aller Zu- und Abgänge von Pflanzenschutzmitteln, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
+        """@de,
+        """
+        The movement of plant protection products includes the recording and reporting of all inflows and outflows, including purchases, sales, and internal transfers.
+        """@en,
+        """
+        Le déplacement des produits phytosanitaires comprend l'enregistrement et la déclaration de toutes les entrées et sorties, y compris les achats, les ventes et les transferts internes.
+        """@fr,
+        """
+        Lo spostamento dei prodotti fitosanitari include la registrazione e la segnalazione di tutti gli afflussi e deflussi, compresi acquisti, vendite e trasferimenti interni.
+        """@it ;
+    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
+
+systemmap:SZBHsREMx369FArg a dcat:Dataset ;
+    rdfs:label "Dünger"@de,
+        "Fertilizers"@en,
+        "Engrais"@fr,
+        "Fertilizzanti"@it ;
+    rdfs:comment """
+        Produkte zur Boden- und Pflanzendüngung.
+        """@de,
+        """
+        Products for soil and plant fertilization.
+        """@en,
+        """
+        Produits pour la fertilisation des sols et des plantes.
+        """@fr,
+        """
+        Prodotti per la fertilizzazione del suolo e delle piante.
+        """@it ;
+    systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
+
+systemmap:Sb2FM7pKN60PrRwU a dcat:Dataset ;
+    rdfs:label "Globale Pflanzenliste"@de,
+        "Global plant list"@en,
+        "Liste globale des plantes"@fr,
+        "Elenco globale delle piante"@it ;
+    rdfs:comment """
+        Liste aller möglichen Pflanzenarten mit entsprechenden Pflanzenarten-Codes.
+        UPOV verwendet ein spezifisches Codesystem, um Pflanzenarten und -gattungen eindeutig zu identifizieren.
+        Diese sogenannten UPOV-Codes bestehen in der Regel aus fünf Buchstaben für die Gattung und drei Buchstaben für die Art, zum Beispiel steht <tt>PRUNU_ARM</tt> für <i>Prunus armeniaca</i> (Aprikose).
+        Dieses System erleichtert die Klassifizierung und den Informationsaustausch über Pflanzensorten.
+        """@de,
+        """
+        List of all possible plant species with corresponding plant species codes.
+        UPOV uses a specific coding system to uniquely identify plant species and genera.
+        These so-called UPOV codes usually consist of five letters for the genus and three letters for the species. For example, <tt>PRUNU_ARM</tt> stands for <i>Prunus armeniaca</i> (apricot).
+        This system facilitates the classification and exchange of information on plant varieties.
+        """@en,
+        """
+        Liste de toutes les espèces végétales possibles avec les codes d'espèces correspondants.
+        L'UPOV utilise un système de codage spécifique pour identifier de manière unique les espèces et genres de plantes.
+        Ces codes UPOV se composent généralement de cinq lettres pour le genre et de trois lettres pour l'espèce. Par exemple, <tt>PRUNU_ARM</tt> représente <i>Prunus armeniaca</i> (abricot).
+        Ce système facilite la classification et l'échange d'informations sur les variétés de plantes.
+        """@fr,
+        """
+        Elenco di tutte le possibili specie vegetali con i relativi codici di specie.
+        L'UPOV utilizza un sistema di codifica specifico per identificare in modo univoco le specie e i generi di piante.
+        Questi cosiddetti codici UPOV sono generalmente composti da cinque lettere per il genere e tre lettere per la specie. Ad esempio, <tt>PRUNU_ARM</tt> rappresenta <i>Prunus armeniaca</i> (albicocco).
+        Questo sistema facilita la classificazione e lo scambio di informazioni sulle varietà vegetali.
+        """@it ;
+    systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN .
+
+systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
+    rdfs:label "Daten zur Milchproduktion"@de,
+        "Data on milk production"@en,
+        "Données sur la production laitière"@fr,
+        "Dati sulla produzione di latte"@it ;
+    rdfs:comment """
+        Monatliche Produktionsmengen (in kg) der im Vormonat gelieferten Kuh- und Büffelmilch von allen Milchproduzenten.
+        Das BLW benötigt diese Information für die Ausrichtung der Zulage für Verkehrsmilch.
+        """@de,
+        """
+        Monthly production quantities (in kg) of cow and buffalo milk delivered in the previous month by all milk producers.
+        The BLW requires this information for the allocation of the subsidy for market milk.
+        """@en,
+        """
+        Quantités de production mensuelles (en kg) du lait de vache et de bufflonne livré le mois précédent par tous les producteurs de lait.
+        L'OFAG a besoin de ces informations pour l'octroi de la subvention pour le lait de consommation.
+        """@fr,
+        """
+        Quantità di produzione mensili (in kg) del latte di mucca e bufala consegnato nel mese precedente da tutti i produttori di latte.
+        L'UFAG necessita di queste informazioni per l'assegnazione del sussidio per il latte di consumo.
+        """@it ;
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
+
+systemmap:Sl5KyePu7JtGiE3V a dcat:Dataset ;
+    rdfs:label "Produktekatalog"@de,
+        "Product catalog"@en,
+        "Catalogue de produits"@fr,
+        "Catalogo dei prodotti"@it ;
+    rdfs:comment """
+        Sammlung von Informationen zu Pflanzenschutzmittel-, Futtermittel-, Mineraldünger-, Hof- und Recyclingdünger-Produkten.
+        Das beinhaltet jeweilige Identifikatoren, Namen, Beschreibungen, Inhaltsstoffe und Mengen etc.
+        """@de,
+        """
+        Collection of information on plant protection products, feed, mineral fertilizers, farm and recycled fertilizers.
+        This includes respective identifiers, names, descriptions, ingredients, and quantities, etc.
+        """@en,
+        """
+        Collection d'informations sur les produits phytosanitaires, les aliments pour animaux, les engrais minéraux, les engrais de ferme et les engrais recyclés.
+        Cela inclut les identifiants respectifs, les noms, les descriptions, les ingrédients et les quantités, etc.
+        """@fr,
+        """
+        Raccolta di informazioni sui prodotti fitosanitari, i mangimi, i fertilizzanti minerali, i fertilizzanti agricoli e quelli riciclati.
+        Ciò include gli identificatori, i nomi, le descrizioni, gli ingredienti e le quantità, ecc.
+        """@it ;
+    prov:wasDerivedFrom systemmap:S9J1HTMKIxnCgmYc,
+        systemmap:SZBHsREMx369FArg ;
+    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
+
+systemmap:SoBRgq7STLbZfEze a dcat:Dataset ;
+    rdfs:label "Meldepflichtdaten (Schafe & Ziegen)"@de,
+        "Mandatory reporting data (sheep & goats)"@en,
+        "Données à déclaration obligatoire (moutons & chèvres)"@fr,
+        "Dati soggetti a obbligo di notifica (pecore & capre)"@it ;
+    rdfs:comment """
+        Beinhaltet spezifische Daten, die aufgrund erweiterter Meldepflichten für Schafe und Ziegen erfasst werden müssen.
+        Dazu gehören Meldungen zu Geburten (innerhalb von 30 Tagen) sowie zu Verendungen, Zu- und Abgängen sowie Schlachtungen (innerhalb von 3 Tagen).
+        """@de,
+        """
+        Includes specific data that must be recorded due to extended reporting obligations for sheep and goats.
+        This includes reports on births (within 30 days), as well as deaths, arrivals and departures, and slaughter (within 3 days).
+        """@en,
+        """
+        Contient des données spécifiques qui doivent être enregistrées en raison d'obligations de déclaration étendues pour les moutons et les chèvres.
+        Cela comprend les déclarations de naissances (dans les 30 jours), ainsi que les décès, arrivées et départs, et abattages (dans les 3 jours).
+        """@fr,
+        """
+        Contiene dati specifici che devono essere registrati a causa di obblighi di notifica estesi per pecore e capre.
+        Ciò include le segnalazioni di nascite (entro 30 giorni), nonché decessi, arrivi e partenze e macellazioni (entro 3 giorni).
+        """@it ;
+    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
+
+systemmap:Spqrv6Ul05KJySTs a dcat:Dataset ;
+    rdfs:label "Nationaler Sortenkatalog"@de,
+        "National variety catalog"@en,
+        "Catalogue national des variétés"@fr,
+        "Catalogo nazionale delle varietà"@it ;
+    rdfs:comment "Katalog von anerkannten landwirtschaftlich genutzten Pflanzensorten in der Schweiz. Die Informationen dazu werden von den Züchtern erfasst."@de,
+        "Catalog of recognized agricultural plant varieties used in Switzerland. The information is recorded by breeders."@en,
+        "Catalogue des variétés de plantes agricoles reconnues utilisées en Suisse. Les informations sont enregistrées par les sélectionneurs."@fr,
+        "Catalogo delle varietà di piante agricole riconosciute utilizzate in Svizzera. Le informazioni sono registrate dai selezionatori."@it ;
+    prov:wasDerivedFrom systemmap:Sb2FM7pKN60PrRwU ;
+    systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj .
+
+systemmap:SzcK9O3XZFxVW1IS a dcat:Dataset ;
+    rdfs:label "Daten zur Milchsegmentierung"@de,
+        "Data on milk segmentation"@en,
+        "Données sur la segmentation du lait"@fr,
+        "Dati sulla segmentazione del latte"@it ;
+    rdfs:comment "Daten zur Segmentierung der Milchverwertung gemäss dem BOM1-Reglement."@de,
+        "Data on the segmentation of milk utilization according to the BOM1 regulation."@en,
+        "Données sur la segmentation de la valorisation du lait selon le règlement BOM1."@fr,
+        "Dati sulla segmentazione dell'utilizzo del latte secondo il regolamento BOM1."@it ;
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
+
+systemmap:SzuDlnYUQMk3HaCb a dcat:Dataset ;
+    rdfs:label "Strukturdaten"@de,
+        "Structural data"@en,
+        "Données structurelles"@fr,
+        "Dati strutturali"@it ;
+    rdfs:comment """
+        Die landwirtschaftliche Strukturerhebung erfasst jährlich seit 1997 die Struktur aller Landwirtschaftsbetriebe in der Schweiz und basiert hauptsächlich auf administrativen Daten.
+        Sie deckt nahezu 100 % der Betriebe ab und erfasst Variablen wie Betriebsgrössen, Anbauflächen, Nutztierbestände und Beschäftigte.
+        Die Erhebung dient der statistischen Analyse der Landwirtschaft, der Aktualisierung des Betriebsregisters und der agrarpolitischen Entscheidungsfindung.
+        """@de,
+        """
+        The agricultural structural survey has been conducted annually since 1997 and records the structure of all farms in Switzerland, mainly based on administrative data.
+        It covers nearly 100% of farms and collects variables such as farm sizes, cultivated areas, livestock populations, and employees.
+        The survey serves statistical analysis of agriculture, the updating of the farm register, and agricultural policy decision-making.
+        """@en,
+        """
+        L'enquête structurelle agricole est menée chaque année depuis 1997 et enregistre la structure de toutes les exploitations agricoles en Suisse, principalement sur la base de données administratives.
+        Elle couvre près de 100 % des exploitations et collecte des variables telles que les tailles d'exploitation, les surfaces cultivées, les effectifs d'animaux d'élevage et les employés.
+        L'enquête sert à l'analyse statistique de l'agriculture, à la mise à jour du registre des exploitations et à la prise de décision en matière de politique agricole.
+        """@fr,
+        """
+        L'indagine strutturale agricola viene condotta annualmente dal 1997 e registra la struttura di tutte le aziende agricole in Svizzera, principalmente sulla base di dati amministrativi.
+        Copre quasi il 100% delle aziende e raccoglie variabili come le dimensioni aziendali, le superfici coltivate, il numero di animali da allevamento e gli occupati.
+        L'indagine serve per l'analisi statistica dell'agricoltura, l'aggiornamento del registro delle aziende e le decisioni di politica agricola.
+        """@it ;
+    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
+    systemmap:informs systemmap:SX1qchbxSZKWI6Up .
 
 systemmap:S1KtKkrBMoK25AKVA a systemmap:CantonalOrganization ;
     rdfs:label "Direktzahlungen und Beiträge"@de ;
@@ -2174,7 +2658,7 @@ systemmap:SzXI1C2DYjDriK2F8 a systemmap:FederalOrganization ;
 staatskalender:20050530 a systemmap:FederalOrganization ;
     rdfs:label "Monitoring des Agrarumweltsystems Schweiz MAUS"@de .
 
-systemmap:S3jZwzvmFKsXRWiI a systemmap:Identifier ;
+systemmap:S3jZwzvmFKsXRWiI a systemmap:MasterData ;
     rdfs:label "BUR-Nummer"@de,
         "BUR Number"@en,
         "Numéro BUR"@fr,
@@ -2201,7 +2685,7 @@ systemmap:S3jZwzvmFKsXRWiI a systemmap:Identifier ;
         "BURNR"@it ;
     systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
-systemmap:SDLEUPczkJ9AWZeC a systemmap:Identifier ;
+systemmap:SDLEUPczkJ9AWZeC a systemmap:MasterData ;
     rdfs:label "UID-Nummer"@de,
         "UID Number"@en,
         "Numéro UID"@fr,
@@ -2223,684 +2707,6 @@ systemmap:SDLEUPczkJ9AWZeC a systemmap:Identifier ;
         L'uso dell'UID facilita l'alleggerimento amministrativo per le aziende e consente una collaborazione più efficiente tra le autorità.
         """@it ;
     systemmap:containedIn systemmap:SuEtT7joC8HXVSfF .
-
-systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
-    rdfs:label "Agrarmarktdaten"@de,
-        "agricultural market data"@en,
-        "données du marché agricole"@fr,
-        "dati di mercato agricolo"@it ;
-    rdfs:comment "Marktdaten enthalten Preise, Mengen, Produktionssysteme."@de,
-        "Market data includes prices, quantities, production systems."@en,
-        "Les données de marché comprennent les prix, les quantités, les systèmes de production."@fr,
-        "I dati di mercato comprendono prezzi, quantità e sistemi di produzione."@it ;
-    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
-    systemmap:informs systemmap:SRT6X0n1ML8vwHUW .
-
-systemmap:S4BoMPavXD5gIObm a dcat:Dataset ;
-    rdfs:label "Tieridentifikationsdaten"@de,
-        "Animal identification data"@en,
-        "Données d'identification des animaux"@fr,
-        "Dati di identificazione degli animali"@it ;
-    rdfs:comment """
-        Enthält grundlegende Identifikationsdaten der Tiere, wie eindeutige Ohrmarkennummern, Art, Geschlecht und Geburtsdatum.
-        Diese Stammdaten bilden die Basis für die lückenlose Rückverfolgbarkeit im TVD.
-        """@de,
-        """
-        Contains basic identification data of animals, such as unique ear tag numbers, species, gender, and date of birth.
-        These master data form the basis for seamless traceability in the TVD.
-        """@en,
-        """
-        Contient des données d'identification de base des animaux, telles que les numéros de marque auriculaire uniques, l'espèce, le sexe et la date de naissance.
-        Ces données de base constituent la base de la traçabilité sans faille dans le TVD.
-        """@fr,
-        """
-        Contiene i dati di identificazione di base degli animali, come i numeri univoci delle marche auricolari, la specie, il sesso e la data di nascita.
-        Questi dati principali costituiscono la base per la tracciabilità senza interruzioni nel TVD.
-        """@it ;
-    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
-
-systemmap:S4hqylQaEIsYGXMo a dcat:Dataset ;
-    rdfs:label "Verschiebung von Mineraldüngern"@de,
-        "Movement of Mineral Fertilizers"@en,
-        "Déplacement des engrais minéraux"@fr,
-        "Spostamento dei fertilizzanti minerali"@it ;
-    rdfs:comment """
-        Die Verschiebung von Mineraldüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge mineralischer Düngemittel, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
-        """@de,
-        """
-        The movement of mineral fertilizers includes the recording and reporting of all inflows and outflows of mineral fertilizers, including purchases, sales, and internal transfers.
-        """@en,
-        """
-        Le déplacement des engrais minéraux comprend l'enregistrement et la déclaration de toutes les entrées et sorties d'engrais minéraux, y compris les achats, les ventes et les transferts internes.
-        """@fr,
-        """
-        Lo spostamento dei fertilizzanti minerali include la registrazione e la segnalazione di tutti gli afflussi e deflussi di fertilizzanti minerali, compresi acquisti, vendite e trasferimenti interni.
-        """@it ;
-    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
-
-systemmap:S7mhWQjPZiSFc8dU a dcat:Dataset ;
-    rdfs:label "Tierereignisdaten"@de,
-        "Animal event data"@en,
-        "Données d'événements animaux"@fr,
-        "Dati sugli eventi degli animali"@it ;
-    rdfs:comment """
-        Erfasst alle dynamischen Ereignisse im Lebenszyklus der Tiere, darunter Geburts-, Bewegungs- und Schlachtdaten sowie Halterwechsel.
-        Diese Informationen sind essenziell, um Standortwechsel, Transportschritte und Verarbeitungsprozesse nachvollziehen zu können.
-        """@de,
-        """
-        Records all dynamic events in the life cycle of animals, including birth, movement, and slaughter data, as well as changes in ownership.
-        This information is essential for tracking location changes, transportation steps, and processing procedures.
-        """@en,
-        """
-        Enregistre tous les événements dynamiques du cycle de vie des animaux, y compris les données de naissance, de déplacement et d'abattage, ainsi que les changements de détenteur.
-        Ces informations sont essentielles pour retracer les changements de localisation, les étapes de transport et les processus de transformation.
-        """@fr,
-        """
-        Registra tutti gli eventi dinamici nel ciclo di vita degli animali, inclusi i dati di nascita, movimento e macellazione, nonché i cambi di detentore.
-        Queste informazioni sono essenziali per tracciare i cambi di posizione, le fasi di trasporto e i processi di lavorazione.
-        """@it ;
-    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
-
-systemmap:S8JpqvyO4LQwEM5s a dcat:Dataset ;
-    rdfs:label "Globaler Sortenkatalog"@de,
-        "Global variety catalog"@en,
-        "Catalogue mondial des variétés"@fr,
-        "Catalogo globale delle varietà"@it ;
-    rdfs:comment """
-        Informationen zu Pflanzensorten aus UPOV-Mitgliedsländern sowie der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD).
-        Diese Sortenliste dient als zentrales Register für Sortenbezeichnungen und unterstützt bei der Überprüfung der Unterscheidbarkeit neuer Sorten."""@de,
-        """
-        Information on plant varieties from UPOV member countries as well as the Organisation for Economic Co-operation and Development (OECD).
-        This variety list serves as a central register for variety denominations and supports the verification of the distinctness of new varieties.
-        """@en,
-        """
-        Informations sur les variétés végétales des pays membres de l'UPOV ainsi que de l'Organisation de coopération et de développement économiques (OCDE).
-        Cette liste de variétés sert de registre central pour les dénominations de variétés et aide à vérifier la distinction des nouvelles variétés.
-        """@fr,
-        """
-        Informazioni sulle varietà vegetali provenienti dai paesi membri dell'UPOV e dall'Organizzazione per la cooperazione e lo sviluppo economico (OCSE).
-        Questo elenco di varietà funge da registro centrale per le denominazioni varietali e supporta la verifica della distinzione delle nuove varietà.
-        """@it ;
-    systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN ;
-    systemmap:informedBy systemmap:Spqrv6Ul05KJySTs .
-
-systemmap:S8cKNg0hfPy97TUB a dcat:Dataset ;
-    rdfs:label "Details zu Unternehmen"@de,
-        "Company details"@en,
-        "Détails sur les entreprises"@fr,
-        "Dettagli sulle imprese"@it ;
-    rdfs:comment """
-        Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit, Grundkapital der Aktiengesellschaften, Umsatzzahlen, Datum des Eintrags oder der Löschung im Handelsregister, Datum der Bekanntgabe der Gründung oder Schliessung eines Unternehmens oder Betriebs.
-        """@de,
-        """
-        Number of employees by gender and working hours, share capital of joint-stock companies, revenue figures, date of registration or deletion in the commercial register, date of announcement of the establishment or closure of a company or business.
-        """@en,
-        """
-        Nombre d'employés selon le sexe et le temps de travail, capital social des sociétés anonymes, chiffres d'affaires, date d'inscription ou de suppression au registre du commerce, date d'annonce de la création ou de la fermeture d'une entreprise ou d'un établissement.
-        """@fr,
-        """
-        Numero di dipendenti per genere e orario di lavoro, capitale sociale delle società per azioni, dati di fatturato, data di registrazione o cancellazione nel registro commerciale, data di annuncio della fondazione o chiusura di un'azienda o impresa.
-        """@it ;
-    systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
-
-systemmap:S9J1HTMKIxnCgmYc a dcat:Dataset ;
-    rdfs:label "Pflanzenschutzmittel"@de,
-        "Plant Protection Products"@en,
-        "Produits phytosanitaires"@fr,
-        "Prodotti fitosanitari"@it ;
-    rdfs:comment """
-        Liste der in der Schweiz erlaubten Pflanzenschutzmittel, deren chemische Zusammensetzung, W-Nummern und Bewilligungsinhaber.
-        """@de,
-        """
-        List of plant protection products authorized in Switzerland, including their chemical composition, W-numbers, and authorization holders.
-        """@en,
-        """
-        Liste des produits phytosanitaires autorisés en Suisse, y compris leur composition chimique, numéros W et titulaires d'autorisation.
-        """@fr,
-        """
-        Elenco dei prodotti fitosanitari autorizzati in Svizzera, inclusa la loro composizione chimica, i numeri W e i titolari dell'autorizzazione.
-        """@it ;
-    systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
-
-systemmap:SAUWzyCpeGZ6vVil a dcat:Dataset ;
-    rdfs:label "Daten zu Tierhaltern"@de,
-        "Data on animal owners"@en,
-        "Données sur les détenteurs d’animaux"@fr,
-        "Dati sui detentori di animali"@it ;
-    rdfs:comment """
-        Administrative Informationen zu den Tierhalterinnen und Tierhaltern.
-        Dies umfasst die für die eindeutige Zuordnung erforderlichen Identifikationsdaten wie die TVD-Nummer bzw. Betriebsnummer sowie grundlegende Angaben zur Identität und Kontaktadresse der Person.
-        Diese Daten gewährleisten, dass alle Tierbewegungen und -ereignisse korrekt einer Halterin bzw. einem Halter zugeordnet werden können, was für die Rückverfolgbarkeit und die Einhaltung gesetzlicher Anforderungen unerlässlich ist.
-        """@de,
-        """
-        Administrative information on animal owners.
-        This includes the identification data required for unique assignment, such as the TVD number or farm number, as well as basic details about the person's identity and contact address.
-        These data ensure that all animal movements and events can be correctly assigned to an owner, which is essential for traceability and compliance with legal requirements.
-        """@en,
-        """
-        Informations administratives sur les détenteurs d’animaux.
-        Cela comprend les données d’identification nécessaires pour une attribution unique, telles que le numéro TVD ou le numéro d’exploitation, ainsi que des informations de base sur l’identité et l’adresse de contact de la personne.
-        Ces données garantissent que tous les mouvements et événements liés aux animaux peuvent être correctement attribués à un détenteur, ce qui est essentiel pour la traçabilité et le respect des exigences légales.
-        """@fr,
-        """
-        Informazioni amministrative sui detentori di animali.
-        Ciò include i dati di identificazione necessari per l'assegnazione univoca, come il numero TVD o il numero dell'azienda agricola, nonché i dati di base sull'identità e l'indirizzo di contatto della persona.
-        Questi dati garantiscono che tutti i movimenti e gli eventi degli animali possano essere correttamente attribuiti a un detentore, essenziale per la tracciabilità e il rispetto dei requisiti legali.
-        """@it ;
-    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ ;
-    systemmap:informedBy systemmap:SvNriWslaOR5xkdw .
-
-systemmap:SDmJeWK7EOnMqRLs a dcat:Dataset ;
-    rdfs:label "Auflagen zur Anwendung von Pflanzenschutzmitteln"@de,
-        "Conditions for the Use of Plant Protection Products"@en,
-        "Conditions d'utilisation des produits phytosanitaires"@fr,
-        "Condizioni per l'uso dei prodotti fitosanitari"@it ;
-    rdfs:comment """
-        Bestimmungen und Einschränkungen, die bei der Anwendung von Pflanzenschutzmitteln zu beachten sind, einschliesslich Dosierung, Anwendungszeitpunkt und Schutzmassnahmen.
-        """@de,
-        """
-        Regulations and restrictions to be observed when using plant protection products, including dosage, application timing, and protective measures.
-        """@en,
-        """
-        Règlements et restrictions à respecter lors de l'utilisation de produits phytosanitaires, y compris le dosage, le moment de l'application et les mesures de protection.
-        """@fr,
-        """
-        Regolamenti e restrizioni da osservare nell'uso dei prodotti fitosanitari, inclusi dosaggio, tempistica dell'applicazione e misure protettive.
-        """@it ;
-    systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
-
-systemmap:SECM4KqStG9yBva6 a dcat:Dataset ;
-    rdfs:label "Verschiebung von Hof- und Recyclingdünger"@de,
-        "Movement of Farmyard and Recycled Fertilizers"@en,
-        "Déplacement des engrais de ferme et recyclés"@fr,
-        "Spostamento dei fertilizzanti aziendali e riciclati"@it ;
-    rdfs:comment """
-        Die Verschiebung von Hof- und Recyclingdüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
-        """@de,
-        """
-        The movement of farmyard and recycled fertilizers includes the recording and reporting of all inflows and outflows, including purchases, sales, and internal transfers.
-        """@en,
-        """
-        Le déplacement des engrais de ferme et recyclés comprend l'enregistrement et la déclaration de toutes les entrées et sorties, y compris les achats, les ventes et les transferts internes.
-        """@fr,
-        """
-        Lo spostamento dei fertilizzanti aziendali e riciclati include la registrazione e la segnalazione di tutti gli afflussi e deflussi, compresi acquisti, vendite e trasferimenti interni.
-        """@it ;
-    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
-
-systemmap:SFyGV7l0kN4qgA8u a dcat:Dataset ;
-    rdfs:label "Kulturen und Schaderreger"@de,
-        "Crops and Pests"@en,
-        "Cultures et organismes nuisibles"@fr,
-        "Colture e organismi nocivi"@it ;
-    rdfs:comment """
-        Liste der Kulturen und Schaderreger, für die in der Schweiz bereits eine Pflanzenschutzmittelbewilligung erteilt wurde.
-        """@de,
-        """
-        List of crops and pests for which a plant protection product authorization has already been granted in Switzerland.
-        """@en,
-        """
-        Liste des cultures et organismes nuisibles pour lesquels une autorisation de produit phytosanitaire a déjà été accordée en Suisse.
-        """@fr,
-        """
-        Elenco delle colture e degli organismi nocivi per i quali è già stata concessa un'autorizzazione per un prodotto fitosanitario in Svizzera.
-        """@it ;
-    systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
-
-systemmap:SIsQ6LSUJc3xbG9B a dcat:Dataset ;
-    rdfs:label "Biozide"@de,
-        "Biocides"@en,
-        "Biocides"@fr,
-        "Biocidi"@it ;
-    rdfs:comment """
-        Produkte zur Bekämpfung von Schadorganismen. Mitenthalten sind auch parallel importierte Pflanzenschutzmittel, also solche, die aus anderen Ländern eingeführt werden.
-        """@de,
-        """
-        Products used to combat harmful organisms. This also includes parallel-imported plant protection products, meaning those imported from other countries.
-        """@en,
-        """
-        Produits utilisés pour lutter contre les organismes nuisibles. Cela inclut également les produits phytosanitaires importés en parallèle, c'est-à-dire en provenance d'autres pays.
-        """@fr,
-        """
-        Prodotti utilizzati per combattere gli organismi nocivi. Sono inclusi anche i prodotti fitosanitari importati parallelamente da altri paesi.
-        """@it ;
-    systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
-
-systemmap:SLXw4VofhYbzXVNKC a dcat:Dataset ;
-    rdfs:label "Daten zur Milchverwertung"@de,
-        "Data on milk utilization"@en,
-        "Données sur la valorisation du lait"@fr,
-        "Dati sull'utilizzo del latte"@it ;
-    rdfs:comment "Diese Daten sind essenziell für die Berechnung und Auszahlung von Zulagen für verkäste Milch sowie für die Fütterung ohne Silage durch das Bundesamt für Landwirtschaft (BLW)."@de,
-        "These data are essential for the calculation and payment of subsidies for cheesed milk as well as for feeding without silage by the Federal Office for Agriculture (BLW)."@en,
-        "Ces données sont essentielles pour le calcul et le paiement des subventions pour le lait transformé en fromage ainsi que pour l'alimentation sans ensilage par l'Office fédéral de l'agriculture (OFAG)."@fr,
-        "Questi dati sono essenziali per il calcolo e il pagamento dei sussidi per il latte trasformato in formaggio e per l'alimentazione senza insilato da parte dell'Ufficio federale dell'agricoltura (UFAG)."@it ;
-    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
-
-systemmap:SPCig1xdekUHDV4r a dcat:Dataset ;
-    rdfs:label "Milchstatistik"@de,
-        "Milk statistics"@en,
-        "Statistiques du lait"@fr,
-        "Statistiche del latte"@it ;
-    rdfs:comment "Monatliche Statistiken und Mehrjahresvergleiche, die Angaben über die produzierte Milch und deren Verarbeitung in verschiedene Produktgruppen enthalten."@de,
-        "Monthly statistics and multi-year comparisons containing information on the milk produced and its processing into different product groups."@en,
-        "Statistiques mensuelles et comparaisons pluriannuelles contenant des informations sur le lait produit et sa transformation en différentes catégories de produits."@fr,
-        "Statistiche mensili e confronti pluriennali contenenti informazioni sul latte prodotto e sulla sua trasformazione in diverse categorie di prodotti."@it ;
-    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
-
-systemmap:SRT6X0n1ML8vwHUW a dcat:Dataset ;
-    rdfs:label "Linked Data"@de,
-        "Linked Data"@en,
-        "Linked Data"@fr,
-        "Linked Data"@it ;
-    systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd,
-        systemmap:SpLZd1ojPxF0CvH28 .
-
-systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
-    rdfs:label "Zubereitungen"@de,
-        "Preparations"@en,
-        "Préparations"@fr,
-        "Preparazioni"@it ;
-    rdfs:comment """
-        Mischungen oder Lösungen aus zwei oder mehr Stoffen.
-        """@de,
-        """
-        Mixtures or solutions composed of two or more substances.
-        """@en,
-        """
-        Mélanges ou solutions composés de deux ou plusieurs substances.
-        """@fr,
-        """
-        Miscele o soluzioni composte da due o più sostanze.
-        """@it ;
-    systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
-
-systemmap:SUlfRYzH3b0gx7VX a dcat:Dataset ;
-    rdfs:label "Verschiebung von Pflanzenschutzmitteln"@de,
-        "Movement of Plant Protection Products"@en,
-        "Déplacement des produits phytosanitaires"@fr,
-        "Spostamento dei prodotti fitosanitari"@it ;
-    rdfs:comment """
-        Die Verschiebung von Pflanzenschutzmitteln umfasst die Erfassung und Meldung aller Zu- und Abgänge von Pflanzenschutzmitteln, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
-        """@de,
-        """
-        The movement of plant protection products includes the recording and reporting of all inflows and outflows, including purchases, sales, and internal transfers.
-        """@en,
-        """
-        Le déplacement des produits phytosanitaires comprend l'enregistrement et la déclaration de toutes les entrées et sorties, y compris les achats, les ventes et les transferts internes.
-        """@fr,
-        """
-        Lo spostamento dei prodotti fitosanitari include la registrazione e la segnalazione di tutti gli afflussi e deflussi, compresi acquisti, vendite e trasferimenti interni.
-        """@it ;
-    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
-
-systemmap:SZBHsREMx369FArg a dcat:Dataset ;
-    rdfs:label "Dünger"@de,
-        "Fertilizers"@en,
-        "Engrais"@fr,
-        "Fertilizzanti"@it ;
-    rdfs:comment """
-        Produkte zur Boden- und Pflanzendüngung.
-        """@de,
-        """
-        Products for soil and plant fertilization.
-        """@en,
-        """
-        Produits pour la fertilisation des sols et des plantes.
-        """@fr,
-        """
-        Prodotti per la fertilizzazione del suolo e delle piante.
-        """@it ;
-    systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
-
-systemmap:Sb2FM7pKN60PrRwU a dcat:Dataset ;
-    rdfs:label "Globale Pflanzenliste"@de,
-        "Global plant list"@en,
-        "Liste globale des plantes"@fr,
-        "Elenco globale delle piante"@it ;
-    rdfs:comment """
-        Liste aller möglichen Pflanzenarten mit entsprechenden Pflanzenarten-Codes.
-        UPOV verwendet ein spezifisches Codesystem, um Pflanzenarten und -gattungen eindeutig zu identifizieren.
-        Diese sogenannten UPOV-Codes bestehen in der Regel aus fünf Buchstaben für die Gattung und drei Buchstaben für die Art, zum Beispiel steht <tt>PRUNU_ARM</tt> für <i>Prunus armeniaca</i> (Aprikose).
-        Dieses System erleichtert die Klassifizierung und den Informationsaustausch über Pflanzensorten.
-        """@de,
-        """
-        List of all possible plant species with corresponding plant species codes.
-        UPOV uses a specific coding system to uniquely identify plant species and genera.
-        These so-called UPOV codes usually consist of five letters for the genus and three letters for the species. For example, <tt>PRUNU_ARM</tt> stands for <i>Prunus armeniaca</i> (apricot).
-        This system facilitates the classification and exchange of information on plant varieties.
-        """@en,
-        """
-        Liste de toutes les espèces végétales possibles avec les codes d'espèces correspondants.
-        L'UPOV utilise un système de codage spécifique pour identifier de manière unique les espèces et genres de plantes.
-        Ces codes UPOV se composent généralement de cinq lettres pour le genre et de trois lettres pour l'espèce. Par exemple, <tt>PRUNU_ARM</tt> représente <i>Prunus armeniaca</i> (abricot).
-        Ce système facilite la classification et l'échange d'informations sur les variétés de plantes.
-        """@fr,
-        """
-        Elenco di tutte le possibili specie vegetali con i relativi codici di specie.
-        L'UPOV utilizza un sistema di codifica specifico per identificare in modo univoco le specie e i generi di piante.
-        Questi cosiddetti codici UPOV sono generalmente composti da cinque lettere per il genere e tre lettere per la specie. Ad esempio, <tt>PRUNU_ARM</tt> rappresenta <i>Prunus armeniaca</i> (albicocco).
-        Questo sistema facilita la classificazione e lo scambio di informazioni sulle varietà vegetali.
-        """@it ;
-    systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN .
-
-systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
-    rdfs:label "Daten zur Milchproduktion"@de,
-        "Data on milk production"@en,
-        "Données sur la production laitière"@fr,
-        "Dati sulla produzione di latte"@it ;
-    rdfs:comment """
-        Monatliche Produktionsmengen (in kg) der im Vormonat gelieferten Kuh- und Büffelmilch von allen Milchproduzenten.
-        Das BLW benötigt diese Information für die Ausrichtung der Zulage für Verkehrsmilch.
-        """@de,
-        """
-        Monthly production quantities (in kg) of cow and buffalo milk delivered in the previous month by all milk producers.
-        The BLW requires this information for the allocation of the subsidy for market milk.
-        """@en,
-        """
-        Quantités de production mensuelles (en kg) du lait de vache et de bufflonne livré le mois précédent par tous les producteurs de lait.
-        L'OFAG a besoin de ces informations pour l'octroi de la subvention pour le lait de consommation.
-        """@fr,
-        """
-        Quantità di produzione mensili (in kg) del latte di mucca e bufala consegnato nel mese precedente da tutti i produttori di latte.
-        L'UFAG necessita di queste informazioni per l'assegnazione del sussidio per il latte di consumo.
-        """@it ;
-    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
-
-systemmap:Sl5KyePu7JtGiE3V a dcat:Dataset ;
-    rdfs:label "Produktekatalog"@de,
-        "Product catalog"@en,
-        "Catalogue de produits"@fr,
-        "Catalogo dei prodotti"@it ;
-    rdfs:comment """
-        Sammlung von Informationen zu Pflanzenschutzmittel-, Futtermittel-, Mineraldünger-, Hof- und Recyclingdünger-Produkten.
-        Das beinhaltet jeweilige Identifikatoren, Namen, Beschreibungen, Inhaltsstoffe und Mengen etc.
-        """@de,
-        """
-        Collection of information on plant protection products, feed, mineral fertilizers, farm and recycled fertilizers.
-        This includes respective identifiers, names, descriptions, ingredients, and quantities, etc.
-        """@en,
-        """
-        Collection d'informations sur les produits phytosanitaires, les aliments pour animaux, les engrais minéraux, les engrais de ferme et les engrais recyclés.
-        Cela inclut les identifiants respectifs, les noms, les descriptions, les ingrédients et les quantités, etc.
-        """@fr,
-        """
-        Raccolta di informazioni sui prodotti fitosanitari, i mangimi, i fertilizzanti minerali, i fertilizzanti agricoli e quelli riciclati.
-        Ciò include gli identificatori, i nomi, le descrizioni, gli ingredienti e le quantità, ecc.
-        """@it ;
-    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF ;
-    systemmap:informedBy systemmap:S9J1HTMKIxnCgmYc,
-        systemmap:SZBHsREMx369FArg .
-
-systemmap:SoBRgq7STLbZfEze a dcat:Dataset ;
-    rdfs:label "Meldepflichtdaten (Schafe & Ziegen)"@de,
-        "Mandatory reporting data (sheep & goats)"@en,
-        "Données à déclaration obligatoire (moutons & chèvres)"@fr,
-        "Dati soggetti a obbligo di notifica (pecore & capre)"@it ;
-    rdfs:comment """
-        Beinhaltet spezifische Daten, die aufgrund erweiterter Meldepflichten für Schafe und Ziegen erfasst werden müssen.
-        Dazu gehören Meldungen zu Geburten (innerhalb von 30 Tagen) sowie zu Verendungen, Zu- und Abgängen sowie Schlachtungen (innerhalb von 3 Tagen).
-        """@de,
-        """
-        Includes specific data that must be recorded due to extended reporting obligations for sheep and goats.
-        This includes reports on births (within 30 days), as well as deaths, arrivals and departures, and slaughter (within 3 days).
-        """@en,
-        """
-        Contient des données spécifiques qui doivent être enregistrées en raison d'obligations de déclaration étendues pour les moutons et les chèvres.
-        Cela comprend les déclarations de naissances (dans les 30 jours), ainsi que les décès, arrivées et départs, et abattages (dans les 3 jours).
-        """@fr,
-        """
-        Contiene dati specifici che devono essere registrati a causa di obblighi di notifica estesi per pecore e capre.
-        Ciò include le segnalazioni di nascite (entro 30 giorni), nonché decessi, arrivi e partenze e macellazioni (entro 3 giorni).
-        """@it ;
-    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
-
-systemmap:Spqrv6Ul05KJySTs a dcat:Dataset ;
-    rdfs:label "Nationaler Sortenkatalog"@de,
-        "National variety catalog"@en,
-        "Catalogue national des variétés"@fr,
-        "Catalogo nazionale delle varietà"@it ;
-    rdfs:comment "Katalog von anerkannten landwirtschaftlich genutzten Pflanzensorten in der Schweiz. Die Informationen dazu werden von den Züchtern erfasst."@de,
-        "Catalog of recognized agricultural plant varieties used in Switzerland. The information is recorded by breeders."@en,
-        "Catalogue des variétés de plantes agricoles reconnues utilisées en Suisse. Les informations sont enregistrées par les sélectionneurs."@fr,
-        "Catalogo delle varietà di piante agricole riconosciute utilizzate in Svizzera. Le informazioni sono registrate dai selezionatori."@it ;
-    systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj ;
-    systemmap:informedBy systemmap:Sb2FM7pKN60PrRwU .
-
-systemmap:SzcK9O3XZFxVW1IS a dcat:Dataset ;
-    rdfs:label "Daten zur Milchsegmentierung"@de,
-        "Data on milk segmentation"@en,
-        "Données sur la segmentation du lait"@fr,
-        "Dati sulla segmentazione del latte"@it ;
-    rdfs:comment "Daten zur Segmentierung der Milchverwertung gemäss dem BOM1-Reglement."@de,
-        "Data on the segmentation of milk utilization according to the BOM1 regulation."@en,
-        "Données sur la segmentation de la valorisation du lait selon le règlement BOM1."@fr,
-        "Dati sulla segmentazione dell'utilizzo del latte secondo il regolamento BOM1."@it ;
-    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
-
-systemmap:SzuDlnYUQMk3HaCb a dcat:Dataset ;
-    rdfs:label "Strukturdaten"@de,
-        "Structural data"@en,
-        "Données structurelles"@fr,
-        "Dati strutturali"@it ;
-    rdfs:comment """
-        Die landwirtschaftliche Strukturerhebung erfasst jährlich seit 1997 die Struktur aller Landwirtschaftsbetriebe in der Schweiz und basiert hauptsächlich auf administrativen Daten.
-        Sie deckt nahezu 100 % der Betriebe ab und erfasst Variablen wie Betriebsgrössen, Anbauflächen, Nutztierbestände und Beschäftigte.
-        Die Erhebung dient der statistischen Analyse der Landwirtschaft, der Aktualisierung des Betriebsregisters und der agrarpolitischen Entscheidungsfindung.
-        """@de,
-        """
-        The agricultural structural survey has been conducted annually since 1997 and records the structure of all farms in Switzerland, mainly based on administrative data.
-        It covers nearly 100% of farms and collects variables such as farm sizes, cultivated areas, livestock populations, and employees.
-        The survey serves statistical analysis of agriculture, the updating of the farm register, and agricultural policy decision-making.
-        """@en,
-        """
-        L'enquête structurelle agricole est menée chaque année depuis 1997 et enregistre la structure de toutes les exploitations agricoles en Suisse, principalement sur la base de données administratives.
-        Elle couvre près de 100 % des exploitations et collecte des variables telles que les tailles d'exploitation, les surfaces cultivées, les effectifs d'animaux d'élevage et les employés.
-        L'enquête sert à l'analyse statistique de l'agriculture, à la mise à jour du registre des exploitations et à la prise de décision en matière de politique agricole.
-        """@fr,
-        """
-        L'indagine strutturale agricola viene condotta annualmente dal 1997 e registra la struttura di tutte le aziende agricole in Svizzera, principalmente sulla base di dati amministrativi.
-        Copre quasi il 100% delle aziende e raccoglie variabili come le dimensioni aziendali, le superfici coltivate, il numero di animali da allevamento e gli occupati.
-        L'indagine serve per l'analisi statistica dell'agricoltura, l'aggiornamento del registro delle aziende e le decisioni di politica agricola.
-        """@it ;
-    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
-    systemmap:informs systemmap:SX1qchbxSZKWI6Up .
-
-systemmap:S6ILF4g1j5sNf9aG a termdat:52451 ;
-    rdfs:label "Informationen zur Einfuhr von PSM"@de,
-        "Information on the import of PPP"@en,
-        "Informations sur l'importation de PPP"@fr,
-        "Informazioni sull'importazione di PPP"@it ;
-    rdfs:comment """
-        Informationen zum Einfuhrzeitpunkt, dem Produkt, dem Importeur und dem Empfänger eines Pflanzenschutzmittels (PSM).
-        """@de,
-        """
-        Information on the import date, the product, the importer, and the recipient of a plant protection product (PPP).
-        """@en,
-        """
-        Informations sur la date d'importation, le produit, l'importateur et le destinataire d'un produit phytosanitaire (PPP).
-        """@fr,
-        """
-        Informazioni sulla data di importazione, il prodotto, l'importatore e il destinatario di un prodotto fitosanitario (PPP).
-        """@it ;
-    systemmap:containedIn systemmap:SywklUB91myTH0cvS ;
-    systemmap:informedBy systemmap:SfQ6BN8rDjKhTWL4 .
-
-systemmap:S6aBblr7qNp15tGw a termdat:52451 ;
-    rdfs:label "Kontaktdaten Bewirtschaftenden"@de,
-        "Contact details of farm managers"@en,
-        "Coordonnées des exploitants agricoles"@fr,
-        "Dati di contatto dei gestori agricoli"@it ;
-    rdfs:comment "Informationen zu Kontaktdaten von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de,
-        "Information on the contact details of farm managers, such as email addresses or phone numbers."@en,
-        "Informations sur les coordonnées des exploitants agricoles, telles que les adresses e-mail ou les numéros de téléphone."@fr,
-        "Informazioni sui dati di contatto dei gestori agricoli, come indirizzi e-mail o numeri di telefono."@it ;
-    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
-
-systemmap:SJuklUVKfEwj2Xpc a termdat:52451 ;
-    rdfs:label "Kontaktdaten Züchter"@de,
-        "Contact details of breeders"@en,
-        "Coordonnées des sélectionneurs"@fr,
-        "Dati di contatto dei selezionatori"@it ;
-    rdfs:comment "Kontaktdaten der Züchter, welche Informationen zu den Sorten an ProVar geben."@de,
-        "Contact details of breeders who provide information about the varieties to ProVar."@en,
-        "Coordonnées des sélectionneurs qui fournissent des informations sur les variétés à ProVar."@fr,
-        "Dati di contatto dei selezionatori che forniscono informazioni sulle varietà a ProVar."@it ;
-    systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj .
-
-systemmap:SQ2MIhpz1CvdqK6f a termdat:52451 ;
-    rdfs:label "Beitragsdaten"@de,
-        "Contribution data"@en,
-        "Données de contribution"@fr,
-        "Dati sui contributi"@it ;
-    rdfs:comment """
-        Beinhaltet Daten zu finanziellen Zuwendungen an landwirtschaftliche Betriebe.
-        Dies umfasst Informationen über die Beitragshöhen, Berechnungsgrundlagen, Auszahlungskriterien und -modalitäten sowie die zugrunde liegenden administrativen Prozesse.
-        """@de,
-        """
-        Contains data on financial contributions to agricultural enterprises.
-        This includes information on contribution amounts, calculation bases, payment criteria and modalities, as well as the underlying administrative processes.
-        """@en,
-        """
-        Contient des données sur les contributions financières aux exploitations agricoles.
-        Cela comprend des informations sur les montants des contributions, les bases de calcul, les critères et modalités de paiement, ainsi que les processus administratifs sous-jacents.
-        """@fr,
-        """
-        Contiene dati sui contributi finanziari alle aziende agricole.
-        Ciò include informazioni sugli importi dei contributi, le basi di calcolo, i criteri e le modalità di pagamento, nonché i processi amministrativi sottostanti.
-        """@it ;
-    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
-
-systemmap:SX1qchbxSZKWI6Up a termdat:52451 ;
-    rdfs:label "Informationen zu Landwirtschaftsbetrieben"@de,
-        "Information about agricultural enterprises"@en,
-        "Informations sur les exploitations agricoles"@fr,
-        "Informazioni sulle aziende agricole"@it ;
-    rdfs:comment "Zahl der Grossvieheinheiten, Angaben über die Bodennutzung, den Beruf und das Alter des Betriebsleiters/der Betriebsleiterin."@de,
-        "Number of large livestock units, information on land use, occupation and age of the farm manager."@en,
-        "Nombre d'unités de gros bétail, informations sur l'utilisation des sols, la profession et l'âge du directeur ou de la directrice d'exploitation."@fr,
-        "Numero di unità di bestiame grosso, informazioni sull'uso del suolo, la professione e l'età del gestore aziendale."@it ;
-    systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
-
-systemmap:SY9n2yTOBWXtZ6se a termdat:52451 ;
-    rdfs:label "Daten über Kontrollen und Kontrollergebnisse"@de,
-        "Data on inspections and inspection results"@en,
-        "Données sur les contrôles et les résultats des contrôles"@fr,
-        "Dati sui controlli e sui risultati dei controlli"@it ;
-    systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
-
-systemmap:SYlOxcohgWiXr61M a termdat:52451 ;
-    rdfs:label "Informationen zu Forstbetrieben"@de,
-        "Information about forestry enterprises"@en,
-        "Informations sur les entreprises forestières"@fr,
-        "Informazioni sulle aziende forestali"@it ;
-    rdfs:comment "Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit."@de,
-        "Number of employed persons by gender and working time."@en,
-        "Nombre de personnes employées selon le sexe et le temps de travail."@fr,
-        "Numero di persone impiegate per genere e orario di lavoro."@it ;
-    systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
-
-systemmap:SakCt52w8AKrsSXi a termdat:52451 ;
-    rdfs:label "Informationen der Strukturdatenerhebung"@de,
-        "Information from the structural data survey"@en,
-        "Informations de l'enquête sur les données structurelles"@fr,
-        "Informazioni dall'indagine sui dati strutturali"@it ;
-    systemmap:containedIn systemmap:SMjqlEoVCR9wpTyN1,
-        systemmap:SPWOFHR512FuAc25b,
-        systemmap:SZ9LRAuSt2EOvBpqY,
-        systemmap:SmWEQ8lVlDS9ZwPkY,
-        systemmap:SpR2aDraNmiUXz55J ;
-    systemmap:informs systemmap:SzuDlnYUQMk3HaCb .
-
-systemmap:SeUFazO70bpqCYJ5 a termdat:52451 ;
-    rdfs:label "Stammdaten und Identifikatoren"@de,
-        "Master data and identifiers"@en,
-        "Données de base et identifiants"@fr,
-        "Dati di base e identificatori"@it ;
-    rdfs:comment "Name und Adresse des Unternehmens oder Betriebs, Gemeindenummern, BUR-Nummer (nichtsprechende 8-stellige Identifikationsnummer), Unternehmens-Identifikationsnummer (UID), Art der wirtschaftlichen Tätigkeit (NOGA), Rechtsform des Unternehmens."@de,
-        "Name and address of the company or business, municipality numbers, BUR number (non-speaking 8-digit identification number), company identification number (UID), type of economic activity (NOGA), legal form of the company."@en,
-        "Nom et adresse de l'entreprise ou de l'exploitation, numéros de commune, numéro BUR (numéro d'identification à 8 chiffres non parlant), numéro d'identification de l'entreprise (UID), type d'activité économique (NOGA), forme juridique de l'entreprise."@fr,
-        "Nome e indirizzo dell'azienda o dell'impresa, numeri dei comuni, numero BUR (numero di identificazione a 8 cifre non parlante), numero di identificazione aziendale (UID), tipo di attività economica (NOGA), forma giuridica dell'azienda."@it ;
-    systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
-
-systemmap:SfQ6BN8rDjKhTWL4 a termdat:52451 ;
-    rdfs:label "Pflanzenschutzmittel-Importe"@de,
-        "Pesticide imports"@en,
-        "Importations de produits phytosanitaires"@fr,
-        "Importazioni di prodotti fitosanitari"@it ;
-    rdfs:comment """
-        Daten zu jedem Import von Pflanzenschutzmitteln mit UID und Namen des Importeurs, Datum des Imports, Importmenge, Warenbezeichnung (Freitext) sowie Zustelladresse.
-        """@de,
-        """
-        Data on each import of pesticides, including UID and name of the importer, date of import, import quantity, product designation (free text), and delivery address.
-        """@en,
-        """
-        Données sur chaque importation de produits phytosanitaires, y compris l'UID et le nom de l'importateur, la date d'importation, la quantité importée, la désignation du produit (texte libre) et l'adresse de livraison.
-        """@fr,
-        """
-        Dati su ogni importazione di prodotti fitosanitari, compresi UID e nome dell'importatore, data di importazione, quantità importata, denominazione del prodotto (testo libero) e indirizzo di consegna.
-        """@it ;
-    systemmap:containedIn systemmap:S7u1Bh6qfXUbSDkv .
-
-systemmap:SldiTYOuXQmoC3SV a termdat:52451 ;
-    rdfs:label "Anmeldungen für Direktzahlungsarten"@de,
-        "Registrations for direct payment types"@en,
-        "Inscriptions pour les types de paiements directs"@fr,
-        "Iscrizioni per tipi di pagamenti diretti"@it ;
-    rdfs:comment """
-        Umfasst den Prozess und die zugehörigen Daten zur Registrierung für unterschiedliche Direktzahlungsarten.
-        Enthalten sind Informationen zu Anmeldeverfahren, Fristen, Voraussetzungen und den verwendeten Formularen zur Antragstellung.
-        """@de,
-        """
-        Covers the process and related data for registration for different types of direct payments.
-        It includes information on registration procedures, deadlines, requirements, and the forms used for application.
-        """@en,
-        """
-        Couvre le processus et les données associées à l'inscription aux différents types de paiements directs.
-        Il comprend des informations sur les procédures d'inscription, les délais, les conditions requises et les formulaires utilisés pour la demande.
-        """@fr,
-        """
-        Copre il processo e i dati relativi alla registrazione per diversi tipi di pagamenti diretti.
-        Include informazioni sulle procedure di iscrizione, le scadenze, i requisiti e i moduli utilizzati per la richiesta.
-        """@it ;
-    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
-
-systemmap:SoY82Q0qEk9k0s3w3 a termdat:52451 ;
-    rdfs:label "Kontaktdaten Milchproduzenten"@de,
-        "Contact details of milk producers"@en,
-        "Coordonnées des producteurs de lait"@fr,
-        "Dati di contatto dei produttori di latte"@it ;
-    rdfs:comment "Kontaktdaten der Milchproduzenten wie Adressen, TVD-Nummer, AGIS-Nummer des Betriebs, AGIS Nummer des Bewirtschaftenden und Zahlungsinformationen für die Ausbezahlung der Zulage für verkäste Milch und die Zulage für Fütterung ohne Silage. Wenn möglich, werden diese Kontaktdaten aus AGIS bezogen."@de,
-        "Contact details of milk producers, such as addresses, TVD number, AGIS number of the farm, AGIS number of the operator, and payment information for the subsidy for cheesed milk and the subsidy for feeding without silage. If possible, these contact details are obtained from AGIS."@en,
-        "Coordonnées des producteurs de lait, telles que les adresses, le numéro TVD, le numéro AGIS de l'exploitation, le numéro AGIS de l'exploitant et les informations de paiement pour la subvention pour le lait transformé en fromage et la subvention pour l'alimentation sans ensilage. Si possible, ces coordonnées sont obtenues auprès d'AGIS."@fr,
-        "Dati di contatto dei produttori di latte, come indirizzi, numero TVD, numero AGIS dell'azienda, numero AGIS del gestore e informazioni di pagamento per il sussidio per il latte trasformato in formaggio e il sussidio per l'alimentazione senza insilato. Se possibile, questi dati di contatto vengono ottenuti da AGIS."@it ;
-    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP ;
-    systemmap:informedBy systemmap:S6aBblr7qNp15tGw .
-
-systemmap:Sutd0KIj3Rf8GlSwq a termdat:52451 ;
-    rdfs:label "Kontaktdaten Milchverarbeiter"@de,
-        "Contact details of milk processors"@en,
-        "Coordonnées des transformateurs de lait"@fr,
-        "Dati di contatto dei trasformatori di latte"@it ;
-    rdfs:comment "Kontaktdaten der Milchverarbeiter wie Adressen oder Identifikationsnummern."@de,
-        "Contact details of milk processors, such as addresses or identification numbers."@en,
-        "Coordonnées des transformateurs de lait, telles que les adresses ou les numéros d'identification."@fr,
-        "Dati di contatto dei trasformatori di latte, come indirizzi o numeri di identificazione."@it ;
-    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
-
-systemmap:SvNriWslaOR5xkdw a termdat:52451 ;
-    rdfs:label "Betriebsdaten (Person, Betrieb)"@de,
-        "Operational data (Person, Business)"@en,
-        "Données opérationnelles (Personne, Entreprise)"@fr,
-        "Dati operativi (Persona, Impresa)"@it ;
-    rdfs:comment "Enthält grundlegende Informationen zu landwirtschaftlichen Betrieben sowie zu den zugehörigen Personen. Dazu gehören Identifikationsdaten, organisatorische Strukturen und Angaben zu den am Betrieb beteiligten Personen (z. B. Betriebsleiter, Familienmitglieder und Mitarbeitende)."@de,
-        "Contains basic information about agricultural businesses and related individuals. This includes identification data, organizational structures, and details about individuals involved in the business (e.g., farm managers, family members, and employees)."@en,
-        "Contient des informations de base sur les exploitations agricoles et les personnes associées. Cela inclut les données d'identification, les structures organisationnelles et les détails sur les personnes impliquées dans l'exploitation (p. ex. gestionnaires de ferme, membres de la famille et employés)."@fr,
-        "Contiene informazioni di base sulle aziende agricole e sulle persone ad esse associate. Ciò include dati identificativi, strutture organizzative e dettagli sulle persone coinvolte nell'azienda (ad es. gestori dell'azienda, familiari e dipendenti)."@it ;
-    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
-    systemmap:informs systemmap:SX1qchbxSZKWI6Up ;
-    systemmap:usesIdentifier systemmap:S3jZwzvmFKsXRWiI,
-        systemmap:SDLEUPczkJ9AWZeC .
 
 systemmap:SDetpcQhSMo4IAeAb a systemmap:PrivateOrganization ;
     rdfs:label "Barto AG"@de,
@@ -3064,6 +2870,202 @@ zefix:76693 a systemmap:PrivateOrganization ;
 zefix:787227 a systemmap:PrivateOrganization ;
     rdfs:label "RAMSEIER Suisse AG"@de ;
     systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+
+systemmap:S6ILF4g1j5sNf9aG a termdat:52451 ;
+    rdfs:label "Informationen zur Einfuhr von PSM"@de,
+        "Information on the import of PPP"@en,
+        "Informations sur l'importation de PPP"@fr,
+        "Informazioni sull'importazione di PPP"@it ;
+    rdfs:comment """
+        Informationen zum Einfuhrzeitpunkt, dem Produkt, dem Importeur und dem Empfänger eines Pflanzenschutzmittels (PSM).
+        """@de,
+        """
+        Information on the import date, the product, the importer, and the recipient of a plant protection product (PPP).
+        """@en,
+        """
+        Informations sur la date d'importation, le produit, l'importateur et le destinataire d'un produit phytosanitaire (PPP).
+        """@fr,
+        """
+        Informazioni sulla data di importazione, il prodotto, l'importatore e il destinatario di un prodotto fitosanitario (PPP).
+        """@it ;
+    prov:wasDerivedFrom systemmap:SfQ6BN8rDjKhTWL4 ;
+    systemmap:containedIn systemmap:SywklUB91myTH0cvS .
+
+systemmap:S6aBblr7qNp15tGw a termdat:52451 ;
+    rdfs:label "Kontaktdaten Bewirtschaftenden"@de,
+        "Contact details of farm managers"@en,
+        "Coordonnées des exploitants agricoles"@fr,
+        "Dati di contatto dei gestori agricoli"@it ;
+    rdfs:comment "Informationen zu Kontaktdaten von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de,
+        "Information on the contact details of farm managers, such as email addresses or phone numbers."@en,
+        "Informations sur les coordonnées des exploitants agricoles, telles que les adresses e-mail ou les numéros de téléphone."@fr,
+        "Informazioni sui dati di contatto dei gestori agricoli, come indirizzi e-mail o numeri di telefono."@it ;
+    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
+
+systemmap:SJuklUVKfEwj2Xpc a termdat:52451 ;
+    rdfs:label "Kontaktdaten Züchter"@de,
+        "Contact details of breeders"@en,
+        "Coordonnées des sélectionneurs"@fr,
+        "Dati di contatto dei selezionatori"@it ;
+    rdfs:comment "Kontaktdaten der Züchter, welche Informationen zu den Sorten an ProVar geben."@de,
+        "Contact details of breeders who provide information about the varieties to ProVar."@en,
+        "Coordonnées des sélectionneurs qui fournissent des informations sur les variétés à ProVar."@fr,
+        "Dati di contatto dei selezionatori che forniscono informazioni sulle varietà a ProVar."@it ;
+    systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj .
+
+systemmap:SQ2MIhpz1CvdqK6f a termdat:52451 ;
+    rdfs:label "Beitragsdaten"@de,
+        "Contribution data"@en,
+        "Données de contribution"@fr,
+        "Dati sui contributi"@it ;
+    rdfs:comment """
+        Beinhaltet Daten zu finanziellen Zuwendungen an landwirtschaftliche Betriebe.
+        Dies umfasst Informationen über die Beitragshöhen, Berechnungsgrundlagen, Auszahlungskriterien und -modalitäten sowie die zugrunde liegenden administrativen Prozesse.
+        """@de,
+        """
+        Contains data on financial contributions to agricultural enterprises.
+        This includes information on contribution amounts, calculation bases, payment criteria and modalities, as well as the underlying administrative processes.
+        """@en,
+        """
+        Contient des données sur les contributions financières aux exploitations agricoles.
+        Cela comprend des informations sur les montants des contributions, les bases de calcul, les critères et modalités de paiement, ainsi que les processus administratifs sous-jacents.
+        """@fr,
+        """
+        Contiene dati sui contributi finanziari alle aziende agricole.
+        Ciò include informazioni sugli importi dei contributi, le basi di calcolo, i criteri e le modalità di pagamento, nonché i processi amministrativi sottostanti.
+        """@it ;
+    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
+
+systemmap:SX1qchbxSZKWI6Up a termdat:52451 ;
+    rdfs:label "Informationen zu Landwirtschaftsbetrieben"@de,
+        "Information about agricultural enterprises"@en,
+        "Informations sur les exploitations agricoles"@fr,
+        "Informazioni sulle aziende agricole"@it ;
+    rdfs:comment "Zahl der Grossvieheinheiten, Angaben über die Bodennutzung, den Beruf und das Alter des Betriebsleiters/der Betriebsleiterin."@de,
+        "Number of large livestock units, information on land use, occupation and age of the farm manager."@en,
+        "Nombre d'unités de gros bétail, informations sur l'utilisation des sols, la profession et l'âge du directeur ou de la directrice d'exploitation."@fr,
+        "Numero di unità di bestiame grosso, informazioni sull'uso del suolo, la professione e l'età del gestore aziendale."@it ;
+    systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
+
+systemmap:SY9n2yTOBWXtZ6se a termdat:52451 ;
+    rdfs:label "Daten über Kontrollen und Kontrollergebnisse"@de,
+        "Data on inspections and inspection results"@en,
+        "Données sur les contrôles et les résultats des contrôles"@fr,
+        "Dati sui controlli e sui risultati dei controlli"@it ;
+    systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
+
+systemmap:SYlOxcohgWiXr61M a termdat:52451 ;
+    rdfs:label "Informationen zu Forstbetrieben"@de,
+        "Information about forestry enterprises"@en,
+        "Informations sur les entreprises forestières"@fr,
+        "Informazioni sulle aziende forestali"@it ;
+    rdfs:comment "Anzahl beschäftigte Personen nach Geschlecht und Arbeitszeit."@de,
+        "Number of employed persons by gender and working time."@en,
+        "Nombre de personnes employées selon le sexe et le temps de travail."@fr,
+        "Numero di persone impiegate per genere e orario di lavoro."@it ;
+    systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
+
+systemmap:SakCt52w8AKrsSXi a termdat:52451 ;
+    rdfs:label "Informationen der Strukturdatenerhebung"@de,
+        "Information from the structural data survey"@en,
+        "Informations de l'enquête sur les données structurelles"@fr,
+        "Informazioni dall'indagine sui dati strutturali"@it ;
+    systemmap:containedIn systemmap:SMjqlEoVCR9wpTyN1,
+        systemmap:SPWOFHR512FuAc25b,
+        systemmap:SZ9LRAuSt2EOvBpqY,
+        systemmap:SmWEQ8lVlDS9ZwPkY,
+        systemmap:SpR2aDraNmiUXz55J ;
+    systemmap:informs systemmap:SzuDlnYUQMk3HaCb .
+
+systemmap:SeUFazO70bpqCYJ5 a termdat:52451 ;
+    rdfs:label "Stammdaten und Identifikatoren"@de,
+        "Master data and identifiers"@en,
+        "Données de base et identifiants"@fr,
+        "Dati di base e identificatori"@it ;
+    rdfs:comment "Name und Adresse des Unternehmens oder Betriebs, Gemeindenummern, BUR-Nummer (nichtsprechende 8-stellige Identifikationsnummer), Unternehmens-Identifikationsnummer (UID), Art der wirtschaftlichen Tätigkeit (NOGA), Rechtsform des Unternehmens."@de,
+        "Name and address of the company or business, municipality numbers, BUR number (non-speaking 8-digit identification number), company identification number (UID), type of economic activity (NOGA), legal form of the company."@en,
+        "Nom et adresse de l'entreprise ou de l'exploitation, numéros de commune, numéro BUR (numéro d'identification à 8 chiffres non parlant), numéro d'identification de l'entreprise (UID), type d'activité économique (NOGA), forme juridique de l'entreprise."@fr,
+        "Nome e indirizzo dell'azienda o dell'impresa, numeri dei comuni, numero BUR (numero di identificazione a 8 cifre non parlante), numero di identificazione aziendale (UID), tipo di attività economica (NOGA), forma giuridica dell'azienda."@it ;
+    systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
+
+systemmap:SfQ6BN8rDjKhTWL4 a termdat:52451 ;
+    rdfs:label "Pflanzenschutzmittel-Importe"@de,
+        "Pesticide imports"@en,
+        "Importations de produits phytosanitaires"@fr,
+        "Importazioni di prodotti fitosanitari"@it ;
+    rdfs:comment """
+        Daten zu jedem Import von Pflanzenschutzmitteln mit UID und Namen des Importeurs, Datum des Imports, Importmenge, Warenbezeichnung (Freitext) sowie Zustelladresse.
+        """@de,
+        """
+        Data on each import of pesticides, including UID and name of the importer, date of import, import quantity, product designation (free text), and delivery address.
+        """@en,
+        """
+        Données sur chaque importation de produits phytosanitaires, y compris l'UID et le nom de l'importateur, la date d'importation, la quantité importée, la désignation du produit (texte libre) et l'adresse de livraison.
+        """@fr,
+        """
+        Dati su ogni importazione di prodotti fitosanitari, compresi UID e nome dell'importatore, data di importazione, quantità importata, denominazione del prodotto (testo libero) e indirizzo di consegna.
+        """@it ;
+    systemmap:containedIn systemmap:S7u1Bh6qfXUbSDkv .
+
+systemmap:SldiTYOuXQmoC3SV a termdat:52451 ;
+    rdfs:label "Anmeldungen für Direktzahlungsarten"@de,
+        "Registrations for direct payment types"@en,
+        "Inscriptions pour les types de paiements directs"@fr,
+        "Iscrizioni per tipi di pagamenti diretti"@it ;
+    rdfs:comment """
+        Umfasst den Prozess und die zugehörigen Daten zur Registrierung für unterschiedliche Direktzahlungsarten.
+        Enthalten sind Informationen zu Anmeldeverfahren, Fristen, Voraussetzungen und den verwendeten Formularen zur Antragstellung.
+        """@de,
+        """
+        Covers the process and related data for registration for different types of direct payments.
+        It includes information on registration procedures, deadlines, requirements, and the forms used for application.
+        """@en,
+        """
+        Couvre le processus et les données associées à l'inscription aux différents types de paiements directs.
+        Il comprend des informations sur les procédures d'inscription, les délais, les conditions requises et les formulaires utilisés pour la demande.
+        """@fr,
+        """
+        Copre il processo e i dati relativi alla registrazione per diversi tipi di pagamenti diretti.
+        Include informazioni sulle procedure di iscrizione, le scadenze, i requisiti e i moduli utilizzati per la richiesta.
+        """@it ;
+    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
+
+systemmap:SoY82Q0qEk9k0s3w3 a termdat:52451 ;
+    rdfs:label "Kontaktdaten Milchproduzenten"@de,
+        "Contact details of milk producers"@en,
+        "Coordonnées des producteurs de lait"@fr,
+        "Dati di contatto dei produttori di latte"@it ;
+    rdfs:comment "Kontaktdaten der Milchproduzenten wie Adressen, TVD-Nummer, AGIS-Nummer des Betriebs, AGIS Nummer des Bewirtschaftenden und Zahlungsinformationen für die Ausbezahlung der Zulage für verkäste Milch und die Zulage für Fütterung ohne Silage. Wenn möglich, werden diese Kontaktdaten aus AGIS bezogen."@de,
+        "Contact details of milk producers, such as addresses, TVD number, AGIS number of the farm, AGIS number of the operator, and payment information for the subsidy for cheesed milk and the subsidy for feeding without silage. If possible, these contact details are obtained from AGIS."@en,
+        "Coordonnées des producteurs de lait, telles que les adresses, le numéro TVD, le numéro AGIS de l'exploitation, le numéro AGIS de l'exploitant et les informations de paiement pour la subvention pour le lait transformé en fromage et la subvention pour l'alimentation sans ensilage. Si possible, ces coordonnées sont obtenues auprès d'AGIS."@fr,
+        "Dati di contatto dei produttori di latte, come indirizzi, numero TVD, numero AGIS dell'azienda, numero AGIS del gestore e informazioni di pagamento per il sussidio per il latte trasformato in formaggio e il sussidio per l'alimentazione senza insilato. Se possibile, questi dati di contatto vengono ottenuti da AGIS."@it ;
+    prov:wasDerivedFrom systemmap:S6aBblr7qNp15tGw ;
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
+
+systemmap:Sutd0KIj3Rf8GlSwq a termdat:52451 ;
+    rdfs:label "Kontaktdaten Milchverarbeiter"@de,
+        "Contact details of milk processors"@en,
+        "Coordonnées des transformateurs de lait"@fr,
+        "Dati di contatto dei trasformatori di latte"@it ;
+    rdfs:comment "Kontaktdaten der Milchverarbeiter wie Adressen oder Identifikationsnummern."@de,
+        "Contact details of milk processors, such as addresses or identification numbers."@en,
+        "Coordonnées des transformateurs de lait, telles que les adresses ou les numéros d'identification."@fr,
+        "Dati di contatto dei trasformatori di latte, come indirizzi o numeri di identificazione."@it ;
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
+
+systemmap:SvNriWslaOR5xkdw a termdat:52451 ;
+    rdfs:label "Betriebsdaten (Person, Betrieb)"@de,
+        "Operational data (Person, Business)"@en,
+        "Données opérationnelles (Personne, Entreprise)"@fr,
+        "Dati operativi (Persona, Impresa)"@it ;
+    rdfs:comment "Enthält grundlegende Informationen zu landwirtschaftlichen Betrieben sowie zu den zugehörigen Personen. Dazu gehören Identifikationsdaten, organisatorische Strukturen und Angaben zu den am Betrieb beteiligten Personen (z. B. Betriebsleiter, Familienmitglieder und Mitarbeitende)."@de,
+        "Contains basic information about agricultural businesses and related individuals. This includes identification data, organizational structures, and details about individuals involved in the business (e.g., farm managers, family members, and employees)."@en,
+        "Contient des informations de base sur les exploitations agricoles et les personnes associées. Cela inclut les données d'identification, les structures organisationnelles et les détails sur les personnes impliquées dans l'exploitation (p. ex. gestionnaires de ferme, membres de la famille et employés)."@fr,
+        "Contiene informazioni di base sulle aziende agricole e sulle persone ad esse associate. Ciò include dati identificativi, strutture organizzative e dettagli sulle persone coinvolte nell'azienda (ad es. gestori dell'azienda, familiari e dipendenti)."@it ;
+    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
+    systemmap:hasMaster systemmap:S3jZwzvmFKsXRWiI,
+        systemmap:SDLEUPczkJ9AWZeC ;
+    systemmap:informs systemmap:SX1qchbxSZKWI6Up .
 
 systemmap:SDqb9NPoB6n3MZf2 a termdat:52453 ;
     rdfs:label "Kürzungen von Direktzahlungen"@de,

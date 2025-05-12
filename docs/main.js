@@ -265,10 +265,6 @@ async function init() {
 
     const network = new vis.Network(container, data, options);
 
-    console.log("Scale before:", network.getScale()); 
-    network.fit({ scale: 0.003 });
-    console.log("Scale after :", network.getScale());
-
     // 5) The BFS highlight color-blending
     //    Map group => original background/border/font
     const groupColors = {

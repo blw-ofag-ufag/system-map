@@ -21,6 +21,7 @@ window.NODE_QUERY = `
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
   PREFIX schema: <http://schema.org/>
+  PREFIX dcat: <http://www.w3.org/ns/dcat#>
   SELECT ?id ?group ?displayLabel ?comment ?abbreviation
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/system-map> {
@@ -50,6 +51,7 @@ window.EDGE_QUERY = `
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
   PREFIX schema: <http://schema.org/>
+ PREFIX dcat: <http://www.w3.org/ns/dcat#>
   SELECT (?property AS ?id) ?from ?to ?label ?comment
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/system-map> {
@@ -71,6 +73,7 @@ window.CLASS_QUERY = `
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
   PREFIX schema: <http://schema.org/>
+  PREFIX dcat: <http://www.w3.org/ns/dcat#>
   SELECT ?iri ?label ?comment
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/system-map> {
@@ -111,7 +114,7 @@ window.mapClassIriToGroup = function(iri) {
       return "Organization";
     case "http://schema.org/SoftwareApplication":
       return "System";
-    case "https://agriculture.ld.admin.ch/system-map/Information":
+    case "http://www.w3.org/ns/dcat#Dataset":
       return "Information";
     default:
       return "Other";

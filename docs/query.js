@@ -51,12 +51,13 @@ window.EDGE_QUERY = `
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
   PREFIX schema: <http://schema.org/>
- PREFIX dcat: <http://www.w3.org/ns/dcat#>
+  PREFIX dcat: <http://www.w3.org/ns/dcat#>
+  PREFIX prov: <http://www.w3.org/ns/prov#>
   SELECT (?property AS ?id) ?from ?to ?label ?comment
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/system-map> {
       ?from ?property ?to .
-      VALUES ?property { systemmap:informs schema:parentOrganization systemmap:operates systemmap:owns systemmap:access systemmap:contains systemmap:usesIdentifier schema:memberOf }
+      VALUES ?property { prov:wasDerivedFrom schema:parentOrganization systemmap:operates systemmap:owns systemmap:access systemmap:contains systemmap:usesMasterData schema:memberOf }
       ?property rdfs:label ?label .
       FILTER(LANG(?label)="${lang}")
       OPTIONAL {

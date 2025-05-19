@@ -179,7 +179,7 @@ async function init() {
         
         // If this edge represents an "informs" relationship,
         // add dashed styling and increase its length.
-        if (row.id.value === "https://agriculture.ld.admin.ch/system-map/informs" || row.id.value === "https://agriculture.ld.admin.ch/system-map/usesIdentifier" || row.id.value === "https://agriculture.ld.admin.ch/system-map/access") {
+        if (row.id.value === "http://www.w3.org/ns/prov#wasDerivedFrom" || row.id.value === "https://agriculture.ld.admin.ch/system-map/usesMasterData" || row.id.value === "https://agriculture.ld.admin.ch/system-map/access" || row.id.value === "https://agriculture.ld.admin.ch/system-map/references" ) {
             edge.dashes = [5, 10]; // Dash pattern: 5px dash, 5px gap
             edge.length = 600;    // Increase edge length to allow more spacing
         }

@@ -8,9 +8,9 @@
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
 @prefix termdat: <https://register.ld.admin.ch/termdat/> .
-@prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
 
 systemmap:metadata a void:Dataset ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
@@ -25,7 +25,6 @@ systemmap:metadata a void:Dataset ;
     schema:dateModified "2025-04-09"^^xsd:date ;
     schema:datePublished "2025-02-24"^^xsd:date ;
     schema:workExample <https://blw-ofag-ufag.github.io/system-map> ;
-    rdfs:seeAlso <https://github.com/blw-ofag-ufag/metadata/blob/main/data/raw/datasets/83f93ff4-ef3f-43f1-af2c-83f18952283e.json> ;
     rdfs:comment """
         Eine Sammlung von Organisationen, Informationssystemen und Informationseinheiten (Daten) im Schweizer Agrar- und Lebensmittelsektor.
         """@de,
@@ -38,6 +37,7 @@ systemmap:metadata a void:Dataset ;
         """
         Una raccolta di organizzazioni, sistemi informativi e unità informative (dati) nel settore agroalimentare svizzero.
         """@it ;
+    rdfs:seeAlso <https://github.com/blw-ofag-ufag/metadata/blob/main/data/raw/datasets/83f93ff4-ef3f-43f1-af2c-83f18952283e.json> ;
     dcat:landingPage <https://github.com/blw-ofag-ufag/system-map> .
 
 <https://www.fedlex.admin.ch/eli/cc/1986/926_926_926> a schema:Legislation ;
@@ -3094,9 +3094,9 @@ systemmap:SvNriWslaOR5xkdw a termdat:52451 ;
         "Contient des informations de base sur les exploitations agricoles et les personnes associées. Cela inclut les données d'identification, les structures organisationnelles et les détails sur les personnes impliquées dans l'exploitation (p. ex. gestionnaires de ferme, membres de la famille et employés)."@fr,
         "Contiene informazioni di base sulle aziende agricole e sulle persone ad esse associate. Ciò include dati identificativi, strutture organizzative e dettagli sulle persone coinvolte nell'azienda (ad es. gestori dell'azienda, familiari e dipendenti)."@it ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
-    systemmap:hasMaster systemmap:S3jZwzvmFKsXRWiI,
-        systemmap:SDLEUPczkJ9AWZeC ;
-    systemmap:informs systemmap:SX1qchbxSZKWI6Up .
+    systemmap:informs systemmap:SX1qchbxSZKWI6Up ;
+    systemmap:usesMasterData systemmap:S3jZwzvmFKsXRWiI,
+        systemmap:SDLEUPczkJ9AWZeC .
 
 systemmap:SDqb9NPoB6n3MZf2 a termdat:52453 ;
     rdfs:label "Kürzungen von Direktzahlungen"@de,

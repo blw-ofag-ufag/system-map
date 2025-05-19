@@ -443,7 +443,7 @@ schema:parentOrganization a owl:ObjectProperty,
         "belongs to"@en,
         "fait partie de"@fr,
         "fa parte di"@it ;
-    rdfs:comment """  
+    rdfs:comment """
         Zeigt an, dass die (Teil-)Organisation ein Teil von einer (Über-)Organisation Y ist.
         """@de,
         """  
@@ -501,6 +501,12 @@ dcat:landingPage a owl:ObjectProperty ;
         """  
         Una pagina Web che può essere visitata in un browser per accedere al catalogo, a un set di dati, alle sue distribuzioni e/o a informazioni aggiuntive.
         """@it .
+
+systemmap:usesMasterData a owl:ObjectProperty ;
+    rdfs:label "hat Masterdaten"@de,
+        "has master data"@en ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range systemmap:MasterData .
 
 prov:wasDerivedFrom a owl:ObjectProperty ;
     rdfs:label "wurde abgeleitet von"@de,
@@ -619,12 +625,6 @@ systemmap:hasLegalBasis a owl:ObjectProperty ;
         Indica che qualsiasi X ha una base legale in una (particolare parte di) legislazione Y.
         """@it ;
     rdfs:range schema:Legislation .
-
-systemmap:hasMaster a owl:ObjectProperty ;
-    rdfs:label "hat Masterdaten"@de,
-        "has master data"@en ;
-    rdfs:domain dcat:Dataset ;
-    rdfs:range systemmap:MasterData .
 
 systemmap:informs a owl:ObjectProperty ;
     rdfs:label "informiert"@de,
@@ -751,7 +751,7 @@ systemmap:references a owl:ObjectProperty ;
     rdfs:label "referenziert"@de,
         "references"@en ;
     rdfs:domain dcat:Dataset ;
-    rdfs:range systemmap:MasterData .
+    rdfs:range schema:DefinedTermSet .
 
 systemmap: a owl:Ontology ;
     rdfs:label "Ontologie der DigiAgriFoodCH Systemlandkarte"@de,
@@ -775,5 +775,5 @@ systemmap: a owl:Ontology ;
         "DigiAgriFoodCH System Map Ontology"@en,
         "Ontologie de la carte du système DigiAgriFoodCH"@fr,
         "Ontologia della mappa del sistema DigiAgriFoodCH"@it ;
-    owl:versionInfo "0.3.0" .
+    owl:versionInfo "0.4.0" .
 

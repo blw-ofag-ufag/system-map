@@ -89,11 +89,11 @@ window.CLASS_QUERY = `
 
 // query the ontology title
 window.TITLE_QUERY = `
-PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX schema: <http://schema.org/>
 SELECT ?title
 WHERE {
   GRAPH <https://lindas.admin.ch/foag/system-map> {
-    <https://agriculture.ld.admin.ch/system-map/> dcterms:title ?title .
+    <https://agriculture.ld.admin.ch/system-map/metadata> schema:name ?title .
     FILTER(LANG(?title)="${lang}")
   }
 }

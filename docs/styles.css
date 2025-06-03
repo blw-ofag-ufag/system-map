@@ -78,6 +78,13 @@ html, body {
   color: #707070;
 }
 
+/* Hide legend or info panel over url parameter
+   .param-hidden applies even when dynamic .hidden is removed */
+#infoPanel.param-hidden,
+#legend.param-hidden {
+  display: none;
+}
+
 .systemmap-title {
   position: absolute;
   top: 10px;
@@ -129,6 +136,15 @@ html, body {
   top: 80px;
   left: 10px;
 }*/
+
+.focus-mode-field {
+  position: absolute;
+  top: 130px;
+  left: 10px;
+  width: 200px;
+  z-index: 100;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0.8em;   /* Adjust value as needed */

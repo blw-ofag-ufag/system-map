@@ -28,6 +28,8 @@ Here's a table of the possible URL parameters, descriptions and their default va
 | `organization` | `true`, `false` | `true` | Determines whether organizations (`schema:Organization`) should be displayed. |
 | `system`     | `true`, `false` | `true` | Determines whether IT systems (`schema:SoftwareApplication`) should be displayed. |
 | `information` | `true`, `false` | `true` | Determines whether information units (`systemmap:Information`) should be displayed. |
+| `infopanel` | `true`, `false` | `true` | Determines whether the infopanel (top right) should be displayed when hovering any entity. |
+| `legend` | `true`, `false` | `true` | Determines whether the legend (bottom left) should be displayed. |
 
 # 🔎 Examples of SPARQL queries from LINDAS
 

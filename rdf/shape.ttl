@@ -124,23 +124,17 @@
 #      schema:Organization
 # ------------------------------------------------------------------------------
 
-schema:MemberDomainShape
+systemmap:MemberDomainShape
     a sh:NodeShape ;
     sh:targetSubjectsOf schema:member ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Organization ;
-        sh:message "The subject of schema:member must be a schema:Organization" ;
-    ] .
+    sh:class schema:Organization ;
+    sh:message "The subject of schema:member must be a schema:Organization" .
 
-schema:MemberRangeShape
+systemmap:MemberRangeShape
     a sh:NodeShape ;
     sh:targetObjectsOf schema:member ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Organization ;
-        sh:message "Objects of type schema:member must be a schema:Organization" ;
-    ] .
+    sh:class schema:Organization ;
+    sh:message "The object of schema:member must be a schema:Organization" .
 
 # ------------------------------------------------------------------------------
 # 2.2. Domain and Range check for schema:memberOf
@@ -148,23 +142,17 @@ schema:MemberRangeShape
 #      schema:Organization
 # ------------------------------------------------------------------------------
 
-schema:MemberDomainShape
+systemmap:MemberOfDomainShape
     a sh:NodeShape ;
     sh:targetSubjectsOf schema:memberOf ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Organization ;
-        sh:message "The subject of schema:memberOf must be a schema:Organization" ;
-    ] .
+    sh:class schema:Organization ;
+    sh:message "The subject of schema:memberOf must be a schema:Organization" .
 
-schema:MemberRangeShape
+systemmap:MemberOfRangeShape
     a sh:NodeShape ;
     sh:targetObjectsOf schema:memberOf ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Organization ;
-        sh:message "Objects of type schema:memberOf must be a schema:Organization" ;
-    ] .
+    sh:class schema:Organization ;
+    sh:message "The object of schema:memberOf must be a schema:Organization" .
 
 # ------------------------------------------------------------------------------
 # 2.3. Domain and Range check for schema:parentOrganization
@@ -172,23 +160,17 @@ schema:MemberRangeShape
 #      equal to schema:Organization
 # ------------------------------------------------------------------------------
 
-schema:MemberDomainShape
+systemmap:ParentOrganizationDomainShape
     a sh:NodeShape ;
     sh:targetSubjectsOf schema:parentOrganization ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Organization ;
-        sh:message "The subject of schema:parentOrganization must be a schema:Organization" ;
-    ] .
+    sh:class schema:Organization ;
+    sh:message "The subject of schema:parentOrganization must be a schema:Organization" .
 
-schema:MemberRangeShape
+systemmap:ParentOrganizationRangeShape
     a sh:NodeShape ;
     sh:targetObjectsOf schema:parentOrganization ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Organization ;
-        sh:message "Objects of type schema:parentOrganization must be a schema:Organization" ;
-    ] .
+    sh:class schema:Organization ;
+    sh:message "The object of schema:parentOrganization must be a schema:Organization" .
 
 # ------------------------------------------------------------------------------
 # 2.4. Domain and Range check for schema:subOrganization
@@ -196,23 +178,17 @@ schema:MemberRangeShape
 #      equal to schema:Organization
 # ------------------------------------------------------------------------------
 
-schema:MemberDomainShape
+systemmap:SubOrganizationDomainShape
     a sh:NodeShape ;
     sh:targetSubjectsOf schema:subOrganization ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Organization ;
-        sh:message "The subject of schema:subOrganization must be a schema:Organization" ;
-    ] .
+    sh:class schema:Organization ;
+    sh:message "The subject of schema:subOrganization must be a schema:Organization" .
 
-schema:MemberRangeShape
+systemmap:SubOrganizationRangeShape
     a sh:NodeShape ;
     sh:targetObjectsOf schema:subOrganization ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Organization ;
-        sh:message "Objects of type schema:subOrganization must be a schema:Organization" ;
-    ] .
+    sh:class schema:Organization ;
+    sh:message "The object of schema:subOrganization must be a schema:Organization" .
 
 # ------------------------------------------------------------------------------
 # 2.5. Domain and Range check for systemmap:access
@@ -220,25 +196,17 @@ schema:MemberRangeShape
 #    - The range of the property systemmap:access must be dcat:Dataset
 # ------------------------------------------------------------------------------
 
-# Domain check: Subject must be a schema:Organization
 systemmap:AccessDomainShape
     a sh:NodeShape ;
     sh:targetSubjectsOf systemmap:access ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Organization ;
-        sh:message "The subject of systemmap:access must be a schema:Organization" ;
-    ] .
+    sh:class schema:Organization ;
+    sh:message "The subject of systemmap:access must be a schema:Organization" .
 
-# Range check: Object must be a dcat:Dataset
 systemmap:AccessRangeShape
     a sh:NodeShape ;
     sh:targetObjectsOf systemmap:access ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class dcat:Dataset ;
-        sh:message "Objects of systemmap:access must be a dcat:Dataset" ;
-    ] .
+    sh:class dcat:Dataset ;
+    sh:message "Objects of systemmap:access must be a dcat:Dataset" .
 
 # ------------------------------------------------------------------------------
 # 2.6. Domain and Range check for systemmap:containedIn
@@ -246,25 +214,17 @@ systemmap:AccessRangeShape
 #    - The range of the property systemmap:containedIn must be schema:SoftwareApplication
 # ------------------------------------------------------------------------------
 
-# Domain check: Subject must be a dcat:Dataset
 systemmap:ContainedInDomainShape
     a sh:NodeShape ;
     sh:targetSubjectsOf systemmap:containedIn ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class dcat:Dataset ;
-        sh:message "The subject of systemmap:containedIn must be a dcat:Dataset" ;
-    ] .
+    sh:class dcat:Dataset ;
+    sh:message "The subject of systemmap:containedIn must be a dcat:Dataset" .
 
-# Range check: Object must be a schema:SoftwareApplication
 systemmap:ContainedInRangeShape
     a sh:NodeShape ;
     sh:targetObjectsOf systemmap:containedIn ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:SoftwareApplication ;
-        sh:message "Objects of systemmap:containedIn must be a schema:SoftwareApplication" ;
-    ] .
+    sh:class schema:SoftwareApplication ;
+    sh:message "Objects of systemmap:containedIn must be a schema:SoftwareApplication" .
 
 # ------------------------------------------------------------------------------
 # 2.7. Domain and Range check for systemmap:contains
@@ -272,40 +232,28 @@ systemmap:ContainedInRangeShape
 #    - The range of the property systemmap:contains must be dcat:Dataset
 # ------------------------------------------------------------------------------
 
-# Domain check: Subject must be a schema:SoftwareApplication
 systemmap:ContainsDomainShape
     a sh:NodeShape ;
     sh:targetSubjectsOf systemmap:contains ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:SoftwareApplication ;
-        sh:message "The subject of systemmap:contains must be a schema:SoftwareApplication" ;
-    ] .
+    sh:class schema:SoftwareApplication ;
+    sh:message "The subject of systemmap:contains must be a schema:SoftwareApplication" .
 
-# Range check: Object must be a dcat:Dataset
 systemmap:ContainsRangeShape
     a sh:NodeShape ;
     sh:targetObjectsOf systemmap:contains ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class dcat:Dataset ;
-        sh:message "Objects of systemmap:contains must be a dcat:Dataset" ;
-    ] .
+    sh:class dcat:Dataset ;
+    sh:message "Objects of systemmap:contains must be a dcat:Dataset" .
 
 # ------------------------------------------------------------------------------
 # 2.8. Range check for systemmap:hasLegalBasis
 #    - The range of the property systemmap:hasLegalBasis must be schema:Legislation
 # ------------------------------------------------------------------------------
 
-# Range check: Object must be a schema:Legislation
 systemmap:HasLegalBasisRangeShape
     a sh:NodeShape ;
     sh:targetObjectsOf systemmap:hasLegalBasis ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Legislation ;
-        sh:message "Objects of systemmap:hasLegalBasis must be a schema:Legislation" ;
-    ] .
+    sh:class schema:Legislation ;
+    sh:message "Objects of systemmap:hasLegalBasis must be a schema:Legislation" .
 
 # ------------------------------------------------------------------------------
 # 2.9. Domain and Range check for systemmap:informedBy
@@ -313,25 +261,17 @@ systemmap:HasLegalBasisRangeShape
 #    - The range of the property systemmap:informedBy must be dcat:Dataset
 # ------------------------------------------------------------------------------
 
-# Domain check: Subject must be a dcat:Dataset
 systemmap:InformedByDomainShape
     a sh:NodeShape ;
     sh:targetSubjectsOf systemmap:informedBy ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class dcat:Dataset ;
-        sh:message "The subject of systemmap:informedBy must be a dcat:Dataset" ;
-    ] .
+    sh:class dcat:Dataset ;
+    sh:message "The subject of systemmap:informedBy must be a dcat:Dataset" .
 
-# Range check: Object must be a dcat:Dataset
 systemmap:InformedByRangeShape
     a sh:NodeShape ;
     sh:targetObjectsOf systemmap:informedBy ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class dcat:Dataset ;
-        sh:message "Objects of systemmap:informedBy must be a dcat:Dataset" ;
-    ] .
+    sh:class dcat:Dataset ;
+    sh:message "Objects of systemmap:informedBy must be a dcat:Dataset" .
 
 # ------------------------------------------------------------------------------
 # 2.10. Domain and Range check for systemmap:informs
@@ -339,25 +279,17 @@ systemmap:InformedByRangeShape
 #    - The range of the property systemmap:informs must be dcat:Dataset
 # ------------------------------------------------------------------------------
 
-# Domain check: Subject must be a dcat:Dataset
 systemmap:InformsDomainShape
     a sh:NodeShape ;
     sh:targetSubjectsOf systemmap:informs ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class dcat:Dataset ;
-        sh:message "The subject of systemmap:informs must be a dcat:Dataset" ;
-    ] .
+    sh:class dcat:Dataset ;
+    sh:message "The subject of systemmap:informs must be a dcat:Dataset" .
 
-# Range check: Object must be a dcat:Dataset
 systemmap:InformsRangeShape
     a sh:NodeShape ;
     sh:targetObjectsOf systemmap:informs ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class dcat:Dataset ;
-        sh:message "Objects of systemmap:informs must be a dcat:Dataset" ;
-    ] .
+    sh:class dcat:Dataset ;
+    sh:message "Objects of systemmap:informs must be a dcat:Dataset" .
 
 # ------------------------------------------------------------------------------
 # 2.11. Domain and Range check for systemmap:operatedBy
@@ -365,25 +297,17 @@ systemmap:InformsRangeShape
 #    - The range of the property systemmap:operatedBy must be schema:Organization
 # ------------------------------------------------------------------------------
 
-# Domain check: Subject must be a schema:SoftwareApplication
 systemmap:OperatedByDomainShape
     a sh:NodeShape ;
     sh:targetSubjectsOf systemmap:operatedBy ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:SoftwareApplication ;
-        sh:message "The subject of systemmap:operatedBy must be a schema:SoftwareApplication" ;
-    ] .
+    sh:class schema:SoftwareApplication ;
+    sh:message "The subject of systemmap:operatedBy must be a schema:SoftwareApplication" .
 
-# Range check: Object must be a schema:Organization
 systemmap:OperatedByRangeShape
     a sh:NodeShape ;
     sh:targetObjectsOf systemmap:operatedBy ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Organization ;
-        sh:message "Objects of systemmap:operatedBy must be a schema:Organization" ;
-    ] .
+    sh:class schema:Organization ;
+    sh:message "Objects of systemmap:operatedBy must be a schema:Organization" .
 
 # ------------------------------------------------------------------------------
 # 2.12. Domain and Range check for systemmap:operates
@@ -391,25 +315,17 @@ systemmap:OperatedByRangeShape
 #    - The range of the property systemmap:operates must be schema:SoftwareApplication
 # ------------------------------------------------------------------------------
 
-# Domain check: Subject must be a schema:Organization
 systemmap:OperatesDomainShape
     a sh:NodeShape ;
     sh:targetSubjectsOf systemmap:operates ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Organization ;
-        sh:message "The subject of systemmap:operates must be a schema:Organization" ;
-    ] .
+    sh:class schema:Organization ;
+    sh:message "The subject of systemmap:operates must be a schema:Organization" .
 
-# Range check: Object must be a schema:SoftwareApplication
 systemmap:OperatesRangeShape
     a sh:NodeShape ;
     sh:targetObjectsOf systemmap:operates ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:SoftwareApplication ;
-        sh:message "Objects of systemmap:operates must be a schema:SoftwareApplication" ;
-    ] .
+    sh:class schema:SoftwareApplication ;
+    sh:message "Objects of systemmap:operates must be a schema:SoftwareApplication" .
 
 # ------------------------------------------------------------------------------
 # 2.13. Domain and Range check for systemmap:ownedBy
@@ -417,25 +333,17 @@ systemmap:OperatesRangeShape
 #    - The range of the property systemmap:ownedBy must be schema:Organization
 # ------------------------------------------------------------------------------
 
-# Domain check: Subject must be a schema:Organization
 systemmap:OwnedByDomainShape
     a sh:NodeShape ;
     sh:targetSubjectsOf systemmap:ownedBy ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Organization ;
-        sh:message "The subject of systemmap:ownedBy must be a schema:Organization" ;
-    ] .
+    sh:class schema:Organization ;
+    sh:message "The subject of systemmap:ownedBy must be a schema:Organization" .
 
-# Range check: Object must be a schema:Organization
 systemmap:OwnedByRangeShape
     a sh:NodeShape ;
     sh:targetObjectsOf systemmap:ownedBy ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Organization ;
-        sh:message "Objects of systemmap:ownedBy must be a schema:Organization" ;
-    ] .
+    sh:class schema:Organization ;
+    sh:message "Objects of systemmap:ownedBy must be a schema:Organization" .
 
 # ------------------------------------------------------------------------------
 # 2.14. Domain and Range check for systemmap:owns
@@ -443,25 +351,17 @@ systemmap:OwnedByRangeShape
 #    - The range of the property systemmap:owns must be schema:Organization
 # ------------------------------------------------------------------------------
 
-# Domain check: Subject must be a schema:Organization
 systemmap:OwnsDomainShape
     a sh:NodeShape ;
     sh:targetSubjectsOf systemmap:owns ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Organization ;
-        sh:message "The subject of systemmap:owns must be a schema:Organization" ;
-    ] .
+    sh:class schema:Organization ;
+    sh:message "The subject of systemmap:owns must be a schema:Organization" .
 
-# Range check: Object must be a schema:Organization
 systemmap:OwnsRangeShape
     a sh:NodeShape ;
     sh:targetObjectsOf systemmap:owns ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class schema:Organization ;
-        sh:message "Objects of systemmap:owns must be a schema:Organization" ;
-    ] .
+    sh:class schema:Organization ;
+    sh:message "Objects of systemmap:owns must be a schema:Organization" .
 
 # ------------------------------------------------------------------------------
 # 2.15. Domain and Range check for systemmap:usesIdentifier
@@ -469,22 +369,14 @@ systemmap:OwnsRangeShape
 #    - The range of the property systemmap:usesIdentifier must be systemmap:Identifier
 # ------------------------------------------------------------------------------
 
-# Domain check: Subject must be a dcat:Dataset
 systemmap:UsesIdentifierDomainShape
     a sh:NodeShape ;
     sh:targetSubjectsOf systemmap:usesIdentifier ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class dcat:Dataset ;
-        sh:message "The subject of systemmap:usesIdentifier must be a dcat:Dataset" ;
-    ] .
+    sh:class dcat:Dataset ;
+    sh:message "The subject of systemmap:usesIdentifier must be a dcat:Dataset" .
 
-# Range check: Object must be a systemmap:Identifier
 systemmap:UsesIdentifierRangeShape
     a sh:NodeShape ;
     sh:targetObjectsOf systemmap:usesIdentifier ;
-    sh:property [
-        sh:path rdf:type ;
-        sh:class systemmap:Identifier ;
-        sh:message "Objects of systemmap:usesIdentifier must be a systemmap:Identifier" ;
-    ] .
+    sh:class systemmap:Identifier ;
+    sh:message "Objects of systemmap:usesIdentifier must be a systemmap:Identifier" .

@@ -78,6 +78,13 @@ html, body {
   color: #707070;
 }
 
+/* Hide legend or info panel over url parameter
+   .param-hidden applies even when dynamic .hidden is removed */
+#infoPanel.param-hidden,
+#legend.param-hidden {
+  display: none;
+}
+
 .systemmap-title {
   position: absolute;
   top: 10px;

@@ -120,6 +120,14 @@ async function init() {
     let pinnedNodeId = null;
     let pinnedEdgeId = null;
 
+    // Hide info panel and legend if URL params are set
+    if(getParam("infopanel") === "false") {
+        document.getElementById("infoPanel").classList.add("param-hidden");
+    }
+    if(getParam("legend") === "false") {
+        document.getElementById("legend").classList.add("param-hidden");
+    }
+
     setLanguageOption()
 
     async function fetchAndDisplayTitle() {

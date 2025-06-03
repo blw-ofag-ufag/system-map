@@ -81,12 +81,15 @@ function getParam(name) {
 
 /**
  * Helper func to set value of an URL param and redirects
- * @param {string} name name of the URL param
- * @param {string} value value of the URL param
+ * @paramsObj object with key-value pairs of URL params to set
  */
-function setParamRedirect(name, value) {
+function setParamsRedirect(paramsObj) {
     const params = new URLSearchParams(window.location.search);
-    params.set(name, value)
+
+    for (const [key, value] of Object.entries(paramsObj)) {
+        params.set(key, value);
+    }
+
     const newUrl = `${window.location.pathname}?${params.toString()}`;
     window.location.href = newUrl;
 }
@@ -98,7 +101,8 @@ function setParamRedirect(name, value) {
 function toggleGroup(element) {
     const groupName = JSON.parse(element.getAttribute("data-group"));
     const checked = element.checked
-    setParamRedirect(groupName.toLowerCase(), checked)
+    setParamsRedirect({ [groupName.toLowerCase()]: "checked" });
+
 }
 
 /**
@@ -107,9 +111,31 @@ function toggleGroup(element) {
  */
 function changeLanguage(element) {
     const lang = element.value
-    setParamRedirect("lang", lang)
+    setParamsRedirect({lang: lang})
 }
 
+/**
+ * Event-function to toggle focus mode of the webapp
+ * @param {*} element DOM-element of the focus mode checkbox
+ */
+function toggleFocusMode(element) {
+    const isChecked = element.checked;
+    setParamsRedirect({
+        infopanel: isChecked ? "false" : "true",
+        legend: isChecked ? "false" : "true"
+    });
+}
+
+
+/**
+ * Name of focus mode label based on language
+ */
+const focusModeLabels = {
+    "de": "Fokus-Modus",
+    "fr": "Mode Focus",
+    "it": "Modalità Focus",
+    "en": "Focus Mode"
+}
 
 /**
  * Build the network and set up the BFS highlight + info panel
@@ -121,12 +147,7 @@ async function init() {
     let pinnedEdgeId = null;
 
     // Hide info panel and legend if URL params are set
-    if(getParam("infopanel") === "false") {
-        document.getElementById("infoPanel").classList.add("param-hidden");
-    }
-    if(getParam("legend") === "false") {
-        document.getElementById("legend").classList.add("param-hidden");
-    }
+    setComponentsVisibility()
 
     setLanguageOption()
 
@@ -389,10 +410,29 @@ async function init() {
 
     function setLanguageOption() {
         const selectBox = document.querySelector("#languageSelect")
+        const focusModeLabel = document.querySelector("#focusModeLabel")
+
         langParam = getParam("lang")
         if(langParam) {
             selectBox.value = langParam
+            focusModeLabel.textContent = focusModeLabels[langParam] || focusModeLabels["de"];
         }
+    }
+
+    function setComponentsVisibility() {
+        const infopanelHidden = getParam("infopanel") === "false";
+        const legendHidden = getParam("legend") === "false";
+
+        if (infopanelHidden) {
+            document.getElementById("infoPanel").classList.add("param-hidden");
+        }
+        if (legendHidden) {
+            document.getElementById("legend").classList.add("param-hidden");
+        }
+        if (infopanelHidden && legendHidden) {
+            document.getElementById("focusModeCheckbox").checked = true;
+        }
+
     }
 
     network.on("hoverNode", (params) => {

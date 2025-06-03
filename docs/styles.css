@@ -137,6 +137,15 @@ html, body {
   left: 10px;
 }*/
 
+.focus-mode-field {
+  position: absolute;
+  top: 130px;
+  left: 10px;
+  width: 200px;
+  z-index: 100;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0.8em;   /* Adjust value as needed */
   margin-bottom: -0.2em; /* Adjust value as needed */

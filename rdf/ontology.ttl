@@ -4,6 +4,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix service: <http://purl.org/ontology/service#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
 @prefix termdat: <https://register.ld.admin.ch/termdat/> .
@@ -135,6 +136,24 @@ schema:SoftwareApplication a owl:Class ;
         """@fr,
         """
         Qualsiasi sistema IT (in senso astratto), spesso con uno o più database associati.
+        """@it .
+
+service:Service a owl:Class ;
+    rdfs:label "IT-Service"@de,
+        "IT service"@en,
+        "Service informatique"@fr,
+        "Servizio IT"@it ;
+    rdfs:comment """
+        Eine technische Softwarekomponente, die Funktionalitäten über klar definierte Schnittstellen zur externen Nutzung oder Integration bereitstellt.
+        """@de,
+        """
+        A technical software component that provides functionalities via clearly defined interfaces for external use or integration.
+        """@en,
+        """
+        Un composant logiciel technique qui met à disposition des fonctionnalités via des interfaces clairement définies pour une utilisation ou une intégration externe.
+        """@fr,
+        """
+        Un componente tecnico del software che fornisce funzionalità attraverso interfacce chiaramente definite per l'uso o l'integrazione esterna.
         """@it .
 
 systemmap:CantonalAgriculturalAdvisor a owl:Class ;

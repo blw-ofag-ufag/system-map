@@ -502,12 +502,6 @@ dcat:landingPage a owl:ObjectProperty ;
         Una pagina Web che può essere visitata in un browser per accedere al catalogo, a un set di dati, alle sue distribuzioni e/o a informazioni aggiuntive.
         """@it .
 
-systemmap:usesMasterData a owl:ObjectProperty ;
-    rdfs:label "hat Masterdaten"@de,
-        "has master data"@en ;
-    rdfs:domain dcat:Dataset ;
-    rdfs:range systemmap:MasterData .
-
 prov:wasDerivedFrom a owl:ObjectProperty ;
     rdfs:label "wurde abgeleitet von"@de,
         "was derived from"@en,
@@ -753,6 +747,12 @@ systemmap:references a owl:ObjectProperty ;
     rdfs:domain dcat:Dataset ;
     rdfs:range schema:DefinedTermSet .
 
+systemmap:usesMasterData a owl:ObjectProperty ;
+    rdfs:label "hat Masterdaten"@de,
+        "has master data"@en ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range systemmap:MasterData .
+
 systemmap: a owl:Ontology ;
     rdfs:label "Ontologie der DigiAgriFoodCH Systemlandkarte"@de,
         "DigiAgriFoodCH System Map Ontology"@en,
@@ -776,4 +776,42 @@ systemmap: a owl:Ontology ;
         "Ontologie de la carte du système DigiAgriFoodCH"@fr,
         "Ontologia della mappa del sistema DigiAgriFoodCH"@it ;
     owl:versionInfo "0.4.0" .
+
+dcterms:hasPart a owl:TransitiveProperty ;
+    rdfs:label "hat Teil"@de,
+        "has part"@en,
+        "a pour partie"@fr,
+        "ha parte"@it ;
+    rdfs:comment """
+        Eine verwandte Ressource, die physisch oder logisch in der beschriebenen Ressource enthalten ist.
+        """@de,
+        """
+        A related resource that is included either physically or logically in the described resource.
+        """@en,
+        """
+        Une ressource connexe qui est incluse physiquement ou logiquement dans la ressource décrite.
+        """@fr,
+        """
+        Una risorsa correlata che è inclusa fisicamente o logicamente nella risorsa descritta.
+        """@it ;
+    owl:inverseOf dcterms:isPartOf .
+
+dcterms:isPartOf a owl:TransitiveProperty ;
+    rdfs:label "ist Teil von"@de,
+        "is part of"@en,
+        "fait partie de"@fr,
+        "fa parte di"@it ;
+    rdfs:comment """
+        Eine verwandte Ressource, in der die beschriebene Ressource physisch oder logisch enthalten ist.
+        """@de,
+        """
+        A related resource in which the described resource is physically or logically included.
+        """@en,
+        """
+        Une ressource connexe dans laquelle la ressource décrite est incluse physiquement ou logiquement.
+        """@fr,
+        """
+        Una risorsa correlata nella quale la risorsa descritta è inclusa fisicamente o logicamente.
+        """@it ;
+    owl:inverseOf dcterms:hasPart .
 

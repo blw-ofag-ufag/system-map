@@ -217,6 +217,16 @@ systemmap:S4gV9U3dvmENkSnj a schema:SoftwareApplication ;
         "InfoSM"@it ;
     systemmap:operatedBy systemmap:SsFdxnjM8hgUdzVT5 .
 
+systemmap:Sfk2SSXle6RVMlfHv a schema:SoftwareApplication ;
+    rdfs:label "ASF Tiervermarktung"@de ;
+    rdfs:comment """
+    Die kostenlose App ASF Tiervermarktung bietet Tierproduzenten wichtige Handelsinformationen direkt auf iPhone oder iPad.
+    Über die App können Nutzer sich mit ihrem Agate/CH-Login anmelden, ihre Schlachttiere verwalten, Jager-Bestellungen aufgeben und aktuelle Transport- sowie Schlachtinformationen einsehen.
+    Zusätzlich informiert die App über Neuigkeiten der ASF Tiervermarktung AG, ermöglicht TVD-Zugangsmeldungen für Markt-Tiere und bietet schnellen Kontakt zum aktuellen Händler.
+    """@de ;
+    dcat:landingPage <https://apps.apple.com/ch/app/asf-tiervermarktung/id1586605600> ;
+    systemmap:operatedBy zefix:2595 .
+
 systemmap:S6J4iyI6nMI2RCXSY a schema:SoftwareApplication ;
     rdfs:label "CePa"@de,
         "CePa"@en,

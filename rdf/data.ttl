@@ -352,6 +352,16 @@ systemmap:SE5DY78J7vgfoiDLj a schema:SoftwareApplication ;
         "ProVar"@it ;
     systemmap:operatedBy systemmap:SfX7h09MplFWwb4LK .
 
+systemmap:SGcS7cUw9BqKvkBuh a schema:SoftwareApplication ;
+    rdfs:label "Labelbase"@de ;
+    rdfs:comment """
+        Labelbase ist eine unabhängige Standardlösung, die Labelorganisationen ermöglicht, ihre spezifischen Anforderungen an einzelne Tiere oder Tiergruppen einfach zu überprüfen.
+        Mithilfe öffentlich-rechtlicher Daten aus der Tierverkehrskontrolle sowie zusätzlichen, von den Labels definierten Kriterien lässt sich die Einhaltung der Labelvorschriften konsequent sicherstellen.
+        Für Schlachtbetriebe und Tierhalter vereinfacht Labelbase die Administration, indem es Labelinformationen, Schlachttaxdaten, Schlachtmeldungen und DNA-Daten bündelt und via XML-Schnittstelle direkt ins bestehende System integriert.
+        """@de ;
+    dcat:landingPage <https://www.identitas.ch/produkte/labelbase> ;
+    systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS .
+
 systemmap:SGdyOoksCnRRZwi2Q a schema:SoftwareApplication ;
     rdfs:label "Agate"@de,
         "Agate"@en,
@@ -435,6 +445,16 @@ systemmap:SHyBeGX0LsQwjJ6Z a schema:SoftwareApplication ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> ;
     systemmap:operatedBy systemmap:SNbhMvt3Btta1U1d6 .
 
+systemmap:SJuEQ4TCUuVZrwR9y a schema:SoftwareApplication ;
+    rdfs:label "GVE-Rechner"@de ;
+    rdfs:comment """
+        Der GVE-Rechner ist eine Webapplikation für Nutztierhaltende und Vollzugsbehörden in der Schweizer Landwirtschaft, die auf Basis der Tierverkehrsdatenbank (TVD) betriebliche Kennzahlen wie Grossvieheinheiten (GVE) und Normalstösse automatisch berechnet.
+        Nutzer können ihre Viehbestände und Berechnungsgrundlagen nachvollziehen, Prognosen erstellen sowie archivierte Kennzahlen vergangener Direktzahlungsperioden einsehen und exportieren, um ihren Anspruch auf Direktzahlungen abzuschätzen.
+        Durch die grafische Darstellung und Anzeige einzelner Tieraufenthalte unterstützt die Anwendung eine effiziente Fehlererkennung und erleichtert den kantonalen Vollzug der Landwirtschaftsgesetzgebung.
+        """@de ;
+    dcat:landingPage <https://www.identitas.ch/produkte/gve-rechner> ;
+    systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS .
+
 systemmap:SLxeXHOfmC6DkBGl a schema:SoftwareApplication ;
     rdfs:label "Zentrale Auswertung von Agrarumweltindikatoren"@de ;
     rdfs:comment """
@@ -494,6 +514,11 @@ systemmap:SOL6kHAvPFNIuM9E a schema:SoftwareApplication ;
         Es handelt sich um ein eine Webanwendung der Europäischen Union und unterstützt den grenzüberschreitenden Verkehr von Tieren, Lebensmitteln und tierischen Nebenprodukten.
         """@de ;
     systemmap:operatedBy systemmap:ShM5kJNFhO8vOAEdK .
+
+systemmap:SOSwDhug7bD0Rgat4 a schema:SoftwareApplication ;
+    rdfs:label "UFAnet"@de ;
+    dcat:landingPage <http://ufanet.ufa.ch> ;
+    systemmap:operatedBy systemmap:SnXxRAAwulwgoVD70 .
 
 systemmap:SPWOFHR512FuAc25b a schema:SoftwareApplication ;
     rdfs:label "Gesamtlösung EDV Landwirtschaft & Natur"@de,
@@ -570,6 +595,16 @@ systemmap:SU88cJmqj8nBRl2KZ a schema:SoftwareApplication ;
         "TVD"@en,
         "BDTA"@fr,
         "BDTA"@it ;
+    systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS .
+
+systemmap:SWd9uPyp6En27uq32 a schema:SoftwareApplication ;
+    rdfs:label "AnimalTracing"@de ;
+    rdfs:comment """
+        AnimalTracing ist ein Webservice, der externen Benutzerinnen und Benutzern einen kontrollierten Zugriff auf die Tierverkehrsdatenbank (TVD) ermöglicht.
+        Über AnimalTracing lassen sich Meldungen an die TVD übermitteln und Daten abfragen, wobei nur akkreditierte Softwarelieferanten und ein aktiver IAM-Agate-Account zugreifen können.
+        Die Nutzung erfordert einen gültigen Schnittstellenvertrag mit der Identitas AG beziehungsweise einen Lizenzvertrag IAM-Agate mit dem Bundesamt für Landwirtschaft, während der Service selbst kostenlos ist; mögliche Datenbezugsgebühren können jedoch anfallen.
+        """@de ;
+    dcat:landingPage <https://www.identitas.ch/produkte/animaltracing> ;
     systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS .
 
 systemmap:SXcby9KwakDGhBdP a schema:SoftwareApplication ;
@@ -783,6 +818,16 @@ systemmap:Shhoiq8azX3SHGL3W a schema:SoftwareApplication ;
     dcat:landingPage <https://www.psm.admin.ch/> ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2010/340> ;
     systemmap:operatedBy systemmap:SoqmfoevPVgr3d0AA .
+
+systemmap:Sj4KpDUg8mc4DmpR8 a schema:SoftwareApplication ;
+    rdfs:label "e-transit"@de ;
+    rdfs:comment """
+        e-transit ist eine Webapplikation der Identitas AG zur digitalen Dokumentation von Schweine-Transporten, die das bisherige Papierformular "Begleitdokument für Klauentiere" des BLV vollständig ersetzt.
+        Die Anwendung reduziert den administrativen Aufwand, indem sie das Ausdrucken, Handschreiben und Unterschreiben des Papierdokuments überflüssig macht, ein digitales Archiv bereitstellt und Labelinformationen (elektronische Vignette) integriert, wobei alle Funktionen in Deutsch, Französisch und Italienisch verfügbar sind.
+        Die Grundlogik basiert auf einem QR-Code, der in der App erzeugt wird und von allen Partnern entlang der Transportkette via QR-Code-Scan übernommen werden kann; dies erlaubt eine durchgängige digitale Verarbeitung der Begleitdokumente, solange alle Beteiligten digital arbeiten.
+        """@de ;
+    dcat:landingPage <https://www.identitas.ch/produkte/e-transit> ;
+    systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS .
 
 systemmap:SjCVTMrYaOTygNcqF a schema:SoftwareApplication ;
     rdfs:label "digiFLUX"@de,
@@ -2883,6 +2928,15 @@ systemmap:SQ3N7dTc23t2wzXr2 a systemmap:PrivateOrganization ;
 
 systemmap:SWdllcNbPnjdcm7om a systemmap:PrivateOrganization ;
     rdfs:label "Agroline"@de ;
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+
+systemmap:SnXxRAAwulwgoVD70 a systemmap:PrivateOrganization ;
+    rdfs:label "UFA AG"@de ;
+    rdfs:comment """
+    UFA AG steht für erfolgreiche Tierhaltung und unterstützt Schweizer Tierhalterinnen und Tierhalter mit Produkten und Dienstleistungen für eine nachhaltige, produzierende Landwirtschaft mit geschlossenen Kreisläufen.
+    Die Marken UFA und HYPONA bieten hochwertige Futtermittel, Mineralsalze und Spezialitäten sowie Konzepte für professionelle Tierhaltende, wobei ein kompetentes Fütterungsteam in allen Fütterungs- und Managementfragen berät.
+    Dabei verwendet UFA vorwiegend geprüfte Rohwaren von Schweizer Getreideproduzentinnen und -produzenten und 20 % Nebenprodukte der Schweizer Lebensmittelindustrie, um Foodwaste zu verhindern, und vertreibt die Produkte in Partnerschaft mit regionalen LANDI-Filialen.
+    """@de ;
     systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
 
 zefix:1256441 a systemmap:PrivateOrganization ;

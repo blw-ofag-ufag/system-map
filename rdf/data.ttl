@@ -2548,7 +2548,7 @@ systemmap:SqeNr0H0FGL6Uv5Rr a systemmap:FederalOrganization ;
     owl:sameAs staatskalender:10003196 .
 
 systemmap:SsFdxnjM8hgUdzVT5 a systemmap:FederalOrganization ;
-    rdfs:label "Kompetenzzentrum Daten"@de ;
+    rdfs:label "Kompetenzzentrum Daten"@de , "Gestion des connaissances"@fr ;
     schema:parentOrganization systemmap:Sou0GnQeSqCPHGhze ;
     owl:sameAs staatskalender:20051877 ;
     systemmap:abbreviation "DCC"@de .

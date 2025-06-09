@@ -3193,5 +3193,5 @@ systemmap:SK6JOIUV1UjrOYD7f a service:Service ;
         """
         Un servizio tecnico di SSO (Identity Provider) che fornisce la registrazione centralizzata degli utenti, l'autenticazione e il controllo degli accessi basato sui ruoli per Agate e i sistemi IT agricoli collegati.
         Consente un unico login per più applicazioni nel settore agricolo e garantisce che solo gli utenti autorizzati con i ruoli corretti possano accedere.
-        """@it ;
+        """@it .
 

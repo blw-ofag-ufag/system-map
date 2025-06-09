@@ -5,6 +5,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix service: <http://purl.org/ontology/service#> .
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
 @prefix termdat: <https://register.ld.admin.ch/termdat/> .
@@ -277,7 +278,8 @@ systemmap:S9SbhGAwWjtvcRIZ a schema:SoftwareApplication ;
         "GIS-BLW"@fr,
         "GIS-BLW"@it ;
     systemmap:hasLegalBasis LwG:art_165_e ;
-    systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
+    systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 ;
+    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
 
 systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
     rdfs:label "Acontrol"@de,
@@ -305,7 +307,8 @@ systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
         In questo modo, garantisce un monitoraggio efficiente e il rispetto degli standard agricoli.
         """@it ;
     systemmap:hasLegalBasis LwG:art_165_d ;
-    systemmap:operatedBy systemmap:ScoeXHl4TgJbke1Yf .
+    systemmap:operatedBy systemmap:ScoeXHl4TgJbke1Yf ;
+    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
 
 systemmap:SBx5yiPz9Nxy2Wnue a schema:SoftwareApplication ;
     rdfs:label "Mooh Intranet"@de ;
@@ -351,7 +354,8 @@ systemmap:SGdyOoksCnRRZwi2Q a schema:SoftwareApplication ;
         "Agate is an online portal that allows access to various agricultural applications with just one login. It facilitates data exchange in the agricultural and food sector, thereby increasing user convenience. This centralized access point simplifies administrative processes for all stakeholders."@en,
         "Agate est un portail en ligne qui permet d'accéder à diverses applications agricoles avec un seul identifiant. Il facilite l'échange de données dans le secteur agricole et alimentaire, augmentant ainsi le confort des utilisateurs. Ce point d'accès centralisé simplifie les processus administratifs pour toutes les parties prenantes."@fr,
         "Agate è un portale online che consente l'accesso a diverse applicazioni agricole con un solo login. Facilita lo scambio di dati nel settore agricolo e alimentare, aumentando così la comodità per gli utenti. Questo punto di accesso centralizzato semplifica i processi amministrativi per tutte le parti interessate."@it ;
-    systemmap:operatedBy systemmap:SQbNLiw8h9MnSXuyo .
+    systemmap:operatedBy systemmap:SQbNLiw8h9MnSXuyo ;
+    systemmap:providesService systemmap:SK6JOIUV1UjrOYD7f .
 
 systemmap:SHEaRYIgvZ3xrDLo a schema:SoftwareApplication ;
     rdfs:label "Produkteregister Chemikalien"@de,
@@ -465,7 +469,8 @@ systemmap:SMjqlEoVCR9wpTyN1 a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:S7eiByZp1HPEEO9Ty,
         systemmap:STBfdlLfF2K2AJypD,
         systemmap:STg0zUHrhEWXotIau,
-        systemmap:Sqo5ZJtzXw1gg3RYC .
+        systemmap:Sqo5ZJtzXw1gg3RYC ;
+    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
 
 systemmap:SNQSYR7J0IEZpyFT a schema:SoftwareApplication ;
     rdfs:label "Auswertung/Analyse, Lebensmittelsicherheit, Veterinärwesen, Public Health"@de ;
@@ -475,7 +480,8 @@ systemmap:SNQSYR7J0IEZpyFT a schema:SoftwareApplication ;
         Ausserdem verfügt ALVPH über viele graphische Funktionen, die eine attraktive Präsentation der Daten erlauben.
         """@de ;
     systemmap:abbreviation "ALVPH"@de ;
-    systemmap:operatedBy systemmap:SsFdxnjM8hgUdzVT5 .
+    systemmap:operatedBy systemmap:SsFdxnjM8hgUdzVT5 ;
+    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
 
 systemmap:SOL6kHAvPFNIuM9E a schema:SoftwareApplication ;
     rdfs:label "Traces"@de ;
@@ -517,7 +523,8 @@ systemmap:SPWOFHR512FuAc25b a schema:SoftwareApplication ;
         "GELAN"@it ;
     systemmap:operatedBy systemmap:SnUxOsahtIQHfvRH9,
         systemmap:Sp5pkmAETRpXrudck,
-        systemmap:SyTRdNaA9EH12lhiE .
+        systemmap:SyTRdNaA9EH12lhiE ;
+    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
 
 systemmap:SQfl1MHnNpsAj3WP a schema:SoftwareApplication ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
@@ -560,7 +567,8 @@ systemmap:SU88cJmqj8nBRl2KZ a schema:SoftwareApplication ;
         "TVD"@en,
         "BDTA"@fr,
         "BDTA"@it ;
-    systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS .
+    systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS ;
+    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
 
 systemmap:SXcby9KwakDGhBdP a schema:SoftwareApplication ;
     rdfs:label "ACmobile"@de,
@@ -579,7 +587,8 @@ systemmap:SXcby9KwakDGhBdP a schema:SoftwareApplication ;
         """
         ACmobile è una soluzione mobile indipendente dalla piattaforma per la registrazione elettronica dei risultati delle ispezioni e delle misure.
         """@it ;
-    systemmap:operatedBy systemmap:SmI5VgF2mECWT74i2 .
+    systemmap:operatedBy systemmap:SmI5VgF2mECWT74i2 ;
+    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
 
 systemmap:SYOd1TkacTh6cr0xP a schema:SoftwareApplication ;
     rdfs:label "Datenbank Milch"@de,
@@ -610,7 +619,8 @@ systemmap:SYOd1TkacTh6cr0xP a schema:SoftwareApplication ;
         "dbmilch"@en,
         "dbmilch"@fr,
         "dbmilch"@it ;
-    systemmap:operatedBy systemmap:SQ3N7dTc23t2wzXr2 .
+    systemmap:operatedBy systemmap:SQ3N7dTc23t2wzXr2 ;
+    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
 
 systemmap:SZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
     rdfs:label "AGRICOLA"@de,
@@ -652,7 +662,8 @@ systemmap:SZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
         systemmap:SU6T65pDC37fWWSHG,
         systemmap:SUqub30lwOqlTtDN2,
         systemmap:SVpDMEiTfIVQsNzT8,
-        systemmap:SoVAiCrMPYG2LJxsA .
+        systemmap:SoVAiCrMPYG2LJxsA ;
+    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
 
 systemmap:Sc6kZqxTyS0gFGCY a schema:SoftwareApplication ;
     rdfs:label "Marktdaten Analyse- und Reporting-System"@de,
@@ -737,7 +748,8 @@ systemmap:ShZO092di7cBnOm7F a schema:SoftwareApplication ;
         "ASTAT"@en,
         "ASTAT"@fr,
         "ASTAT"@it ;
-    systemmap:operatedBy systemmap:SieZtzwlMAxzFY1op .
+    systemmap:operatedBy systemmap:SieZtzwlMAxzFY1op ;
+    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
 
 systemmap:Shhoiq8azX3SHGL3W a schema:SoftwareApplication ;
     rdfs:label "Pflanzenschutzmittelverzeichnis"@de,
@@ -841,7 +853,8 @@ systemmap:SlfheulBjlQDwuaIM a schema:SoftwareApplication ;
         HODUFLU è un programma online per la gestione standardizzata degli spostamenti di fertilizzanti aziendali e riciclati in agricoltura.
         Su questa pagina troverete l'accesso all'applicazione e documenti utili come il manuale utente di HODUFLU.
         """@it ;
-    systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP .
+    systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP ;
+    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
 
 systemmap:SmWEQ8lVlDS9ZwPkY a schema:SoftwareApplication ;
     rdfs:label "LAWIS"@de,
@@ -881,7 +894,8 @@ systemmap:SmWEQ8lVlDS9ZwPkY a schema:SoftwareApplication ;
         systemmap:SI9jTsa43C0A052y9,
         systemmap:SRtndZW3LnFXhrQUR,
         systemmap:SXdYExDt1RcJOS7AY,
-        systemmap:SkaW2ahXWYw9ueeOp .
+        systemmap:SkaW2ahXWYw9ueeOp ;
+    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
 
 systemmap:SnM0KdtMBmniYOY8f a schema:SoftwareApplication ;
     rdfs:label "Meine Agrardatenfreigabe"@de,
@@ -1004,7 +1018,8 @@ systemmap:SvDlxaJ5YMkuZGH6k a schema:SoftwareApplication ;
         "SIPA"@fr,
         "AGIS"@it ;
     systemmap:hasLegalBasis LwG:art_165_c ;
-    systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
+    systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 ;
+    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
 
 systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
     rdfs:label "eKontingente"@de,
@@ -3157,4 +3172,26 @@ systemmap:SfXioR1gkj8eDuTF a termdat:52453 ;
         "Données sur les mesures administratives et les sanctions pénales"@fr,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
     systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
+
+systemmap:SK6JOIUV1UjrOYD7f a service:Service ;
+    rdfs:label "Zentraler Authentifizierungs- und Rollenverwaltungsdienst"@de,
+        "Authentication and Role Management Service"@en,
+        "Service central d'authentification et de gestion des rôles"@fr,
+        "Servizio centralizzato di autenticazione e gestione dei ruoli"@it ;
+     rdfs:comment """
+        Ein technischer SSO-Dienst (Identity Provider), der zentrale Benutzerregistrierung, Authentifizierung und rollenbasierte Zugangskontrolle für Agate und verbundene Agrar-IT-Systeme bereitstellt.
+        Er ermöglicht einen einmaligen Login für mehrere Anwendungen im Agrarbereich und stellt sicher, dass nur berechtigte Nutzer mit korrekten Rollen Zugriff erhalten.
+        """@de,
+        """
+        A technical SSO (Identity Provider) service that provides centralised user registration, authentication and role-based access control for Agate and connected agricultural IT systems.
+        It enables a single login for multiple applications in the agricultural sector and ensures that only authorised users with the correct roles are granted access.
+        """@en,
+        """
+        Un service technique SSO (Identity Provider) qui fournit l'enregistrement centralisé des utilisateurs, l'authentification et le contrôle d'accès basé sur les rôles pour Agate et les systèmes informatiques agricoles connectés.
+        Il permet une connexion unique pour plusieurs applications dans le domaine agricole et garantit que seuls les utilisateurs autorisés avec des rôles corrects ont accès.
+        """@fr,
+        """
+        Un servizio tecnico di SSO (Identity Provider) che fornisce la registrazione centralizzata degli utenti, l'autenticazione e il controllo degli accessi basato sui ruoli per Agate e i sistemi IT agricoli collegati.
+        Consente un unico login per più applicazioni nel settore agricolo e garantisce che solo gli utenti autorizzati con i ruoli corretti possano accedere.
+        """@it ;
 

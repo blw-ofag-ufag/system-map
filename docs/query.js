@@ -55,11 +55,12 @@ window.EDGE_QUERY = `
   PREFIX schema: <http://schema.org/>
   PREFIX dcat: <http://www.w3.org/ns/dcat#>
   PREFIX prov: <http://www.w3.org/ns/prov#>
+  PREFIX service: <http://purl.org/ontology/service#>
   SELECT (?property AS ?id) ?from ?to ?label ?comment
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/system-map> {
       ?from ?property ?to .
-      VALUES ?property { prov:wasDerivedFrom schema:parentOrganization systemmap:operates systemmap:owns systemmap:access systemmap:contains systemmap:usesMasterData schema:memberOf systemmap:providesService systemmap:usesService }
+      VALUES ?property { prov:wasDerivedFrom schema:parentOrganization systemmap:operates systemmap:owns systemmap:access systemmap:contains systemmap:usesMasterData schema:memberOf service:provides service:consumes }
       ?property rdfs:label ?label .
       FILTER(LANG(?label)="${lang}")
       OPTIONAL {

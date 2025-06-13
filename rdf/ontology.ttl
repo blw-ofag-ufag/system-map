@@ -46,6 +46,24 @@ dcat:Dataset a rdfs:Class,
         I dati possono assumere molte forme, inclusi numeri, testo, pixel, immagini, suoni e altri media, e potenzialmente altri tipi, che possono essere raccolti in un dataset.
         """@it .
 
+service:Service a owl:Class ;
+    rdfs:label "IT-Service"@de,
+        "IT service"@en,
+        "Service informatique"@fr,
+        "Servizio IT"@it ;
+    rdfs:comment """
+        Eine technische Softwarekomponente, die Funktionalitäten über klar definierte Schnittstellen zur externen Nutzung oder Integration bereitstellt.
+        """@de,
+        """
+        A technical software component that provides functionalities via clearly defined interfaces for external use or integration.
+        """@en,
+        """
+        Un composant logiciel technique qui met à disposition des fonctionnalités via des interfaces clairement définies pour une utilisation ou une intégration externe.
+        """@fr,
+        """
+        Un componente tecnico del software che fornisce funzionalità attraverso interfacce chiaramente definite per l'uso o l'integrazione esterna.
+        """@it .
+
 schema:DefinedTermSet a owl:Class ;
     rdfs:label "Reference data"@en ;
     rdfs:comment """
@@ -136,24 +154,6 @@ schema:SoftwareApplication a owl:Class ;
         """@fr,
         """
         Qualsiasi sistema IT (in senso astratto), spesso con uno o più database associati.
-        """@it .
-
-service:Service a owl:Class ;
-    rdfs:label "IT-Service"@de,
-        "IT service"@en,
-        "Service informatique"@fr,
-        "Servizio IT"@it ;
-    rdfs:comment """
-        Eine technische Softwarekomponente, die Funktionalitäten über klar definierte Schnittstellen zur externen Nutzung oder Integration bereitstellt.
-        """@de,
-        """
-        A technical software component that provides functionalities via clearly defined interfaces for external use or integration.
-        """@en,
-        """
-        Un composant logiciel technique qui met à disposition des fonctionnalités via des interfaces clairement définies pour une utilisation ou une intégration externe.
-        """@fr,
-        """
-        Un componente tecnico del software che fornisce funzionalità attraverso interfacce chiaramente definite per l'uso o l'integrazione esterna.
         """@it .
 
 systemmap:CantonalAgriculturalAdvisor a owl:Class ;
@@ -397,6 +397,89 @@ systemmap:abbreviation a owl:DatatypeProperty ;
         Esempio: La cooperativa Fenaco (fédération nationale des coopératives agricoles) è comunemente chiamata "Fenaco", rendendo superflua un'ulteriore abbreviazione.
         """@it ;
     rdfs:range xsd:string .
+
+service:consumedby a owl:ObjectProperty ;
+    rdfs:label "wird verwendet von"@de,
+        "is used by"@en,
+        "est utilisé par"@fr,
+        "è utilizzato da"@it ;
+    rdfs:comment """
+        Zeigt an, dass ein IT-Service von einem beliebigen Objekt verwendet wird.
+        """@de,
+        """
+        Indicates that an IT service is used by any kind of entity.
+        """@en,
+        """
+        Indique qu'un service informatique est utilisé par un objet quelconque.
+        """@fr,
+        """
+        Indica che un servizio IT è utilizzato da un qualsiasi oggetto.
+        """@it ;
+    rdfs:domain service:Service ;
+    rdfs:range owl:Thing ;
+    owl:inverseOf service:consumes .
+
+service:consumes a owl:ObjectProperty ;
+    rdfs:label "nutzt IT-Service"@de,
+        "uses IT service"@en,
+        "utilise un service informatique"@fr,
+        "utilizza un servizio IT"@it ;
+    rdfs:comment """
+        Zeigt an, dass ein beliebiges Objekt (IT-System, Organisation etc.) einen bestimmten technischen IT-Service nutzt.
+        """@de,
+        """
+        Indicates that any object (IT system, organisation, etc.) uses a specific technical IT service.
+        """@en,
+        """
+        Indique qu'un objet quelconque (système informatique, organisation, etc.) utilise un service informatique technique spécifique.
+        """@fr,
+        """
+        Indica che qualsiasi oggetto (sistema IT, organizzazione, ecc.) utilizza uno specifico servizio tecnico IT.
+        """@it ;
+    rdfs:domain owl:Thing ;
+    rdfs:range service:Service .
+
+service:providedBy a owl:ObjectProperty ;
+    rdfs:label "wird bereitgestellt von"@de,
+        "is provided by"@en,
+        "est fourni par"@fr,
+        "è fornito da"@it ;
+    rdfs:comment """
+        Zeigt an, dass ein technischer Service von einem bestimmten IT-System bereitgestellt wird.
+        """@de,
+        """
+        Indicates that a technical service is provided by a specific IT system.
+        """@en,
+        """
+        Indique qu'un service technique est fourni par un système informatique spécifique.
+        """@fr,
+        """
+        Indica che un servizio tecnico è fornito da un sistema informatico specifico.
+        """@it ;
+    rdfs:domain service:Service ;
+    rdfs:range schema:SoftwareApplication ;
+    owl:inverseOf service:provides .
+
+service:provides a owl:ObjectProperty ;
+    rdfs:label "bietet Service an"@de,
+        "provides service"@en,
+        "fournit un service"@fr,
+        "fornisce un servizio"@it ;
+    rdfs:comment """
+        Diese Beziehung zeigt an, dass ein IT-System einen technischen Service bereitstellt, z. B. eine API, Benutzeroberfläche oder sonstige Schnittstelle zur externen Nutzung.
+        """@de,
+        """
+        This property indicates that an IT system provides a technical service, such as an API, user interface, or other externally accessible interface.
+        """@en,
+        """
+        Cette relation indique qu'un système informatique fournit un service technique, par exemple une API, une interface utilisateur ou une autre interface à usage externe.
+        """@fr,
+        """
+        Questa relazione indica che un sistema informatico fornisce un servizio tecnico, ad esempio un'API, un'interfaccia utente o un'altra interfaccia per uso esterno.
+        """@it ;
+    rdfs:domain schema:SoftwareApplication ;
+    rdfs:range service:Service ;
+    owl:inverseOf service:providedBy .
 
 schema:member a owl:ObjectProperty ;
     rdfs:label "hat Mitgliederorganisationen"@de,
@@ -759,89 +842,6 @@ systemmap:owns a owl:ObjectProperty ;
     rdfs:domain schema:Organization ;
     rdfs:range schema:Organization ;
     owl:inverseOf systemmap:ownedBy .
-
-systemmap:providesService a owl:ObjectProperty ;
-    rdfs:label "bietet Service an"@de,
-        "provides service"@en,
-        "fournit un service"@fr,
-        "fornisce un servizio"@it ;
-    rdfs:comment """
-        Diese Beziehung zeigt an, dass ein IT-System einen technischen Service bereitstellt, z. B. eine API, Benutzeroberfläche oder sonstige Schnittstelle zur externen Nutzung.
-        """@de,
-        """
-        Cette relation indique qu'un système informatique fournit un service technique, par exemple une API, une interface utilisateur ou une autre interface à usage externe.
-        """@fr,
-        """
-        Questa relazione indica che un sistema informatico fornisce un servizio tecnico, ad esempio un'API, un'interfaccia utente o un'altra interfaccia per uso esterno.
-        """@it,
-        """
-        This property indicates that an IT system provides a technical service, such as an API, user interface, or other externally accessible interface.
-        """@en ;
-    rdfs:domain schema:SoftwareApplication ;
-    rdfs:range service:Service ;
-    owl:inverseOf systemmap:isProvidedBy .
-
-systemmap:isProvidedBy a owl:ObjectProperty ;
-    rdfs:label "wird bereitgestellt von"@de,
-        "is provided by"@en,
-        "est fourni par"@fr,
-        "è fornito da"@it ;
-    rdfs:comment """
-        Zeigt an, dass ein technischer Service von einem bestimmten IT-System bereitgestellt wird.
-        """@de,
-        """
-        Indicates that a technical service is provided by a specific IT system.
-        """@en,
-        """
-        Indique qu'un service technique est fourni par un système informatique spécifique.
-        """@fr,
-        """
-        Indica che un servizio tecnico è fornito da un sistema informatico specifico.
-        """@it ;
-    rdfs:domain service:Service ;
-    rdfs:range schema:SoftwareApplication ;
-    owl:inverseOf systemmap:providesService .
-
-systemmap:usesService a owl:ObjectProperty ;
-    rdfs:label "nutzt IT-Service"@de,
-        "uses IT service"@en,
-        "utilise un service informatique"@fr,
-        "utilizza un servizio IT"@it ;
-    rdfs:comment """
-        Zeigt an, dass ein beliebiges Objekt (IT-System, Organisation etc.) einen bestimmten technischen IT-Service nutzt.
-        """@de,
-        """
-        Indicates that any object (IT system, organisation, etc.) uses a specific technical IT service.
-        """@en,
-        """
-        Indique qu'un objet quelconque (système informatique, organisation, etc.) utilise un service informatique technique spécifique.
-        """@fr,
-        """
-        Indica che qualsiasi oggetto (sistema IT, organizzazione, ecc.) utilizza uno specifico servizio tecnico IT.
-        """@it ;
-    rdfs:domain owl:Thing ;
-    rdfs:range service:Service .
-
-systemmap:isUsedBy a owl:ObjectProperty ;
-    rdfs:label "wird verwendet von"@de,
-        "is used by"@en,
-        "est utilisé par"@fr,
-        "è utilizzato da"@it ;
-    rdfs:comment """
-        Zeigt an, dass ein IT-Service von einem beliebigen Objekt verwendet wird.
-        """@de,
-        """
-        Indicates that an IT service is used by any kind of entity.
-        """@en,
-        """
-        Indique qu'un service informatique est utilisé par un objet quelconque.
-        """@fr,
-        """
-        Indica che un servizio IT è utilizzato da un qualsiasi oggetto.
-        """@it ;
-    rdfs:domain service:Service ;
-    rdfs:range owl:Thing ;
-    owl:inverseOf systemmap:usesService .
 
 systemmap:references a owl:ObjectProperty ;
     rdfs:label "referenziert"@de,

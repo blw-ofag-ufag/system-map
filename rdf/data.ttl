@@ -307,6 +307,7 @@ systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
         "Acontrol"@en,
         "Acontrol"@fr,
         "Acontrol"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Acontrol ist das Informationssystem des BLW, das für die Planung, Erfassung und Verwaltung landwirtschaftlicher Inspektionen eingesetzt wird.
         Es vereinfacht die Kontrollprozesse durch eine zentrale Plattform für Dateneingabe und -abfrage.
@@ -328,8 +329,7 @@ systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
         In questo modo, garantisce un monitoraggio efficiente e il rispetto degli standard agricoli.
         """@it ;
     systemmap:hasLegalBasis LwG:art_165_d ;
-    systemmap:operatedBy systemmap:ScoeXHl4TgJbke1Yf ;
-    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
+    systemmap:operatedBy systemmap:ScoeXHl4TgJbke1Yf .
 
 systemmap:SBx5yiPz9Nxy2Wnue a schema:SoftwareApplication ;
     rdfs:label "Mooh Intranet"@de ;
@@ -371,12 +371,12 @@ systemmap:SGdyOoksCnRRZwi2Q a schema:SoftwareApplication ;
         "Agate"@en,
         "Agate"@fr,
         "Agate"@it ;
+    service:provides systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment "Agate ist ein Online-Portal, das den Zugriff auf verschiedene landwirtschaftliche Anwendungen mit nur einem Login ermöglicht. Es erleichtert den Datenaustausch im Agrar- und Ernährungsbereich und erhöht so den Benutzerkomfort. Durch diesen zentralisierten Zugangspunkt werden Verwaltungsprozesse für alle Beteiligten vereinfacht."@de,
         "Agate is an online portal that allows access to various agricultural applications with just one login. It facilitates data exchange in the agricultural and food sector, thereby increasing user convenience. This centralized access point simplifies administrative processes for all stakeholders."@en,
         "Agate est un portail en ligne qui permet d'accéder à diverses applications agricoles avec un seul identifiant. Il facilite l'échange de données dans le secteur agricole et alimentaire, augmentant ainsi le confort des utilisateurs. Ce point d'accès centralisé simplifie les processus administratifs pour toutes les parties prenantes."@fr,
         "Agate è un portale online che consente l'accesso a diverse applicazioni agricole con un solo login. Facilita lo scambio di dati nel settore agricolo e alimentare, aumentando così la comodità per gli utenti. Questo punto di accesso centralizzato semplifica i processi amministrativi per tutte le parti interessate."@it ;
-    systemmap:operatedBy systemmap:SQbNLiw8h9MnSXuyo ;
-    systemmap:providesService systemmap:SK6JOIUV1UjrOYD7f .
+    systemmap:operatedBy systemmap:SQbNLiw8h9MnSXuyo .
 
 systemmap:SHEaRYIgvZ3xrDLo a schema:SoftwareApplication ;
     rdfs:label "Produkteregister Chemikalien"@de,
@@ -467,6 +467,7 @@ systemmap:SMjqlEoVCR9wpTyN1 a schema:SoftwareApplication ;
         "Acorda"@en,
         "Acorda"@fr,
         "Acorda"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         ACORDA wird von den Kantonen Waadt, Neuenburg, Genf und Jura genutzt.
         Das System bietet Funktionen wie die Erfassung von Strukturdaten, Berechnung und Auszahlung von Direktzahlungen, Georeferenzierung und Datenaustausch mit Bundessystemen.
@@ -490,8 +491,7 @@ systemmap:SMjqlEoVCR9wpTyN1 a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:S7eiByZp1HPEEO9Ty,
         systemmap:STBfdlLfF2K2AJypD,
         systemmap:STg0zUHrhEWXotIau,
-        systemmap:Sqo5ZJtzXw1gg3RYC ;
-    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
+        systemmap:Sqo5ZJtzXw1gg3RYC .
 
 systemmap:SNQSYR7J0IEZpyFT a schema:SoftwareApplication ;
     rdfs:label "Auswertung/Analyse, Lebensmittelsicherheit, Veterinärwesen, Public Health"@de ;
@@ -516,6 +516,7 @@ systemmap:SPWOFHR512FuAc25b a schema:SoftwareApplication ;
         "Comprehensive IT Solution for Agriculture & Nature"@en,
         "Solution informatique globale pour l'agriculture et la nature"@fr,
         "Soluzione informatica globale per l'agricoltura e la natura"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Das Agrarinformationssystem GELAN steht seit 1999 in den Kantonen Bern, Fribourg und Solothurn im Einsatz.
         Es wurde seither auf 15 vollständig integrierte Teilsysteme erweitert und die Erfassung von Flächendaten erfolgt in einem Geographischen Informationssystem (GIS).
@@ -543,8 +544,7 @@ systemmap:SPWOFHR512FuAc25b a schema:SoftwareApplication ;
         "GELAN"@it ;
     systemmap:operatedBy systemmap:SnUxOsahtIQHfvRH9,
         systemmap:Sp5pkmAETRpXrudck,
-        systemmap:SyTRdNaA9EH12lhiE ;
-    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
+        systemmap:SyTRdNaA9EH12lhiE .
 
 systemmap:SQfl1MHnNpsAj3WP a schema:SoftwareApplication ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
@@ -563,6 +563,7 @@ systemmap:SU88cJmqj8nBRl2KZ a schema:SoftwareApplication ;
         "Animal Traffic Database"@en,
         "Banque de données sur le trafic des animaux"@fr,
         "Banca dati sul traffico di animali"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Die Tierverkehrsdatenbank (TVD) ist ein schweizerisches System zur Registrierung und Nachverfolgung von Nutztieren, wie Rinder, Schweine, Schafe, Ziegen und in Gehege gehaltenes Wild.
         Dies ist u.a. ein wichtiger Beitrag für die Lebensmittelsicherheit und zu der Eindämmung von Tierseuchen.
@@ -587,14 +588,14 @@ systemmap:SU88cJmqj8nBRl2KZ a schema:SoftwareApplication ;
         "TVD"@en,
         "BDTA"@fr,
         "BDTA"@it ;
-    systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS ;
-    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
+    systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS .
 
 systemmap:SXcby9KwakDGhBdP a schema:SoftwareApplication ;
     rdfs:label "ACmobile"@de,
         "ACmobile"@en,
         "ACmobile"@fr,
         "ACmobile"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         ACmobile ist eine plattformunabhängige, mobile Lösung für die elektronische Erfassung von Kontrollergebnissen und Massnahmen.
         """@de,
@@ -607,14 +608,14 @@ systemmap:SXcby9KwakDGhBdP a schema:SoftwareApplication ;
         """
         ACmobile è una soluzione mobile indipendente dalla piattaforma per la registrazione elettronica dei risultati delle ispezioni e delle misure.
         """@it ;
-    systemmap:operatedBy systemmap:SmI5VgF2mECWT74i2 ;
-    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
+    systemmap:operatedBy systemmap:SmI5VgF2mECWT74i2 .
 
 systemmap:SYOd1TkacTh6cr0xP a schema:SoftwareApplication ;
     rdfs:label "Datenbank Milch"@de,
         "Milk Database"@en,
         "Base de données lait"@fr,
         "Database latte"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Die Datenbank Milch (dbmilch.ch) ist eine Webapplikation der TSM Treuhand GmbH.
         Sie ist die Online-Plattform der Akteure der Schweizer Milchwirtschaft.
@@ -639,14 +640,14 @@ systemmap:SYOd1TkacTh6cr0xP a schema:SoftwareApplication ;
         "dbmilch"@en,
         "dbmilch"@fr,
         "dbmilch"@it ;
-    systemmap:operatedBy systemmap:SQ3N7dTc23t2wzXr2 ;
-    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
+    systemmap:operatedBy systemmap:SQ3N7dTc23t2wzXr2 .
 
 systemmap:SZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
     rdfs:label "AGRICOLA"@de,
         "AGRICOLA"@en,
         "AGRICOLA"@fr,
         "AGRICOLA"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         AGRICOLA kommt in 12 Kantonen zum Einsatz, darunter Aargau, Zürich, St. Gallen und Graubünden.
         Es besteht aus verschiedenen Softwareprodukten für Datenverwaltung, Dateneingabe, mobile Kontrollen und GIS.
@@ -682,8 +683,7 @@ systemmap:SZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
         systemmap:SU6T65pDC37fWWSHG,
         systemmap:SUqub30lwOqlTtDN2,
         systemmap:SVpDMEiTfIVQsNzT8,
-        systemmap:SoVAiCrMPYG2LJxsA ;
-    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
+        systemmap:SoVAiCrMPYG2LJxsA .
 
 systemmap:Sc6kZqxTyS0gFGCY a schema:SoftwareApplication ;
     rdfs:label "Marktdaten Analyse- und Reporting-System"@de,
@@ -856,6 +856,7 @@ systemmap:SlfheulBjlQDwuaIM a schema:SoftwareApplication ;
         "HODUFLU"@en,
         "HODUFLU"@fr,
         "HODUFLU"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         HODUFLU ist ein Internetprogramm zur einheitlichen Verwaltung von Hof- und Recyclingdüngerverschiebungen in der Landwirtschaft.
         Auf dieser Seite finden Sie Zugang zur Anwendung und nützliche Dokumente wie das Benutzerhandbuch für HODUFLU.
@@ -872,14 +873,14 @@ systemmap:SlfheulBjlQDwuaIM a schema:SoftwareApplication ;
         HODUFLU è un programma online per la gestione standardizzata degli spostamenti di fertilizzanti aziendali e riciclati in agricoltura.
         Su questa pagina troverete l'accesso all'applicazione e documenti utili come il manuale utente di HODUFLU.
         """@it ;
-    systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP ;
-    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
+    systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP .
 
 systemmap:SmWEQ8lVlDS9ZwPkY a schema:SoftwareApplication ;
     rdfs:label "LAWIS"@de,
         "LAWIS"@en,
         "LAWIS"@fr,
         "LAWIS"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         LAWIS wird in den Kantonen Basel-Land, Luzern, Schaffhausen, Thurgau, Zug sowie in Liechtenstein eingesetzt.
         Es ist eine webbasierte Lösung, die von SOFTEC AG gehostet wird.
@@ -913,8 +914,7 @@ systemmap:SmWEQ8lVlDS9ZwPkY a schema:SoftwareApplication ;
         systemmap:SI9jTsa43C0A052y9,
         systemmap:SRtndZW3LnFXhrQUR,
         systemmap:SXdYExDt1RcJOS7AY,
-        systemmap:SkaW2ahXWYw9ueeOp ;
-    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
+        systemmap:SkaW2ahXWYw9ueeOp .
 
 systemmap:SnM0KdtMBmniYOY8f a schema:SoftwareApplication ;
     rdfs:label "Meine Agrardatenfreigabe"@de,

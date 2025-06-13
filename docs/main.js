@@ -101,8 +101,7 @@ function setParamsRedirect(paramsObj) {
 function toggleGroup(element) {
     const groupName = JSON.parse(element.getAttribute("data-group"));
     const checked = element.checked
-    setParamsRedirect({ [groupName.toLowerCase()]: "checked" });
-
+    setParamsRedirect({ [groupName.toLowerCase()]: checked });
 }
 
 /**
@@ -208,9 +207,14 @@ async function init() {
         
         // If this edge represents an "informs" relationship,
         // add dashed styling and increase its length.
-        if (row.id.value === "http://www.w3.org/ns/prov#wasDerivedFrom" || row.id.value === "https://agriculture.ld.admin.ch/system-map/usesMasterData" || row.id.value === "https://agriculture.ld.admin.ch/system-map/access" || row.id.value === "https://agriculture.ld.admin.ch/system-map/references" ) {
-            edge.dashes = [5, 10]; // Dash pattern: 5px dash, 5px gap
-            edge.length = 600;    // Increase edge length to allow more spacing
+        if (row.id.value === "http://www.w3.org/ns/prov#wasDerivedFrom" ||
+            row.id.value === "http://purl.org/ontology/service#consumes" ||
+            row.id.value === "https://agriculture.ld.admin.ch/system-map/usesMasterData" ||
+            row.id.value === "https://agriculture.ld.admin.ch/system-map/access" ||
+            row.id.value === "https://agriculture.ld.admin.ch/system-map/references" ) {
+
+            edge.dashes = [3, 7]; // Dash pattern: 5px dash, 5px gap
+            edge.length = 800;    // Increase edge length to allow more spacing
         }
         
         return edge;
@@ -268,6 +272,7 @@ async function init() {
             System:      {  color: { background: "#FF7F51", border: "#000000" }, font: { color: "#000000" } },
             Information: {  color: { background: "#ADB6C4", border: "#000000" }, font: { color: "#000000" } },
             Organization: { color: { background: "#383743", border: "#000000" }, font: { color: "#FFFFFF" } },
+            Service: {      color: { background: "#0080ae", border: "#000000" }, font: { color: "#FFFFFF" } },
             Other: {        color: { background: "#383743", border: "#000000" }, font: { color: "#FFFFFF" } },
         },
         interaction: {
@@ -300,8 +305,8 @@ async function init() {
         System: {       background: "#FF7F51", border: "#000000", font: "#000000" },
         Information: {  background: "#ADB6C4", border: "#000000", font: "#000000" },
         Organization: { background: "#383743", border: "#000000", font: "#FFFFFF" },
-        Other: {        background: "#383743", border: "#000000", font: "#FFFFFF"
-        }
+        Service: {      background: "#0080ae", border: "#000000", font: "#FFFFFF" },
+        Other: {        background: "#383743", border: "#000000", font: "#FFFFFF" }
     };
 
     // Store each node’s “original” color

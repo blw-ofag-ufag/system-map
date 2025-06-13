@@ -7,9 +7,10 @@ function getQueryParam(name, defaultValue) {
 // language code used in the queries
 window.lang = getQueryParam("lang", "de");
 
-// should schema:Organization, schema:SoftwareApplication and dcat:Dataset be displayed
+// should schema:Organization, schema:SoftwareApplication, service:Service and dcat:Dataset be displayed
 window.organization = getQueryParam("organization", "true") === "true" ? "schema:Organization" : "";
 window.system = getQueryParam("system", "true") === "true" ? "schema:SoftwareApplication" : "";
+window.service = getQueryParam("service", "true") === "true" ? "service:Service" : "";
 window.information = getQueryParam("information", "true") === "true" ? "dcat:Dataset" : "";
 
 // set SPARQL endpoint
@@ -21,12 +22,13 @@ window.NODE_QUERY = `
   PREFIX owl: <http://www.w3.org/2002/07/owl#>
   PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
   PREFIX schema: <http://schema.org/>
+  PREFIX service: <http://purl.org/ontology/service#>
   PREFIX dcat: <http://www.w3.org/ns/dcat#>
   SELECT ?id ?group ?displayLabel ?comment ?abbreviation
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/system-map> {
       ?id a ?group .
-      VALUES ?group { ${organization} ${system} ${information} }
+      VALUES ?group { ${organization} ${system} ${information} ${service} }
       OPTIONAL {
         ?id rdfs:label ?label .
         FILTER(LANG(?label) = "${lang}")
@@ -53,11 +55,12 @@ window.EDGE_QUERY = `
   PREFIX schema: <http://schema.org/>
   PREFIX dcat: <http://www.w3.org/ns/dcat#>
   PREFIX prov: <http://www.w3.org/ns/prov#>
+  PREFIX service: <http://purl.org/ontology/service#>
   SELECT (?property AS ?id) ?from ?to ?label ?comment
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/system-map> {
       ?from ?property ?to .
-      VALUES ?property { prov:wasDerivedFrom schema:parentOrganization systemmap:operates systemmap:owns systemmap:access systemmap:contains systemmap:usesMasterData schema:memberOf }
+      VALUES ?property { prov:wasDerivedFrom schema:parentOrganization systemmap:operates systemmap:owns systemmap:access systemmap:contains systemmap:usesMasterData schema:memberOf service:provides service:consumes }
       ?property rdfs:label ?label .
       FILTER(LANG(?label)="${lang}")
       OPTIONAL {
@@ -75,10 +78,11 @@ window.CLASS_QUERY = `
   PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
   PREFIX schema: <http://schema.org/>
   PREFIX dcat: <http://www.w3.org/ns/dcat#>
+  PREFIX service: <http://purl.org/ontology/service#>
   SELECT ?iri ?label ?comment
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/system-map> {
-      VALUES ?iri { schema:Organization schema:SoftwareApplication dcat:Dataset }
+      VALUES ?iri { schema:Organization schema:SoftwareApplication dcat:Dataset service:Service }
       ?iri rdfs:label ?label .
       ?iri rdfs:comment ?comment .    
       FILTER(LANG(?label) = "${lang}" && LANG(?comment) = "${lang}")
@@ -117,6 +121,8 @@ window.mapClassIriToGroup = function(iri) {
       return "System";
     case "http://www.w3.org/ns/dcat#Dataset":
       return "Information";
+    case "http://purl.org/ontology/service#Service":
+      return "Service";
     default:
       return "Other";
   }

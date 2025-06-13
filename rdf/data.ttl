@@ -5,12 +5,35 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix service: <http://purl.org/ontology/service#> .
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
 @prefix termdat: <https://register.ld.admin.ch/termdat/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
+
+systemmap:SK6JOIUV1UjrOYD7f a service:Service ;
+    rdfs:label "Zentraler Authentifizierungs- und Rollenverwaltungsdienst"@de,
+        "Authentication and Role Management Service"@en,
+        "Service central d'authentification et de gestion des rôles"@fr,
+        "Servizio centralizzato di autenticazione e gestione dei ruoli"@it ;
+    rdfs:comment """
+        Ein technischer SSO-Dienst (Identity Provider), der zentrale Benutzerregistrierung, Authentifizierung und rollenbasierte Zugangskontrolle für Agate und verbundene Agrar-IT-Systeme bereitstellt.
+        Er ermöglicht einen einmaligen Login für mehrere Anwendungen im Agrarbereich und stellt sicher, dass nur berechtigte Nutzer mit korrekten Rollen Zugriff erhalten.
+        """@de,
+        """
+        A technical SSO (Identity Provider) service that provides centralised user registration, authentication and role-based access control for Agate and connected agricultural IT systems.
+        It enables a single login for multiple applications in the agricultural sector and ensures that only authorised users with the correct roles are granted access.
+        """@en,
+        """
+        Un service technique SSO (Identity Provider) qui fournit l'enregistrement centralisé des utilisateurs, l'authentification et le contrôle d'accès basé sur les rôles pour Agate et les systèmes informatiques agricoles connectés.
+        Il permet une connexion unique pour plusieurs applications dans le domaine agricole et garantit que seuls les utilisateurs autorisés avec des rôles corrects ont accès.
+        """@fr,
+        """
+        Un servizio tecnico di SSO (Identity Provider) che fornisce la registrazione centralizzata degli utenti, l'autenticazione e il controllo degli accessi basato sui ruoli per Agate e i sistemi IT agricoli collegati.
+        Consente un unico login per più applicazioni nel settore agricolo e garantisce che solo gli utenti autorizzati con i ruoli corretti possano accedere.
+        """@it .
 
 systemmap:metadata a void:Dataset ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
@@ -284,6 +307,7 @@ systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
         "Acontrol"@en,
         "Acontrol"@fr,
         "Acontrol"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Acontrol ist das Informationssystem des BLW, das für die Planung, Erfassung und Verwaltung landwirtschaftlicher Inspektionen eingesetzt wird.
         Es vereinfacht die Kontrollprozesse durch eine zentrale Plattform für Dateneingabe und -abfrage.
@@ -347,6 +371,7 @@ systemmap:SGdyOoksCnRRZwi2Q a schema:SoftwareApplication ;
         "Agate"@en,
         "Agate"@fr,
         "Agate"@it ;
+    service:provides systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment "Agate ist ein Online-Portal, das den Zugriff auf verschiedene landwirtschaftliche Anwendungen mit nur einem Login ermöglicht. Es erleichtert den Datenaustausch im Agrar- und Ernährungsbereich und erhöht so den Benutzerkomfort. Durch diesen zentralisierten Zugangspunkt werden Verwaltungsprozesse für alle Beteiligten vereinfacht."@de,
         "Agate is an online portal that allows access to various agricultural applications with just one login. It facilitates data exchange in the agricultural and food sector, thereby increasing user convenience. This centralized access point simplifies administrative processes for all stakeholders."@en,
         "Agate est un portail en ligne qui permet d'accéder à diverses applications agricoles avec un seul identifiant. Il facilite l'échange de données dans le secteur agricole et alimentaire, augmentant ainsi le confort des utilisateurs. Ce point d'accès centralisé simplifie les processus administratifs pour toutes les parties prenantes."@fr,
@@ -442,6 +467,7 @@ systemmap:SMjqlEoVCR9wpTyN1 a schema:SoftwareApplication ;
         "Acorda"@en,
         "Acorda"@fr,
         "Acorda"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         ACORDA wird von den Kantonen Waadt, Neuenburg, Genf und Jura genutzt.
         Das System bietet Funktionen wie die Erfassung von Strukturdaten, Berechnung und Auszahlung von Direktzahlungen, Georeferenzierung und Datenaustausch mit Bundessystemen.
@@ -490,6 +516,7 @@ systemmap:SPWOFHR512FuAc25b a schema:SoftwareApplication ;
         "Comprehensive IT Solution for Agriculture & Nature"@en,
         "Solution informatique globale pour l'agriculture et la nature"@fr,
         "Soluzione informatica globale per l'agricoltura e la natura"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Das Agrarinformationssystem GELAN steht seit 1999 in den Kantonen Bern, Fribourg und Solothurn im Einsatz.
         Es wurde seither auf 15 vollständig integrierte Teilsysteme erweitert und die Erfassung von Flächendaten erfolgt in einem Geographischen Informationssystem (GIS).
@@ -536,6 +563,7 @@ systemmap:SU88cJmqj8nBRl2KZ a schema:SoftwareApplication ;
         "Animal Traffic Database"@en,
         "Banque de données sur le trafic des animaux"@fr,
         "Banca dati sul traffico di animali"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Die Tierverkehrsdatenbank (TVD) ist ein schweizerisches System zur Registrierung und Nachverfolgung von Nutztieren, wie Rinder, Schweine, Schafe, Ziegen und in Gehege gehaltenes Wild.
         Dies ist u.a. ein wichtiger Beitrag für die Lebensmittelsicherheit und zu der Eindämmung von Tierseuchen.
@@ -567,6 +595,7 @@ systemmap:SXcby9KwakDGhBdP a schema:SoftwareApplication ;
         "ACmobile"@en,
         "ACmobile"@fr,
         "ACmobile"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         ACmobile ist eine plattformunabhängige, mobile Lösung für die elektronische Erfassung von Kontrollergebnissen und Massnahmen.
         """@de,
@@ -586,6 +615,7 @@ systemmap:SYOd1TkacTh6cr0xP a schema:SoftwareApplication ;
         "Milk Database"@en,
         "Base de données lait"@fr,
         "Database latte"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Die Datenbank Milch (dbmilch.ch) ist eine Webapplikation der TSM Treuhand GmbH.
         Sie ist die Online-Plattform der Akteure der Schweizer Milchwirtschaft.
@@ -617,6 +647,7 @@ systemmap:SZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
         "AGRICOLA"@en,
         "AGRICOLA"@fr,
         "AGRICOLA"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         AGRICOLA kommt in 12 Kantonen zum Einsatz, darunter Aargau, Zürich, St. Gallen und Graubünden.
         Es besteht aus verschiedenen Softwareprodukten für Datenverwaltung, Dateneingabe, mobile Kontrollen und GIS.
@@ -825,6 +856,7 @@ systemmap:SlfheulBjlQDwuaIM a schema:SoftwareApplication ;
         "HODUFLU"@en,
         "HODUFLU"@fr,
         "HODUFLU"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         HODUFLU ist ein Internetprogramm zur einheitlichen Verwaltung von Hof- und Recyclingdüngerverschiebungen in der Landwirtschaft.
         Auf dieser Seite finden Sie Zugang zur Anwendung und nützliche Dokumente wie das Benutzerhandbuch für HODUFLU.
@@ -848,6 +880,7 @@ systemmap:SmWEQ8lVlDS9ZwPkY a schema:SoftwareApplication ;
         "LAWIS"@en,
         "LAWIS"@fr,
         "LAWIS"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         LAWIS wird in den Kantonen Basel-Land, Luzern, Schaffhausen, Thurgau, Zug sowie in Liechtenstein eingesetzt.
         Es ist eine webbasierte Lösung, die von SOFTEC AG gehostet wird.

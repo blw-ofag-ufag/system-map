@@ -13,6 +13,28 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
 
+systemmap:SK6JOIUV1UjrOYD7f a service:Service ;
+    rdfs:label "Zentraler Authentifizierungs- und Rollenverwaltungsdienst"@de,
+        "Authentication and Role Management Service"@en,
+        "Service central d'authentification et de gestion des rôles"@fr,
+        "Servizio centralizzato di autenticazione e gestione dei ruoli"@it ;
+    rdfs:comment """
+        Ein technischer SSO-Dienst (Identity Provider), der zentrale Benutzerregistrierung, Authentifizierung und rollenbasierte Zugangskontrolle für Agate und verbundene Agrar-IT-Systeme bereitstellt.
+        Er ermöglicht einen einmaligen Login für mehrere Anwendungen im Agrarbereich und stellt sicher, dass nur berechtigte Nutzer mit korrekten Rollen Zugriff erhalten.
+        """@de,
+        """
+        A technical SSO (Identity Provider) service that provides centralised user registration, authentication and role-based access control for Agate and connected agricultural IT systems.
+        It enables a single login for multiple applications in the agricultural sector and ensures that only authorised users with the correct roles are granted access.
+        """@en,
+        """
+        Un service technique SSO (Identity Provider) qui fournit l'enregistrement centralisé des utilisateurs, l'authentification et le contrôle d'accès basé sur les rôles pour Agate et les systèmes informatiques agricoles connectés.
+        Il permet une connexion unique pour plusieurs applications dans le domaine agricole et garantit que seuls les utilisateurs autorisés avec des rôles corrects ont accès.
+        """@fr,
+        """
+        Un servizio tecnico di SSO (Identity Provider) che fornisce la registrazione centralizzata degli utenti, l'autenticazione e il controllo degli accessi basato sui ruoli per Agate e i sistemi IT agricoli collegati.
+        Consente un unico login per più applicazioni nel settore agricolo e garantisce che solo gli utenti autorizzati con i ruoli corretti possano accedere.
+        """@it .
+
 systemmap:metadata a void:Dataset ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
         "DigiAgriFoodCH System Map"@en,
@@ -278,8 +300,7 @@ systemmap:S9SbhGAwWjtvcRIZ a schema:SoftwareApplication ;
         "GIS-BLW"@fr,
         "GIS-BLW"@it ;
     systemmap:hasLegalBasis LwG:art_165_e ;
-    systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 ;
-    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
+    systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
 
 systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
     rdfs:label "Acontrol"@de,
@@ -480,8 +501,7 @@ systemmap:SNQSYR7J0IEZpyFT a schema:SoftwareApplication ;
         Ausserdem verfügt ALVPH über viele graphische Funktionen, die eine attraktive Präsentation der Daten erlauben.
         """@de ;
     systemmap:abbreviation "ALVPH"@de ;
-    systemmap:operatedBy systemmap:SsFdxnjM8hgUdzVT5 ;
-    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
+    systemmap:operatedBy systemmap:SsFdxnjM8hgUdzVT5 .
 
 systemmap:SOL6kHAvPFNIuM9E a schema:SoftwareApplication ;
     rdfs:label "Traces"@de ;
@@ -748,8 +768,7 @@ systemmap:ShZO092di7cBnOm7F a schema:SoftwareApplication ;
         "ASTAT"@en,
         "ASTAT"@fr,
         "ASTAT"@it ;
-    systemmap:operatedBy systemmap:SieZtzwlMAxzFY1op ;
-    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
+    systemmap:operatedBy systemmap:SieZtzwlMAxzFY1op .
 
 systemmap:Shhoiq8azX3SHGL3W a schema:SoftwareApplication ;
     rdfs:label "Pflanzenschutzmittelverzeichnis"@de,
@@ -1018,8 +1037,7 @@ systemmap:SvDlxaJ5YMkuZGH6k a schema:SoftwareApplication ;
         "SIPA"@fr,
         "AGIS"@it ;
     systemmap:hasLegalBasis LwG:art_165_c ;
-    systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 ;
-    systemmap:usesService systemmap:SK6JOIUV1UjrOYD7f .
+    systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
 
 systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
     rdfs:label "eKontingente"@de,
@@ -3172,26 +3190,4 @@ systemmap:SfXioR1gkj8eDuTF a termdat:52453 ;
         "Données sur les mesures administratives et les sanctions pénales"@fr,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
     systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
-
-systemmap:SK6JOIUV1UjrOYD7f a service:Service ;
-    rdfs:label "Zentraler Authentifizierungs- und Rollenverwaltungsdienst"@de,
-        "Authentication and Role Management Service"@en,
-        "Service central d'authentification et de gestion des rôles"@fr,
-        "Servizio centralizzato di autenticazione e gestione dei ruoli"@it ;
-     rdfs:comment """
-        Ein technischer SSO-Dienst (Identity Provider), der zentrale Benutzerregistrierung, Authentifizierung und rollenbasierte Zugangskontrolle für Agate und verbundene Agrar-IT-Systeme bereitstellt.
-        Er ermöglicht einen einmaligen Login für mehrere Anwendungen im Agrarbereich und stellt sicher, dass nur berechtigte Nutzer mit korrekten Rollen Zugriff erhalten.
-        """@de,
-        """
-        A technical SSO (Identity Provider) service that provides centralised user registration, authentication and role-based access control for Agate and connected agricultural IT systems.
-        It enables a single login for multiple applications in the agricultural sector and ensures that only authorised users with the correct roles are granted access.
-        """@en,
-        """
-        Un service technique SSO (Identity Provider) qui fournit l'enregistrement centralisé des utilisateurs, l'authentification et le contrôle d'accès basé sur les rôles pour Agate et les systèmes informatiques agricoles connectés.
-        Il permet une connexion unique pour plusieurs applications dans le domaine agricole et garantit que seuls les utilisateurs autorisés avec des rôles corrects ont accès.
-        """@fr,
-        """
-        Un servizio tecnico di SSO (Identity Provider) che fornisce la registrazione centralizzata degli utenti, l'autenticazione e il controllo degli accessi basato sui ruoli per Agate e i sistemi IT agricoli collegati.
-        Consente un unico login per più applicazioni nel settore agricolo e garantisce che solo gli utenti autorizzati con i ruoli corretti possano accedere.
-        """@it .
 

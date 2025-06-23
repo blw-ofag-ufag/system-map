@@ -13,6 +13,27 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
 
+systemmap:S0hwJxy2kXNPFbl4C a service:Service ;
+    rdfs:label "Lineare Korrektur (LK)-Service"@de ;
+    dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr ;
+    rdfs:comment """
+        Service, der auf Basis gemeldeter Futterzusammensetzungen die Nährstoffausscheidungen der Tiere korrigiert (bei nährstoffreduziertem Futter o. Ä.).
+        """@de .
+
+systemmap:SAgmZXUKqNKTf35Fv a service:Service ;
+    rdfs:label "IMPEX-Berechnungsservice"@de ;
+    dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr ;
+    rdfs:comment """
+        Modul-Service zur detaillierten Erfassung und Bilanzierung von Nährstoffflüssen aus Zu- und Verkäufen von Futtermitteln sowie Tieren (Import/Export).
+        """@de .
+
+systemmap:SFMUSGNRQVqCKBNHQ a service:Service ;
+    rdfs:label "GMF-Berechnungsservice"@de ;
+    dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr ;
+    rdfs:comment """
+        Service zur Prüfung der Auflagen des Programms 'Graslandbasierte Milch- und Fleischproduktion' (≥ 90 % Raufutter Inland/Eigenbetrieb) und zur Verknüpfung der Ergebnisse mit der Suisse-Bilanz.
+        """@de .
+
 systemmap:SK6JOIUV1UjrOYD7f a service:Service ;
     rdfs:label "Zentraler Authentifizierungs- und Rollenverwaltungsdienst"@de,
         "Authentication and Role Management Service"@en,
@@ -34,6 +55,18 @@ systemmap:SK6JOIUV1UjrOYD7f a service:Service ;
         Un servizio tecnico di SSO (Identity Provider) che fornisce la registrazione centralizzata degli utenti, l'autenticazione e il controllo degli accessi basato sui ruoli per Agate e i sistemi IT agricoli collegati.
         Consente un unico login per più applicazioni nel settore agricolo e garantisce che solo gli utenti autorizzati con i ruoli corretti possano accedere.
         """@it .
+
+systemmap:SWrEh3riVEhEddyRr a service:Service ;
+    rdfs:label "Nährstoffbilanzrechner"@de ;
+    service:providedBy systemmap:Sy4WeMDNoah4TkAYX ;
+    rdfs:comment """
+        Backend-Service, der die schweizweit standardisierte Berechnung der Nährstoffbilanz nach der Methode Suisse-Bilanz ermöglicht und damit die Erfüllung des ÖLN sowie den Bezug von Direktzahlungen unterstützt.
+        """@de .
+
+systemmap:SmWBzvRi0YEZiWMOd a service:Service ;
+    rdfs:label "SuisseBilanz-Berechnungsservice"@de ;
+    dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr ;
+    rdfs:comment "Teilservice des Nährstoffbilanzrechners, der die Hauptbilanz von Stickstoff (N) und Phosphor (P) nach der Suisse-Bilanz-Methodik ausführt."@de .
 
 systemmap:metadata a void:Dataset ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
@@ -214,6 +247,11 @@ systemmap:SGayLcAMcywbigd3M a schema:Organization ;
 systemmap:ShM5kJNFhO8vOAEdK a schema:Organization ;
     rdfs:label "Europäische Kommission"@de,
         "European Commission"@en .
+
+systemmap:S2Q2s27pTp6oRYHmf a schema:SoftwareApplication ;
+    rdfs:label "digiFLUX Kern"@de,
+        "digiFLUX Core"@en ;
+    dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF .
 
 systemmap:S4gV9U3dvmENkSnj a schema:SoftwareApplication ;
     rdfs:label "Informationssystem für meldepflichtige Krankheiten"@de,
@@ -824,6 +862,11 @@ systemmap:SjCVTMrYaOTygNcqF a schema:SoftwareApplication ;
         LwG:art_165_f_bis ;
     systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP .
 
+systemmap:SjhTrVt8CB9QFq0Yn a schema:SoftwareApplication ;
+    rdfs:label "Produktekatalog"@de,
+        "Product catalog"@en ;
+    dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF .
+
 systemmap:SlTSOXsBC2LN7Qkp a schema:SoftwareApplication ;
     rdfs:label "Barto"@de,
         "Barto"@en,
@@ -1039,6 +1082,18 @@ systemmap:SvDlxaJ5YMkuZGH6k a schema:SoftwareApplication ;
     systemmap:hasLegalBasis LwG:art_165_c ;
     systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
 
+systemmap:Sy4WeMDNoah4TkAYX a schema:SoftwareApplication ;
+    rdfs:label "Nährstoffbilanzrechner"@de ;
+    dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF ;
+    rdfs:comment """
+        Der Nährstoffbilanzrechner ist ein Backend-Service, der eine schweizweit standardisierte Berechnung der für die Erfüllung des ökologischen Leistungsnachweises (ÖLN) und den Erhalt von  Direktzahlungen geforderten Nährstoffbilanz ermöglicht.
+        Die Berechnung basiert auf der Methode Suisse-Bilanz.
+        Die Benutzeroberfläche zur Erstellung der Nährstoffbilanz wird von Farm Management Information Systemen (FMIS) oder anderen Drittsystemen angeboten.
+        Diese Systeme beziehen die für die Berechnung benötigten Inputdaten über Schnittstellen von digiFLUX-core, zeigen diese dem Benutzer an und speichern das Berechnungsergebnis in digiFLUX-core.
+        Der Berechnungsservice wird durch ein BLW-internes Testtool mit einer rudimentären Benutzeroberfläche ergänzt.
+        Dieses ermöglicht das fachliche Testen des Rechners.
+        """@de .
+
 systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
     rdfs:label "eKontingente"@de,
         "eQuotas"@en,
@@ -1106,6 +1161,7 @@ systemmap:S4hqylQaEIsYGXMo a dcat:Dataset ;
         "Movement of Mineral Fertilizers"@en,
         "Déplacement des engrais minéraux"@fr,
         "Spostamento dei fertilizzanti minerali"@it ;
+    dcterms:isPartOf systemmap:SOl0OAWrb7M910fp8 ;
     rdfs:comment """
         Die Verschiebung von Mineraldüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge mineralischer Düngemittel, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
         """@de,
@@ -1117,8 +1173,7 @@ systemmap:S4hqylQaEIsYGXMo a dcat:Dataset ;
         """@fr,
         """
         Lo spostamento dei fertilizzanti minerali include la registrazione e la segnalazione di tutti gli afflussi e deflussi di fertilizzanti minerali, compresi acquisti, vendite e trasferimenti interni.
-        """@it ;
-    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
+        """@it .
 
 systemmap:S7mhWQjPZiSFc8dU a dcat:Dataset ;
     rdfs:label "Tierereignisdaten"@de,
@@ -1256,6 +1311,7 @@ systemmap:SECM4KqStG9yBva6 a dcat:Dataset ;
         "Movement of Farmyard and Recycled Fertilizers"@en,
         "Déplacement des engrais de ferme et recyclés"@fr,
         "Spostamento dei fertilizzanti aziendali e riciclati"@it ;
+    dcterms:isPartOf systemmap:SOl0OAWrb7M910fp8 ;
     rdfs:comment """
         Die Verschiebung von Hof- und Recyclingdüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
         """@de,
@@ -1267,8 +1323,7 @@ systemmap:SECM4KqStG9yBva6 a dcat:Dataset ;
         """@fr,
         """
         Lo spostamento dei fertilizzanti aziendali e riciclati include la registrazione e la segnalazione di tutti gli afflussi e deflussi, compresi acquisti, vendite e trasferimenti interni.
-        """@it ;
-    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
+        """@it .
 
 systemmap:SFyGV7l0kN4qgA8u a dcat:Dataset ;
     rdfs:label "Kulturen und Schaderreger"@de,
@@ -1319,6 +1374,11 @@ systemmap:SLXw4VofhYbzXVNKC a dcat:Dataset ;
         "Questi dati sono essenziali per il calcolo e il pagamento dei sussidi per il latte trasformato in formaggio e per l'alimentazione senza insilato da parte dell'Ufficio federale dell'agricoltura (UFAG)."@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
+systemmap:SOl0OAWrb7M910fp8 a dcat:Dataset ;
+    rdfs:label "Verschiebung von Produktionsmitteln"@de,
+        "Movement of production products"@en ;
+    systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf .
+
 systemmap:SPCig1xdekUHDV4r a dcat:Dataset ;
     rdfs:label "Milchstatistik"@de,
         "Milk statistics"@en,
@@ -1362,6 +1422,7 @@ systemmap:SUlfRYzH3b0gx7VX a dcat:Dataset ;
         "Movement of Plant Protection Products"@en,
         "Déplacement des produits phytosanitaires"@fr,
         "Spostamento dei prodotti fitosanitari"@it ;
+    dcterms:isPartOf systemmap:SOl0OAWrb7M910fp8 ;
     rdfs:comment """
         Die Verschiebung von Pflanzenschutzmitteln umfasst die Erfassung und Meldung aller Zu- und Abgänge von Pflanzenschutzmitteln, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
         """@de,
@@ -1373,8 +1434,7 @@ systemmap:SUlfRYzH3b0gx7VX a dcat:Dataset ;
         """@fr,
         """
         Lo spostamento dei prodotti fitosanitari include la registrazione e la segnalazione di tutti gli afflussi e deflussi, compresi acquisti, vendite e trasferimenti interni.
-        """@it ;
-    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
+        """@it .
 
 systemmap:SZBHsREMx369FArg a dcat:Dataset ;
     rdfs:label "Dünger"@de,
@@ -1472,7 +1532,7 @@ systemmap:Sl5KyePu7JtGiE3V a dcat:Dataset ;
         """@it ;
     prov:wasDerivedFrom systemmap:S9J1HTMKIxnCgmYc,
         systemmap:SZBHsREMx369FArg ;
-    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
+    systemmap:containedIn systemmap:SjhTrVt8CB9QFq0Yn .
 
 systemmap:SoBRgq7STLbZfEze a dcat:Dataset ;
     rdfs:label "Meldepflichtdaten (Schafe & Ziegen)"@de,
@@ -2581,7 +2641,8 @@ systemmap:SqeNr0H0FGL6Uv5Rr a systemmap:FederalOrganization ;
     owl:sameAs staatskalender:10003196 .
 
 systemmap:SsFdxnjM8hgUdzVT5 a systemmap:FederalOrganization ;
-    rdfs:label "Kompetenzzentrum Daten"@de , "Gestion des connaissances"@fr ;
+    rdfs:label "Kompetenzzentrum Daten"@de,
+        "Gestion des connaissances"@fr ;
     schema:parentOrganization systemmap:Sou0GnQeSqCPHGhze ;
     owl:sameAs staatskalender:20051877 ;
     systemmap:abbreviation "DCC"@de .

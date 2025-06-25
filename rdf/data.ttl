@@ -1344,6 +1344,10 @@ systemmap:SFyGV7l0kN4qgA8u a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
+systemmap:SHcRaVohogZJifUH4 a dcat:Dataset ;
+    rdfs:label "Kraftfutter"@de ;
+    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V .
+
 systemmap:SIsQ6LSUJc3xbG9B a dcat:Dataset ;
     rdfs:label "Biozide"@de,
         "Biocides"@en,
@@ -1374,10 +1378,20 @@ systemmap:SLXw4VofhYbzXVNKC a dcat:Dataset ;
         "Questi dati sono essenziali per il calcolo e il pagamento dei sussidi per il latte trasformato in formaggio e per l'alimentazione senza insilato da parte dell'Ufficio federale dell'agricoltura (UFAG)."@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
+systemmap:SMBGW7qHXQfR1VB9W a dcat:Dataset ;
+    rdfs:label "Mineraldünger"@de ;
+    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
+    prov:wasDerivedFrom systemmap:SZBHsREMx369FArg .
+
 systemmap:SOl0OAWrb7M910fp8 a dcat:Dataset ;
     rdfs:label "Verschiebung von Produktionsmitteln"@de,
         "Movement of production products"@en ;
-    systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf .
+    systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf ;
+    systemmap:usesMasterData systemmap:Sl5KyePu7JtGiE3V .
+
+systemmap:SOqI5Nd7eaHDXIhDG a dcat:Dataset ;
+    rdfs:label "Hof- und Recycling-Dünger"@de ;
+    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V .
 
 systemmap:SPCig1xdekUHDV4r a dcat:Dataset ;
     rdfs:label "Milchstatistik"@de,
@@ -1397,6 +1411,10 @@ systemmap:SRT6X0n1ML8vwHUW a dcat:Dataset ;
         "Linked Data"@it ;
     systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd,
         systemmap:SpLZd1ojPxF0CvH28 .
+
+systemmap:SSDm2G8XD7CwX1agA a dcat:Dataset ;
+    rdfs:label "Raufutter"@de ;
+    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V .
 
 systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
     rdfs:label "Zubereitungen"@de,
@@ -1437,22 +1455,14 @@ systemmap:SUlfRYzH3b0gx7VX a dcat:Dataset ;
         """@it .
 
 systemmap:SZBHsREMx369FArg a dcat:Dataset ;
-    rdfs:label "Dünger"@de,
-        "Fertilizers"@en,
-        "Engrais"@fr,
-        "Fertilizzanti"@it ;
+    rdfs:label "Dünger"@de ;
     rdfs:comment """
-        Produkte zur Boden- und Pflanzendüngung.
-        """@de,
-        """
-        Products for soil and plant fertilization.
-        """@en,
-        """
-        Produits pour la fertilisation des sols et des plantes.
-        """@fr,
-        """
-        Prodotti per la fertilizzazione del suolo e delle piante.
-        """@it ;
+        Enthält vollständige Metadaten zu im RPC registrierten und bewilligten Düngemitteln, einschliesslich Hersteller- und Produktkennzeichen sowie Verfahren und Genehmigungsstatus.
+        Dokumentiert detaillierte Angaben zu Zusammensetzung (Ausgangsmaterialien, Komponentenmaterialkategorien, Nährstoffgehalte), GHS-Einstufung/-Kennzeichnung und Verwendungszwecken.
+        Ermöglicht die Nachverfolgung von Zulassungs-, Änderungs- und Erneuerungsverfahren sowie den Zugriff auf zugehörige Dokumente im Rahmen der Schweizer Düngerregulierung.
+        """@de ;
+    rdfs:seeAlso <https://backend.blw.admin.ch/fileservice/sdweb-docs-prod-blwch-files/files/2024/11/14/0bddf556-3864-4fa4-ada6-a3120e26d6dc.pdf>,
+        <https://www.blw.admin.ch/de/duenger> ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
 systemmap:Sb2FM7pKN60PrRwU a dcat:Dataset ;
@@ -1509,31 +1519,6 @@ systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:Sl5KyePu7JtGiE3V a dcat:Dataset ;
-    rdfs:label "Produktekatalog"@de,
-        "Product catalog"@en,
-        "Catalogue de produits"@fr,
-        "Catalogo dei prodotti"@it ;
-    rdfs:comment """
-        Sammlung von Informationen zu Pflanzenschutzmittel-, Futtermittel-, Mineraldünger-, Hof- und Recyclingdünger-Produkten.
-        Das beinhaltet jeweilige Identifikatoren, Namen, Beschreibungen, Inhaltsstoffe und Mengen etc.
-        """@de,
-        """
-        Collection of information on plant protection products, feed, mineral fertilizers, farm and recycled fertilizers.
-        This includes respective identifiers, names, descriptions, ingredients, and quantities, etc.
-        """@en,
-        """
-        Collection d'informations sur les produits phytosanitaires, les aliments pour animaux, les engrais minéraux, les engrais de ferme et les engrais recyclés.
-        Cela inclut les identifiants respectifs, les noms, les descriptions, les ingrédients et les quantités, etc.
-        """@fr,
-        """
-        Raccolta di informazioni sui prodotti fitosanitari, i mangimi, i fertilizzanti minerali, i fertilizzanti agricoli e quelli riciclati.
-        Ciò include gli identificatori, i nomi, le descrizioni, gli ingredienti e le quantità, ecc.
-        """@it ;
-    prov:wasDerivedFrom systemmap:S9J1HTMKIxnCgmYc,
-        systemmap:SZBHsREMx369FArg ;
-    systemmap:containedIn systemmap:SjhTrVt8CB9QFq0Yn .
-
 systemmap:SoBRgq7STLbZfEze a dcat:Dataset ;
     rdfs:label "Meldepflichtdaten (Schafe & Ziegen)"@de,
         "Mandatory reporting data (sheep & goats)"@en,
@@ -1568,6 +1553,14 @@ systemmap:Spqrv6Ul05KJySTs a dcat:Dataset ;
         "Catalogo delle varietà di piante agricole riconosciute utilizzate in Svizzera. Le informazioni sono registrate dai selezionatori."@it ;
     prov:wasDerivedFrom systemmap:Sb2FM7pKN60PrRwU ;
     systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj .
+
+systemmap:SyhthSmTCgM19Wysy a dcat:Dataset ;
+    rdfs:label "Pflanzenschutzmittel"@de,
+        "Plant Protection Products"@en,
+        "Produits phytosanitaires"@fr,
+        "Prodotti fitosanitari"@it ;
+    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
+    prov:wasDerivedFrom systemmap:S9J1HTMKIxnCgmYc .
 
 systemmap:SzcK9O3XZFxVW1IS a dcat:Dataset ;
     rdfs:label "Daten zur Milchsegmentierung"@de,
@@ -2832,6 +2825,29 @@ systemmap:SDLEUPczkJ9AWZeC a systemmap:MasterData ;
         L'uso dell'UID facilita l'alleggerimento amministrativo per le aziende e consente una collaborazione più efficiente tra le autorità.
         """@it ;
     systemmap:containedIn systemmap:SuEtT7joC8HXVSfF .
+
+systemmap:Sl5KyePu7JtGiE3V a systemmap:MasterData ;
+    rdfs:label "Produktekatalog"@de,
+        "Product catalog"@en,
+        "Catalogue de produits"@fr,
+        "Catalogo dei prodotti"@it ;
+    rdfs:comment """
+        Sammlung von Informationen zu Pflanzenschutzmittel-, Futtermittel-, Mineraldünger-, Hof- und Recyclingdünger-Produkten.
+        Das beinhaltet jeweilige Identifikatoren, Namen, Inhaltsstoffe etc.
+        """@de,
+        """
+        Collection of information on plant protection products, feed, mineral fertilizers, farm and recycled fertilizers.
+        This includes respective identifiers, names, ingredients, etc.
+        """@en,
+        """
+        Collection d'informations sur les produits phytosanitaires, les aliments pour animaux, les engrais minéraux, les engrais de ferme et les engrais recyclés.
+        Cela inclut les identifiants respectifs, les descriptions, les ingrédients, etc.
+        """@fr,
+        """
+        Raccolta di informazioni sui prodotti fitosanitari, i mangimi, i fertilizzanti minerali, i fertilizzanti agricoli e quelli riciclati.
+        Ciò include gli identificatori, le descrizioni, gli ingredienti, ecc.
+        """@it ;
+    systemmap:containedIn systemmap:SjhTrVt8CB9QFq0Yn .
 
 systemmap:SDetpcQhSMo4IAeAb a systemmap:PrivateOrganization ;
     rdfs:label "Barto AG"@de,

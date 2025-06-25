@@ -1156,25 +1156,6 @@ systemmap:S4BoMPavXD5gIObm a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
-systemmap:S4hqylQaEIsYGXMo a dcat:Dataset ;
-    rdfs:label "Verschiebung von Mineraldüngern"@de,
-        "Movement of Mineral Fertilizers"@en,
-        "Déplacement des engrais minéraux"@fr,
-        "Spostamento dei fertilizzanti minerali"@it ;
-    dcterms:isPartOf systemmap:SOl0OAWrb7M910fp8 ;
-    rdfs:comment """
-        Die Verschiebung von Mineraldüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge mineralischer Düngemittel, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
-        """@de,
-        """
-        The movement of mineral fertilizers includes the recording and reporting of all inflows and outflows of mineral fertilizers, including purchases, sales, and internal transfers.
-        """@en,
-        """
-        Le déplacement des engrais minéraux comprend l'enregistrement et la déclaration de toutes les entrées et sorties d'engrais minéraux, y compris les achats, les ventes et les transferts internes.
-        """@fr,
-        """
-        Lo spostamento dei fertilizzanti minerali include la registrazione e la segnalazione di tutti gli afflussi e deflussi di fertilizzanti minerali, compresi acquisti, vendite e trasferimenti interni.
-        """@it .
-
 systemmap:S7mhWQjPZiSFc8dU a dcat:Dataset ;
     rdfs:label "Tierereignisdaten"@de,
         "Animal event data"@en,
@@ -1306,25 +1287,6 @@ systemmap:SDmJeWK7EOnMqRLs a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
-systemmap:SECM4KqStG9yBva6 a dcat:Dataset ;
-    rdfs:label "Verschiebung von Hof- und Recyclingdünger"@de,
-        "Movement of Farmyard and Recycled Fertilizers"@en,
-        "Déplacement des engrais de ferme et recyclés"@fr,
-        "Spostamento dei fertilizzanti aziendali e riciclati"@it ;
-    dcterms:isPartOf systemmap:SOl0OAWrb7M910fp8 ;
-    rdfs:comment """
-        Die Verschiebung von Hof- und Recyclingdüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
-        """@de,
-        """
-        The movement of farmyard and recycled fertilizers includes the recording and reporting of all inflows and outflows, including purchases, sales, and internal transfers.
-        """@en,
-        """
-        Le déplacement des engrais de ferme et recyclés comprend l'enregistrement et la déclaration de toutes les entrées et sorties, y compris les achats, les ventes et les transferts internes.
-        """@fr,
-        """
-        Lo spostamento dei fertilizzanti aziendali e riciclati include la registrazione e la segnalazione di tutti gli afflussi e deflussi, compresi acquisti, vendite e trasferimenti interni.
-        """@it .
-
 systemmap:SFyGV7l0kN4qgA8u a dcat:Dataset ;
     rdfs:label "Kulturen und Schaderreger"@de,
         "Crops and Pests"@en,
@@ -1383,12 +1345,6 @@ systemmap:SMBGW7qHXQfR1VB9W a dcat:Dataset ;
     dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
     prov:wasDerivedFrom systemmap:SZBHsREMx369FArg .
 
-systemmap:SOl0OAWrb7M910fp8 a dcat:Dataset ;
-    rdfs:label "Verschiebung von Produktionsmitteln"@de,
-        "Movement of production products"@en ;
-    systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf ;
-    systemmap:usesMasterData systemmap:Sl5KyePu7JtGiE3V .
-
 systemmap:SOqI5Nd7eaHDXIhDG a dcat:Dataset ;
     rdfs:label "Hof- und Recycling-Dünger"@de ;
     dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V .
@@ -1434,25 +1390,6 @@ systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
         Miscele o soluzioni composte da due o più sostanze.
         """@it ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
-
-systemmap:SUlfRYzH3b0gx7VX a dcat:Dataset ;
-    rdfs:label "Verschiebung von Pflanzenschutzmitteln"@de,
-        "Movement of Plant Protection Products"@en,
-        "Déplacement des produits phytosanitaires"@fr,
-        "Spostamento dei prodotti fitosanitari"@it ;
-    dcterms:isPartOf systemmap:SOl0OAWrb7M910fp8 ;
-    rdfs:comment """
-        Die Verschiebung von Pflanzenschutzmitteln umfasst die Erfassung und Meldung aller Zu- und Abgänge von Pflanzenschutzmitteln, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
-        """@de,
-        """
-        The movement of plant protection products includes the recording and reporting of all inflows and outflows, including purchases, sales, and internal transfers.
-        """@en,
-        """
-        Le déplacement des produits phytosanitaires comprend l'enregistrement et la déclaration de toutes les entrées et sorties, y compris les achats, les ventes et les transferts internes.
-        """@fr,
-        """
-        Lo spostamento dei prodotti fitosanitari include la registrazione e la segnalazione di tutti gli afflussi e deflussi, compresi acquisti, vendite e trasferimenti interni.
-        """@it .
 
 systemmap:SZBHsREMx369FArg a dcat:Dataset ;
     rdfs:label "Dünger"@de ;
@@ -2781,6 +2718,7 @@ systemmap:S3jZwzvmFKsXRWiI a systemmap:MasterData ;
         "BUR Number"@en,
         "Numéro BUR"@fr,
         "Numero BUR"@it ;
+    dcterms:isPartOf systemmap:SeUFazO70bpqCYJ5 ;
     rdfs:comment """
         Die BUR-Nummer ist eine nichtsprechende 8-stellige Identifikationsnummer, die für jede Betriebsstätte eines Unternehmens vergeben wird.
         Sie dient der eindeutigen Identifikation von Betriebsstätten im Betriebs- und Unternehmensregister (BUR) des Bundesamts für Statistik (BFS).
@@ -2800,8 +2738,7 @@ systemmap:S3jZwzvmFKsXRWiI a systemmap:MasterData ;
     systemmap:abbreviation "BURNR"@de,
         "BURNR"@en,
         "BURNR"@fr,
-        "BURNR"@it ;
-    systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
+        "BURNR"@it .
 
 systemmap:SDLEUPczkJ9AWZeC a systemmap:MasterData ;
     rdfs:label "UID-Nummer"@de,
@@ -3053,6 +2990,16 @@ systemmap:SJuklUVKfEwj2Xpc a termdat:52451 ;
         "Coordonnées des sélectionneurs qui fournissent des informations sur les variétés à ProVar."@fr,
         "Dati di contatto dei selezionatori che forniscono informazioni sulle varietà a ProVar."@it ;
     systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj .
+
+systemmap:SOl0OAWrb7M910fp8 a termdat:52451 ;
+    rdfs:label "Verschiebung von Produktionsmitteln"@de,
+        "Movement of production products"@en ;
+    rdfs:comment """
+        Daten zu Verschiebungen von Produktionsmitteln umfassen Abgeber (Referenz auf BUR-Nummer), Produkt (Referenz auf Produktekatalog-ID), Menge, Datum/Uhrzeit und Abnehmer (Referenz auf BUR-Nummer).
+        """@de ;
+    systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf ;
+    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5,
+        systemmap:Sl5KyePu7JtGiE3V .
 
 systemmap:SQ2MIhpz1CvdqK6f a termdat:52451 ;
     rdfs:label "Beitragsdaten"@de,

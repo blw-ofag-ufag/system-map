@@ -3044,7 +3044,11 @@ systemmap:SY9n2yTOBWXtZ6se a termdat:52451 ;
 
 systemmap:SYYaTBjwIUU2yNIUN a termdat:52451 ;
     rdfs:label "Anwendungen von Pflanzenschutzmittel"@de ;
-    systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf .
+    rdfs:comment """
+        Daten zur Anwendungen von Pflanzenschutzmittel umfassen Anwender (Referenz auf BUR-Nummer), Produkt (Referenz auf Produktekatalog-ID), Menge, und Jahr.
+        """@de ;
+    systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf ;
+    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
 systemmap:SYlOxcohgWiXr61M a termdat:52451 ;
     rdfs:label "Informationen zu Forstbetrieben"@de,

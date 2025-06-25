@@ -3042,6 +3042,10 @@ systemmap:SY9n2yTOBWXtZ6se a termdat:52451 ;
         "Dati sui controlli e sui risultati dei controlli"@it ;
     systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
 
+systemmap:SYYaTBjwIUU2yNIUN a termdat:52451 ;
+    rdfs:label "Anwendungen von Pflanzenschutzmittel"@de ;
+    systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf .
+
 systemmap:SYlOxcohgWiXr61M a termdat:52451 ;
     rdfs:label "Informationen zu Forstbetrieben"@de,
         "Information about forestry enterprises"@en,

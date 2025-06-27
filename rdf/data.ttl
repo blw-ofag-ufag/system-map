@@ -1084,7 +1084,6 @@ systemmap:SvDlxaJ5YMkuZGH6k a schema:SoftwareApplication ;
 
 systemmap:Sy4WeMDNoah4TkAYX a schema:SoftwareApplication ;
     rdfs:label "Nährstoffbilanzrechner"@de ;
-    dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF ;
     rdfs:comment """
         Der Nährstoffbilanzrechner ist ein Backend-Service, der eine schweizweit standardisierte Berechnung der für die Erfüllung des ökologischen Leistungsnachweises (ÖLN) und den Erhalt von  Direktzahlungen geforderten Nährstoffbilanz ermöglicht.
         Die Berechnung basiert auf der Methode Suisse-Bilanz.
@@ -1092,7 +1091,8 @@ systemmap:Sy4WeMDNoah4TkAYX a schema:SoftwareApplication ;
         Diese Systeme beziehen die für die Berechnung benötigten Inputdaten über Schnittstellen von digiFLUX-core, zeigen diese dem Benutzer an und speichern das Berechnungsergebnis in digiFLUX-core.
         Der Berechnungsservice wird durch ein BLW-internes Testtool mit einer rudimentären Benutzeroberfläche ergänzt.
         Dieses ermöglicht das fachliche Testen des Rechners.
-        """@de .
+        """@de ;
+    systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP .
 
 systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
     rdfs:label "eKontingente"@de,
@@ -1287,6 +1287,10 @@ systemmap:SDmJeWK7EOnMqRLs a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
+systemmap:SENtOaRGg22EqHWXq a dcat:Dataset ;
+    rdfs:label "Produkteliste Hof- und Recycling-Dünger"@de ;
+    systemmap:containedIn systemmap:SlfheulBjlQDwuaIM .
+
 systemmap:SFyGV7l0kN4qgA8u a dcat:Dataset ;
     rdfs:label "Kulturen und Schaderreger"@de,
         "Crops and Pests"@en,
@@ -1307,8 +1311,19 @@ systemmap:SFyGV7l0kN4qgA8u a dcat:Dataset ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
 systemmap:SHcRaVohogZJifUH4 a dcat:Dataset ;
-    rdfs:label "Kraftfutter"@de ;
+    rdfs:label "Kraft- und Raufutter"@de ;
     dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V .
+
+systemmap:SIK56WC1if6riKNpM a dcat:Dataset ;
+    rdfs:label "Handelsprodukte"@de ;
+    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
+    rdfs:comment """
+        Handelsprodukte sind von Händlern definierte, massgeschneiderte Produkte, welche sich aus bestimmten Mengen bestehender anderer Produkte (PSM oder Mineraldünger) zusammensetzen.
+        Beispiele hierfür wären PSM-Mischungen mehrerer Produkte, abgefüllt in Flaschen.
+        Wird dafür ein Handelsprodukt erstellt, kann dieses auf digiFLUX gemeldet und verarbeitet werden.
+        """@de ;
+    systemmap:usesMasterData systemmap:SMBGW7qHXQfR1VB9W,
+        systemmap:SyhthSmTCgM19Wysy .
 
 systemmap:SIsQ6LSUJc3xbG9B a dcat:Dataset ;
     rdfs:label "Biozide"@de,
@@ -1347,7 +1362,8 @@ systemmap:SMBGW7qHXQfR1VB9W a dcat:Dataset ;
 
 systemmap:SOqI5Nd7eaHDXIhDG a dcat:Dataset ;
     rdfs:label "Hof- und Recycling-Dünger"@de ;
-    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V .
+    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
+    prov:wasDerivedFrom systemmap:SENtOaRGg22EqHWXq .
 
 systemmap:SPCig1xdekUHDV4r a dcat:Dataset ;
     rdfs:label "Milchstatistik"@de,
@@ -1367,10 +1383,6 @@ systemmap:SRT6X0n1ML8vwHUW a dcat:Dataset ;
         "Linked Data"@it ;
     systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd,
         systemmap:SpLZd1ojPxF0CvH28 .
-
-systemmap:SSDm2G8XD7CwX1agA a dcat:Dataset ;
-    rdfs:label "Raufutter"@de ;
-    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V .
 
 systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
     rdfs:label "Zubereitungen"@de,

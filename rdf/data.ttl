@@ -258,7 +258,10 @@ systemmap:ShM5kJNFhO8vOAEdK a schema:Organization ;
 systemmap:S2Q2s27pTp6oRYHmf a schema:SoftwareApplication ;
     rdfs:label "digiFLUX Kern"@de,
         "digiFLUX Core"@en ;
-    dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF .
+    dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF ;
+    rdfs:comment """
+        digiFLUX Core ist die zentrale Softwareanwendung des Gesamtsystems digiFLUX, welche das Erfassen, Ändern, Einsehen etc. von Produktelieferungen und -anwendungen erlaubt.
+        """@de .
 
 systemmap:S4gV9U3dvmENkSnj a schema:SoftwareApplication ;
     rdfs:label "Informationssystem für meldepflichtige Krankheiten"@de,
@@ -882,7 +885,10 @@ systemmap:SjCVTMrYaOTygNcqF a schema:SoftwareApplication ;
 systemmap:SjhTrVt8CB9QFq0Yn a schema:SoftwareApplication ;
     rdfs:label "Produktekatalog"@de,
         "Product catalog"@en ;
-    dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF .
+    dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF ;
+    rdfs:comment """
+        Die Softwareanwendung 'Produktekatalog' erlaubt es, die in digiFLUX abgebildeten Produkte einzusehen, zu erstellen, oder anzupassen.
+        """@de .
 
 systemmap:SlTSOXsBC2LN7Qkp a schema:SoftwareApplication ;
     rdfs:label "Barto"@de,

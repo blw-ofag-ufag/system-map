@@ -68,6 +68,13 @@ systemmap:SmWBzvRi0YEZiWMOd a service:Service ;
     dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr ;
     rdfs:comment "Teilservice des Nährstoffbilanzrechners, der die Hauptbilanz von Stickstoff (N) und Phosphor (P) nach der Suisse-Bilanz-Methodik ausführt."@de .
 
+systemmap:StBV0qWzKXosN98bB a service:Service ;
+    rdfs:label "Produktmanagement-API"@de ;
+    service:providedBy systemmap:SjhTrVt8CB9QFq0Yn ;
+    rdfs:comment """
+        Dieser API-Service erlaubt es Unternehmen, neue Produkte über eine Schnittstelle an den Produktekatalog zu senden und bestehende Produkte abzufragen.
+        """@de .
+
 systemmap:metadata a void:Dataset ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
         "DigiAgriFoodCH System Map"@en,
@@ -251,7 +258,10 @@ systemmap:ShM5kJNFhO8vOAEdK a schema:Organization ;
 systemmap:S2Q2s27pTp6oRYHmf a schema:SoftwareApplication ;
     rdfs:label "digiFLUX Kern"@de,
         "digiFLUX Core"@en ;
-    dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF .
+    dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF ;
+    rdfs:comment """
+        digiFLUX Core ist die zentrale Softwareanwendung des Gesamtsystems digiFLUX, welche das Erfassen, Ändern, Einsehen etc. von Produktelieferungen und -anwendungen erlaubt.
+        """@de .
 
 systemmap:S4gV9U3dvmENkSnj a schema:SoftwareApplication ;
     rdfs:label "Informationssystem für meldepflichtige Krankheiten"@de,
@@ -277,6 +287,16 @@ systemmap:S4gV9U3dvmENkSnj a schema:SoftwareApplication ;
         "InfoSM"@fr,
         "InfoSM"@it ;
     systemmap:operatedBy systemmap:SsFdxnjM8hgUdzVT5 .
+
+systemmap:S4wIBXSXQwmbyHy9i a schema:SoftwareApplication ;
+    rdfs:label "I14Y"@de,
+        "I14Y"@en ;
+    rdfs:comment """
+        Die Interoperabilitätsplattform I14Y ist das zentrale Verzeichnis der Daten, elektronischen Schnittstellen und Behördenleistungen in der Schweiz.
+        Die Plattform stellt zudem Werkzeuge zur Verfügung, damit Daten mehrfach genutzt werden können.
+        Dies entlastet Unternehmen, Bürgerinnen und Bürger sowie die Behörden.
+        """@de ;
+    systemmap:operatedBy systemmap:SNbhMvt3Btta1U1d6 .
 
 systemmap:S6J4iyI6nMI2RCXSY a schema:SoftwareApplication ;
     rdfs:label "CePa"@de,
@@ -865,7 +885,10 @@ systemmap:SjCVTMrYaOTygNcqF a schema:SoftwareApplication ;
 systemmap:SjhTrVt8CB9QFq0Yn a schema:SoftwareApplication ;
     rdfs:label "Produktekatalog"@de,
         "Product catalog"@en ;
-    dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF .
+    dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF ;
+    rdfs:comment """
+        Die Softwareanwendung 'Produktekatalog' erlaubt es, die in digiFLUX abgebildeten Produkte einzusehen, zu erstellen, oder anzupassen.
+        """@de .
 
 systemmap:SlTSOXsBC2LN7Qkp a schema:SoftwareApplication ;
     rdfs:label "Barto"@de,
@@ -1084,7 +1107,6 @@ systemmap:SvDlxaJ5YMkuZGH6k a schema:SoftwareApplication ;
 
 systemmap:Sy4WeMDNoah4TkAYX a schema:SoftwareApplication ;
     rdfs:label "Nährstoffbilanzrechner"@de ;
-    dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF ;
     rdfs:comment """
         Der Nährstoffbilanzrechner ist ein Backend-Service, der eine schweizweit standardisierte Berechnung der für die Erfüllung des ökologischen Leistungsnachweises (ÖLN) und den Erhalt von  Direktzahlungen geforderten Nährstoffbilanz ermöglicht.
         Die Berechnung basiert auf der Methode Suisse-Bilanz.
@@ -1092,7 +1114,8 @@ systemmap:Sy4WeMDNoah4TkAYX a schema:SoftwareApplication ;
         Diese Systeme beziehen die für die Berechnung benötigten Inputdaten über Schnittstellen von digiFLUX-core, zeigen diese dem Benutzer an und speichern das Berechnungsergebnis in digiFLUX-core.
         Der Berechnungsservice wird durch ein BLW-internes Testtool mit einer rudimentären Benutzeroberfläche ergänzt.
         Dieses ermöglicht das fachliche Testen des Rechners.
-        """@de .
+        """@de ;
+    systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP .
 
 systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
     rdfs:label "eKontingente"@de,
@@ -1287,6 +1310,10 @@ systemmap:SDmJeWK7EOnMqRLs a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
+systemmap:SENtOaRGg22EqHWXq a dcat:Dataset ;
+    rdfs:label "Produkteliste Hof- und Recycling-Dünger"@de ;
+    systemmap:containedIn systemmap:SlfheulBjlQDwuaIM .
+
 systemmap:SFyGV7l0kN4qgA8u a dcat:Dataset ;
     rdfs:label "Kulturen und Schaderreger"@de,
         "Crops and Pests"@en,
@@ -1307,8 +1334,19 @@ systemmap:SFyGV7l0kN4qgA8u a dcat:Dataset ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
 systemmap:SHcRaVohogZJifUH4 a dcat:Dataset ;
-    rdfs:label "Kraftfutter"@de ;
+    rdfs:label "Kraft- und Raufutter"@de ;
     dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V .
+
+systemmap:SIK56WC1if6riKNpM a dcat:Dataset ;
+    rdfs:label "Handelsprodukte"@de ;
+    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
+    rdfs:comment """
+        Handelsprodukte sind von Händlern definierte, massgeschneiderte Produkte, welche sich aus bestimmten Mengen bestehender anderer Produkte (PSM oder Mineraldünger) zusammensetzen.
+        Beispiele hierfür wären PSM-Mischungen mehrerer Produkte, abgefüllt in Flaschen.
+        Wird dafür ein Handelsprodukt erstellt, kann dieses auf digiFLUX gemeldet und verarbeitet werden.
+        """@de ;
+    systemmap:usesMasterData systemmap:SMBGW7qHXQfR1VB9W,
+        systemmap:SyhthSmTCgM19Wysy .
 
 systemmap:SIsQ6LSUJc3xbG9B a dcat:Dataset ;
     rdfs:label "Biozide"@de,
@@ -1347,7 +1385,8 @@ systemmap:SMBGW7qHXQfR1VB9W a dcat:Dataset ;
 
 systemmap:SOqI5Nd7eaHDXIhDG a dcat:Dataset ;
     rdfs:label "Hof- und Recycling-Dünger"@de ;
-    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V .
+    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
+    prov:wasDerivedFrom systemmap:SENtOaRGg22EqHWXq .
 
 systemmap:SPCig1xdekUHDV4r a dcat:Dataset ;
     rdfs:label "Milchstatistik"@de,
@@ -1367,10 +1406,6 @@ systemmap:SRT6X0n1ML8vwHUW a dcat:Dataset ;
         "Linked Data"@it ;
     systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd,
         systemmap:SpLZd1ojPxF0CvH28 .
-
-systemmap:SSDm2G8XD7CwX1agA a dcat:Dataset ;
-    rdfs:label "Raufutter"@de ;
-    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V .
 
 systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
     rdfs:label "Zubereitungen"@de,
@@ -2980,6 +3015,22 @@ systemmap:S6aBblr7qNp15tGw a termdat:52451 ;
         "Informazioni sui dati di contatto dei gestori agricoli, come indirizzi e-mail o numeri di telefono."@it ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
+systemmap:S6lhRFiEflanK2rcl a termdat:52451 ;
+    rdfs:label "Nutzerdaten Produktekatalog"@de ;
+    rdfs:comment """
+        Dieser Datensatz beinhaltet sämtliche Daten über die Nutzer des Produktekatalogs (Personen, Unternehmen, Rollen, Berechtigungen).
+        """@de ;
+    systemmap:containedIn systemmap:SjhTrVt8CB9QFq0Yn ;
+    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
+
+systemmap:SCkzllAJGWHIEermB a termdat:52451 ;
+    rdfs:label "Nutzerdaten digiFLUX Core"@de ;
+    rdfs:comment """
+        Dieser Datensatz beinhaltet sämtliche Daten über die Nutzer von digiFLUX Core (Personen, Unternehmen, Betriebe, Rollen, Berechtigungen sowie zusätzliche Informationen).
+        """@de ;
+    systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf ;
+    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
+
 systemmap:SJuklUVKfEwj2Xpc a termdat:52451 ;
     rdfs:label "Kontaktdaten Züchter"@de,
         "Contact details of breeders"@en,
@@ -2998,7 +3049,7 @@ systemmap:SOl0OAWrb7M910fp8 a termdat:52451 ;
         Daten zu Verschiebungen von Produktionsmitteln umfassen Abgeber (Referenz auf BUR-Nummer), Produkt (Referenz auf Produktekatalog-ID), Menge, Datum/Uhrzeit und Abnehmer (Referenz auf BUR-Nummer).
         """@de ;
     systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf ;
-    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5,
+    systemmap:usesMasterData systemmap:SCkzllAJGWHIEermB,
         systemmap:Sl5KyePu7JtGiE3V .
 
 systemmap:SQ2MIhpz1CvdqK6f a termdat:52451 ;
@@ -3048,7 +3099,8 @@ systemmap:SYYaTBjwIUU2yNIUN a termdat:52451 ;
         Daten zur Anwendungen von Pflanzenschutzmittel umfassen Anwender (Referenz auf BUR-Nummer), Produkt (Referenz auf Produktekatalog-ID), Menge, und Jahr.
         """@de ;
     systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf ;
-    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
+    systemmap:usesMasterData systemmap:SCkzllAJGWHIEermB,
+        systemmap:SyhthSmTCgM19Wysy .
 
 systemmap:SYlOxcohgWiXr61M a termdat:52451 ;
     rdfs:label "Informationen zu Forstbetrieben"@de,
@@ -3103,6 +3155,11 @@ systemmap:SfQ6BN8rDjKhTWL4 a termdat:52451 ;
         """@it ;
     systemmap:containedIn systemmap:S7u1Bh6qfXUbSDkv .
 
+systemmap:SkvXyKniPPKwKNRqo a termdat:52451 ;
+    rdfs:label "Daten zu Flächen und DZ-Kulturen"@de ;
+    dcterms:isPartOf systemmap:SCkzllAJGWHIEermB ;
+    systemmap:usesMasterData systemmap:SakCt52w8AKrsSXi .
+
 systemmap:SldiTYOuXQmoC3SV a termdat:52451 ;
     rdfs:label "Anmeldungen für Direktzahlungsarten"@de,
         "Registrations for direct payment types"@en,
@@ -3137,6 +3194,16 @@ systemmap:SoY82Q0qEk9k0s3w3 a termdat:52451 ;
         "Dati di contatto dei produttori di latte, come indirizzi, numero TVD, numero AGIS dell'azienda, numero AGIS del gestore e informazioni di pagamento per il sussidio per il latte trasformato in formaggio e il sussidio per l'alimentazione senza insilato. Se possibile, questi dati di contatto vengono ottenuti da AGIS."@it ;
     prov:wasDerivedFrom systemmap:S6aBblr7qNp15tGw ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
+
+systemmap:SqGp9THVAsRw71ZCg a termdat:52451 ;
+    rdfs:label "Anmeldedaten für DZ-Programme"@de ;
+    dcterms:isPartOf systemmap:SCkzllAJGWHIEermB ;
+    rdfs:comment """
+        Anmeldedaten für DZ-Programme bezüglich N- und P-reduzierter Fütterung und ob ein Betrieb Bio ist oder nicht.
+        Diese Informationen werden von digiFLUX Core für eine Beschränkung der Auswahlmöglichkeiten für Benutzer gebraucht.
+        Beispiel: Ein Betrieb, der N- und P-reduzierte Fütterung von Mastschweinen betreibt, produziert folglich N- und P-reduzierte Gülle.
+        """@de ;
+    systemmap:usesMasterData systemmap:SldiTYOuXQmoC3SV .
 
 systemmap:Sutd0KIj3Rf8GlSwq a termdat:52451 ;
     rdfs:label "Kontaktdaten Milchverarbeiter"@de,

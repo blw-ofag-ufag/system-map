@@ -141,6 +141,9 @@ const focusModeLabels = {
  */
 async function init() {
 
+    // what language did the user pick?  (falls back to "de")
+    const currentLang = getParam("lang") || "de";
+
     // Track if a node/edge is pinned (i.e. clicked) so that the info panel remains fixed.
     let pinnedNodeId = null;
     let pinnedEdgeId = null;
@@ -175,27 +178,41 @@ async function init() {
 
     // 2) Parse them into Vis-friendly arrays
     const nodes = nodesJson.results.bindings.map(row => {
-        const iri = row.id.value;
-        const groupIri = row.group.value;
-        const label = row.displayLabel.value; // use displayLabel from the query
-        const comment = row.comment ? row.comment.value : "";
-        const abbreviation = row.abbreviation ? row.abbreviation.value : "";
-    
-        const groupName = mapClassIriToGroup(groupIri);
-    
+        const iri           = row.id.value;
+        const groupIri      = row.group.value;
+        const labelObj      = row.displayLabel;
+        const abbrObj       = row.abbreviation;
+        const commentObj    = row.comment;
+      
+        const label         = labelObj ? labelObj.value : "?";
+        const abbreviation  = abbrObj ? abbrObj.value  : "";
+        const comment       = commentObj ? commentObj.value : "";
+      
+        // ---------- language test ----------
+        const currentLang   = getParam("lang") || "de";
+        const labelLang     = labelObj && labelObj["xml:lang"] ? labelObj["xml:lang"] : "";
+        const isFallback    = labelLang && labelLang !== currentLang;
+      
+        // ---------- html for the node ----------
+        const htmlLabel = isFallback
+            ? `<i>${shortenLabel(label, abbreviation)}</i>`   // italic - no bold
+            : `<b>${shortenLabel(label, abbreviation)}</b>`; // bold as before
+      
         return {
-            id: iri,
-            label: `<b>${shortenLabel(label, abbreviation)}</b>`,
-            group: groupName,
-            // Store data for the info panel
-            data: {
-                iri: iri,
-                fullLabel: label,
-                abbreviation: abbreviation,
-                comment: comment
-            }
+          id: iri,
+          label: htmlLabel,
+          group: mapClassIriToGroup(groupIri),
+      
+          // data for the info panel
+          data: {
+            iri,
+            fullLabel: label,
+            abbreviation,
+            comment,
+            isFallback
+          }
         };
-    });    
+    });
 
     const edges = edgesJson.results.bindings.map(row => {
         const edge = {
@@ -214,7 +231,7 @@ async function init() {
             row.id.value === "https://agriculture.ld.admin.ch/system-map/references" ) {
 
             edge.dashes = [3, 7]; // Dash pattern: 5px dash, 5px gap
-            edge.length = 800;    // Increase edge length to allow more spacing
+            edge.length = 300;    // Increase edge length to allow more spacing
         }
         
         return edge;
@@ -288,7 +305,7 @@ async function init() {
             barnesHut: {
                 gravitationalConstant: -8000, // negative in order to have nodes push each other appart
                 centralGravity: 0.1, // increase for stronger central gravity, i.e. that nodes move to the center
-                springLength: 300,
+                springLength: 200,
                 springConstant: 0.1 // increase to make spring more rigid
             },
             stabilization: {
@@ -328,19 +345,19 @@ async function init() {
             iri,
             fullLabel,
             abbreviation,
-            comment
-        } = nodeData.data;
-        let html = `<a href='${iri}' target='blank'><small><code>${iri}</code></small></a><br>`;
-        html += `<h4>${fullLabel}`;
-        if (abbreviation) {
-            html += ` (${abbreviation})`;
-        }
-        html += `</h4>`;
-        if (comment) {
-            html += `<p><small>${comment}</small></p>`;
-        }
-        infoPanel.innerHTML = html;
-        infoPanel.classList.remove("hidden");
+            comment,
+            isFallback
+            } = nodeData.data;
+            
+            let html = `<a href='${iri}' target='blank'><small><code>${iri}</code></small></a><br>`;
+            html += `<h4>${isFallback ? "<i>" : ""}${fullLabel}`;
+            if (abbreviation) html += ` (${abbreviation})`;
+            html += `${isFallback ? "</i>" : ""}</h4>`;
+            
+            if (comment) html += `<p><small>${comment}</small></p>`;
+            
+            infoPanel.innerHTML = html;
+            infoPanel.classList.remove("hidden");
     }
 
     function hideNodeInfo() {

@@ -195,7 +195,7 @@ async function init() {
       
         // ---------- html for the node ----------
         const htmlLabel = isFallback
-            ? `<i>${shortenLabel(label, abbreviation)}</i>`   // italic - no bold
+            ? `<b>${labelLang.toUpperCase()}:</b> <i>${shortenLabel(label, abbreviation)}</i>`   // italic - no bold
             : `<b>${shortenLabel(label, abbreviation)}</b>`; // bold as before
       
         return {

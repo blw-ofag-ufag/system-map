@@ -255,6 +255,27 @@ systemmap:ShM5kJNFhO8vOAEdK a schema:Organization ;
     rdfs:label "Europäische Kommission"@de,
         "European Commission"@en .
 
+systemmap:S0tkRCUIU88Xtc2HK a schema:SoftwareApplication ;
+    rdfs:label "SheepOnline"@de,
+        "SheepOnline"@en,
+        "SheepOnline"@fr,
+        "SheepOnline"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        SheepOnline ist das Online-Herdebuch des Schweizerischen Schafzuchtverbands. Es ermöglicht ein einfaches Management des Tierbestandes, Inzuchtberechnungen, das Erstellen von Dokumenten und die Anmeldung für Ausstellungen. Zudem bietet es eine kostenlose Online-Marktplattform für den Kauf und Verkauf von Tieren.
+        """@de,
+        """
+        SheepOnline is the online herdbook of the Swiss Sheep Breeders' Association. It allows for simple management of the animal stock, inbreeding calculations, creation of documents, and registration for exhibitions. It also offers a free online marketplace for buying and selling animals.
+        """@en,
+        """
+        SheepOnline est le livre généalogique en ligne de la Fédération suisse d'élevage ovin. Il permet une gestion simple du cheptel, des calculs de consanguinité, la création de documents et l'inscription aux expositions. Il propose également une place de marché en ligne gratuite pour l'achat et la vente d'animaux.
+        """@fr,
+        """
+        SheepOnline è il libro genealogico online della Federazione svizzera di allevamento ovino. Permette una gestione semplice del bestiame, calcoli di consanguineità, la creazione di documenti e l'iscrizione a mostre. Offre anche un mercato online gratuito per la compravendita di animali.
+        """@it ;
+    dcat:landingPage <https://www.sheeponline.ch/> ;
+    systemmap:operatedBy zefix:166248 .
+
 systemmap:S2Q2s27pTp6oRYHmf a schema:SoftwareApplication ;
     rdfs:label "digiFLUX Kern"@de,
         "digiFLUX Core"@en ;
@@ -262,6 +283,77 @@ systemmap:S2Q2s27pTp6oRYHmf a schema:SoftwareApplication ;
     rdfs:comment """
         digiFLUX Core ist die zentrale Softwareanwendung des Gesamtsystems digiFLUX, welche das Erfassen, Ändern, Einsehen etc. von Produktelieferungen und -anwendungen erlaubt.
         """@de .
+
+systemmap:S2S8th7MLY4xUNjh5 a schema:SoftwareApplication ;
+    rdfs:label "CapraNet"@de,
+        "CapraNet"@en,
+        "CapraNet"@fr,
+        "CapraNet"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        CapraNet ist das Online-Herdebuch des Schweizerischen Ziegenzuchtverbands.
+        Es bietet Züchtern eine Herdenübersicht mit Zuchtwerten und Abstammungsnachweisen sowie Werkzeuge zur Zuchtplanung und zur selbstständigen Erfassung von Ereignissen wie Belegungen und Geburten.
+        """@de,
+        """
+        CapraNet is the online herdbook of the Swiss Goat Breeding Association.
+        It provides breeders with a herd overview including breeding values and pedigree certificates, as well as tools for breeding planning and for independently recording events such as matings and births.
+        """@en,
+        """
+        CapraNet est le livre généalogique en ligne de la Fédération suisse d'élevage caprin.
+        Il offre aux éleveurs un aperçu du troupeau avec les valeurs d'élevage et les certificats d'ascendance, ainsi que des outils pour la planification de l'élevage et l'enregistrement autonome d'événements tels que les saillies et les naissances.
+        """@fr,
+        """
+        CapraNet è il libro genealogico online della Federazione svizzera di allevamento caprino.
+        Offre agli allevatori una panoramica della mandria con i valori genetici e i certificati di pedigree, oltre a strumenti per la pianificazione della selezione e la registrazione autonoma di eventi come accoppiamenti e nascite.
+        """@it ;
+    dcat:landingPage <https://www.capranet.ch/> ;
+    systemmap:operatedBy zefix:248029 .
+
+systemmap:S2gC2BTVjYNH05BNf a schema:SoftwareApplication ;
+    rdfs:label "Datapass"@de,
+        "Datapass"@en,
+        "Datapass"@fr,
+        "Datapass"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Eine ERP-Software für fleischverarbeitende Betriebe, die Funktionen für Einkauf, Produktion, Verkauf und Rückverfolgbarkeit bietet. Sie wird von Unternehmen wie der Marmy Viandes en Gros SA und der SBZ Schlachtbetrieb Zürich AG genutzt.
+        """@de,
+        """
+        An ERP software for meat processing companies, offering functions for purchasing, production, sales, and traceability. It is used by companies such as Marmy Viandes en Gros SA and SBZ Schlachtbetrieb Zürich AG.
+        """@en,
+        """
+        Un logiciel ERP pour les entreprises de transformation de la viande, offrant des fonctions pour les achats, la production, la vente et la traçabilité. Il est utilisé par des entreprises comme Marmy Viandes en Gros SA et SBZ Schlachtbetrieb Zürich AG.
+        """@fr,
+        """
+        Un software ERP per le aziende di trasformazione della carne, che offre funzioni per acquisti, produzione, vendite e tracciabilità. È utilizzato da aziende come Marmy Viandes en Gros SA e SBZ Schlachtbetrieb Zürich AG.
+        """@it ;
+    dcat:landingPage <https://datapass.ch/software/> ;
+    systemmap:operatedBy zefix:1013423 .
+
+systemmap:S3TSqZWni4DBTqkAV a schema:SoftwareApplication ;
+    rdfs:label "SmartCow"@de,
+        "SmartCow"@en,
+        "SmartCow"@fr,
+        "SmartCow"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        SmartCow ist eine digitale Herdenmanagement-App von swissgenetics, die Landwirten Werkzeuge für Anpaarungsvorschläge, Fruchtbarkeitsmanagement und den Zugriff auf Tierdaten bietet.
+        Die App ermöglicht eine effiziente Verwaltung der Herde direkt vom Smartphone aus.
+        """@de,
+        """
+        SmartCow is a digital herd management app from swissgenetics that provides farmers with tools for mating suggestions, fertility management, and access to animal data.
+        The app enables efficient herd management directly from a smartphone.
+        """@en,
+        """
+        SmartCow est une application numérique de gestion de troupeau de swissgenetics qui fournit aux agriculteurs des outils pour les propositions d'accouplement, la gestion de la fertilité et l'accès aux données des animaux.
+        L'application permet une gestion efficace du troupeau directement depuis un smartphone.
+        """@fr,
+        """
+        SmartCow è un'app digitale per la gestione della mandria di swissgenetics che fornisce agli agricoltori strumenti per suggerimenti di accoppiamento, gestione della fertilità e accesso ai dati degli animali.
+        L'app consente una gestione efficiente della mandria direttamente dallo smartphone.
+        """@it ;
+    dcat:landingPage <https://www.swissgenetics.ch/de/smartcow-managen-sie-ihre-herde-digital> ;
+    systemmap:operatedBy zefix:448334 .
 
 systemmap:S4gV9U3dvmENkSnj a schema:SoftwareApplication ;
     rdfs:label "Informationssystem für meldepflichtige Krankheiten"@de,
@@ -309,6 +401,27 @@ systemmap:S6J4iyI6nMI2RCXSY a schema:SoftwareApplication ;
         "CePa è un'applicazione IT per la gestione digitale delle procedure e della corrispondenza nell'ambito del sistema del passaporto delle piante e della certificazione ufficiale del materiale di propagazione. Ottimizza i processi di certificazione e garantisce il rispetto delle normative fitosanitarie. In questo modo, supporta la tracciabilità e il controllo della qualità del materiale vegetale."@it ;
     systemmap:operatedBy systemmap:SFL2DYxeNnVaFsv64 .
 
+systemmap:S7aG1r5IoOvAalIFb a schema:SoftwareApplication ;
+    rdfs:label "KGS"@de,
+        "KGS"@en,
+        "KGS"@fr,
+        "KGS"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Der Kälbergesundheitsdienst (KGS) ist eine Online-Plattform für das Management und die Überwachung der Kälbergesundheit in der Schweizer Nutztierhaltung. Qualitas AG entwickelt und betreibt diese Lösung als Teil ihres Angebots für die Schweizer Tierzucht.
+        """@de,
+        """
+        The Calf Health Service (KGS) is an online platform for managing and monitoring calf health in Swiss livestock farming. Qualitas AG develops and operates this solution as part of its offering for Swiss animal breeding.
+        """@en,
+        """
+        Le Service de santé des veaux (KGS) est une plateforme en ligne pour la gestion et la surveillance de la santé des veaux dans l'élevage suisse. Qualitas AG développe et exploite cette solution dans le cadre de son offre pour l'élevage animal suisse.
+        """@fr,
+        """
+        Il Servizio di salute dei vitelli (KGS) è una piattaforma online per la gestione e il monitoraggio della salute dei vitelli nell'allevamento svizzero. Qualitas AG sviluppa e gestisce questa soluzione come parte della sua offerta per l'allevamento animale svizzero.
+        """@it ;
+    dcat:landingPage <https://kgd.qualitasag.ch/KGS/> ;
+    systemmap:operatedBy zefix:804864 .
+
 systemmap:S7u1Bh6qfXUbSDkv a schema:SoftwareApplication ;
     rdfs:label "e-Deklaration"@de,
         "e-declaration"@en,
@@ -323,6 +436,93 @@ systemmap:S7u1Bh6qfXUbSDkv a schema:SoftwareApplication ;
         "e-dec"@fr,
         "e-dec"@it ;
     systemmap:operatedBy systemmap:SFKPRpdGa5UISiJlx .
+
+systemmap:S844y5UCUBrKfEXoA a schema:SoftwareApplication ;
+    rdfs:label "Bio Suisse Kundenportal"@de,
+        "Bio Suisse Customer Portal"@en,
+        "Portail client Bio Suisse"@fr,
+        "Portale clienti Bio Suisse"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Das Bio Suisse Kundenportal (Supply Chain Monitor, SCM) ist die zentrale Online-Plattform für Lizenznehmer, Verarbeiter und Händler zur Verwaltung von Lieferketten, Zertifikaten und relevanten Bio Suisse-Daten. Nutzer können Lieferanten erfassen, Lieferketten verwalten und notwendige Nachweise für die Bio Suisse-Zertifizierung digital einreichen. Das Portal unterstützt die Einhaltung der Bio Suisse-Richtlinien und vereinfacht die Kommunikation mit der Geschäftsstelle.
+        """@de,
+        """
+        The Bio Suisse Customer Portal (Supply Chain Monitor, SCM) is the central online platform for licensees, processors, and traders to manage supply chains, certificates, and relevant Bio Suisse data. Users can register suppliers, manage supply chains, and submit required documentation for Bio Suisse certification digitally. The portal supports compliance with Bio Suisse guidelines and streamlines communication with the association.
+        """@en,
+        """
+        Le portail client Bio Suisse (Supply Chain Monitor, SCM) est la plateforme en ligne centrale pour les titulaires de licence, les transformateurs et les commerçants afin de gérer les chaînes d'approvisionnement, les certificats et les données pertinentes de Bio Suisse. Les utilisateurs peuvent enregistrer des fournisseurs, gérer les chaînes d'approvisionnement et soumettre numériquement les documents nécessaires à la certification Bio Suisse. Le portail facilite le respect des directives Bio Suisse et simplifie la communication avec le secrétariat.
+        """@fr,
+        """
+        Il portale clienti Bio Suisse (Supply Chain Monitor, SCM) è la piattaforma online centrale per licenziatari, trasformatori e commercianti per gestire le catene di fornitura, i certificati e i dati rilevanti di Bio Suisse. Gli utenti possono registrare fornitori, gestire le catene di fornitura e inviare digitalmente la documentazione necessaria per la certificazione Bio Suisse. Il portale supporta la conformità alle linee guida Bio Suisse e semplifica la comunicazione con la sede centrale.
+        """@it ;
+    dcat:landingPage <https://scm.biosuisse.ch> ;
+    systemmap:operatedBy zefix:427343 .
+
+systemmap:S8awijRdrkgdpXxgz a schema:SoftwareApplication ;
+    rdfs:label "Oblon"@de,
+        "Oblon"@en,
+        "Oblon"@fr,
+        "Oblon"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        OblonData ist eine umfassende Praxis- und Klinikverwaltungssoftware für Tierärzte in der Nutztier-, Pferde- und Kleintierpraxis.
+        Sie bietet Funktionen für Patienten-, Konsultations- und Finanzmanagement, Terminverwaltung, elektronische Krankengeschichte, Lagerverwaltung und zahlreiche Schnittstellen zu anderen Systemen.
+        """@de,
+        """
+        OblonData is a comprehensive practice and clinic management software for veterinarians in livestock, equine, and small animal practices.
+        It offers tools for managing patients, consultations, finances, scheduling, electronic medical records, inventory, and multiple system interfaces.
+        """@en,
+        """
+        OblonData est un logiciel complet de gestion de cabinet et de clinique pour les vétérinaires en pratique des animaux de rente, des chevaux et des petits animaux.
+        Il propose des fonctions de gestion des patients, des consultations, des finances, de la planification, du dossier médical électronique, de la gestion des stocks et de nombreuses interfaces.
+        """@fr,
+        """
+        OblonData è un software completo per la gestione di studi e cliniche veterinarie per animali da reddito, cavalli e piccoli animali.
+        Offre strumenti per la gestione di pazienti, consultazioni, finanze, appuntamenti, cartelle cliniche elettroniche, magazzino e molte interfacce.
+        """@it ;
+    dcat:landingPage <https://oblondata.ch> ;
+    systemmap:operatedBy zefix:984853 .
+
+systemmap:S8wfrZtWOCmMSB6sv a schema:SoftwareApplication ;
+    rdfs:label "Holstein Vision"@de,
+        "Holstein Vision"@en,
+        "Holstein Vision"@fr,
+        "Holstein Vision"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        HolsteinVision ist ein elektronisches Herdenmanagement-Tool der Genossenschaft Holstein Switzerland, das synchronisierte PC- und Mobile-Versionen für die Verwaltung von Tierdaten, Fruchtbarkeitsüberwachung und Zugriff auf Zuchtdokumente bietet. Die kostenlose Mobile-App ermöglicht Landwirt:innen, jederzeit auf aktualisierte Herdendaten zuzugreifen und Funktionen wie Gesundheitsdatenerfassung oder Anpaarungsplanung zu nutzen.
+        """@de,
+        """
+        HolsteinVision is an electronic herd management tool from the Holstein Switzerland Cooperative, offering synchronized PC and mobile versions for managing animal data, monitoring fertility, and accessing breeding documents. The free mobile app allows farmers to access updated herd data at any time and utilize functions such as health data recording or mating planning.
+        """@en,
+        """
+        HolsteinVision est un outil électronique de gestion de troupeau de la coopérative Holstein Switzerland, qui propose des versions PC et mobiles synchronisées pour la gestion des données animales, le suivi de la fertilité et l'accès aux documents d'élevage. L'application mobile gratuite permet aux agriculteurs d'accéder à tout moment aux données actualisées du troupeau et d'utiliser des fonctions telles que l'enregistrement des données de santé ou la planification des accouplements.
+        """@fr,
+        """
+        HolsteinVision è uno strumento elettronico di gestione delle mandrie della cooperativa Holstein Switzerland, che offre versioni sincronizzate per PC e dispositivi mobili per la gestione dei dati degli animali, il monitoraggio della fertilità e l'accesso ai documenti di allevamento. L'app mobile gratuita consente agli agricoltori di accedere in qualsiasi momento ai dati aggiornati della mandria e di utilizzare funzioni come la registrazione dei dati sanitari o la pianificazione degli accoppiamenti.
+        """@it ;
+    dcat:landingPage <https://www.holsteinvision.ch/> ;
+    systemmap:operatedBy zefix:278958 .
+
+systemmap:S9GvpUNuj5fGyPhGf a schema:SoftwareApplication ;
+    rdfs:label "Anicom App"@de,
+        "Anicom App"@en,
+        "Anicom App"@fr,
+        "Anicom App"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Digitale Plattform für Tiervermarktung, administrative Aufgaben und Kommunikation (Tieranmeldung, Bestellungen, Abrechnungen).
+        """@de,
+        """
+        Digital platform for livestock marketing, administrative tasks, and communication (animal registration, orders, invoicing).
+        """@en,
+        """
+        Plateforme numérique pour la commercialisation du bétail, tâches administratives et communication.
+        """@fr,
+        """
+        Piattaforma digitale per la commercializzazione del bestiame, compiti amministrativi e comunicazione (registrazione animali, ordini, fatture).
+        """@it ;
+    systemmap:operatedBy zefix:7011 .
 
 systemmap:S9SbhGAwWjtvcRIZ a schema:SoftwareApplication ;
     rdfs:label "Geografisches Informationssystem"@de,
@@ -389,6 +589,45 @@ systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
     systemmap:hasLegalBasis LwG:art_165_d ;
     systemmap:operatedBy systemmap:ScoeXHl4TgJbke1Yf .
 
+systemmap:SAIg9IaUyZYcHjEZ4 a schema:SoftwareApplication ;
+    rdfs:label "DSA Expert"@de ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        DSA Expert ist ein Entscheidungshilfe-Tool für die technische und wirtschaftliche Führung landwirtschaftlicher Betriebe.
+        """@de,
+        """
+        DSA Expert is a decision-support tool for the technical and economic management of agricultural holdings.
+        """@en,
+        """
+        DSA Expert est un outil d'aide à la décision pour la gestion technique et économique des exploitations agricoles.
+        """@fr,
+        """
+        DSA Expert è uno strumento di supporto decisionale per la gestione tecnica ed economica delle aziende agricole.
+        """@it ;
+    dcat:landingPage <https://farmconsult.ch/logiciel-de/> ;
+    systemmap:operatedBy zefix:1393629 .
+
+systemmap:SAPDp3o8XAHPuZnhB a schema:SoftwareApplication ;
+    rdfs:label "redonline"@de,
+        "redonline"@en,
+        "redonline"@fr,
+        "redonline"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Online-Plattform für professionelles Herdenmanagement mit aktuellen Zucht- und Leistungsdaten; kostenlos für swissherdbook-Züchterinnen und ‑Züchter.
+        """@de,
+        """
+        Web platform that gives Swissherdbook members real-time access to breeding, performance and herd-management data.
+        """@en,
+        """
+        Plateforme en ligne de gestion du troupeau offrant aux éleveurs l’accès en temps réel aux données zootechniques et de performance.
+        """@fr,
+        """
+        Piattaforma online per la gestione professionale della mandria con dati aggiornati di allevamento e di produzione, gratuita per i soci swissherdbook.
+        """@it ;
+    dcat:landingPage <https://www.swissherdbook.ch/de/dienstleistungen/online/redonline> ;
+    systemmap:operatedBy zefix:165954 .
+
 systemmap:SBx5yiPz9Nxy2Wnue a schema:SoftwareApplication ;
     rdfs:label "Mooh Intranet"@de ;
     rdfs:comment """
@@ -396,6 +635,48 @@ systemmap:SBx5yiPz9Nxy2Wnue a schema:SoftwareApplication ;
         """@de ;
     dcat:landingPage <https://intranet.mooh.swiss/> ;
     systemmap:operatedBy zefix:1256441 .
+
+systemmap:SCporGQs4VQT7lJVs a schema:SoftwareApplication ;
+    rdfs:label "smaXtec animal care"@de,
+        "smaXtec animal care"@en,
+        "smaXtec animal care"@fr,
+        "smaXtec animal care"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Ein Gesundheitsmanagementsystem für Milchviehbetriebe, das mittels einer Bolus-Technologie kontinuierlich Gesundheitsdaten direkt aus der Kuh misst, um frühzeitig Krankheiten zu erkennen und präventive Massnahmen zu ermöglichen.
+        """@de,
+        """
+        A health management system for dairy farms that continuously measures health data directly from the cow using bolus technology to detect diseases early and enable preventive measures.
+        """@en,
+        """
+        Un système de gestion de la santé pour les exploitations laitières qui mesure en continu les données de santé directement depuis la vache grâce à une technologie de bolus pour détecter précocement les maladies et permettre des mesures préventives.
+        """@fr,
+        """
+        Un sistema di gestione della salute per aziende lattiero-casearie che misura continuamente i dati sanitari direttamente dalla mucca tramite una tecnologia a bolo per rilevare precocemente le malattie e consentire misure preventive.
+        """@it ;
+    dcat:landingPage <https://www.smaxtec.com/> ;
+    systemmap:operatedBy zefix:1566606 .
+
+systemmap:SDoGAjF1AJCdFZQQl a schema:SoftwareApplication ;
+    rdfs:label "E-Direct"@de,
+        "E-Direct"@en,
+        "E-Direct"@fr,
+        "E-Direct"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Mobile App zur direkten Anmeldung von Schlachttieren durch Landwirte. Ermöglicht Terminvereinbarung, Transportorganisation und automatische Dokumentenerstellung.
+        """@de,
+        """
+        Mobile app enabling farmers to register slaughter animals directly. Facilitates scheduling, transport coordination, and automated documentation.
+        """@en,
+        """
+        Application mobile permettant aux agriculteurs d'enregistrer directement les animaux de boucherie. Facilite la prise de rendez-vous, l'organisation du transport et la création automatique de documents.
+        """@fr,
+        """
+        App mobile che consente agli agricoltori di registrare direttamente gli animali da macello. Facilita la programmazione, il coordinamento del trasporto e la documentazione automatizzata.
+        """@it ;
+    dcat:landingPage <https://www.micarna.ch/de/services/e-direct> ;
+    systemmap:operatedBy zefix:130459 .
 
 systemmap:SE5DY78J7vgfoiDLj a schema:SoftwareApplication ;
     rdfs:label "Protection Variété"@de,
@@ -423,6 +704,68 @@ systemmap:SE5DY78J7vgfoiDLj a schema:SoftwareApplication ;
         "ProVar"@fr,
         "ProVar"@it ;
     systemmap:operatedBy systemmap:SfX7h09MplFWwb4LK .
+
+systemmap:SEcvzMJMYkUtSnTSB a schema:SoftwareApplication ;
+    rdfs:label "Moblin"@de,
+        "Moblin"@en,
+        "Moblin"@fr,
+        "Moblin"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Moblin ist ein effizientes und einfach zu bedienendes Programm für Schlachtbetriebe. Es deckt alle Aspekte einer Schlachtung ab, von der Tierannahme über Schlachtung, Wägung, Etiketten- und Schlachtpapierausdrucke bis zum Export in die Buchhaltung. Die Software ist für Touchscreen-Industriecomputer ausgelegt und wurde praxisnah zusammen mit einem Schlachtbetrieb entwickelt.
+        """@de,
+        """
+        Moblin is an efficient and easy-to-use software for slaughterhouses, covering all aspects from animal intake, slaughter, weighing, label and slaughter paper printing, to accounting export. It is designed for touchscreen industrial computers and was developed in close cooperation with a slaughterhouse for practical use.
+        """@en,
+        """
+        Moblin est un programme efficace et facile à utiliser pour les abattoirs. Il couvre tous les aspects de l'abattage, de la réception des animaux à l'abattage, la pesée, l'impression d'étiquettes et de documents d'abattage, jusqu'à l'exportation vers la comptabilité. Le logiciel est conçu pour des ordinateurs industriels à écran tactile et a été développé en collaboration avec un abattoir pour une utilisation pratique.
+        """@fr,
+        """
+        Moblin è un programma efficiente e facile da usare per i macelli. Copre tutti gli aspetti della macellazione, dalla ricezione degli animali, macellazione, pesatura, stampa di etichette e documenti di macellazione fino all’esportazione in contabilità. Il software è progettato per computer industriali touchscreen ed è stato sviluppato in collaborazione con un macello per un utilizzo pratico.
+        """@it ;
+    systemmap:operatedBy zefix:1099793 .
+
+systemmap:SGHEvT8M3jGEd8KdJ a schema:SoftwareApplication ;
+    rdfs:label "SmartBeef®"@de,
+        "SmartBeef®"@en,
+        "SmartBeef®"@fr,
+        "SmartBeef®"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Webbasiertes Auswertungsprogramm für Rindermäster, welches als Hilfsmittel für die Planung und Produktionssteuerung dient und bei der Erfassung und Archivierung von relevanten Daten in der Rindviehmast unterstützt.
+        """@de,
+        """
+        Web-based analysis program for cattle fatteners, which serves as a tool for planning and production control and supports the recording and archiving of relevant data in cattle fattening.
+        """@en,
+        """
+        Programme d'analyse en ligne pour les engraisseurs de bovins, servant d'outil de planification et de contrôle de la production et soutenant la saisie et l'archivage des données pertinentes dans l'engraissement des bovins.
+        """@fr,
+        """
+        Programma di analisi basato sul web per ingrassatori di bovini, che funge da strumento per la pianificazione e il controllo della produzione e supporta la registrazione e l'archiviazione di dati importanti nell'ingrasso di bovini.
+        """@it ;
+    dcat:landingPage <https://www.melior.ch/dienstleistung/smartbeef> ;
+    systemmap:operatedBy zefix:76051 .
+
+systemmap:SGRIDS_LmnPqR5tYvCxDG a schema:SoftwareApplication ;
+    rdfs:label "GRIDS"@de,
+        "GRIDS"@en,
+        "GRIDS"@fr,
+        "GRIDS"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        GRIDS ist ein Informations- und Dokumentationssystem über Grossraubtiere, das vom BAFU in Zusammenarbeit mit den Kantonen betrieben wird. Es dient der Verwaltung von Nutztierschäden, Regulierungsmassnahmen und der Erstellung von Statistiken und ist mit AGIS, AMICUS und der TVD verknüpft.
+        """@de,
+        """
+        GRIDS is an information and documentation system on large carnivores, operated by the FOEN in cooperation with the cantons. It is used for managing livestock damage, regulation measures, and creating statistics, and is linked to AGIS, AMICUS, and the TVD.
+        """@en,
+        """
+        GRIDS est un système d'information et de documentation sur les grands prédateurs, exploité par l'OFEV en collaboration avec les cantons. Il sert à la gestion des dommages au bétail, aux mesures de régulation, à l'établissement de statistiques et est connecté à AGIS, AMICUS et à la BDTA.
+        """@fr,
+        """
+        GRIDS è un sistema informativo e di documentazione sui grandi predatori, gestito dall'UFAM in collaborazione con i cantoni. Viene utilizzato per la gestione dei danni al bestiame, le misure di regolazione, la creazione di statistiche ed è collegato ad AGIS, AMICUS e alla BDTA.
+        """@it ;
+    dcat:landingPage <https://www.bafu.admin.ch/bafu/de/home/themen/biodiversitaet/tiere-und-pflanzen/tiere--pilze--mikroorganismen/grossraubtiere.html> ;
+    systemmap:operatedBy systemmap:SwlgSr7ukziL6iHsP .
 
 systemmap:SGdyOoksCnRRZwi2Q a schema:SoftwareApplication ;
     rdfs:label "Agate"@de,
@@ -508,6 +851,55 @@ systemmap:SHyBeGX0LsQwjJ6Z a schema:SoftwareApplication ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> ;
     systemmap:operatedBy systemmap:SNbhMvt3Btta1U1d6 .
 
+systemmap:SI3XHtHkv1ePAqhQg a schema:SoftwareApplication ;
+    rdfs:label "DGWeb Vet"@de,
+        "DGWeb Vet"@en,
+        "DGWeb Vet"@fr,
+        "DGWeb Vet"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Eine Applikation, mit der Tierärztinnen und Tierärzte amtliche Aufträge ausführen, Analyseaufträge erstellen, Probendaten erfassen und diese dem LSVW übermitteln können.
+        Die Software unterstützt die Prävention und Bekämpfung von Tierseuchen und Zoonosen.
+        """@de,
+        """
+        An application enabling veterinarians to carry out official mandates, create analysis orders, record sample data, and transmit them to the FSVA.
+        The software supports the prevention and control of animal diseases and zoonoses.
+        """@en,
+        """
+        Une application permettant aux vétérinaires d’exécuter des mandats officiels, de créer des ordres d’analyse, d’enregistrer les données d’échantillons et de les transmettre au SAAV.
+        Le logiciel soutient la prévention et la lutte contre les épizooties et les zoonoses.
+        """@fr,
+        """
+        Un’applicazione che consente ai veterinari di eseguire mandati ufficiali, creare ordini di analisi, registrare i dati dei campioni e trasmetterli al SAAV.
+        Il software sostiene la prevenzione e il controllo delle epizoozie e delle zoonosi.
+        """@it ;
+    systemmap:operatedBy systemmap:SNYgqSYzzANvzanVS .
+
+systemmap:SJ15CI0vn3S1JgcOd a schema:SoftwareApplication ;
+    rdfs:label "Vetera"@de,
+        "Vetera"@en,
+        "Vetera"@fr,
+        "Vetera"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Vetera ist eine umfassende Praxismanagement-Software für Tierärzte, die Funktionen wie Patientenverwaltung, Terminplanung, Leistungsabrechnung und Medikamentenmanagement bietet.
+        Sie wird von der Vetera.net GmbH entwickelt und betrieben, wobei die swissVets AG ein wichtiger Partner und Nutzer in der Schweiz ist.
+        """@de,
+        """
+        Vetera is a comprehensive practice management software for veterinarians, offering functions such as patient management, appointment scheduling, billing, and medication management.
+        It is developed and operated by Vetera.net GmbH, with swissVets AG being a key partner and user in Switzerland.
+        """@en,
+        """
+        Vetera est un logiciel complet de gestion de cabinet pour vétérinaires, offrant des fonctions telles que la gestion des patients, la planification des rendez-vous, la facturation des prestations et la gestion des médicaments.
+        Il est développé et exploité par Vetera.net GmbH, swissVets AG étant un partenaire et utilisateur clé en Suisse.
+        """@fr,
+        """
+        Vetera è un software gestionale completo per veterinari che offre funzioni come la gestione dei pazienti, la pianificazione degli appuntamenti, la fatturazione delle prestazioni e la gestione dei farmaci.
+        È sviluppato e gestito da Vetera.net GmbH, con swissVets AG come partner e utente chiave in Svizzera.
+        """@it ;
+    dcat:landingPage <https://vetera.net/> ;
+    systemmap:operatedBy systemmap:SrG5yvnwax87iuQw8 .
+
 systemmap:SLxeXHOfmC6DkBGl a schema:SoftwareApplication ;
     rdfs:label "Zentrale Auswertung von Agrarumweltindikatoren"@de ;
     rdfs:comment """
@@ -519,6 +911,27 @@ systemmap:SLxeXHOfmC6DkBGl a schema:SoftwareApplication ;
         <https://www.za-aui.ch> ;
     systemmap:abbreviation "ZA-AUI"@de ;
     systemmap:operatedBy staatskalender:20050530 .
+
+systemmap:SMHngOxi88zm9ya9N a schema:SoftwareApplication ;
+    rdfs:label "myBica"@de,
+        "myBica"@en,
+        "myBica"@fr,
+        "myBica"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Agiles ERP-System für Schweizer Unternehmen, das Module für Einkauf, Lagerverwaltung, Auftragsabwicklung, Schlachtdatenverwaltung und Viehabrechnung integriert. Es wird von Unternehmen wie der Bigler AG genutzt.
+        """@de,
+        """
+        ERP solution for meat processing companies, featuring production management, batch tracking, and automated financial reporting, including livestock accounting and slaughter data modules. It is used by companies like Bigler AG.
+        """@en,
+        """
+        Système ERP pour l'industrie agroalimentaire avec gestion des abattoirs, traçabilité des lots et intégration bancaire, utilisé par des entreprises comme Bigler AG.
+        """@fr,
+        """
+        Piattaforma ERP per aziende di trasformazione carne con gestione macellazione, tracciabilità dei lotti e contabilità integrata, utilizzata da aziende come Bigler AG.
+        """@it ;
+    dcat:landingPage <https://www.mybica.ch/produkt.html> ;
+    systemmap:operatedBy zefix:1226256 .
 
 systemmap:SMjqlEoVCR9wpTyN1 a schema:SoftwareApplication ;
     rdfs:label "Acorda"@de,
@@ -569,6 +982,27 @@ systemmap:SOL6kHAvPFNIuM9E a schema:SoftwareApplication ;
         """@de ;
     systemmap:operatedBy systemmap:ShM5kJNFhO8vOAEdK .
 
+systemmap:SPASZffcsCMdIFEsZ a schema:SoftwareApplication ;
+    rdfs:label "Fleko"@de,
+        "Fleko"@en,
+        "Fleko"@fr,
+        "Fleko"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Die Fleischkontrolldatenbank Fleko ist eine Webanwendung zur Erfassung und Verwaltung der Befunde aus der Schlachttier- und Fleischuntersuchung in der Schweiz. Sie dient der Dokumentation der Genusstauglichkeit und ermöglicht die Verwaltung von Gebühren und Leistungen im Bereich der Fleischkontrolle. Die Anwendung wird zentral vom BLV betreut und ist für kantonale Sachbearbeiter, Fleischkontrolleure und Administratoren zugänglich.
+        """@de,
+        """
+        Fleko is the Swiss national meat inspection database, a web application used to record and manage findings from slaughter animal and meat inspections. It documents fitness for consumption and allows for the administration of fees and services related to meat inspection. The system is centrally operated by the Federal Food Safety and Veterinary Office (FSVO) and is accessible to cantonal officers, meat inspectors, and administrators.
+        """@en,
+        """
+        Fleko est la base de données suisse pour le contrôle des viandes, une application web permettant la saisie et la gestion des résultats des inspections des animaux de boucherie et de la viande. Elle sert à documenter l’aptitude à la consommation et à gérer les taxes et prestations liées au contrôle des viandes. Le système est géré de manière centralisée par l’OSAV et accessible aux collaborateurs cantonaux, contrôleurs des viandes et administrateurs.
+        """@fr,
+        """
+        Fleko è la banca dati svizzera per il controllo delle carni, un’applicazione web per la registrazione e la gestione dei risultati delle ispezioni degli animali da macello e delle carni. Serve a documentare l’idoneità al consumo e consente la gestione di tasse e prestazioni nel settore del controllo delle carni. Il sistema è gestito centralmente dall’USAV ed è accessibile a funzionari cantonali, ispettori delle carni e amministratori.
+        """@it ;
+    dcat:landingPage <https://www.blv.admin.ch/blv/de/home/lebensmittel-und-ernaehrung/lebensmittelsicherheit/verantwortlichkeiten/fleischkontrolle/fleko.html> ;
+    systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN .
+
 systemmap:SPWOFHR512FuAc25b a schema:SoftwareApplication ;
     rdfs:label "Gesamtlösung EDV Landwirtschaft & Natur"@de,
         "Comprehensive IT Solution for Agriculture & Nature"@en,
@@ -616,6 +1050,73 @@ systemmap:SQfl1MHnNpsAj3WP a schema:SoftwareApplication ;
     dcat:landingPage <https://blw-ofag-ufag.github.io/system-map/> ;
     systemmap:operatedBy systemmap:SFAwQAwxBcNnaURgO .
 
+systemmap:SQkEfw7VYTz3ceOrg a schema:SoftwareApplication ;
+    rdfs:label "elektronische Sonderbewilligung PSM"@de,
+        "electronic special permit PPP"@en,
+        "autorisation spéciale électronique PPE"@fr,
+        "permesso speciale elettronico PFF"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Ein Online-Formular zur Beantragung von Sonderbewilligungen für den Einsatz von Pflanzenschutzmitteln (PSM) in besonderen Kulturen, bereitgestellt vom Strickhof in Zusammenarbeit mit der Baudirektion des Kantons Zürich.
+        """@de,
+        """
+        An online form for applying for special permits for the use of plant protection products (PPP) in special crops, provided by Strickhof in cooperation with the Building Department of the Canton of Zurich.
+        """@en,
+        """
+        Un formulaire en ligne pour demander des autorisations spéciales pour l'utilisation de produits phytopharmaceutiques (PPP) dans des cultures spéciales, fourni par le Strickhof en collaboration avec la Direction des travaux publics du canton de Zurich.
+        """@fr,
+        """
+        Un modulo online per la richiesta di permessi speciali per l'uso di prodotti fitosanitari (PFF) in colture speciali, fornito dallo Strickhof in collaborazione con il Dipartimento dei lavori pubblici del Cantone di Zurigo.
+        """@it ;
+    dcat:landingPage <https://www.strickhof.ch/publikationen/elektronische-sonderbewilligung/> ;
+    systemmap:operatedBy systemmap:S0ummGTITezxHMtA3,
+        systemmap:SWRHHjM4WnPdLkEVr .
+
+systemmap:SSALCAfutureLmnPqR1tYvCxD8 a schema:SoftwareApplication ;
+    rdfs:label "SALCAfuture"@de,
+        "SALCAfuture"@en,
+        "SALCAfuture"@fr,
+        "SALCAfuture"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        SALCAfuture ist ein Expertensystem zur Erstellung von Ökobilanzen für landwirtschaftliche Produkte, Lebensmittel und Betriebe im Rahmen von Forschungsprojekten.
+        Es erleichtert die Dateneingabe, ermöglicht präzise Berechnungen von Umweltwirkungen nach der SALCA-Methode und bietet einen Web-Interface-Zugang für Projektpartner.
+        """@de,
+        """
+        SALCAfuture is an expert system for creating life cycle assessments (LCAs) for agricultural products, foods, and farms within research projects.
+        It facilitates data entry, enables precise calculation of environmental impacts using the SALCA method, and provides web interface access for project partners.
+        """@en,
+        """
+        SALCAfuture est un système expert pour la réalisation d’analyses du cycle de vie (ACV) de produits agricoles, d’aliments et d’exploitations dans le cadre de projets de recherche.
+        Il facilite la saisie des données, permet des calculs précis des impacts environnementaux selon la méthode SALCA et offre un accès par interface web aux partenaires de projet.
+        """@fr,
+        """
+        SALCAfuture è un sistema esperto per la creazione di valutazioni del ciclo di vita (LCA) per prodotti agricoli, alimenti e aziende agricole nell'ambito di progetti di ricerca.
+        Facilita l'inserimento dei dati, consente calcoli precisi degli impatti ambientali secondo il metodo SALCA e fornisce un accesso tramite interfaccia web per i partner di progetto.
+        """@it ;
+    dcat:landingPage <https://www.agroscope.admin.ch/agroscope/en/home/topics/environment-resources/life-cycle-assessment/databases-software-lca/lca-software.html> ;
+    systemmap:operatedBy systemmap:SIo1a8l3IT4lBqBJE .
+
+systemmap:SSpO8T6drwrwFgLXG a schema:SoftwareApplication ;
+    rdfs:label "LSQueryAnimalTracing"@de,
+        "LSQueryAnimalTracing"@en,
+        "LSQueryAnimalTracing"@fr,
+        "LSQueryAnimalTracing"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Eine Softwarelösung der Silvestri AG für den Tierhandel.
+        """@de,
+        """
+        A software solution from Silvestri AG for the livestock trade.
+        """@en,
+        """
+        Une solution logicielle de Silvestri AG pour le commerce d'animaux.
+        """@fr,
+        """
+        Una soluzione software di Silvestri AG per il commercio di bestiame.
+        """@it ;
+    systemmap:operatedBy zefix:177634 .
+
 systemmap:SU88cJmqj8nBRl2KZ a schema:SoftwareApplication ;
     rdfs:label "Tierverkehrsdatenbank"@de,
         "Animal Traffic Database"@en,
@@ -647,6 +1148,68 @@ systemmap:SU88cJmqj8nBRl2KZ a schema:SoftwareApplication ;
         "BDTA"@fr,
         "BDTA"@it ;
     systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS .
+
+systemmap:SVetDbLmnPqR2tYvCxDE a schema:SoftwareApplication ;
+    rdfs:label "VET-DB"@de,
+        "VET-DB"@en,
+        "VET-DB"@fr,
+        "VET-DB"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Eine interne Software-Anwendung des Kantonalen Veterinäramtes Zürich.
+        """@de,
+        """
+        An internal software application of the Cantonal Veterinary Office of Zurich.
+        """@en,
+        """
+        Une application logicielle interne de l'Office vétérinaire cantonal de Zurich.
+        """@fr,
+        """
+        Un'applicazione software interna dell'Ufficio veterinario cantonale di Zurigo.
+        """@it ;
+    systemmap:operatedBy systemmap:SswJdLNKXUjfnD84b .
+
+systemmap:SVlngVUmE9joYkIg7 a schema:SoftwareApplication ;
+    rdfs:label "DNA TraceBack®"@de,
+        "DNA TraceBack®"@en,
+        "DNA TraceBack®"@fr,
+        "DNA TraceBack®"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        DNA-basierte Rückverfolgungstechnologie für Fleischprodukte zur Sicherstellung der Herkunft und Qualität.
+        """@de,
+        """
+        DNA-based traceability system verifying meat provenance through supply chains.
+        """@en,
+        """
+        Technologie de traçabilité ADN pour produits carnés certifiant l'origine suisse.
+        """@fr,
+        """
+        Sistema di tracciabilità basato sul DNA che verifica la provenienza della carne lungo le filiere.
+        """@it ;
+    dcat:landingPage <https://www.identigen.com/dna-traceback> ;
+    systemmap:operatedBy zefix:201495 .
+
+systemmap:SWPaPOSDJI3Kdv83m a schema:SoftwareApplication ;
+    rdfs:label "Visionherens"@de,
+        "Visionherens"@en,
+        "Visionherens"@fr,
+        "Visionherens"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Visionherens ist das Online-Herdebuch des Schweizerischen Eringerviehzuchtverband. Es ermöglicht Züchtern den Zugriff auf aktuelle Tierdaten wie Zuchtwerte und Abstammung und bietet Funktionen zur selbstständigen Verwaltung, wie die Erfassung von Sprungmeldungen oder das Drucken offizieller Dokumente.
+        """@de,
+        """
+        Visionherens is the online herdbook of the Swiss Hérens Cattle Breeders' Federation. It allows breeders to access up-to-date animal data such as breeding values and pedigrees and offers self-management functions like recording matings or printing official documents.
+        """@en,
+        """
+        Visionherens est le livre généalogique en ligne de la Fédération Suisse d'élevage de la Race d'Hérens. Il permet aux éleveurs d'accéder aux données actuelles des animaux, telles que les valeurs d'élevage et les ascendances, et offre des fonctions d'autogestion comme la saisie des saillies ou l'impression de documents officiels.
+        """@fr,
+        """
+        Visionherens è il libro genealogico online della Federazione Svizzera di allevamento della razza d'Hérens. Permette agli allevatori di accedere a dati aggiornati sugli animali come i valori genetici e le genealogie e offre funzioni di autogestione come la registrazione delle monte o la stampa di documenti ufficiali.
+        """@it ;
+    dcat:landingPage <https://www.raceherens.ch/de/visionherens-online-herdebuch> ;
+    systemmap:operatedBy systemmap:SJqSPxOD2hdgsgJDI .
 
 systemmap:SXcby9KwakDGhBdP a schema:SoftwareApplication ;
     rdfs:label "ACmobile"@de,
@@ -700,6 +1263,27 @@ systemmap:SYOd1TkacTh6cr0xP a schema:SoftwareApplication ;
         "dbmilch"@it ;
     systemmap:operatedBy systemmap:SQ3N7dTc23t2wzXr2 .
 
+systemmap:SYQt9hzLel1dEtlOn a schema:SoftwareApplication ;
+    rdfs:label "BrunaNet"@de,
+        "BrunaNet"@en,
+        "BrunaNet"@fr,
+        "BrunaNet"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Online-Herdebuchsystem für Braunviehzüchter mit Echtzeit-Zugriff auf Zucht-, Leistungs- und Gesundheitsdaten. Inklusive Marktplatz für Tierhandel und digitalem Behandlungsjournal.
+        """@de,
+        """
+        Herd management platform providing real-time breeding, performance, and health data. Features an online marketplace for cattle trading and digital treatment records.
+        """@en,
+        """
+        Plateforme de gestion de troupeau avec accès aux données zootechniques en temps réel, incluant un marché en ligne pour le bétail et un journal de traitement numérique.
+        """@fr,
+        """
+        Piattaforma digitale per la gestione dell'allevamento con dati aggiornati su riproduzione, prestazioni e salute, inclusa una piazza virtuale per il commercio di bestiame.
+        """@it ;
+    dcat:landingPage <https://brunanet.ch/BrunaNet/> ;
+    systemmap:operatedBy zefix:226184 .
+
 systemmap:SZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
     rdfs:label "AGRICOLA"@de,
         "AGRICOLA"@en,
@@ -743,6 +1327,48 @@ systemmap:SZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
         systemmap:SVpDMEiTfIVQsNzT8,
         systemmap:SoVAiCrMPYG2LJxsA .
 
+systemmap:SbQMDyJD8k62AfApL a schema:SoftwareApplication ;
+    rdfs:label "SAIMo"@de,
+        "SAIMo"@en,
+        "SAIMo"@fr,
+        "SAIMo"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        SAIMo ist das Datenerhebungssystem für die Stichprobe Betriebsführung von Agroscope. Es wird von Treuhandstellen verwendet, um Buchhaltungsdaten landwirtschaftlicher Betriebe zu erfassen und an Agroscope zu liefern.
+        """@de,
+        """
+        SAIMo is the data collection system for Agroscope's Farm Accountancy Sample. It enables trustees to capture and deliver accounting data from agricultural holdings to Agroscope.
+        """@en,
+        """
+        SAIMo est le système de collecte de données pour l'échantillon de gestion d'exploitation d'Agroscope. Il est utilisé par les fiduciaires pour saisir et transmettre les données comptables des exploitations agricoles à Agroscope.
+        """@fr,
+        """
+        SAIMo è il sistema di raccolta dati per il campione di gestione aziendale di Agroscope. Viene utilizzato dai fiduciari per acquisire e fornire i dati contabili delle aziende agricole ad Agroscope.
+        """@it ;
+    dcat:landingPage <https://www.agate.ch/saimo/datenerhebung/> ;
+    systemmap:operatedBy systemmap:SIo1a8l3IT4lBqBJE .
+
+systemmap:SbbbXta7RwMcmH9aB a schema:SoftwareApplication ;
+    rdfs:label "Schlachtvieh-Abrechnungssystem"@de,
+        "Slaughter Cattle Invoicing System"@en,
+        "Système de facturation du bétail de boucherie"@fr,
+        "Sistema di fatturazione del bestiame da macello"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Ein internes System zur Erstellung von Abrechnungen und Abwicklungen für Schlachtvieh, basierend auf dem ERP-System Microsoft Dynamics NAV.
+        """@de,
+        """
+        An internal system for creating invoices and settlements for slaughtered cattle, based on the ERP system Microsoft Dynamics NAV.
+        """@en,
+        """
+        Un système interne pour la création de factures et de décomptes pour le bétail de boucherie, basé sur le système ERP Microsoft Dynamics NAV.
+        """@fr,
+        """
+        Un sistema interno per la creazione di fatture e conteggi per il bestiame da macello, basato sul sistema ERP Microsoft Dynamics NAV.
+        """@it ;
+    systemmap:abbreviation "NAV Schlachtviehabrechnung"@de ;
+    systemmap:operatedBy zefix:469727 .
+
 systemmap:Sc6kZqxTyS0gFGCY a schema:SoftwareApplication ;
     rdfs:label "Marktdaten Analyse- und Reporting-System"@de,
         "Market Data Analysis and Reporting System"@en,
@@ -765,6 +1391,48 @@ systemmap:Sc6kZqxTyS0gFGCY a schema:SoftwareApplication ;
         "MARS III"@fr,
         "MARS III"@it ;
     systemmap:operatedBy systemmap:SaVyVVsIDkiDMtQq4 .
+
+systemmap:Sd3egXVVG1pgbzgcA a schema:SoftwareApplication ;
+    rdfs:label "ERP-System"@de,
+        "ERP System"@en,
+        "Système ERP"@fr,
+        "Sistema ERP"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Eine auf Microsoft Navision basierende ERP-Software, die von der ASF Tiervermarktung AG genutzt wird.
+        """@de,
+        """
+        An ERP software based on Microsoft Navision, used by ASF Tiervermarktung AG.
+        """@en,
+        """
+        Un logiciel ERP basé sur Microsoft Navision, utilisé par ASF Tiervermarktung AG.
+        """@fr,
+        """
+        Un software ERP basato su Microsoft Navision, utilizzato da ASF Tiervermarktung AG.
+        """@it ;
+    dcat:landingPage <https://dynamics.microsoft.com/de-de/business-central/overview/> ;
+    systemmap:abbreviation "Navision"@de ;
+    systemmap:operatedBy zefix:2595 .
+
+systemmap:SdUi9po2l0PgjsATP a schema:SoftwareApplication ;
+    rdfs:label "Elvasem"@de,
+        "Elvasem"@en,
+        "Elvasem"@fr,
+        "Elvasem"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Elvasem ist ein Online-Tool von swissgenetics zur Erfassung und Verwaltung von Besamungsdaten.
+        """@de,
+        """
+        Elvasem is an online tool from swissgenetics for recording and managing insemination data.
+        """@en,
+        """
+        Elvasem est un outil en ligne de swissgenetics pour l'enregistrement et la gestion des données d'insémination.
+        """@fr,
+        """
+        Elvasem è uno strumento online di swissgenetics per la registrazione e la gestione dei dati di inseminazione.
+        """@it ;
+    systemmap:operatedBy zefix:448334 .
 
 systemmap:SeJ36zAhO3AJJix8t a schema:SoftwareApplication ;
     rdfs:label "Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft"@de,
@@ -813,6 +1481,35 @@ systemmap:SgjZ0efLbuCR2HvN a schema:SoftwareApplication ;
         "PLUTO"@it ;
     systemmap:operatedBy systemmap:SBLH2G6TSKaqhqk4n .
 
+systemmap:ShWzrtCjaSa8nRJ4N a schema:SoftwareApplication ;
+    rdfs:label "amacos"@de,
+        "amacos"@en,
+        "amacos"@fr,
+        "amacos"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        amacos ist eine digitale Lösung für Arbeitsrapporte, die mit einer App administrative Aufgaben wie Zeiterfassung oder Materialverbrauch vereinfacht.
+        Die offlinefähige Software passt sich flexibel an verschiedene Branchen an – von Handwerk über Landwirtschaft bis Transport – und speichert Daten sicher in der Schweiz.
+        Zusätzlich bietet sie praktische Funktionen wie Fotodokumentation oder automatische Rechnungsvorbereitung.
+        """@de,
+        """
+        amacos is a digital solution for work reports that simplifies administrative tasks such as time tracking and material consumption with an app.
+        The offline-capable software flexibly adapts to various industries—from crafts and agriculture to transport—and stores data securely in Switzerland.
+        Additionally, it offers practical functions like photo documentation or automatic invoice preparation.
+        """@en,
+        """
+        amacos est une solution numérique pour les rapports de travail qui simplifie les tâches administratives telles que la saisie du temps ou la consommation de matériel avec une application.
+        Le logiciel, utilisable hors ligne, s'adapte de manière flexible à divers secteurs – de l'artisanat à l'agriculture en passant par les transports – et stocke les données en toute sécurité en Suisse.
+        De plus, il offre des fonctions pratiques comme la documentation photo ou la préparation automatique des factures.
+        """@fr,
+        """
+        amacos è una soluzione digitale per i rapporti di lavoro che semplifica le attività amministrative come la registrazione del tempo o il consumo di materiali con un'app.
+        Il software, utilizzabile offline, si adatta in modo flessibile a vari settori – dall'artigianato all'agricoltura fino ai trasporti – e memorizza i dati in modo sicuro in Svizzera.
+        Inoltre, offre funzioni pratiche come la documentazione fotografica o la preparazione automatica delle fatture.
+        """@it ;
+    dcat:landingPage <https://amacos.ch/> ;
+    systemmap:operatedBy zefix:367883 .
+
 systemmap:ShZO092di7cBnOm7F a schema:SoftwareApplication ;
     rdfs:label "Business-Intelligence-System"@de,
         "Business Intelligence System"@en,
@@ -853,6 +1550,27 @@ systemmap:Shhoiq8azX3SHGL3W a schema:SoftwareApplication ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2010/340> ;
     systemmap:operatedBy systemmap:SoqmfoevPVgr3d0AA .
 
+systemmap:Shu8wJsNr6s2DSkrI a schema:SoftwareApplication ;
+    rdfs:label "Agrosoft Farmsolution"@de,
+        "Agrosoft Farmsolution"@en,
+        "Agrosoft Farmsolution"@fr,
+        "Agrosoft Farmsolution"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Agrosoft Farmsolution ist eine modulare Betriebsmanagement-Software für die Schweizer Landwirtschaft. Sie deckt Bereiche wie Pflanzenbau, Tierhaltung und Buchhaltung ab und ist eine zu 100% in der Schweiz entwickelte Lösung.
+        """@de,
+        """
+        Agrosoft Farmsolution is a modular farm management software for Swiss agriculture. It covers areas such as crop cultivation, animal husbandry, and accounting and is a solution developed 100% in Switzerland.
+        """@en,
+        """
+        Agrosoft Farmsolution est un logiciel modulaire de gestion d'exploitation pour l'agriculture suisse. Il couvre des domaines tels que la culture des champs, l'élevage et la comptabilité et est une solution développée à 100% en Suisse.
+        """@fr,
+        """
+        Agrosoft Farmsolution è un software modulare di gestione aziendale per l'agricoltura svizzera. Copre settori come la coltivazione, l'allevamento e la contabilità ed è una soluzione sviluppata al 100% in Svizzera.
+        """@it ;
+    dcat:landingPage <https://www.farmsolution.ch/> ;
+    systemmap:operatedBy systemmap:SLu8IMm0TUxYimTwO .
+
 systemmap:SjCVTMrYaOTygNcqF a schema:SoftwareApplication ;
     rdfs:label "digiFLUX"@de,
         "digiFLUX"@en,
@@ -890,11 +1608,37 @@ systemmap:SjhTrVt8CB9QFq0Yn a schema:SoftwareApplication ;
         Die Softwareanwendung 'Produktekatalog' erlaubt es, die in digiFLUX abgebildeten Produkte einzusehen, zu erstellen, oder anzupassen.
         """@de .
 
+systemmap:SkGYudMy9po7MUq2x a schema:SoftwareApplication ;
+    rdfs:label "Equi-FM"@de,
+        "Equi-FM"@en,
+        "Equi-FM"@fr,
+        "Equi-FM"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Equi-FM ist eine Softwarelösung des Schweizerischen Freibergerverbandes (SFV) zur Verwaltung, Vermarktung und Auswahl von Freibergerpferden.
+        Sie unterstützt Züchter und Käufer bei der Suche nach passenden Pferden anhand von Kriterien wie Persönlichkeit, Ausbildungsstand und individuellen Bedürfnissen.
+        """@de,
+        """
+        Equi-FM is a software solution from the Swiss Federation of Franches-Montagnes Horse Breeders (SFV) for the management, marketing, and selection of Franches-Montagnes horses.
+        It supports breeders and buyers in finding suitable horses based on criteria such as personality, training level, and individual needs.
+        """@en,
+        """
+        Equi-FM est une solution logicielle de la Fédération suisse d’élevage du cheval de la race Franches-Montagnes (SFV) pour la gestion, la commercialisation et la sélection des chevaux Franches-Montagnes.
+        Elle aide les éleveurs et les acheteurs à trouver des chevaux adaptés selon des critères tels que la personnalité, le niveau de formation et les besoins individuels.
+        """@fr,
+        """
+        Equi-FM è una soluzione software della Federazione svizzera degli allevatori del cavallo di razza Franches-Montagnes (SFV) per la gestione, la commercializzazione e la selezione dei cavalli Franches-Montagnes.
+        Supporta allevatori e acquirenti nella ricerca di cavalli adatti in base a criteri come personalità, livello di addestramento e bisogni individuali.
+        """@it ;
+    dcat:landingPage <https://www.agroscope.admin.ch/agroscope/de/home/themen/nutztiere/pferde/haras-forschung-sng/haras-forschung-e-fm.html> ;
+    systemmap:operatedBy systemmap:ScS6Ziy08AYukFjjh .
+
 systemmap:SlTSOXsBC2LN7Qkp a schema:SoftwareApplication ;
     rdfs:label "Barto"@de,
         "Barto"@en,
         "Barto"@fr,
         "Barto"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Barto ist eine digitale Plattform für die Landwirtschaft, die eine effiziente Betriebsführung, Dokumentation und Analyse von Betriebsdaten ermöglicht.
         Sie integriert verschiedene agronomische und administrative Funktionen und bietet Landwirtinnen und Landwirten eine zentrale Lösung für die Verwaltung ihres Betriebs.
@@ -940,6 +1684,23 @@ systemmap:SlfheulBjlQDwuaIM a schema:SoftwareApplication ;
         Su questa pagina troverete l'accesso all'applicazione e documenti utili come il manuale utente di HODUFLU.
         """@it ;
     systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP .
+
+systemmap:SlmCGKfiLZcQ0MsvC a schema:SoftwareApplication ;
+    rdfs:label "SAP-Meatline"@de ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Ein auf SAP basierendes ERP-System, das von Micarna für die Verwaltung von Prozessen in der Fleischverarbeitung genutzt wird.
+        """@de,
+        """
+        An SAP-based ERP system used by Micarna for managing meat processing operations.
+        """@en,
+        """
+        Un système ERP basé sur SAP, utilisé par Micarna pour la gestion des processus de transformation de la viande.
+        """@fr,
+        """
+        Un sistema ERP basato su SAP, utilizzato da Micarna per la gestione dei processi di lavorazione della carne.
+        """@it ;
+    systemmap:operatedBy zefix:130459 .
 
 systemmap:SmWEQ8lVlDS9ZwPkY a schema:SoftwareApplication ;
     rdfs:label "LAWIS"@de,
@@ -1013,6 +1774,48 @@ systemmap:SnM0KdtMBmniYOY8f a schema:SoftwareApplication ;
         "MRDA"@it ;
     systemmap:operatedBy systemmap:SFAwQAwxBcNnaURgO .
 
+systemmap:Snfl97lvHuIqb7cTZ a schema:SoftwareApplication ;
+    rdfs:label "Softproviding Meat"@de,
+        "Softproviding Meat"@en,
+        "Softproviding Meat"@fr,
+        "Softproviding Meat"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Branchenspezifische SAP-ERP-Lösung für die Fleischindustrie, die Prozesse von der Schlachtung bis zur Lieferung unterstützt, einschliesslich Chargenrückverfolgung und Qualitätsmanagement. Genutzt von Unternehmen wie Bell Schweiz AG, Schlachtbetrieb St. Gallen AG und Ernst Sutter AG.
+        """@de,
+        """
+        Industry-specific SAP ERP solution for meat processing, integrating slaughtering, disassembly, packaging, and supply chain tracking with quality control features. Used by companies like Bell Schweiz AG, Schlachtbetrieb St. Gallen AG, and Ernst Sutter AG.
+        """@en,
+        """
+        Solution SAP ERP spécialisée pour l'industrie de la viande, intégrant les processus de l'abattage à la livraison, y compris le suivi des lots et la gestion de la qualité. Utilisée par des entreprises comme Bell Schweiz AG, Schlachtbetrieb St. Gallen AG et Ernst Sutter AG.
+        """@fr,
+        """
+        Soluzione ERP SAP specifica per l'industria della carne, che integra i processi dalla macellazione alla consegna, inclusi il tracciamento dei lotti e la gestione della qualità. Utilizzata da aziende come Bell Schweiz AG, Schlachtbetrieb St. Gallen AG ed Ernst Sutter AG.
+        """@it ;
+    dcat:landingPage <https://www.softproviding.com/meat/> ;
+    systemmap:operatedBy zefix:531454 .
+
+systemmap:SoBSi8PwUf9xFjdrM a schema:SoftwareApplication ;
+    rdfs:label "EASY-CERT Cloud"@de,
+        "EASY-CERT Cloud"@en,
+        "EASY-CERT Cloud"@fr,
+        "EASY-CERT Cloud"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Cloud-basierte Plattform zur Verwaltung von Zertifizierungsdaten, Produktelisten und Labelstatus für Landwirtschaftsbetriebe und Unternehmen.
+        """@de,
+        """
+        Cloud platform for managing certification data, product lists, and label approvals for agricultural businesses and supply chain partners.
+        """@en,
+        """
+        Plateforme cloud pour la gestion des données de certification, des listes de produits et du statut des labels pour les exploitations agricoles et les entreprises.
+        """@fr,
+        """
+        Piattaforma basata su cloud per la gestione dei dati di certificazione, degli elenchi di prodotti e dello stato delle etichette per le aziende agricole e le imprese.
+        """@it ;
+    dcat:landingPage <https://www.easy-cert.com> ;
+    systemmap:operatedBy zefix:1202686 .
+
 systemmap:SpLZd1ojPxF0CvH28 a schema:SoftwareApplication ;
     rdfs:label "Visualize"@de,
         "Visualize"@en,
@@ -1051,6 +1854,90 @@ systemmap:SpR2aDraNmiUXz55J a schema:SoftwareApplication ;
         """@it ;
     systemmap:operatedBy systemmap:SG5yBV3kE5E5NMM7j .
 
+systemmap:Sq8pW7vv7FNraUfaT a schema:SoftwareApplication ;
+    rdfs:label "BeefNet"@de,
+        "BeefNet"@en,
+        "BeefNet"@fr,
+        "BeefNet"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Online-Datenbank für Mitglieder zur Bestellung von Zertifikaten, Erfassung von Geburten/Belegungen und Herdenverwaltung.
+        """@de,
+        """
+        Web platform for certificate orders, breeding data management, and herd lists.
+        """@en,
+        """
+        Base de données en ligne pour commander des certificats et gérer les données zootechniques.
+        """@fr,
+        """
+        Piattaforma per ordinare certificati e gestire dati riproduttivi.
+        """@it ;
+    dcat:landingPage <https://www.mutterkuh.ch/produzenten-service/fachinfos/beefnet-und-smartcow.html> ;
+    systemmap:operatedBy zefix:769392 .
+
+systemmap:SrkebxtFWRCtftbJV a schema:SoftwareApplication ;
+    rdfs:label "AGRO-TECH"@de,
+        "AGRO-TECH"@en,
+        "AGRO-TECH"@fr,
+        "AGRO-TECH"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        AGRO-TECH ist eine umfassende Bewirtschaftungs-Software, die als Hilfsmittel für den ÖLN dient. Sie ermöglicht das Führen von Schlag- und Tierregistern (mit TVD-Anbindung), die Erstellung von Düngungsplänen, die Berechnung der Suisse-Bilanz sowie die mobile Erfassung von Feldmassnahmen.
+        """@de,
+        """
+        AGRO-TECH is a comprehensive farm management software that serves as a tool for the Proof of Ecological Performance (ÖLN). It enables the management of field and animal registers (with TVD connection), creation of fertilization plans, calculation of the Suisse-Bilanz, and mobile recording of field activities.
+        """@en,
+        """
+        AGRO-TECH est un logiciel de gestion d'exploitation complet servant d'outil pour les prestations écologiques requises (PER). Il permet de tenir des registres de parcelles et d'animaux (avec connexion à la BDTA), d'établir des plans de fumure, de calculer le Bilan de fumure et de saisir les interventions au champ sur mobile.
+        """@fr,
+        """
+        AGRO-TECH è un software di gestione aziendale completo che funge da strumento per la prova delle prestazioni ecologiche (PER). Consente la gestione dei registri delle parcelle e degli animali (con collegamento alla BDTA), la creazione di piani di concimazione, il calcolo del Bilancio della fertilizzazione e la registrazione mobile delle attività in campo.
+        """@it ;
+    dcat:landingPage <https://www.agridea.ch/de/unser-angebot/unsere-produkte/software/agro-tech/> ;
+    systemmap:operatedBy zefix:885059 .
+
+systemmap:Ss7QOCDSxfbstJlpp a schema:SoftwareApplication ;
+    rdfs:label "STATUS"@de,
+        "STATUS"@en,
+        "STATUS"@fr,
+        "STATUS"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Eine branchenspezifische ERP-Software für Lebensmittelbetriebe, die die gesamte Auftragsabwicklung inklusive Einkauf, Lager und Rückverfolgbarkeit abdeckt. Sie bietet zudem Funktionen wie Schlachtabrechnung, Rezepturmanagement und EDI-Schnittstellen zu Handelspartnern.
+        """@de,
+        """
+        An industry-specific ERP software for food processing companies, covering complete order processing including purchasing, warehousing, and traceability. It also offers functions such as slaughter accounting, recipe management, and EDI interfaces to retail partners.
+        """@en,
+        """
+        Un logiciel ERP spécifique à la branche pour les entreprises alimentaires, couvrant le traitement complet des commandes, y compris les achats, le stockage et la traçabilité. Il offre également des fonctions telles que la facturation de l'abattage, la gestion des recettes et des interfaces EDI avec les partenaires commerciaux.
+        """@fr,
+        """
+        Un software ERP specifico del settore per le aziende alimentari, che copre l'intera elaborazione degli ordini, inclusi acquisti, magazzino e tracciabilità. Offre anche funzioni come la contabilità della macellazione, la gestione delle ricette e le interfacce EDI con i partner commerciali.
+        """@it ;
+    dcat:landingPage <https://csn.ch/software/> ;
+    systemmap:operatedBy zefix:336983 .
+
+systemmap:SsUV3nTDKTJ3nQ5L9 a schema:SoftwareApplication ;
+    rdfs:label "SMG-Net"@de,
+        "SMG-Net"@en,
+        "SMG-Net"@fr,
+        "SMG-Net"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Plattform für Zuchtwertauswertungen und Herdebuchführung von Milchschafen in der Schweiz.
+        """@de,
+        """
+        Platform for breeding value evaluations and herdbook management of milk sheep in Switzerland.
+        """@en,
+        """
+        Plateforme pour les évaluations des valeurs d'élevage et la gestion du livre généalogique des moutons laitiers en Suisse.
+        """@fr,
+        """
+        Piattaforma per le valutazioni del valore genetico e la gestione del libro genealogico delle pecore da latte in Svizzera.
+        """@it ;
+    dcat:landingPage <https://www.smg-milchschafe.ch> ;
+    systemmap:operatedBy zefix:1110982 .
+
 systemmap:StGKp6nS3OwEm4I0 a schema:SoftwareApplication ;
     rdfs:label "eMapis"@de ;
     rdfs:comment """
@@ -1059,6 +1946,27 @@ systemmap:StGKp6nS3OwEm4I0 a schema:SoftwareApplication ;
         Mit automatisierten Workflows, einer zentralen Benutzerverwaltung und der Integration von GIS-Daten (sowie zukünftig Betriebsdaten) verbessert eMapis die Transparenz und Effizienz in der Bearbeitung der Finanzhilfefälle.
         """@de ;
     systemmap:operatedBy systemmap:SG8fSveeGZNcYzoUN .
+
+systemmap:StiztlHPN24VK1k8G a schema:SoftwareApplication ;
+    rdfs:label "Agateway"@de,
+        "Agateway"@en,
+        "Agateway"@fr,
+        "Agateway"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Agateway ist eine App der Identitas AG zur einfachen Meldung von Schafen an die Tierverkehrsdatenbank (TVD), die offlinefähige Ohrmarken-Erfassung mit Allflex-Lesegeräten ermöglicht und Datenexport per CSV für Herdenmanagement-Software bietet. Die Lösung unterstützt Landwirt:innen bei der Registrierung von Geburten, Zugängen, Behandlungen und anderen Vorgängen, wobei gesammelte Daten später per Internet übermittelt oder via E-Mail/Cloud geteilt werden können.
+        """@de,
+        """
+        Agateway is an app by Identitas AG for easy reporting of sheep to the Animal Movement Database (TVD), enabling offline ear tag registration with Allflex readers and offering CSV data export for herd management software. The solution supports farmers in registering births, additions, treatments, and other processes, with collected data later transferable via internet or shareable via email/cloud.
+        """@en,
+        """
+        Agateway est une application d'Identitas AG pour la déclaration simplifiée des ovins à la base de données sur le trafic des animaux (TVD), permettant l'enregistrement hors ligne des boucles auriculaires avec les lecteurs Allflex et offrant l'exportation de données au format CSV pour les logiciels de gestion de troupeau. La solution aide les agriculteurs à enregistrer les naissances, les acquisitions, les traitements et d'autres opérations, les données collectées pouvant être transmises ultérieurement par internet ou partagées par e-mail/cloud.
+        """@fr,
+        """
+        Agateway è un'applicazione di Identitas AG per la segnalazione semplificata degli ovini alla banca dati sui movimenti degli animali (TVD), che consente la registrazione offline dei marchi auricolari con lettori Allflex e offre l'esportazione dei dati in formato CSV per il software di gestione delle mandrie. La soluzione supporta gli agricoltori nella registrazione di nascite, acquisizioni, trattamenti e altre operazioni, con i dati raccolti che possono essere successivamente trasmessi via internet o condivisi tramite e-mail/cloud.
+        """@it ;
+    dcat:landingPage <https://www.identitas.ch/produkte/agateway> ;
+    systemmap:operatedBy zefix:449781 .
 
 systemmap:SuEtT7joC8HXVSfF a schema:SoftwareApplication ;
     rdfs:label "UID-Register"@de,
@@ -1094,16 +2002,93 @@ systemmap:SvDlxaJ5YMkuZGH6k a schema:SoftwareApplication ;
         "Agricultural Policy Information System"@en,
         "Système d'information sur la politique agricole"@fr,
         "Sistema informativo di politica agricola"@it ;
-    rdfs:comment "AGIS fungiert als zentrale Datendrehscheibe, in der die von den Kantonen erhobenen landwirtschaftlichen Daten validiert und zu einem gesamtschweizerischen Datenbestand aggregiert werden. Das System sorgt für Konsistenz und Genauigkeit bei der Erfassung von landwirtschaftlichen Daten. Es unterstützt fundierte Entscheidungsprozesse auf Bundesebene."@de,
-        "AGIS serves as a central data hub where agricultural data collected by the cantons is validated and aggregated into a nationwide dataset. The system ensures consistency and accuracy in the collection of agricultural data. It supports well-founded decision-making processes at the federal level."@en,
-        "SIPA sert de plaque tournante centrale des données, où les données agricoles collectées par les cantons sont validées et agrégées dans un ensemble de données à l'échelle nationale. Le système garantit la cohérence et la précision dans la collecte des données agricoles. Il soutient des processus décisionnels éclairés au niveau fédéral."@fr,
-        "AGIS funge da hub centrale per i dati, dove i dati agricoli raccolti dai cantoni vengono convalidati e aggregati in un insieme di dati a livello nazionale. Il sistema garantisce coerenza e accuratezza nella raccolta dei dati agricoli. Supporta processi decisionali ben fondati a livello federale."@it ;
+    rdfs:comment """
+        AGIS fungiert als zentrale Datendrehscheibe, in der die von den Kantonen erhobenen landwirtschaftlichen Daten validiert und zu einem gesamtschweizerischen Datenbestand aggregiert werden.
+        Das System sorgt für Konsistenz und Genauigkeit bei der Erfassung von landwirtschaftlichen Daten.
+        Es unterstützt fundierte Entscheidungsprozesse auf Bundesebene.
+        """@de,
+        """
+        AGIS serves as a central data hub where agricultural data collected by the cantons is validated and aggregated into a nationwide dataset.
+        The system ensures consistency and accuracy in the collection of agricultural data.
+        It supports well-founded decision-making processes at the federal level.
+        """@en,
+        """
+        SIPA sert de plaque tournante centrale des données, où les données agricoles collectées par les cantons sont validées et agrégées dans un ensemble de données à l'échelle nationale.
+        Le système garantit la cohérence et la précision dans la collecte des données agricoles.
+        Il soutient des processus décisionnels éclairés au niveau fédéral.
+        """@fr,
+        """
+        AGIS funge da hub centrale per i dati, dove i dati agricoli raccolti dai cantoni vengono convalidati e aggregati in un insieme di dati a livello nazionale.
+        Il sistema garantisce coerenza e accuratezza nella raccolta dei dati agricoli.
+        Supporta processi decisionali ben fondati a livello federale.
+        """@it ;
     systemmap:abbreviation "AGIS"@de,
         "AGIS"@en,
         "SIPA"@fr,
         "AGIS"@it ;
     systemmap:hasLegalBasis LwG:art_165_c ;
     systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
+
+systemmap:Svbcr8GEkZLb3HmRI a schema:SoftwareApplication ;
+    rdfs:label "LAWIS plus"@de,
+        "LAWIS plus"@en,
+        "LAWIS plus"@fr,
+        "LAWIS plus"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        LAWIS plus ist ein digitales System zur Erfassung landwirtschaftlicher Flächen, Programmanmeldungen und Direktzahlungen für die Trägerkantone. Es umfasst GIS-basierte Flächenerfassung, Datenmutationsfunktionen und Antragsverwaltung für Agrarsubventionen.
+        """@de,
+        """
+        LAWIS plus is a digital system for agricultural land recording, program registration, and direct payments for the supporting cantons. It features GIS-based area mapping, data mutation tools, and subsidy application management.
+        """@en,
+        """
+        LAWIS plus est un système numérique pour l'enregistrement des surfaces agricoles, l'inscription aux programmes et les paiements directs pour les cantons responsables. Il inclut la cartographie géospatiale, les outils de gestion des données et la gestion des subventions agricoles.
+        """@fr,
+        """
+        LAWIS plus è un sistema digitale per la registrazione di terreni agricoli, l'iscrizione ai programmi e i pagamenti diretti per i cantoni responsabili. Include mappatura geospaziale, strumenti di gestione dati e amministrazione di sovvenzioni agrarie.
+        """@it ;
+    systemmap:operatedBy zefix:1354082 .
+
+systemmap:SwsptnNDhjz0vIZNu a schema:SoftwareApplication ;
+    rdfs:label "Isalait"@de,
+        "Isalait"@en,
+        "Isalait"@fr,
+        "Isalait"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Isalait ist eine Herdenmanagement-Software für Milchproduzenten, die Bereiche wie Reproduktion, Gesundheits- und Fütterungsmanagement, Milchleistungsprüfung und den administrativen Datenaustausch abdeckt.
+        """@de,
+        """
+        Isalait is a herd management software for dairy producers, covering areas such as reproduction, health and feed management, milk recording, and administrative data exchange.
+        """@en,
+        """
+        Isalait est un logiciel de gestion de troupeau laitier couvrant des domaines tels que la reproduction, la gestion sanitaire et alimentaire, le contrôle laitier et l'échange de données administratives.
+        """@fr,
+        """
+        Isalait è un software di gestione della mandria per produttori di latte, che copre aree come la riproduzione, la gestione sanitaria e dell'alimentazione, il controllo delle prestazioni lattifere e lo scambio di dati amministrativi.
+        """@it ;
+    dcat:landingPage <https://client.isagri.ch/centre-aide/isalait> ;
+    systemmap:operatedBy zefix:505628 .
+
+systemmap:Sxi0p2NlmE7ff8oEC a schema:SoftwareApplication ;
+    rdfs:label "Granovit Portal"@de,
+        "Granovit Portal"@en,
+        "Granovit Portal"@fr,
+        "Granovit Portal"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        digitales kundenportal der Granovit AG
+        """@de,
+        """
+        digital customer portal of Granovit AG
+        """@en,
+        """
+        portail client numérique de Granovit AG
+        """@fr,
+        """
+        portale clienti digitale di Granovit AG
+        """@it ;
+    systemmap:operatedBy zefix:417741 .
 
 systemmap:Sy4WeMDNoah4TkAYX a schema:SoftwareApplication ;
     rdfs:label "Nährstoffbilanzrechner"@de ;
@@ -1116,6 +2101,31 @@ systemmap:Sy4WeMDNoah4TkAYX a schema:SoftwareApplication ;
         Dieses ermöglicht das fachliche Testen des Rechners.
         """@de ;
     systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP .
+
+systemmap:SyQyLq1TqV3MYovtW a schema:SoftwareApplication ;
+    rdfs:label "CSB-System"@de,
+        "CSB-System"@en,
+        "CSB-System"@fr,
+        "CSB-System"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Branchenspezifische ERP-Software für Schlachtbetriebe und Lebensmittelverarbeiter mit Schwerpunkt auf Prozessoptimierung, Rückverfolgbarkeit und Compliance.
+        Es wird von Unternehmen wie der FF Frischfleisch AG und der Zentralschlachthof Hinwil AG genutzt.
+        """@de,
+        """
+        Industry-specific ERP software for slaughterhouses and food processors focusing on supply chain management, traceability and regulatory compliance.
+        It is used by companies such as FF Frischfleisch AG and Zentralschlachthof Hinwil AG.
+        """@en,
+        """
+        Logiciel ERP spécifique à l'industrie pour les abattoirs et les transformateurs de denrées alimentaires, axé sur l'optimisation des processus, la traçabilité et la conformité.
+        Il est utilisé par des entreprises comme FF Frischfleisch AG et Zentralschlachthof Hinwil AG.
+        """@fr,
+        """
+        Software ERP specifico del settore per macelli e trasformatori alimentari, incentrato sull'ottimizzazione dei processi, la tracciabilità e la conformità.
+        Viene utilizzato da aziende come FF Frischfleisch AG e Zentralschlachthof Hinwil AG.
+        """@it ;
+    dcat:landingPage <https://www.csb.com/de/branchen/fleisch/fleischwarenproduktion> ;
+    systemmap:operatedBy systemmap:SzqZmzij2bxSZEIL9 .
 
 systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
     rdfs:label "eKontingente"@de,
@@ -1143,918 +2153,6 @@ systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
         <https://www.fedlex.admin.ch/eli/cc/2011/770>,
         <https://www.fedlex.admin.ch/eli/cc/2016/565> ;
     systemmap:operatedBy systemmap:SRu4rav1Rlm2mUMWr .
-
-systemmap:S8wfrZtWOCmMSB6sv a schema:SoftwareApplication ;
-    rdfs:label "Holstein Vision"@de,
-        "Holstein Vision"@en,
-        "Holstein Vision"@fr,
-        "Holstein Vision"@it ;
-    rdfs:comment """
-        HolsteinVision ist ein elektronisches Herdenmanagement-Tool der Genossenschaft Holstein Switzerland, das synchronisierte PC- und Mobile-Versionen für die Verwaltung von Tierdaten, Fruchtbarkeitsüberwachung und Zugriff auf Zuchtdokumente bietet. Die kostenlose Mobile-App ermöglicht Landwirt:innen, jederzeit auf aktualisierte Herdendaten zuzugreifen und Funktionen wie Gesundheitsdatenerfassung oder Anpaarungsplanung zu nutzen.
-        """@de,
-        """
-        HolsteinVision is an electronic herd management tool from the Holstein Switzerland Cooperative, offering synchronized PC and mobile versions for managing animal data, monitoring fertility, and accessing breeding documents. The free mobile app allows farmers to access updated herd data at any time and utilize functions such as health data recording or mating planning.
-        """@en,
-        """
-        HolsteinVision est un outil électronique de gestion de troupeau de la coopérative Holstein Switzerland, qui propose des versions PC et mobiles synchronisées pour la gestion des données animales, le suivi de la fertilité et l'accès aux documents d'élevage. L'application mobile gratuite permet aux agriculteurs d'accéder à tout moment aux données actualisées du troupeau et d'utiliser des fonctions telles que l'enregistrement des données de santé ou la planification des accouplements.
-        """@fr,
-        """
-        HolsteinVision è uno strumento elettronico di gestione delle mandrie della cooperativa Holstein Switzerland, che offre versioni sincronizzate per PC e dispositivi mobili per la gestione dei dati degli animali, il monitoraggio della fertilità e l'accesso ai documenti di allevamento. L'app mobile gratuita consente agli agricoltori di accedere in qualsiasi momento ai dati aggiornati della mandria e di utilizzare funzioni come la registrazione dei dati sanitari o la pianificazione degli accoppiamenti.
-        """@it ;
-    dcat:landingPage <https://www.holsteinvision.ch/> ;
-    systemmap:operatedBy zefix:278958 .
-
-systemmap:StiztlHPN24VK1k8G a schema:SoftwareApplication ;
-    rdfs:label "Agateway"@de,
-        "Agateway"@en,
-        "Agateway"@fr,
-        "Agateway"@it ;
-    rdfs:comment """
-        Agateway ist eine App der Identitas AG zur einfachen Meldung von Schafen an die Tierverkehrsdatenbank (TVD), die offlinefähige Ohrmarken-Erfassung mit Allflex-Lesegeräten ermöglicht und Datenexport per CSV für Herdenmanagement-Software bietet. Die Lösung unterstützt Landwirt:innen bei der Registrierung von Geburten, Zugängen, Behandlungen und anderen Vorgängen, wobei gesammelte Daten später per Internet übermittelt oder via E-Mail/Cloud geteilt werden können.
-        """@de,
-        """
-        Agateway is an app by Identitas AG for easy reporting of sheep to the Animal Movement Database (TVD), enabling offline ear tag registration with Allflex readers and offering CSV data export for herd management software. The solution supports farmers in registering births, additions, treatments, and other processes, with collected data later transferable via internet or shareable via email/cloud.
-        """@en,
-        """
-        Agateway est une application d'Identitas AG pour la déclaration simplifiée des ovins à la base de données sur le trafic des animaux (TVD), permettant l'enregistrement hors ligne des boucles auriculaires avec les lecteurs Allflex et offrant l'exportation de données au format CSV pour les logiciels de gestion de troupeau. La solution aide les agriculteurs à enregistrer les naissances, les acquisitions, les traitements et d'autres opérations, les données collectées pouvant être transmises ultérieurement par internet ou partagées par e-mail/cloud.
-        """@fr,
-        """
-        Agateway è un'applicazione di Identitas AG per la segnalazione semplificata degli ovini alla banca dati sui movimenti degli animali (TVD), che consente la registrazione offline dei marchi auricolari con lettori Allflex e offre l'esportazione dei dati in formato CSV per il software di gestione delle mandrie. La soluzione supporta gli agricoltori nella registrazione di nascite, acquisizioni, trattamenti e altre operazioni, con i dati raccolti che possono essere successivamente trasmessi via internet o condivisi tramite e-mail/cloud.
-        """@it ;
-    dcat:landingPage <https://www.identitas.ch/produkte/agateway> ;
-    systemmap:operatedBy zefix:449781 .
-
-systemmap:SbbbXta7RwMcmH9aB a schema:SoftwareApplication ;
-    rdfs:label "Schlachtvieh-Abrechnungssystem"@de,
-        "Slaughter Cattle Invoicing System"@en,
-        "Système de facturation du bétail de boucherie"@fr,
-        "Sistema di fatturazione del bestiame da macello"@it ;
-    rdfs:comment """
-        Ein internes System zur Erstellung von Abrechnungen und Abwicklungen für Schlachtvieh, basierend auf dem ERP-System Microsoft Dynamics NAV.
-        """@de,
-        """
-        An internal system for creating invoices and settlements for slaughtered cattle, based on the ERP system Microsoft Dynamics NAV.
-        """@en,
-        """
-        Un système interne pour la création de factures et de décomptes pour le bétail de boucherie, basé sur le système ERP Microsoft Dynamics NAV.
-        """@fr,
-        """
-        Un sistema interno per la creazione di fatture e conteggi per il bestiame da macello, basato sul sistema ERP Microsoft Dynamics NAV.
-        """@it ;
-    systemmap:abbreviation "NAV Schlachtviehabrechnung"@de ;
-    systemmap:operatedBy zefix:469727 .
-
-systemmap:ShWzrtCjaSa8nRJ4N a schema:SoftwareApplication ;
-    rdfs:label "amacos"@de,
-        "amacos"@en,
-        "amacos"@fr,
-        "amacos"@it ;
-    rdfs:comment """
-        amacos ist eine digitale Lösung für Arbeitsrapporte, die mit einer App administrative Aufgaben wie Zeiterfassung oder Materialverbrauch vereinfacht. Die offlinefähige Software passt sich flexibel an verschiedene Branchen an – von Handwerk über Landwirtschaft bis Transport – und speichert Daten sicher in der Schweiz. Zusätzlich bietet sie praktische Funktionen wie Fotodokumentation oder automatische Rechnungsvorbereitung.
-        """@de,
-        """
-        amacos is a digital solution for work reports that simplifies administrative tasks such as time tracking and material consumption with an app. The offline-capable software flexibly adapts to various industries—from crafts and agriculture to transport—and stores data securely in Switzerland. Additionally, it offers practical functions like photo documentation or automatic invoice preparation.
-        """@en,
-        """
-        amacos est une solution numérique pour les rapports de travail qui simplifie les tâches administratives telles que la saisie du temps ou la consommation de matériel avec une application. Le logiciel, utilisable hors ligne, s'adapte de manière flexible à divers secteurs – de l'artisanat à l'agriculture en passant par les transports – et stocke les données en toute sécurité en Suisse. De plus, il offre des fonctions pratiques comme la documentation photo ou la préparation automatique des factures.
-        """@fr,
-        """
-        amacos è una soluzione digitale per i rapporti di lavoro che semplifica le attività amministrative come la registrazione del tempo o il consumo di materiali con un'app. Il software, utilizzabile offline, si adatta in modo flessibile a vari settori – dall'artigianato all'agricoltura fino ai trasporti – e memorizza i dati in modo sicuro in Svizzera. Inoltre, offre funzioni pratiche come la documentazione fotografica o la preparazione automatica delle fatture.
-        """@it ;
-    dcat:landingPage <https://amacos.ch/> ;
-    systemmap:operatedBy zefix:367883 .
-
-systemmap:S3TSqZWni4DBTqkAV a schema:SoftwareApplication ;
-    rdfs:label "SmartCow"@de,
-        "SmartCow"@en,
-        "SmartCow"@fr,
-        "SmartCow"@it ;
-    rdfs:comment """
-        SmartCow ist eine digitale Herdenmanagement-App von swissgenetics, die Landwirten Werkzeuge für Anpaarungsvorschläge, Fruchtbarkeitsmanagement und den Zugriff auf Tierdaten bietet. Die App ermöglicht eine effiziente Verwaltung der Herde direkt vom Smartphone aus.
-        """@de,
-        """
-        SmartCow is a digital herd management app from swissgenetics that provides farmers with tools for mating suggestions, fertility management, and access to animal data. The app enables efficient herd management directly from a smartphone.
-        """@en,
-        """
-        SmartCow est une application numérique de gestion de troupeau de swissgenetics qui fournit aux agriculteurs des outils pour les propositions d'accouplement, la gestion de la fertilité et l'accès aux données des animaux. L'application permet une gestion efficace du troupeau directement depuis un smartphone.
-        """@fr,
-        """
-        SmartCow è un'app digitale per la gestione della mandria di swissgenetics che fornisce agli agricoltori strumenti per suggerimenti di accoppiamento, gestione della fertilità e accesso ai dati degli animali. L'app consente una gestione efficiente della mandria direttamente dallo smartphone.
-        """@it ;
-    dcat:landingPage <https://www.swissgenetics.ch/de/smartcow-managen-sie-ihre-herde-digital> ;
-    systemmap:operatedBy zefix:448334 .
-
-systemmap:S2S8th7MLY4xUNjh5 a schema:SoftwareApplication ;
-    rdfs:label "CapraNet"@de,
-        "CapraNet"@en,
-        "CapraNet"@fr,
-        "CapraNet"@it ;
-    rdfs:comment """
-        CapraNet ist das Online-Herdebuch des Schweizerischen Ziegenzuchtverbands. Es bietet Züchtern eine Herdenübersicht mit Zuchtwerten und Abstammungsnachweisen sowie Werkzeuge zur Zuchtplanung und zur selbstständigen Erfassung von Ereignissen wie Belegungen und Geburten.
-        """@de,
-        """
-        CapraNet is the online herdbook of the Swiss Goat Breeding Association. It provides breeders with a herd overview including breeding values and pedigree certificates, as well as tools for breeding planning and for independently recording events such as matings and births.
-        """@en,
-        """
-        CapraNet est le livre généalogique en ligne de la Fédération suisse d'élevage caprin. Il offre aux éleveurs un aperçu du troupeau avec les valeurs d'élevage et les certificats d'ascendance, ainsi que des outils pour la planification de l'élevage et l'enregistrement autonome d'événements tels que les saillies et les naissances.
-        """@fr,
-        """
-        CapraNet è il libro genealogico online della Federazione svizzera di allevamento caprino. Offre agli allevatori una panoramica della mandria con i valori genetici e i certificati di pedigree, oltre a strumenti per la pianificazione della selezione e la registrazione autonoma di eventi come accoppiamenti e nascite.
-        """@it ;
-    dcat:landingPage <https://www.capranet.ch/> ;
-    systemmap:operatedBy zefix:248029 .
-
-systemmap:S0tkRCUIU88Xtc2HK a schema:SoftwareApplication ;
-    rdfs:label "SheepOnline"@de,
-        "SheepOnline"@en,
-        "SheepOnline"@fr,
-        "SheepOnline"@it ;
-    rdfs:comment """
-        SheepOnline ist das Online-Herdebuch des Schweizerischen Schafzuchtverbands. Es ermöglicht ein einfaches Management des Tierbestandes, Inzuchtberechnungen, das Erstellen von Dokumenten und die Anmeldung für Ausstellungen. Zudem bietet es eine kostenlose Online-Marktplattform für den Kauf und Verkauf von Tieren.
-        """@de,
-        """
-        SheepOnline is the online herdbook of the Swiss Sheep Breeders' Association. It allows for simple management of the animal stock, inbreeding calculations, creation of documents, and registration for exhibitions. It also offers a free online marketplace for buying and selling animals.
-        """@en,
-        """
-        SheepOnline est le livre généalogique en ligne de la Fédération suisse d'élevage ovin. Il permet une gestion simple du cheptel, des calculs de consanguinité, la création de documents et l'inscription aux expositions. Il propose également une place de marché en ligne gratuite pour l'achat et la vente d'animaux.
-        """@fr,
-        """
-        SheepOnline è il libro genealogico online della Federazione svizzera di allevamento ovino. Permette una gestione semplice del bestiame, calcoli di consanguineità, la creazione di documenti e l'iscrizione a mostre. Offre anche un mercato online gratuito per la compravendita di animali.
-        """@it ;
-    dcat:landingPage <https://www.sheeponline.ch/> ;
-    systemmap:operatedBy zefix:166248 .
-
-systemmap:SdUi9po2l0PgjsATP a schema:SoftwareApplication ;
-    rdfs:label "Elvasem"@de,
-        "Elvasem"@en,
-        "Elvasem"@fr,
-        "Elvasem"@it ;
-    rdfs:comment """
-        Elvasem ist ein Online-Tool von swissgenetics zur Erfassung und Verwaltung von Besamungsdaten.
-        """@de,
-        """
-        Elvasem is an online tool from swissgenetics for recording and managing insemination data.
-        """@en,
-        """
-        Elvasem est un outil en ligne de swissgenetics pour l'enregistrement et la gestion des données d'insémination.
-        """@fr,
-        """
-        Elvasem è uno strumento online di swissgenetics per la registrazione e la gestione dei dati di inseminazione.
-        """@it ;
-    systemmap:operatedBy zefix:448334 .
-
-systemmap:SVlngVUmE9joYkIg7 a schema:SoftwareApplication ;
-    rdfs:label "DNA TraceBack®"@de,
-        "DNA TraceBack®"@en,
-        "DNA TraceBack®"@fr,
-        "DNA TraceBack®"@it ;
-    rdfs:comment """
-        DNA-basierte Rückverfolgungstechnologie für Fleischprodukte zur Sicherstellung der Herkunft und Qualität.
-        """@de,
-        """
-        DNA-based traceability system verifying meat provenance through supply chains.
-        """@en,
-        """
-        Technologie de traçabilité ADN pour produits carnés certifiant l'origine suisse.
-        """@fr,
-        """
-        Sistema di tracciabilità basato sul DNA che verifica la provenienza della carne lungo le filiere.
-        """@it ;
-    dcat:landingPage <https://www.identigen.com/dna-traceback> ;
-    systemmap:operatedBy zefix:201495 .
-
-systemmap:SJ15CI0vn3S1JgcOd a schema:SoftwareApplication ;
-    rdfs:label "Vetera"@de,
-        "Vetera"@en,
-        "Vetera"@fr,
-        "Vetera"@it ;
-    rdfs:comment """
-        Vetera ist eine umfassende Praxismanagement-Software für Tierärzte, die Funktionen wie Patientenverwaltung, Terminplanung, Leistungsabrechnung und Medikamentenmanagement bietet. Sie wird von der Vetera.net GmbH entwickelt und betrieben, wobei die swissVets AG ein wichtiger Partner und Nutzer in der Schweiz ist.
-        """@de,
-        """
-        Vetera is a comprehensive practice management software for veterinarians, offering functions such as patient management, appointment scheduling, billing, and medication management. It is developed and operated by Vetera.net GmbH, with swissVets AG being a key partner and user in Switzerland.
-        """@en,
-        """
-        Vetera est un logiciel complet de gestion de cabinet pour vétérinaires, offrant des fonctions telles que la gestion des patients, la planification des rendez-vous, la facturation des prestations et la gestion des médicaments. Il est développé et exploité par Vetera.net GmbH, swissVets AG étant un partenaire et utilisateur clé en Suisse.
-        """@fr,
-        """
-        Vetera è un software gestionale completo per veterinari che offre funzioni come la gestione dei pazienti, la pianificazione degli appuntamenti, la fatturazione delle prestazioni e la gestione dei farmaci. È sviluppato e gestito da Vetera.net GmbH, con swissVets AG come partner e utente chiave in Svizzera.
-        """@it ;
-    dcat:landingPage <https://vetera.net/> ;
-    systemmap:operatedBy systemmap:SrG5yvnwax87iuQw8 .
-
-systemmap:SyQyLq1TqV3MYovtW a schema:SoftwareApplication ;
-    rdfs:label "CSB-System"@de,
-        "CSB-System"@en,
-        "CSB-System"@fr,
-        "CSB-System"@it ;
-    rdfs:comment """
-        Branchenspezifische ERP-Software für Schlachtbetriebe und Lebensmittelverarbeiter mit Schwerpunkt auf Prozessoptimierung, Rückverfolgbarkeit und Compliance. Es wird von Unternehmen wie der FF Frischfleisch AG und der Zentralschlachthof Hinwil AG genutzt.
-        """@de,
-        """
-        Industry-specific ERP software for slaughterhouses and food processors focusing on supply chain management, traceability and regulatory compliance. It is used by companies such as FF Frischfleisch AG and Zentralschlachthof Hinwil AG.
-        """@en,
-        """
-        Logiciel ERP spécifique à l'industrie pour les abattoirs et les transformateurs de denrées alimentaires, axé sur l'optimisation des processus, la traçabilité et la conformité. Il est utilisé par des entreprises comme FF Frischfleisch AG et Zentralschlachthof Hinwil AG.
-        """@fr,
-        """
-        Software ERP specifico del settore per macelli e trasformatori alimentari, incentrato sull'ottimizzazione dei processi, la tracciabilità e la conformità. Viene utilizzato da aziende come FF Frischfleisch AG e Zentralschlachthof Hinwil AG.
-        """@it ;
-    dcat:landingPage <https://www.csb.com/de/branchen/fleisch/fleischwarenproduktion> ;
-    systemmap:operatedBy systemmap:SzqZmzij2bxSZEIL9 .
-
-
-systemmap:S9GvpUNuj5fGyPhGf a schema:SoftwareApplication ;
-    rdfs:label "Anicom App"@de,
-        "Anicom App"@en,
-        "Anicom App"@fr,
-        "Anicom App"@it ;
-    rdfs:comment """
-        Digitale Plattform für Tiervermarktung, administrative Aufgaben und Kommunikation (Tieranmeldung, Bestellungen, Abrechnungen).
-        """@de,
-        """
-        Digital platform for livestock marketing, administrative tasks, and communication (animal registration, orders, invoicing).
-        """@en,
-        """
-        Plateforme numérique pour la commercialisation du bétail, tâches administratives et communication.
-        """@fr,
-        """
-        Piattaforma digitale per la commercializzazione del bestiame, compiti amministrativi e comunicazione (registrazione animali, ordini, fatture).
-        """@it ;
-    systemmap:operatedBy zefix:7011 .
-
-systemmap:Ss7QOCDSxfbstJlpp a schema:SoftwareApplication ;
-    rdfs:label "STATUS"@de,
-        "STATUS"@en,
-        "STATUS"@fr,
-        "STATUS"@it ;
-    rdfs:comment """
-        Eine branchenspezifische ERP-Software für Lebensmittelbetriebe, die die gesamte Auftragsabwicklung inklusive Einkauf, Lager und Rückverfolgbarkeit abdeckt. Sie bietet zudem Funktionen wie Schlachtabrechnung, Rezepturmanagement und EDI-Schnittstellen zu Handelspartnern.
-        """@de,
-        """
-        An industry-specific ERP software for food processing companies, covering complete order processing including purchasing, warehousing, and traceability. It also offers functions such as slaughter accounting, recipe management, and EDI interfaces to retail partners.
-        """@en,
-        """
-        Un logiciel ERP spécifique à la branche pour les entreprises alimentaires, couvrant le traitement complet des commandes, y compris les achats, le stockage et la traçabilité. Il offre également des fonctions telles que la facturation de l'abattage, la gestion des recettes et des interfaces EDI avec les partenaires commerciaux.
-        """@fr,
-        """
-        Un software ERP specifico del settore per le aziende alimentari, che copre l'intera elaborazione degli ordini, inclusi acquisti, magazzino e tracciabilità. Offre anche funzioni come la contabilità della macellazione, la gestione delle ricette e le interfacce EDI con i partner commerciali.
-        """@it ;
-    dcat:landingPage <https://csn.ch/software/> ;
-    systemmap:operatedBy zefix:336983 .
-
-systemmap:Snfl97lvHuIqb7cTZ a schema:SoftwareApplication ;
-    rdfs:label "Softproviding Meat"@de,
-        "Softproviding Meat"@en,
-        "Softproviding Meat"@fr,
-        "Softproviding Meat"@it ;
-    rdfs:comment """
-        Branchenspezifische SAP-ERP-Lösung für die Fleischindustrie, die Prozesse von der Schlachtung bis zur Lieferung unterstützt, einschliesslich Chargenrückverfolgung und Qualitätsmanagement. Genutzt von Unternehmen wie Bell Schweiz AG, Schlachtbetrieb St. Gallen AG und Ernst Sutter AG.
-        """@de,
-        """
-        Industry-specific SAP ERP solution for meat processing, integrating slaughtering, disassembly, packaging, and supply chain tracking with quality control features. Used by companies like Bell Schweiz AG, Schlachtbetrieb St. Gallen AG, and Ernst Sutter AG.
-        """@en,
-        """
-        Solution SAP ERP spécialisée pour l'industrie de la viande, intégrant les processus de l'abattage à la livraison, y compris le suivi des lots et la gestion de la qualité. Utilisée par des entreprises comme Bell Schweiz AG, Schlachtbetrieb St. Gallen AG et Ernst Sutter AG.
-        """@fr,
-        """
-        Soluzione ERP SAP specifica per l'industria della carne, che integra i processi dalla macellazione alla consegna, inclusi il tracciamento dei lotti e la gestione della qualità. Utilizzata da aziende come Bell Schweiz AG, Schlachtbetrieb St. Gallen AG ed Ernst Sutter AG.
-        """@it ;
-    dcat:landingPage <https://www.softproviding.com/meat/> ;
-    systemmap:operatedBy zefix:531454 .
-
-systemmap:SAPDp3o8XAHPuZnhB a schema:SoftwareApplication ;
-    rdfs:label "redonline"@de,
-        "redonline"@en,
-        "redonline"@fr,
-        "redonline"@it ;
-    rdfs:comment """
-        Online-Plattform für professionelles Herdenmanagement mit aktuellen Zucht- und Leistungsdaten; kostenlos für swissherdbook-Züchterinnen und ‑Züchter.
-        """@de,
-        """
-        Web platform that gives Swissherdbook members real-time access to breeding, performance and herd-management data.
-        """@en,
-        """
-        Plateforme en ligne de gestion du troupeau offrant aux éleveurs l’accès en temps réel aux données zootechniques et de performance.
-        """@fr,
-        """
-        Piattaforma online per la gestione professionale della mandria con dati aggiornati di allevamento e di produzione, gratuita per i soci swissherdbook.
-        """@it ;
-    dcat:landingPage <https://www.swissherdbook.ch/de/dienstleistungen/online/redonline> ;
-    systemmap:operatedBy zefix:165954 .
-
-systemmap:Sq8pW7vv7FNraUfaT a schema:SoftwareApplication ;
-    rdfs:label "BeefNet"@de,
-        "BeefNet"@en,
-        "BeefNet"@fr,
-        "BeefNet"@it ;
-    rdfs:comment """
-        Online-Datenbank für Mitglieder zur Bestellung von Zertifikaten, Erfassung von Geburten/Belegungen und Herdenverwaltung.
-        """@de,
-        """
-        Web platform for certificate orders, breeding data management, and herd lists.
-        """@en,
-        """
-        Base de données en ligne pour commander des certificats et gérer les données zootechniques.
-        """@fr,
-        """
-        Piattaforma per ordinare certificati e gestire dati riproduttivi.
-        """@it ;
-    dcat:landingPage <https://www.mutterkuh.ch/produzenten-service/fachinfos/beefnet-und-smartcow.html> ;
-    systemmap:operatedBy zefix:769392 .
-
-systemmap:SYQt9hzLel1dEtlOn a schema:SoftwareApplication ;
-    rdfs:label "BrunaNet"@de,
-        "BrunaNet"@en,
-        "BrunaNet"@fr,
-        "BrunaNet"@it ;
-    rdfs:comment """
-        Online-Herdebuchsystem für Braunviehzüchter mit Echtzeit-Zugriff auf Zucht-, Leistungs- und Gesundheitsdaten. Inklusive Marktplatz für Tierhandel und digitalem Behandlungsjournal.
-        """@de,
-        """
-        Herd management platform providing real-time breeding, performance, and health data. Features an online marketplace for cattle trading and digital treatment records.
-        """@en,
-        """
-        Plateforme de gestion de troupeau avec accès aux données zootechniques en temps réel, incluant un marché en ligne pour le bétail et un journal de traitement numérique.
-        """@fr,
-        """
-        Piattaforma digitale per la gestione dell'allevamento con dati aggiornati su riproduzione, prestazioni e salute, inclusa una piazza virtuale per il commercio di bestiame.
-        """@it ;
-    dcat:landingPage <https://brunanet.ch/BrunaNet/> ;
-    systemmap:operatedBy zefix:226184 .
-
-systemmap:SMHngOxi88zm9ya9N a schema:SoftwareApplication ;
-    rdfs:label "myBica"@de,
-        "myBica"@en,
-        "myBica"@fr,
-        "myBica"@it ;
-    rdfs:comment """
-        Agiles ERP-System für Schweizer Unternehmen, das Module für Einkauf, Lagerverwaltung, Auftragsabwicklung, Schlachtdatenverwaltung und Viehabrechnung integriert. Es wird von Unternehmen wie der Bigler AG genutzt.
-        """@de,
-        """
-        ERP solution for meat processing companies, featuring production management, batch tracking, and automated financial reporting, including livestock accounting and slaughter data modules. It is used by companies like Bigler AG.
-        """@en,
-        """
-        Système ERP pour l'industrie agroalimentaire avec gestion des abattoirs, traçabilité des lots et intégration bancaire, utilisé par des entreprises comme Bigler AG.
-        """@fr,
-        """
-        Piattaforma ERP per aziende di trasformazione carne con gestione macellazione, tracciabilità dei lotti e contabilità integrata, utilizzata da aziende come Bigler AG.
-        """@it ;
-    dcat:landingPage <https://www.mybica.ch/produkt.html> ;
-    systemmap:operatedBy zefix:1226256 .
-
-systemmap:S2gC2BTVjYNH05BNf a schema:SoftwareApplication ;
-    rdfs:label "Datapass"@de,
-        "Datapass"@en,
-        "Datapass"@fr,
-        "Datapass"@it ;
-    rdfs:comment """
-        Eine ERP-Software für fleischverarbeitende Betriebe, die Funktionen für Einkauf, Produktion, Verkauf und Rückverfolgbarkeit bietet. Sie wird von Unternehmen wie der Marmy Viandes en Gros SA und der SBZ Schlachtbetrieb Zürich AG genutzt.
-        """@de,
-        """
-        An ERP software for meat processing companies, offering functions for purchasing, production, sales, and traceability. It is used by companies such as Marmy Viandes en Gros SA and SBZ Schlachtbetrieb Zürich AG.
-        """@en,
-        """
-        Un logiciel ERP pour les entreprises de transformation de la viande, offrant des fonctions pour les achats, la production, la vente et la traçabilité. Il est utilisé par des entreprises comme Marmy Viandes en Gros SA et SBZ Schlachtbetrieb Zürich AG.
-        """@fr,
-        """
-        Un software ERP per le aziende di trasformazione della carne, che offre funzioni per acquisti, produzione, vendite e tracciabilità. È utilizzato da aziende come Marmy Viandes en Gros SA e SBZ Schlachtbetrieb Zürich AG.
-        """@it ;
-    dcat:landingPage <https://datapass.ch/software/> ;
-    systemmap:operatedBy zefix:1013423 .
-
-systemmap:SGHEvT8M3jGEd8KdJ a schema:SoftwareApplication ;
-    rdfs:label "SmartBeef®"@de,
-        "SmartBeef®"@en,
-        "SmartBeef®"@fr,
-        "SmartBeef®"@it ;
-    rdfs:comment """
-        Webbasiertes Auswertungsprogramm für Rindermäster, welches als Hilfsmittel für die Planung und Produktionssteuerung dient und bei der Erfassung und Archivierung von relevanten Daten in der Rindviehmast unterstützt.
-        """@de,
-        """
-        Web-based analysis program for cattle fatteners, which serves as a tool for planning and production control and supports the recording and archiving of relevant data in cattle fattening.
-        """@en,
-        """
-        Programme d'analyse en ligne pour les engraisseurs de bovins, servant d'outil de planification et de contrôle de la production et soutenant la saisie et l'archivage des données pertinentes dans l'engraissement des bovins.
-        """@fr,
-        """
-        Programma di analisi basato sul web per ingrassatori di bovini, che funge da strumento per la pianificazione e il controllo della produzione e supporta la registrazione e l'archiviazione di dati importanti nell'ingrasso di bovini.
-        """@it ;
-    dcat:landingPage <https://www.melior.ch/dienstleistung/smartbeef> ;
-    systemmap:operatedBy zefix:76051 .
-
-systemmap:SWPaPOSDJI3Kdv83m a schema:SoftwareApplication ;
-    rdfs:label "Visionherens"@de,
-        "Visionherens"@en,
-        "Visionherens"@fr,
-        "Visionherens"@it ;
-    rdfs:comment """
-        Visionherens ist das Online-Herdebuch des Schweizerischen Eringerviehzuchtverband. Es ermöglicht Züchtern den Zugriff auf aktuelle Tierdaten wie Zuchtwerte und Abstammung und bietet Funktionen zur selbstständigen Verwaltung, wie die Erfassung von Sprungmeldungen oder das Drucken offizieller Dokumente.
-        """@de,
-        """
-        Visionherens is the online herdbook of the Swiss Hérens Cattle Breeders' Federation. It allows breeders to access up-to-date animal data such as breeding values and pedigrees and offers self-management functions like recording matings or printing official documents.
-        """@en,
-        """
-        Visionherens est le livre généalogique en ligne de la Fédération Suisse d'élevage de la Race d'Hérens. Il permet aux éleveurs d'accéder aux données actuelles des animaux, telles que les valeurs d'élevage et les ascendances, et offre des fonctions d'autogestion comme la saisie des saillies ou l'impression de documents officiels.
-        """@fr,
-        """
-        Visionherens è il libro genealogico online della Federazione Svizzera di allevamento della razza d'Hérens. Permette agli allevatori di accedere a dati aggiornati sugli animali come i valori genetici e le genealogie e offre funzioni di autogestione come la registrazione delle monte o la stampa di documenti ufficiali.
-        """@it ;
-    dcat:landingPage <https://www.raceherens.ch/de/visionherens-online-herdebuch> ;
-    systemmap:operatedBy systemmap:SJqSPxOD2hdgsgJDI .
-
-systemmap:SsUV3nTDKTJ3nQ5L9 a schema:SoftwareApplication ;
-    rdfs:label "SMG-Net"@de,
-        "SMG-Net"@en,
-        "SMG-Net"@fr,
-        "SMG-Net"@it ;
-    rdfs:comment """
-        Plattform für Zuchtwertauswertungen und Herdebuchführung von Milchschafen in der Schweiz.
-        """@de,
-        """
-        Platform for breeding value evaluations and herdbook management of milk sheep in Switzerland.
-        """@en,
-        """
-        Plateforme pour les évaluations des valeurs d'élevage et la gestion du livre généalogique des moutons laitiers en Suisse.
-        """@fr,
-        """
-        Piattaforma per le valutazioni del valore genetico e la gestione del libro genealogico delle pecore da latte in Svizzera.
-        """@it ;
-    dcat:landingPage <https://www.smg-milchschafe.ch> ;
-    systemmap:operatedBy zefix:1110982 .
-
-systemmap:Sxi0p2NlmE7ff8oEC a schema:SoftwareApplication ;
-    rdfs:label "Granovit Portal"@de,
-        "Granovit Portal"@en,
-        "Granovit Portal"@fr,
-        "Granovit Portal"@it ;
-    rdfs:comment """
-        digitales kundenportal der Granovit AG
-        """@de,
-        """
-        digital customer portal of Granovit AG
-        """@en,
-        """
-        portail client numérique de Granovit AG
-        """@fr,
-        """
-        portale clienti digitale di Granovit AG
-        """@it ;
-    systemmap:operatedBy zefix:417741 .
-
-systemmap:SoBSi8PwUf9xFjdrM a schema:SoftwareApplication ;
-    rdfs:label "EASY-CERT Cloud"@de,
-        "EASY-CERT Cloud"@en,
-        "EASY-CERT Cloud"@fr,
-        "EASY-CERT Cloud"@it ;
-    rdfs:comment """
-        Cloud-basierte Plattform zur Verwaltung von Zertifizierungsdaten, Produktelisten und Labelstatus für Landwirtschaftsbetriebe und Unternehmen.
-        """@de,
-        """
-        Cloud platform for managing certification data, product lists, and label approvals for agricultural businesses and supply chain partners.
-        """@en,
-        """
-        Plateforme cloud pour la gestion des données de certification, des listes de produits et du statut des labels pour les exploitations agricoles et les entreprises.
-        """@fr,
-        """
-        Piattaforma basata su cloud per la gestione dei dati di certificazione, degli elenchi di prodotti e dello stato delle etichette per le aziende agricole e le imprese.
-        """@it ;
-    dcat:landingPage <https://www.easy-cert.com> ;
-    systemmap:operatedBy zefix:1202686 .
-
-systemmap:S844y5UCUBrKfEXoA a schema:SoftwareApplication ;
-    rdfs:label "Bio Suisse Kundenportal"@de,
-        "Bio Suisse Customer Portal"@en,
-        "Portail client Bio Suisse"@fr,
-        "Portale clienti Bio Suisse"@it ;
-    rdfs:comment """
-        Das Bio Suisse Kundenportal (Supply Chain Monitor, SCM) ist die zentrale Online-Plattform für Lizenznehmer, Verarbeiter und Händler zur Verwaltung von Lieferketten, Zertifikaten und relevanten Bio Suisse-Daten. Nutzer können Lieferanten erfassen, Lieferketten verwalten und notwendige Nachweise für die Bio Suisse-Zertifizierung digital einreichen. Das Portal unterstützt die Einhaltung der Bio Suisse-Richtlinien und vereinfacht die Kommunikation mit der Geschäftsstelle.
-        """@de,
-        """
-        The Bio Suisse Customer Portal (Supply Chain Monitor, SCM) is the central online platform for licensees, processors, and traders to manage supply chains, certificates, and relevant Bio Suisse data. Users can register suppliers, manage supply chains, and submit required documentation for Bio Suisse certification digitally. The portal supports compliance with Bio Suisse guidelines and streamlines communication with the association.
-        """@en,
-        """
-        Le portail client Bio Suisse (Supply Chain Monitor, SCM) est la plateforme en ligne centrale pour les titulaires de licence, les transformateurs et les commerçants afin de gérer les chaînes d'approvisionnement, les certificats et les données pertinentes de Bio Suisse. Les utilisateurs peuvent enregistrer des fournisseurs, gérer les chaînes d'approvisionnement et soumettre numériquement les documents nécessaires à la certification Bio Suisse. Le portail facilite le respect des directives Bio Suisse et simplifie la communication avec le secrétariat.
-        """@fr,
-        """
-        Il portale clienti Bio Suisse (Supply Chain Monitor, SCM) è la piattaforma online centrale per licenziatari, trasformatori e commercianti per gestire le catene di fornitura, i certificati e i dati rilevanti di Bio Suisse. Gli utenti possono registrare fornitori, gestire le catene di fornitura e inviare digitalmente la documentazione necessaria per la certificazione Bio Suisse. Il portale supporta la conformità alle linee guida Bio Suisse e semplifica la comunicazione con la sede centrale.
-        """@it ;
-    dcat:landingPage <https://scm.biosuisse.ch> ;
-    systemmap:operatedBy zefix:427343 .
-
-systemmap:SCporGQs4VQT7lJVs a schema:SoftwareApplication ;
-    rdfs:label "smaXtec animal care"@de,
-        "smaXtec animal care"@en,
-        "smaXtec animal care"@fr,
-        "smaXtec animal care"@it ;
-    rdfs:comment """
-        Ein Gesundheitsmanagementsystem für Milchviehbetriebe, das mittels einer Bolus-Technologie kontinuierlich Gesundheitsdaten direkt aus der Kuh misst, um frühzeitig Krankheiten zu erkennen und präventive Massnahmen zu ermöglichen.
-        """@de,
-        """
-        A health management system for dairy farms that continuously measures health data directly from the cow using bolus technology to detect diseases early and enable preventive measures.
-        """@en,
-        """
-        Un système de gestion de la santé pour les exploitations laitières qui mesure en continu les données de santé directement depuis la vache grâce à une technologie de bolus pour détecter précocement les maladies et permettre des mesures préventives.
-        """@fr,
-        """
-        Un sistema di gestione della salute per aziende lattiero-casearie che misura continuamente i dati sanitari direttamente dalla mucca tramite una tecnologia a bolo per rilevare precocemente le malattie e consentire misure preventive.
-        """@it ;
-    dcat:landingPage <https://www.smaxtec.com/> ;
-    systemmap:operatedBy zefix:1566606 .
-
-systemmap:SPASZffcsCMdIFEsZ a schema:SoftwareApplication ;
-    rdfs:label "Fleko"@de,
-        "Fleko"@en,
-        "Fleko"@fr,
-        "Fleko"@it ;
-    rdfs:comment """
-        Die Fleischkontrolldatenbank Fleko ist eine Webanwendung zur Erfassung und Verwaltung der Befunde aus der Schlachttier- und Fleischuntersuchung in der Schweiz. Sie dient der Dokumentation der Genusstauglichkeit und ermöglicht die Verwaltung von Gebühren und Leistungen im Bereich der Fleischkontrolle. Die Anwendung wird zentral vom BLV betreut und ist für kantonale Sachbearbeiter, Fleischkontrolleure und Administratoren zugänglich.
-        """@de,
-        """
-        Fleko is the Swiss national meat inspection database, a web application used to record and manage findings from slaughter animal and meat inspections. It documents fitness for consumption and allows for the administration of fees and services related to meat inspection. The system is centrally operated by the Federal Food Safety and Veterinary Office (FSVO) and is accessible to cantonal officers, meat inspectors, and administrators.
-        """@en,
-        """
-        Fleko est la base de données suisse pour le contrôle des viandes, une application web permettant la saisie et la gestion des résultats des inspections des animaux de boucherie et de la viande. Elle sert à documenter l’aptitude à la consommation et à gérer les taxes et prestations liées au contrôle des viandes. Le système est géré de manière centralisée par l’OSAV et accessible aux collaborateurs cantonaux, contrôleurs des viandes et administrateurs.
-        """@fr,
-        """
-        Fleko è la banca dati svizzera per il controllo delle carni, un’applicazione web per la registrazione e la gestione dei risultati delle ispezioni degli animali da macello e delle carni. Serve a documentare l’idoneità al consumo e consente la gestione di tasse e prestazioni nel settore del controllo delle carni. Il sistema è gestito centralmente dall’USAV ed è accessibile a funzionari cantonali, ispettori delle carni e amministratori.
-        """@it ;
-    dcat:landingPage <https://www.blv.admin.ch/blv/de/home/lebensmittel-und-ernaehrung/lebensmittelsicherheit/verantwortlichkeiten/fleischkontrolle/fleko.html> ;
-    systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN .
-
-    systemmap:SSALCAfutureLmnPqR1tYvCxD8 a schema:SoftwareApplication ;
-    rdfs:label "SALCAfuture"@de,
-        "SALCAfuture"@en,
-        "SALCAfuture"@fr,
-        "SALCAfuture"@it ;
-    rdfs:comment """
-        SALCAfuture ist ein Expertensystem zur Erstellung von Ökobilanzen für landwirtschaftliche Produkte, Lebensmittel und Betriebe im Rahmen von Forschungsprojekten. Es erleichtert die Dateneingabe, ermöglicht präzise Berechnungen von Umweltwirkungen nach der SALCA-Methode und bietet einen Web-Interface-Zugang für Projektpartner.
-        """@de,
-        """
-        SALCAfuture is an expert system for creating life cycle assessments (LCAs) for agricultural products, foods, and farms within research projects. It facilitates data entry, enables precise calculation of environmental impacts using the SALCA method, and provides web interface access for project partners.
-        """@en,
-        """
-        SALCAfuture est un système expert pour la réalisation d’analyses du cycle de vie (ACV) de produits agricoles, d’aliments et d’exploitations dans le cadre de projets de recherche. Il facilite la saisie des données, permet des calculs précis des impacts environnementaux selon la méthode SALCA et offre un accès par interface web aux partenaires de projet.
-        """@fr,
-        """
-        SALCAfuture è un sistema esperto per la creazione di valutazioni del ciclo di vita (LCA) per prodotti agricoli, alimenti e aziende agricole nell'ambito di progetti di ricerca. Facilita l'inserimento dei dati, consente calcoli precisi degli impatti ambientali secondo il metodo SALCA e fornisce un accesso tramite interfaccia web per i partner di progetto.
-        """@it ;
-    dcat:landingPage <https://www.agroscope.admin.ch/agroscope/en/home/topics/environment-resources/life-cycle-assessment/databases-software-lca/lca-software.html> ;
-    systemmap:operatedBy systemmap:SIo1a8l3IT4lBqBJE .
-
-systemmap:S7aG1r5IoOvAalIFb a schema:SoftwareApplication ;
-    rdfs:label "KGS"@de,
-        "KGS"@en,
-        "KGS"@fr,
-        "KGS"@it ;
-    rdfs:comment """
-        Der Kälbergesundheitsdienst (KGS) ist eine Online-Plattform für das Management und die Überwachung der Kälbergesundheit in der Schweizer Nutztierhaltung. Qualitas AG entwickelt und betreibt diese Lösung als Teil ihres Angebots für die Schweizer Tierzucht.
-        """@de,
-        """
-        The Calf Health Service (KGS) is an online platform for managing and monitoring calf health in Swiss livestock farming. Qualitas AG develops and operates this solution as part of its offering for Swiss animal breeding.
-        """@en,
-        """
-        Le Service de santé des veaux (KGS) est une plateforme en ligne pour la gestion et la surveillance de la santé des veaux dans l'élevage suisse. Qualitas AG développe et exploite cette solution dans le cadre de son offre pour l'élevage animal suisse.
-        """@fr,
-        """
-        Il Servizio di salute dei vitelli (KGS) è una piattaforma online per la gestione e il monitoraggio della salute dei vitelli nell'allevamento svizzero. Qualitas AG sviluppa e gestisce questa soluzione come parte della sua offerta per l'allevamento animale svizzero.
-        """@it ;
-    dcat:landingPage <https://kgd.qualitasag.ch/KGS/> ;
-    systemmap:operatedBy zefix:804864 .
-
-systemmap:Sd3egXVVG1pgbzgcA a schema:SoftwareApplication ;
-    rdfs:label "ERP-System"@de,
-        "ERP System"@en,
-        "Système ERP"@fr,
-        "Sistema ERP"@it ;
-    rdfs:comment """
-        Eine auf Microsoft Navision basierende ERP-Software, die von der ASF Tiervermarktung AG genutzt wird.
-        """@de,
-        """
-        An ERP software based on Microsoft Navision, used by ASF Tiervermarktung AG.
-        """@en,
-        """
-        Un logiciel ERP basé sur Microsoft Navision, utilisé par ASF Tiervermarktung AG.
-        """@fr,
-        """
-        Un software ERP basato su Microsoft Navision, utilizzato da ASF Tiervermarktung AG.
-        """@it ;
-    systemmap:abbreviation "Navision"@de ;
-    dcat:landingPage <https://dynamics.microsoft.com/de-de/business-central/overview/> ;
-    systemmap:operatedBy zefix:2595 .
-
-systemmap:SI3XHtHkv1ePAqhQg a schema:SoftwareApplication ;
-    rdfs:label "DGWeb Vet"@de,
-        "DGWeb Vet"@en,
-        "DGWeb Vet"@fr,
-        "DGWeb Vet"@it ;
-    rdfs:comment """
-        Eine Applikation, mit der Tierärztinnen und Tierärzte amtliche Aufträge ausführen, Analyseaufträge erstellen, Probendaten erfassen und diese dem LSVW übermitteln können. Die Software unterstützt die Prävention und Bekämpfung von Tierseuchen und Zoonosen.
-        """@de,
-        """
-        An application enabling veterinarians to carry out official mandates, create analysis orders, record sample data, and transmit them to the FSVA. The software supports the prevention and control of animal diseases and zoonoses.
-        """@en,
-        """
-        Une application permettant aux vétérinaires d’exécuter des mandats officiels, de créer des ordres d’analyse, d’enregistrer les données d’échantillons et de les transmettre au SAAV. Le logiciel soutient la prévention et la lutte contre les épizooties et les zoonoses.
-        """@fr,
-        """
-        Un’applicazione che consente ai veterinari di eseguire mandati ufficiali, creare ordini di analisi, registrare i dati dei campioni e trasmetterli al SAAV. Il software sostiene la prevenzione e il controllo delle epizoozie e delle zoonosi.
-        """@it ;
-    systemmap:operatedBy systemmap:SNYgqSYzzANvzanVS .
-
-systemmap:SwsptnNDhjz0vIZNu a schema:SoftwareApplication ;
-    rdfs:label "Isalait"@de,
-        "Isalait"@en,
-        "Isalait"@fr,
-        "Isalait"@it ;
-    rdfs:comment """
-        Isalait ist eine Herdenmanagement-Software für Milchproduzenten, die Bereiche wie Reproduktion, Gesundheits- und Fütterungsmanagement, Milchleistungsprüfung und den administrativen Datenaustausch abdeckt.
-        """@de,
-        """
-        Isalait is a herd management software for dairy producers, covering areas such as reproduction, health and feed management, milk recording, and administrative data exchange.
-        """@en,
-        """
-        Isalait est un logiciel de gestion de troupeau laitier couvrant des domaines tels que la reproduction, la gestion sanitaire et alimentaire, le contrôle laitier et l'échange de données administratives.
-        """@fr,
-        """
-        Isalait è un software di gestione della mandria per produttori di latte, che copre aree come la riproduzione, la gestione sanitaria e dell'alimentazione, il controllo delle prestazioni lattifere e lo scambio di dati amministrativi.
-        """@it ;
-    dcat:landingPage <https://client.isagri.ch/centre-aide/isalait> ;
-    systemmap:operatedBy zefix:505628 .
-
-systemmap:S8awijRdrkgdpXxgz a schema:SoftwareApplication ;
-    rdfs:label "Oblon"@de,
-        "Oblon"@en,
-        "Oblon"@fr,
-        "Oblon"@it ;
-    rdfs:comment """
-        OblonData ist eine umfassende Praxis- und Klinikverwaltungssoftware für Tierärzte in der Nutztier-, Pferde- und Kleintierpraxis. Sie bietet Funktionen für Patienten-, Konsultations- und Finanzmanagement, Terminverwaltung, elektronische Krankengeschichte, Lagerverwaltung und zahlreiche Schnittstellen zu anderen Systemen.
-        """@de,
-        """
-        OblonData is a comprehensive practice and clinic management software for veterinarians in livestock, equine, and small animal practices. It offers tools for managing patients, consultations, finances, scheduling, electronic medical records, inventory, and multiple system interfaces.
-        """@en,
-        """
-        OblonData est un logiciel complet de gestion de cabinet et de clinique pour les vétérinaires en pratique des animaux de rente, des chevaux et des petits animaux. Il propose des fonctions de gestion des patients, des consultations, des finances, de la planification, du dossier médical électronique, de la gestion des stocks et de nombreuses interfaces.
-        """@fr,
-        """
-        OblonData è un software completo per la gestione di studi e cliniche veterinarie per animali da reddito, cavalli e piccoli animali. Offre strumenti per la gestione di pazienti, consultazioni, finanze, appuntamenti, cartelle cliniche elettroniche, magazzino e molte interfacce.
-        """@it ;
-    dcat:landingPage <https://oblondata.ch> ;
-    systemmap:operatedBy zefix:984853 .
-
-systemmap:SSpO8T6drwrwFgLXG a schema:SoftwareApplication ;
-    rdfs:label "LSQueryAnimalTracing"@de,
-        "LSQueryAnimalTracing"@en,
-        "LSQueryAnimalTracing"@fr,
-        "LSQueryAnimalTracing"@it ;
-    rdfs:comment """
-        Eine Softwarelösung der Silvestri AG für den Tierhandel.
-        """@de,
-        """
-        A software solution from Silvestri AG for the livestock trade.
-        """@en,
-        """
-        Une solution logicielle de Silvestri AG pour le commerce d'animaux.
-        """@fr,
-        """
-        Una soluzione software di Silvestri AG per il commercio di bestiame.
-        """@it ;
-    systemmap:operatedBy zefix:177634 .
-
-systemmap:SEcvzMJMYkUtSnTSB a schema:SoftwareApplication ;
-    rdfs:label "Moblin"@de,
-        "Moblin"@en,
-        "Moblin"@fr,
-        "Moblin"@it ;
-    rdfs:comment """
-        Moblin ist ein effizientes und einfach zu bedienendes Programm für Schlachtbetriebe. Es deckt alle Aspekte einer Schlachtung ab, von der Tierannahme über Schlachtung, Wägung, Etiketten- und Schlachtpapierausdrucke bis zum Export in die Buchhaltung. Die Software ist für Touchscreen-Industriecomputer ausgelegt und wurde praxisnah zusammen mit einem Schlachtbetrieb entwickelt.
-        """@de,
-        """
-        Moblin is an efficient and easy-to-use software for slaughterhouses, covering all aspects from animal intake, slaughter, weighing, label and slaughter paper printing, to accounting export. It is designed for touchscreen industrial computers and was developed in close cooperation with a slaughterhouse for practical use.
-        """@en,
-        """
-        Moblin est un programme efficace et facile à utiliser pour les abattoirs. Il couvre tous les aspects de l'abattage, de la réception des animaux à l'abattage, la pesée, l'impression d'étiquettes et de documents d'abattage, jusqu'à l'exportation vers la comptabilité. Le logiciel est conçu pour des ordinateurs industriels à écran tactile et a été développé en collaboration avec un abattoir pour une utilisation pratique.
-        """@fr,
-        """
-        Moblin è un programma efficiente e facile da usare per i macelli. Copre tutti gli aspetti della macellazione, dalla ricezione degli animali, macellazione, pesatura, stampa di etichette e documenti di macellazione fino all’esportazione in contabilità. Il software è progettato per computer industriali touchscreen ed è stato sviluppato in collaborazione con un macello per un utilizzo pratico.
-        """@it ;
-    systemmap:operatedBy zefix:1099793 .
-
-systemmap:SkGYudMy9po7MUq2x a schema:SoftwareApplication ;
-    rdfs:label "Equi-FM"@de,
-        "Equi-FM"@en,
-        "Equi-FM"@fr,
-        "Equi-FM"@it ;
-    rdfs:comment """
-        Equi-FM ist eine Softwarelösung des Schweizerischen Freibergerverbandes (SFV) zur Verwaltung, Vermarktung und Auswahl von Freibergerpferden. Sie unterstützt Züchter und Käufer bei der Suche nach passenden Pferden anhand von Kriterien wie Persönlichkeit, Ausbildungsstand und individuellen Bedürfnissen.
-        """@de,
-        """
-        Equi-FM is a software solution from the Swiss Federation of Franches-Montagnes Horse Breeders (SFV) for the management, marketing, and selection of Franches-Montagnes horses. It supports breeders and buyers in finding suitable horses based on criteria such as personality, training level, and individual needs.
-        """@en,
-        """
-        Equi-FM est une solution logicielle de la Fédération suisse d’élevage du cheval de la race Franches-Montagnes (SFV) pour la gestion, la commercialisation et la sélection des chevaux Franches-Montagnes. Elle aide les éleveurs et les acheteurs à trouver des chevaux adaptés selon des critères tels que la personnalité, le niveau de formation et les besoins individuels.
-        """@fr,
-        """
-        Equi-FM è una soluzione software della Federazione svizzera degli allevatori del cavallo di razza Franches-Montagnes (SFV) per la gestione, la commercializzazione e la selezione dei cavalli Franches-Montagnes. Supporta allevatori e acquirenti nella ricerca di cavalli adatti in base a criteri come personalità, livello di addestramento e bisogni individuali.
-        """@it ;
-    dcat:landingPage <https://www.agroscope.admin.ch/agroscope/de/home/themen/nutztiere/pferde/haras-forschung-sng/haras-forschung-e-fm.html> ;
-    systemmap:operatedBy systemmap:ScS6Ziy08AYukFjjh .
-
-systemmap:SVetDbLmnPqR2tYvCxDE a schema:SoftwareApplication ;
-    rdfs:label "VET-DB"@de,
-        "VET-DB"@en,
-        "VET-DB"@fr,
-        "VET-DB"@it ;
-    rdfs:comment """
-        Eine interne Software-Anwendung des Kantonalen Veterinäramtes Zürich.
-        """@de,
-        """
-        An internal software application of the Cantonal Veterinary Office of Zurich.
-        """@en,
-        """
-        Une application logicielle interne de l'Office vétérinaire cantonal de Zurich.
-        """@fr,
-        """
-        Un'applicazione software interna dell'Ufficio veterinario cantonale di Zurigo.
-        """@it ;
-    systemmap:operatedBy systemmap:SswJdLNKXUjfnD84b .
-
-systemmap:SrkebxtFWRCtftbJV a schema:SoftwareApplication ;
-    rdfs:label "AGRO-TECH"@de,
-        "AGRO-TECH"@en,
-        "AGRO-TECH"@fr,
-        "AGRO-TECH"@it ;
-    rdfs:comment """
-        AGRO-TECH ist eine umfassende Bewirtschaftungs-Software, die als Hilfsmittel für den ÖLN dient. Sie ermöglicht das Führen von Schlag- und Tierregistern (mit TVD-Anbindung), die Erstellung von Düngungsplänen, die Berechnung der Suisse-Bilanz sowie die mobile Erfassung von Feldmassnahmen.
-        """@de,
-        """
-        AGRO-TECH is a comprehensive farm management software that serves as a tool for the Proof of Ecological Performance (ÖLN). It enables the management of field and animal registers (with TVD connection), creation of fertilization plans, calculation of the Suisse-Bilanz, and mobile recording of field activities.
-        """@en,
-        """
-        AGRO-TECH est un logiciel de gestion d'exploitation complet servant d'outil pour les prestations écologiques requises (PER). Il permet de tenir des registres de parcelles et d'animaux (avec connexion à la BDTA), d'établir des plans de fumure, de calculer le Bilan de fumure et de saisir les interventions au champ sur mobile.
-        """@fr,
-        """
-        AGRO-TECH è un software di gestione aziendale completo che funge da strumento per la prova delle prestazioni ecologiche (PER). Consente la gestione dei registri delle parcelle e degli animali (con collegamento alla BDTA), la creazione di piani di concimazione, il calcolo del Bilancio della fertilizzazione e la registrazione mobile delle attività in campo.
-        """@it ;
-    dcat:landingPage <https://www.agridea.ch/de/unser-angebot/unsere-produkte/software/agro-tech/> ;
-    systemmap:operatedBy zefix:885059 .
-
-systemmap:SGRIDS_LmnPqR5tYvCxDG a schema:SoftwareApplication ;
-    rdfs:label "GRIDS"@de,
-        "GRIDS"@en,
-        "GRIDS"@fr,
-        "GRIDS"@it ;
-    rdfs:comment """
-        GRIDS ist ein Informations- und Dokumentationssystem über Grossraubtiere, das vom BAFU in Zusammenarbeit mit den Kantonen betrieben wird. Es dient der Verwaltung von Nutztierschäden, Regulierungsmassnahmen und der Erstellung von Statistiken und ist mit AGIS, AMICUS und der TVD verknüpft.
-        """@de,
-        """
-        GRIDS is an information and documentation system on large carnivores, operated by the FOEN in cooperation with the cantons. It is used for managing livestock damage, regulation measures, and creating statistics, and is linked to AGIS, AMICUS, and the TVD.
-        """@en,
-        """
-        GRIDS est un système d'information et de documentation sur les grands prédateurs, exploité par l'OFEV en collaboration avec les cantons. Il sert à la gestion des dommages au bétail, aux mesures de régulation, à l'établissement de statistiques et est connecté à AGIS, AMICUS et à la BDTA.
-        """@fr,
-        """
-        GRIDS è un sistema informativo e di documentazione sui grandi predatori, gestito dall'UFAM in collaborazione con i cantoni. Viene utilizzato per la gestione dei danni al bestiame, le misure di regolazione, la creazione di statistiche ed è collegato ad AGIS, AMICUS e alla BDTA.
-        """@it ;
-    dcat:landingPage <https://www.bafu.admin.ch/bafu/de/home/themen/biodiversitaet/tiere-und-pflanzen/tiere--pilze--mikroorganismen/grossraubtiere.html> ;
-    systemmap:operatedBy systemmap:SwlgSr7ukziL6iHsP .
-
-systemmap:Shu8wJsNr6s2DSkrI a schema:SoftwareApplication ;
-    rdfs:label "Agrosoft Farmsolution"@de,
-        "Agrosoft Farmsolution"@en,
-        "Agrosoft Farmsolution"@fr,
-        "Agrosoft Farmsolution"@it ;
-    rdfs:comment """
-        Agrosoft Farmsolution ist eine modulare Betriebsmanagement-Software für die Schweizer Landwirtschaft. Sie deckt Bereiche wie Pflanzenbau, Tierhaltung und Buchhaltung ab und ist eine zu 100% in der Schweiz entwickelte Lösung.
-        """@de,
-        """
-        Agrosoft Farmsolution is a modular farm management software for Swiss agriculture. It covers areas such as crop cultivation, animal husbandry, and accounting and is a solution developed 100% in Switzerland.
-        """@en,
-        """
-        Agrosoft Farmsolution est un logiciel modulaire de gestion d'exploitation pour l'agriculture suisse. Il couvre des domaines tels que la culture des champs, l'élevage et la comptabilité et est une solution développée à 100% en Suisse.
-        """@fr,
-        """
-        Agrosoft Farmsolution è un software modulare di gestione aziendale per l'agricoltura svizzera. Copre settori come la coltivazione, l'allevamento e la contabilità ed è una soluzione sviluppata al 100% in Svizzera.
-        """@it ;
-    dcat:landingPage <https://www.farmsolution.ch/> ;
-    systemmap:operatedBy systemmap:SLu8IMm0TUxYimTwO .
-
-systemmap:SbQMDyJD8k62AfApL a schema:SoftwareApplication ;
-    rdfs:label "SAIMo"@de,
-        "SAIMo"@en,
-        "SAIMo"@fr,
-        "SAIMo"@it ;
-    rdfs:comment """
-        SAIMo ist das Datenerhebungssystem für die Stichprobe Betriebsführung von Agroscope. Es wird von Treuhandstellen verwendet, um Buchhaltungsdaten landwirtschaftlicher Betriebe zu erfassen und an Agroscope zu liefern.
-        """@de,
-        """
-        SAIMo is the data collection system for Agroscope's Farm Accountancy Sample. It enables trustees to capture and deliver accounting data from agricultural holdings to Agroscope.
-        """@en,
-        """
-        SAIMo est le système de collecte de données pour l'échantillon de gestion d'exploitation d'Agroscope. Il est utilisé par les fiduciaires pour saisir et transmettre les données comptables des exploitations agricoles à Agroscope.
-        """@fr,
-        """
-        SAIMo è il sistema di raccolta dati per il campione di gestione aziendale di Agroscope. Viene utilizzato dai fiduciari per acquisire e fornire i dati contabili delle aziende agricole ad Agroscope.
-        """@it ;
-    dcat:landingPage <https://www.agate.ch/saimo/datenerhebung/> ;
-    systemmap:operatedBy systemmap:SIo1a8l3IT4lBqBJE .
-
-systemmap:SQkEfw7VYTz3ceOrg a schema:SoftwareApplication ;
-    rdfs:label "elektronische Sonderbewilligung PSM"@de,
-        "electronic special permit PPP"@en,
-        "autorisation spéciale électronique PPE"@fr,
-        "permesso speciale elettronico PFF"@it ;
-    rdfs:comment """
-        Ein Online-Formular zur Beantragung von Sonderbewilligungen für den Einsatz von Pflanzenschutzmitteln (PSM) in besonderen Kulturen, bereitgestellt vom Strickhof in Zusammenarbeit mit der Baudirektion des Kantons Zürich.
-        """@de,
-        """
-        An online form for applying for special permits for the use of plant protection products (PPP) in special crops, provided by Strickhof in cooperation with the Building Department of the Canton of Zurich.
-        """@en,
-        """
-        Un formulaire en ligne pour demander des autorisations spéciales pour l'utilisation de produits phytopharmaceutiques (PPP) dans des cultures spéciales, fourni par le Strickhof en collaboration avec la Direction des travaux publics du canton de Zurich.
-        """@fr,
-        """
-        Un modulo online per la richiesta di permessi speciali per l'uso di prodotti fitosanitari (PFF) in colture speciali, fornito dallo Strickhof in collaborazione con il Dipartimento dei lavori pubblici del Cantone di Zurigo.
-        """@it ;
-    dcat:landingPage <https://www.strickhof.ch/publikationen/elektronische-sonderbewilligung/> ;
-    systemmap:operatedBy systemmap:SWRHHjM4WnPdLkEVr,
-        systemmap:S0ummGTITezxHMtA3 .
-
-systemmap:SDoGAjF1AJCdFZQQl a schema:SoftwareApplication ;
-    rdfs:label "E-Direct"@de,
-        "E-Direct"@en,
-        "E-Direct"@fr,
-        "E-Direct"@it ;
-    rdfs:comment """
-        Mobile App zur direkten Anmeldung von Schlachttieren durch Landwirte. Ermöglicht Terminvereinbarung, Transportorganisation und automatische Dokumentenerstellung.
-        """@de,
-        """
-        Mobile app enabling farmers to register slaughter animals directly. Facilitates scheduling, transport coordination, and automated documentation.
-        """@en,
-        """
-        Application mobile permettant aux agriculteurs d'enregistrer directement les animaux de boucherie. Facilite la prise de rendez-vous, l'organisation du transport et la création automatique de documents.
-        """@fr,
-        """
-        App mobile che consente agli agricoltori di registrare direttamente gli animali da macello. Facilita la programmazione, il coordinamento del trasporto e la documentazione automatizzata.
-        """@it ;
-    dcat:landingPage <https://www.micarna.ch/de/services/e-direct> ;
-    systemmap:operatedBy zefix:130459 .
-
-systemmap:SlmCGKfiLZcQ0MsvC a schema:SoftwareApplication ;
-    rdfs:label "ERP-System"@de,
-        "ERP System"@en,
-        "Système ERP"@fr,
-        "Sistema ERP"@it ;
-    rdfs:comment """
-        Ein auf SAP basierendes ERP-System, das von Micarna für die Verwaltung von Prozessen in der Fleischverarbeitung genutzt wird.
-        """@de,
-        """
-        An SAP-based ERP system used by Micarna for managing meat processing operations.
-        """@en,
-        """
-        Un système ERP basé sur SAP, utilisé par Micarna pour la gestion des processus de transformation de la viande.
-        """@fr,
-        """
-        Un sistema ERP basato su SAP, utilizzato da Micarna per la gestione dei processi di lavorazione della carne.
-        """@it ;
-    systemmap:abbreviation "SAP-Meatline"@de ;
-    systemmap:operatedBy zefix:130459 .
-
-systemmap:SAIg9IaUyZYcHjEZ4 a schema:SoftwareApplication ;
-    rdfs:label "DSA Expert"@de ;
-    rdfs:comment """
-        DSA Expert ist ein Entscheidungshilfe-Tool für die technische und wirtschaftliche Führung landwirtschaftlicher Betriebe.
-        """@de,
-        """
-        DSA Expert is a decision-support tool for the technical and economic management of agricultural holdings.
-        """@en,
-        """
-        DSA Expert est un outil d'aide à la décision pour la gestion technique et économique des exploitations agricoles.
-        """@fr,
-        """
-        DSA Expert è uno strumento di supporto decisionale per la gestione tecnica ed economica delle aziende agricole.
-        """@it ;
-    dcat:landingPage <https://farmconsult.ch/logiciel-de/> ;
-    systemmap:operatedBy zefix:1393629 .
-
-systemmap:Svbcr8GEkZLb3HmRI a schema:SoftwareApplication ;
-    rdfs:label "LAWIS plus"@de,
-        "LAWIS plus"@en,
-        "LAWIS plus"@fr,
-        "LAWIS plus"@it ;
-    rdfs:comment """
-        LAWIS plus ist ein digitales System zur Erfassung landwirtschaftlicher Flächen, Programmanmeldungen und Direktzahlungen für die Trägerkantone. Es umfasst GIS-basierte Flächenerfassung, Datenmutationsfunktionen und Antragsverwaltung für Agrarsubventionen.
-        """@de,
-        """
-        LAWIS plus is a digital system for agricultural land recording, program registration, and direct payments for the supporting cantons. It features GIS-based area mapping, data mutation tools, and subsidy application management.
-        """@en,
-        """
-        LAWIS plus est un système numérique pour l'enregistrement des surfaces agricoles, l'inscription aux programmes et les paiements directs pour les cantons responsables. Il inclut la cartographie géospatiale, les outils de gestion des données et la gestion des subventions agricoles.
-        """@fr,
-        """
-        LAWIS plus è un sistema digitale per la registrazione di terreni agricoli, l'iscrizione ai programmi e i pagamenti diretti per i cantoni responsabili. Include mappatura geospaziale, strumenti di gestione dati e amministrazione di sovvenzioni agrarie.
-        """@it ;
-    systemmap:operatedBy zefix:1354082 .
 
 systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
     rdfs:label "Agrarmarktdaten"@de,
@@ -2380,6 +2478,27 @@ systemmap:Sb2FM7pKN60PrRwU a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN .
 
+systemmap:SbcLBABffpMBvu7OP a dcat:Dataset ;
+    rdfs:label "Gesunde Klauen Projektdaten"@de,
+        "Healthy Hooves Project Data"@en,
+        "Données du projet Sabots Sains"@fr,
+        "Dati del progetto Zoccoli Sani"@it ;
+    rdfs:comment """
+        Ein vom BLW unterstütztes Ressourcenprojekt zur Verbesserung der Klauengesundheit bei Schweizer Rindern durch systematische Datenerfassung via Klauenpfleger.
+        Die Daten werden bei der Qualitas AG gespeichert und von Partnern wie der Vetsuisse-Fakultät Bern und Zuchtorganisationen für Forschung und Zuchtwertschätzung genutzt.
+        Das Projekt fördert die Zusammenarbeit zwischen Tierhaltern, Tierärzten und Klauenpflegern.
+        """@de,
+        """
+        A resource project supported by the FOAG to improve hoof health in Swiss cattle through systematic data collection by hoof trimmers. The data is stored at Qualitas AG and used by partners such as the Vetsuisse Faculty Bern and breeding organizations for research and breeding value estimation. The project promotes collaboration between animal owners, veterinarians, and hoof trimmers.
+        """@en,
+        """
+        Un projet de ressources soutenu par l'OFAG visant àaméliorer la santé des onglons des bovins suisses grâce à la collecte systématique de données par les pédicures bovins. Les données sont stockées chez Qualitas AG et utilisées par des partenaires tels que la Faculté Vetsuisse de Berne et les organisations d'élevage pour la recherche et l'estimation des valeurs d'élevage. Le projet encourage la collaboration entre éleveurs, vétérinaires et pédicures bovins.
+        """@fr,
+        """
+        Un progetto di risorse sostenuto dall'UFAG per migliorare la salute degli zoccoli dei bovini svizzeri attraverso la raccolta sistematica di dati da parte dei pareggiatori. I dati sono conservati presso Qualitas AG e utilizzati da partner come la Facoltà Vetsuisse di Berna e le organizzazioni di allevamento per la ricerca e la stima del valore genetico. Il progetto promuove la collaborazione tra allevatori, veterinari e pareggiatori.
+        """@it ;
+    dcat:landingPage <https://www.gesundeklauen.unibe.ch/> .
+
 systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
     rdfs:label "Daten zur Milchproduktion"@de,
         "Data on milk production"@en,
@@ -2485,24 +2604,21 @@ systemmap:SzuDlnYUQMk3HaCb a dcat:Dataset ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
     systemmap:informs systemmap:SX1qchbxSZKWI6Up .
 
-systemmap:SbcLBABffpMBvu7OP a dcat:Dataset ;
-    rdfs:label "Gesunde Klauen Projektdaten"@de,
-        "Healthy Hooves Project Data"@en,
-        "Données du projet Sabots Sains"@fr,
-        "Dati del progetto Zoccoli Sani"@it ;
-    rdfs:comment """
-        Ein vom BLW unterstütztes Ressourcenprojekt zur Verbesserung der Klauengesundheit bei Schweizer Rindern durch systematische Datenerfassung via Klauenpfleger. Die Daten werden bei der Qualitas AG gespeichert und von Partnern wie der Vetsuisse-Fakultät Bern und Zuchtorganisationen für Forschung und Zuchtwertschätzung genutzt. Das Projekt fördert die Zusammenarbeit zwischen Tierhaltern, Tierärzten und Klauenpflegern.
-        """@de,
-        """
-        A resource project supported by the FOAG to improve hoof health in Swiss cattle through systematic data collection by hoof trimmers. The data is stored at Qualitas AG and used by partners such as the Vetsuisse Faculty Bern and breeding organizations for research and breeding value estimation. The project promotes collaboration between animal owners, veterinarians, and hoof trimmers.
-        """@en,
-        """
-        Un projet de ressources soutenu par l'OFAG visant àaméliorer la santé des onglons des bovins suisses grâce à la collecte systématique de données par les pédicures bovins. Les données sont stockées chez Qualitas AG et utilisées par des partenaires tels que la Faculté Vetsuisse de Berne et les organisations d'élevage pour la recherche et l'estimation des valeurs d'élevage. Le projet encourage la collaboration entre éleveurs, vétérinaires et pédicures bovins.
-        """@fr,
-        """
-        Un progetto di risorse sostenuto dall'UFAG per migliorare la salute degli zoccoli dei bovini svizzeri attraverso la raccolta sistematica di dati da parte dei pareggiatori. I dati sono conservati presso Qualitas AG e utilizzati da partner come la Facoltà Vetsuisse di Berna e le organizzazioni di allevamento per la ricerca e la stima del valore genetico. Il progetto promuove la collaborazione tra allevatori, veterinari e pareggiatori.
-        """@it ;
-    dcat:landingPage <https://www.gesundeklauen.unibe.ch/> .
+systemmap:SWRHHjM4WnPdLkEVr a systemmap:CantonalAgriculturalAdvisor ;
+    rdfs:label "Strickhof"@de,
+        "Strickhof"@en,
+        "Strickhof"@fr,
+        "Strickhof"@it ;
+    schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i ;
+    dcat:landingPage <https://www.strickhof.ch> .
+
+systemmap:S0ummGTITezxHMtA3 a systemmap:CantonalOrganization ;
+    rdfs:label "Baudirektion des Kantons Zürich"@de,
+        "Building Department of the Canton of Zurich"@en,
+        "Direction des travaux publics du canton de Zurich"@fr,
+        "Dipartimento dei lavori pubblici del Cantone di Zurigo"@it ;
+    schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i ;
+    dcat:landingPage <https://www.zh.ch/de/baudirektion.html> .
 
 systemmap:S1KtKkrBMoK25AKVA a systemmap:CantonalOrganization ;
     rdfs:label "Direktzahlungen und Beiträge"@de ;
@@ -2767,6 +2883,13 @@ systemmap:SXgifgY4eK6N4W9jr a systemmap:CantonalOrganization ;
     rdfs:label "Departement Finanzen und Ressourcen"@de ;
     schema:parentOrganization systemmap:SGkAVZIrJPw0HqHLs .
 
+systemmap:SeAMQkVkDZ2SUpEVq a systemmap:CantonalOrganization ;
+    rdfs:label "Universität Bern"@de,
+        "University of Bern"@en,
+        "Université de Berne"@fr,
+        "Università di Berna"@it ;
+    dcat:landingPage <https://www.unibe.ch/> .
+
 systemmap:SfCWpkO67ty1HLzmK a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Basel-Stadt"@de,
         "Canton of Basel-Stadt"@en,
@@ -2833,6 +2956,18 @@ systemmap:SpJ9AAjLlCAkFBhVU a systemmap:CantonalOrganization ;
     rdfs:label "Strategie und Planung"@de ;
     schema:parentOrganization systemmap:SDMGFgrGMHxc0eoLM .
 
+systemmap:SqbzqGjI3ws0stDBH a systemmap:CantonalOrganization ;
+    rdfs:label "Universität Zürich"@de,
+        "University of Zurich"@en,
+        "Université de Zurich"@fr,
+        "Università di Zurigo"@it ;
+    schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i ;
+    dcat:landingPage <https://www.uzh.ch> ;
+    systemmap:abbreviation "UZH"@de,
+        "UZH"@en,
+        "UZH"@fr,
+        "UZH"@it .
+
 systemmap:Sqo5ZJtzXw1gg3RYC a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Genf"@de,
         "Canton of Geneva"@en,
@@ -2874,63 +3009,28 @@ systemmap:SzHOtHCVjJXECjyDj a systemmap:CantonalOrganization ;
         "L'amministrazione cantonale di Basilea Campagna."@it ;
     systemmap:abbreviation "BL" .
 
-systemmap:SeAMQkVkDZ2SUpEVq a systemmap:CantonalOrganization ;
-    rdfs:label "Universität Bern"@de,
-        "University of Bern"@en,
-        "Université de Berne"@fr,
-        "Università di Berna"@it ;
-    dcat:landingPage <https://www.unibe.ch/> .
-
-systemmap:SqbzqGjI3ws0stDBH a systemmap:CantonalOrganization ;
-    rdfs:label "Universität Zürich"@de,
-        "University of Zurich"@en,
-        "Université de Zurich"@fr,
-        "Università di Zurigo"@it ;
-    systemmap:abbreviation "UZH"@de,
-        "UZH"@en,
-        "UZH"@fr,
-        "UZH"@it ;
-    dcat:landingPage <https://www.uzh.ch> ;
-    schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i .
-
-systemmap:S0ummGTITezxHMtA3 a systemmap:CantonalOrganization ;
-    rdfs:label "Baudirektion des Kantons Zürich"@de,
-        "Building Department of the Canton of Zurich"@en,
-        "Direction des travaux publics du canton de Zurich"@fr,
-        "Dipartimento dei lavori pubblici del Cantone di Zurigo"@it ;
-    dcat:landingPage <https://www.zh.ch/de/baudirektion.html> ;
-    schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i .
-
-systemmap:SWRHHjM4WnPdLkEVr a systemmap:CantonalAgriculturalAdvisor ;
-    rdfs:label "Strickhof"@de,
-        "Strickhof"@en,
-        "Strickhof"@fr,
-        "Strickhof"@it ;
-    dcat:landingPage <https://www.strickhof.ch> ;
-    schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i . # Parent is Kanton Zürich
+systemmap:SNYgqSYzzANvzanVS a systemmap:CantonalVeterinaryService ;
+    rdfs:label "Amt für Lebensmittelsicherheit und Veterinärwesen"@de,
+        "Food Safety and Veterinary Affairs Service"@en,
+        "Service de la sécurité alimentaire et des affaires vétérinaires"@fr,
+        "Servizio della sicurezza alimentare e degli affari veterinari"@it ;
+    schema:parentOrganization systemmap:Sp5pkmAETRpXrudck ;
+    dcat:landingPage <https://www.fr.ch/de/diaf/saav> ;
+    systemmap:abbreviation "LSVW"@de,
+        "SAAV"@fr .
 
 systemmap:SY0h92GbLVkapqnQt a systemmap:CantonalVeterinaryService ;
     rdfs:label "Kantonaler Veterinärdienst Aargau"@de ;
     schema:parentOrganization systemmap:Slsq3Et7cyDrThfMW ;
     dcat:landingPage <https://www.ag.ch/de/verwaltung/dgs/verbraucherschutz/veterinaerdienst> .
 
-systemmap:SNYgqSYzzANvzanVS a systemmap:CantonalVeterinaryService ;
-    rdfs:label "Amt für Lebensmittelsicherheit und Veterinärwesen"@de,
-        "Food Safety and Veterinary Affairs Service"@en,
-        "Service de la sécurité alimentaire et des affaires vétérinaires"@fr,
-        "Servizio della sicurezza alimentare e degli affari veterinari"@it ;
-    systemmap:abbreviation "LSVW"@de,
-        "SAAV"@fr ;
-    dcat:landingPage <https://www.fr.ch/de/diaf/saav> ;
-    schema:parentOrganization systemmap:Sp5pkmAETRpXrudck .
-
 systemmap:SswJdLNKXUjfnD84b a systemmap:CantonalVeterinaryService ;
     rdfs:label "Kantonales Veterinäramt Zürich"@de,
         "Cantonal Veterinary Office Zurich"@en,
         "Office vétérinaire cantonal de Zurich"@fr,
         "Ufficio veterinario cantonale di Zurigo"@it ;
-    dcat:landingPage <https://www.zh.ch/de/gesundheitsdirektion/veterinaeramt.html> ;
-    schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i . # Parent is Kanton Zürich
+    schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i ;
+    dcat:landingPage <https://www.zh.ch/de/gesundheitsdirektion/veterinaeramt.html> .
 
 systemmap:S1JvEmah9Tl0698au a systemmap:FederalOrganization ;
     rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de,
@@ -3182,6 +3282,17 @@ systemmap:SIo1a8l3IT4lBqBJE a systemmap:FederalOrganization ;
         Oltre alla ricerca, Agroscope fornisce consulenza politica, scambio di conoscenze e trasferimento tecnologico per sostenere un sistema agroalimentare competitivo e multifunzionale in Svizzera.
         """@it ;
     owl:sameAs staatskalender:10003634 .
+
+systemmap:SKrd0rj3P7vHUQ7h7 a systemmap:FederalOrganization ;
+    rdfs:label "Eidgenössische Technische Hochschule Zürich"@de,
+        "Swiss Federal Institute of Technology Zurich"@en,
+        "École polytechnique fédérale de Zurich"@fr,
+        "Politecnico federale di Zurigo"@it ;
+    dcat:landingPage <https://ethz.ch> ;
+    systemmap:abbreviation "ETH Zürich"@de,
+        "ETH Zurich"@en,
+        "EPF Zurich"@fr,
+        "ETH Zurigo"@it .
 
 systemmap:SMnIieexlpOQHsGvN a systemmap:FederalOrganization ;
     rdfs:label "Genetische Ressourcen, Produktionssicherheit und Futtermittel"@de,
@@ -3759,17 +3870,6 @@ systemmap:S3jZwzvmFKsXRWiI a systemmap:MasterData ;
         "BURNR"@fr,
         "BURNR"@it .
 
-systemmap:SKrd0rj3P7vHUQ7h7 a systemmap:FederalOrganization ;
-    rdfs:label "Eidgenössische Technische Hochschule Zürich"@de,
-        "Swiss Federal Institute of Technology Zurich"@en,
-        "École polytechnique fédérale de Zurich"@fr,
-        "Politecnico federale di Zurigo"@it ;
-    systemmap:abbreviation "ETH Zürich"@de,
-        "ETH Zurich"@en,
-        "EPF Zurich"@fr,
-        "ETH Zurigo"@it ;
-    dcat:landingPage <https://ethz.ch> .
-
 systemmap:SDLEUPczkJ9AWZeC a systemmap:MasterData ;
     rdfs:label "UID-Nummer"@de,
         "UID Number"@en,
@@ -3907,6 +4007,17 @@ systemmap:SHObqf1JYpt7KGLFS a systemmap:PrivateOrganization ;
         """@it ;
     owl:sameAs zefix:449781 .
 
+systemmap:SJqSPxOD2hdgsgJDI a systemmap:PrivateOrganization ;
+    rdfs:label "Schweizerischer Eringerviehzuchtverband"@de,
+        "Swiss Hérens Cattle Breeders' Federation"@en,
+        "Fédération Suisse d'élevage de la Race d'Hérens"@fr,
+        "Federazione Svizzera di allevamento della razza d'Hérens"@it ;
+    dcat:landingPage <https://www.raceherens.ch/de/> .
+
+systemmap:SLu8IMm0TUxYimTwO a systemmap:PrivateOrganization ;
+    rdfs:label "Agrosoft, Bosshart Bernhard"@de ;
+    dcat:landingPage <https://www.agrosoft.ch> .
+
 systemmap:SQ3N7dTc23t2wzXr2 a systemmap:PrivateOrganization ;
     rdfs:label "TSM Treuhand GmbH"@de,
         "TSM Treuhand LLC"@en,
@@ -3942,216 +4053,21 @@ systemmap:SWdllcNbPnjdcm7om a systemmap:PrivateOrganization ;
     rdfs:label "Agroline"@de ;
     systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
 
-zefix:1256441 a systemmap:PrivateOrganization ;
-    rdfs:label "mooh Genossenschaft"@de .
-
-zefix:2595 a systemmap:PrivateOrganization ;
-    rdfs:label "ASF Tiervermarktung AG"@de .
-
-zefix:330180 a systemmap:PrivateOrganization ;
-    rdfs:label "Bison Schweiz AG"@de ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
-
-zefix:371013 a systemmap:PrivateOrganization ;
-    rdfs:label "Ernst Sutter AG"@de ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
-
-zefix:432768 a systemmap:PrivateOrganization ;
-    rdfs:label "TRAVECO Transporte AG"@de ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
-
-zefix:446080 a systemmap:PrivateOrganization ;
-    rdfs:label "frigemo ag"@de ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
-
-zefix:505628 a systemmap:PrivateOrganization ;
-    rdfs:label "Isagri GmbH"@de .
-
-zefix:7011 a systemmap:PrivateOrganization ;
-    rdfs:label "Anicom AG"@de ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
-
-zefix:76693 a systemmap:PrivateOrganization ;
-    rdfs:label "Halag Chemie AG"@de ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
-
-zefix:787227 a systemmap:PrivateOrganization ;
-    rdfs:label "RAMSEIER Suisse AG"@de ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
-
-zefix:278958 a systemmap:PrivateOrganization ;
-    rdfs:label "Holstein Switzerland Genossenschaft"@de,
-        "Coopérative Holstein Switzerland"@fr ;
-    dcat:landingPage <https://www.holstein.ch/> .
-
-zefix:469727 a systemmap:PrivateOrganization ;
-    rdfs:label "Proviande Genossenschaft"@de,
-        "Proviande Cooperative"@en,
-        "Proviande Société Coopérative"@fr,
-        "Proviande Società Cooperativa"@it ;
-    dcat:landingPage <https://www.proviande.ch/> .
-
-zefix:367883 a systemmap:PrivateOrganization ;
-    rdfs:label "Martha-Software GmbH"@de ;
-    dcat:landingPage <https://masoft.ch/> .
-
-zefix:448334 a systemmap:PrivateOrganization ;
-    rdfs:label "swissgenetics"@de ;
-    dcat:landingPage <https://www.swissgenetics.ch/> .
-
-zefix:804864 a systemmap:PrivateOrganization ;
-    rdfs:label "Qualitas AG"@de ;
-    dcat:landingPage <https://www.qualitasag.ch/> .
-
-zefix:248029 a systemmap:PrivateOrganization ;
-    rdfs:label "Schweizerischer Ziegenzuchtverband (SZZV) Genossenschaft"@de,
-        "Fédération suisse d'élevage caprin (FSEC) coopérative"@fr,
-        "Federazione svizzera allevamento caprino (FSAC) cooperativa"@it ;
-    dcat:landingPage <https://szzv.ch/> .
-
-zefix:166248 a systemmap:PrivateOrganization ;
-    rdfs:label "Schweizerischer Schafzuchtverband Genossenschaft"@de ;
-    dcat:landingPage <https://www.sszv.ch/> .
-
-zefix:201495 a systemmap:PrivateOrganization ;
-    rdfs:label "MSD Animal Health GmbH"@de,
-        "MSD Animal Health LLC"@en,
-        "MSD Animal Health S.à r.l."@fr,
-        "MSD Animal Health Sagl"@it ;
-    dcat:landingPage <https://www.msd-animal-health.ch/> .
-
-systemmap:SrG5yvnwax87iuQw8 a systemmap:PrivateOrganization ;
-    rdfs:label "Vetera GmbH"@de ;
-    dcat:landingPage <https://vetera.net/> .
-
-zefix:1112092 a systemmap:PrivateOrganization ;
-    rdfs:label "swissVets AG"@de ;
-    dcat:landingPage <https://www.swissvets.ch/> .   
-
-zefix:57642 a systemmap:PrivateOrganization ;
-    rdfs:label "FF Frischfleisch AG"@de ;
-    dcat:landingPage <https://frischfleisch.ch/> .
-
-systemmap:SzqZmzij2bxSZEIL9 a systemmap:PrivateOrganization ;
-    rdfs:label "CSB-System SE"@de ;
-    dcat:landingPage <https://www.csb.com/> .
-
-zefix:7011 a systemmap:PrivateOrganization ;
-    rdfs:label "Anicom AG"@de ;
-    dcat:landingPage <https://www.anicom.ch> .
-
-zefix:443420 a systemmap:PrivateOrganization ;
-    rdfs:label "Reichmuth Fleischwaren AG"@de ;
-    dcat:landingPage <http://www.reichmuth-groupe.ch/fleischwaren/> .
-
-zefix:336983 a systemmap:PrivateOrganization ;
-    rdfs:label "CSN AG"@de ;
-    dcat:landingPage <https://csn.ch> .
-
-zefix:1008597 a systemmap:PrivateOrganization ;
-    rdfs:label "Bell (Schweiz) AG"@de ;
-    dcat:landingPage <https://www.bell.ch/> .
-
-zefix:531454 a systemmap:PrivateOrganization ;
-    rdfs:label "Softproviding AG"@de ;
-    dcat:landingPage <https://www.softproviding.com/> .
-
-zefix:165954 a systemmap:PrivateOrganization ;
-    rdfs:label "Genossenschaft swissherdbook Zollikofen"@de ;
-    dcat:landingPage <https://www.swissherdbook.ch> .
-
-zefix:769392 a systemmap:PrivateOrganization ;
-    rdfs:label "Mutterkuh Schweiz"@de,
-        "Mutterkuh Schweiz"@en,
-        "Vache mère Suisse"@fr,
-        "Vacca madre Svizzera"@it ;
-    dcat:landingPage <https://www.mutterkuh.ch> .
-
-zefix:226184 a systemmap:PrivateOrganization ;
-    rdfs:label "Genossenschaft Braunvieh Schweiz"@de ;
-    dcat:landingPage <https://www.braunvieh.ch> .
-
-zefix:445706 a systemmap:PrivateOrganization ;
-    rdfs:label "Bigler AG Fleischwaren"@de ;
-    dcat:landingPage <https://www.bigler.ch> .
-
-zefix:1226256 a systemmap:PrivateOrganization ;
-    rdfs:label "myBica AG"@de ;
-    dcat:landingPage <https://www.mybica.ch> .
-
-zefix:212388 a systemmap:PrivateOrganization ;
-    rdfs:label "Zentralschlachthof Hinwil AG"@de ;
-    dcat:landingPage <https://zshag.ch> .
-
-zefix:162591 a systemmap:PrivateOrganization ;
-    rdfs:label "Schlachtbetrieb St. Gallen AG"@de ;
-    dcat:landingPage <https://www.sbag-sg.ch> .
-
-zefix:371013 a systemmap:PrivateOrganization ;
-    rdfs:label "Ernst Sutter AG"@de ;
-    dcat:landingPage <https://www.ernstsutter.ch> .
-
-zefix:113323 a systemmap:PrivateOrganization ;
-    rdfs:label "Marmy Viandes en Gros SA"@de ;
-    dcat:landingPage <https://marmy.ch> .
-
-zefix:1013423 a systemmap:PrivateOrganization ;
-    rdfs:label "Datapass.ch AG"@de ;
-    dcat:landingPage <https://datapass.ch> .
-
-zefix:76051 a systemmap:PrivateOrganization ;
-    rdfs:label "Meliofeed AG"@de,
-        "Meliofeed Ltd"@en,
-        "Meliofeed SA"@it ;
-    dcat:landingPage <https://www.melior.ch> .
-
-systemmap:SJqSPxOD2hdgsgJDI a systemmap:PrivateOrganization ;
-    rdfs:label "Schweizerischer Eringerviehzuchtverband"@de,
-        "Swiss Hérens Cattle Breeders' Federation"@en,
-        "Fédération Suisse d'élevage de la Race d'Hérens"@fr,
-        "Federazione Svizzera di allevamento della razza d'Hérens"@it ;
-    dcat:landingPage <https://www.raceherens.ch/de/> .
-
-zefix:1110982 a systemmap:PrivateOrganization ;
-    rdfs:label "SMG Schweizerische Milchschafzucht Genossenschaft"@de ;
-    dcat:landingPage <https://www.smg-milchschafe.ch> .
-
-zefix:160746 a systemmap:PrivateOrganization ;
-    rdfs:label "SBZ Schlachtbetrieb Zürich AG"@de ;
-    dcat:landingPage <https://www.sbzzuerich.ch/> .
-
-zefix:417741 a systemmap:PrivateOrganization ;
-    rdfs:label "GRANOVIT AG"@de ;
-    dcat:landingPage <https://www.granovit.ch> .
-
-zefix:1397589 a systemmap:PrivateOrganization ;
-    rdfs:label "bio.inspecta AG"@de ;
-    dcat:landingPage <https://www.bio-inspecta.ch/> .
-
-zefix:1202686 a systemmap:PrivateOrganization ;
-    rdfs:label "EASY-CERT AG"@de ;
-    dcat:landingPage <https://www.easy-cert.com> .
-
-zefix:427343 a systemmap:PrivateOrganization ;
-    rdfs:label "Bio Suisse, Vereinigung Schweizer Biolandbau-Organisationen"@de,
-        "Bio Suisse, Federation of Swiss Organic Agriculture Organisations"@en,
-        "Bio Suisse, Fédération des organisations suisses d’agriculture biologique"@fr,
-        "Bio Suisse, Federazione delle organizzazioni svizzere dell’agricoltura biologica"@it ;
-    dcat:landingPage <https://www.bio-suisse.ch> .
-
-zefix:1249135 a systemmap:PrivateOrganization ;
-    rdfs:label "Verein Kometian"@de ;
-    dcat:landingPage <https://www.kometian.ch> .
-
-zefix:1566606 a systemmap:PrivateOrganization ;
-    rdfs:label "smaXtec AG"@de ;
-    dcat:landingPage <https://www.smaxtec.com/> .
+systemmap:ScS6Ziy08AYukFjjh a systemmap:PrivateOrganization ;
+    rdfs:label "Schweizerischer Freibergerverband (SFV)"@de,
+        "Swiss Federation of Franches-Montagnes Horse Breeders (SFV)"@en,
+        "Fédération suisse d'élevage du cheval de la race Franches-Montagnes (SFV)"@fr,
+        "Federazione svizzera degli allevatori del cavallo di razza Franches-Montagnes (SFV)"@it ;
+    dcat:landingPage <https://www.fm-ch.ch/de/> .
 
 systemmap:SdKC8g9DSflgxKlh4 a systemmap:PrivateOrganization ;
     rdfs:label "AgroVet-Strickhof"@de,
         "AgroVet-Strickhof"@en,
         "AgroVet-Strickhof"@fr,
         "AgroVet-Strickhof"@it ;
+    schema:member systemmap:SKrd0rj3P7vHUQ7h7,
+        systemmap:SWRHHjM4WnPdLkEVr,
+        systemmap:SqbzqGjI3ws0stDBH ;
     rdfs:comment """
         Ein Kompetenzzentrum für Bildung und Forschung, das als Kooperation zwischen Strickhof, ETH Zürich und Universität Zürich betrieben wird. Die landwirtschaftliche Betriebsführung wird durch den Ausbildungs- und Versuchsbetrieb des Strickhof wahrgenommen.
         """@de,
@@ -4164,22 +4080,23 @@ systemmap:SdKC8g9DSflgxKlh4 a systemmap:PrivateOrganization ;
         """
         Un centro di competenza per la formazione e la ricerca, gestito in cooperazione tra Strickhof, il Politecnico federale di Zurigo e l'Università di Zurigo. La gestione agricola è affidata all'azienda formativa e sperimentale dello Strickhof.
         """@it ;
-    dcat:landingPage <https://www.agrovet-strickhof.ch> ;
-    schema:member systemmap:SWRHHjM4WnPdLkEVr,
-        systemmap:SKrd0rj3P7vHUQ7h7,
-        systemmap:SqbzqGjI3ws0stDBH .
+    dcat:landingPage <https://www.agrovet-strickhof.ch> .
 
-zefix:2595 a systemmap:PrivateOrganization ;
-    rdfs:label "ASF Tiervermarktung AG"@de ;
-    dcat:landingPage <https://www.asf-sursee.ch> .
+systemmap:SrG5yvnwax87iuQw8 a systemmap:PrivateOrganization ;
+    rdfs:label "Vetera GmbH"@de ;
+    dcat:landingPage <https://vetera.net/> .
 
-zefix:984853 a systemmap:PrivateOrganization ;
-    rdfs:label "Amacker & Partner Informatik AG"@de ;
-    dcat:landingPage <https://www.amacker.ch> .
+systemmap:SzqZmzij2bxSZEIL9 a systemmap:PrivateOrganization ;
+    rdfs:label "CSB-System SE"@de ;
+    dcat:landingPage <https://www.csb.com/> .
 
-zefix:177634 a systemmap:PrivateOrganization ;
-    rdfs:label "Silvestri AG"@de ;
-    dcat:landingPage <https://www.silvestri.ch/> .
+zefix:1008597 a systemmap:PrivateOrganization ;
+    rdfs:label "Bell (Schweiz) AG"@de ;
+    dcat:landingPage <https://www.bell.ch/> .
+
+zefix:1013423 a systemmap:PrivateOrganization ;
+    rdfs:label "Datapass.ch AG"@de ;
+    dcat:landingPage <https://datapass.ch> .
 
 zefix:1099793 a systemmap:PrivateOrganization ;
     rdfs:label "bluebat GmbH"@de,
@@ -4188,12 +4105,201 @@ zefix:1099793 a systemmap:PrivateOrganization ;
         "bluebat Sagl"@it ;
     dcat:landingPage <https://bluebat.ch> .
 
-systemmap:ScS6Ziy08AYukFjjh a systemmap:PrivateOrganization ;
-    rdfs:label "Schweizerischer Freibergerverband (SFV)"@de,
-        "Swiss Federation of Franches-Montagnes Horse Breeders (SFV)"@en,
-        "Fédération suisse d'élevage du cheval de la race Franches-Montagnes (SFV)"@fr,
-        "Federazione svizzera degli allevatori del cavallo di razza Franches-Montagnes (SFV)"@it ;
-    dcat:landingPage <https://www.fm-ch.ch/de/> .
+zefix:1110982 a systemmap:PrivateOrganization ;
+    rdfs:label "SMG Schweizerische Milchschafzucht Genossenschaft"@de ;
+    dcat:landingPage <https://www.smg-milchschafe.ch> .
+
+zefix:1112092 a systemmap:PrivateOrganization ;
+    rdfs:label "swissVets AG"@de ;
+    dcat:landingPage <https://www.swissvets.ch/> .
+
+zefix:113323 a systemmap:PrivateOrganization ;
+    rdfs:label "Marmy Viandes en Gros SA"@de ;
+    dcat:landingPage <https://marmy.ch> .
+
+zefix:1202686 a systemmap:PrivateOrganization ;
+    rdfs:label "EASY-CERT AG"@de ;
+    dcat:landingPage <https://www.easy-cert.com> .
+
+zefix:1226256 a systemmap:PrivateOrganization ;
+    rdfs:label "myBica AG"@de ;
+    dcat:landingPage <https://www.mybica.ch> .
+
+zefix:1249135 a systemmap:PrivateOrganization ;
+    rdfs:label "Verein Kometian"@de ;
+    dcat:landingPage <https://www.kometian.ch> .
+
+zefix:1256441 a systemmap:PrivateOrganization ;
+    rdfs:label "mooh Genossenschaft"@de .
+
+zefix:130459 a systemmap:PrivateOrganization ;
+    rdfs:label "Micarna SA"@de ;
+    dcat:landingPage <https://www.micarna.ch> .
+
+zefix:1354082 a systemmap:PrivateOrganization ;
+    rdfs:label "eOperations Schweiz AG"@de,
+        "eOperations Switzerland AG"@en,
+        "eOperations Suisse SA"@fr,
+        "eOperations Svizzera SA"@it ;
+    dcat:landingPage <https://www.eoperations.ch> .
+
+zefix:1393629 a systemmap:PrivateOrganization ;
+    rdfs:label "FarmConsult Sàrl"@fr ;
+    dcat:landingPage <https://www.farmconsult.ch/> .
+
+zefix:1397589 a systemmap:PrivateOrganization ;
+    rdfs:label "bio.inspecta AG"@de ;
+    dcat:landingPage <https://www.bio-inspecta.ch/> .
+
+zefix:1566606 a systemmap:PrivateOrganization ;
+    rdfs:label "smaXtec AG"@de ;
+    dcat:landingPage <https://www.smaxtec.com/> .
+
+zefix:160746 a systemmap:PrivateOrganization ;
+    rdfs:label "SBZ Schlachtbetrieb Zürich AG"@de ;
+    dcat:landingPage <https://www.sbzzuerich.ch/> .
+
+zefix:162591 a systemmap:PrivateOrganization ;
+    rdfs:label "Schlachtbetrieb St. Gallen AG"@de ;
+    dcat:landingPage <https://www.sbag-sg.ch> .
+
+zefix:165954 a systemmap:PrivateOrganization ;
+    rdfs:label "Genossenschaft swissherdbook Zollikofen"@de ;
+    dcat:landingPage <https://www.swissherdbook.ch> .
+
+zefix:166248 a systemmap:PrivateOrganization ;
+    rdfs:label "Schweizerischer Schafzuchtverband Genossenschaft"@de ;
+    dcat:landingPage <https://www.sszv.ch/> .
+
+zefix:177634 a systemmap:PrivateOrganization ;
+    rdfs:label "Silvestri AG"@de ;
+    dcat:landingPage <https://www.silvestri.ch/> .
+
+zefix:201495 a systemmap:PrivateOrganization ;
+    rdfs:label "MSD Animal Health GmbH"@de,
+        "MSD Animal Health LLC"@en,
+        "MSD Animal Health S.à r.l."@fr,
+        "MSD Animal Health Sagl"@it ;
+    dcat:landingPage <https://www.msd-animal-health.ch/> .
+
+zefix:212388 a systemmap:PrivateOrganization ;
+    rdfs:label "Zentralschlachthof Hinwil AG"@de ;
+    dcat:landingPage <https://zshag.ch> .
+
+zefix:226184 a systemmap:PrivateOrganization ;
+    rdfs:label "Genossenschaft Braunvieh Schweiz"@de ;
+    dcat:landingPage <https://www.braunvieh.ch> .
+
+zefix:248029 a systemmap:PrivateOrganization ;
+    rdfs:label "Schweizerischer Ziegenzuchtverband (SZZV) Genossenschaft"@de,
+        "Fédération suisse d'élevage caprin (FSEC) coopérative"@fr,
+        "Federazione svizzera allevamento caprino (FSAC) cooperativa"@it ;
+    dcat:landingPage <https://szzv.ch/> .
+
+zefix:2595 a systemmap:PrivateOrganization ;
+    rdfs:label "ASF Tiervermarktung AG"@de ;
+    dcat:landingPage <https://www.asf-sursee.ch> .
+
+zefix:278958 a systemmap:PrivateOrganization ;
+    rdfs:label "Holstein Switzerland Genossenschaft"@de,
+        "Coopérative Holstein Switzerland"@fr ;
+    dcat:landingPage <https://www.holstein.ch/> .
+
+zefix:330180 a systemmap:PrivateOrganization ;
+    rdfs:label "Bison Schweiz AG"@de ;
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+
+zefix:336983 a systemmap:PrivateOrganization ;
+    rdfs:label "CSN AG"@de ;
+    dcat:landingPage <https://csn.ch> .
+
+zefix:367883 a systemmap:PrivateOrganization ;
+    rdfs:label "Martha-Software GmbH"@de ;
+    dcat:landingPage <https://masoft.ch/> .
+
+zefix:371013 a systemmap:PrivateOrganization ;
+    rdfs:label "Ernst Sutter AG"@de ;
+    dcat:landingPage <https://www.ernstsutter.ch> ;
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+
+zefix:417741 a systemmap:PrivateOrganization ;
+    rdfs:label "GRANOVIT AG"@de ;
+    dcat:landingPage <https://www.granovit.ch> .
+
+zefix:427343 a systemmap:PrivateOrganization ;
+    rdfs:label "Bio Suisse, Vereinigung Schweizer Biolandbau-Organisationen"@de,
+        "Bio Suisse, Federation of Swiss Organic Agriculture Organisations"@en,
+        "Bio Suisse, Fédération des organisations suisses d’agriculture biologique"@fr,
+        "Bio Suisse, Federazione delle organizzazioni svizzere dell’agricoltura biologica"@it ;
+    dcat:landingPage <https://www.bio-suisse.ch> .
+
+zefix:432768 a systemmap:PrivateOrganization ;
+    rdfs:label "TRAVECO Transporte AG"@de ;
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+
+zefix:443420 a systemmap:PrivateOrganization ;
+    rdfs:label "Reichmuth Fleischwaren AG"@de ;
+    dcat:landingPage <http://www.reichmuth-groupe.ch/fleischwaren/> .
+
+zefix:445706 a systemmap:PrivateOrganization ;
+    rdfs:label "Bigler AG Fleischwaren"@de ;
+    dcat:landingPage <https://www.bigler.ch> .
+
+zefix:446080 a systemmap:PrivateOrganization ;
+    rdfs:label "frigemo ag"@de ;
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+
+zefix:448334 a systemmap:PrivateOrganization ;
+    rdfs:label "swissgenetics"@de ;
+    dcat:landingPage <https://www.swissgenetics.ch/> .
+
+zefix:469727 a systemmap:PrivateOrganization ;
+    rdfs:label "Proviande Genossenschaft"@de,
+        "Proviande Cooperative"@en,
+        "Proviande Société Coopérative"@fr,
+        "Proviande Società Cooperativa"@it ;
+    dcat:landingPage <https://www.proviande.ch/> .
+
+zefix:505628 a systemmap:PrivateOrganization ;
+    rdfs:label "Isagri GmbH"@de .
+
+zefix:531454 a systemmap:PrivateOrganization ;
+    rdfs:label "Softproviding AG"@de ;
+    dcat:landingPage <https://www.softproviding.com/> .
+
+zefix:57642 a systemmap:PrivateOrganization ;
+    rdfs:label "FF Frischfleisch AG"@de ;
+    dcat:landingPage <https://frischfleisch.ch/> .
+
+zefix:7011 a systemmap:PrivateOrganization ;
+    rdfs:label "Anicom AG"@de ;
+    dcat:landingPage <https://www.anicom.ch> ;
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+
+zefix:76051 a systemmap:PrivateOrganization ;
+    rdfs:label "Meliofeed AG"@de,
+        "Meliofeed Ltd"@en,
+        "Meliofeed SA"@it ;
+    dcat:landingPage <https://www.melior.ch> .
+
+zefix:76693 a systemmap:PrivateOrganization ;
+    rdfs:label "Halag Chemie AG"@de ;
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+
+zefix:769392 a systemmap:PrivateOrganization ;
+    rdfs:label "Mutterkuh Schweiz"@de,
+        "Mutterkuh Schweiz"@en,
+        "Vache mère Suisse"@fr,
+        "Vacca madre Svizzera"@it ;
+    dcat:landingPage <https://www.mutterkuh.ch> .
+
+zefix:787227 a systemmap:PrivateOrganization ;
+    rdfs:label "RAMSEIER Suisse AG"@de ;
+    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+
+zefix:804864 a systemmap:PrivateOrganization ;
+    rdfs:label "Qualitas AG"@de ;
+    dcat:landingPage <https://www.qualitasag.ch/> .
 
 zefix:885059 a systemmap:PrivateOrganization ;
     rdfs:label "AGRIDEA Schweizerische Vereinigung für die Entwicklung der Landwirtschaft und des ländlichen Raums"@de,
@@ -4202,24 +4308,9 @@ zefix:885059 a systemmap:PrivateOrganization ;
         "AGRIDEA Associazione svizzera per lo sviluppo dell'agricoltura e delle aree rurali"@it ;
     dcat:landingPage <https://www.agridea.ch> .
 
-systemmap:SLu8IMm0TUxYimTwO a systemmap:PrivateOrganization ;
-    rdfs:label "Agrosoft, Bosshart Bernhard"@de ;
-    dcat:landingPage <https://www.agrosoft.ch> .
-
-zefix:130459 a systemmap:PrivateOrganization ;
-    rdfs:label "Micarna SA"@de ;
-    dcat:landingPage <https://www.micarna.ch> .
-
-zefix:1393629 a systemmap:PrivateOrganization ;
-    rdfs:label "FarmConsult Sàrl"@fr ;
-    dcat:landingPage <https://www.farmconsult.ch/> .
-
-zefix:1354082 a systemmap:PrivateOrganization ;
-    rdfs:label "eOperations Schweiz AG"@de,
-        "eOperations Switzerland AG"@en,
-        "eOperations Suisse SA"@fr,
-        "eOperations Svizzera SA"@it ;
-    dcat:landingPage <https://www.eoperations.ch> .
+zefix:984853 a systemmap:PrivateOrganization ;
+    rdfs:label "Amacker & Partner Informatik AG"@de ;
+    dcat:landingPage <https://www.amacker.ch> .
 
 systemmap:S6ILF4g1j5sNf9aG a termdat:52451 ;
     rdfs:label "Informationen zur Einfuhr von PSM"@de,

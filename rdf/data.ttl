@@ -5,12 +5,75 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix service: <http://purl.org/ontology/service#> .
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
 @prefix termdat: <https://register.ld.admin.ch/termdat/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
+
+systemmap:S0hwJxy2kXNPFbl4C a service:Service ;
+    rdfs:label "Lineare Korrektur (LK)-Service"@de ;
+    dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr ;
+    rdfs:comment """
+        Service, der auf Basis gemeldeter Futterzusammensetzungen die Nährstoffausscheidungen der Tiere korrigiert (bei nährstoffreduziertem Futter o. Ä.).
+        """@de .
+
+systemmap:SAgmZXUKqNKTf35Fv a service:Service ;
+    rdfs:label "IMPEX-Berechnungsservice"@de ;
+    dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr ;
+    rdfs:comment """
+        Modul-Service zur detaillierten Erfassung und Bilanzierung von Nährstoffflüssen aus Zu- und Verkäufen von Futtermitteln sowie Tieren (Import/Export).
+        """@de .
+
+systemmap:SFMUSGNRQVqCKBNHQ a service:Service ;
+    rdfs:label "GMF-Berechnungsservice"@de ;
+    dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr ;
+    rdfs:comment """
+        Service zur Prüfung der Auflagen des Programms 'Graslandbasierte Milch- und Fleischproduktion' (≥ 90 % Raufutter Inland/Eigenbetrieb) und zur Verknüpfung der Ergebnisse mit der Suisse-Bilanz.
+        """@de .
+
+systemmap:SK6JOIUV1UjrOYD7f a service:Service ;
+    rdfs:label "Zentraler Authentifizierungs- und Rollenverwaltungsdienst"@de,
+        "Authentication and Role Management Service"@en,
+        "Service central d'authentification et de gestion des rôles"@fr,
+        "Servizio centralizzato di autenticazione e gestione dei ruoli"@it ;
+    rdfs:comment """
+        Ein technischer SSO-Dienst (Identity Provider), der zentrale Benutzerregistrierung, Authentifizierung und rollenbasierte Zugangskontrolle für Agate und verbundene Agrar-IT-Systeme bereitstellt.
+        Er ermöglicht einen einmaligen Login für mehrere Anwendungen im Agrarbereich und stellt sicher, dass nur berechtigte Nutzer mit korrekten Rollen Zugriff erhalten.
+        """@de,
+        """
+        A technical SSO (Identity Provider) service that provides centralised user registration, authentication and role-based access control for Agate and connected agricultural IT systems.
+        It enables a single login for multiple applications in the agricultural sector and ensures that only authorised users with the correct roles are granted access.
+        """@en,
+        """
+        Un service technique SSO (Identity Provider) qui fournit l'enregistrement centralisé des utilisateurs, l'authentification et le contrôle d'accès basé sur les rôles pour Agate et les systèmes informatiques agricoles connectés.
+        Il permet une connexion unique pour plusieurs applications dans le domaine agricole et garantit que seuls les utilisateurs autorisés avec des rôles corrects ont accès.
+        """@fr,
+        """
+        Un servizio tecnico di SSO (Identity Provider) che fornisce la registrazione centralizzata degli utenti, l'autenticazione e il controllo degli accessi basato sui ruoli per Agate e i sistemi IT agricoli collegati.
+        Consente un unico login per più applicazioni nel settore agricolo e garantisce che solo gli utenti autorizzati con i ruoli corretti possano accedere.
+        """@it .
+
+systemmap:SWrEh3riVEhEddyRr a service:Service ;
+    rdfs:label "Nährstoffbilanzrechner"@de ;
+    service:providedBy systemmap:Sy4WeMDNoah4TkAYX ;
+    rdfs:comment """
+        Backend-Service, der die schweizweit standardisierte Berechnung der Nährstoffbilanz nach der Methode Suisse-Bilanz ermöglicht und damit die Erfüllung des ÖLN sowie den Bezug von Direktzahlungen unterstützt.
+        """@de .
+
+systemmap:SmWBzvRi0YEZiWMOd a service:Service ;
+    rdfs:label "SuisseBilanz-Berechnungsservice"@de ;
+    dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr ;
+    rdfs:comment "Teilservice des Nährstoffbilanzrechners, der die Hauptbilanz von Stickstoff (N) und Phosphor (P) nach der Suisse-Bilanz-Methodik ausführt."@de .
+
+systemmap:StBV0qWzKXosN98bB a service:Service ;
+    rdfs:label "Produktmanagement-API"@de ;
+    service:providedBy systemmap:SjhTrVt8CB9QFq0Yn ;
+    rdfs:comment """
+        Dieser API-Service erlaubt es Unternehmen, neue Produkte über eine Schnittstelle an den Produktekatalog zu senden und bestehende Produkte abzufragen.
+        """@de .
 
 systemmap:metadata a void:Dataset ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
@@ -192,6 +255,14 @@ systemmap:ShM5kJNFhO8vOAEdK a schema:Organization ;
     rdfs:label "Europäische Kommission"@de,
         "European Commission"@en .
 
+systemmap:S2Q2s27pTp6oRYHmf a schema:SoftwareApplication ;
+    rdfs:label "digiFLUX Kern"@de,
+        "digiFLUX Core"@en ;
+    dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF ;
+    rdfs:comment """
+        digiFLUX Core ist die zentrale Softwareanwendung des Gesamtsystems digiFLUX, welche das Erfassen, Ändern, Einsehen etc. von Produktelieferungen und -anwendungen erlaubt.
+        """@de .
+
 systemmap:S4gV9U3dvmENkSnj a schema:SoftwareApplication ;
     rdfs:label "Informationssystem für meldepflichtige Krankheiten"@de,
         "Information system for cases of notifiable diseases"@en,
@@ -216,6 +287,16 @@ systemmap:S4gV9U3dvmENkSnj a schema:SoftwareApplication ;
         "InfoSM"@fr,
         "InfoSM"@it ;
     systemmap:operatedBy systemmap:SsFdxnjM8hgUdzVT5 .
+
+systemmap:S4wIBXSXQwmbyHy9i a schema:SoftwareApplication ;
+    rdfs:label "I14Y"@de,
+        "I14Y"@en ;
+    rdfs:comment """
+        Die Interoperabilitätsplattform I14Y ist das zentrale Verzeichnis der Daten, elektronischen Schnittstellen und Behördenleistungen in der Schweiz.
+        Die Plattform stellt zudem Werkzeuge zur Verfügung, damit Daten mehrfach genutzt werden können.
+        Dies entlastet Unternehmen, Bürgerinnen und Bürger sowie die Behörden.
+        """@de ;
+    systemmap:operatedBy systemmap:SNbhMvt3Btta1U1d6 .
 
 systemmap:S6J4iyI6nMI2RCXSY a schema:SoftwareApplication ;
     rdfs:label "CePa"@de,
@@ -284,6 +365,7 @@ systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
         "Acontrol"@en,
         "Acontrol"@fr,
         "Acontrol"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Acontrol ist das Informationssystem des BLW, das für die Planung, Erfassung und Verwaltung landwirtschaftlicher Inspektionen eingesetzt wird.
         Es vereinfacht die Kontrollprozesse durch eine zentrale Plattform für Dateneingabe und -abfrage.
@@ -347,6 +429,7 @@ systemmap:SGdyOoksCnRRZwi2Q a schema:SoftwareApplication ;
         "Agate"@en,
         "Agate"@fr,
         "Agate"@it ;
+    service:provides systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment "Agate ist ein Online-Portal, das den Zugriff auf verschiedene landwirtschaftliche Anwendungen mit nur einem Login ermöglicht. Es erleichtert den Datenaustausch im Agrar- und Ernährungsbereich und erhöht so den Benutzerkomfort. Durch diesen zentralisierten Zugangspunkt werden Verwaltungsprozesse für alle Beteiligten vereinfacht."@de,
         "Agate is an online portal that allows access to various agricultural applications with just one login. It facilitates data exchange in the agricultural and food sector, thereby increasing user convenience. This centralized access point simplifies administrative processes for all stakeholders."@en,
         "Agate est un portail en ligne qui permet d'accéder à diverses applications agricoles avec un seul identifiant. Il facilite l'échange de données dans le secteur agricole et alimentaire, augmentant ainsi le confort des utilisateurs. Ce point d'accès centralisé simplifie les processus administratifs pour toutes les parties prenantes."@fr,
@@ -442,6 +525,7 @@ systemmap:SMjqlEoVCR9wpTyN1 a schema:SoftwareApplication ;
         "Acorda"@en,
         "Acorda"@fr,
         "Acorda"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         ACORDA wird von den Kantonen Waadt, Neuenburg, Genf und Jura genutzt.
         Das System bietet Funktionen wie die Erfassung von Strukturdaten, Berechnung und Auszahlung von Direktzahlungen, Georeferenzierung und Datenaustausch mit Bundessystemen.
@@ -490,6 +574,7 @@ systemmap:SPWOFHR512FuAc25b a schema:SoftwareApplication ;
         "Comprehensive IT Solution for Agriculture & Nature"@en,
         "Solution informatique globale pour l'agriculture et la nature"@fr,
         "Soluzione informatica globale per l'agricoltura e la natura"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Das Agrarinformationssystem GELAN steht seit 1999 in den Kantonen Bern, Fribourg und Solothurn im Einsatz.
         Es wurde seither auf 15 vollständig integrierte Teilsysteme erweitert und die Erfassung von Flächendaten erfolgt in einem Geographischen Informationssystem (GIS).
@@ -536,6 +621,7 @@ systemmap:SU88cJmqj8nBRl2KZ a schema:SoftwareApplication ;
         "Animal Traffic Database"@en,
         "Banque de données sur le trafic des animaux"@fr,
         "Banca dati sul traffico di animali"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Die Tierverkehrsdatenbank (TVD) ist ein schweizerisches System zur Registrierung und Nachverfolgung von Nutztieren, wie Rinder, Schweine, Schafe, Ziegen und in Gehege gehaltenes Wild.
         Dies ist u.a. ein wichtiger Beitrag für die Lebensmittelsicherheit und zu der Eindämmung von Tierseuchen.
@@ -567,6 +653,7 @@ systemmap:SXcby9KwakDGhBdP a schema:SoftwareApplication ;
         "ACmobile"@en,
         "ACmobile"@fr,
         "ACmobile"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         ACmobile ist eine plattformunabhängige, mobile Lösung für die elektronische Erfassung von Kontrollergebnissen und Massnahmen.
         """@de,
@@ -586,6 +673,7 @@ systemmap:SYOd1TkacTh6cr0xP a schema:SoftwareApplication ;
         "Milk Database"@en,
         "Base de données lait"@fr,
         "Database latte"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Die Datenbank Milch (dbmilch.ch) ist eine Webapplikation der TSM Treuhand GmbH.
         Sie ist die Online-Plattform der Akteure der Schweizer Milchwirtschaft.
@@ -617,6 +705,7 @@ systemmap:SZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
         "AGRICOLA"@en,
         "AGRICOLA"@fr,
         "AGRICOLA"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         AGRICOLA kommt in 12 Kantonen zum Einsatz, darunter Aargau, Zürich, St. Gallen und Graubünden.
         Es besteht aus verschiedenen Softwareprodukten für Datenverwaltung, Dateneingabe, mobile Kontrollen und GIS.
@@ -793,6 +882,14 @@ systemmap:SjCVTMrYaOTygNcqF a schema:SoftwareApplication ;
         LwG:art_165_f_bis ;
     systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP .
 
+systemmap:SjhTrVt8CB9QFq0Yn a schema:SoftwareApplication ;
+    rdfs:label "Produktekatalog"@de,
+        "Product catalog"@en ;
+    dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF ;
+    rdfs:comment """
+        Die Softwareanwendung 'Produktekatalog' erlaubt es, die in digiFLUX abgebildeten Produkte einzusehen, zu erstellen, oder anzupassen.
+        """@de .
+
 systemmap:SlTSOXsBC2LN7Qkp a schema:SoftwareApplication ;
     rdfs:label "Barto"@de,
         "Barto"@en,
@@ -825,6 +922,7 @@ systemmap:SlfheulBjlQDwuaIM a schema:SoftwareApplication ;
         "HODUFLU"@en,
         "HODUFLU"@fr,
         "HODUFLU"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         HODUFLU ist ein Internetprogramm zur einheitlichen Verwaltung von Hof- und Recyclingdüngerverschiebungen in der Landwirtschaft.
         Auf dieser Seite finden Sie Zugang zur Anwendung und nützliche Dokumente wie das Benutzerhandbuch für HODUFLU.
@@ -848,6 +946,7 @@ systemmap:SmWEQ8lVlDS9ZwPkY a schema:SoftwareApplication ;
         "LAWIS"@en,
         "LAWIS"@fr,
         "LAWIS"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         LAWIS wird in den Kantonen Basel-Land, Luzern, Schaffhausen, Thurgau, Zug sowie in Liechtenstein eingesetzt.
         Es ist eine webbasierte Lösung, die von SOFTEC AG gehostet wird.
@@ -1005,6 +1104,18 @@ systemmap:SvDlxaJ5YMkuZGH6k a schema:SoftwareApplication ;
         "AGIS"@it ;
     systemmap:hasLegalBasis LwG:art_165_c ;
     systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
+
+systemmap:Sy4WeMDNoah4TkAYX a schema:SoftwareApplication ;
+    rdfs:label "Nährstoffbilanzrechner"@de ;
+    rdfs:comment """
+        Der Nährstoffbilanzrechner ist ein Backend-Service, der eine schweizweit standardisierte Berechnung der für die Erfüllung des ökologischen Leistungsnachweises (ÖLN) und den Erhalt von  Direktzahlungen geforderten Nährstoffbilanz ermöglicht.
+        Die Berechnung basiert auf der Methode Suisse-Bilanz.
+        Die Benutzeroberfläche zur Erstellung der Nährstoffbilanz wird von Farm Management Information Systemen (FMIS) oder anderen Drittsystemen angeboten.
+        Diese Systeme beziehen die für die Berechnung benötigten Inputdaten über Schnittstellen von digiFLUX-core, zeigen diese dem Benutzer an und speichern das Berechnungsergebnis in digiFLUX-core.
+        Der Berechnungsservice wird durch ein BLW-internes Testtool mit einer rudimentären Benutzeroberfläche ergänzt.
+        Dieses ermöglicht das fachliche Testen des Rechners.
+        """@de ;
+    systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP .
 
 systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
     rdfs:label "eKontingente"@de,
@@ -1944,7 +2055,6 @@ systemmap:Svbcr8GEkZLb3HmRI a schema:SoftwareApplication ;
         LAWIS plus è un sistema digitale per la registrazione di terreni agricoli, l'iscrizione ai programmi e i pagamenti diretti per i cantoni responsabili. Include mappatura geospaziale, strumenti di gestione dati e amministrazione di sovvenzioni agrarie.
         """@it ;
     systemmap:operatedBy zefix:1354082 .
-##########################################################################
 
 systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
     rdfs:label "Agrarmarktdaten"@de,
@@ -1980,25 +2090,6 @@ systemmap:S4BoMPavXD5gIObm a dcat:Dataset ;
         Questi dati principali costituiscono la base per la tracciabilità senza interruzioni nel TVD.
         """@it ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
-
-systemmap:S4hqylQaEIsYGXMo a dcat:Dataset ;
-    rdfs:label "Verschiebung von Mineraldüngern"@de,
-        "Movement of Mineral Fertilizers"@en,
-        "Déplacement des engrais minéraux"@fr,
-        "Spostamento dei fertilizzanti minerali"@it ;
-    rdfs:comment """
-        Die Verschiebung von Mineraldüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge mineralischer Düngemittel, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
-        """@de,
-        """
-        The movement of mineral fertilizers includes the recording and reporting of all inflows and outflows of mineral fertilizers, including purchases, sales, and internal transfers.
-        """@en,
-        """
-        Le déplacement des engrais minéraux comprend l'enregistrement et la déclaration de toutes les entrées et sorties d'engrais minéraux, y compris les achats, les ventes et les transferts internes.
-        """@fr,
-        """
-        Lo spostamento dei fertilizzanti minerali include la registrazione e la segnalazione di tutti gli afflussi e deflussi di fertilizzanti minerali, compresi acquisti, vendite e trasferimenti interni.
-        """@it ;
-    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
 
 systemmap:S7mhWQjPZiSFc8dU a dcat:Dataset ;
     rdfs:label "Tierereignisdaten"@de,
@@ -2131,24 +2222,9 @@ systemmap:SDmJeWK7EOnMqRLs a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
-systemmap:SECM4KqStG9yBva6 a dcat:Dataset ;
-    rdfs:label "Verschiebung von Hof- und Recyclingdünger"@de,
-        "Movement of Farmyard and Recycled Fertilizers"@en,
-        "Déplacement des engrais de ferme et recyclés"@fr,
-        "Spostamento dei fertilizzanti aziendali e riciclati"@it ;
-    rdfs:comment """
-        Die Verschiebung von Hof- und Recyclingdüngern umfasst die Erfassung und Meldung aller Zu- und Abgänge, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
-        """@de,
-        """
-        The movement of farmyard and recycled fertilizers includes the recording and reporting of all inflows and outflows, including purchases, sales, and internal transfers.
-        """@en,
-        """
-        Le déplacement des engrais de ferme et recyclés comprend l'enregistrement et la déclaration de toutes les entrées et sorties, y compris les achats, les ventes et les transferts internes.
-        """@fr,
-        """
-        Lo spostamento dei fertilizzanti aziendali e riciclati include la registrazione e la segnalazione di tutti gli afflussi e deflussi, compresi acquisti, vendite e trasferimenti interni.
-        """@it ;
-    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
+systemmap:SENtOaRGg22EqHWXq a dcat:Dataset ;
+    rdfs:label "Produkteliste Hof- und Recycling-Dünger"@de ;
+    systemmap:containedIn systemmap:SlfheulBjlQDwuaIM .
 
 systemmap:SFyGV7l0kN4qgA8u a dcat:Dataset ;
     rdfs:label "Kulturen und Schaderreger"@de,
@@ -2168,6 +2244,21 @@ systemmap:SFyGV7l0kN4qgA8u a dcat:Dataset ;
         Elenco delle colture e degli organismi nocivi per i quali è già stata concessa un'autorizzazione per un prodotto fitosanitario in Svizzera.
         """@it ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
+
+systemmap:SHcRaVohogZJifUH4 a dcat:Dataset ;
+    rdfs:label "Kraft- und Raufutter"@de ;
+    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V .
+
+systemmap:SIK56WC1if6riKNpM a dcat:Dataset ;
+    rdfs:label "Handelsprodukte"@de ;
+    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
+    rdfs:comment """
+        Handelsprodukte sind von Händlern definierte, massgeschneiderte Produkte, welche sich aus bestimmten Mengen bestehender anderer Produkte (PSM oder Mineraldünger) zusammensetzen.
+        Beispiele hierfür wären PSM-Mischungen mehrerer Produkte, abgefüllt in Flaschen.
+        Wird dafür ein Handelsprodukt erstellt, kann dieses auf digiFLUX gemeldet und verarbeitet werden.
+        """@de ;
+    systemmap:usesMasterData systemmap:SMBGW7qHXQfR1VB9W,
+        systemmap:SyhthSmTCgM19Wysy .
 
 systemmap:SIsQ6LSUJc3xbG9B a dcat:Dataset ;
     rdfs:label "Biozide"@de,
@@ -2198,6 +2289,16 @@ systemmap:SLXw4VofhYbzXVNKC a dcat:Dataset ;
         "Ces données sont essentielles pour le calcul et le paiement des subventions pour le lait transformé en fromage ainsi que pour l'alimentation sans ensilage par l'Office fédéral de l'agriculture (OFAG)."@fr,
         "Questi dati sono essenziali per il calcolo e il pagamento dei sussidi per il latte trasformato in formaggio e per l'alimentazione senza insilato da parte dell'Ufficio federale dell'agricoltura (UFAG)."@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
+
+systemmap:SMBGW7qHXQfR1VB9W a dcat:Dataset ;
+    rdfs:label "Mineraldünger"@de ;
+    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
+    prov:wasDerivedFrom systemmap:SZBHsREMx369FArg .
+
+systemmap:SOqI5Nd7eaHDXIhDG a dcat:Dataset ;
+    rdfs:label "Hof- und Recycling-Dünger"@de ;
+    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
+    prov:wasDerivedFrom systemmap:SENtOaRGg22EqHWXq .
 
 systemmap:SPCig1xdekUHDV4r a dcat:Dataset ;
     rdfs:label "Milchstatistik"@de,
@@ -2237,42 +2338,15 @@ systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
-systemmap:SUlfRYzH3b0gx7VX a dcat:Dataset ;
-    rdfs:label "Verschiebung von Pflanzenschutzmitteln"@de,
-        "Movement of Plant Protection Products"@en,
-        "Déplacement des produits phytosanitaires"@fr,
-        "Spostamento dei prodotti fitosanitari"@it ;
-    rdfs:comment """
-        Die Verschiebung von Pflanzenschutzmitteln umfasst die Erfassung und Meldung aller Zu- und Abgänge von Pflanzenschutzmitteln, einschliesslich Käufe, Verkäufe und betrieblicher Transfers.
-        """@de,
-        """
-        The movement of plant protection products includes the recording and reporting of all inflows and outflows, including purchases, sales, and internal transfers.
-        """@en,
-        """
-        Le déplacement des produits phytosanitaires comprend l'enregistrement et la déclaration de toutes les entrées et sorties, y compris les achats, les ventes et les transferts internes.
-        """@fr,
-        """
-        Lo spostamento dei prodotti fitosanitari include la registrazione e la segnalazione di tutti gli afflussi e deflussi, compresi acquisti, vendite e trasferimenti interni.
-        """@it ;
-    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
-
 systemmap:SZBHsREMx369FArg a dcat:Dataset ;
-    rdfs:label "Dünger"@de,
-        "Fertilizers"@en,
-        "Engrais"@fr,
-        "Fertilizzanti"@it ;
+    rdfs:label "Dünger"@de ;
     rdfs:comment """
-        Produkte zur Boden- und Pflanzendüngung.
-        """@de,
-        """
-        Products for soil and plant fertilization.
-        """@en,
-        """
-        Produits pour la fertilisation des sols et des plantes.
-        """@fr,
-        """
-        Prodotti per la fertilizzazione del suolo e delle piante.
-        """@it ;
+        Enthält vollständige Metadaten zu im RPC registrierten und bewilligten Düngemitteln, einschliesslich Hersteller- und Produktkennzeichen sowie Verfahren und Genehmigungsstatus.
+        Dokumentiert detaillierte Angaben zu Zusammensetzung (Ausgangsmaterialien, Komponentenmaterialkategorien, Nährstoffgehalte), GHS-Einstufung/-Kennzeichnung und Verwendungszwecken.
+        Ermöglicht die Nachverfolgung von Zulassungs-, Änderungs- und Erneuerungsverfahren sowie den Zugriff auf zugehörige Dokumente im Rahmen der Schweizer Düngerregulierung.
+        """@de ;
+    rdfs:seeAlso <https://backend.blw.admin.ch/fileservice/sdweb-docs-prod-blwch-files/files/2024/11/14/0bddf556-3864-4fa4-ada6-a3120e26d6dc.pdf>,
+        <https://www.blw.admin.ch/de/duenger> ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
 systemmap:Sb2FM7pKN60PrRwU a dcat:Dataset ;
@@ -2329,31 +2403,6 @@ systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:Sl5KyePu7JtGiE3V a dcat:Dataset ;
-    rdfs:label "Produktekatalog"@de,
-        "Product catalog"@en,
-        "Catalogue de produits"@fr,
-        "Catalogo dei prodotti"@it ;
-    rdfs:comment """
-        Sammlung von Informationen zu Pflanzenschutzmittel-, Futtermittel-, Mineraldünger-, Hof- und Recyclingdünger-Produkten.
-        Das beinhaltet jeweilige Identifikatoren, Namen, Beschreibungen, Inhaltsstoffe und Mengen etc.
-        """@de,
-        """
-        Collection of information on plant protection products, feed, mineral fertilizers, farm and recycled fertilizers.
-        This includes respective identifiers, names, descriptions, ingredients, and quantities, etc.
-        """@en,
-        """
-        Collection d'informations sur les produits phytosanitaires, les aliments pour animaux, les engrais minéraux, les engrais de ferme et les engrais recyclés.
-        Cela inclut les identifiants respectifs, les noms, les descriptions, les ingrédients et les quantités, etc.
-        """@fr,
-        """
-        Raccolta di informazioni sui prodotti fitosanitari, i mangimi, i fertilizzanti minerali, i fertilizzanti agricoli e quelli riciclati.
-        Ciò include gli identificatori, i nomi, le descrizioni, gli ingredienti e le quantità, ecc.
-        """@it ;
-    prov:wasDerivedFrom systemmap:S9J1HTMKIxnCgmYc,
-        systemmap:SZBHsREMx369FArg ;
-    systemmap:containedIn systemmap:SjCVTMrYaOTygNcqF .
-
 systemmap:SoBRgq7STLbZfEze a dcat:Dataset ;
     rdfs:label "Meldepflichtdaten (Schafe & Ziegen)"@de,
         "Mandatory reporting data (sheep & goats)"@en,
@@ -2388,6 +2437,14 @@ systemmap:Spqrv6Ul05KJySTs a dcat:Dataset ;
         "Catalogo delle varietà di piante agricole riconosciute utilizzate in Svizzera. Le informazioni sono registrate dai selezionatori."@it ;
     prov:wasDerivedFrom systemmap:Sb2FM7pKN60PrRwU ;
     systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj .
+
+systemmap:SyhthSmTCgM19Wysy a dcat:Dataset ;
+    rdfs:label "Pflanzenschutzmittel"@de,
+        "Plant Protection Products"@en,
+        "Produits phytosanitaires"@fr,
+        "Prodotti fitosanitari"@it ;
+    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
+    prov:wasDerivedFrom systemmap:S9J1HTMKIxnCgmYc .
 
 systemmap:SzcK9O3XZFxVW1IS a dcat:Dataset ;
     rdfs:label "Daten zur Milchsegmentierung"@de,
@@ -2446,8 +2503,6 @@ systemmap:SbcLBABffpMBvu7OP a dcat:Dataset ;
         Un progetto di risorse sostenuto dall'UFAG per migliorare la salute degli zoccoli dei bovini svizzeri attraverso la raccolta sistematica di dati da parte dei pareggiatori. I dati sono conservati presso Qualitas AG e utilizzati da partner come la Facoltà Vetsuisse di Berna e le organizzazioni di allevamento per la ricerca e la stima del valore genetico. Il progetto promuove la collaborazione tra allevatori, veterinari e pareggiatori.
         """@it ;
     dcat:landingPage <https://www.gesundeklauen.unibe.ch/> .
-
-#######################################################
 
 systemmap:S1KtKkrBMoK25AKVA a systemmap:CantonalOrganization ;
     rdfs:label "Direktzahlungen und Beiträge"@de ;
@@ -2846,7 +2901,6 @@ systemmap:S0ummGTITezxHMtA3 a systemmap:CantonalOrganization ;
     dcat:landingPage <https://www.zh.ch/de/baudirektion.html> ;
     schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i .
 
-###################################################################
 systemmap:SWRHHjM4WnPdLkEVr a systemmap:CantonalAgriculturalAdvisor ;
     rdfs:label "Strickhof"@de,
         "Strickhof"@en,
@@ -2854,8 +2908,6 @@ systemmap:SWRHHjM4WnPdLkEVr a systemmap:CantonalAgriculturalAdvisor ;
         "Strickhof"@it ;
     dcat:landingPage <https://www.strickhof.ch> ;
     schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i . # Parent is Kanton Zürich
-
-###################################################################
 
 systemmap:SY0h92GbLVkapqnQt a systemmap:CantonalVeterinaryService ;
     rdfs:label "Kantonaler Veterinärdienst Aargau"@de ;
@@ -2879,7 +2931,6 @@ systemmap:SswJdLNKXUjfnD84b a systemmap:CantonalVeterinaryService ;
         "Ufficio veterinario cantonale di Zurigo"@it ;
     dcat:landingPage <https://www.zh.ch/de/gesundheitsdirektion/veterinaeramt.html> ;
     schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i . # Parent is Kanton Zürich
-#####################################################################
 
 systemmap:S1JvEmah9Tl0698au a systemmap:FederalOrganization ;
     rdfs:label "Direktionsbereich für Digitalisierung und Datenmanagement"@de,
@@ -3539,7 +3590,8 @@ systemmap:SqeNr0H0FGL6Uv5Rr a systemmap:FederalOrganization ;
     owl:sameAs staatskalender:10003196 .
 
 systemmap:SsFdxnjM8hgUdzVT5 a systemmap:FederalOrganization ;
-    rdfs:label "Kompetenzzentrum Daten"@de , "Gestion des connaissances"@fr ;
+    rdfs:label "Kompetenzzentrum Daten"@de,
+        "Gestion des connaissances"@fr ;
     schema:parentOrganization systemmap:Sou0GnQeSqCPHGhze ;
     owl:sameAs staatskalender:20051877 ;
     systemmap:abbreviation "DCC"@de .
@@ -3685,6 +3737,7 @@ systemmap:S3jZwzvmFKsXRWiI a systemmap:MasterData ;
         "BUR Number"@en,
         "Numéro BUR"@fr,
         "Numero BUR"@it ;
+    dcterms:isPartOf systemmap:SeUFazO70bpqCYJ5 ;
     rdfs:comment """
         Die BUR-Nummer ist eine nichtsprechende 8-stellige Identifikationsnummer, die für jede Betriebsstätte eines Unternehmens vergeben wird.
         Sie dient der eindeutigen Identifikation von Betriebsstätten im Betriebs- und Unternehmensregister (BUR) des Bundesamts für Statistik (BFS).
@@ -3704,8 +3757,7 @@ systemmap:S3jZwzvmFKsXRWiI a systemmap:MasterData ;
     systemmap:abbreviation "BURNR"@de,
         "BURNR"@en,
         "BURNR"@fr,
-        "BURNR"@it ;
-    systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
+        "BURNR"@it .
 
 systemmap:SKrd0rj3P7vHUQ7h7 a systemmap:FederalOrganization ;
     rdfs:label "Eidgenössische Technische Hochschule Zürich"@de,
@@ -3717,9 +3769,6 @@ systemmap:SKrd0rj3P7vHUQ7h7 a systemmap:FederalOrganization ;
         "EPF Zurich"@fr,
         "ETH Zurigo"@it ;
     dcat:landingPage <https://ethz.ch> .
-
-#####################################################################
-
 
 systemmap:SDLEUPczkJ9AWZeC a systemmap:MasterData ;
     rdfs:label "UID-Nummer"@de,
@@ -3743,6 +3792,29 @@ systemmap:SDLEUPczkJ9AWZeC a systemmap:MasterData ;
         L'uso dell'UID facilita l'alleggerimento amministrativo per le aziende e consente una collaborazione più efficiente tra le autorità.
         """@it ;
     systemmap:containedIn systemmap:SuEtT7joC8HXVSfF .
+
+systemmap:Sl5KyePu7JtGiE3V a systemmap:MasterData ;
+    rdfs:label "Produktekatalog"@de,
+        "Product catalog"@en,
+        "Catalogue de produits"@fr,
+        "Catalogo dei prodotti"@it ;
+    rdfs:comment """
+        Sammlung von Informationen zu Pflanzenschutzmittel-, Futtermittel-, Mineraldünger-, Hof- und Recyclingdünger-Produkten.
+        Das beinhaltet jeweilige Identifikatoren, Namen, Inhaltsstoffe etc.
+        """@de,
+        """
+        Collection of information on plant protection products, feed, mineral fertilizers, farm and recycled fertilizers.
+        This includes respective identifiers, names, ingredients, etc.
+        """@en,
+        """
+        Collection d'informations sur les produits phytosanitaires, les aliments pour animaux, les engrais minéraux, les engrais de ferme et les engrais recyclés.
+        Cela inclut les identifiants respectifs, les descriptions, les ingrédients, etc.
+        """@fr,
+        """
+        Raccolta di informazioni sui prodotti fitosanitari, i mangimi, i fertilizzanti minerali, i fertilizzanti agricoli e quelli riciclati.
+        Ciò include gli identificatori, le descrizioni, gli ingredienti, ecc.
+        """@it ;
+    systemmap:containedIn systemmap:SjhTrVt8CB9QFq0Yn .
 
 systemmap:SDetpcQhSMo4IAeAb a systemmap:PrivateOrganization ;
     rdfs:label "Barto AG"@de,
@@ -4149,8 +4221,6 @@ zefix:1354082 a systemmap:PrivateOrganization ;
         "eOperations Svizzera SA"@it ;
     dcat:landingPage <https://www.eoperations.ch> .
 
-##################################################################
-
 systemmap:S6ILF4g1j5sNf9aG a termdat:52451 ;
     rdfs:label "Informationen zur Einfuhr von PSM"@de,
         "Information on the import of PPP"@en,
@@ -4182,6 +4252,22 @@ systemmap:S6aBblr7qNp15tGw a termdat:52451 ;
         "Informazioni sui dati di contatto dei gestori agricoli, come indirizzi e-mail o numeri di telefono."@it ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
+systemmap:S6lhRFiEflanK2rcl a termdat:52451 ;
+    rdfs:label "Nutzerdaten Produktekatalog"@de ;
+    rdfs:comment """
+        Dieser Datensatz beinhaltet sämtliche Daten über die Nutzer des Produktekatalogs (Personen, Unternehmen, Rollen, Berechtigungen).
+        """@de ;
+    systemmap:containedIn systemmap:SjhTrVt8CB9QFq0Yn ;
+    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
+
+systemmap:SCkzllAJGWHIEermB a termdat:52451 ;
+    rdfs:label "Nutzerdaten digiFLUX Core"@de ;
+    rdfs:comment """
+        Dieser Datensatz beinhaltet sämtliche Daten über die Nutzer von digiFLUX Core (Personen, Unternehmen, Betriebe, Rollen, Berechtigungen sowie zusätzliche Informationen).
+        """@de ;
+    systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf ;
+    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
+
 systemmap:SJuklUVKfEwj2Xpc a termdat:52451 ;
     rdfs:label "Kontaktdaten Züchter"@de,
         "Contact details of breeders"@en,
@@ -4192,6 +4278,16 @@ systemmap:SJuklUVKfEwj2Xpc a termdat:52451 ;
         "Coordonnées des sélectionneurs qui fournissent des informations sur les variétés à ProVar."@fr,
         "Dati di contatto dei selezionatori che forniscono informazioni sulle varietà a ProVar."@it ;
     systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj .
+
+systemmap:SOl0OAWrb7M910fp8 a termdat:52451 ;
+    rdfs:label "Verschiebung von Produktionsmitteln"@de,
+        "Movement of production products"@en ;
+    rdfs:comment """
+        Daten zu Verschiebungen von Produktionsmitteln umfassen Abgeber (Referenz auf BUR-Nummer), Produkt (Referenz auf Produktekatalog-ID), Menge, Datum/Uhrzeit und Abnehmer (Referenz auf BUR-Nummer).
+        """@de ;
+    systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf ;
+    systemmap:usesMasterData systemmap:SCkzllAJGWHIEermB,
+        systemmap:Sl5KyePu7JtGiE3V .
 
 systemmap:SQ2MIhpz1CvdqK6f a termdat:52451 ;
     rdfs:label "Beitragsdaten"@de,
@@ -4233,6 +4329,15 @@ systemmap:SY9n2yTOBWXtZ6se a termdat:52451 ;
         "Données sur les contrôles et les résultats des contrôles"@fr,
         "Dati sui controlli e sui risultati dei controlli"@it ;
     systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
+
+systemmap:SYYaTBjwIUU2yNIUN a termdat:52451 ;
+    rdfs:label "Anwendungen von Pflanzenschutzmittel"@de ;
+    rdfs:comment """
+        Daten zur Anwendungen von Pflanzenschutzmittel umfassen Anwender (Referenz auf BUR-Nummer), Produkt (Referenz auf Produktekatalog-ID), Menge, und Jahr.
+        """@de ;
+    systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf ;
+    systemmap:usesMasterData systemmap:SCkzllAJGWHIEermB,
+        systemmap:SyhthSmTCgM19Wysy .
 
 systemmap:SYlOxcohgWiXr61M a termdat:52451 ;
     rdfs:label "Informationen zu Forstbetrieben"@de,
@@ -4287,6 +4392,11 @@ systemmap:SfQ6BN8rDjKhTWL4 a termdat:52451 ;
         """@it ;
     systemmap:containedIn systemmap:S7u1Bh6qfXUbSDkv .
 
+systemmap:SkvXyKniPPKwKNRqo a termdat:52451 ;
+    rdfs:label "Daten zu Flächen und DZ-Kulturen"@de ;
+    dcterms:isPartOf systemmap:SCkzllAJGWHIEermB ;
+    systemmap:usesMasterData systemmap:SakCt52w8AKrsSXi .
+
 systemmap:SldiTYOuXQmoC3SV a termdat:52451 ;
     rdfs:label "Anmeldungen für Direktzahlungsarten"@de,
         "Registrations for direct payment types"@en,
@@ -4321,6 +4431,16 @@ systemmap:SoY82Q0qEk9k0s3w3 a termdat:52451 ;
         "Dati di contatto dei produttori di latte, come indirizzi, numero TVD, numero AGIS dell'azienda, numero AGIS del gestore e informazioni di pagamento per il sussidio per il latte trasformato in formaggio e il sussidio per l'alimentazione senza insilato. Se possibile, questi dati di contatto vengono ottenuti da AGIS."@it ;
     prov:wasDerivedFrom systemmap:S6aBblr7qNp15tGw ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
+
+systemmap:SqGp9THVAsRw71ZCg a termdat:52451 ;
+    rdfs:label "Anmeldedaten für DZ-Programme"@de ;
+    dcterms:isPartOf systemmap:SCkzllAJGWHIEermB ;
+    rdfs:comment """
+        Anmeldedaten für DZ-Programme bezüglich N- und P-reduzierter Fütterung und ob ein Betrieb Bio ist oder nicht.
+        Diese Informationen werden von digiFLUX Core für eine Beschränkung der Auswahlmöglichkeiten für Benutzer gebraucht.
+        Beispiel: Ein Betrieb, der N- und P-reduzierte Fütterung von Mastschweinen betreibt, produziert folglich N- und P-reduzierte Gülle.
+        """@de ;
+    systemmap:usesMasterData systemmap:SldiTYOuXQmoC3SV .
 
 systemmap:Sutd0KIj3Rf8GlSwq a termdat:52451 ;
     rdfs:label "Kontaktdaten Milchverarbeiter"@de,

@@ -634,6 +634,7 @@ systemmap:SBx5yiPz9Nxy2Wnue a schema:SoftwareApplication ;
         Intranet-Seite der Mooh Genossenschaft.
         """@de ;
     dcat:landingPage <https://intranet.mooh.swiss/> ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     systemmap:operatedBy zefix:1256441 .
 
 systemmap:SCporGQs4VQT7lJVs a schema:SoftwareApplication ;

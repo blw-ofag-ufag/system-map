@@ -630,11 +630,11 @@ systemmap:SAPDp3o8XAHPuZnhB a schema:SoftwareApplication ;
 
 systemmap:SBx5yiPz9Nxy2Wnue a schema:SoftwareApplication ;
     rdfs:label "Mooh Intranet"@de ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Intranet-Seite der Mooh Genossenschaft.
         """@de ;
     dcat:landingPage <https://intranet.mooh.swiss/> ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     systemmap:operatedBy zefix:1256441 .
 
 systemmap:SCporGQs4VQT7lJVs a schema:SoftwareApplication ;
@@ -1369,6 +1369,28 @@ systemmap:SbbbXta7RwMcmH9aB a schema:SoftwareApplication ;
         """@it ;
     systemmap:abbreviation "NAV Schlachtviehabrechnung"@de ;
     systemmap:operatedBy zefix:469727 .
+
+systemmap:SbcLBABffpMBvu7OP a schema:SoftwareApplication ;
+    rdfs:label "Gesunde Klauen Projektdaten"@de,
+        "Healthy Hooves Project Data"@en,
+        "Données du projet Sabots Sains"@fr,
+        "Dati del progetto Zoccoli Sani"@it ;
+    rdfs:comment """
+        Ein vom BLW unterstütztes Ressourcenprojekt zur Verbesserung der Klauengesundheit bei Schweizer Rindern durch systematische Datenerfassung via Klauenpfleger.
+        Die Daten werden bei der Qualitas AG gespeichert und von Partnern wie der Vetsuisse-Fakultät Bern und Zuchtorganisationen für Forschung und Zuchtwertschätzung genutzt.
+        Das Projekt fördert die Zusammenarbeit zwischen Tierhaltern, Tierärzten und Klauenpflegern.
+        """@de,
+        """
+        A resource project supported by the FOAG to improve hoof health in Swiss cattle through systematic data collection by hoof trimmers. The data is stored at Qualitas AG and used by partners such as the Vetsuisse Faculty Bern and breeding organizations for research and breeding value estimation. The project promotes collaboration between animal owners, veterinarians, and hoof trimmers.
+        """@en,
+        """
+        Un projet de ressources soutenu par l'OFAG visant àaméliorer la santé des onglons des bovins suisses grâce à la collecte systématique de données par les pédicures bovins. Les données sont stockées chez Qualitas AG et utilisées par des partenaires tels que la Faculté Vetsuisse de Berne et les organisations d'élevage pour la recherche et l'estimation des valeurs d'élevage. Le projet encourage la collaboration entre éleveurs, vétérinaires et pédicures bovins.
+        """@fr,
+        """
+        Un progetto di risorse sostenuto dall'UFAG per migliorare la salute degli zoccoli dei bovini svizzeri attraverso la raccolta sistematica di dati da parte dei pareggiatori. I dati sono conservati presso Qualitas AG e utilizzati da partner come la Facoltà Vetsuisse di Berna e le organizzazioni di allevamento per la ricerca e la stima del valore genetico. Il progetto promuove la collaborazione tra allevatori, veterinari e pareggiatori.
+        """@it ;
+    dcat:landingPage <https://www.gesundeklauen.unibe.ch/> ;
+    systemmap:operatedBy zefix:804864 .
 
 systemmap:Sc6kZqxTyS0gFGCY a schema:SoftwareApplication ;
     rdfs:label "Marktdaten Analyse- und Reporting-System"@de,
@@ -2479,27 +2501,6 @@ systemmap:Sb2FM7pKN60PrRwU a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN .
 
-systemmap:SbcLBABffpMBvu7OP a dcat:Dataset ;
-    rdfs:label "Gesunde Klauen Projektdaten"@de,
-        "Healthy Hooves Project Data"@en,
-        "Données du projet Sabots Sains"@fr,
-        "Dati del progetto Zoccoli Sani"@it ;
-    rdfs:comment """
-        Ein vom BLW unterstütztes Ressourcenprojekt zur Verbesserung der Klauengesundheit bei Schweizer Rindern durch systematische Datenerfassung via Klauenpfleger.
-        Die Daten werden bei der Qualitas AG gespeichert und von Partnern wie der Vetsuisse-Fakultät Bern und Zuchtorganisationen für Forschung und Zuchtwertschätzung genutzt.
-        Das Projekt fördert die Zusammenarbeit zwischen Tierhaltern, Tierärzten und Klauenpflegern.
-        """@de,
-        """
-        A resource project supported by the FOAG to improve hoof health in Swiss cattle through systematic data collection by hoof trimmers. The data is stored at Qualitas AG and used by partners such as the Vetsuisse Faculty Bern and breeding organizations for research and breeding value estimation. The project promotes collaboration between animal owners, veterinarians, and hoof trimmers.
-        """@en,
-        """
-        Un projet de ressources soutenu par l'OFAG visant àaméliorer la santé des onglons des bovins suisses grâce à la collecte systématique de données par les pédicures bovins. Les données sont stockées chez Qualitas AG et utilisées par des partenaires tels que la Faculté Vetsuisse de Berne et les organisations d'élevage pour la recherche et l'estimation des valeurs d'élevage. Le projet encourage la collaboration entre éleveurs, vétérinaires et pédicures bovins.
-        """@fr,
-        """
-        Un progetto di risorse sostenuto dall'UFAG per migliorare la salute degli zoccoli dei bovini svizzeri attraverso la raccolta sistematica di dati da parte dei pareggiatori. I dati sono conservati presso Qualitas AG e utilizzati da partner come la Facoltà Vetsuisse di Berna e le organizzazioni di allevamento per la ricerca e la stima del valore genetico. Il progetto promuove la collaborazione tra allevatori, veterinari e pareggiatori.
-        """@it ;
-    dcat:landingPage <https://www.gesundeklauen.unibe.ch/> .
-
 systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
     rdfs:label "Daten zur Milchproduktion"@de,
         "Data on milk production"@en,
@@ -2889,7 +2890,8 @@ systemmap:SeAMQkVkDZ2SUpEVq a systemmap:CantonalOrganization ;
         "University of Bern"@en,
         "Université de Berne"@fr,
         "Università di Berna"@it ;
-    dcat:landingPage <https://www.unibe.ch/> .
+    dcat:landingPage <https://www.unibe.ch/> ;
+    systemmap:access systemmap:SbcLBABffpMBvu7OP .
 
 systemmap:SfCWpkO67ty1HLzmK a systemmap:CantonalOrganization ;
     rdfs:label "Kanton Basel-Stadt"@de,

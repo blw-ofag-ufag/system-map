@@ -125,6 +125,30 @@ function toggleFocusMode(element) {
     });
 }
 
+/**
+ * Convert a full IRI to a compact CURIE using well-known prefixes.
+ * Falls back to the original IRI when no prefix matches.
+ */
+function shortenIri(iri) {
+    const PREFIXES = {
+      "http://www.w3.org/2000/01/rdf-schema#"           : "rdfs",
+      "http://www.w3.org/2002/07/owl#"                  : "owl",
+      "https://agriculture.ld.admin.ch/system-map/"     : "systemmap",
+      "http://schema.org/"                              : "schema",
+      "http://www.w3.org/ns/dcat#"                      : "dcat",
+      "http://www.w3.org/ns/prov#"                      : "prov",
+      "http://purl.org/ontology/service#"               : "service",
+      "http://purl.org/dc/terms/"                       : "dcterms",
+      "https://register.ld.admin.ch/zefix/company/"     : "zefix"
+    };
+  
+    for (const [baseIRI, prefix] of Object.entries(PREFIXES)) {
+      if (iri.startsWith(baseIRI)) {
+        return `${prefix}:${iri.substring(baseIRI.length)}`;
+      }
+    }
+    return iri;          // nothing matched → leave it long
+}
 
 /**
  * Name of focus mode label based on language
@@ -197,7 +221,7 @@ async function init() {
         const htmlLabel = isFallback
             ? `<b>${labelLang.toUpperCase()}:</b> <i>${shortenLabel(label, abbreviation)}</i>`   // italic - no bold
             : `<b>${shortenLabel(label, abbreviation)}</b>`; // bold as before
-      
+
         return {
           id: iri,
           label: htmlLabel,
@@ -209,7 +233,8 @@ async function init() {
             fullLabel: label,
             abbreviation,
             comment,
-            isFallback
+            isFallback,
+            labelLang
           }
         };
     });
@@ -219,7 +244,8 @@ async function init() {
             from: row.from.value,
             to: row.to.value,
             label: row.label.value,
-            comment: row.comment ? row.comment.value : ""
+            comment: row.comment ? row.comment.value : "",
+            iri: row.id.value
         };
         
         // If this edge represents an "informs" relationship,
@@ -340,24 +366,43 @@ async function init() {
     // 6) The info panel (top-right)
     const infoPanel = document.getElementById("infoPanel");
 
+    /**
+     * Populate the info-panel for an *instance* node.
+     * Shows the CURIE first, then the (possibly italic) label and comment.
+     */
     function showNodeInfo(nodeData) {
         const {
-            iri,
-            fullLabel,
-            abbreviation,
-            comment,
-            isFallback
-            } = nodeData.data;
-            
-            let html = `<a href='${iri}' target='blank'><small><code>${iri}</code></small></a><br>`;
-            html += `<h4>${isFallback ? "<i>" : ""}${fullLabel}`;
-            if (abbreviation) html += ` (${abbreviation})`;
-            html += `${isFallback ? "</i>" : ""}</h4>`;
-            
-            if (comment) html += `<p><small>${comment}</small></p>`;
-            
-            infoPanel.innerHTML = html;
-            infoPanel.classList.remove("hidden");
+        iri,
+        fullLabel,
+        abbreviation,
+        comment,
+        isFallback,          // set earlier when building the node list
+        labelLang
+        } = nodeData.data;
+    
+        // --- header with shortened IRI ------------------------------
+        let html = `
+        <a href="${iri}" target="_blank">
+            <small><code>${shortenIri(iri)}</code></small>
+        </a><br>`;
+    
+        // --- title (bold or italic) ---------------------------------
+        html += `<h4>`
+        if (isFallback) {
+            html += `${labelLang.toUpperCase()}: <i>${fullLabel}</i>`
+        } else {
+            html += `${fullLabel}`;
+        }
+        if (abbreviation) html += ` (${abbreviation})`;
+        html += `</h4>`;
+    
+        // --- optional comment ---------------------------------------
+        if (comment) {
+        html += `<p><small>${comment}</small></p>`;
+        }
+    
+        infoPanel.innerHTML = html;
+        infoPanel.classList.remove("hidden");
     }
 
     function hideNodeInfo() {
@@ -367,12 +412,29 @@ async function init() {
         infoPanel.classList.remove("fixed");
     }
 
+/**
+ * Populate the info-panel for a *property* (edge).
+ * The predicate’s IRI appears in CURIE form above its label.
+ */
     function showEdgeInfo(edgeData) {
-        // Build HTML for edge info (IRI as a clickable link, label, and comment)
-        let html = `<h4>${edgeData.label}</h4>`;
-        if (edgeData.comment) {
-            html += `<p><small>${edgeData.comment}</small></p>`;
+        const iri       = edgeData.iri || "";       // we add this field below
+        const label     = edgeData.label || "";
+        const comment   = edgeData.comment || "";
+    
+        let html = "";
+        if (iri) {
+        html += `
+            <a href="${iri}" target="_blank">
+            <small><code>${shortenIri(iri)}</code></small>
+            </a><br>
+        `;
         }
+    
+        html += `<h4>${label}</h4>`;
+        if (comment) {
+            html += `<p><small>${comment}</small></p>`;
+        }
+    
         infoPanel.innerHTML = html;
         infoPanel.classList.remove("hidden");
     }

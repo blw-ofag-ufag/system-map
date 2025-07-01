@@ -397,6 +397,14 @@ systemmap:SBx5yiPz9Nxy2Wnue a schema:SoftwareApplication ;
     dcat:landingPage <https://intranet.mooh.swiss/> ;
     systemmap:operatedBy zefix:1256441 .
 
+systemmap:SDwz5T4SyxjgPiHbH a schema:SoftwareApplication ;
+    rdfs:label "Geofolia Feldkalender"@de ;
+    rdfs:comment """
+        Betriebsführung Pflanzenbau, Zucht- und Tierdatenverwaltung.
+        """@de ;
+    dcat:landingPage <https://www.agrarsoftware.ch/geofolia.html> ;
+    systemmap:operatedBy zefix:505628 .
+
 systemmap:SE5DY78J7vgfoiDLj a schema:SoftwareApplication ;
     rdfs:label "Protection Variété"@de,
         "Protection Variété"@en,
@@ -788,6 +796,7 @@ systemmap:Sfv81BPRW0TSnKhGg a schema:SoftwareApplication ;
         Die dazugehörige Smartphone-App ermöglicht es, Ereignisse wie Reproduktion, Behandlungen und Tierbewegungen in Echtzeit zu dokumentieren und funktioniert auch ohne Netzwerkabdeckung.
         Dank RFID-Kompatibilität und einer intuitiven Benutzeroberfläche erleichtert Troup'O das Herdenmanagement und steigert die Betriebseffizienz.
         """@de ;
+    dcat:landingPage <https://agrarsoftware.ch/troupo.html> ;
     systemmap:operatedBy zefix:505628 .
 
 systemmap:Sfwx1dZMcl5OXtzb a schema:SoftwareApplication ;
@@ -812,6 +821,14 @@ systemmap:SgjZ0efLbuCR2HvN a schema:SoftwareApplication ;
         "PLUTO"@fr,
         "PLUTO"@it ;
     systemmap:operatedBy systemmap:SBLH2G6TSKaqhqk4n .
+
+systemmap:SgsDa3rQzhEAqAUOZ a schema:SoftwareApplication ;
+    rdfs:label "Farmable"@de ;
+    rdfs:comment """
+        Feldbegehungen, Pflanzenschutzplanung, GPS-Dokumentation.
+        """@de ;
+    dcat:landingPage <https://farmable.tech/de/> ;
+    systemmap:operatedBy systemmap:SGWW0nzBJjBsx2QTr .
 
 systemmap:ShZO092di7cBnOm7F a schema:SoftwareApplication ;
     rdfs:label "Business-Intelligence-System"@de,
@@ -1104,6 +1121,14 @@ systemmap:SvDlxaJ5YMkuZGH6k a schema:SoftwareApplication ;
         "AGIS"@it ;
     systemmap:hasLegalBasis LwG:art_165_c ;
     systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
+
+systemmap:SveDUGZvttVw7ga7l a schema:SoftwareApplication ;
+    rdfs:label "smartfarm"@de ;
+    rdfs:comment """
+        Feldkalender, ÖLN-Dokumentation, Stickstoffbilanz, IP-Suisse-kompatibel.
+        """@de ;
+    dcat:landingPage <https://www.smartfarm.ch/> ;
+    systemmap:operatedBy zefix:848149 .
 
 systemmap:Sy4WeMDNoah4TkAYX a schema:SoftwareApplication ;
     rdfs:label "Nährstoffbilanzrechner"@de ;
@@ -2882,6 +2907,9 @@ systemmap:SFAcWHo27bji7sVts a systemmap:PrivateOrganization ;
         La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna.
         """@it ;
     owl:sameAs zefix:328631 .
+
+systemmap:SGWW0nzBJjBsx2QTr a systemmap:PrivateOrganization ;
+    rdfs:label "Farmable"@de .
 
 systemmap:SHObqf1JYpt7KGLFS a systemmap:PrivateOrganization ;
     rdfs:label "Identitas AG"@de,

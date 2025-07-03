@@ -125,6 +125,30 @@ function toggleFocusMode(element) {
     });
 }
 
+/**
+ * Convert a full IRI to a compact CURIE using well-known prefixes.
+ * Falls back to the original IRI when no prefix matches.
+ */
+function shortenIri(iri) {
+    const PREFIXES = {
+      "http://www.w3.org/2000/01/rdf-schema#"           : "rdfs",
+      "http://www.w3.org/2002/07/owl#"                  : "owl",
+      "https://agriculture.ld.admin.ch/system-map/"     : "systemmap",
+      "http://schema.org/"                              : "schema",
+      "http://www.w3.org/ns/dcat#"                      : "dcat",
+      "http://www.w3.org/ns/prov#"                      : "prov",
+      "http://purl.org/ontology/service#"               : "service",
+      "http://purl.org/dc/terms/"                       : "dcterms",
+      "https://register.ld.admin.ch/zefix/company/"     : "zefix"
+    };
+  
+    for (const [baseIRI, prefix] of Object.entries(PREFIXES)) {
+      if (iri.startsWith(baseIRI)) {
+        return `${prefix}:${iri.substring(baseIRI.length)}`;
+      }
+    }
+    return iri;          // nothing matched → leave it long
+}
 
 /**
  * Name of focus mode label based on language
@@ -140,6 +164,9 @@ const focusModeLabels = {
  * Build the network and set up the BFS highlight + info panel
  */
 async function init() {
+
+    // what language did the user pick?  (falls back to "de")
+    const currentLang = getParam("lang") || "de";
 
     // Track if a node/edge is pinned (i.e. clicked) so that the info panel remains fixed.
     let pinnedNodeId = null;
@@ -175,34 +202,50 @@ async function init() {
 
     // 2) Parse them into Vis-friendly arrays
     const nodes = nodesJson.results.bindings.map(row => {
-        const iri = row.id.value;
-        const groupIri = row.group.value;
-        const label = row.displayLabel.value; // use displayLabel from the query
-        const comment = row.comment ? row.comment.value : "";
-        const abbreviation = row.abbreviation ? row.abbreviation.value : "";
-    
-        const groupName = mapClassIriToGroup(groupIri);
-    
+        const iri           = row.id.value;
+        const groupIri      = row.group.value;
+        const labelObj      = row.displayLabel;
+        const abbrObj       = row.abbreviation;
+        const commentObj    = row.comment;
+      
+        const label         = labelObj ? labelObj.value : "?";
+        const abbreviation  = abbrObj ? abbrObj.value  : "";
+        const comment       = commentObj ? commentObj.value : "";
+      
+        // ---------- language test ----------
+        const currentLang   = getParam("lang") || "de";
+        const labelLang     = labelObj && labelObj["xml:lang"] ? labelObj["xml:lang"] : "";
+        const isFallback    = labelLang && labelLang !== currentLang;
+      
+        // ---------- html for the node ----------
+        const htmlLabel = isFallback
+            ? `<b>${labelLang.toUpperCase()}:</b> <i>${shortenLabel(label, abbreviation)}</i>`   // italic - no bold
+            : `<b>${shortenLabel(label, abbreviation)}</b>`; // bold as before
+
         return {
-            id: iri,
-            label: `<b>${shortenLabel(label, abbreviation)}</b>`,
-            group: groupName,
-            // Store data for the info panel
-            data: {
-                iri: iri,
-                fullLabel: label,
-                abbreviation: abbreviation,
-                comment: comment
-            }
+          id: iri,
+          label: htmlLabel,
+          group: mapClassIriToGroup(groupIri),
+      
+          // data for the info panel
+          data: {
+            iri,
+            fullLabel: label,
+            abbreviation,
+            comment,
+            isFallback,
+            labelLang
+          }
         };
-    });    
+    });
 
     const edges = edgesJson.results.bindings.map(row => {
         const edge = {
             from: row.from.value,
             to: row.to.value,
             label: row.label.value,
-            comment: row.comment ? row.comment.value : ""
+            comment: row.comment ? row.comment.value : "",
+            iri: row.id.value
         };
         
         // If this edge represents an "informs" relationship,
@@ -214,7 +257,7 @@ async function init() {
             row.id.value === "https://agriculture.ld.admin.ch/system-map/references" ) {
 
             edge.dashes = [3, 7]; // Dash pattern: 5px dash, 5px gap
-            edge.length = 800;    // Increase edge length to allow more spacing
+            edge.length = 300;    // Increase edge length to allow more spacing
         }
         
         return edge;
@@ -288,7 +331,7 @@ async function init() {
             barnesHut: {
                 gravitationalConstant: -8000, // negative in order to have nodes push each other appart
                 centralGravity: 0.1, // increase for stronger central gravity, i.e. that nodes move to the center
-                springLength: 300,
+                springLength: 200,
                 springConstant: 0.1 // increase to make spring more rigid
             },
             stabilization: {
@@ -323,22 +366,41 @@ async function init() {
     // 6) The info panel (top-right)
     const infoPanel = document.getElementById("infoPanel");
 
+    /**
+     * Populate the info-panel for an *instance* node.
+     * Shows the CURIE first, then the (possibly italic) label and comment.
+     */
     function showNodeInfo(nodeData) {
         const {
-            iri,
-            fullLabel,
-            abbreviation,
-            comment
+        iri,
+        fullLabel,
+        abbreviation,
+        comment,
+        isFallback,          // set earlier when building the node list
+        labelLang
         } = nodeData.data;
-        let html = `<a href='${iri}' target='blank'><small><code>${iri}</code></small></a><br>`;
-        html += `<h4>${fullLabel}`;
-        if (abbreviation) {
-            html += ` (${abbreviation})`;
+    
+        // --- header with shortened IRI ------------------------------
+        let html = `
+        <a href="${iri}" target="_blank">
+            <small><code>${shortenIri(iri)}</code></small>
+        </a><br>`;
+    
+        // --- title (bold or italic) ---------------------------------
+        html += `<h4>`
+        if (isFallback) {
+            html += `${labelLang.toUpperCase()}: <i>${fullLabel}</i>`
+        } else {
+            html += `${fullLabel}`;
         }
+        if (abbreviation) html += ` (${abbreviation})`;
         html += `</h4>`;
+    
+        // --- optional comment ---------------------------------------
         if (comment) {
-            html += `<p><small>${comment}</small></p>`;
+        html += `<p><small>${comment}</small></p>`;
         }
+    
         infoPanel.innerHTML = html;
         infoPanel.classList.remove("hidden");
     }
@@ -350,12 +412,29 @@ async function init() {
         infoPanel.classList.remove("fixed");
     }
 
+/**
+ * Populate the info-panel for a *property* (edge).
+ * The predicate’s IRI appears in CURIE form above its label.
+ */
     function showEdgeInfo(edgeData) {
-        // Build HTML for edge info (IRI as a clickable link, label, and comment)
-        let html = `<h4>${edgeData.label}</h4>`;
-        if (edgeData.comment) {
-            html += `<p><small>${edgeData.comment}</small></p>`;
+        const iri       = edgeData.iri || "";       // we add this field below
+        const label     = edgeData.label || "";
+        const comment   = edgeData.comment || "";
+    
+        let html = "";
+        if (iri) {
+        html += `
+            <a href="${iri}" target="_blank">
+            <small><code>${shortenIri(iri)}</code></small>
+            </a><br>
+        `;
         }
+    
+        html += `<h4>${label}</h4>`;
+        if (comment) {
+            html += `<p><small>${comment}</small></p>`;
+        }
+    
         infoPanel.innerHTML = html;
         infoPanel.classList.remove("hidden");
     }

@@ -13,6 +13,46 @@ window.system = getQueryParam("system", "true") === "true" ? "schema:SoftwareApp
 window.service = getQueryParam("service", "true") === "true" ? "service:Service" : "";
 window.information = getQueryParam("information", "true") === "true" ? "dcat:Dataset" : "";
 
+/* -------------------------------------------------------------
+Toggle which edge predicates are fetched.
+  - The user passes  ?predicates=key1;key2;key3
+  - Keys come from the table below.
+  - If the param is missing or empty, we include *all* predicates.
+----------------------------------------------------------------*/
+const PREDICATE_MAP = {
+  isPartOf       : "dcterms:isPartOf",
+  wasDerivedFrom : "prov:wasDerivedFrom",
+  parentOrg      : "schema:parentOrganization",
+  operates       : "systemmap:operates",
+  owns           : "systemmap:owns",
+  contains       : "systemmap:contains",
+  usesMasterData : "systemmap:usesMasterData",
+  memberOf       : "schema:memberOf",
+  provides       : "service:provides",
+  consumes       : "service:consumes"
+};
+
+// read “…&predicates=…”  we treat  ; , + or whitespace as separators
+const rawPredParam = getQueryParam("predicates", "").trim();
+const selectedKeys = rawPredParam
+  ? rawPredParam.split(/[;,+\s]+/).filter(Boolean)
+  : [];
+
+// translate keys → prefixed IRIs; unknown keys are ignored
+let predicateIris = selectedKeys
+  .map(k => PREDICATE_MAP[k])
+  .filter(Boolean);
+
+// If the user gave nothing valid, fall back to the full list
+if (predicateIris.length === 0) {
+  predicateIris = Object.values(PREDICATE_MAP);
+}
+
+// build a SPARQL-ready VALUES list string (every IRI on its own line keeps the query easy to read)
+window.predicateValues = predicateIris
+  .map(iri => `      ${iri}`)
+  .join("\n");
+
 // set SPARQL endpoint
 window.ENDPOINT = "https://lindas.admin.ch/query";
 
@@ -62,35 +102,33 @@ WHERE {
 `;
 
 // query edges between the nodes
+// -------------------------------------------------------------
+//  EDGE_QUERY  — uses the dynamically built  ${predicateValues}
+// -------------------------------------------------------------
 window.EDGE_QUERY = `
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
 PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
 PREFIX schema: <http://schema.org/>
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX service: <http://purl.org/ontology/service#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dcat:   <http://www.w3.org/ns/dcat#>
+PREFIX prov:   <http://www.w3.org/ns/prov#>
+PREFIX service:<http://purl.org/ontology/service#>
+PREFIX dcterms:<http://purl.org/dc/terms/>
+
 SELECT (?property AS ?id) ?from ?to ?label ?comment
 WHERE {
   GRAPH <https://lindas.admin.ch/foag/system-map> {
     ?from ?property ?to .
-    VALUES ?property { 
-      dcterms:isPartOf
-      prov:wasDerivedFrom
-      schema:parentOrganization
-      systemmap:operates
-      systemmap:owns
-      systemmap:contains
-      systemmap:usesMasterData
-      schema:memberOf
-      service:provides
+    VALUES ?property {
+      ${predicateValues}
     }
+
     ?property rdfs:label ?label .
-    FILTER(LANG(?label)="${lang}")
+    FILTER( LANG(?label) = "${lang}" )
+
     OPTIONAL {
-        ?property rdfs:comment ?comment .
-        FILTER(LANG(?comment)="${lang}")
+      ?property rdfs:comment ?comment .
+      FILTER( LANG(?comment) = "${lang}" )
     }
   }
 }

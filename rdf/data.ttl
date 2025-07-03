@@ -255,6 +255,45 @@ systemmap:ShM5kJNFhO8vOAEdK a schema:Organization ;
     rdfs:label "Europäische Kommission"@de,
         "European Commission"@en .
 
+systemmap:S0qIaLPaYFa3mHse4 a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "xFarm"@de ;
+    rdfs:comment """
+    IoT-gestützte Betriebsführung, Wetter, Anbauplanung, Analytik.
+    """@de ;
+    dcat:landingPage <https://xfarm.ag/> ;
+    systemmap:operatedBy systemmap:SmGaThSxn7eIC3JvM .
+
+systemmap:S1nS1Ehy2BJj22GCX a schema:SoftwareApplication ;
+    rdfs:label "ISOGOATS"@de ;
+    rdfs:comment """
+        Herdenmanagement-System für Ziegen.
+        Erfassen Sie Informationen und Warnungen für jedes Tier in Ihrem Stall und rufen Sie diese ab.
+        Verbessern Sie die Überwachung Ihrer Tiere: Fortpflanzung, Gesundheit, Leistung.
+        Bereiten Sie Ihre vorgeschriebenen Dokumente für Kontrollen einfach vor.
+        """@de ;
+    systemmap:operatedBy zefix:505628 .
+
+systemmap:S1nS1Ehy2BJj22GCY a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "ISOSHEEP"@de ;
+    rdfs:comment """
+        Herdenmanagement-System für Schafe.
+        Erfassen Sie Informationen und Warnungen für jedes Tier in Ihrem Stall und rufen Sie diese ab.
+        Verbessern Sie die Überwachung Ihrer Tiere: Fortpflanzung, Gesundheit, Leistung.
+        Bereiten Sie Ihre vorgeschriebenen Dokumente für Kontrollen einfach vor.
+        """@de ;
+    systemmap:operatedBy zefix:505628 .
+
+systemmap:S1nS1Ehy2BJj22GCZ a schema:SoftwareApplication ;
+    rdfs:label "Pig'Up"@de ;
+    rdfs:comment """
+        Erfassen Sie die Daten Ihrer Tiere direkt in Ihrem Gebäude.
+        Verfolgen Sie die Gesundheitsereignisse in Ihrer Herde, unabhängig davon, ob es sich um einen Züchter oder Mäster handelt.
+        Analysieren Sie Ihren Bestand, um die Leistung zu optimieren.
+        """@de ;
+    systemmap:operatedBy zefix:505628 .
+
 systemmap:S2Q2s27pTp6oRYHmf a schema:SoftwareApplication ;
     rdfs:label "digiFLUX Kern"@de,
         "digiFLUX Core"@en ;
@@ -324,6 +363,15 @@ systemmap:S7u1Bh6qfXUbSDkv a schema:SoftwareApplication ;
         "e-dec"@it ;
     systemmap:operatedBy systemmap:SFKPRpdGa5UISiJlx .
 
+systemmap:S8RVk8dQzkXzXYSZX a schema:SoftwareApplication ;
+    rdfs:label "AgroOffice"@de ;
+    rdfs:comment """
+        AgroOffice ist eine modulare Buchhaltungssoftware für landwirtschaftliche Betriebe sowie kleine Handwerks- und Dienstleistungsunternehmen.
+        Das System bietet Finanz- und Betriebsbuchhaltung, Faktura, E-Banking-Abgleich und Lohnbuchhaltung in nahtlos integrierten Modulen.
+        Entwickelt von Agro-Office AG (heute Averio AG) seit 1992, legt es Wert auf intuitive Bedienung und praxisgerechte Funktionen.
+        """@de ;
+    systemmap:operatedBy zefix:1663457 .
+
 systemmap:S9SbhGAwWjtvcRIZ a schema:SoftwareApplication ;
     rdfs:label "Geografisches Informationssystem"@de,
         "Geographic Information System"@en,
@@ -389,6 +437,10 @@ systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
     systemmap:hasLegalBasis LwG:art_165_d ;
     systemmap:operatedBy systemmap:ScoeXHl4TgJbke1Yf .
 
+systemmap:SAwz5t3SyxjgPiHhX a schema:SoftwareApplication ;
+    rdfs:label "Herdebuch"@de ;
+    systemmap:operatedBy zefix:165954 .
+
 systemmap:SBx5yiPz9Nxy2Wnue a schema:SoftwareApplication ;
     rdfs:label "Mooh Intranet"@de ;
     rdfs:comment """
@@ -397,12 +449,25 @@ systemmap:SBx5yiPz9Nxy2Wnue a schema:SoftwareApplication ;
     dcat:landingPage <https://intranet.mooh.swiss/> ;
     systemmap:operatedBy zefix:1256441 .
 
-systemmap:SDwz5T4SyxjgPiHbH a schema:SoftwareApplication ;
+systemmap:SDwz5T4SyxjgPiHbH a schema:SoftwareApplication,
+        systemmap:FMIS ;
     rdfs:label "Geofolia Feldkalender"@de ;
     rdfs:comment """
         Betriebsführung Pflanzenbau, Zucht- und Tierdatenverwaltung.
         """@de ;
-    dcat:landingPage <https://www.agrarsoftware.ch/geofolia.html> ;
+    dcat:landingPage <https://agroplus.ch/> ;
+    systemmap:operatedBy zefix:505628 .
+
+systemmap:SDwz5T4SyxjgPiHbX a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "Agroplus Feldkalender"@de ;
+    rdfs:comment """
+        Mit dem Feldkalender von AGROPLUS haben Sie jederzeit einen guten Überblick über Ihre gesamten Parzellen.
+        Der Feldkalender enthält eine integrierte Liste der zugelassenen Spritzmittel (geordnet nach Kultur, mit Wirkstoffen und Wartezeiten) und ermöglicht eine praktische Übersicht der Ergebnisse.
+        Nach Wunsch können Sie die im Feldkalender eingetragenen Düngemittel automatisch in Ihre Suisse-Bilanz Berechnung einfliessen lassen.
+        Damit ist der Feldkalender von AGROPLUS ein wichtiger Begleiter für jeden Landwirt.
+        """@de ;
+    dcat:landingPage <https://www.agrarsoftware.ch/agroplus.html> ;
     systemmap:operatedBy zefix:505628 .
 
 systemmap:SE5DY78J7vgfoiDLj a schema:SoftwareApplication ;
@@ -516,6 +581,11 @@ systemmap:SHyBeGX0LsQwjJ6Z a schema:SoftwareApplication ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> ;
     systemmap:operatedBy systemmap:SNbhMvt3Btta1U1d6 .
 
+systemmap:SLDduDXvpvEDmqYSJ a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "DeLaval DelPro™"@de ;
+    systemmap:operatedBy zefix:304729 .
+
 systemmap:SLxeXHOfmC6DkBGl a schema:SoftwareApplication ;
     rdfs:label "Zentrale Auswertung von Agrarumweltindikatoren"@de ;
     rdfs:comment """
@@ -611,6 +681,17 @@ systemmap:SPWOFHR512FuAc25b a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:SnUxOsahtIQHfvRH9,
         systemmap:Sp5pkmAETRpXrudck,
         systemmap:SyTRdNaA9EH12lhiE .
+
+systemmap:SPe8M0urgsNbKw4ut a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "365FarmNet"@de ;
+    rdfs:comment """
+        365FarmNet ist Europas grosse und mehrfach ausgezeichnete Software für das gesamte Farmmanagement, unabhängig von Grösse und Betriebsart.
+        Die 365FarmNet Plattform ist herstellerunabhängig, betriebszweigübergreifend und deckt über die Einbindung von Partneranwendungen alle für die Betriebsführung notwendigen Funktionen ab:
+        Von der Anbauplanung bis zur Ernte, vom Schlag bis zum Stall, von der Dokumentation bis zur Betriebsanalyse.
+        """@de ;
+    dcat:landingPage <https://www.365farmnet.com/> ;
+    systemmap:operatedBy systemmap:Sng7djgBb3dkdoxbU .
 
 systemmap:SQfl1MHnNpsAj3WP a schema:SoftwareApplication ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
@@ -822,7 +903,8 @@ systemmap:SgjZ0efLbuCR2HvN a schema:SoftwareApplication ;
         "PLUTO"@it ;
     systemmap:operatedBy systemmap:SBLH2G6TSKaqhqk4n .
 
-systemmap:SgsDa3rQzhEAqAUOZ a schema:SoftwareApplication ;
+systemmap:SgsDa3rQzhEAqAUOZ a schema:SoftwareApplication,
+        systemmap:FMIS ;
     rdfs:label "Farmable"@de ;
     rdfs:comment """
         Feldbegehungen, Pflanzenschutzplanung, GPS-Dokumentation.
@@ -1122,7 +1204,8 @@ systemmap:SvDlxaJ5YMkuZGH6k a schema:SoftwareApplication ;
     systemmap:hasLegalBasis LwG:art_165_c ;
     systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
 
-systemmap:SveDUGZvttVw7ga7l a schema:SoftwareApplication ;
+systemmap:SveDUGZvttVw7ga7l a schema:SoftwareApplication,
+        systemmap:FMIS ;
     rdfs:label "smartfarm"@de ;
     rdfs:comment """
         Feldkalender, ÖLN-Dokumentation, Stickstoffbilanz, IP-Suisse-kompatibel.
@@ -1316,6 +1399,11 @@ systemmap:SAUWzyCpeGZ6vVil a dcat:Dataset ;
     prov:wasDerivedFrom systemmap:SvNriWslaOR5xkdw ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
+systemmap:SBba3t3SyxjgPiHhX a dcat:Dataset ;
+    rdfs:label "Daten der Geburtsmeldungen"@de ;
+    prov:wasDerivedFrom systemmap:SVXa3t3SyxjgPiLBx ;
+    systemmap:containedIn systemmap:SAwz5t3SyxjgPiHhX .
+
 systemmap:SDmJeWK7EOnMqRLs a dcat:Dataset ;
     rdfs:label "Auflagen zur Anwendung von Pflanzenschutzmitteln"@de,
         "Conditions for the Use of Plant Protection Products"@en,
@@ -1450,6 +1538,10 @@ systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
         Miscele o soluzioni composte da due o più sostanze.
         """@it ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
+
+systemmap:SVXa3t3SyxjgPiLBx a dcat:Dataset ;
+    rdfs:label "Daten der Geburtsmeldungen"@de ;
+    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
 systemmap:SZBHsREMx369FArg a dcat:Dataset ;
     rdfs:label "Dünger"@de ;
@@ -2975,11 +3067,26 @@ systemmap:SWdllcNbPnjdcm7om a systemmap:PrivateOrganization ;
     rdfs:label "Agroline"@de ;
     systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
 
+systemmap:SmGaThSxn7eIC3JvM a systemmap:PrivateOrganization ;
+    rdfs:label "xFarm Technologies"@de .
+
+systemmap:Sng7djgBb3dkdoxbU a systemmap:PrivateOrganization ;
+    rdfs:label "365FarmNet GmbH"@de .
+
 zefix:1256441 a systemmap:PrivateOrganization ;
     rdfs:label "mooh Genossenschaft"@de .
 
+zefix:165954 a systemmap:PrivateOrganization ;
+    rdfs:label "Genossenschaft swissherdbook Zollikofen"@de .
+
+zefix:1663457 a systemmap:PrivateOrganization ;
+    rdfs:label "Averio AG"@de .
+
 zefix:2595 a systemmap:PrivateOrganization ;
     rdfs:label "ASF Tiervermarktung AG"@de .
+
+zefix:304729 a systemmap:PrivateOrganization ;
+    rdfs:label "DeLaval AG"@de .
 
 zefix:330180 a systemmap:PrivateOrganization ;
     rdfs:label "Bison Schweiz AG"@de ;
@@ -3011,6 +3118,9 @@ zefix:76693 a systemmap:PrivateOrganization ;
 zefix:787227 a systemmap:PrivateOrganization ;
     rdfs:label "RAMSEIER Suisse AG"@de ;
     systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+
+zefix:848149 a systemmap:PrivateOrganization ;
+    rdfs:label "Agrosolution AG"@de .
 
 systemmap:S6ILF4g1j5sNf9aG a termdat:52451 ;
     rdfs:label "Informationen zur Einfuhr von PSM"@de,

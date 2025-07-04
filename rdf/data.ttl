@@ -2324,6 +2324,33 @@ systemmap:SAUWzyCpeGZ6vVil a dcat:Dataset ;
     prov:wasDerivedFrom systemmap:SvNriWslaOR5xkdw ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
+systemmap:SEI0Jp1SabxWUiGh0 a systemmap:MasterData ;
+    rdfs:label "TVD-Nummer"@de,
+        "ATDB Number"@en,
+        "Numéro BDTA"@fr,
+        "Numero BDTA"@it ;
+    dcterms:isPartOf systemmap:SAUWzyCpeGZ6vVil ;
+    rdfs:comment """
+        Die TVD-Nummer ist eine Betriebsnummer, die in der Tierverkehrsdatenbank (TVD) für Tierhaltungen in der Schweiz vergeben wird, insbesondere für Rinder, Schweine, Schafe, Ziegen und in Gehegen gehaltenes Wild. 
+        Sie dient der eindeutigen Identifizierung und Rückverfolgbarkeit der Tiere.
+        Die TVD-Nummer ist fix mit der kantonalen Betriebsnummer (KT_ID_B) verknüpft und daher ortsgebunden.
+        """@de,
+        """
+        The ATDB Number is a farm number assigned in the Animal Traffic Database (ATDB) for animal husbandry in Switzerland, in particular for cattle, pigs, sheep, goats, and game kept in enclosures. 
+        It is used to uniquely identify locations with animals relevant to animal diseases and to trace animals. 
+        The ATDB Number is permanently linked to the cantonal farm number (KT_ID_B) and is therefore location-specific.
+        """@en,
+        """
+        Le Numéro BDTA est un numéro d'exploitation attribué dans la banque de données sur le trafic des animaux (BDTA) pour les exploitations animales en Suisse, en particulier pour les bovins, les porcs, les moutons, les chèvres et le gibier en enclos. 
+        Il sert à identifier de manière univoque les sites où se trouvent des animaux sensibles aux épizooties et à assurer la traçabilité des animaux. 
+        Le Numéro BDTA est lié de manière fixe au numéro d'exploitation cantonal (KT_ID_B) et est donc lié à un lieu.
+        """@fr,
+        """
+        Il numero BDTA è un numero di identificazione assegnato nella banca dati sul traffico degli animali (BDTA) agli allevamenti in Svizzera, in particolare per bovini, suini, ovini, caprini e selvaggina in recinti. 
+        Serve a identificare in modo univoco i luoghi in cui si trovano animali soggetti a epizoozie e a garantire la tracciabilità degli animali. 
+        Il numero BDTA è collegato in modo fisso al numero di azienda cantonale (KT_ID_B) ed è quindi legato al luogo.
+        """@it .
+
 systemmap:SDmJeWK7EOnMqRLs a dcat:Dataset ;
     rdfs:label "Auflagen zur Anwendung von Pflanzenschutzmitteln"@de,
         "Conditions for the Use of Plant Protection Products"@en,
@@ -3874,10 +3901,10 @@ systemmap:S3jZwzvmFKsXRWiI a systemmap:MasterData ;
         "BURNR"@it .
 
 systemmap:SDLEUPczkJ9AWZeC a systemmap:MasterData ;
-    rdfs:label "UID-Nummer"@de,
-        "UID Number"@en,
-        "Numéro UID"@fr,
-        "Numero UID"@it ;
+    rdfs:label "UID"@de,
+        "UID"@en,
+        "UID"@fr,
+        "UID"@it ;
     rdfs:comment """
         Jedes in der Schweiz aktive Unternehmen erhält eine einheitliche Unternehmens-Identifikationsnummer (UID).
         Die Verwendung der UID ermöglicht eine administrative Entlastung der Unternehmen sowie eine effizientere Zusammenarbeit zwischen den Behörden.
@@ -4335,17 +4362,6 @@ systemmap:S6ILF4g1j5sNf9aG a termdat:52451 ;
     prov:wasDerivedFrom systemmap:SfQ6BN8rDjKhTWL4 ;
     systemmap:containedIn systemmap:SywklUB91myTH0cvS .
 
-systemmap:S6aBblr7qNp15tGw a termdat:52451 ;
-    rdfs:label "Kontaktdaten Bewirtschaftenden"@de,
-        "Contact details of farm managers"@en,
-        "Coordonnées des exploitants agricoles"@fr,
-        "Dati di contatto dei gestori agricoli"@it ;
-    rdfs:comment "Informationen zu Kontaktdaten von Betriebsleitern und Betriebsleiterinnen wie zum Beispiel Email-Adressen oder Telefonnummern."@de,
-        "Information on the contact details of farm managers, such as email addresses or phone numbers."@en,
-        "Informations sur les coordonnées des exploitants agricoles, telles que les adresses e-mail ou les numéros de téléphone."@fr,
-        "Informazioni sui dati di contatto dei gestori agricoli, come indirizzi e-mail o numeri di telefono."@it ;
-    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
-
 systemmap:S6lhRFiEflanK2rcl a termdat:52451 ;
     rdfs:label "Nutzerdaten Produktekatalog"@de ;
     rdfs:comment """
@@ -4523,7 +4539,7 @@ systemmap:SoY82Q0qEk9k0s3w3 a termdat:52451 ;
         "Contact details of milk producers, such as addresses, TVD number, AGIS number of the farm, AGIS number of the operator, and payment information for the subsidy for cheesed milk and the subsidy for feeding without silage. If possible, these contact details are obtained from AGIS."@en,
         "Coordonnées des producteurs de lait, telles que les adresses, le numéro TVD, le numéro AGIS de l'exploitation, le numéro AGIS de l'exploitant et les informations de paiement pour la subvention pour le lait transformé en fromage et la subvention pour l'alimentation sans ensilage. Si possible, ces coordonnées sont obtenues auprès d'AGIS."@fr,
         "Dati di contatto dei produttori di latte, come indirizzi, numero TVD, numero AGIS dell'azienda, numero AGIS del gestore e informazioni di pagamento per il sussidio per il latte trasformato in formaggio e il sussidio per l'alimentazione senza insilato. Se possibile, questi dati di contatto vengono ottenuti da AGIS."@it ;
-    prov:wasDerivedFrom systemmap:S6aBblr7qNp15tGw ;
+    prov:wasDerivedFrom systemmap:SvNriWslaOR5xkdw ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
 systemmap:SqGp9THVAsRw71ZCg a termdat:52451 ;
@@ -4546,20 +4562,96 @@ systemmap:Sutd0KIj3Rf8GlSwq a termdat:52451 ;
         "Coordonnées des transformateurs de lait, telles que les adresses ou les numéros d'identification."@fr,
         "Dati di contatto dei trasformatori di latte, come indirizzi o numeri di identificazione."@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
-
+                                                                                                                                                                                              
 systemmap:SvNriWslaOR5xkdw a termdat:52451 ;
-    rdfs:label "Betriebsdaten (Person, Betrieb)"@de,
-        "Operational data (Person, Business)"@en,
-        "Données opérationnelles (Personne, Entreprise)"@fr,
-        "Dati operativi (Persona, Impresa)"@it ;
-    rdfs:comment "Enthält grundlegende Informationen zu landwirtschaftlichen Betrieben sowie zu den zugehörigen Personen. Dazu gehören Identifikationsdaten, organisatorische Strukturen und Angaben zu den am Betrieb beteiligten Personen (z. B. Betriebsleiter, Familienmitglieder und Mitarbeitende)."@de,
-        "Contains basic information about agricultural businesses and related individuals. This includes identification data, organizational structures, and details about individuals involved in the business (e.g., farm managers, family members, and employees)."@en,
-        "Contient des informations de base sur les exploitations agricoles et les personnes associées. Cela inclut les données d'identification, les structures organisationnelles et les détails sur les personnes impliquées dans l'exploitation (p. ex. gestionnaires de ferme, membres de la famille et employés)."@fr,
-        "Contiene informazioni di base sulle aziende agricole e sulle persone ad esse associate. Ciò include dati identificativi, strutture organizzative e dettagli sulle persone coinvolte nell'azienda (ad es. gestori dell'azienda, familiari e dipendenti)."@it ;
-    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
+    rdfs:label "Registerdaten"@de,
+        "Register data"@en,
+        "Données des exploitations"@fr,
+        "Dati sull\'azienda"@it ;
+    rdfs:comment """
+        Enthält grundlegende Informationen zu landwirtschaftlichen Betrieben und deren Bewirtschaftern. 
+        Ein Betrieb kann von einer Natürlichen Person, einer Einfachen Gesellschaft, oder einer Juristischen Person bewirtschaftet werden. 
+        Registerdaten enthalten Daten zur Person, Daten zu der Betriebs- und Gemeinschaftsform des Betriebes und Daten zu Beziehungen zwischen Personen und Betrieben. 
+        Registerdaten werden fast täglich aktualisiert.
+        """@de,
+        """
+        Contains basic information on agricultural holdings and their operators. 
+        An agricultural businesses may be managed by a natural person, a simple partnership, or a legal entity. 
+        Register data includes personal data, data on the type of holding and type of community, and data on relationships between persons and holdings. 
+        Register data is updated almost daily.
+        """@en,
+        """
+        Contient des informations de base sur les exploitations agricoles et leurs exploitants. 
+        Une exploitation peut être gérée par une personne physique, une société simple ou une personne morale. 
+        Les données du registre contiennent des informations sur la personne, le type d'exploitation et la forme de communauté de l'exploitation, ainsi que sur les relations entre les personnes et les exploitations. 
+        Les données du registre sont mises à jour presque quotidiennement.
+        """@fr,
+        """Contiene informazioni di base sulle aziende agricole e sui loro gestori. 
+        Un'azienda può essere gestita da una persona fisica, una società semplice o una persona giuridica. 
+        I dati del registro contengono informazioni sulla persona, sulla forma aziendale e comunitaria dell'azienda e sui rapporti tra persone e aziende. 
+        I dati del registro vengono aggiornati quasi quotidianamente.
+        """@it ;
+    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
+
+systemmap:SZ5quKnfPEEV1CVmE a termdat:52451 ;
+    rdfs:label "Person"@de,
+        "Person"@en,
+        "Personne"@fr,
+        "Persona"@it ;
+    rdfs:comment """
+        Enthält Registerdaten zu Bewirtschaftern von landwirtschaftlichen Betrieben, wie Kontaktdaten, Sprache, Jahrgang, Beziehungsdaten Person-Person und Beziehungsdaten Person-Betrieb. 
+        Die Person wird über die kantonale Personennummer (KT_ID_P) identifiziert, sie kann eine UID haben. 
+        Die Person hat eine von 17 Rechtsformen, zum Beispiel Natürliche Person, Einfache Gesellschaft, Aktiengesellschaft etc.
+        """@de,
+        """
+        Contains register data on managers of agricultural businesses, such as contact details, language, year of birth, person-to-person relationship data, and person-to-business relationship data. 
+        The person is identified by their cantonal personal identification number (KT_ID_P) and may have a UID. 
+        The person has one of 17 legal forms, for example, natural person, simple partnership, stock corporation, etc.
+        """@en,
+        """
+        Contient des données d'enregistrement sur les exploitants d'entreprises agricoles, telles que leurs coordonnées, leur langue, leur année de naissance, des données sur leurs relations interpersonnelles et entre eux et leur entreprise. 
+        La personne est identifiée par son numéro cantonal (KT_ID_P) et peut avoir un numéro d'identification fiscale (UID). 
+        Elle peut avoir l'une des 17 formes juridiques suivantes: personne physique, société simple, société anonyme, etc.
+        """@fr,
+        """
+        Contiene dati di registro relativi ai gestori di aziende agricole, quali dati di contatto, lingua, anno di nascita, dati relativi alle relazioni interpersonali e dati relativi alle relazioni tra persone e aziende. 
+        La persona è identificata tramite il numero cantonale (KT_ID_P) e può avere un UID. 
+        La persona ha una delle 17 forme giuridiche, ad esempio persona fisica, società semplice, società anonima ecc.
+        """@it ;
+    systemmap:isPartOf systemmap:SvNriWslaOR5xkdw ;
+    systemmap:informs systemmap:SX1qchbxSZKWI6Up ;
+    systemmap:usesMasterData systemmap:SDLEUPczkJ9AWZeC .
+
+systemmap:SfkMzUrMhERjP9vhy a termdat:52451 ;
+    rdfs:label "Betrieb- und Gemeinschaftsform"@de,
+        "Operating and community form"@en,
+        "Formes d'exploitations et de communautés"@fr,
+        "Forma operativa e comunitaria"@it ;
+    rdfs:comment """
+        Enthält Registerdaten zu landwirtschaftlichen Betrieben, wie Betriebsanschrift, Adresse des Betriebsstandortes, landwirtschaftliche Zone, Koordinaten und Beziehungsdaten Betrieb-Betrieb. 
+        Der Betrieb hat eine von 16 Betriebsformen, zum Beispiel Ganzjahresbetrieb, Sömmerungsbetrieb, Betriebsgemeinschaft etc. 
+        Der Betriebsstandort wird über die kantonale Betriebsnummer (KT_ID_B) identifiziert und hat eine BUR-Nummer. 
+        Falls der Betriebsstandort Tierseuchen-relevante Tiere führt, hat er eine TVD-Nummer.
+        """@de,
+        """
+        Contains register data on agricultural holdings, such as the name of the holding, the address of the holding location, the agricultural zone, coordinates, and relationship data between holdings. 
+        The farm has one of 16 farm types, for example, year-round farm, summer grazing farm, farming community, etc. The farm location is identified by the cantonal farm number (KT_ID_B) and has a BUR number. 
+        If the farm location keeps animals that are relevant to animal diseases, it has a ATDB number.
+        """@en,
+        """
+        Contient les données du registre des exploitations agricoles, telles que l'adresse de l'exploitation, l'adresse du site de l'exploitation, la zone agricole, les coordonnées et les données de relation entre exploitations. 
+        L'exploitation a l'un des 16 types d'exploitation, par exemple exploitation à l'année, exploitation d'estivage, communauté d'exploitation, etc. Le site de l'exploitation est identifié par le numéro d'exploitation cantonal (KT_ID_B) et dispose d'un numéro BUR. 
+        Si le site de l'exploitation élève des animaux sensibles à des épizooties, il dispose d'un numéro BDTA.
+        """@fr,
+        """
+        Contiene dati di registro relativi alle aziende agricole, quali indirizzo dell'azienda, indirizzo della sede dell'azienda, zona agricola, coordinate e dati di riferimento azienda-azienda. 
+        L'azienda ha una delle 16 forme di esercizio, ad esempio azienda per tutto l'anno, azienda di estivazione, comunità aziendale ecc. Il luogo di ubicazione dell'azienda è identificato tramite il numero cantonale dell'azienda (KT_ID_B) e ha un numero BUR. 
+        Se il luogo di ubicazione dell'azienda alleva animali soggetti a epizoozie, ha un numero BDTA.
+        """@it ;
+    systemmap:isPartOf systemmap:SvNriWslaOR5xkdw ;
     systemmap:informs systemmap:SX1qchbxSZKWI6Up ;
     systemmap:usesMasterData systemmap:S3jZwzvmFKsXRWiI,
-        systemmap:SDLEUPczkJ9AWZeC .
+        systemmap:SEI0Jp1SabxWUiGh0 .                                                                                                                                                                                                      
 
 systemmap:SDqb9NPoB6n3MZf2 a termdat:52453 ;
     rdfs:label "Kürzungen von Direktzahlungen"@de,

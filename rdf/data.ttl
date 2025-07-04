@@ -4623,7 +4623,7 @@ systemmap:SZ5quKnfPEEV1CVmE a termdat:52451 ;
     systemmap:usesMasterData systemmap:SDLEUPczkJ9AWZeC .
 
 systemmap:SfkMzUrMhERjP9vhy a termdat:52451 ;
-    rdfs:label "Betrieb- und Gemeinschaftsform"@de,
+    rdfs:label "Betriebs- und Gemeinschaftsform"@de,
         "Operating and community form"@en,
         "Formes d'exploitations et de communautés"@fr,
         "Forma operativa e comunitaria"@it ;

@@ -65,32 +65,44 @@
 # 1.3. Operating Organization for IT Systems
 #    - Every instance of schema:SoftwareApplication => Must have
 #      systemmap:operatedBy => at least one schema:Organization
+#      (either directly or indirectly via the thing it is part of)
 # ------------------------------------------------------------------------------
 
 :SoftwareApplicationOperatingOrgShape
     a sh:NodeShape ;
     sh:targetClass schema:SoftwareApplication ;
     sh:property [
-        sh:path systemmap:operatedBy ;
-        sh:class schema:Organization ;
+        # follow zero-or-more dcterms:isPartOf links, then systemmap:operatedBy
+        sh:path (
+            [ sh:zeroOrMorePath dcterms:isPartOf ]
+            systemmap:operatedBy
+        ) ;
         sh:minCount 1 ;
-        sh:message "Every software application must be operated by at least one organization (schema:Organization)."
+        sh:message "Every software application must be operated by at least one organization -- either directly (systemmap:operatedBy on itself) or via the system it is part of." ;
     ] .
 
 # ------------------------------------------------------------------------------
 # 1.4. Containment of Information within IT Systems
 #    - Every instance of dcat:Dataset => Must be linked
-#      via systemmap:containedIn => schema:SoftwareApplication
+#      via systemmap:containedIn => schema:SoftwareApplication,
+#      either directly or via a parent dataset in its dcterms:isPartOf chain.
 # ------------------------------------------------------------------------------
 
 :InformationContainedInITSystemShape
     a sh:NodeShape ;
     sh:targetClass dcat:Dataset ;
     sh:property [
-        sh:path systemmap:containedIn ;
+        # follow zero-or-more dcterms:isPartOf links, then systemmap:containedIn
+        sh:path (
+            [ sh:zeroOrMorePath dcterms:isPartOf ]
+            systemmap:containedIn
+        ) ;
         sh:class schema:SoftwareApplication ;
         sh:minCount 1 ;
-        sh:message "Every piece of information (dcat:Dataset) must be contained in at least one IT system (schema:SoftwareApplication)."
+        sh:message """
+Every piece of information (dcat:Dataset) must be contained in at least one IT system—
+either directly (systemmap:containedIn on itself) or via a dataset it is part of.
+""" ;
     ] .
 
 # ------------------------------------------------------------------------------

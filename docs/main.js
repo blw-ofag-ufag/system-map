@@ -518,17 +518,6 @@ async function init() {
         }
 
     }
-
-    network.on("hoverNode", (params) => {
-        // If a node is pinned, do not update the dimming effect on hover.
-        if (pinnedNodeId) return;
-        const hoveredId = params.node;
-        updateDimmingEffect(hoveredId);
-        const hoveredNodeData = nodesDataset.get(hoveredId);
-        if (hoveredNodeData && hoveredNodeData.data) {
-            showNodeInfo(hoveredNodeData);
-        }
-    });
     
     network.on("blurNode", () => {
         // When a node is pinned, leave the dimming effect intact.
@@ -549,17 +538,6 @@ async function init() {
         }));
         edgesDataset.update(edgeRestore);
         hideNodeInfo();
-    });    
-
-    // When hovering over an edge, show its info (unless an entity is pinned)
-    network.on("hoverEdge", (params) => {
-        if (!pinnedEdgeId && !pinnedNodeId) {
-            const hoveredEdgeId = params.edge; // vis.js provides the hovered edge's id here
-            const edgeData = edgesDataset.get(hoveredEdgeId);
-            if (edgeData) {
-                showEdgeInfo(edgeData);
-            }
-        }
     });
 
     network.on("blurEdge", () => {

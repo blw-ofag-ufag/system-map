@@ -447,6 +447,13 @@ async function init() {
 
     function updateDimmingEffect(startId) {
         const distMap = getDistancesUpToTwoHops(network, startId);
+
+        // Bring the <=2-hop neighbourhood to the foreground.
+        // Selecting nodes changes only the rendering order because our
+        // chosen-callback ignores the "selected" state.
+        const frontIds = Object.keys(distMap); // 0, 1 and 2 hops
+        network.selectNodes(frontIds, false); // false → keep edges untouched
+
         // Update nodes
         const updates = nodes.map(node => {
             const dist = distMap[node.id];
@@ -522,6 +529,7 @@ async function init() {
     network.on("blurNode", () => {
         // When a node is pinned, leave the dimming effect intact.
         if (pinnedNodeId) return;
+        network.unselectAll(); // reset z-order
         // Restore original styles since no node is pinned.
         const restoreArray = nodes.map(node => {
             const { background, border, fontColor } = originalStyles[node.id];
@@ -571,6 +579,7 @@ async function init() {
             // Clicked on empty space — unpin and restore original styles.
             pinnedNodeId = null;
             pinnedEdgeId = null;
+            network.unselectAll(); // reset z-order
             hideNodeInfo();
             infoPanel.classList.remove("fixed");
             const restoreArray = nodes.map(node => {

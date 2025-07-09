@@ -4591,7 +4591,8 @@ systemmap:SvNriWslaOR5xkdw a termdat:52451 ;
         I dati del registro contengono informazioni sulla persona, sulla forma aziendale e comunitaria dell'azienda e sui rapporti tra persone e aziende. 
         I dati del registro vengono aggiornati quasi quotidianamente.
         """@it ;
-    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
+    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
+        prov:informs SX1qchbxSZKWI6Up .
 
 systemmap:SZ5quKnfPEEV1CVmE a termdat:52451 ;
     rdfs:label "Person"@de,
@@ -4618,8 +4619,7 @@ systemmap:SZ5quKnfPEEV1CVmE a termdat:52451 ;
         La persona è identificata tramite il numero cantonale (KT_ID_P) e può avere un UID. 
         La persona ha una delle 17 forme giuridiche, ad esempio persona fisica, società semplice, società anonima ecc.
         """@it ;
-    systemmap:isPartOf systemmap:SvNriWslaOR5xkdw ;
-    systemmap:informs systemmap:SX1qchbxSZKWI6Up ;
+    dcterms:isPartOf systemmap:SvNriWslaOR5xkdw ;
     systemmap:usesMasterData systemmap:SDLEUPczkJ9AWZeC .
 
 systemmap:SfkMzUrMhERjP9vhy a termdat:52451 ;
@@ -4648,8 +4648,7 @@ systemmap:SfkMzUrMhERjP9vhy a termdat:52451 ;
         L'azienda ha una delle 16 forme di esercizio, ad esempio azienda per tutto l'anno, azienda di estivazione, comunità aziendale ecc. Il luogo di ubicazione dell'azienda è identificato tramite il numero cantonale dell'azienda (KT_ID_B) e ha un numero BUR. 
         Se il luogo di ubicazione dell'azienda alleva animali soggetti a epizoozie, ha un numero BDTA.
         """@it ;
-    systemmap:isPartOf systemmap:SvNriWslaOR5xkdw ;
-    systemmap:informs systemmap:SX1qchbxSZKWI6Up ;
+    dcterms:isPartOf systemmap:SvNriWslaOR5xkdw ;
     systemmap:usesMasterData systemmap:S3jZwzvmFKsXRWiI,
         systemmap:SEI0Jp1SabxWUiGh0 .                                                                                                                                                                                                      
 

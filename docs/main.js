@@ -289,8 +289,8 @@ async function init() {
             chosen: {
                 node: function(values, id, selected, hovering) {
                     if (hovering) {
-                        values.borderWidth = 3;; // Set border thickness on hover
-                        values.borderColor = "#000000"; // Yellow border on hover
+                        values.borderWidth = 3;
+                        values.borderColor = "#F04020";
                     }
                 }
             }
@@ -312,11 +312,11 @@ async function init() {
             }
         },
         groups: {
-            System:      {  color: { background: "#FF7F51", border: "#000000" }, font: { color: "#000000" } },
-            Information: {  color: { background: "#ADB6C4", border: "#000000" }, font: { color: "#000000" } },
-            Organization: { color: { background: "#383743", border: "#000000" }, font: { color: "#FFFFFF" } },
-            Service: {      color: { background: "#0080ae", border: "#000000" }, font: { color: "#FFFFFF" } },
-            Other: {        color: { background: "#383743", border: "#000000" }, font: { color: "#FFFFFF" } },
+            System:      {  color: { background: "#1967D3", border: "#000000" }, font: { color: "#FFFFFF" } },
+            Information: {  color: { background: "#354C5D", border: "#000000" }, font: { color: "#FFFFFF" } },
+            Organization: { color: { background: "#D2D9E4", border: "#000000" }, font: { color: "#000000" } },
+            Service: {      color: { background: "#DBCCA0", border: "#000000" }, font: { color: "#000000" } },
+            Other: {        color: { background: "#D2D9E4", border: "#000000" }, font: { color: "#FFFFFF" } },
         },
         interaction: {
             hover: true,
@@ -345,11 +345,11 @@ async function init() {
     // 5) The BFS highlight color-blending
     //    Map group => original background/border/font
     const groupColors = {
-        System: {       background: "#FF7F51", border: "#000000", font: "#000000" },
-        Information: {  background: "#ADB6C4", border: "#000000", font: "#000000" },
-        Organization: { background: "#383743", border: "#000000", font: "#FFFFFF" },
-        Service: {      background: "#0080ae", border: "#000000", font: "#FFFFFF" },
-        Other: {        background: "#383743", border: "#000000", font: "#FFFFFF" }
+        System: {       background: "#1967D3", border: "#000000", font: "#FFFFFF" },
+        Information: {  background: "#354C5D", border: "#000000", font: "#FFFFFF" },
+        Organization: { background: "#D2D9E4", border: "#000000", font: "#000000" },
+        Service: {      background: "#DBCCA0", border: "#000000", font: "#000000" },
+        Other: {        background: "#D2D9E4", border: "#000000", font: "#FFFFFF" }
     };
 
     // Store each node’s “original” color
@@ -464,9 +464,9 @@ async function init() {
                 ratio = 0.5;
             }
             const { background, border, fontColor } = originalStyles[node.id];
-            const dimBG = "#F8F8F8";
-            const dimBorder = "#EEEEEE";
-            const dimFont = "#EEEEEE";
+            const dimBG = "#FAFAFA";
+            const dimBorder = "#FAFAFA";
+            const dimFont = "#FAFAFA";
             return {
                 id: node.id,
                 color: {

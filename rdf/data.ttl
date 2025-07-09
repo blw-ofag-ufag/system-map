@@ -4592,7 +4592,7 @@ systemmap:SvNriWslaOR5xkdw a termdat:52451 ;
         I dati del registro vengono aggiornati quasi quotidianamente.
         """@it ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
-        prov:informs SX1qchbxSZKWI6Up .
+        systemmap:informs SX1qchbxSZKWI6Up .
 
 systemmap:SZ5quKnfPEEV1CVmE a termdat:52451 ;
     rdfs:label "Person"@de,

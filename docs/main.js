@@ -280,9 +280,8 @@ async function init() {
         nodes: {
             shape: "box",
             widthConstraint: 150,
-            heightConstraint: 50,
+            heightConstraint: 40,
             font: {
-                color: "#000000",
                 face: "Poppins",
                 multi: "html"
             },
@@ -290,13 +289,13 @@ async function init() {
                 node: function(values, id, selected, hovering) {
                     if (hovering) {
                         values.borderWidth = 3;
-                        values.borderColor = "#F04020";
+                        values.borderColor = "#000000";
                     }
                 }
             }
         },
         edges: {
-            width: 1,
+            width: 2,
             selectionWidth: 1,
             font: {
                 face: "Poppins"
@@ -320,8 +319,8 @@ async function init() {
         },
         interaction: {
             hover: true,
-            dragNodes: true,
-            hoverConnectedEdges: true,
+            dragNodes: false,
+            hoverConnectedEdges: false,
             selectConnectedEdges: false,
             zoomView: true,
             dragView: true

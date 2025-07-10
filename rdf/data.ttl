@@ -259,8 +259,8 @@ systemmap:S0qIaLPaYFa3mHse4 a schema:SoftwareApplication,
         systemmap:FMIS ;
     rdfs:label "xFarm"@de ;
     rdfs:comment """
-    IoT-gestützte Betriebsführung, Wetter, Anbauplanung, Analytik.
-    """@de ;
+        IoT-gestützte Betriebsführung, Wetter, Anbauplanung, Analytik.
+        """@de ;
     dcat:landingPage <https://xfarm.ag/> ;
     systemmap:operatedBy systemmap:SmGaThSxn7eIC3JvM .
 
@@ -293,6 +293,17 @@ systemmap:S1nS1Ehy2BJj22GCZ a schema:SoftwareApplication ;
         Analysieren Sie Ihren Bestand, um die Leistung zu optimieren.
         """@de ;
     systemmap:operatedBy zefix:505628 .
+
+systemmap:S1pGaLPaZXa3iFwe4 a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "eFeldkalender"@de ;
+    rdfs:comment """
+        Der eFeldkalender ist eine web- und mobile Applikation zur digitalen Erfassung und Auswertung aller Feldbuchungen und Agrarprozesse für Landwirte.
+        Die modular aufgebaute Software bietet Funktionen wie Parzellen- und Kulturenverzeichnis, Inventar- und Düngebuch sowie diverse Auswertungs- und Druckmöglichkeiten und ist geräteübergreifend jederzeit online verfügbar.
+        Mit verschlüsselter Datenübertragung und Schweizer Hosting gewährleistet der Dienst Datenschutz und Unabhängigkeit, bei jährlicher Lizenzierung ab CHF 125.
+        """@de ;
+    dcat:landingPage <https://feldkalender.ch/> ;
+    systemmap:operatedBy zefix:1419651 .
 
 systemmap:S2Q2s27pTp6oRYHmf a schema:SoftwareApplication ;
     rdfs:label "digiFLUX Kern"@de,
@@ -3075,6 +3086,9 @@ systemmap:Sng7djgBb3dkdoxbU a systemmap:PrivateOrganization ;
 
 zefix:1256441 a systemmap:PrivateOrganization ;
     rdfs:label "mooh Genossenschaft"@de .
+
+zefix:1419651 a systemmap:PrivateOrganization ;
+    rdfs:label "eFeldkalender GmbH"@de .
 
 zefix:165954 a systemmap:PrivateOrganization ;
     rdfs:label "Genossenschaft swissherdbook Zollikofen"@de .

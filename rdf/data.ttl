@@ -255,6 +255,25 @@ systemmap:ShM5kJNFhO8vOAEdK a schema:Organization ;
     rdfs:label "Europäische Kommission"@de,
         "European Commission"@en .
 
+systemmap:S0hwJxyshSNPXbP34 a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "PiNUS21"@de ;
+    rdfs:comment """
+        PiNUS21 is a Swiss cloud-based accounting software for SMEs, associations, and agricultural businesses.
+        Its platform delivers real-time financial results and streamlines digital document processing for receipts and bookings.
+        It facilitates seamless collaboration with your fiduciary and keeps all data securely hosted in a certified Swiss data center.
+        """@de ;
+    systemmap:operatedBy zefix:625989 .
+
+systemmap:S0qIaLPaYFa3mHse4 a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "xFarm"@de ;
+    rdfs:comment """
+        IoT-gestützte Betriebsführung, Wetter, Anbauplanung, Analytik.
+        """@de ;
+    dcat:landingPage <https://xfarm.ag/> ;
+    systemmap:operatedBy systemmap:SmGaThSxn7eIC3JvM .
+
 systemmap:S0tkRCUIU88Xtc2HK a schema:SoftwareApplication ;
     rdfs:label "SheepOnline"@de,
         "SheepOnline"@en,
@@ -275,6 +294,47 @@ systemmap:S0tkRCUIU88Xtc2HK a schema:SoftwareApplication ;
         """@it ;
     dcat:landingPage <https://www.sheeponline.ch/> ;
     systemmap:operatedBy zefix:166248 .
+
+systemmap:S1nS1Ehy2BJj22GCX a schema:SoftwareApplication ;
+    rdfs:label "ISOGOATS"@de ;
+    rdfs:comment """
+        Herdenmanagement-System für Ziegen.
+        Erfassen Sie Informationen und Warnungen für jedes Tier in Ihrem Stall und rufen Sie diese ab.
+        Verbessern Sie die Überwachung Ihrer Tiere: Fortpflanzung, Gesundheit, Leistung.
+        Bereiten Sie Ihre vorgeschriebenen Dokumente für Kontrollen einfach vor.
+        """@de ;
+    systemmap:operatedBy zefix:505628 .
+
+systemmap:S1nS1Ehy2BJj22GCY a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "ISOSHEEP"@de ;
+    rdfs:comment """
+        Herdenmanagement-System für Schafe.
+        Erfassen Sie Informationen und Warnungen für jedes Tier in Ihrem Stall und rufen Sie diese ab.
+        Verbessern Sie die Überwachung Ihrer Tiere: Fortpflanzung, Gesundheit, Leistung.
+        Bereiten Sie Ihre vorgeschriebenen Dokumente für Kontrollen einfach vor.
+        """@de ;
+    systemmap:operatedBy zefix:505628 .
+
+systemmap:S1nS1Ehy2BJj22GCZ a schema:SoftwareApplication ;
+    rdfs:label "Pig'Up"@de ;
+    rdfs:comment """
+        Erfassen Sie die Daten Ihrer Tiere direkt in Ihrem Gebäude.
+        Verfolgen Sie die Gesundheitsereignisse in Ihrer Herde, unabhängig davon, ob es sich um einen Züchter oder Mäster handelt.
+        Analysieren Sie Ihren Bestand, um die Leistung zu optimieren.
+        """@de ;
+    systemmap:operatedBy zefix:505628 .
+
+systemmap:S1pGaLPaZXa3iFwe4 a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "eFeldkalender"@de ;
+    rdfs:comment """
+        Der eFeldkalender ist eine web- und mobile Applikation zur digitalen Erfassung und Auswertung aller Feldbuchungen und Agrarprozesse für Landwirte.
+        Die modular aufgebaute Software bietet Funktionen wie Parzellen- und Kulturenverzeichnis, Inventar- und Düngebuch sowie diverse Auswertungs- und Druckmöglichkeiten und ist geräteübergreifend jederzeit online verfügbar.
+        Mit verschlüsselter Datenübertragung und Schweizer Hosting gewährleistet der Dienst Datenschutz und Unabhängigkeit, bei jährlicher Lizenzierung ab CHF 125.
+        """@de ;
+    dcat:landingPage <https://feldkalender.ch/> ;
+    systemmap:operatedBy zefix:1419651 .
 
 systemmap:S2Q2s27pTp6oRYHmf a schema:SoftwareApplication ;
     rdfs:label "digiFLUX Kern"@de,
@@ -329,6 +389,11 @@ systemmap:S2gC2BTVjYNH05BNf a schema:SoftwareApplication ;
         """@it ;
     dcat:landingPage <https://datapass.ch/software/> ;
     systemmap:operatedBy zefix:1013423 .
+
+systemmap:S2lqf2px29PzK3059 a schema:SoftwareApplication ;
+    rdfs:label "ASP-Risikoampel"@de ;
+    dcat:landingPage <https://www.suisag.com/ch-de/softwares/asp-risikoampel/> ;
+    systemmap:operatedBy zefix:414877 .
 
 systemmap:S3TSqZWni4DBTqkAV a schema:SoftwareApplication ;
     rdfs:label "SmartCow"@de,
@@ -458,6 +523,19 @@ systemmap:S844y5UCUBrKfEXoA a schema:SoftwareApplication ;
     dcat:landingPage <https://scm.biosuisse.ch> ;
     systemmap:operatedBy zefix:427343 .
 
+systemmap:S8RVf2XMzkPzK32ZX a schema:SoftwareApplication ;
+    rdfs:label "AGRO‑TWIN"@de ;
+    systemmap:operatedBy zefix:1663457 .
+
+systemmap:S8RVk8dQzkXzXYSZX a schema:SoftwareApplication ;
+    rdfs:label "AgroOffice"@de ;
+    rdfs:comment """
+        AgroOffice ist eine modulare Buchhaltungssoftware für landwirtschaftliche Betriebe sowie kleine Handwerks- und Dienstleistungsunternehmen.
+        Das System bietet Finanz- und Betriebsbuchhaltung, Faktura, E-Banking-Abgleich und Lohnbuchhaltung in nahtlos integrierten Modulen.
+        Entwickelt von Agro-Office AG (heute Averio AG) seit 1992, legt es Wert auf intuitive Bedienung und praxisgerechte Funktionen.
+        """@de ;
+    systemmap:operatedBy zefix:1663457 .
+
 systemmap:S8awijRdrkgdpXxgz a schema:SoftwareApplication ;
     rdfs:label "Oblon"@de,
         "Oblon"@en,
@@ -482,6 +560,12 @@ systemmap:S8awijRdrkgdpXxgz a schema:SoftwareApplication ;
         """@it ;
     dcat:landingPage <https://oblondata.ch> ;
     systemmap:operatedBy zefix:984853 .
+
+systemmap:S8lqf2UM29PzK3029 a schema:SoftwareApplication ;
+    rdfs:label "Elektronisches Behandlungsjournal"@de ;
+    dcat:landingPage <https://www.suisag.com/ch-de/softwares/ebj/> ;
+    systemmap:abbreviation "EBJ"@de ;
+    systemmap:operatedBy zefix:414877 .
 
 systemmap:S8wfrZtWOCmMSB6sv a schema:SoftwareApplication ;
     rdfs:label "Holstein Vision"@de,
@@ -560,6 +644,10 @@ systemmap:S9SbhGAwWjtvcRIZ a schema:SoftwareApplication ;
     systemmap:hasLegalBasis LwG:art_165_e ;
     systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
 
+systemmap:S9VcxLSoIIwQjlZQ2 a schema:SoftwareApplication ;
+    rdfs:label "FarmX"@de ;
+    dcat:landingPage <https://farmx.ch/home> .
+
 systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
     rdfs:label "Acontrol"@de,
         "Acontrol"@en,
@@ -628,6 +716,10 @@ systemmap:SAPDp3o8XAHPuZnhB a schema:SoftwareApplication ;
     dcat:landingPage <https://www.swissherdbook.ch/de/dienstleistungen/online/redonline> ;
     systemmap:operatedBy zefix:165954 .
 
+systemmap:SAwz5t3SyxjgPiHhX a schema:SoftwareApplication ;
+    rdfs:label "Herdebuch"@de ;
+    systemmap:operatedBy zefix:165954 .
+
 systemmap:SBx5yiPz9Nxy2Wnue a schema:SoftwareApplication ;
     rdfs:label "Mooh Intranet"@de ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -678,6 +770,27 @@ systemmap:SDoGAjF1AJCdFZQQl a schema:SoftwareApplication ;
         """@it ;
     dcat:landingPage <https://www.micarna.ch/de/services/e-direct> ;
     systemmap:operatedBy zefix:130459 .
+
+systemmap:SDwz5T4SyxjgPiHbH a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "Geofolia Feldkalender"@de ;
+    rdfs:comment """
+        Betriebsführung Pflanzenbau, Zucht- und Tierdatenverwaltung.
+        """@de ;
+    dcat:landingPage <https://agroplus.ch/> ;
+    systemmap:operatedBy zefix:505628 .
+
+systemmap:SDwz5T4SyxjgPiHbX a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "Agroplus Feldkalender"@de ;
+    rdfs:comment """
+        Mit dem Feldkalender von AGROPLUS haben Sie jederzeit einen guten Überblick über Ihre gesamten Parzellen.
+        Der Feldkalender enthält eine integrierte Liste der zugelassenen Spritzmittel (geordnet nach Kultur, mit Wirkstoffen und Wartezeiten) und ermöglicht eine praktische Übersicht der Ergebnisse.
+        Nach Wunsch können Sie die im Feldkalender eingetragenen Düngemittel automatisch in Ihre Suisse-Bilanz Berechnung einfliessen lassen.
+        Damit ist der Feldkalender von AGROPLUS ein wichtiger Begleiter für jeden Landwirt.
+        """@de ;
+    dcat:landingPage <https://www.agrarsoftware.ch/agroplus.html> ;
+    systemmap:operatedBy zefix:505628 .
 
 systemmap:SE5DY78J7vgfoiDLj a schema:SoftwareApplication ;
     rdfs:label "Protection Variété"@de,
@@ -901,6 +1014,11 @@ systemmap:SJ15CI0vn3S1JgcOd a schema:SoftwareApplication ;
     dcat:landingPage <https://vetera.net/> ;
     systemmap:operatedBy systemmap:SrG5yvnwax87iuQw8 .
 
+systemmap:SLDduDXvpvEDmqYSJ a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "DeLaval DelPro™"@de ;
+    systemmap:operatedBy zefix:304729 .
+
 systemmap:SLxeXHOfmC6DkBGl a schema:SoftwareApplication ;
     rdfs:label "Zentrale Auswertung von Agrarumweltindikatoren"@de ;
     rdfs:comment """
@@ -1038,6 +1156,17 @@ systemmap:SPWOFHR512FuAc25b a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:SnUxOsahtIQHfvRH9,
         systemmap:Sp5pkmAETRpXrudck,
         systemmap:SyTRdNaA9EH12lhiE .
+
+systemmap:SPe8M0urgsNbKw4ut a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "365FarmNet"@de ;
+    rdfs:comment """
+        365FarmNet ist Europas grosse und mehrfach ausgezeichnete Software für das gesamte Farmmanagement, unabhängig von Grösse und Betriebsart.
+        Die 365FarmNet Plattform ist herstellerunabhängig, betriebszweigübergreifend und deckt über die Einbindung von Partneranwendungen alle für die Betriebsführung notwendigen Funktionen ab:
+        Von der Anbauplanung bis zur Ernte, vom Schlag bis zum Stall, von der Dokumentation bis zur Betriebsanalyse.
+        """@de ;
+    dcat:landingPage <https://www.365farmnet.com/> ;
+    systemmap:operatedBy systemmap:Sng7djgBb3dkdoxbU .
 
 systemmap:SQfl1MHnNpsAj3WP a schema:SoftwareApplication ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
@@ -1472,6 +1601,11 @@ systemmap:SeJ36zAhO3AJJix8t a schema:SoftwareApplication ;
         "SIN-RGVA"@it ;
     systemmap:operatedBy systemmap:SMnIieexlpOQHsGvN .
 
+systemmap:Sflqf2ls29PzK3049 a schema:SoftwareApplication ;
+    rdfs:label "SuisDataManager"@de ;
+    dcat:landingPage <https://www.suisag.com/ch-de/softwares/suisdata-manager/> ;
+    systemmap:operatedBy zefix:414877 .
+
 systemmap:Sfv81BPRW0TSnKhGg a schema:SoftwareApplication ;
     rdfs:label "Troup'O Herdenmanager"@de ;
     rdfs:comment """
@@ -1479,6 +1613,7 @@ systemmap:Sfv81BPRW0TSnKhGg a schema:SoftwareApplication ;
         Die dazugehörige Smartphone-App ermöglicht es, Ereignisse wie Reproduktion, Behandlungen und Tierbewegungen in Echtzeit zu dokumentieren und funktioniert auch ohne Netzwerkabdeckung.
         Dank RFID-Kompatibilität und einer intuitiven Benutzeroberfläche erleichtert Troup'O das Herdenmanagement und steigert die Betriebseffizienz.
         """@de ;
+    dcat:landingPage <https://agrarsoftware.ch/troupo.html> ;
     systemmap:operatedBy zefix:505628 .
 
 systemmap:Sfwx1dZMcl5OXtzb a schema:SoftwareApplication ;
@@ -1503,6 +1638,15 @@ systemmap:SgjZ0efLbuCR2HvN a schema:SoftwareApplication ;
         "PLUTO"@fr,
         "PLUTO"@it ;
     systemmap:operatedBy systemmap:SBLH2G6TSKaqhqk4n .
+
+systemmap:SgsDa3rQzhEAqAUOZ a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "Farmable"@de ;
+    rdfs:comment """
+        Feldbegehungen, Pflanzenschutzplanung, GPS-Dokumentation.
+        """@de ;
+    dcat:landingPage <https://farmable.tech/de/> ;
+    systemmap:operatedBy systemmap:SGWW0nzBJjBsx2QTr .
 
 systemmap:ShWzrtCjaSa8nRJ4N a schema:SoftwareApplication ;
     rdfs:label "amacos"@de,
@@ -2072,6 +2216,15 @@ systemmap:Svbcr8GEkZLb3HmRI a schema:SoftwareApplication ;
         """@it ;
     systemmap:operatedBy zefix:1354082 .
 
+systemmap:SveDUGZvttVw7ga7l a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "smartfarm"@de ;
+    rdfs:comment """
+        Feldkalender, ÖLN-Dokumentation, Stickstoffbilanz, IP-Suisse-kompatibel.
+        """@de ;
+    dcat:landingPage <https://www.smartfarm.ch/> ;
+    systemmap:operatedBy zefix:848149 .
+
 systemmap:SwsptnNDhjz0vIZNu a schema:SoftwareApplication ;
     rdfs:label "Isalait"@de,
         "Isalait"@en,
@@ -2112,6 +2265,10 @@ systemmap:Sxi0p2NlmE7ff8oEC a schema:SoftwareApplication ;
         portale clienti digitale di Granovit AG
         """@it ;
     systemmap:operatedBy zefix:417741 .
+
+systemmap:Sxlqf2df29PzK3039 a schema:SoftwareApplication ;
+    rdfs:label "Reprojournal"@de ;
+    systemmap:operatedBy zefix:414877 .
 
 systemmap:Sy4WeMDNoah4TkAYX a schema:SoftwareApplication ;
     rdfs:label "Nährstoffbilanzrechner"@de ;
@@ -2324,32 +2481,10 @@ systemmap:SAUWzyCpeGZ6vVil a dcat:Dataset ;
     prov:wasDerivedFrom systemmap:SvNriWslaOR5xkdw ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
-systemmap:SEI0Jp1SabxWUiGh0 a systemmap:MasterData ;
-    rdfs:label "TVD-Nummer"@de,
-        "ATDB Number"@en,
-        "Numéro BDTA"@fr,
-        "Numero BDTA"@it ;
-    dcterms:isPartOf systemmap:SAUWzyCpeGZ6vVil ;
-    rdfs:comment """
-        Die TVD-Nummer ist eine Betriebsnummer, die in der Tierverkehrsdatenbank (TVD) für Tierhaltungen in der Schweiz vergeben wird, insbesondere für Rinder, Schweine, Schafe, Ziegen und in Gehegen gehaltenes Wild. 
-        Sie dient der eindeutigen Identifizierung und Rückverfolgbarkeit der Tiere.
-        Die TVD-Nummer ist fix mit der kantonalen Betriebsnummer (KT_ID_B) verknüpft und daher ortsgebunden.
-        """@de,
-        """
-        The ATDB Number is a farm number assigned in the Animal Traffic Database (ATDB) for animal husbandry in Switzerland, in particular for cattle, pigs, sheep, goats, and game kept in enclosures. 
-        It is used to uniquely identify locations with animals relevant to animal diseases and to trace animals. 
-        The ATDB Number is permanently linked to the cantonal farm number (KT_ID_B) and is therefore location-specific.
-        """@en,
-        """
-        Le Numéro BDTA est un numéro d'exploitation attribué dans la banque de données sur le trafic des animaux (BDTA) pour les exploitations animales en Suisse, en particulier pour les bovins, les porcs, les moutons, les chèvres et le gibier en enclos. 
-        Il sert à identifier de manière univoque les sites où se trouvent des animaux sensibles aux épizooties et à assurer la traçabilité des animaux. 
-        Le Numéro BDTA est lié de manière fixe au numéro d'exploitation cantonal (KT_ID_B) et est donc lié à un lieu.
-        """@fr,
-        """
-        Il numero BDTA è un numero di identificazione assegnato nella banca dati sul traffico degli animali (BDTA) agli allevamenti in Svizzera, in particolare per bovini, suini, ovini, caprini e selvaggina in recinti. 
-        Serve a identificare in modo univoco i luoghi in cui si trovano animali soggetti a epizoozie e a garantire la tracciabilità degli animali. 
-        Il numero BDTA è collegato in modo fisso al numero di azienda cantonale (KT_ID_B) ed è quindi legato al luogo.
-        """@it .
+systemmap:SBba3t3SyxjgPiHhX a dcat:Dataset ;
+    rdfs:label "Daten der Geburtsmeldungen"@de ;
+    prov:wasDerivedFrom systemmap:SVXa3t3SyxjgPiLBx ;
+    systemmap:containedIn systemmap:SAwz5t3SyxjgPiHhX .
 
 systemmap:SDmJeWK7EOnMqRLs a dcat:Dataset ;
     rdfs:label "Auflagen zur Anwendung von Pflanzenschutzmitteln"@de,
@@ -2485,6 +2620,10 @@ systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
         Miscele o soluzioni composte da due o più sostanze.
         """@it ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
+
+systemmap:SVXa3t3SyxjgPiLBx a dcat:Dataset ;
+    rdfs:label "Daten der Geburtsmeldungen"@de ;
+    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
 systemmap:SZBHsREMx369FArg a dcat:Dataset ;
     rdfs:label "Dünger"@de ;
@@ -3923,6 +4062,33 @@ systemmap:SDLEUPczkJ9AWZeC a systemmap:MasterData ;
         """@it ;
     systemmap:containedIn systemmap:SuEtT7joC8HXVSfF .
 
+systemmap:SEI0Jp1SabxWUiGh0 a systemmap:MasterData ;
+    rdfs:label "TVD-Nummer"@de,
+        "ATDB Number"@en,
+        "Numéro BDTA"@fr,
+        "Numero BDTA"@it ;
+    dcterms:isPartOf systemmap:SAUWzyCpeGZ6vVil ;
+    rdfs:comment """
+        Die TVD-Nummer ist eine Betriebsnummer, die in der Tierverkehrsdatenbank (TVD) für Tierhaltungen in der Schweiz vergeben wird, insbesondere für Rinder, Schweine, Schafe, Ziegen und in Gehegen gehaltenes Wild. 
+        Sie dient der eindeutigen Identifizierung und Rückverfolgbarkeit der Tiere.
+        Die TVD-Nummer ist fix mit der kantonalen Betriebsnummer (KT_ID_B) verknüpft und daher ortsgebunden.
+        """@de,
+        """
+        The ATDB Number is a farm number assigned in the Animal Traffic Database (ATDB) for animal husbandry in Switzerland, in particular for cattle, pigs, sheep, goats, and game kept in enclosures. 
+        It is used to uniquely identify locations with animals relevant to animal diseases and to trace animals. 
+        The ATDB Number is permanently linked to the cantonal farm number (KT_ID_B) and is therefore location-specific.
+        """@en,
+        """
+        Le Numéro BDTA est un numéro d'exploitation attribué dans la banque de données sur le trafic des animaux (BDTA) pour les exploitations animales en Suisse, en particulier pour les bovins, les porcs, les moutons, les chèvres et le gibier en enclos. 
+        Il sert à identifier de manière univoque les sites où se trouvent des animaux sensibles aux épizooties et à assurer la traçabilité des animaux. 
+        Le Numéro BDTA est lié de manière fixe au numéro d'exploitation cantonal (KT_ID_B) et est donc lié à un lieu.
+        """@fr,
+        """
+        Il numero BDTA è un numero di identificazione assegnato nella banca dati sul traffico degli animali (BDTA) agli allevamenti in Svizzera, in particolare per bovini, suini, ovini, caprini e selvaggina in recinti. 
+        Serve a identificare in modo univoco i luoghi in cui si trovano animali soggetti a epizoozie e a garantire la tracciabilità degli animali. 
+        Il numero BDTA è collegato in modo fisso al numero di azienda cantonale (KT_ID_B) ed è quindi legato al luogo.
+        """@it .
+
 systemmap:Sl5KyePu7JtGiE3V a systemmap:MasterData ;
     rdfs:label "Produktekatalog"@de,
         "Product catalog"@en,
@@ -4007,6 +4173,9 @@ systemmap:SFAcWHo27bji7sVts a systemmap:PrivateOrganization ;
         La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna.
         """@it ;
     owl:sameAs zefix:328631 .
+
+systemmap:SGWW0nzBJjBsx2QTr a systemmap:PrivateOrganization ;
+    rdfs:label "Farmable"@de .
 
 systemmap:SHObqf1JYpt7KGLFS a systemmap:PrivateOrganization ;
     rdfs:label "Identitas AG"@de,
@@ -4112,6 +4281,12 @@ systemmap:SdKC8g9DSflgxKlh4 a systemmap:PrivateOrganization ;
         """@it ;
     dcat:landingPage <https://www.agrovet-strickhof.ch> .
 
+systemmap:SmGaThSxn7eIC3JvM a systemmap:PrivateOrganization ;
+    rdfs:label "xFarm Technologies"@de .
+
+systemmap:Sng7djgBb3dkdoxbU a systemmap:PrivateOrganization ;
+    rdfs:label "365FarmNet GmbH"@de .
+
 systemmap:SrG5yvnwax87iuQw8 a systemmap:PrivateOrganization ;
     rdfs:label "Vetera GmbH"@de ;
     dcat:landingPage <https://vetera.net/> .
@@ -4181,6 +4356,9 @@ zefix:1397589 a systemmap:PrivateOrganization ;
     rdfs:label "bio.inspecta AG"@de ;
     dcat:landingPage <https://www.bio-inspecta.ch/> .
 
+zefix:1419651 a systemmap:PrivateOrganization ;
+    rdfs:label "eFeldkalender GmbH"@de .
+
 zefix:1566606 a systemmap:PrivateOrganization ;
     rdfs:label "smaXtec AG"@de ;
     dcat:landingPage <https://www.smaxtec.com/> .
@@ -4200,6 +4378,9 @@ zefix:165954 a systemmap:PrivateOrganization ;
 zefix:166248 a systemmap:PrivateOrganization ;
     rdfs:label "Schweizerischer Schafzuchtverband Genossenschaft"@de ;
     dcat:landingPage <https://www.sszv.ch/> .
+
+zefix:1663457 a systemmap:PrivateOrganization ;
+    rdfs:label "Averio AG"@de .
 
 zefix:177634 a systemmap:PrivateOrganization ;
     rdfs:label "Silvestri AG"@de ;
@@ -4235,6 +4416,9 @@ zefix:278958 a systemmap:PrivateOrganization ;
         "Coopérative Holstein Switzerland"@fr ;
     dcat:landingPage <https://www.holstein.ch/> .
 
+zefix:304729 a systemmap:PrivateOrganization ;
+    rdfs:label "DeLaval AG"@de .
+
 zefix:330180 a systemmap:PrivateOrganization ;
     rdfs:label "Bison Schweiz AG"@de ;
     systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
@@ -4251,6 +4435,9 @@ zefix:371013 a systemmap:PrivateOrganization ;
     rdfs:label "Ernst Sutter AG"@de ;
     dcat:landingPage <https://www.ernstsutter.ch> ;
     systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+
+zefix:414877 a systemmap:PrivateOrganization ;
+    rdfs:label "Suisag"@de .
 
 zefix:417741 a systemmap:PrivateOrganization ;
     rdfs:label "GRANOVIT AG"@de ;
@@ -4301,6 +4488,9 @@ zefix:57642 a systemmap:PrivateOrganization ;
     rdfs:label "FF Frischfleisch AG"@de ;
     dcat:landingPage <https://frischfleisch.ch/> .
 
+zefix:625989 a systemmap:PrivateOrganization ;
+    rdfs:label "Pinus AG"@de .
+
 zefix:7011 a systemmap:PrivateOrganization ;
     rdfs:label "Anicom AG"@de ;
     dcat:landingPage <https://www.anicom.ch> ;
@@ -4330,6 +4520,9 @@ zefix:787227 a systemmap:PrivateOrganization ;
 zefix:804864 a systemmap:PrivateOrganization ;
     rdfs:label "Qualitas AG"@de ;
     dcat:landingPage <https://www.qualitasag.ch/> .
+
+zefix:848149 a systemmap:PrivateOrganization ;
+    rdfs:label "Agrosolution AG"@de .
 
 zefix:885059 a systemmap:PrivateOrganization ;
     rdfs:label "AGRIDEA Schweizerische Vereinigung für die Entwicklung der Landwirtschaft und des ländlichen Raums"@de,
@@ -4460,6 +4653,34 @@ systemmap:SYlOxcohgWiXr61M a termdat:52451 ;
         "Numero di persone impiegate per genere e orario di lavoro."@it ;
     systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
+systemmap:SZ5quKnfPEEV1CVmE a termdat:52451 ;
+    rdfs:label "Person"@de,
+        "Person"@en,
+        "Personne"@fr,
+        "Persona"@it ;
+    dcterms:isPartOf systemmap:SvNriWslaOR5xkdw ;
+    rdfs:comment """
+        Enthält Registerdaten zu Bewirtschaftern von landwirtschaftlichen Betrieben, wie Kontaktdaten, Sprache, Jahrgang, Beziehungsdaten Person-Person und Beziehungsdaten Person-Betrieb. 
+        Die Person wird über die kantonale Personennummer (KT_ID_P) identifiziert, sie kann eine UID haben. 
+        Die Person hat eine von 17 Rechtsformen, zum Beispiel Natürliche Person, Einfache Gesellschaft, Aktiengesellschaft etc.
+        """@de,
+        """
+        Contains register data on managers of agricultural businesses, such as contact details, language, year of birth, person-to-person relationship data, and person-to-business relationship data. 
+        The person is identified by their cantonal personal identification number (KT_ID_P) and may have a UID. 
+        The person has one of 17 legal forms, for example, natural person, simple partnership, stock corporation, etc.
+        """@en,
+        """
+        Contient des données d'enregistrement sur les exploitants d'entreprises agricoles, telles que leurs coordonnées, leur langue, leur année de naissance, des données sur leurs relations interpersonnelles et entre eux et leur entreprise. 
+        La personne est identifiée par son numéro cantonal (KT_ID_P) et peut avoir un numéro d'identification fiscale (UID). 
+        Elle peut avoir l'une des 17 formes juridiques suivantes: personne physique, société simple, société anonyme, etc.
+        """@fr,
+        """
+        Contiene dati di registro relativi ai gestori di aziende agricole, quali dati di contatto, lingua, anno di nascita, dati relativi alle relazioni interpersonali e dati relativi alle relazioni tra persone e aziende. 
+        La persona è identificata tramite il numero cantonale (KT_ID_P) e può avere un UID. 
+        La persona ha una delle 17 forme giuridiche, ad esempio persona fisica, società semplice, società anonima ecc.
+        """@it ;
+    systemmap:usesMasterData systemmap:SDLEUPczkJ9AWZeC .
+
 systemmap:SakCt52w8AKrsSXi a termdat:52451 ;
     rdfs:label "Informationen der Strukturdatenerhebung"@de,
         "Information from the structural data survey"@en,
@@ -4501,6 +4722,36 @@ systemmap:SfQ6BN8rDjKhTWL4 a termdat:52451 ;
         Dati su ogni importazione di prodotti fitosanitari, compresi UID e nome dell'importatore, data di importazione, quantità importata, denominazione del prodotto (testo libero) e indirizzo di consegna.
         """@it ;
     systemmap:containedIn systemmap:S7u1Bh6qfXUbSDkv .
+
+systemmap:SfkMzUrMhERjP9vhy a termdat:52451 ;
+    rdfs:label "Betriebs- und Gemeinschaftsform"@de,
+        "Operating and community form"@en,
+        "Formes d'exploitations et de communautés"@fr,
+        "Forma operativa e comunitaria"@it ;
+    dcterms:isPartOf systemmap:SvNriWslaOR5xkdw ;
+    rdfs:comment """
+        Enthält Registerdaten zu landwirtschaftlichen Betrieben, wie Betriebsanschrift, Adresse des Betriebsstandortes, landwirtschaftliche Zone, Koordinaten und Beziehungsdaten Betrieb-Betrieb. 
+        Der Betrieb hat eine von 16 Betriebsformen, zum Beispiel Ganzjahresbetrieb, Sömmerungsbetrieb, Betriebsgemeinschaft etc. 
+        Der Betriebsstandort wird über die kantonale Betriebsnummer (KT_ID_B) identifiziert und hat eine BUR-Nummer. 
+        Falls der Betriebsstandort Tierseuchen-relevante Tiere führt, hat er eine TVD-Nummer.
+        """@de,
+        """
+        Contains register data on agricultural holdings, such as the name of the holding, the address of the holding location, the agricultural zone, coordinates, and relationship data between holdings. 
+        The farm has one of 16 farm types, for example, year-round farm, summer grazing farm, farming community, etc. The farm location is identified by the cantonal farm number (KT_ID_B) and has a BUR number. 
+        If the farm location keeps animals that are relevant to animal diseases, it has a ATDB number.
+        """@en,
+        """
+        Contient les données du registre des exploitations agricoles, telles que l'adresse de l'exploitation, l'adresse du site de l'exploitation, la zone agricole, les coordonnées et les données de relation entre exploitations. 
+        L'exploitation a l'un des 16 types d'exploitation, par exemple exploitation à l'année, exploitation d'estivage, communauté d'exploitation, etc. Le site de l'exploitation est identifié par le numéro d'exploitation cantonal (KT_ID_B) et dispose d'un numéro BUR. 
+        Si le site de l'exploitation élève des animaux sensibles à des épizooties, il dispose d'un numéro BDTA.
+        """@fr,
+        """
+        Contiene dati di registro relativi alle aziende agricole, quali indirizzo dell'azienda, indirizzo della sede dell'azienda, zona agricola, coordinate e dati di riferimento azienda-azienda. 
+        L'azienda ha una delle 16 forme di esercizio, ad esempio azienda per tutto l'anno, azienda di estivazione, comunità aziendale ecc. Il luogo di ubicazione dell'azienda è identificato tramite il numero cantonale dell'azienda (KT_ID_B) e ha un numero BUR. 
+        Se il luogo di ubicazione dell'azienda alleva animali soggetti a epizoozie, ha un numero BDTA.
+        """@it ;
+    systemmap:usesMasterData systemmap:S3jZwzvmFKsXRWiI,
+        systemmap:SEI0Jp1SabxWUiGh0 .
 
 systemmap:SkvXyKniPPKwKNRqo a termdat:52451 ;
     rdfs:label "Daten zu Flächen und DZ-Kulturen"@de ;
@@ -4562,12 +4813,12 @@ systemmap:Sutd0KIj3Rf8GlSwq a termdat:52451 ;
         "Coordonnées des transformateurs de lait, telles que les adresses ou les numéros d'identification."@fr,
         "Dati di contatto dei trasformatori di latte, come indirizzi o numeri di identificazione."@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
-                                                                                                                                                                                              
+
 systemmap:SvNriWslaOR5xkdw a termdat:52451 ;
     rdfs:label "Registerdaten"@de,
         "Register data"@en,
         "Données des exploitations"@fr,
-        "Dati sull\'azienda"@it ;
+        "Dati sull'azienda"@it ;
     rdfs:comment """
         Enthält grundlegende Informationen zu landwirtschaftlichen Betrieben und deren Bewirtschaftern. 
         Ein Betrieb kann von einer Natürlichen Person, einer Einfachen Gesellschaft, oder einer Juristischen Person bewirtschaftet werden. 
@@ -4592,65 +4843,7 @@ systemmap:SvNriWslaOR5xkdw a termdat:52451 ;
         I dati del registro vengono aggiornati quasi quotidianamente.
         """@it ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
-        systemmap:informs systemmap:SX1qchbxSZKWI6Up .
-
-systemmap:SZ5quKnfPEEV1CVmE a termdat:52451 ;
-    rdfs:label "Person"@de,
-        "Person"@en,
-        "Personne"@fr,
-        "Persona"@it ;
-    rdfs:comment """
-        Enthält Registerdaten zu Bewirtschaftern von landwirtschaftlichen Betrieben, wie Kontaktdaten, Sprache, Jahrgang, Beziehungsdaten Person-Person und Beziehungsdaten Person-Betrieb. 
-        Die Person wird über die kantonale Personennummer (KT_ID_P) identifiziert, sie kann eine UID haben. 
-        Die Person hat eine von 17 Rechtsformen, zum Beispiel Natürliche Person, Einfache Gesellschaft, Aktiengesellschaft etc.
-        """@de,
-        """
-        Contains register data on managers of agricultural businesses, such as contact details, language, year of birth, person-to-person relationship data, and person-to-business relationship data. 
-        The person is identified by their cantonal personal identification number (KT_ID_P) and may have a UID. 
-        The person has one of 17 legal forms, for example, natural person, simple partnership, stock corporation, etc.
-        """@en,
-        """
-        Contient des données d'enregistrement sur les exploitants d'entreprises agricoles, telles que leurs coordonnées, leur langue, leur année de naissance, des données sur leurs relations interpersonnelles et entre eux et leur entreprise. 
-        La personne est identifiée par son numéro cantonal (KT_ID_P) et peut avoir un numéro d'identification fiscale (UID). 
-        Elle peut avoir l'une des 17 formes juridiques suivantes: personne physique, société simple, société anonyme, etc.
-        """@fr,
-        """
-        Contiene dati di registro relativi ai gestori di aziende agricole, quali dati di contatto, lingua, anno di nascita, dati relativi alle relazioni interpersonali e dati relativi alle relazioni tra persone e aziende. 
-        La persona è identificata tramite il numero cantonale (KT_ID_P) e può avere un UID. 
-        La persona ha una delle 17 forme giuridiche, ad esempio persona fisica, società semplice, società anonima ecc.
-        """@it ;
-    dcterms:isPartOf systemmap:SvNriWslaOR5xkdw ;
-    systemmap:usesMasterData systemmap:SDLEUPczkJ9AWZeC .
-
-systemmap:SfkMzUrMhERjP9vhy a termdat:52451 ;
-    rdfs:label "Betriebs- und Gemeinschaftsform"@de,
-        "Operating and community form"@en,
-        "Formes d'exploitations et de communautés"@fr,
-        "Forma operativa e comunitaria"@it ;
-    rdfs:comment """
-        Enthält Registerdaten zu landwirtschaftlichen Betrieben, wie Betriebsanschrift, Adresse des Betriebsstandortes, landwirtschaftliche Zone, Koordinaten und Beziehungsdaten Betrieb-Betrieb. 
-        Der Betrieb hat eine von 16 Betriebsformen, zum Beispiel Ganzjahresbetrieb, Sömmerungsbetrieb, Betriebsgemeinschaft etc. 
-        Der Betriebsstandort wird über die kantonale Betriebsnummer (KT_ID_B) identifiziert und hat eine BUR-Nummer. 
-        Falls der Betriebsstandort Tierseuchen-relevante Tiere führt, hat er eine TVD-Nummer.
-        """@de,
-        """
-        Contains register data on agricultural holdings, such as the name of the holding, the address of the holding location, the agricultural zone, coordinates, and relationship data between holdings. 
-        The farm has one of 16 farm types, for example, year-round farm, summer grazing farm, farming community, etc. The farm location is identified by the cantonal farm number (KT_ID_B) and has a BUR number. 
-        If the farm location keeps animals that are relevant to animal diseases, it has a ATDB number.
-        """@en,
-        """
-        Contient les données du registre des exploitations agricoles, telles que l'adresse de l'exploitation, l'adresse du site de l'exploitation, la zone agricole, les coordonnées et les données de relation entre exploitations. 
-        L'exploitation a l'un des 16 types d'exploitation, par exemple exploitation à l'année, exploitation d'estivage, communauté d'exploitation, etc. Le site de l'exploitation est identifié par le numéro d'exploitation cantonal (KT_ID_B) et dispose d'un numéro BUR. 
-        Si le site de l'exploitation élève des animaux sensibles à des épizooties, il dispose d'un numéro BDTA.
-        """@fr,
-        """
-        Contiene dati di registro relativi alle aziende agricole, quali indirizzo dell'azienda, indirizzo della sede dell'azienda, zona agricola, coordinate e dati di riferimento azienda-azienda. 
-        L'azienda ha una delle 16 forme di esercizio, ad esempio azienda per tutto l'anno, azienda di estivazione, comunità aziendale ecc. Il luogo di ubicazione dell'azienda è identificato tramite il numero cantonale dell'azienda (KT_ID_B) e ha un numero BUR. 
-        Se il luogo di ubicazione dell'azienda alleva animali soggetti a epizoozie, ha un numero BDTA.
-        """@it ;
-    dcterms:isPartOf systemmap:SvNriWslaOR5xkdw ;
-    systemmap:usesMasterData systemmap:S3jZwzvmFKsXRWiI,
-        systemmap:SEI0Jp1SabxWUiGh0 .                                                                                                                                                                                                      
+    systemmap:informs systemmap:SX1qchbxSZKWI6Up .
 
 systemmap:SDqb9NPoB6n3MZf2 a termdat:52453 ;
     rdfs:label "Kürzungen von Direktzahlungen"@de,
@@ -4711,4 +4904,3 @@ systemmap:SfXioR1gkj8eDuTF a termdat:52453 ;
         "Données sur les mesures administratives et les sanctions pénales"@fr,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
     systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
-

@@ -255,6 +255,16 @@ systemmap:ShM5kJNFhO8vOAEdK a schema:Organization ;
     rdfs:label "Europäische Kommission"@de,
         "European Commission"@en .
 
+systemmap:S0hwJxyshSNPXbP34 a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    rdfs:label "PiNUS21"@de ;
+    rdfs:comment """
+        PiNUS21 is a Swiss cloud-based accounting software for SMEs, associations, and agricultural businesses.
+        Its platform delivers real-time financial results and streamlines digital document processing for receipts and bookings.
+        It facilitates seamless collaboration with your fiduciary and keeps all data securely hosted in a certified Swiss data center.
+        """@de ;
+    systemmap:operatedBy zefix:625989 .
+
 systemmap:S0qIaLPaYFa3mHse4 a schema:SoftwareApplication,
         systemmap:FMIS ;
     rdfs:label "xFarm"@de ;
@@ -312,6 +322,11 @@ systemmap:S2Q2s27pTp6oRYHmf a schema:SoftwareApplication ;
     rdfs:comment """
         digiFLUX Core ist die zentrale Softwareanwendung des Gesamtsystems digiFLUX, welche das Erfassen, Ändern, Einsehen etc. von Produktelieferungen und -anwendungen erlaubt.
         """@de .
+
+systemmap:S2lqf2px29PzK3059 a schema:SoftwareApplication ;
+    rdfs:label "ASP-Risikoampel"@de ;
+    dcat:landingPage <https://www.suisag.com/ch-de/softwares/asp-risikoampel/> ;
+    systemmap:operatedBy zefix:414877 .
 
 systemmap:S4gV9U3dvmENkSnj a schema:SoftwareApplication ;
     rdfs:label "Informationssystem für meldepflichtige Krankheiten"@de,
@@ -374,6 +389,10 @@ systemmap:S7u1Bh6qfXUbSDkv a schema:SoftwareApplication ;
         "e-dec"@it ;
     systemmap:operatedBy systemmap:SFKPRpdGa5UISiJlx .
 
+systemmap:S8RVf2XMzkPzK32ZX a schema:SoftwareApplication ;
+    rdfs:label "AGRO‑TWIN"@de ;
+    systemmap:operatedBy zefix:1663457 .
+
 systemmap:S8RVk8dQzkXzXYSZX a schema:SoftwareApplication ;
     rdfs:label "AgroOffice"@de ;
     rdfs:comment """
@@ -382,6 +401,12 @@ systemmap:S8RVk8dQzkXzXYSZX a schema:SoftwareApplication ;
         Entwickelt von Agro-Office AG (heute Averio AG) seit 1992, legt es Wert auf intuitive Bedienung und praxisgerechte Funktionen.
         """@de ;
     systemmap:operatedBy zefix:1663457 .
+
+systemmap:S8lqf2UM29PzK3029 a schema:SoftwareApplication ;
+    rdfs:label "Elektronisches Behandlungsjournal"@de ;
+    dcat:landingPage <https://www.suisag.com/ch-de/softwares/ebj/> ;
+    systemmap:abbreviation "EBJ"@de ;
+    systemmap:operatedBy zefix:414877 .
 
 systemmap:S9SbhGAwWjtvcRIZ a schema:SoftwareApplication ;
     rdfs:label "Geografisches Informationssystem"@de,
@@ -418,6 +443,10 @@ systemmap:S9SbhGAwWjtvcRIZ a schema:SoftwareApplication ;
         "GIS-BLW"@it ;
     systemmap:hasLegalBasis LwG:art_165_e ;
     systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
+
+systemmap:S9VcxLSoIIwQjlZQ2 a schema:SoftwareApplication ;
+    rdfs:label "FarmX"@de ;
+    dcat:landingPage <https://farmx.ch/home> .
 
 systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
     rdfs:label "Acontrol"@de,
@@ -881,6 +910,11 @@ systemmap:SeJ36zAhO3AJJix8t a schema:SoftwareApplication ;
         "SIN-RGVA"@it ;
     systemmap:operatedBy systemmap:SMnIieexlpOQHsGvN .
 
+systemmap:Sflqf2ls29PzK3049 a schema:SoftwareApplication ;
+    rdfs:label "SuisDataManager"@de ;
+    dcat:landingPage <https://www.suisag.com/ch-de/softwares/suisdata-manager/> ;
+    systemmap:operatedBy zefix:414877 .
+
 systemmap:Sfv81BPRW0TSnKhGg a schema:SoftwareApplication ;
     rdfs:label "Troup'O Herdenmanager"@de ;
     rdfs:comment """
@@ -1223,6 +1257,10 @@ systemmap:SveDUGZvttVw7ga7l a schema:SoftwareApplication,
         """@de ;
     dcat:landingPage <https://www.smartfarm.ch/> ;
     systemmap:operatedBy zefix:848149 .
+
+systemmap:Sxlqf2df29PzK3039 a schema:SoftwareApplication ;
+    rdfs:label "Reprojournal"@de ;
+    systemmap:operatedBy zefix:414877 .
 
 systemmap:Sy4WeMDNoah4TkAYX a schema:SoftwareApplication ;
     rdfs:label "Nährstoffbilanzrechner"@de ;
@@ -3110,6 +3148,9 @@ zefix:371013 a systemmap:PrivateOrganization ;
     rdfs:label "Ernst Sutter AG"@de ;
     systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
 
+zefix:414877 a systemmap:PrivateOrganization ;
+    rdfs:label "Suisag"@de .
+
 zefix:432768 a systemmap:PrivateOrganization ;
     rdfs:label "TRAVECO Transporte AG"@de ;
     systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
@@ -3120,6 +3161,9 @@ zefix:446080 a systemmap:PrivateOrganization ;
 
 zefix:505628 a systemmap:PrivateOrganization ;
     rdfs:label "Isagri GmbH"@de .
+
+zefix:625989 a systemmap:PrivateOrganization ;
+    rdfs:label "Pinus AG"@de .
 
 zefix:7011 a systemmap:PrivateOrganization ;
     rdfs:label "Anicom AG"@de ;

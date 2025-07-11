@@ -264,6 +264,27 @@ systemmap:CantonalVeterinaryService a owl:Class ;
         """@it ;
     rdfs:subClassOf systemmap:CantonalOrganization .
 
+systemmap:FMIS a owl:Class ;
+    rdfs:label "Farm-Management-Informationssystem"@de,
+        "Farm Management Information System"@en,
+        "Système d'information pour la gestion agricole"@fr,
+        "Sistema informativo per la gestione agricola"@it ;
+    rdfs:comment """
+        Ein FMIS ist ein System zur Erfassung, Verarbeitung, Speicherung und Verbreitung landwirtschaftlicher Daten zur Unterstützung betrieblicher Entscheidungen.
+        """@de,
+        """
+        A Farm Management Information System is a system for collecting, processing, storing and disseminating farm-related data to support operational decision-making.
+        """@en,
+        """
+        Un système d'information pour la gestion agricole est un système pour collecter, traiter, stocker et diffuser des données agricoles afin de soutenir la prise de décision opérationnelle.
+        """@fr,
+        """
+        Un sistema informativo per la gestione agricola è un sistema per raccogliere, elaborare, memorizzare e diffondere dati agricoli a supporto delle decisioni operative.
+        """@it ;
+    rdfs:subClassOf schema:SoftwareApplication ;
+    systemmap:abbreviation "FMIS"@de,
+        "FMIS"@en .
+
 systemmap:FederalOrganization a owl:Class ;
     rdfs:label "Organisation des Bundes"@de,
         "Federal organization"@en,

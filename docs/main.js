@@ -252,12 +252,13 @@ async function init() {
         // add dashed styling and increase its length.
         if (row.id.value === "http://www.w3.org/ns/prov#wasDerivedFrom" ||
             row.id.value === "http://purl.org/ontology/service#consumes" ||
+            row.id.value === "https://agriculture.ld.admin.ch/system-map/owns" ||
             row.id.value === "https://agriculture.ld.admin.ch/system-map/usesMasterData" ||
             row.id.value === "https://agriculture.ld.admin.ch/system-map/access" ||
             row.id.value === "https://agriculture.ld.admin.ch/system-map/references" ) {
 
-            edge.dashes = [3, 7]; // Dash pattern: 5px dash, 5px gap
-            edge.length = 300;    // Increase edge length to allow more spacing
+            edge.dashes = [2, 8]; // Dash pattern: 5px dash, 5px gap
+            edge.length = 500;    // Increase edge length to allow more spacing
         }
         
         return edge;

@@ -2368,7 +2368,9 @@ systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
         "Market data includes prices, quantities, production systems."@en,
         "Les données de marché comprennent les prix, les quantités, les systèmes de production."@fr,
         "I dati di mercato comprendono prezzi, quantità e sistemi di produzione."@it ;
+    prov:wasDerivedFrom systemmap:SKoClBiquflDf7yi6 ;
     systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
+    systemmap:informs systemmap:SYqYq3UTUnZHmyFRD,
     systemmap:informs systemmap:SRT6X0n1ML8vwHUW .
 
 systemmap:S4BoMPavXD5gIObm a dcat:Dataset ;
@@ -4933,6 +4935,3 @@ systemmap:SfXioR1gkj8eDuTF a termdat:52453 ;
         "Données sur les mesures administratives et les sanctions pénales"@fr,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
     systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
-
-zefix:1373020 rdfs:label "FARMX GmbH"@de .
-

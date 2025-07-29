@@ -2371,7 +2371,15 @@ systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
     prov:wasDerivedFrom systemmap:SKoClBiquflDf7yi6 ;
     systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
     systemmap:informs systemmap:SYqYq3UTUnZHmyFRD,
-    systemmap:informs systemmap:SRT6X0n1ML8vwHUW .
+                      systemmap:SRT6X0n1ML8vwHUW ;
+    dcterms:hasPart systemmap:SzJ7aOICsI2KD9iOt,
+                    systemmap:SpT5dE2PIEfeWKafV,
+                    systemmap:SvAr93iMz2fj4HZBK,
+                    systemmap:SLJMFAZ6GNdFvfb2L,
+                    systemmap:SSyCUWt1u4bzJ4liA,
+                    systemmap:SkcU0PDb6fucIKa9k,
+                    systemmap:S4ZuIO9s81WMS2bKB,
+                    systemmap:SisV9d3pviAFO8vTK .
 
 systemmap:S4BoMPavXD5gIObm a dcat:Dataset ;
     rdfs:label "Tieridentifikationsdaten"@de,
@@ -4935,3 +4943,74 @@ systemmap:SfXioR1gkj8eDuTF a termdat:52453 ;
         "Données sur les mesures administratives et les sanctions pénales"@fr,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
     systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
+
+systemmap:SKoClBiquflDf7yi6 a dcat:Dataset ;
+    rdfs:label "Rohdaten der Datenlieferanten"@de, 
+               "Raw data from data suppliers"@en,
+               "Données brutes des fournisseurs de données"@fr,
+               "Dati grezzi dei fornitori di dati"@it ;
+    rdfs:comment """Heterogene Rohdaten von ca. 400 Datenlieferanten in Formaten wie Excel, CSV, und PDF, die als Input für MARS III dienen."""@de,
+                 """Heterogeneous raw data from approx. 400 data suppliers in formats like Excel, CSV, and PDF, which serve as the input for MARS III."""@en,
+                 """Données brutes hétérogènes d'environ 400 fournisseurs de données dans des formats tels que Excel, CSV, et PDF, servant d'entrée pour MARS III."""@fr,
+                 """Dati grezzi eterogenei da circa 400 fornitori di dati in formati come Excel, CSV, e PDF, che servono come input per MARS III."""@it ;
+    # This abstract dataset is logically tied to the MARS III system, which processes it.
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY .
+
+systemmap:SYqYq3UTUnZHmyFRD a dcat:Dataset ;
+    rdfs:label "ASTAT Analysedaten"@de, 
+               "ASTAT Analysis Data"@en,
+               "Données d'analyse ASTAT"@fr,
+               "Dati di analisi ASTAT"@it ;
+    rdfs:comment """Für Analysezwecke im BI-System ASTAT aufbereitete Marktdaten aus MARS III."""@de,
+                 """Market data from MARS III prepared for analysis purposes in the ASTAT BI system."""@en,
+                 """Données de marché de MARS III préparées à des fins d'analyse dans le système BI ASTAT."""@fr,
+                 """Dati di mercato da MARS III preparati per scopi di analisi nel sistema BI ASTAT."""@it ;
+    systemmap:containedIn systemmap:ShZO092di7cBnOm7F .
+
+    systemmap:SzJ7aOICsI2KD9iOt a dcat:Dataset ;
+    rdfs:label "Marktdaten Milch und Milchprodukte"@de, "Market Data Milk and Milk Products"@en, "Données de marché Lait et produits laitiers"@fr, "Dati di mercato Latte e prodotti lattiero-caseari"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/milch-und-milchprodukte> .
+
+systemmap:SpT5dE2PIEfeWKafV a dcat:Dataset ;
+    rdfs:label "Marktdaten Fleisch, Fleisch- und Wurstwaren"@de, "Market Data Meat, Meat and Sausage Products"@en, "Données de marché Viande, produits carnés et charcuterie"@fr, "Dati di mercato Carne, prodotti a base di carne e insaccati"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/fleisch> .
+
+systemmap:SvAr93iMz2fj4HZBK a dcat:Dataset ;
+    rdfs:label "Marktdaten Eier"@de, "Market Data Eggs"@en, "Données de marché Œufs"@fr, "Dati di mercato Uova"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/eier> .
+
+systemmap:SLJMFAZ6GNdFvfb2L a dcat:Dataset ;
+    rdfs:label "Marktdaten Früchte und Gemüse"@de, "Market Data Fruits and Vegetables"@en, "Données de marché Fruits et légumes"@fr, "Dati di mercato Frutta e verdura"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/fruchte-gemuese> .
+
+systemmap:SSyCUWt1u4bzJ4liA a dcat:Dataset ;
+    rdfs:label "Marktdaten Kartoffeln und Kartoffelprodukte"@de, "Market Data Potatoes and Potato Products"@en, "Données de marché Pommes de terre et produits à base de pommes de terre"@fr, "Dati di mercato Patate e prodotti a base di patate"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/kartoffeln> .
+
+systemmap:SkcU0PDb6fucIKa9k a dcat:Dataset ;
+    rdfs:label "Marktdaten Brotgetreide, Mehl und Backwaren"@de, "Market Data Bread Cereals, Flour and Baked Goods"@en, "Données de marché Céréales panifiables, farine et produits de boulangerie"@fr, "Dati di mercato Cereali panificabili, farina e prodotti da forno"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/getreide> .
+
+systemmap:S4ZuIO9s81WMS2bKB a dcat:Dataset ;
+    rdfs:label "Marktdaten Futtermittel"@de, "Market Data Animal Feed"@en, "Données de marché Aliments pour animaux"@fr, "Dati di mercato Mangimi"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/futtermittel> .
+
+systemmap:SisV9d3pviAFO8vTK a dcat:Dataset ;
+    rdfs:label "Marktdaten Ölsaaten und Eiweisspflanzen"@de, "Market Data Oilseeds and Protein Crops"@en, "Données de marché Oléagineux et protéagineux"@fr, "Dati di mercato Semi oleosi e piante proteiche"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/olsaaten> .

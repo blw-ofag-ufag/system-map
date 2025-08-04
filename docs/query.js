@@ -72,17 +72,26 @@ WHERE {
     ?id a ?group .
     VALUES ?group { ${organization} ${system} ${information} ${service} }
 
-    OPTIONAL { ?id rdfs:label ?l_user . FILTER( LANG(?l_user) = "${lang}" ) }
-    OPTIONAL { ?id rdfs:label ?l_en   . FILTER( LANG(?l_en)  = "en" ) }
-    BIND( COALESCE(?l_user, ?l_en, "") AS ?displayLabel )
+    OPTIONAL { ?id schema:name ?l_user . FILTER( LANG(?l_user) = "${lang}" ) }
+    OPTIONAL { ?id schema:name ?l_en   . FILTER( LANG(?l_en)  = "en" ) }
+    OPTIONAL { ?id schema:name ?l_de   . FILTER( LANG(?l_de)  = "de" ) }
+    OPTIONAL { ?id schema:name ?l_fr   . FILTER( LANG(?l_fr)  = "fr" ) }
+    OPTIONAL { ?id schema:name ?l_it   . FILTER( LANG(?l_it)  = "it" ) }
+    BIND( COALESCE(?l_user, ?l_en, ?l_de, ?l_fr, ?l_it, "") AS ?displayLabel )
 
-    OPTIONAL { ?id rdfs:comment ?c_user . FILTER( LANG(?c_user) = "${lang}" ) }
-    OPTIONAL { ?id rdfs:comment ?c_en   . FILTER( LANG(?c_en)  = "en" ) }
-    BIND( COALESCE(?c_user, ?c_en, "") AS ?comment )
+    OPTIONAL { ?id schema:description ?c_user . FILTER( LANG(?c_user) = "${lang}" ) }
+    OPTIONAL { ?id schema:description ?c_en   . FILTER( LANG(?c_en)  = "en" ) }
+    OPTIONAL { ?id schema:description ?c_de   . FILTER( LANG(?c_de)  = "de" ) }
+    OPTIONAL { ?id schema:description ?c_fr   . FILTER( LANG(?c_fr)  = "fr" ) }
+    OPTIONAL { ?id schema:description ?c_it   . FILTER( LANG(?c_it)  = "it" ) }
+    BIND( COALESCE(?c_user, ?c_en, ?c_de, ?c_fr, ?c_it, "") AS ?comment )
 
     OPTIONAL { ?id systemmap:abbreviation ?a_user . FILTER( LANG(?a_user) = "${lang}" ) }
     OPTIONAL { ?id systemmap:abbreviation ?a_en . FILTER( LANG(?a_en) = "en" ) }
-    BIND( COALESCE(?a_user, ?a_en, "") AS ?abbreviation )
+    OPTIONAL { ?id systemmap:abbreviation ?a_de . FILTER( LANG(?a_de) = "de" ) }
+    OPTIONAL { ?id systemmap:abbreviation ?a_fr . FILTER( LANG(?a_fr) = "fr" ) }
+    OPTIONAL { ?id systemmap:abbreviation ?a_it . FILTER( LANG(?a_it) = "it" ) }
+    BIND( COALESCE(?a_user, ?a_en, ?a_de, ?a_fr, ?a_it, "") AS ?abbreviation )
   }
 }
 `;
@@ -105,13 +114,19 @@ WHERE {
       ${predicateValues}
     }
 
-    OPTIONAL { ?property rdfs:label ?l_user . FILTER(LANG(?l_user) = "${lang}") }
-    OPTIONAL { ?property rdfs:label ?l_en . FILTER(LANG(?l_en) = "en") }
-    BIND(COALESCE(?l_user, ?l_en, "") AS ?label)
+    OPTIONAL { ?property schema:name ?l_user . FILTER(LANG(?l_user) = "${lang}") }
+    OPTIONAL { ?property schema:name ?l_en . FILTER(LANG(?l_en) = "en") }
+    OPTIONAL { ?property schema:name ?l_de . FILTER(LANG(?l_de) = "de") }
+    OPTIONAL { ?property schema:name ?l_fr . FILTER(LANG(?l_fr) = "fr") }
+    OPTIONAL { ?property schema:name ?l_it . FILTER(LANG(?l_it) = "it") }
+    BIND(COALESCE(?l_user, ?l_en, ?l_de, ?l_fr, ?l_it, "") AS ?label)
 
-    OPTIONAL { ?property rdfs:comment ?c_user . FILTER(LANG(?c_user) = "${lang}") }
-    OPTIONAL { ?property rdfs:comment ?c_en . FILTER(LANG(?c_en) = "en") }
-    BIND(COALESCE(?c_user, ?c_en, "") AS ?comment)
+    OPTIONAL { ?property schema:description ?c_user . FILTER(LANG(?c_user) = "${lang}") }
+    OPTIONAL { ?property schema:description ?c_en . FILTER(LANG(?c_en) = "en") }
+    OPTIONAL { ?property schema:description ?c_de . FILTER(LANG(?c_de) = "de") }
+    OPTIONAL { ?property schema:description ?c_fr . FILTER(LANG(?c_fr) = "fr") }
+    OPTIONAL { ?property schema:description ?c_it . FILTER(LANG(?c_it) = "it") }
+    BIND(COALESCE(?c_user, ?c_en, ?c_de, ?c_fr, ?c_it, "") AS ?comment)
   }
 }
 `;
@@ -127,13 +142,19 @@ window.CLASS_QUERY = `
     GRAPH <https://lindas.admin.ch/foag/system-map> {
       VALUES ?iri { schema:Organization schema:SoftwareApplication dcat:Dataset service:Service }
       
-      OPTIONAL { ?iri rdfs:label ?l_user . FILTER(LANG(?l_user) = "${lang}") }
-      OPTIONAL { ?iri rdfs:label ?l_en . FILTER(LANG(?l_en) = "en") }
-      BIND(COALESCE(?l_user, ?l_en, "") AS ?label)
+      OPTIONAL { ?iri schema:name ?l_user . FILTER(LANG(?l_user) = "${lang}") }
+      OPTIONAL { ?iri schema:name ?l_en . FILTER(LANG(?l_en) = "en") }
+      OPTIONAL { ?iri schema:name ?l_de . FILTER(LANG(?l_de) = "de") }
+      OPTIONAL { ?iri schema:name ?l_fr . FILTER(LANG(?l_fr) = "fr") }
+      OPTIONAL { ?iri schema:name ?l_it . FILTER(LANG(?l_it) = "it") }
+      BIND(COALESCE(?l_user, ?l_en, ?l_de, ?l_fr, ?l_it, "") AS ?label)
 
-      OPTIONAL { ?iri rdfs:comment ?c_user . FILTER(LANG(?c_user) = "${lang}") }
-      OPTIONAL { ?iri rdfs:comment ?c_en . FILTER(LANG(?c_en) = "en") }
-      BIND(COALESCE(?c_user, ?c_en, "") AS ?comment)
+      OPTIONAL { ?iri schema:description ?c_user . FILTER(LANG(?c_user) = "${lang}") }
+      OPTIONAL { ?iri schema:description ?c_en . FILTER(LANG(?c_en) = "en") }
+      OPTIONAL { ?iri schema:description ?c_de . FILTER(LANG(?c_de) = "de") }
+      OPTIONAL { ?iri schema:description ?c_fr . FILTER(LANG(?c_fr) = "fr") }
+      OPTIONAL { ?iri schema:description ?c_it . FILTER(LANG(?c_it) = "it") }
+      BIND(COALESCE(?c_user, ?c_en, ?c_de, ?c_fr, ?c_it, "") AS ?comment)
     }
   }
 `;
@@ -155,13 +176,19 @@ window.PREDICATES_QUERY = `
         systemmap:owns systemmap:contains systemmap:usesMasterData schema:memberOf
         service:provides service:consumes systemmap:access systemmap:references
       }
-      OPTIONAL { ?iri rdfs:label ?l_user . FILTER(LANG(?l_user) = "${lang}") }
-      OPTIONAL { ?iri rdfs:label ?l_en . FILTER(LANG(?l_en) = "en") }
-      BIND(COALESCE(?l_user, ?l_en, "") AS ?label)
+      OPTIONAL { ?iri schema:name ?l_user . FILTER(LANG(?l_user) = "${lang}") }
+      OPTIONAL { ?iri schema:name ?l_en . FILTER(LANG(?l_en) = "en") }
+      OPTIONAL { ?iri schema:name ?l_de . FILTER(LANG(?l_de) = "de") }
+      OPTIONAL { ?iri schema:name ?l_fr . FILTER(LANG(?l_fr) = "fr") }
+      OPTIONAL { ?iri schema:name ?l_it . FILTER(LANG(?l_it) = "it") }
+      BIND(COALESCE(?l_user, ?l_en, ?l_de, ?l_fr, ?l_it, "") AS ?label)
 
-      OPTIONAL { ?iri rdfs:comment ?c_user . FILTER(LANG(?c_user) = "${lang}") }
-      OPTIONAL { ?iri rdfs:comment ?c_en . FILTER(LANG(?c_en) = "en") }
-      BIND(COALESCE(?c_user, ?c_en, "") AS ?comment)
+      OPTIONAL { ?iri schema:description ?c_user . FILTER(LANG(?c_user) = "${lang}") }
+      OPTIONAL { ?iri schema:description ?c_en . FILTER(LANG(?c_en) = "en") }
+      OPTIONAL { ?iri schema:description ?c_de . FILTER(LANG(?c_de) = "de") }
+      OPTIONAL { ?iri schema:description ?c_fr . FILTER(LANG(?c_fr) = "fr") }
+      OPTIONAL { ?iri schema:description ?c_it . FILTER(LANG(?c_it) = "it") }
+      BIND(COALESCE(?c_user, ?c_en, ?c_de, ?c_fr, ?c_it, "") AS ?comment)
     }
   }
 `;
@@ -172,8 +199,13 @@ PREFIX schema: <http://schema.org/>
 SELECT ?title
 WHERE {
   GRAPH <https://lindas.admin.ch/foag/system-map> {
-    <https://agriculture.ld.admin.ch/system-map/metadata> schema:name ?title .
-    FILTER(LANG(?title)="${lang}")
+    BIND(<https://agriculture.ld.admin.ch/system-map/metadata> as ?id)
+    OPTIONAL { ?id schema:name ?l_user . FILTER(LANG(?l_user) = "${lang}") }
+    OPTIONAL { ?id schema:name ?l_en . FILTER(LANG(?l_en) = "en") }
+    OPTIONAL { ?id schema:name ?l_de . FILTER(LANG(?l_de) = "de") }
+    OPTIONAL { ?id schema:name ?l_fr . FILTER(LANG(?l_fr) = "fr") }
+    OPTIONAL { ?id schema:name ?l_it . FILTER(LANG(?l_it) = "it") }
+    BIND(COALESCE(?l_user, ?l_en, ?l_de, ?l_fr, ?l_it, "System Map") AS ?title)
   }
 }
 `;

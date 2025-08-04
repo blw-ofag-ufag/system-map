@@ -100,10 +100,10 @@ html, body {
     padding-right: 15px;
 }
 .settings-column:first-child {
-    flex: 4;
+    flex: 1;
 }
 .settings-column:last-child {
-    flex: 5;
+    flex: 1;
 }
 .settings-section {
     margin-bottom: 15px;

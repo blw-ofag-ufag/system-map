@@ -50,9 +50,10 @@ function getParam(name) {
 }
 
 /**
- * Helper func to set URL params and redirect.
+ * Helper func to set URL params and trigger a page reload.
+ * Used for settings that require refetching data.
  */
-function setParamsRedirect(paramsObj) {
+function setParamsAndReload(paramsObj) {
     const params = new URLSearchParams(window.location.search);
     for (const [key, value] of Object.entries(paramsObj)) {
         (value === null || value === undefined || value === true) ? params.delete(key) : params.set(key, value);
@@ -60,6 +61,23 @@ function setParamsRedirect(paramsObj) {
     if (params.get('infopanel') === 'true') params.delete('infopanel');
 
     window.location.href = `${window.location.pathname}?${params.toString()}`;
+}
+
+/**
+ * Helper func to set URL params without reloading the page.
+ * Used for interactive filtering like search.
+ */
+function setParamsWithoutReload(paramsObj) {
+    const params = new URLSearchParams(window.location.search);
+    for (const [key, value] of Object.entries(paramsObj)) {
+        if (value === null || value === undefined || value === '') {
+            params.delete(key);
+        } else {
+            params.set(key, value);
+        }
+    }
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    history.pushState(null, '', newUrl);
 }
 
 /**
@@ -86,6 +104,33 @@ const groupColors = {
     Service:      { background: "#DBCCA0", border: "#000000", font: { color: "#000000" } },
     Other:        { background: "#D2D9E4", border: "#000000", font: { color: "#FFFFFF" } }
 };
+
+const SEARCH_HIGHLIGHT_COLOR = {
+    background: "#ffa551",
+    border: "#ffa551",
+    font: { color: "#000000" }
+};
+
+/**
+ * Configures the search box and its event listeners.
+ * @param {function} onSearchChange - Callback function to execute when the search term changes.
+ */
+function setupSearchBox(onSearchChange) {
+    const searchBox = document.getElementById('search-box');
+    if (!searchBox) return;
+
+    searchBox.value = getParam('search') || '';
+
+    let searchTimeout;
+    searchBox.addEventListener('keyup', (e) => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            const searchTerm = e.target.value.trim();
+            setParamsWithoutReload({ search: searchTerm || null });
+            onSearchChange();
+        }, 300); // Update after 300ms of inactivity
+    });
+}
 
 /**
  * Main application initialization.
@@ -121,14 +166,10 @@ async function init() {
             : `<b>${shortenLabel(label, abbreviation)}</b>`;
         
         const groupName = mapClassIriToGroup(row.group.value);
-        const style = groupColors[groupName] || groupColors.Other;
-        
         return {
           id: row.id.value,
           label: htmlLabel,
           group: groupName,
-          color: { background: style.background, border: style.border },
-          font: { color: style.font.color, multi: 'html', face: 'Poppins' },
           data: { iri: row.id.value, fullLabel: label, abbreviation, comment: row.comment.value, isFallback: labelLang && labelLang !== currentLang, labelLang }
         };
     });
@@ -157,7 +198,14 @@ async function init() {
             shape: "box", widthConstraint: 150, heightConstraint: 40,
             chosen: { node: (v, i, s, h) => { if (h) { v.borderWidth = 3; v.borderColor = "#000"; } } }
         },
-        edges: { width: 2, selectionWidth: 1, font: { face: "Poppins" }, chosen: false, arrows: { to: { enabled: true } } },
+        edges: {
+            width: 2,
+            selectionWidth: 1,
+            font: { face: "Poppins" },
+            chosen: false,
+            arrows: { to: { enabled: true } },
+            color: { inherit: false } // Prevents edges from inheriting node colors
+        },
         groups: groupColors,
         interaction: { hover: true, dragNodes: false, hoverConnectedEdges: false, zoomView: true, dragView: true },
         physics: { enabled: true, barnesHut: { gravitationalConstant: -8000, centralGravity: 0.1, springLength: 200, springConstant: 0.1 }, stabilization: { iterations: 100 } }
@@ -172,56 +220,83 @@ async function init() {
     
     const infoPanel = document.getElementById("infoPanel");
 
+    /**
+     * Central function to apply all dynamic styling (dimming, search) to nodes.
+     */
+    const applyAllStyles = () => {
+        const searchTerm = (getParam("search") || "").toLowerCase();
+        const distMap = pinnedNodeId ? getDistancesUpToTwoHops(network, pinnedNodeId) : null;
+
+        const nodeUpdates = nodes.map(n => {
+            const originalStyle = originalStyles[n.id];
+            let newColor = originalStyle.background;
+            let newBorder = originalStyle.border;
+            let newFont = originalStyle.fontColor;
+
+            // Apply dimming if a node is pinned
+            if (distMap) {
+                const dist = distMap[n.id];
+                const ratio = (dist === 0 || dist === 1) ? 0 : (dist === 2 ? 0.5 : 1);
+                newColor = blendHexColors(originalStyle.background, "#FAFAFA", ratio);
+                newBorder = blendHexColors(originalStyle.border, "#FAFAFA", ratio);
+                newFont = blendHexColors(originalStyle.fontColor, "#FAFAFA", ratio);
+            }
+
+            // Apply search highlight over the top
+            if (searchTerm) {
+                const isMatch = (
+                    (n.data.fullLabel || '').toLowerCase().includes(searchTerm) ||
+                    (n.data.comment || '').toLowerCase().includes(searchTerm) ||
+                    (n.data.abbreviation || '').toLowerCase().includes(searchTerm)
+                );
+                if (isMatch) {
+                    newColor = SEARCH_HIGHLIGHT_COLOR.background;
+                    newBorder = SEARCH_HIGHLIGHT_COLOR.border;
+                    newFont = SEARCH_HIGHLIGHT_COLOR.font.color;
+                }
+            }
+
+            return {
+                id: n.id,
+                color: { background: newColor, border: newBorder },
+                font: { color: newFont, multi: 'html', face: 'Poppins' }
+            };
+        });
+        
+        nodesDataset.update(nodeUpdates);
+    };
+    
+    // Setup search box and apply initial styles (e.g., from URL on page load)
+    setupSearchBox(applyAllStyles);
+    applyAllStyles();
+
     const showInfo = (html) => { infoPanel.innerHTML = html; infoPanel.classList.remove("hidden"); };
     const hideInfo = () => { infoPanel.classList.add("hidden"); infoPanel.innerHTML = ""; infoPanel.classList.remove("fixed"); };
 
     network.on("click", params => {
         pinnedNodeId = params.nodes[0] || null;
         pinnedEdgeId = params.edges[0] || null;
+
         if (pinnedNodeId) {
             pinnedEdgeId = null; 
             showInfo(getNodeInfoHtml(nodesDataset.get(pinnedNodeId).data));
-            updateDimmingEffect(pinnedNodeId);
         } else if (pinnedEdgeId) {
             pinnedNodeId = null;
             showInfo(getEdgeInfoHtml(edgesDataset.get(pinnedEdgeId)));
-            resetAllStyles();
         } else {
             network.unselectAll();
-            resetAllStyles();
             hideInfo();
         }
+        
+        // Re-apply styles to account for new focus/dimming state
+        applyAllStyles();
+
         if (pinnedNodeId || pinnedEdgeId) {
             infoPanel.classList.add("fixed");
         } else {
             infoPanel.classList.remove("fixed");
         }
     });
-
-    const resetAllStyles = () => {
-        const nodeUpdates = nodes.map(n => ({ 
-            id: n.id, 
-            color: { background: originalStyles[n.id].background, border: originalStyles[n.id].border }, 
-            font: { color: originalStyles[n.id].fontColor, multi: 'html', face: 'Poppins' } 
-        }));
-        nodesDataset.update(nodeUpdates);
-        edgesDataset.update(edgesDataset.get().map(edge => ({ id: edge.id, font: { color: "#000000" } })));
-    };
-
-    const updateDimmingEffect = (startId) => {
-        const distMap = getDistancesUpToTwoHops(network, startId);
-        const nodeUpdates = nodes.map(n => {
-            const dist = distMap[n.id];
-            const ratio = (dist === 0 || dist === 1) ? 0 : (dist === 2 ? 0.5 : 1);
-            const style = originalStyles[n.id];
-            return { 
-                id: n.id, 
-                color: { background: blendHexColors(style.background, "#FAFAFA", ratio), border: blendHexColors(style.border, "#FAFAFA", ratio) }, 
-                font: { color: blendHexColors(style.fontColor, "#FAFAFA", ratio), multi: 'html', face: 'Poppins' }
-            };
-        });
-        nodesDataset.update(nodeUpdates);
-    };
 
     const getNodeInfoHtml = ({ iri, fullLabel, abbreviation, comment, isFallback, labelLang }) => {
         let html = `<a href="${iri}" target="_blank"><small><code>${shortenIri(iri)}</code></small></a><br/><h4>`;
@@ -262,7 +337,9 @@ function setupSettingsPanel(classRows, predicateRows) {
         const allPredicateKeys = Object.keys(PREDICATE_MAP);
         const selectedPreds = Array.from(document.querySelectorAll('#settings-predicates input')).filter(cb => cb.checked).map(cb => cb.dataset.key);
         params.predicates = selectedPreds.length === allPredicateKeys.length ? null : selectedPreds.join(';');
-        setParamsRedirect(params);
+        
+        // Settings changes require a full reload to fetch new data.
+        setParamsAndReload(params);
     });
 }
 
@@ -327,7 +404,7 @@ function populateSettings(classRows, predicateRows) {
                 isChecked: currentPreds.includes(key),
                 label: row.label.value || 'No label',
                 uri: row.iri.value,
-                curie: shortenIri(row.iri.value) // Generate and pass the CURIE
+                curie: shortenIri(row.iri.value)
             });
         }
     });

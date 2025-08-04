@@ -29,7 +29,9 @@ const PREDICATE_MAP = {
   usesMasterData : "systemmap:usesMasterData",
   memberOf       : "schema:memberOf",
   provides       : "service:provides",
-  consumes       : "service:consumes"
+  consumes       : "service:consumes",
+  access         : "systemmap:access",
+  references     : "systemmap:references"
 };
 
 // read “…&predicates=…”  we treat  ; , + or whitespace as separators
@@ -48,7 +50,7 @@ if (predicateIris.length === 0) {
   predicateIris = Object.values(PREDICATE_MAP);
 }
 
-// build a SPARQL-ready VALUES list string (every IRI on its own line keeps the query easy to read)
+// build a SPARQL-ready VALUES list string
 window.predicateValues = predicateIris
   .map(iri => `      ${iri}`)
   .join("\n");
@@ -56,58 +58,38 @@ window.predicateValues = predicateIris
 // set SPARQL endpoint
 window.ENDPOINT = "https://lindas.admin.ch/query";
 
-// query nodes (everything that is instance of Organization, :System or :Information or a subclass thereof)
+// query nodes
 window.NODE_QUERY = `
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
 PREFIX schema: <http://schema.org/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX service: <http://purl.org/ontology/service#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 
-SELECT ?id ?group ?displayLabel ?comment ?abbreviation          # <- only these come back
+SELECT ?id ?group ?displayLabel ?comment ?abbreviation
 WHERE {
   GRAPH <https://lindas.admin.ch/foag/system-map> {
     ?id a ?group .
     VALUES ?group { ${organization} ${system} ${information} ${service} }
 
-    # ---------- LABEL ----------
     OPTIONAL { ?id rdfs:label ?l_user . FILTER( LANG(?l_user) = "${lang}" ) }
     OPTIONAL { ?id rdfs:label ?l_en   . FILTER( LANG(?l_en)  = "en" ) }
-    OPTIONAL { ?id rdfs:label ?l_de   . FILTER( LANG(?l_de)  = "de" ) }
-    OPTIONAL { ?id rdfs:label ?l_fr   . FILTER( LANG(?l_fr)  = "fr" ) }
-    OPTIONAL { ?id rdfs:label ?l_it   . FILTER( LANG(?l_it)  = "it" ) }
-    BIND( COALESCE(?l_user, ?l_en, ?l_de, ?l_fr, ?l_it, "?") AS ?displayLabel )
+    BIND( COALESCE(?l_user, ?l_en, "") AS ?displayLabel )
 
-    # ---------- COMMENT ----------
     OPTIONAL { ?id rdfs:comment ?c_user . FILTER( LANG(?c_user) = "${lang}" ) }
     OPTIONAL { ?id rdfs:comment ?c_en   . FILTER( LANG(?c_en)  = "en" ) }
-    OPTIONAL { ?id rdfs:comment ?c_de   . FILTER( LANG(?c_de)  = "de" ) }
-    OPTIONAL { ?id rdfs:comment ?c_fr   . FILTER( LANG(?c_fr)  = "fr" ) }
-    OPTIONAL { ?id rdfs:comment ?c_it   . FILTER( LANG(?c_it)  = "it" ) }
-    BIND( COALESCE(?c_user, ?c_en, ?c_de, ?c_fr, ?c_it) AS ?comment )
+    BIND( COALESCE(?c_user, ?c_en, "") AS ?comment )
 
-    # ---------- ABBREVIATION ----------
-    OPTIONAL { ?id systemmap:abbreviation ?a_user .
-    FILTER( LANG(?a_user) = "${lang}" ) }
+    OPTIONAL { ?id systemmap:abbreviation ?a_user . FILTER( LANG(?a_user) = "${lang}" ) }
     OPTIONAL { ?id systemmap:abbreviation ?a_en . FILTER( LANG(?a_en) = "en" ) }
-    OPTIONAL { ?id systemmap:abbreviation ?a_de . FILTER( LANG(?a_de) = "de" ) }
-    OPTIONAL { ?id systemmap:abbreviation ?a_fr . FILTER( LANG(?a_fr) = "fr" ) }
-    OPTIONAL { ?id systemmap:abbreviation ?a_it . FILTER( LANG(?a_it) = "it" ) }
-    BIND( COALESCE(?a_user, ?a_en, ?a_de, ?a_fr, ?a_it) AS ?abbreviation )
+    BIND( COALESCE(?a_user, ?a_en, "") AS ?abbreviation )
   }
 }
 `;
 
 // query edges between the nodes
-// -------------------------------------------------------------
-//  EDGE_QUERY  — uses the dynamically built  ${predicateValues}
-// -------------------------------------------------------------
 window.EDGE_QUERY = `
 PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:    <http://www.w3.org/2002/07/owl#>
 PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
 PREFIX schema: <http://schema.org/>
 PREFIX dcat:   <http://www.w3.org/ns/dcat#>
@@ -123,22 +105,20 @@ WHERE {
       ${predicateValues}
     }
 
-    ?property rdfs:label ?label .
-    FILTER( LANG(?label) = "${lang}" )
+    OPTIONAL { ?property rdfs:label ?l_user . FILTER(LANG(?l_user) = "${lang}") }
+    OPTIONAL { ?property rdfs:label ?l_en . FILTER(LANG(?l_en) = "en") }
+    BIND(COALESCE(?l_user, ?l_en, "") AS ?label)
 
-    OPTIONAL {
-      ?property rdfs:comment ?comment .
-      FILTER( LANG(?comment) = "${lang}" )
-    }
+    OPTIONAL { ?property rdfs:comment ?c_user . FILTER(LANG(?c_user) = "${lang}") }
+    OPTIONAL { ?property rdfs:comment ?c_en . FILTER(LANG(?c_en) = "en") }
+    BIND(COALESCE(?c_user, ?c_en, "") AS ?comment)
   }
 }
 `;
 
-// query top class names and comments
+// query top class names and comments for the settings panel
 window.CLASS_QUERY = `
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-  PREFIX owl: <http://www.w3.org/2002/07/owl#>
-  PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
   PREFIX schema: <http://schema.org/>
   PREFIX dcat: <http://www.w3.org/ns/dcat#>
   PREFIX service: <http://purl.org/ontology/service#>
@@ -146,10 +126,42 @@ window.CLASS_QUERY = `
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/system-map> {
       VALUES ?iri { schema:Organization schema:SoftwareApplication dcat:Dataset service:Service }
-      ?iri rdfs:label ?label .
-      ?iri rdfs:comment ?comment .    
-      FILTER(LANG(?label) = "${lang}" && LANG(?comment) = "${lang}")
-      FILTER NOT EXISTS { ?iri rdfs:subClassOf ?superclass }
+      
+      OPTIONAL { ?iri rdfs:label ?l_user . FILTER(LANG(?l_user) = "${lang}") }
+      OPTIONAL { ?iri rdfs:label ?l_en . FILTER(LANG(?l_en) = "en") }
+      BIND(COALESCE(?l_user, ?l_en, "") AS ?label)
+
+      OPTIONAL { ?iri rdfs:comment ?c_user . FILTER(LANG(?c_user) = "${lang}") }
+      OPTIONAL { ?iri rdfs:comment ?c_en . FILTER(LANG(?c_en) = "en") }
+      BIND(COALESCE(?c_user, ?c_en, "") AS ?comment)
+    }
+  }
+`;
+
+// Query all possible predicates and their details for the settings panel
+window.PREDICATES_QUERY = `
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
+  PREFIX schema: <http://schema.org/>
+  PREFIX dcat:   <http://www.w3.org/ns/dcat#>
+  PREFIX prov:   <http://www.w3.org/ns/prov#>
+  PREFIX service:<http://purl.org/ontology/service#>
+  PREFIX dcterms:<http://purl.org/dc/terms/>
+  SELECT ?iri ?label ?comment
+  WHERE {
+    GRAPH <https://lindas.admin.ch/foag/system-map> {
+      VALUES ?iri {
+        dcterms:isPartOf prov:wasDerivedFrom schema:parentOrganization systemmap:operates
+        systemmap:owns systemmap:contains systemmap:usesMasterData schema:memberOf
+        service:provides service:consumes systemmap:access systemmap:references
+      }
+      OPTIONAL { ?iri rdfs:label ?l_user . FILTER(LANG(?l_user) = "${lang}") }
+      OPTIONAL { ?iri rdfs:label ?l_en . FILTER(LANG(?l_en) = "en") }
+      BIND(COALESCE(?l_user, ?l_en, "") AS ?label)
+
+      OPTIONAL { ?iri rdfs:comment ?c_user . FILTER(LANG(?c_user) = "${lang}") }
+      OPTIONAL { ?iri rdfs:comment ?c_en . FILTER(LANG(?c_en) = "en") }
+      BIND(COALESCE(?c_user, ?c_en, "") AS ?comment)
     }
   }
 `;

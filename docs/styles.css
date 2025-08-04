@@ -1,171 +1,215 @@
 html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 /* The container for the Vis network */
 #network {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
-
 /* The custom info panel in the top-right corner */
 .info-panel {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 500px;
- /* Adjust as you like */
-  min-height: 50px;
-  padding: 8px 12px;
-  background: #ffffff;
-  border: 1px solid #000000;
-  border-radius: 6px;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  pointer-events: none;
- /* So you can still drag the graph behind it */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 500px;
+    min-height: 50px;
+    padding: 8px 12px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    pointer-events: none;
 }
-/* Hidden by default */
 .info-panel.hidden {
-  display: none;
+    display: none;
 }
-/* Fixed on selection */
 .info-panel.fixed {
-  pointer-events: auto;
+    pointer-events: auto;
 }
-
-/* Legend container at bottom-left */
-.legend {
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
- /* background: rgba(255, 255, 255, 0.8);
-  */
-  background: #ffffff;
-  padding: 8px 12px;
-  border-radius: 6px;
- /* border: 1px solid #ccc;
- */
-  border: 1px solid #000000;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  max-width: 300px;
- /* so it doesn’t stretch too far */
+/* Hide info panel via URL parameter */
+#infoPanel.param-hidden {
+    display: none !important;
 }
-/* Each legend item: a color box + label text */
-.legend-item {
-  display: flex;
-  align-items: top;
-  margin-bottom: 6px;
- /* small spacing */
-}
-.legend-swatch {
-  width: 32px;
-  height: 12px;
-  border: 1px solid #000;
-  border-radius: 3px;
-  margin-right: 6px;
-  flex-shrink: 0;
- /* so the box doesn’t shrink */
-  margin-top: 3px;
- /* Move it down */
-}
-.legend-item strong.faded {
-  color: #707070;
-}
-
-/* Hide legend or info panel over url parameter
-   .param-hidden applies even when dynamic .hidden is removed */
-#infoPanel.param-hidden,
-#legend.param-hidden {
-  display: none;
-}
-
 .systemmap-title {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  font-size: 36px;
- /* Adjust size as needed */
-  z-index: 100;
- /* Ensure it sits on top of other elements */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    z-index: 100;
 }
-
-.language-select {
-  position: absolute;
-  top: 75px;
-  left: 10px;
-  z-index: 100;
-  display: inline-block;
-  width: 150px;
+/* SETTINGS POP-UP STYLES */
+#settings-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.language-select select {
-  width: 100%;
-  padding: 8px;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  background: #ffffff;
-  border: 1px solid #000000;
-  border-radius: 6px;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
+#settings-overlay.hidden {
+    display: none;
 }
-
-.language-select::after {
-  content: '\25BC';
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  pointer-events: none;
+#settings-panel {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    width: 1000px;
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    font-family: "Poppins", sans-serif;
 }
-
-/*.language-select {
-  position: absolute;
-  top: 80px;
-  left: 10px;
-}*/
-
-.focus-mode-field {
-  position: absolute;
-  top: 130px;
-  left: 10px;
-  width: 200px;
-  z-index: 100;
+#settings-panel h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    flex-shrink: 0;
 }
-
-
+#settings-panel h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+.settings-columns {
+    display: flex;
+    flex-grow: 1;
+    gap: 1.5rem;
+    overflow-y: hidden;
+    padding: 0 5px;
+}
+.settings-column {
+    overflow-y: auto;
+    padding-right: 15px;
+}
+.settings-column:first-child {
+    flex: 4;
+}
+.settings-column:last-child {
+    flex: 5;
+}
+.settings-section {
+    margin-bottom: 15px;
+}
+.settings-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 14px;
+}
+.settings-item label {
+    flex-grow: 1;
+}
+.settings-item select {
+    padding: 5px;
+    border-radius: 4px;
+}
+.settings-item input {
+    margin-left: 15px;
+    transform: scale(1.2);
+}
+.settings-list-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+.settings-list-swatch {
+    width: 24px;
+    height: 12px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+.settings-list-item-content {
+    flex-grow: 1;
+}
+.settings-list-item-content label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+.settings-list-item-content input {
+    margin-right: 8px;
+    margin-left: 0;
+}
+.settings-list-item-content strong {
+    margin-right: auto;
+}
+.settings-list-item-comment {
+    font-size: 9pt;
+    color: #555;
+}
+.settings-curie {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12px;
+    color: #555;
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+.settings-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    flex-shrink: 0;
+}
+.settings-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+#settingsSave {
+    background-color: #1967D3;
+    color: white;
+    margin-left: 10px;
+}
+#settingsCancel {
+    background-color: #D2D9E4;
+    color: #000;
+}
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0.8em;   /* Adjust value as needed */
-  margin-bottom: -0.2em; /* Adjust value as needed */
+    margin-top: 0.8em;
+    margin-bottom: -0.2em;
 }
-
 .social-icons {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000; /* ensures it stays on top */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
 }
-
 .social-icons a {
-  margin-left: 10px;
-  font-size: 1rem;
-  color: #000000;
-  text-decoration: none;
-  transition: color 0.2s ease;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
-
 .social-icons a:hover {
-  color: #FF7F51; /* Change this to your preferred hover color */
+    color: #FF7F51;
 }

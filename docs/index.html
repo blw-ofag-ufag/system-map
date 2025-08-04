@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>FOAG System Map</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <!-- Font Awesome stylesheet -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css" />
   <script src="https://unpkg.com/vis-network@9.1.2/standalone/umd/vis-network.min.js"></script>
@@ -13,30 +12,78 @@
 </head>
 <body>
   <h1 id="systemmapTitle" class="systemmap-title"></h1>
-  <div class="language-select">
-    <select id="languageSelect" onchange="changeLanguage(this)">
-      <option value="de">Deutsch</option>
-      <option value="fr">Français</option>
-      <option value="it">Italiano</option>
-      <option value="en">English</option>
-    </select>
-  </div>
-  <div class="focus-mode-field">
-    <label for="focusModeCheckbox">
-      <input type="checkbox" id="focusModeCheckbox" onchange="toggleFocusMode(this)" />
-      <span class="focus-mode-label" id="focusModeLabel">Fokus-Modus</span>
-    </label>
-  </div>
-  <div id="network"></div>
-  <div id="infoPanel" class="info-panel hidden"></div>
-  <div id="legend" class="legend"></div>
 
-  <!-- Social icons container -->
+  <!-- The network graph will be rendered here -->
+  <div id="network"></div>
+
+  <!-- The info panel remains as it is -->
+  <div id="infoPanel" class="info-panel hidden"></div>
+
+  <!-- Settings pop-up structure -->
+  <div id="settings-overlay" class="hidden">
+    <div id="settings-panel">
+      <h2>Settings</h2>
+
+      <!-- Two-column layout container -->
+      <div class="settings-columns">
+        
+        <!-- Column 1: General & Classes -->
+        <div class="settings-column">
+          <div class="settings-section">
+            <h3>General</h3>
+            <div class="settings-item">
+              <label for="settingsLanguage">Language</label>
+              <select id="settingsLanguage">
+                <option value="de">Deutsch</option>
+                <option value="fr">Français</option>
+                <option value="it">Italiano</option>
+                <option value="en">English</option>
+              </select>
+            </div>
+            <div class="settings-item">
+              <label for="settingsFocusMode">Focus Mode (hides Info Panel)</label>
+              <input type="checkbox" id="settingsFocusMode" />
+            </div>
+          </div>
+
+          <div class="settings-section">
+            <h3>Visible Node Classes</h3>
+            <div id="settings-classes">
+              <!-- This will be dynamically populated by main.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Predicates -->
+        <div class="settings-column">
+          <div class="settings-section">
+            <h3>Visible Relationship Types</h3>
+            <div id="settings-predicates">
+              <!-- This will be dynamically populated by main.js -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action buttons remain at the bottom -->
+      <div class="settings-actions">
+        <button id="settingsCancel">Cancel</button>
+        <button id="settingsSave">Save & Reload</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Icons container -->
   <div class="social-icons">
-    <a href="https://github.com/blw-ofag-ufag/system-map" target="_blank">
+    <a href="#" id="settings-trigger" title="Settings">
+        <i class="fas fa-cog"></i>
+    </a>
+    <a href="https://github.com/blw-ofag-ufag/system-map" target="_blank" title="GitHub">
       <i class="fab fa-github"></i>
     </a>
-    <a href="mailto:kompetenzzentrumdigitaletransformation@blw.admin.ch?subject=Systemlandkarte%20DigiAgriFoodCH">
+    <a href="mailto:kompetenzzentrumdigitaletransformation@blw.admin.ch?subject=Systemlandkarte%20DigiAgriFoodCH" title="Email">
       <i class="fas fa-envelope"></i>
     </a>
   </div>

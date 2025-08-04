@@ -201,10 +201,14 @@ async function init() {
         edges: {
             width: 2,
             selectionWidth: 1,
-            font: { face: "Poppins" },
+            font: { face: "Poppins", color: "#000000" }, // Set default font color
             chosen: false,
             arrows: { to: { enabled: true } },
-            color: { inherit: false } // Prevents edges from inheriting node colors
+            color: { 
+                color: '#000000',
+                highlight: '#000000',
+                inherit: false 
+            }
         },
         groups: groupColors,
         interaction: { hover: true, dragNodes: false, hoverConnectedEdges: false, zoomView: true, dragView: true },
@@ -221,19 +225,19 @@ async function init() {
     const infoPanel = document.getElementById("infoPanel");
 
     /**
-     * Central function to apply all dynamic styling (dimming, search) to nodes.
+     * Central function to apply all dynamic styling (dimming, search) to nodes and edges.
      */
     const applyAllStyles = () => {
         const searchTerm = (getParam("search") || "").toLowerCase();
         const distMap = pinnedNodeId ? getDistancesUpToTwoHops(network, pinnedNodeId) : null;
 
+        // --- 1. Update Node Styles ---
         const nodeUpdates = nodes.map(n => {
             const originalStyle = originalStyles[n.id];
             let newColor = originalStyle.background;
             let newBorder = originalStyle.border;
             let newFont = originalStyle.fontColor;
 
-            // Apply dimming if a node is pinned
             if (distMap) {
                 const dist = distMap[n.id];
                 const ratio = (dist === 0 || dist === 1) ? 0 : (dist === 2 ? 0.5 : 1);
@@ -242,7 +246,6 @@ async function init() {
                 newFont = blendHexColors(originalStyle.fontColor, "#FAFAFA", ratio);
             }
 
-            // Apply search highlight over the top
             if (searchTerm) {
                 const isMatch = (
                     (n.data.fullLabel || '').toLowerCase().includes(searchTerm) ||
@@ -262,8 +265,36 @@ async function init() {
                 font: { color: newFont, multi: 'html', face: 'Poppins' }
             };
         });
-        
         nodesDataset.update(nodeUpdates);
+
+        // --- 2. Update Edge Styles ---
+        const allEdges = edgesDataset.get({ returnType: 'Array' });
+        const edgeUpdates = allEdges.map(edge => {
+            let newColor = '#000000';
+            let newWidth = 2;
+            let newFontColor = '#000000'; // Default edge font color
+
+            if (distMap) {
+                const distFrom = distMap[edge.from];
+                const distTo = distMap[edge.to];
+                const isConnectedToFocus = (distFrom !== undefined && distFrom <= 1) || (distTo !== undefined && distTo <= 1);
+
+                if (!isConnectedToFocus) {
+                    const dimRatio = 0.95;
+                    newColor = blendHexColors('#000000', '#FAFAFA', dimRatio);
+                    newFontColor = blendHexColors('#000000', '#FAFAFA', dimRatio);
+                    newWidth = 1;
+                }
+            }
+
+            return {
+                id: edge.id,
+                color: { color: newColor },
+                width: newWidth,
+                font: { color: newFontColor }
+            };
+        });
+        edgesDataset.update(edgeUpdates);
     };
     
     // Setup search box and apply initial styles (e.g., from URL on page load)
@@ -288,7 +319,6 @@ async function init() {
             hideInfo();
         }
         
-        // Re-apply styles to account for new focus/dimming state
         applyAllStyles();
 
         if (pinnedNodeId || pinnedEdgeId) {
@@ -338,7 +368,6 @@ function setupSettingsPanel(classRows, predicateRows) {
         const selectedPreds = Array.from(document.querySelectorAll('#settings-predicates input')).filter(cb => cb.checked).map(cb => cb.dataset.key);
         params.predicates = selectedPreds.length === allPredicateKeys.length ? null : selectedPreds.join(';');
         
-        // Settings changes require a full reload to fetch new data.
         setParamsAndReload(params);
     });
 }

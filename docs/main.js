@@ -238,14 +238,24 @@ async function init() {
             let newBorder = originalStyle.border;
             let newFont = originalStyle.fontColor;
 
+            // Apply dimming/hiding based on distance from the pinned node
             if (distMap) {
                 const dist = distMap[n.id];
-                const ratio = (dist === 0 || dist === 1) ? 0 : (dist === 2 ? 0.5 : 1);
-                newColor = blendHexColors(originalStyle.background, "#FAFAFA", ratio);
-                newBorder = blendHexColors(originalStyle.border, "#FAFAFA", ratio);
-                newFont = blendHexColors(originalStyle.fontColor, "#FAFAFA", ratio);
+                if (dist === undefined || dist > 2) {
+                    // Hide nodes that are more than 2 hops away
+                    newColor = '#00000000'; // Transparent
+                    newBorder = '#00000000';
+                    newFont = '#00000000';
+                } else {
+                    // Dim nodes at 2 hops, keep 0 and 1 hops fully visible
+                    const ratio = (dist === 2) ? 0.5 : 0;
+                    newColor = blendHexColors(originalStyle.background, "#FAFAFA", ratio);
+                    newBorder = blendHexColors(originalStyle.border, "#FAFAFA", ratio);
+                    newFont = blendHexColors(originalStyle.fontColor, "#FAFAFA", ratio);
+                }
             }
 
+            // Apply search highlighting (this will override the dimming/hiding)
             if (searchTerm) {
                 const isMatch = (
                     (n.data.fullLabel || '').toLowerCase().includes(searchTerm) ||
@@ -272,18 +282,34 @@ async function init() {
         const edgeUpdates = allEdges.map(edge => {
             let newColor = '#000000';
             let newWidth = 2;
-            let newFontColor = '#000000'; // Default edge font color
+            let newFontColor = '#000000';
 
             if (distMap) {
                 const distFrom = distMap[edge.from];
                 const distTo = distMap[edge.to];
-                const isConnectedToFocus = (distFrom !== undefined && distFrom <= 1) || (distTo !== undefined && distTo <= 1);
+                
+                // An edge is out of scope if either of its nodes is out of scope (undefined or > 2 hops)
+                const isOutOfScope = distFrom === undefined || distFrom > 2 || distTo === undefined || distTo > 2;
 
-                if (!isConnectedToFocus) {
-                    const dimRatio = 0.95;
-                    newColor = blendHexColors('#000000', '#FAFAFA', dimRatio);
-                    newFontColor = blendHexColors('#000000', '#FAFAFA', dimRatio);
+                if (isOutOfScope) {
+                    // Hide the edge completely
+                    newColor = '#00000000';
+                    newFontColor = '#00000000';
                     newWidth = 1;
+                } else {
+                    // Edge is within the 2-hop subgraph. Dim it if it connects to a 2-hop node.
+                    const maxDist = Math.max(distFrom, distTo);
+                    if (maxDist === 2) {
+                        const dimRatio = 0.8;
+                        newColor = blendHexColors('#000000', '#FAFAFA', dimRatio);
+                        newFontColor = blendHexColors('#000000', '#FAFAFA', dimRatio);
+                        newWidth = 1;
+                    } else {
+                        // This is a "core" edge (between 0-1, 1-1 hop nodes). Make it prominent.
+                        newColor = '#000000';
+                        newFontColor = '#000000';
+                        newWidth = 2;
+                    }
                 }
             }
 

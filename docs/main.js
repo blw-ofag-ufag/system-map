@@ -182,8 +182,9 @@ async function init() {
             "https://agriculture.ld.admin.ch/system-map/access", "https://agriculture.ld.admin.ch/system-map/references"
         ];
         if (dashedPredicates.includes(edge.iri)) {
-            edge.dashes = [2, 8];
+            edge.dashes = [2, 10];
             edge.length = 500;
+            edge.springConstant = 0.001;
         }
         return edge;
     });
@@ -211,8 +212,8 @@ async function init() {
             }
         },
         groups: groupColors,
-        interaction: { hover: true, dragNodes: false, hoverConnectedEdges: false, zoomView: true, dragView: true },
-        physics: { enabled: true, barnesHut: { gravitationalConstant: -8000, centralGravity: 0.1, springLength: 200, springConstant: 0.1 }, stabilization: { iterations: 100 } }
+        interaction: { hover: true, dragNodes: true, hoverConnectedEdges: false, zoomView: true, dragView: true },
+        physics: { enabled: true, barnesHut: { gravitationalConstant: -9000, centralGravity: 0.05, springLength: 250, springConstant: 0.2 }, stabilization: { iterations: 100 } }
     };
 
     const network = new vis.Network(container, data, options);

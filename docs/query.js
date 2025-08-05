@@ -15,26 +15,10 @@ window.information = getQueryParam("information", "true") === "true" ? "dcat:Dat
 
 /* -------------------------------------------------------------
 Toggle which edge predicates are fetched.
-  - The user passes  ?predicates=key1;key2;key3
-  - Keys come from the table below.
-  - If the param is missing or empty, we include *all* predicates.
+- The user passes  ?predicates=key1;key2;key3
+- Keys are defined in APP_CONFIG.PREDICATE_MAP in config.js.
+- If the param is missing or empty, we include *all* predicates.
 ----------------------------------------------------------------*/
-const PREDICATE_MAP = {
-  isPartOf       : "dcterms:isPartOf",
-  wasDerivedFrom : "prov:wasDerivedFrom",
-  parentOrg      : "schema:parentOrganization",
-  operates       : "systemmap:operates",
-  owns           : "systemmap:owns",
-  contains       : "systemmap:contains",
-  usesMasterData : "systemmap:usesMasterData",
-  memberOf       : "schema:memberOf",
-  provides       : "service:provides",
-  consumes       : "service:consumes",
-  access         : "systemmap:access",
-  references     : "systemmap:references"
-};
-
-// read “…&predicates=…”  we treat  ; , + or whitespace as separators
 const rawPredParam = getQueryParam("predicates", "").trim();
 const selectedKeys = rawPredParam
   ? rawPredParam.split(/[;,+\s]+/).filter(Boolean)
@@ -42,12 +26,12 @@ const selectedKeys = rawPredParam
 
 // translate keys → prefixed IRIs; unknown keys are ignored
 let predicateIris = selectedKeys
-  .map(k => PREDICATE_MAP[k])
+  .map(k => APP_CONFIG.PREDICATE_MAP[k])
   .filter(Boolean);
 
 // If the user gave nothing valid, fall back to the full list
 if (predicateIris.length === 0) {
-  predicateIris = Object.values(PREDICATE_MAP);
+  predicateIris = Object.values(APP_CONFIG.PREDICATE_MAP);
 }
 
 // build a SPARQL-ready VALUES list string
@@ -55,8 +39,8 @@ window.predicateValues = predicateIris
   .map(iri => `      ${iri}`)
   .join("\n");
 
-// set SPARQL endpoint
-window.ENDPOINT = "https://lindas.admin.ch/query";
+// set SPARQL endpoint from config
+window.ENDPOINT = APP_CONFIG.ENDPOINT;
 
 // query nodes
 window.NODE_QUERY = `
@@ -219,18 +203,7 @@ window.getSparqlData = async function(query) {
   return response.json();
 };
 
-// Map the IRIs for classes onto simpler group names
+// Map the IRIs for classes onto simpler group names using the central config
 window.mapClassIriToGroup = function(iri) {
-  switch (iri) {
-    case "http://schema.org/Organization":
-      return "Organization";
-    case "http://schema.org/SoftwareApplication":
-      return "System";
-    case "http://www.w3.org/ns/dcat#Dataset":
-      return "Information";
-    case "http://purl.org/ontology/service#Service":
-      return "Service";
-    default:
-      return "Other";
-  }
+  return APP_CONFIG.GROUP_MAP[iri] || "Other";
 };

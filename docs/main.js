@@ -14,7 +14,9 @@ function shortenLabel(label, abbreviation) {
  * BFS up to 2 hops. Returns { nodeId: distance }.
  */
 function getDistancesUpToTwoHops(network, startId) {
-    const distMap = { [startId]: 0 };
+    const distMap = {
+        [startId]: 0
+    };
     const queue = [startId];
     while (queue.length > 0) {
         const current = queue.shift();
@@ -51,12 +53,11 @@ function getParam(name) {
 
 /**
  * Helper func to set URL params and trigger a page reload.
- * Used for settings that require refetching data.
  */
 function setParamsAndReload(paramsObj) {
     const params = new URLSearchParams(window.location.search);
     for (const [key, value] of Object.entries(paramsObj)) {
-        (value === null || value === undefined || value === true) ? params.delete(key) : params.set(key, value);
+        (value === null || value === undefined || value === true) ? params.delete(key): params.set(key, value);
     }
     if (params.get('infopanel') === 'true') params.delete('infopanel');
 
@@ -65,7 +66,6 @@ function setParamsAndReload(paramsObj) {
 
 /**
  * Helper func to set URL params without reloading the page.
- * Used for interactive filtering like search.
  */
 function setParamsWithoutReload(paramsObj) {
     const params = new URLSearchParams(window.location.search);
@@ -81,39 +81,17 @@ function setParamsWithoutReload(paramsObj) {
 }
 
 /**
- * Convert a full IRI to a compact CURIE.
+ * Convert a full IRI to a compact CURIE using the central configuration.
  */
 function shortenIri(iri) {
-    const PREFIXES = {
-      "http://www.w3.org/2000/01/rdf-schema#": "rdfs", "http://www.w3.org/2002/07/owl#": "owl",
-      "https://agriculture.ld.admin.ch/system-map/": "systemmap", "http://schema.org/": "schema",
-      "http://www.w3.org/ns/dcat#": "dcat", "http://www.w3.org/ns/prov#": "prov",
-      "http://purl.org/ontology/service#": "service", "http://purl.org/dc/terms/": "dcterms",
-      "https://register.ld.admin.ch/zefix/company/": "zefix"
-    };
-    for (const [baseIRI, prefix] of Object.entries(PREFIXES)) {
-      if (iri.startsWith(baseIRI)) return `${prefix}:${iri.substring(baseIRI.length)}`;
+    for (const [baseIRI, prefix] of Object.entries(APP_CONFIG.PREFIXES)) {
+        if (iri.startsWith(baseIRI)) return `${prefix}:${iri.substring(baseIRI.length)}`;
     }
     return iri;
 }
 
-const groupColors = {
-    System:       { background: "#1967D3", border: "#000000", font: { color: "#FFFFFF" } },
-    Information:  { background: "#354C5D", border: "#000000", font: { color: "#FFFFFF" } },
-    Organization: { background: "#D2D9E4", border: "#000000", font: { color: "#000000" } },
-    Service:      { background: "#DBCCA0", border: "#000000", font: { color: "#000000" } },
-    Other:        { background: "#D2D9E4", border: "#000000", font: { color: "#FFFFFF" } }
-};
-
-const SEARCH_HIGHLIGHT_COLOR = {
-    background: "#ffa551",
-    border: "#ffa551",
-    font: { color: "#000000" }
-};
-
 /**
  * Configures the search box and its event listeners.
- * @param {function} onSearchChange - Callback function to execute when the search term changes.
  */
 function setupSearchBox(onSearchChange) {
     const searchBox = document.getElementById('search-box');
@@ -126,7 +104,9 @@ function setupSearchBox(onSearchChange) {
         clearTimeout(searchTimeout);
         searchTimeout = setTimeout(() => {
             const searchTerm = e.target.value.trim();
-            setParamsWithoutReload({ search: searchTerm || null });
+            setParamsWithoutReload({
+                search: searchTerm || null
+            });
             onSearchChange();
         }, 300); // Update after 300ms of inactivity
     });
@@ -136,8 +116,12 @@ function setupSearchBox(onSearchChange) {
  * Main application initialization.
  */
 async function init() {
+    // Initialize style constants by reading them from the CSS variables
+    APP_CONFIG.initializeStylesFromCSS();
+
     const currentLang = getParam("lang") || "de";
-    let pinnedNodeId = null, pinnedEdgeId = null;
+    let pinnedNodeId = null,
+        pinnedEdgeId = null;
 
     if (getParam("infopanel") === "false") {
         document.getElementById("infoPanel").classList.add("param-hidden");
@@ -149,7 +133,7 @@ async function init() {
     } catch (error) {
         console.error("Error fetching title:", error);
     }
-    
+
     const [classesJson, predicatesJson, nodesJson, edgesJson] = await Promise.all([
         getSparqlData(CLASS_QUERY), getSparqlData(PREDICATES_QUERY),
         getSparqlData(NODE_QUERY), getSparqlData(EDGE_QUERY)
@@ -168,27 +152,37 @@ async function init() {
         const label = row.displayLabel.value;
         const abbreviation = row.abbreviation.value;
         const labelLang = row.displayLabel["xml:lang"] || "";
-        const htmlLabel = labelLang && labelLang !== currentLang
-            ? `<b>${labelLang.toUpperCase()}:</b> <i>${shortenLabel(label, abbreviation)}</i>`
-            : `<b>${shortenLabel(label, abbreviation)}</b>`;
-        
+        const htmlLabel = labelLang && labelLang !== currentLang ?
+            `<b>${labelLang.toUpperCase()}:</b> <i>${shortenLabel(label, abbreviation)}</i>` :
+            `<b>${shortenLabel(label, abbreviation)}</b>`;
+
         const groupName = mapClassIriToGroup(row.group.value);
         return {
-          id: row.id.value,
-          label: htmlLabel,
-          group: groupName,
-          data: { iri: row.id.value, fullLabel: label, abbreviation, comment: row.comment.value, isFallback: labelLang && labelLang !== currentLang, labelLang }
+            id: row.id.value,
+            label: htmlLabel,
+            group: groupName,
+            data: {
+                iri: row.id.value,
+                fullLabel: label,
+                abbreviation,
+                comment: row.comment.value,
+                isFallback: labelLang && labelLang !== currentLang,
+                labelLang
+            }
         };
     });
 
     const edges = edgesJson.results.bindings.map(row => {
-        const edge = { from: row.from.value, to: row.to.value, label: row.label.value, comment: row.comment.value, iri: row.id.value };
-        const dashedPredicates = [
-            "http://www.w3.org/ns/prov#wasDerivedFrom", "http://purl.org/ontology/service#consumes",
-            "https://agriculture.ld.admin.ch/system-map/owns", "https://agriculture.ld.admin.ch/system-map/usesMasterData",
-            "https://agriculture.ld.admin.ch/system-map/access", "https://agriculture.ld.admin.ch/system-map/references"
-        ];
-        if (dashedPredicates.includes(edge.iri)) {
+        const edge = {
+            from: row.from.value,
+            to: row.to.value,
+            label: row.label.value,
+            comment: row.comment.value,
+            iri: row.id.value
+        };
+
+        // Use central config for dashed predicates
+        if (APP_CONFIG.DASHED_PREDICATES.includes(edge.iri)) {
             edge.dashes = [2, 10];
             edge.length = 500;
             edge.springConstant = 0.001;
@@ -199,37 +193,78 @@ async function init() {
     const nodesDataset = new vis.DataSet(nodes);
     const edgesDataset = new vis.DataSet(edges);
     const container = document.getElementById("network");
-    const data = { nodes: nodesDataset, edges: edgesDataset };
+    const data = {
+        nodes: nodesDataset,
+        edges: edgesDataset
+    };
 
     const options = {
         nodes: {
-            shape: "box", widthConstraint: 150, heightConstraint: 40,
-            chosen: { node: (v, i, s, h) => { if (h) { v.borderWidth = 3; v.borderColor = "#000"; } } }
+            shape: "box",
+            widthConstraint: 150,
+            heightConstraint: 40,
+            chosen: {
+                node: (v, i, s, h) => {
+                    if (h) {
+                        v.borderWidth = 3;
+                        v.borderColor = "#000";
+                    }
+                }
+            }
         },
         edges: {
             width: 2,
             selectionWidth: 1,
-            font: { face: "Poppins", color: "#000000" }, // Set default font color
+            font: {
+                face: "Poppins",
+                color: "#000000"
+            },
             chosen: false,
-            arrows: { to: { enabled: true } },
-            color: { 
+            arrows: {
+                to: {
+                    enabled: true
+                }
+            },
+            color: {
                 color: '#000000',
                 highlight: '#000000',
-                inherit: false 
+                inherit: false
             }
         },
-        groups: groupColors,
-        interaction: { hover: true, dragNodes: true, hoverConnectedEdges: false, zoomView: true, dragView: true },
-        physics: { enabled: true, barnesHut: { gravitationalConstant: -9000, centralGravity: 0.05, springLength: 250, springConstant: 0.2 }, stabilization: { iterations: 100 } }
+        groups: APP_CONFIG.GROUP_STYLES, // Use styles from config
+        interaction: {
+            hover: true,
+            dragNodes: true,
+            hoverConnectedEdges: false,
+            zoomView: true,
+            dragView: true
+        },
+        physics: {
+            enabled: true,
+            barnesHut: {
+                gravitationalConstant: -9000,
+                centralGravity: 0.05,
+                springLength: 250,
+                springConstant: 0.2
+            },
+            stabilization: {
+                iterations: 100
+            }
+        }
     };
 
     const network = new vis.Network(container, data, options);
-    
+
+    // Get original styles from the central config
     const originalStyles = Object.fromEntries(nodes.map(n => {
-        const style = groupColors[n.group] || groupColors.Other;
-        return [n.id, { background: style.background, border: style.border, fontColor: style.font.color }];
+        const style = APP_CONFIG.GROUP_STYLES[n.group] || APP_CONFIG.GROUP_STYLES.Other;
+        return [n.id, {
+            background: style.background,
+            border: style.border,
+            fontColor: style.font.color
+        }];
     }));
-    
+
     const infoPanel = document.getElementById("infoPanel");
 
     /**
@@ -239,31 +274,28 @@ async function init() {
         const searchTerm = (getParam("search") || "").toLowerCase();
         const distMap = pinnedNodeId ? getDistancesUpToTwoHops(network, pinnedNodeId) : null;
 
-        // --- 1. Update Node Styles ---
+        // Node styling
         const nodeUpdates = nodes.map(n => {
             const originalStyle = originalStyles[n.id];
             let newColor = originalStyle.background;
             let newBorder = originalStyle.border;
             let newFont = originalStyle.fontColor;
 
-            // Apply dimming/hiding based on distance from the pinned node
             if (distMap) {
                 const dist = distMap[n.id];
                 if (dist === undefined || dist > 2) {
-                    // Hide nodes that are more than 2 hops away
-                    newColor = '#00000000'; // Transparent
+                    newColor = '#00000000';
                     newBorder = '#00000000';
                     newFont = '#00000000';
                 } else {
-                    // Dim nodes at 2 hops, keep 0 and 1 hops fully visible
                     const ratio = (dist === 2) ? 0.5 : 0;
-                    newColor = blendHexColors(originalStyle.background, "#FAFAFA", ratio);
-                    newBorder = blendHexColors(originalStyle.border, "#FAFAFA", ratio);
-                    newFont = blendHexColors(originalStyle.fontColor, "#FAFAFA", ratio);
+                    newColor = blendHexColors(originalStyle.background, "#ffffff", ratio);
+                    newBorder = blendHexColors(originalStyle.border, "#ffffff", ratio);
+                    newFont = blendHexColors(originalStyle.fontColor, "#ffffff", ratio);
                 }
             }
 
-            // Apply search highlighting (this will override the dimming/hiding)
+            // Apply search highlighting, using the central config color
             if (searchTerm) {
                 const isMatch = (
                     (n.data.fullLabel || '').toLowerCase().includes(searchTerm) ||
@@ -271,72 +303,83 @@ async function init() {
                     (n.data.abbreviation || '').toLowerCase().includes(searchTerm)
                 );
                 if (isMatch) {
-                    newColor = SEARCH_HIGHLIGHT_COLOR.background;
-                    newBorder = SEARCH_HIGHLIGHT_COLOR.border;
-                    newFont = SEARCH_HIGHLIGHT_COLOR.font.color;
+                    newColor = APP_CONFIG.SEARCH_HIGHLIGHT_COLOR.background;
+                    newBorder = APP_CONFIG.SEARCH_HIGHLIGHT_COLOR.border;
+                    newFont = APP_CONFIG.SEARCH_HIGHLIGHT_COLOR.font.color;
                 }
             }
 
             return {
                 id: n.id,
-                color: { background: newColor, border: newBorder },
-                font: { color: newFont, multi: 'html', face: 'Poppins' }
+                color: {
+                    background: newColor,
+                    border: newBorder
+                },
+                font: {
+                    color: newFont,
+                    multi: 'html',
+                    face: 'Poppins'
+                }
             };
         });
         nodesDataset.update(nodeUpdates);
 
-        // --- 2. Update Edge Styles ---
-        const allEdges = edgesDataset.get({ returnType: 'Array' });
+        // Edge styling logic remains the same...
+        const allEdges = edgesDataset.get({
+            returnType: 'Array'
+        });
         const edgeUpdates = allEdges.map(edge => {
-            let newColor = '#000000';
-            let newWidth = 2;
-            let newFontColor = '#000000';
-
+            let newColor = '#000000',
+                newWidth = 2,
+                newFontColor = '#000000';
             if (distMap) {
                 const distFrom = distMap[edge.from];
                 const distTo = distMap[edge.to];
-                
-                // An edge is out of scope if either of its nodes is out of scope (undefined or > 2 hops)
                 const isOutOfScope = distFrom === undefined || distFrom > 2 || distTo === undefined || distTo > 2;
-
                 if (isOutOfScope) {
-                    // Hide the edge completely
                     newColor = '#00000000';
                     newFontColor = '#00000000';
                     newWidth = 1;
                 } else {
-                    // Edge is within the 2-hop subgraph. Dim it if it connects to a 2-hop node.
                     const maxDist = Math.max(distFrom, distTo);
                     if (maxDist === 2) {
                         const dimRatio = 0.5;
-                        newColor = blendHexColors('#000000', '#FAFAFA', dimRatio);
-                        newFontColor = blendHexColors('#000000', '#FAFAFA', dimRatio);
+                        newColor = blendHexColors('#000000', '#ffffff', dimRatio);
+                        newFontColor = blendHexColors('#000000', '#ffffff', dimRatio);
                         newWidth = 1;
                     } else {
-                        // This is a "core" edge (between 0-1, 1-1 hop nodes). Make it prominent.
                         newColor = '#000000';
                         newFontColor = '#000000';
                         newWidth = 2;
                     }
                 }
             }
-
             return {
                 id: edge.id,
-                color: { color: newColor },
+                color: {
+                    color: newColor
+                },
                 width: newWidth,
-                font: { color: newFontColor }
+                font: {
+                    color: newFontColor
+                }
             };
         });
         edgesDataset.update(edgeUpdates);
     };
-    
-    // Setup search box and apply initial styles (e.g., from URL on page load)
+
     setupSearchBox(applyAllStyles);
     applyAllStyles();
 
-    const showInfo = (html) => { infoPanel.innerHTML = html; infoPanel.classList.remove("hidden"); };
-    const hideInfo = () => { infoPanel.classList.add("hidden"); infoPanel.innerHTML = ""; infoPanel.classList.remove("fixed"); };
+    const showInfo = (html) => {
+        infoPanel.innerHTML = html;
+        infoPanel.classList.remove("hidden");
+    };
+    const hideInfo = () => {
+        infoPanel.classList.add("hidden");
+        infoPanel.innerHTML = "";
+        infoPanel.classList.remove("fixed");
+    };
 
     network.on("click", params => {
         pinnedNodeId = params.nodes[0] || null;
@@ -353,7 +396,7 @@ async function init() {
             network.unselectAll();
             hideInfo();
         }
-        
+
         applyAllStyles();
 
         if (pinnedNodeId || pinnedEdgeId) {
@@ -363,38 +406,49 @@ async function init() {
         }
     });
 
-    const getNodeInfoHtml = ({ iri, fullLabel, abbreviation, comment, isFallback, labelLang }, group) => {
-        const chipStyle = groupColors[group] || groupColors.Other;
+    const getNodeInfoHtml = ({
+        iri,
+        fullLabel,
+        abbreviation,
+        comment,
+        isFallback,
+        labelLang
+    }, group) => {
+        // Use styles from central config
+        const chipStyle = APP_CONFIG.GROUP_STYLES[group] || APP_CONFIG.GROUP_STYLES.Other;
         const chipLabel = classLabelsByGroup[group] || group;
-    
+
         const inlineStyle = `
             background-color: ${chipStyle.background};
             border-color: ${chipStyle.border};
             color: ${chipStyle.font.color};
         `;
-    
+
         const classChipHtml = `<span class="info-panel-chip" style="${inlineStyle}">${chipLabel}</span>`;
-    
+
         let titleHtml = '<h4>';
         titleHtml += isFallback ? `${labelLang.toUpperCase()}: <i>${fullLabel}</i>` : fullLabel;
         if (abbreviation) titleHtml += ` (${abbreviation})`;
         titleHtml += '</h4>';
-    
+
         let html = `
             <a href="${iri}" target="_blank"><small><code>${shortenIri(iri)}</code></small></a>
             <div class="info-panel-header">
                 ${titleHtml}${classChipHtml}
             </div>`;
-        // html += `<a href="${iri}" target="_blank"><small><code>${shortenIri(iri)}</code></small></a>`;
-    
+
         if (comment) {
             html += `<p class="info-panel-comment"><small>${comment}</small></p>`;
         }
-    
+
         return html;
     };
-    
-    const getEdgeInfoHtml = ({ iri, label, comment }) => {
+
+    const getEdgeInfoHtml = ({
+        iri,
+        label,
+        comment
+    }) => {
         let html = iri ? `<a href="${iri}" target="_blank"><small><code>${shortenIri(iri)}</code></small></a><br/>` : '';
         html += `<h4>${label}</h4>`;
         if (comment) html += `<p><small>${comment}</small></p>`;
@@ -409,22 +463,34 @@ function setupSettingsPanel(classRows, predicateRows) {
     const overlay = document.getElementById('settings-overlay');
     const trigger = document.getElementById('settings-trigger');
 
-    const openSettings = () => { populateSettings(classRows, predicateRows); overlay.classList.remove('hidden'); };
+    const openSettings = () => {
+        populateSettings(classRows, predicateRows);
+        overlay.classList.remove('hidden');
+    };
     const closeSettings = () => overlay.classList.add('hidden');
 
-    trigger.addEventListener('click', (e) => { e.preventDefault(); openSettings(); });
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        openSettings();
+    });
     document.getElementById('settingsCancel').addEventListener('click', closeSettings);
-    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeSettings(); });
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeSettings();
+    });
 
     document.getElementById('settingsSave').addEventListener('click', () => {
         const params = {};
         params.lang = document.getElementById('settingsLanguage').value;
         params.infopanel = document.getElementById('settingsFocusMode').checked ? 'false' : null;
-        document.querySelectorAll('#settings-classes input').forEach(cb => { params[cb.dataset.group.toLowerCase()] = cb.checked ? null : 'false'; });
-        const allPredicateKeys = Object.keys(PREDICATE_MAP);
+        document.querySelectorAll('#settings-classes input').forEach(cb => {
+            params[cb.dataset.group.toLowerCase()] = cb.checked ? null : 'false';
+        });
+
+        // Use central config for predicate keys
+        const allPredicateKeys = Object.keys(APP_CONFIG.PREDICATE_MAP);
         const selectedPreds = Array.from(document.querySelectorAll('#settings-predicates input')).filter(cb => cb.checked).map(cb => cb.dataset.key);
         params.predicates = selectedPreds.length === allPredicateKeys.length ? null : selectedPreds.join(';');
-        
+
         setParamsAndReload(params);
     });
 }
@@ -436,7 +502,17 @@ function populateSettings(classRows, predicateRows) {
     document.getElementById('settingsLanguage').value = getParam("lang") || "de";
     document.getElementById('settingsFocusMode').checked = getParam("infopanel") === "false";
 
-    const createCheckboxItem = (container, { id, dataKey, dataValue, isChecked, label, comment, uri, curie, swatchColor }) => {
+    const createCheckboxItem = (container, {
+        id,
+        dataKey,
+        dataValue,
+        isChecked,
+        label,
+        comment,
+        uri,
+        curie,
+        swatchColor
+    }) => {
         let html = `<div class="settings-list-item">`;
         if (swatchColor) html += `<div class="settings-list-swatch" style="background: ${swatchColor}; border-color: #555;"></div>`;
         html += `<div class="settings-list-item-content">
@@ -455,42 +531,43 @@ function populateSettings(classRows, predicateRows) {
     classRows.forEach(row => {
         const groupName = mapClassIriToGroup(row.iri.value);
         createCheckboxItem(classesContainer, {
-            id: `setting-class-${groupName}`, dataKey: 'group', dataValue: groupName,
+            id: `setting-class-${groupName}`,
+            dataKey: 'group',
+            dataValue: groupName,
             isChecked: getParam(groupName.toLowerCase()) !== "false",
             label: row.label.value || 'No label',
             comment: row.comment.value || 'No comment',
             uri: row.iri.value,
             curie: shortenIri(row.iri.value),
-            swatchColor: groupColors[groupName]?.background
+            swatchColor: APP_CONFIG.GROUP_STYLES[groupName]?.background
         });
     });
 
     const predicatesContainer = document.getElementById('settings-predicates');
     predicatesContainer.innerHTML = '';
     const rawPredParam = getParam("predicates");
-    const currentPreds = rawPredParam === null ? Object.keys(PREDICATE_MAP) : (rawPredParam ? rawPredParam.split(/[;,+\s]+/) : []);
-    
+    const currentPreds = rawPredParam === null ? Object.keys(APP_CONFIG.PREDICATE_MAP) : (rawPredParam ? rawPredParam.split(/[;,+\s]+/) : []);
+
+    // Create a map of full IRIs to their short keys (e.g., 'http://...#isPartOf' -> 'isPartOf')
     const iriToKeyMap = {};
-    const prefixMap = {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "systemmap": "https://agriculture.ld.admin.ch/system-map/",
-        "schema": "http://schema.org/",
-        "dcat": "http://www.w3.org/ns/dcat#",
-        "prov": "http://www.w3.org/ns/prov#",
-        "service": "http://purl.org/ontology/service#",
-        "dcterms": "http://purl.org/dc/terms/"
-    };
-    for (const key in PREDICATE_MAP) {
-        const [prefix, suffix] = PREDICATE_MAP[key].split(':');
-        if (prefixMap[prefix]) { iriToKeyMap[prefixMap[prefix] + suffix] = key; }
+    const invertedPrefixes = Object.fromEntries(
+        Object.entries(APP_CONFIG.PREFIXES).map(([base, prefix]) => [prefix, base])
+    );
+    for (const [key, curie] of Object.entries(APP_CONFIG.PREDICATE_MAP)) {
+        const [prefix, suffix] = curie.split(':');
+        if (invertedPrefixes[prefix]) {
+            const iri = invertedPrefixes[prefix] + suffix;
+            iriToKeyMap[iri] = key;
+        }
     }
-    
-    predicateRows.sort((a,b) => (a.label.value || '').localeCompare(b.label.value || '')).forEach(row => {
+
+    predicateRows.sort((a, b) => (a.label.value || '').localeCompare(b.label.value || '')).forEach(row => {
         const key = iriToKeyMap[row.iri.value];
         if (key) {
             createCheckboxItem(predicatesContainer, {
-                id: `setting-pred-${key}`, dataKey: 'key', dataValue: key,
+                id: `setting-pred-${key}`,
+                dataKey: 'key',
+                dataValue: key,
                 isChecked: currentPreds.includes(key),
                 label: row.label.value || 'No label',
                 uri: row.iri.value,

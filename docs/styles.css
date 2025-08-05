@@ -286,7 +286,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .info-panel-chip {
     padding: 1px 5px;
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 12px;
     font-weight: 600;
     white-space: nowrap;

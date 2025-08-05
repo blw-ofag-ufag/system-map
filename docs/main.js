@@ -204,10 +204,22 @@ async function init() {
             widthConstraint: 150,
             heightConstraint: 40,
             chosen: {
-                node: (v, i, s, h) => {
-                    if (h) {
-                        v.borderWidth = 3;
-                        v.borderColor = "#000";
+                node: (values, id, selected, hovering) => {
+                    // Only apply hover effect if no node is pinned, OR if the hovered
+                    // node is within the 2-hop distance of the pinned node.
+                    if (hovering) {
+                        let isDimmed = false;
+                        if (pinnedNodeId) {
+                            const distMap = getDistancesUpToTwoHops(network, pinnedNodeId);
+                            if (distMap[id] === undefined || distMap[id] > 2) {
+                                isDimmed = true;
+                            }
+                        }
+                        // Apply highlight only if the node is not dimmed
+                        if (!isDimmed) {
+                            values.borderWidth = 3;
+                            values.borderColor = "#000";
+                        }
                     }
                 }
             }
@@ -324,33 +336,34 @@ async function init() {
         });
         nodesDataset.update(nodeUpdates);
 
-        // Edge styling logic remains the same...
+        // Edge styling logic
         const allEdges = edgesDataset.get({
             returnType: 'Array'
         });
         const edgeUpdates = allEdges.map(edge => {
             let newColor = '#000000',
                 newWidth = 2,
-                newFontColor = '#000000';
+                fontUpdate = {
+                    color: '#000000'
+                };
+
             if (distMap) {
                 const distFrom = distMap[edge.from];
                 const distTo = distMap[edge.to];
                 const isOutOfScope = distFrom === undefined || distFrom > 2 || distTo === undefined || distTo > 2;
+
                 if (isOutOfScope) {
                     newColor = '#00000000';
-                    newFontColor = '#00000000';
                     newWidth = 1;
+                    fontUpdate.color = '#00000000';
+                    fontUpdate.strokeWidth = 0;
                 } else {
                     const maxDist = Math.max(distFrom, distTo);
                     if (maxDist === 2) {
                         const dimRatio = 0.5;
                         newColor = blendHexColors('#000000', '#ffffff', dimRatio);
-                        newFontColor = blendHexColors('#000000', '#ffffff', dimRatio);
+                        fontUpdate.color = blendHexColors('#000000', '#ffffff', dimRatio);
                         newWidth = 1;
-                    } else {
-                        newColor = '#000000';
-                        newFontColor = '#000000';
-                        newWidth = 2;
                     }
                 }
             }
@@ -360,9 +373,7 @@ async function init() {
                     color: newColor
                 },
                 width: newWidth,
-                font: {
-                    color: newFontColor
-                }
+                font: fontUpdate
             };
         });
         edgesDataset.update(edgeUpdates);
@@ -381,18 +392,31 @@ async function init() {
         infoPanel.classList.remove("fixed");
     };
 
+    // in main.js
+
     network.on("click", params => {
-        pinnedNodeId = params.nodes[0] || null;
-        pinnedEdgeId = params.edges[0] || null;
+        let clickedNodeId = params.nodes[0] || null;
+
+        // If a node is currently pinned, check if the newly clicked node is a dimmed one.
+        // If so, treat it as a click on the background to un-pin everything.
+        if (clickedNodeId && pinnedNodeId) {
+            const distMap = getDistancesUpToTwoHops(network, pinnedNodeId);
+            if (distMap[clickedNodeId] === undefined || distMap[clickedNodeId] > 2) {
+                clickedNodeId = null; // Ignore click on dimmed node
+            }
+        }
+
+        pinnedNodeId = clickedNodeId;
+        // Only select an edge if no node was selected
+        pinnedEdgeId = clickedNodeId ? null : params.edges[0] || null;
 
         if (pinnedNodeId) {
-            pinnedEdgeId = null;
             const selectedNode = nodesDataset.get(pinnedNodeId);
             showInfo(getNodeInfoHtml(selectedNode.data, selectedNode.group));
         } else if (pinnedEdgeId) {
-            pinnedNodeId = null;
             showInfo(getEdgeInfoHtml(edgesDataset.get(pinnedEdgeId)));
         } else {
+            // This now correctly triggers when clicking the background OR a dimmed node
             network.unselectAll();
             hideInfo();
         }

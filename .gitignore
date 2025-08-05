@@ -1,6 +1,6 @@
 .DS_Store
 upload.sh
 notes.md
-prompt.md
+prompt.*
 rdf/test.ttl
 rdf/graph.ttl

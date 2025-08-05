@@ -472,10 +472,14 @@ function populateSettings(classRows, predicateRows) {
     
     const iriToKeyMap = {};
     const prefixMap = {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#", "owl": "http://www.w3.org/2002/07/owl#",
-        "systemmap": "https://agriculture.ld.admin.ch/system-map/", "schema": "http://schema.org/",
-        "dcat": "http://www.w3.org/ns/dcat#", "prov": "http://www.w3.org/ns/prov#",
-        "service": "http://purl.org/ontology/service#", "dcterms": "http://purl.org/dc/terms/"
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "systemmap": "https://agriculture.ld.admin.ch/system-map/",
+        "schema": "http://schema.org/",
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "prov": "http://www.w3.org/ns/prov#",
+        "service": "http://purl.org/ontology/service#",
+        "dcterms": "http://purl.org/dc/terms/"
     };
     for (const key in PREDICATE_MAP) {
         const [prefix, suffix] = PREDICATE_MAP[key].split(':');

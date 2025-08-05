@@ -155,6 +155,13 @@ async function init() {
         getSparqlData(NODE_QUERY), getSparqlData(EDGE_QUERY)
     ]);
 
+    // Create a map from group name to its translated label for the info panel chip
+    const classLabelsByGroup = {};
+    classesJson.results.bindings.forEach(row => {
+        const groupName = mapClassIriToGroup(row.iri.value);
+        classLabelsByGroup[groupName] = row.label.value || groupName;
+    });
+
     setupSettingsPanel(classesJson.results.bindings, predicatesJson.results.bindings);
 
     const nodes = nodesJson.results.bindings.map(row => {
@@ -336,8 +343,9 @@ async function init() {
         pinnedEdgeId = params.edges[0] || null;
 
         if (pinnedNodeId) {
-            pinnedEdgeId = null; 
-            showInfo(getNodeInfoHtml(nodesDataset.get(pinnedNodeId).data));
+            pinnedEdgeId = null;
+            const selectedNode = nodesDataset.get(pinnedNodeId);
+            showInfo(getNodeInfoHtml(selectedNode.data, selectedNode.group));
         } else if (pinnedEdgeId) {
             pinnedNodeId = null;
             showInfo(getEdgeInfoHtml(edgesDataset.get(pinnedEdgeId)));
@@ -355,12 +363,34 @@ async function init() {
         }
     });
 
-    const getNodeInfoHtml = ({ iri, fullLabel, abbreviation, comment, isFallback, labelLang }) => {
-        let html = `<a href="${iri}" target="_blank"><small><code>${shortenIri(iri)}</code></small></a><br/><h4>`;
-        html += isFallback ? `${labelLang.toUpperCase()}: <i>${fullLabel}</i>` : fullLabel;
-        if (abbreviation) html += ` (${abbreviation})`;
-        html += `</h4>`;
-        if (comment) html += `<p><small>${comment}</small></p>`;
+    const getNodeInfoHtml = ({ iri, fullLabel, abbreviation, comment, isFallback, labelLang }, group) => {
+        const chipStyle = groupColors[group] || groupColors.Other;
+        const chipLabel = classLabelsByGroup[group] || group;
+    
+        const inlineStyle = `
+            background-color: ${chipStyle.background};
+            border-color: ${chipStyle.border};
+            color: ${chipStyle.font.color};
+        `;
+    
+        const classChipHtml = `<span class="info-panel-chip" style="${inlineStyle}">${chipLabel}</span>`;
+    
+        let titleHtml = '<h4>';
+        titleHtml += isFallback ? `${labelLang.toUpperCase()}: <i>${fullLabel}</i>` : fullLabel;
+        if (abbreviation) titleHtml += ` (${abbreviation})`;
+        titleHtml += '</h4>';
+    
+        let html = `
+            <a href="${iri}" target="_blank"><small><code>${shortenIri(iri)}</code></small></a>
+            <div class="info-panel-header">
+                ${titleHtml}${classChipHtml}
+            </div>`;
+        // html += `<a href="${iri}" target="_blank"><small><code>${shortenIri(iri)}</code></small></a>`;
+    
+        if (comment) {
+            html += `<p class="info-panel-comment"><small>${comment}</small></p>`;
+        }
+    
         return html;
     };
     

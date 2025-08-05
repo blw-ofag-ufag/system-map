@@ -1,15 +1,15 @@
 :root {
-    --color-highlight:          #ffa551 ;
-    --color-class-dataset:      #354C5D ;
+    --color-highlight: #ffa551 ;
+    --color-class-dataset: #354C5D ;
     --color-class-organization: #D2D9E4 ;
-    --color-class-service:      #DBCCA0 ;
-    --color-class-system:       #1967D3 ;
-    --color-font-normal:        #000000 ;
-    --color-font-dimmed:        #666666 ;
-    --color-foreground:         #000000 ;
-    --color-background:         #ffffff ;
-    --color-grey:               #cccccc ;
-    --color-grey-light:         #eeeeee ;
+    --color-class-service: #DBCCA0 ;
+    --color-class-system: #1967D3 ;
+    --color-font-normal: #000000 ;
+    --color-font-dimmed: #666666 ;
+    --color-foreground: #000000 ;
+    --color-background: #ffffff ;
+    --color-grey: #cccccc ;
+    --color-grey-light: #eeeeee ;
 }
 html, body {
     width: 100%;
@@ -243,4 +243,36 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--color-foreground);
     width: 12rem;
     outline: none;
+}
+.info-panel-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+.info-panel-header h4 {
+    margin: 0;
+}
+.info-panel-chip {
+    padding: 1px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+    border-width: 1px;
+    border-style: solid;
+    margin-top: 10px;
+}
+#infoPanel h4 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.info-panel-comment {
+    margin-top: 10px;
+}
+#infoPanel {
+    word-wrap: break-word;
 }

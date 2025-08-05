@@ -3,11 +3,10 @@
 This repository is set up to gather and visualize information about IT systems, the data those contain and their operating organizations in the Swiss agri-food sector. You can visually explore this work on the following pages:
 
 - [**DigiAgriFood system map**](https://blw-ofag-ufag.github.io/system-map/index.html?lang=de), a visualization of the system map knowledge graph that specifically shows the classes organization, system and information unit.
-- [**Circular system map**](https://blw-ofag-ufag.github.io/system-map/circle), an alternative visualization in circular arrangement.
-- [**Table on a federal demo site**](https://blw-ofag-ufag.github.io/system-map/table/) that shows (a) how quickly we can query LINDAS data and perform some computation and (b) how this information can be displayed on a (federal) webpage.
-- [**Standalone search site**](https://blw-ofag-ufag.github.io/system-map/search) to help you find an entity in case you're lost.
+- [**Circular system map**](https://blw-ofag-ufag.github.io/system-map/varia/circle), an alternative visualization in circular arrangement.
+- [**Table on a federal demo site**](https://blw-ofag-ufag.github.io/system-map/varia/table/) that shows (a) how quickly we can query LINDAS data and perform some computation and (b) how this information can be displayed on a (federal) webpage.
+- [**Standalone search site**](https://blw-ofag-ufag.github.io/system-map/varia/search) to help you find an entity in case you're lost.
 - [**Nanoid generator**](https://blw-ofag-ufag.github.io/system-map/nanoid) just for internal use.
-- [**Ontology visualization**](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/system-map/refs/heads/main/rdf/ontology.ttl) made with WebVOWL, allowing to get a quick grasp of the ontology underlying the system map.
 
 If instead you are interested in the *actual* data, you can have a look at the following files:
 

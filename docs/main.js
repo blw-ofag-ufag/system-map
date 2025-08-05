@@ -308,7 +308,7 @@ async function init() {
                     // Edge is within the 2-hop subgraph. Dim it if it connects to a 2-hop node.
                     const maxDist = Math.max(distFrom, distTo);
                     if (maxDist === 2) {
-                        const dimRatio = 0.8;
+                        const dimRatio = 0.5;
                         newColor = blendHexColors('#000000', '#FAFAFA', dimRatio);
                         newFontColor = blendHexColors('#000000', '#FAFAFA', dimRatio);
                         newWidth = 1;

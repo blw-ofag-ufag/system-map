@@ -3,11 +3,10 @@
 This repository is set up to gather and visualize information about IT systems, the data those contain and their operating organizations in the Swiss agri-food sector. You can visually explore this work on the following pages:
 
 - [**DigiAgriFood system map**](https://blw-ofag-ufag.github.io/system-map/index.html?lang=de), a visualization of the system map knowledge graph that specifically shows the classes organization, system and information unit.
-- [**Circular system map**](https://blw-ofag-ufag.github.io/system-map/circle), an alternative visualization in circular arrangement.
-- [**Table on a federal demo site**](https://blw-ofag-ufag.github.io/system-map/table/) that shows (a) how quickly we can query LINDAS data and perform some computation and (b) how this information can be displayed on a (federal) webpage.
-- [**Standalone search site**](https://blw-ofag-ufag.github.io/system-map/search) to help you find an entity in case you're lost.
+- [**Circular system map**](https://blw-ofag-ufag.github.io/system-map/varia/circle), an alternative visualization in circular arrangement.
+- [**Table on a federal demo site**](https://blw-ofag-ufag.github.io/system-map/varia/table/) that shows (a) how quickly we can query LINDAS data and perform some computation and (b) how this information can be displayed on a (federal) webpage.
+- [**Standalone search site**](https://blw-ofag-ufag.github.io/system-map/varia/search) to help you find an entity in case you're lost.
 - [**Nanoid generator**](https://blw-ofag-ufag.github.io/system-map/nanoid) just for internal use.
-- [**Ontology visualization**](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/system-map/refs/heads/main/rdf/ontology.ttl) made with WebVOWL, allowing to get a quick grasp of the ontology underlying the system map.
 
 If instead you are interested in the *actual* data, you can have a look at the following files:
 
@@ -18,20 +17,33 @@ Actually, there is a python script *reasoning* over the two files. This is descr
 
 # ⚙️ Setting query parameters in the system map visualization
 
-In the [DigiAgriFood system map](https://blw-ofag-ufag.github.io/system-map/index.html), we can set URL parameters to change the language or the underlying LINDAS SPARQL query. For example, you might want to visualize only IT systems and the data flow for the Swiss agri-food sector, without any organizational information, but in French. You can do that with:
+The visualisation is driven entirely from its own URL.
+Add or change the parameters below to filter what you see or to switch language.
 
-[`https://blw-ofag-ufag.github.io/system-map/index.html?lang=fr&organization=false`](https://blw-ofag-ufag.github.io/system-map/index.html?lang=fr&organization=false)
+| Parameter          | Values & Format                                                                      | Default           | What it does                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------ | ------------------------------------------------------------------------------------ | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`lang`**         | `de`, `fr`, `it`, `en`                                                               | `de`              | Pick the UI language for labels and comments. If the chosen language is missing, the app falls back to **en → de → fr → it** and shows the fall-back text in *italic*.                                                                                                                                                                                                                                                                             |
+| **`organization`** | `true` \| `false`                                                                    | `true`            | Show or hide **organisations** (`schema:Organization`).                                                                                                                                                                                                                                                                                                                                                                                            |
+| **`system`**       | `true` \| `false`                                                                    | `true`            | Show or hide **IT systems** (`schema:SoftwareApplication`).                                                                                                                                                                                                                                                                                                                                                                                        |
+| **`information`**  | `true` \| `false`                                                                    | `true`            | Show or hide **information units** (`dcat:Dataset`).                                                                                                                                                                                                                                                                                                                                                                                               |
+| **`predicates`**   | *semicolon-, comma- or plus-separated* list of keys<br>`isPartOf;parentOrg;provides` | *(empty)* = *all* | Limit the **edge types** that are fetched from LINDAS. Keys map to properties as follows:<br>`isPartOf` → `dcterms:isPartOf`<br>`wasDerivedFrom` → `prov:wasDerivedFrom`<br>`parentOrg` → `schema:parentOrganization`<br>`operates` → `systemmap:operates`<br>`owns` → `systemmap:owns`<br>`contains` → `systemmap:contains`<br>`usesMasterData` → `systemmap:usesMasterData`<br>`memberOf` → `schema:memberOf`<br>`provides` → `service:provides` |
+| **`infopanel`**    | `true` \| `false`                                                                    | `true`            | Show or hide the info-panel (top-right).                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **`legend`**       | `true` \| `false`                                                                    | `true`            | Show or hide the legend (bottom-left).                                                                                                                                                                                                                                                                                                                                                                                                             |
 
-Here's a table of the possible URL parameters, descriptions and their default values.
+*Only systems and their data flows, French UI:*
 
-| Parameter     | Possible values | Default | Description |
-|--------------|--------|---------|-------------|
-| `lang`       | `de`, `fr`, `it`, `en` | `de`    | Defines the language for labels and descriptions. Currently, the graph contains *some* langstrings in German, French, Italian and English. If the node or edge label is not found in said language, a question mark is shown instead. |
-| `organization` | `true`, `false` | `true` | Determines whether organizations (`schema:Organization`) should be displayed. |
-| `system`     | `true`, `false` | `true` | Determines whether IT systems (`schema:SoftwareApplication`) should be displayed. |
-| `information` | `true`, `false` | `true` | Determines whether information units (`systemmap:Information`) should be displayed. |
-| `infopanel` | `true`, `false` | `true` | Determines whether the infopanel (top right) should be displayed when hovering any entity. |
-| `legend` | `true`, `false` | `true` | Determines whether the legend (bottom left) should be displayed. |
+```
+…/index.html?lang=fr&organization=false
+```
+
+*Everything in German, but show **only** “is part of”, “parent organisation” and “provides” edges:*
+
+```
+…/index.html?lang=de&predicates=isPartOf;parentOrg;provides
+```
+
+If the `predicates` parameter is omitted (or all keys are invalid) the
+visualisation falls back to **all** edge types listed above.
 
 # 🔎 Examples of SPARQL queries from LINDAS
 

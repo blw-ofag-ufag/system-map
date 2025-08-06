@@ -2,20 +2,11 @@
  * Optional: shorten label if it's too long
  */
 function shortenLabel(label, abbreviation) {
-    // If combined length is fairly short, show them fully
-    if (label.length + abbreviation.length <= 40) {
-        return abbreviation ?
-            `${label} (${abbreviation})` :
-            label;
+    if (label.length + (abbreviation || '').length <= 40) {
+        return abbreviation ? `${label} (${abbreviation})` : label;
     }
-
-    // If label alone is short enough, show label
     if (label.length <= 40) return label;
-
-    // Otherwise prefer abbreviation if present
     if (abbreviation) return abbreviation;
-
-    // Or else truncate
     return label.substring(0, 40) + "...";
 }
 
@@ -23,16 +14,15 @@ function shortenLabel(label, abbreviation) {
  * BFS up to 2 hops. Returns { nodeId: distance }.
  */
 function getDistancesUpToTwoHops(network, startId) {
-    const distMap = {};
-    distMap[startId] = 0;
+    const distMap = {
+        [startId]: 0
+    };
     const queue = [startId];
-
     while (queue.length > 0) {
         const current = queue.shift();
         const currentDist = distMap[current];
         if (currentDist < 2) {
-            const neighbors = network.getConnectedNodes(current);
-            neighbors.forEach((nbr) => {
+            network.getConnectedNodes(current).forEach(nbr => {
                 if (distMap[nbr] === undefined) {
                     distMap[nbr] = currentDist + 1;
                     queue.push(nbr);
@@ -45,251 +35,230 @@ function getDistancesUpToTwoHops(network, startId) {
 
 /**
  * Blend two hex colors by a ratio in [0..1].
- * ratio=0 => c1, ratio=1 => c2
  */
 function blendHexColors(c1, c2, ratio) {
-    c1 = c1.replace("#", "");
-    c2 = c2.replace("#", "");
-    const r1 = parseInt(c1.substring(0, 2), 16);
-    const g1 = parseInt(c1.substring(2, 4), 16);
-    const b1 = parseInt(c1.substring(4, 6), 16);
-
-    const r2 = parseInt(c2.substring(0, 2), 16);
-    const g2 = parseInt(c2.substring(2, 4), 16);
-    const b2 = parseInt(c2.substring(4, 6), 16);
-
-    const r = Math.round(r1 + ratio * (r2 - r1));
-    const g = Math.round(g1 + ratio * (g2 - g1));
-    const b = Math.round(b1 + ratio * (b2 - b1));
-
-    return (
-        "#" + [r, g, b]
-        .map(val => val.toString(16).padStart(2, "0"))
-        .join("")
-    );
+    const hexToRgb = (hex) => hex.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, (m, r, g, b) => '#' + r + r + g + g + b + b).substring(1).match(/.{2}/g).map(x => parseInt(x, 16));
+    const rgbToHex = (r, g, b) => "#" + [r, g, b].map(x => Math.round(x).toString(16).padStart(2, '0')).join('');
+    const [r1, g1, b1] = hexToRgb(c1);
+    const [r2, g2, b2] = hexToRgb(c2);
+    return rgbToHex(r1 + ratio * (r2 - r1), g1 + ratio * (g2 - g1), b1 + ratio * (b2 - b1));
 }
 
 /**
  * Helper func to get value of an URL param
- * @param {string} name name of the URL param
- * @returns value of the URL param with given name
  */
 function getParam(name) {
-    const params = new URLSearchParams(window.location.search);
-    return params.get(name)
+    return new URLSearchParams(window.location.search).get(name);
 }
 
 /**
- * Helper func to set value of an URL param and redirects
- * @paramsObj object with key-value pairs of URL params to set
+ * Helper func to set URL params and trigger a page reload.
  */
-function setParamsRedirect(paramsObj) {
+function setParamsAndReload(paramsObj) {
     const params = new URLSearchParams(window.location.search);
-
     for (const [key, value] of Object.entries(paramsObj)) {
-        params.set(key, value);
+        (value === null || value === undefined || value === true) ? params.delete(key): params.set(key, value);
     }
+    if (params.get('infopanel') === 'true') params.delete('infopanel');
 
+    window.location.href = `${window.location.pathname}?${params.toString()}`;
+}
+
+/**
+ * Helper func to set URL params without reloading the page.
+ */
+function setParamsWithoutReload(paramsObj) {
+    const params = new URLSearchParams(window.location.search);
+    for (const [key, value] of Object.entries(paramsObj)) {
+        if (value === null || value === undefined || value === '') {
+            params.delete(key);
+        } else {
+            params.set(key, value);
+        }
+    }
     const newUrl = `${window.location.pathname}?${params.toString()}`;
-    window.location.href = newUrl;
+    history.pushState(null, '', newUrl);
 }
 
 /**
- * Event-function to show or hide certain classes, called by checkboxes
- * @param {*} element DOM-element of a checkbox input
+ * Convert a full IRI to a compact CURIE using the central configuration.
  */
-function toggleGroup(element) {
-    const groupName = JSON.parse(element.getAttribute("data-group"));
-    const checked = element.checked
-    setParamsRedirect({ [groupName.toLowerCase()]: checked });
+function shortenIri(iri) {
+    for (const [baseIRI, prefix] of Object.entries(APP_CONFIG.PREFIXES)) {
+        if (iri.startsWith(baseIRI)) return `${prefix}:${iri.substring(baseIRI.length)}`;
+    }
+    return iri;
 }
 
 /**
- * Event-function to change the language of the webapp
- * @param {*} element DOM-element of the language select
+ * Configures the search box and its event listeners.
  */
-function changeLanguage(element) {
-    const lang = element.value
-    setParamsRedirect({lang: lang})
-}
+function setupSearchBox(onSearchChange) {
+    const searchBox = document.getElementById('search-box');
+    if (!searchBox) return;
 
-/**
- * Event-function to toggle focus mode of the webapp
- * @param {*} element DOM-element of the focus mode checkbox
- */
-function toggleFocusMode(element) {
-    const isChecked = element.checked;
-    setParamsRedirect({
-        infopanel: isChecked ? "false" : "true",
-        legend: isChecked ? "false" : "true"
+    searchBox.value = getParam('search') || '';
+
+    let searchTimeout;
+    searchBox.addEventListener('keyup', (e) => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            const searchTerm = e.target.value.trim();
+            setParamsWithoutReload({
+                search: searchTerm || null
+            });
+            onSearchChange();
+        }, 300); // Update after 300ms of inactivity
     });
 }
 
-
 /**
- * Name of focus mode label based on language
- */
-const focusModeLabels = {
-    "de": "Fokus-Modus",
-    "fr": "Mode Focus",
-    "it": "Modalità Focus",
-    "en": "Focus Mode"
-}
-
-/**
- * Build the network and set up the BFS highlight + info panel
+ * Main application initialization.
  */
 async function init() {
+    // Initialize style constants by reading them from the CSS variables
+    APP_CONFIG.initializeStylesFromCSS();
 
-    // Track if a node/edge is pinned (i.e. clicked) so that the info panel remains fixed.
-    let pinnedNodeId = null;
-    let pinnedEdgeId = null;
+    const currentLang = getParam("lang") || "de";
+    let pinnedNodeId = null,
+        pinnedEdgeId = null;
 
-    // Hide info panel and legend if URL params are set
-    setComponentsVisibility()
-
-    setLanguageOption()
-
-    async function fetchAndDisplayTitle() {
-        try {
-            const titleJson = await getSparqlData(TITLE_QUERY);
-            // Assuming the first binding contains the title
-            const title = titleJson.results.bindings[0]?.title.value;
-            if (title) {
-            const titleEl = document.getElementById("systemmapTitle");
-            titleEl.textContent = title;
-            } else {
-            console.warn("No title found in SPARQL response.");
-            }
-        } catch (error) {
-            console.error("Error fetching title:", error);
-        }
+    if (getParam("infopanel") === "false") {
+        document.getElementById("infoPanel").classList.add("param-hidden");
     }
 
-    await fetchAndDisplayTitle();
-    
-    // 1) Fetch node & edge data from your queries (defined in query.js)
-    const classesJson = await getSparqlData(CLASS_QUERY);
-    const nodesJson = await getSparqlData(NODE_QUERY);
-    const edgesJson = await getSparqlData(EDGE_QUERY);
+    try {
+        const titleJson = await getSparqlData(TITLE_QUERY);
+        document.getElementById("systemmapTitle").textContent = titleJson.results.bindings[0]?.title.value || "System Map";
+    } catch (error) {
+        console.error("Error fetching title:", error);
+    }
 
-    // 2) Parse them into Vis-friendly arrays
+    const [classesJson, predicatesJson, nodesJson, edgesJson] = await Promise.all([
+        getSparqlData(CLASS_QUERY), getSparqlData(PREDICATES_QUERY),
+        getSparqlData(NODE_QUERY), getSparqlData(EDGE_QUERY)
+    ]);
+
+    // Create a map from group name to its translated label for the info panel chip
+    const classLabelsByGroup = {};
+    classesJson.results.bindings.forEach(row => {
+        const groupName = mapClassIriToGroup(row.iri.value);
+        classLabelsByGroup[groupName] = row.label.value || groupName;
+    });
+
+    setupSettingsPanel(classesJson.results.bindings, predicatesJson.results.bindings);
+
     const nodes = nodesJson.results.bindings.map(row => {
-        const iri = row.id.value;
-        const groupIri = row.group.value;
-        const label = row.displayLabel.value; // use displayLabel from the query
-        const comment = row.comment ? row.comment.value : "";
-        const abbreviation = row.abbreviation ? row.abbreviation.value : "";
-    
-        const groupName = mapClassIriToGroup(groupIri);
-    
+        const label = row.displayLabel.value;
+        const abbreviation = row.abbreviation.value;
+        const labelLang = row.displayLabel["xml:lang"] || "";
+        const htmlLabel = labelLang && labelLang !== currentLang ?
+            `<b>${labelLang.toUpperCase()}:</b> <i>${shortenLabel(label, abbreviation)}</i>` :
+            `<b>${shortenLabel(label, abbreviation)}</b>`;
+
+        const groupName = mapClassIriToGroup(row.group.value);
         return {
-            id: iri,
-            label: `<b>${shortenLabel(label, abbreviation)}</b>`,
+            id: row.id.value,
+            label: htmlLabel,
             group: groupName,
-            // Store data for the info panel
             data: {
-                iri: iri,
+                iri: row.id.value,
                 fullLabel: label,
-                abbreviation: abbreviation,
-                comment: comment
+                abbreviation,
+                comment: row.comment.value,
+                isFallback: labelLang && labelLang !== currentLang,
+                labelLang
             }
         };
-    });    
+    });
 
     const edges = edgesJson.results.bindings.map(row => {
         const edge = {
             from: row.from.value,
             to: row.to.value,
             label: row.label.value,
-            comment: row.comment ? row.comment.value : ""
+            comment: row.comment.value,
+            iri: row.id.value
         };
-        
-        // If this edge represents an "informs" relationship,
-        // add dashed styling and increase its length.
-        if (row.id.value === "http://www.w3.org/ns/prov#wasDerivedFrom" ||
-            row.id.value === "http://purl.org/ontology/service#consumes" ||
-            row.id.value === "https://agriculture.ld.admin.ch/system-map/usesMasterData" ||
-            row.id.value === "https://agriculture.ld.admin.ch/system-map/access" ||
-            row.id.value === "https://agriculture.ld.admin.ch/system-map/references" ) {
 
-            edge.dashes = [3, 7]; // Dash pattern: 5px dash, 5px gap
-            edge.length = 800;    // Increase edge length to allow more spacing
+        // Use central config for dashed predicates
+        if (APP_CONFIG.DASHED_PREDICATES.includes(edge.iri)) {
+            edge.dashes = [2, 10];
+            edge.length = 500;
+            edge.springConstant = 0.001;
         }
-        
         return edge;
     });
 
-    // 3) Create Vis DataSets
     const nodesDataset = new vis.DataSet(nodes);
     const edgesDataset = new vis.DataSet(edges);
-
-    // 4) Create the network
     const container = document.getElementById("network");
     const data = {
         nodes: nodesDataset,
         edges: edgesDataset
     };
 
-    // Keep your old physics/layout/chosen styles
     const options = {
-
         nodes: {
             shape: "box",
             widthConstraint: 150,
-            heightConstraint: 50,
-            font: {
-                color: "#000000",
-                face: "Poppins",
-                multi: "html"
-            },
+            heightConstraint: 40,
             chosen: {
-                node: function(values, id, selected, hovering) {
+                node: (values, id, selected, hovering) => {
+                    // Only apply hover effect if no node is pinned, OR if the hovered
+                    // node is within the 2-hop distance of the pinned node.
                     if (hovering) {
-                        values.borderWidth = 3;; // Set border thickness on hover
-                        values.borderColor = "#000000"; // Yellow border on hover
+                        let isDimmed = false;
+                        if (pinnedNodeId) {
+                            const distMap = getDistancesUpToTwoHops(network, pinnedNodeId);
+                            if (distMap[id] === undefined || distMap[id] > 2) {
+                                isDimmed = true;
+                            }
+                        }
+                        // Apply highlight only if the node is not dimmed
+                        if (!isDimmed) {
+                            values.borderWidth = 3;
+                            values.borderColor = "#000";
+                        }
                     }
                 }
             }
         },
         edges: {
-            width: 1,
+            width: 2,
             selectionWidth: 1,
             font: {
-                face: "Poppins"
+                face: "Poppins",
+                color: "#000000"
             },
             chosen: false,
             arrows: {
                 to: {
-                    enabled: true
-                },
-                from: {
-                    enabled: false
+                    enabled: true,
+                    scaleFactor: 0.8
                 }
+            },
+            color: {
+                color: '#000000',
+                highlight: '#000000',
+                inherit: false
             }
         },
-        groups: {
-            System:      {  color: { background: "#FF7F51", border: "#000000" }, font: { color: "#000000" } },
-            Information: {  color: { background: "#ADB6C4", border: "#000000" }, font: { color: "#000000" } },
-            Organization: { color: { background: "#383743", border: "#000000" }, font: { color: "#FFFFFF" } },
-            Service: {      color: { background: "#0080ae", border: "#000000" }, font: { color: "#FFFFFF" } },
-            Other: {        color: { background: "#383743", border: "#000000" }, font: { color: "#FFFFFF" } },
-        },
+        groups: APP_CONFIG.GROUP_STYLES, // Use styles from config
         interaction: {
             hover: true,
             dragNodes: true,
-            hoverConnectedEdges: true,
-            selectConnectedEdges: false,
+            hoverConnectedEdges: false,
             zoomView: true,
             dragView: true
         },
         physics: {
             enabled: true,
             barnesHut: {
-                gravitationalConstant: -8000, // negative in order to have nodes push each other appart
-                centralGravity: 0.1, // increase for stronger central gravity, i.e. that nodes move to the center
-                springLength: 300,
-                springConstant: 0.1 // increase to make spring more rigid
+                gravitationalConstant: -9000,
+                centralGravity: 0.05,
+                springLength: 250,
+                springConstant: 0.2
             },
             stabilization: {
                 iterations: 100
@@ -299,284 +268,341 @@ async function init() {
 
     const network = new vis.Network(container, data, options);
 
-    // 5) The BFS highlight color-blending
-    //    Map group => original background/border/font
-    const groupColors = {
-        System: {       background: "#FF7F51", border: "#000000", font: "#000000" },
-        Information: {  background: "#ADB6C4", border: "#000000", font: "#000000" },
-        Organization: { background: "#383743", border: "#000000", font: "#FFFFFF" },
-        Service: {      background: "#0080ae", border: "#000000", font: "#FFFFFF" },
-        Other: {        background: "#383743", border: "#000000", font: "#FFFFFF" }
-    };
+    // Get original styles from the central config
+    const originalStyles = Object.fromEntries(nodes.map(n => {
+        const style = APP_CONFIG.GROUP_STYLES[n.group] || APP_CONFIG.GROUP_STYLES.Other;
+        return [n.id, {
+            background: style.background,
+            border: style.border,
+            fontColor: style.font.color
+        }];
+    }));
 
-    // Store each node’s “original” color
-    const originalStyles = {};
-    nodes.forEach(n => {
-        const c = groupColors[n.group] || groupColors.Other;
-        originalStyles[n.id] = {
-            background: c.background,
-            border: c.border,
-            fontColor: c.font
-        };
-    });
-
-    // 6) The info panel (top-right)
     const infoPanel = document.getElementById("infoPanel");
 
-    function showNodeInfo(nodeData) {
-        const {
-            iri,
-            fullLabel,
-            abbreviation,
-            comment
-        } = nodeData.data;
-        let html = `<a href='${iri}' target='blank'><small><code>${iri}</code></small></a><br>`;
-        html += `<h4>${fullLabel}`;
-        if (abbreviation) {
-            html += ` (${abbreviation})`;
-        }
-        html += `</h4>`;
-        if (comment) {
-            html += `<p><small>${comment}</small></p>`;
-        }
-        infoPanel.innerHTML = html;
-        infoPanel.classList.remove("hidden");
-    }
+    /**
+     * Central function to apply all dynamic styling (dimming, search) to nodes and edges.
+     */
+    const applyAllStyles = () => {
+        const searchTerm = (getParam("search") || "").toLowerCase();
+        const distMap = pinnedNodeId ? getDistancesUpToTwoHops(network, pinnedNodeId) : null;
 
-    function hideNodeInfo() {
-        infoPanel.classList.add("hidden");
-        infoPanel.innerHTML = "";
-        // Ensure the info panel is not fixed anymore
-        infoPanel.classList.remove("fixed");
-    }
+        // Node styling
+        const nodeUpdates = nodes.map(n => {
+            const originalStyle = originalStyles[n.id];
+            let newColor = originalStyle.background;
+            let newBorder = originalStyle.border;
+            let newFont = originalStyle.fontColor;
 
-    function showEdgeInfo(edgeData) {
-        // Build HTML for edge info (IRI as a clickable link, label, and comment)
-        let html = `<h4>${edgeData.label}</h4>`;
-        if (edgeData.comment) {
-            html += `<p><small>${edgeData.comment}</small></p>`;
-        }
-        infoPanel.innerHTML = html;
-        infoPanel.classList.remove("hidden");
-    }
-    
-    function hideEdgeInfo() {
-        infoPanel.classList.add("hidden");
-        infoPanel.innerHTML = "";
-        infoPanel.classList.remove("fixed");
-    }
-
-    function updateDimmingEffect(startId) {
-        const distMap = getDistancesUpToTwoHops(network, startId);
-        // Update nodes
-        const updates = nodes.map(node => {
-            const dist = distMap[node.id];
-            let ratio = 1;
-            if (dist === 0 || dist === 1) {
-                ratio = 0;
-            } else if (dist === 2) {
-                ratio = 0.5;
+            if (distMap) {
+                const dist = distMap[n.id];
+                if (dist === undefined || dist > 2) {
+                    newColor = '#00000000';
+                    newBorder = '#00000000';
+                    newFont = '#00000000';
+                } else {
+                    const ratio = (dist === 2) ? 0.5 : 0;
+                    newColor = blendHexColors(originalStyle.background, "#ffffff", ratio);
+                    newBorder = blendHexColors(originalStyle.border, "#ffffff", ratio);
+                    newFont = blendHexColors(originalStyle.fontColor, "#ffffff", ratio);
+                }
             }
-            const { background, border, fontColor } = originalStyles[node.id];
-            const dimBG = "#F8F8F8";
-            const dimBorder = "#EEEEEE";
-            const dimFont = "#EEEEEE";
+
+            // Apply search highlighting, using the central config color
+            if (searchTerm) {
+                const isMatch = (
+                    (n.data.fullLabel || '').toLowerCase().includes(searchTerm) ||
+                    (n.data.comment || '').toLowerCase().includes(searchTerm) ||
+                    (n.data.abbreviation || '').toLowerCase().includes(searchTerm)
+                );
+                if (isMatch) {
+                    newColor = APP_CONFIG.SEARCH_HIGHLIGHT_COLOR.background;
+                    newBorder = APP_CONFIG.SEARCH_HIGHLIGHT_COLOR.border;
+                    newFont = APP_CONFIG.SEARCH_HIGHLIGHT_COLOR.font.color;
+                }
+            }
+
             return {
-                id: node.id,
+                id: n.id,
                 color: {
-                    background: blendHexColors(background, dimBG, ratio),
-                    border: blendHexColors(border, dimBorder, ratio)
+                    background: newColor,
+                    border: newBorder
                 },
                 font: {
-                    color: blendHexColors(fontColor, dimFont, ratio)
+                    color: newFont,
+                    multi: 'html',
+                    face: 'Poppins'
                 }
             };
         });
-        nodesDataset.update(updates);
-    
-        // Update edges
-        const edgeUpdates = edgesDataset.get().map(edge => {
-            const ratioFrom = (distMap[edge.from] === 0 || distMap[edge.from] === 1) ? 0 :
-                              (distMap[edge.from] === 2 ? 0.5 : 1);
-            const ratioTo = (distMap[edge.to] === 0 || distMap[edge.to] === 1) ? 0 :
-                            (distMap[edge.to] === 2 ? 0.5 : 1);
-            const ratioEdge = Math.max(ratioFrom, ratioTo);
-            const originalEdgeFontColor = "#000000";
-            const dimEdgeFontColor = "#CCCCCC";
+        nodesDataset.update(nodeUpdates);
+
+        // Edge styling logic
+        const allEdges = edgesDataset.get({
+            returnType: 'Array'
+        });
+        const edgeUpdates = allEdges.map(edge => {
+            let newColor = '#000000',
+                newWidth = 2,
+                fontUpdate = {
+                    color: '#000000',
+                    strokeWidth: 2
+                };
+
+            if (distMap) {
+                const distFrom = distMap[edge.from];
+                const distTo = distMap[edge.to];
+                const isOutOfScope = distFrom === undefined || distFrom > 2 || distTo === undefined || distTo > 2;
+
+                if (isOutOfScope) {
+                    newColor = '#00000000';
+                    newWidth = 1;
+                    fontUpdate.color = '#00000000';
+                    fontUpdate.strokeWidth = 0;
+                } else {
+                    const maxDist = Math.max(distFrom, distTo);
+                    if (maxDist === 2) {
+                        const dimRatio = 0.5;
+                        newColor = blendHexColors('#000000', '#ffffff', dimRatio);
+                        fontUpdate.color = blendHexColors('#000000', '#ffffff', dimRatio);
+                        newWidth = 1;
+                    }
+                    else {
+                    }
+                }
+            }
             return {
                 id: edge.id,
-                font: {
-                    color: blendHexColors(originalEdgeFontColor, dimEdgeFontColor, ratioEdge)
-                }
+                color: {
+                    color: newColor
+                },
+                width: newWidth,
+                font: fontUpdate
             };
         });
         edgesDataset.update(edgeUpdates);
-    }
+    };
 
-    function setLanguageOption() {
-        const selectBox = document.querySelector("#languageSelect")
-        const focusModeLabel = document.querySelector("#focusModeLabel")
+    setupSearchBox(applyAllStyles);
+    applyAllStyles();
 
-        langParam = getParam("lang")
-        if(langParam) {
-            selectBox.value = langParam
-            focusModeLabel.textContent = focusModeLabels[langParam] || focusModeLabels["de"];
-        }
-    }
+    const showInfo = (html) => {
+        infoPanel.innerHTML = html;
+        infoPanel.classList.remove("hidden");
+    };
+    const hideInfo = () => {
+        infoPanel.classList.add("hidden");
+        infoPanel.innerHTML = "";
+        infoPanel.classList.remove("fixed");
+    };
 
-    function setComponentsVisibility() {
-        const infopanelHidden = getParam("infopanel") === "false";
-        const legendHidden = getParam("legend") === "false";
+    // in main.js
 
-        if (infopanelHidden) {
-            document.getElementById("infoPanel").classList.add("param-hidden");
-        }
-        if (legendHidden) {
-            document.getElementById("legend").classList.add("param-hidden");
-        }
-        if (infopanelHidden && legendHidden) {
-            document.getElementById("focusModeCheckbox").checked = true;
-        }
+    network.on("click", params => {
+        let clickedNodeId = params.nodes[0] || null;
 
-    }
-
-    network.on("hoverNode", (params) => {
-        // If a node is pinned, do not update the dimming effect on hover.
-        if (pinnedNodeId) return;
-        const hoveredId = params.node;
-        updateDimmingEffect(hoveredId);
-        const hoveredNodeData = nodesDataset.get(hoveredId);
-        if (hoveredNodeData && hoveredNodeData.data) {
-            showNodeInfo(hoveredNodeData);
-        }
-    });
-    
-    network.on("blurNode", () => {
-        // When a node is pinned, leave the dimming effect intact.
-        if (pinnedNodeId) return;
-        // Restore original styles since no node is pinned.
-        const restoreArray = nodes.map(node => {
-            const { background, border, fontColor } = originalStyles[node.id];
-            return {
-                id: node.id,
-                color: { background, border },
-                font: { color: fontColor }
-            };
-        });
-        nodesDataset.update(restoreArray);
-        const edgeRestore = edgesDataset.get().map(edge => ({
-            id: edge.id,
-            font: { color: "#000000" }
-        }));
-        edgesDataset.update(edgeRestore);
-        hideNodeInfo();
-    });    
-
-    // When hovering over an edge, show its info (unless an entity is pinned)
-    network.on("hoverEdge", (params) => {
-        if (!pinnedEdgeId && !pinnedNodeId) {
-            const hoveredEdgeId = params.edge; // vis.js provides the hovered edge's id here
-            const edgeData = edgesDataset.get(hoveredEdgeId);
-            if (edgeData) {
-                showEdgeInfo(edgeData);
+        // If a node is currently pinned, check if the newly clicked node is a dimmed one.
+        // If so, treat it as a click on the background to un-pin everything.
+        if (clickedNodeId && pinnedNodeId) {
+            const distMap = getDistancesUpToTwoHops(network, pinnedNodeId);
+            if (distMap[clickedNodeId] === undefined || distMap[clickedNodeId] > 2) {
+                clickedNodeId = null; // Ignore click on dimmed node
             }
         }
-    });
 
-    network.on("blurEdge", () => {
-        if (!pinnedEdgeId && !pinnedNodeId) {
-            hideEdgeInfo();
+        pinnedNodeId = clickedNodeId;
+        // Only select an edge if no node was selected
+        pinnedEdgeId = clickedNodeId ? null : params.edges[0] || null;
+
+        if (pinnedNodeId) {
+            const selectedNode = nodesDataset.get(pinnedNodeId);
+            showInfo(getNodeInfoHtml(selectedNode.data, selectedNode.group));
+        } else if (pinnedEdgeId) {
+            showInfo(getEdgeInfoHtml(edgesDataset.get(pinnedEdgeId)));
+        } else {
+            // This now correctly triggers when clicking the background OR a dimmed node
+            network.unselectAll();
+            hideInfo();
         }
-    });
-    
-    network.on("click", (params) => {
-        if (params.nodes.length > 0) {
-            // A node was clicked — pin its info panel and fix the dimming.
-            pinnedNodeId = params.nodes[0];
-            pinnedEdgeId = null; // Clear any pinned edge.
-            const nodeData = nodesDataset.get(pinnedNodeId);
-            if (nodeData && nodeData.data) {
-                showNodeInfo(nodeData);
-            }
-            infoPanel.classList.add("fixed");
-            // Fix the dimming effect based on the clicked node.
-            updateDimmingEffect(pinnedNodeId);
-        } else if (params.edges.length > 0) {
-            // An edge was clicked — pin its info panel.
-            pinnedEdgeId = params.edges[0];
-            pinnedNodeId = null; // Clear any pinned node.
-            const edgeData = edgesDataset.get(pinnedEdgeId);
-            if (edgeData) {
-                showEdgeInfo(edgeData);
-            }
+
+        applyAllStyles();
+
+        if (pinnedNodeId || pinnedEdgeId) {
             infoPanel.classList.add("fixed");
         } else {
-            // Clicked on empty space — unpin and restore original styles.
-            pinnedNodeId = null;
-            pinnedEdgeId = null;
-            hideNodeInfo();
             infoPanel.classList.remove("fixed");
-            const restoreArray = nodes.map(node => {
-                const { background, border, fontColor } = originalStyles[node.id];
-                return {
-                    id: node.id,
-                    color: { background, border },
-                    font: { color: fontColor }
-                };
-            });
-            nodesDataset.update(restoreArray);
-            const edgeRestore = edgesDataset.get().map(edge => ({
-                id: edge.id,
-                font: { color: "#000000" }
-            }));
-            edgesDataset.update(edgeRestore);
         }
     });
 
-    function buildLegend(classRows) {
-        // Grab the legend <div>
-        const legendEl = document.getElementById("legend");
+    const getNodeInfoHtml = ({
+        iri,
+        fullLabel,
+        abbreviation,
+        comment,
+        isFallback,
+        labelLang
+    }, group) => {
+        // Use styles from central config
+        const chipStyle = APP_CONFIG.GROUP_STYLES[group] || APP_CONFIG.GROUP_STYLES.Other;
+        const chipLabel = classLabelsByGroup[group] || group;
 
-        // We'll accumulate HTML
-        let html = "";
+        const inlineStyle = `
+            background-color: ${chipStyle.background};
+            border-color: ${chipStyle.border};
+            color: ${chipStyle.font.color};
+        `;
 
-        classRows.forEach(row => {
-            // Each row: row.iri.value, row.label.value, row.comment.value, etc.
-            const iri = row.iri.value;
-            const label = row.label.value;
-            const comment = row.comment.value || "";
+        const classChipHtml = `<span class="info-panel-chip" style="${inlineStyle}">${chipLabel}</span>`;
 
-            // Convert IRI to group name using the same function you use for nodes
-            const groupName = mapClassIriToGroup(iri);
+        let titleHtml = '';
+        titleHtml += isFallback ? `${labelLang.toUpperCase()}: <i>${fullLabel}</i>` : fullLabel;
+        if (abbreviation) titleHtml += ` (${abbreviation})`;
+        titleHtml += '';
 
-            // Check if these objects are hidden based on URL params
-            const hidden = getParam(groupName.toLowerCase()) === "false"
+        let html = `
+            <a href="${iri}" target="_blank"><small><code>${shortenIri(iri)}</code></small></a>
+            <div class="info-panel-header">
+                <h4>${titleHtml} ${classChipHtml}</h4>
+            </div>`;
 
-            // Look up the color in your groupColors map
-            // Make sure it's the same `groupColors` used to color your nodes
-            const c = groupColors[groupName];
-            // If it's not recognized, fallback to groupColors.Other
-            const color = c || groupColors.Other;
+        if (comment) {
+            html += `<p class="info-panel-comment"><small>${comment}</small></p>`;
+        }
 
-            // We'll show a color box + label. Optionally also show comment.
-            html += `
-            <div class="legend-item">
-                <div class="legend-swatch" style="background: ${color.background}; border-color: ${color.border}"></div>
-                <div>
-                <strong class="${hidden ? "faded" : ""}">${label}</strong>
-                <input type="checkbox" ${hidden ? "" : "checked"} data-group='${JSON.stringify(groupName)}' onclick="toggleGroup(this)" />
-                <br style="${hidden ? "display: none;" : ""}">
-                <small style="${hidden ? "display: none;" : ""}">${comment}</small>
-                </div>
-            </div>
-            `;
-        });
+        return html;
+    };
 
-        legendEl.innerHTML = html;
-    }
-
-    buildLegend(classesJson.results.bindings);
+    const getEdgeInfoHtml = ({
+        iri,
+        label,
+        comment
+    }) => {
+        let html = iri ? `<a href="${iri}" target="_blank"><small><code>${shortenIri(iri)}</code></small></a><br/>` : '';
+        html += `<h4>${label}</h4>`;
+        if (comment) html += `<p><small>${comment}</small></p>`;
+        return html;
+    };
 }
 
-// Kick off init() once page loads
+/**
+ * Manages the settings panel logic, events, and state.
+ */
+function setupSettingsPanel(classRows, predicateRows) {
+    const overlay = document.getElementById('settings-overlay');
+    const trigger = document.getElementById('settings-trigger');
+
+    const openSettings = () => {
+        populateSettings(classRows, predicateRows);
+        overlay.classList.remove('hidden');
+    };
+    const closeSettings = () => overlay.classList.add('hidden');
+
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        openSettings();
+    });
+    document.getElementById('settingsCancel').addEventListener('click', closeSettings);
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeSettings();
+    });
+
+    document.getElementById('settingsSave').addEventListener('click', () => {
+        const params = {};
+        params.lang = document.getElementById('settingsLanguage').value;
+        params.infopanel = document.getElementById('settingsFocusMode').checked ? 'false' : null;
+        document.querySelectorAll('#settings-classes input').forEach(cb => {
+            params[cb.dataset.group.toLowerCase()] = cb.checked ? null : 'false';
+        });
+
+        // Use central config for predicate keys
+        const allPredicateKeys = Object.keys(APP_CONFIG.PREDICATE_MAP);
+        const selectedPreds = Array.from(document.querySelectorAll('#settings-predicates input')).filter(cb => cb.checked).map(cb => cb.dataset.key);
+        params.predicates = selectedPreds.length === allPredicateKeys.length ? null : selectedPreds.join(';');
+
+        setParamsAndReload(params);
+    });
+}
+
+/**
+ * Populates the settings form with values from URL params and SPARQL queries.
+ */
+function populateSettings(classRows, predicateRows) {
+    document.getElementById('settingsLanguage').value = getParam("lang") || "de";
+    document.getElementById('settingsFocusMode').checked = getParam("infopanel") === "false";
+
+    const createCheckboxItem = (container, {
+        id,
+        dataKey,
+        dataValue,
+        isChecked,
+        label,
+        comment,
+        uri,
+        curie,
+        swatchColor
+    }) => {
+        let html = `<div class="settings-list-item">`;
+        if (swatchColor) html += `<div class="settings-list-swatch" style="background: ${swatchColor}; border-color: #555;"></div>`;
+        html += `<div class="settings-list-item-content">
+                    <label>
+                        <input type="checkbox" id="${id}" data-${dataKey}="${dataValue}" ${isChecked ? 'checked' : ''}>
+                        <strong>${label}</strong>
+                        <code class="settings-curie"><a href="${uri}" target="_blank">${curie}<a></code>
+                    </label>
+                    ${comment ? `<span class="settings-list-item-comment">${comment}</span>`:``}
+                </div></div>`;
+        container.insertAdjacentHTML('beforeend', html);
+    };
+
+    const classesContainer = document.getElementById('settings-classes');
+    classesContainer.innerHTML = '';
+    classRows.forEach(row => {
+        const groupName = mapClassIriToGroup(row.iri.value);
+        createCheckboxItem(classesContainer, {
+            id: `setting-class-${groupName}`,
+            dataKey: 'group',
+            dataValue: groupName,
+            isChecked: getParam(groupName.toLowerCase()) !== "false",
+            label: row.label.value || 'No label',
+            comment: row.comment.value || 'No comment',
+            uri: row.iri.value,
+            curie: shortenIri(row.iri.value),
+            swatchColor: APP_CONFIG.GROUP_STYLES[groupName]?.background
+        });
+    });
+
+    const predicatesContainer = document.getElementById('settings-predicates');
+    predicatesContainer.innerHTML = '';
+    const rawPredParam = getParam("predicates");
+    const currentPreds = rawPredParam === null ? Object.keys(APP_CONFIG.PREDICATE_MAP) : (rawPredParam ? rawPredParam.split(/[;,+\s]+/) : []);
+
+    // Create a map of full IRIs to their short keys (e.g., 'http://...#isPartOf' -> 'isPartOf')
+    const iriToKeyMap = {};
+    const invertedPrefixes = Object.fromEntries(
+        Object.entries(APP_CONFIG.PREFIXES).map(([base, prefix]) => [prefix, base])
+    );
+    for (const [key, curie] of Object.entries(APP_CONFIG.PREDICATE_MAP)) {
+        const [prefix, suffix] = curie.split(':');
+        if (invertedPrefixes[prefix]) {
+            const iri = invertedPrefixes[prefix] + suffix;
+            iriToKeyMap[iri] = key;
+        }
+    }
+
+    predicateRows.sort((a, b) => (a.label.value || '').localeCompare(b.label.value || '')).forEach(row => {
+        const key = iriToKeyMap[row.iri.value];
+        if (key) {
+            createCheckboxItem(predicatesContainer, {
+                id: `setting-pred-${key}`,
+                dataKey: 'key',
+                dataValue: key,
+                isChecked: currentPreds.includes(key),
+                label: row.label.value || 'No label',
+                uri: row.iri.value,
+                curie: shortenIri(row.iri.value)
+            });
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", init);

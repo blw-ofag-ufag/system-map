@@ -454,15 +454,15 @@ async function init() {
 
         const classChipHtml = `<span class="info-panel-chip" style="${inlineStyle}">${chipLabel}</span>`;
 
-        let titleHtml = '<h4>';
+        let titleHtml = '';
         titleHtml += isFallback ? `${labelLang.toUpperCase()}: <i>${fullLabel}</i>` : fullLabel;
         if (abbreviation) titleHtml += ` (${abbreviation})`;
-        titleHtml += '</h4>';
+        titleHtml += '';
 
         let html = `
             <a href="${iri}" target="_blank"><small><code>${shortenIri(iri)}</code></small></a>
             <div class="info-panel-header">
-                ${titleHtml}${classChipHtml}
+                <h4>${titleHtml} ${classChipHtml}</h4>
             </div>`;
 
         if (comment) {

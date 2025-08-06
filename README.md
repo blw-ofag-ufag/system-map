@@ -4,14 +4,13 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/blw-ofag-ufag/metadata.svg)](https://github.com/blw-ofag-ufag/metadata/commits)
 [![GitHub issues](https://img.shields.io/github/issues/blw-ofag-ufag/metadata.svg)](https://github.com/blw-ofag-ufag/metadata/issues)
 
+<kbd>
+  <a href="https://blw-ofag-ufag.github.io/system-map/index.html" target="_blank"><img src="https://github.com/user-attachments/assets/87d303c3-ed30-42af-888d-aa8abc307da7" /></a>
+</kbd>
+
 # 🧭 A system map for the Federal Office for Agriculture
 
 This repository is set up to gather and visualize information about IT systems, the data those contain and their operating organizations in the Swiss agri-food sector.
-
-<kbd>
-  <a href="https://blw-ofag-ufag.github.io/system-map/index.html" target="_blank"><img src="https://github.com/user-attachments/assets/87d303c3-ed30-42af-888d-aa8abc307da7" alt="…" /></a>
-</kbd>
-
 You can visually explore this work on the following pages:
 
 - [**DigiAgriFood system map**](https://blw-ofag-ufag.github.io/system-map/index.html?lang=de), a visualization of the system map knowledge graph that specifically shows the classes organization, system and information unit.

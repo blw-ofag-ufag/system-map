@@ -234,7 +234,8 @@ async function init() {
             chosen: false,
             arrows: {
                 to: {
-                    enabled: true
+                    enabled: true,
+                    scaleFactor: 0.8
                 }
             },
             color: {
@@ -363,6 +364,7 @@ async function init() {
                         const dimRatio = 0.5;
                         newColor = blendHexColors('#000000', '#ffffff', dimRatio);
                         fontUpdate.color = blendHexColors('#000000', '#ffffff', dimRatio);
+                        fontUpdate.strokeWidth = 2;
                         newWidth = 1;
                     }
                 }

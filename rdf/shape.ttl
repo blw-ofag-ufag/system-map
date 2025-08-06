@@ -219,12 +219,6 @@ systemmap:AccessDomainShape
     sh:class schema:Organization ;
     sh:message "The subject of systemmap:access must be a schema:Organization" .
 
-systemmap:AccessRangeShape
-    a sh:NodeShape ;
-    sh:targetObjectsOf systemmap:access ;
-    sh:class dcat:Dataset ;
-    sh:message "Objects of systemmap:access must be a dcat:Dataset" .
-
 # ------------------------------------------------------------------------------
 # 2.6. Domain and Range check for systemmap:containedIn
 #    - The domain of the property systemmap:containedIn must be dcat:Dataset

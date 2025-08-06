@@ -660,19 +660,12 @@ systemmap:access a owl:ObjectProperty ;
         "a accès à"@fr,
         "ha accesso a"@it ;
     rdfs:comment """  
-        Zeigt an, dass eine Organisation X die Rechte zum Zugriff auf die Informationseinheit Y hat.
+        Zeigt an, dass eine Organisation X die Rechte zum Zugriff etwas hat.
         """@de,
         """  
-        Indicates that an organization X has the rights to access the information unit Y.
-        """@en,
-        """  
-        Indique qu'une organisation X a le droit d'accéder à l'unité d'information Y.
-        """@fr,
-        """  
-        Indica che un'organizzazione X ha il diritto di accedere all'unità di informazione Y.
-        """@it ;
-    rdfs:domain schema:Organization ;
-    rdfs:range dcat:Dataset .
+        Indicates that an organization X has the rights to access something.
+        """@en ;
+    rdfs:domain schema:Organization .
 
 systemmap:containedIn a owl:ObjectProperty ;
     rdfs:label "ist beinhaltet in"@de,

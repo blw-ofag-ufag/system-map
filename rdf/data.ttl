@@ -392,6 +392,9 @@ systemmap:S2gC2BTVjYNH05BNf a schema:SoftwareApplication ;
 
 systemmap:S2lqf2px29PzK3059 a schema:SoftwareApplication ;
     rdfs:label "ASP-Risikoampel"@de ;
+    rdfs:comment """
+        Die ASP-Risikoampel ist ein kostenloses Online-Tool von SUISAG zur Risikobewertung der betrieblichen Biosicherheit gegenüber Afrikanischer Schweinepest mit individueller Optimierungsanalyse und konkreten Handlungsempfehlungen.
+        """@de ;
     dcat:landingPage <https://www.suisag.com/ch-de/softwares/asp-risikoampel/> ;
     systemmap:operatedBy zefix:414877 .
 
@@ -525,6 +528,9 @@ systemmap:S844y5UCUBrKfEXoA a schema:SoftwareApplication ;
 
 systemmap:S8RVf2XMzkPzK32ZX a schema:SoftwareApplication ;
     rdfs:label "AGRO‑TWIN"@de ;
+    rdfs:comment """
+        Agro-Twin ist eine auf die Buchhaltung und Ressourcenverwaltung landwirtschaftlicher Betriebe in der Schweiz spezialisierte Buchhaltungssoftware.
+        """@de ;
     systemmap:operatedBy zefix:1663457 .
 
 systemmap:S8RVk8dQzkXzXYSZX a schema:SoftwareApplication ;
@@ -563,6 +569,9 @@ systemmap:S8awijRdrkgdpXxgz a schema:SoftwareApplication ;
 
 systemmap:S8lqf2UM29PzK3029 a schema:SoftwareApplication ;
     rdfs:label "Elektronisches Behandlungsjournal"@de ;
+    rdfs:comment """
+        Das Elektronische Behandlungsjournal (EBJ) ist ein webbasiertes Tool von SUISAG zur einheitlichen elektronischen Erfassung und Auswertung von Medikamenteneinsätzen sowie Behandlungen einzelner Tiere und Tiergruppen auf Schweine-Zucht- und Mastbetrieben, inklusive Dosierungsberechnung, Absetzfristenmanagement und Quartalsvergleichen zum Antibiotikaeinsatz.
+        """@de ;
     dcat:landingPage <https://www.suisag.com/ch-de/softwares/ebj/> ;
     systemmap:abbreviation "EBJ"@de ;
     systemmap:operatedBy zefix:414877 .
@@ -646,7 +655,11 @@ systemmap:S9SbhGAwWjtvcRIZ a schema:SoftwareApplication ;
 
 systemmap:S9VcxLSoIIwQjlZQ2 a schema:SoftwareApplication ;
     rdfs:label "FarmX"@de ;
-    dcat:landingPage <https://farmx.ch/home> .
+    rdfs:comment """
+        FarmX ist eine Schweizer Online-Plattform zur Vermietung und Vermittlung landwirtschaftlicher Maschinen und Dienstleistungen, die es Landwirten, Maschinenringen und Lohnunternehmern ermöglicht, ihre Maschinen unkompliziert online anzubieten oder zu mieten.
+        """@de ;
+    dcat:landingPage <https://farmx.ch/home> ;
+    systemmap:operatedBy zefix:1373020 .
 
 systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
     rdfs:label "Acontrol"@de,
@@ -718,6 +731,9 @@ systemmap:SAPDp3o8XAHPuZnhB a schema:SoftwareApplication ;
 
 systemmap:SAwz5t3SyxjgPiHhX a schema:SoftwareApplication ;
     rdfs:label "Herdebuch"@de ;
+    rdfs:comment """
+        Das Herdebuch ist das zentrale Zuchtbuch von SwissHerdbook, in dem jedes Tier mit seinen Blutanteilen, seiner Abstammung sowie allen Leistungsprüfungs- und Zuchtwertdaten lückenlos registriert und dokumentiert wird.
+        """@de ;
     systemmap:operatedBy zefix:165954 .
 
 systemmap:SBx5yiPz9Nxy2Wnue a schema:SoftwareApplication ;
@@ -1017,6 +1033,9 @@ systemmap:SJ15CI0vn3S1JgcOd a schema:SoftwareApplication ;
 systemmap:SLDduDXvpvEDmqYSJ a schema:SoftwareApplication,
         systemmap:FMIS ;
     rdfs:label "DeLaval DelPro™"@de ;
+    rdfs:comment """
+        DeLaval DelPro™ ist eine umfassende Farm-Management-Plattform, die Daten von Melksystemen, Sensoren und Tieren zentral erfasst, verarbeitet und analysiert, um eine effiziente und profitable Milchviehhaltung zu ermöglichen.
+        """@de ;
     systemmap:operatedBy zefix:304729 .
 
 systemmap:SLxeXHOfmC6DkBGl a schema:SoftwareApplication ;
@@ -1603,6 +1622,9 @@ systemmap:SeJ36zAhO3AJJix8t a schema:SoftwareApplication ;
 
 systemmap:Sflqf2ls29PzK3049 a schema:SoftwareApplication ;
     rdfs:label "SuisDataManager"@de ;
+    rdfs:comment """
+        Der SuisDataManager ist ein webbasiertes Online-Datenauswertungsprogramm von SUISAG für Zuchtbetriebe und Mastferkelproduzenten, das die digitale Erfassung, Auswertung und Verwaltung von Zucht- und Leistungsdaten Ihrer Sauenherde ermöglicht.
+        """@de ;
     dcat:landingPage <https://www.suisag.com/ch-de/softwares/suisdata-manager/> ;
     systemmap:operatedBy zefix:414877 .
 
@@ -2268,6 +2290,9 @@ systemmap:Sxi0p2NlmE7ff8oEC a schema:SoftwareApplication ;
 
 systemmap:Sxlqf2df29PzK3039 a schema:SoftwareApplication ;
     rdfs:label "Reprojournal"@de ;
+    rdfs:comment """
+        Der ReproJournal ist ein webbasiertes Erfassungs- und Auswertungsprogramm der SUISAG für Mastferkelproduzenten ohne eigenes Datenauswertungssystem, das die elektronische Erfassung der wichtigsten Leistungsdaten aus Deck- und Abferkelstall sowie deren anschließende Auswertung ermöglicht.
+        """@de ;
     systemmap:operatedBy zefix:414877 .
 
 systemmap:Sy4WeMDNoah4TkAYX a schema:SoftwareApplication ;
@@ -4349,7 +4374,8 @@ zefix:1354082 a systemmap:PrivateOrganization ;
     dcat:landingPage <https://www.eoperations.ch> .
 
 zefix:1393629 a systemmap:PrivateOrganization ;
-    rdfs:label "FarmConsult Sàrl"@fr ;
+    rdfs:label "FarmConsult GmbH"@de,
+        "FarmConsult Sàrl"@fr ;
     dcat:landingPage <https://www.farmconsult.ch/> .
 
 zefix:1397589 a systemmap:PrivateOrganization ;
@@ -4469,6 +4495,9 @@ zefix:446080 a systemmap:PrivateOrganization ;
 zefix:448334 a systemmap:PrivateOrganization ;
     rdfs:label "swissgenetics"@de ;
     dcat:landingPage <https://www.swissgenetics.ch/> .
+
+zefix:449781 a systemmap:PrivateOrganization ;
+    rdfs:label "Identitas AG"@de .
 
 zefix:469727 a systemmap:PrivateOrganization ;
     rdfs:label "Proviande Genossenschaft"@de,
@@ -4904,3 +4933,6 @@ systemmap:SfXioR1gkj8eDuTF a termdat:52453 ;
         "Données sur les mesures administratives et les sanctions pénales"@fr,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
     systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
+
+zefix:1373020 rdfs:label "FARMX GmbH"@de .
+

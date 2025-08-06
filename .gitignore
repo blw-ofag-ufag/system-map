@@ -1,5 +1,6 @@
 .DS_Store
 upload.sh
+validate.sh
 notes.md
 prompt.*
 rdf/test.ttl

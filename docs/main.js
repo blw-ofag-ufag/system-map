@@ -345,7 +345,8 @@ async function init() {
             let newColor = '#000000',
                 newWidth = 2,
                 fontUpdate = {
-                    color: '#000000'
+                    color: '#000000',
+                    strokeWidth: 2
                 };
 
             if (distMap) {
@@ -364,8 +365,9 @@ async function init() {
                         const dimRatio = 0.5;
                         newColor = blendHexColors('#000000', '#ffffff', dimRatio);
                         fontUpdate.color = blendHexColors('#000000', '#ffffff', dimRatio);
-                        fontUpdate.strokeWidth = 2;
                         newWidth = 1;
+                    }
+                    else {
                     }
                 }
             }

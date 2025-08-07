@@ -65,6 +65,7 @@ The DigiAgriFoodCH System Map graph on LINDAS can be queried to return various t
 - [Table of federal offices, suborganizations and information they have access to](https://s.zazuko.com/2Upq8Qj)
 - [Label and comment length for all objects](https://s.zazuko.com/2aYzkVt)
 - [Get the name and address of all the companies](https://s.zazuko.com/3jQpKD3)
+- [Count the number of datasets in each system, considering it may have subsystems and subdatasets.](https://s.zazuko.com/2rW3HSS) Query written as a one-liner property path.
 
 # 📚 Further documentation
 

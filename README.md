@@ -1,12 +1,23 @@
+[![Combine Datasets](https://github.com/blw-ofag-ufag/system-map/actions/workflows/graph-processing-and-deployment.yml/badge.svg)](https://github.com/blw-ofag-ufag/metadata/actions/workflows/combine-datasets.yml)
+[![Combine Datasets](https://github.com/blw-ofag-ufag/system-map/actions/workflows/graph-validation.yml/badge.svg)](https://github.com/blw-ofag-ufag/metadata/actions/workflows/graph-validation.yml)
+[![Python 3.12+](https://img.shields.io/badge/Python-3.12%2B-blue.svg)](https://www.python.org/downloads/)
+[![GitHub last commit](https://img.shields.io/github/last-commit/blw-ofag-ufag/metadata.svg)](https://github.com/blw-ofag-ufag/metadata/commits)
+[![GitHub issues](https://img.shields.io/github/issues/blw-ofag-ufag/metadata.svg)](https://github.com/blw-ofag-ufag/metadata/issues)
+
+<kbd>
+  <a href="https://blw-ofag-ufag.github.io/system-map/index.html" target="_blank"><img src="https://github.com/user-attachments/assets/87d303c3-ed30-42af-888d-aa8abc307da7" /></a>
+</kbd>
+
 # 🧭 A system map for the Federal Office for Agriculture
 
-This repository is set up to gather and visualize information about IT systems, the data those contain and their operating organizations in the Swiss agri-food sector. You can visually explore this work on the following pages:
+This repository is set up to gather and visualize information about IT systems, the data those contain and their operating organizations in the Swiss agri-food sector.
+You can visually explore this work on the following pages:
 
 - [**DigiAgriFood system map**](https://blw-ofag-ufag.github.io/system-map/index.html?lang=de), a visualization of the system map knowledge graph that specifically shows the classes organization, system and information unit.
 - [**Circular system map**](https://blw-ofag-ufag.github.io/system-map/varia/circle), an alternative visualization in circular arrangement.
 - [**Table on a federal demo site**](https://blw-ofag-ufag.github.io/system-map/varia/table/) that shows (a) how quickly we can query LINDAS data and perform some computation and (b) how this information can be displayed on a (federal) webpage.
 - [**Standalone search site**](https://blw-ofag-ufag.github.io/system-map/varia/search) to help you find an entity in case you're lost.
-- [**Nanoid generator**](https://blw-ofag-ufag.github.io/system-map/nanoid) just for internal use.
+- [**Nanoid generator**](https://blw-ofag-ufag.github.io/system-map/varia/nanoid) just for internal use.
 
 If instead you are interested in the *actual* data, you can have a look at the following files:
 

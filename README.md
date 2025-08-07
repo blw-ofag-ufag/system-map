@@ -17,7 +17,7 @@ You can visually explore this work on the following pages:
 - [**Circular system map**](https://blw-ofag-ufag.github.io/system-map/varia/circle), an alternative visualization in circular arrangement.
 - [**Table on a federal demo site**](https://blw-ofag-ufag.github.io/system-map/varia/table/) that shows (a) how quickly we can query LINDAS data and perform some computation and (b) how this information can be displayed on a (federal) webpage.
 - [**Standalone search site**](https://blw-ofag-ufag.github.io/system-map/varia/search) to help you find an entity in case you're lost.
-- [**Nanoid generator**](https://blw-ofag-ufag.github.io/system-map/nanoid) just for internal use.
+- [**Nanoid generator**](https://blw-ofag-ufag.github.io/system-map/varia/nanoid) just for internal use.
 
 If instead you are interested in the *actual* data, you can have a look at the following files:
 

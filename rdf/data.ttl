@@ -301,7 +301,7 @@ systemmap:S1AkhvKmzBiJFCTc a schema:SoftwareApplication ;
         "Plateforme web Données du marché agricole"@fr,
         "Piattaforma web Dati di mercato agricolo"@it ;
     dcat:landingPage <https://www.agrarmarktdaten.ch> ;
-    prov:wasDerivedFrom systemmap:Sc6kZqxTyS0gFGCY ;
+    prov:wasDerivedFrom systemmap:SxvsanBKE0ZN315DU ;
     systemmap:abbreviation "WAM"@de,
         "WAM"@en,
         "WAM"@fr,
@@ -777,6 +777,16 @@ systemmap:SCporGQs4VQT7lJVs a schema:SoftwareApplication ;
         """@it ;
     dcat:landingPage <https://www.smaxtec.com/> ;
     systemmap:operatedBy zefix:1566606 .
+
+systemmap:SDm3OAS8I15uUlN91 a schema:SoftwareApplication ;
+    rdfs:label "Alteryx"@de,
+        "Alteryx"@en,
+        "Alteryx"@fr,
+        "Alteryx"@it ;
+    rdfs:comment "Alteryx ist eine Software, um Daten zu verarbeiten, bereinigen und zu strukturieren, damit sie ins DWH importiert werden können."@de,
+        "Alteryx is a software to process, clean and structure data so that it can be imported into the DWH."@en,
+        "Alteryx est un logiciel pour traiter, nettoyer et structurer les données afin qu'elles puissent être importées dans le DWH."@fr,
+        "Alteryx è un software per elaborare, pulire e strutturare i dati in modo che possano essere importati nel DWH."@it .
 
 systemmap:SDoGAjF1AJCdFZQQl a schema:SoftwareApplication ;
     rdfs:label "E-Direct"@de,
@@ -1573,7 +1583,8 @@ systemmap:Sc6kZqxTyS0gFGCY a schema:SoftwareApplication ;
         "MARS III"@en,
         "MARS III"@fr,
         "MARS III"@it ;
-    systemmap:operatedBy systemmap:SaVyVVsIDkiDMtQq4 .
+    systemmap:operatedBy systemmap:SaVyVVsIDkiDMtQq4 ;
+    systemmap:usesMasterData systemmap:SbKCxLGicJtMGTQiD .
 
 systemmap:Sd3egXVVG1pgbzgcA a schema:SoftwareApplication ;
     rdfs:label "ERP-System"@de,
@@ -2595,6 +2606,17 @@ systemmap:SIsQ6LSUJc3xbG9B a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
+systemmap:SKoClBiquflDf7yi6 a dcat:Dataset ;
+    rdfs:label "Rohdaten der Datenlieferanten"@de,
+        "Raw data from data suppliers"@en,
+        "Données brutes des fournisseurs de données"@fr,
+        "Dati grezzi dei fornitori di dati"@it ;
+    rdfs:comment "Heterogene Rohdaten (z.B. XLSX) von ca. 400 Datenlieferanten."@de,
+        "Heterogeneous raw data (e.g., XLSX) from approx. 400 data suppliers."@en,
+        "Données brutes hétérogènes (p. ex. XLSX) d'environ 400 fournisseurs de données."@fr,
+        "Dati grezzi eterogenei (ad es. XLSX) da circa 400 fornitori di dati."@it ;
+    systemmap:informs systemmap:Sc4ZWQq9h4HrEOf01 .
+
 systemmap:SLJMFAZ6GNdFvfb2L a dcat:Dataset ;
     rdfs:label "Marktdaten Früchte und Gemüse"@de,
         "Market Data Fruits and Vegetables"@en,
@@ -2674,6 +2696,28 @@ systemmap:SVXa3t3SyxjgPiLBx a dcat:Dataset ;
     rdfs:label "Daten der Geburtsmeldungen"@de ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
+systemmap:SXIIUKFjUBDaaTzh6 a dcat:Dataset ;
+    rdfs:label "Einzelhandelsdaten (Nielsen)"@de,
+        "Retail Data (Nielsen)"@en,
+        "Données du commerce de détail (Nielsen)"@fr,
+        "Dati del commercio al dettaglio (Nielsen)"@it ;
+    dcterms:isPartOf systemmap:SKoClBiquflDf7yi6 ;
+    rdfs:comment "Vom Marktforschungsunternehmen Nielsen zugekaufte Daten über den Einzelhandel."@de,
+        "Data on the retail sector purchased from the market research company Nielsen."@en,
+        "Données sur le secteur du commerce de détail achetées à l'entreprise d'études de marché Nielsen."@fr,
+        "Dati sul settore del commercio al dettaglio acquistati dalla società di ricerche di mercato Nielsen."@it ,
+
+systemmap:SYqYq3UTUnZHmyFRD a dcat:Dataset ;
+    rdfs:label "DWH Marktdaten"@de,
+        "DWH Market Data"@en,
+        "Données de marché du DWH"@fr,
+        "Dati di mercato del DWH"@it ;
+    rdfs:comment "Für Analysezwecke aufbereitete Marktdaten im internen DWH."@de,
+        "Market data prepared for analysis purposes in the internal DWH."@en,
+        "Données de marché préparées à des fins d'analyse dans le DWH interne."@fr,
+        "Dati di mercato preparati per scopi di analisi nel DWH interno."@it ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY .
+
 systemmap:SZBHsREMx369FArg a dcat:Dataset ;
     rdfs:label "Dünger"@de ;
     rdfs:comment """
@@ -2715,6 +2759,18 @@ systemmap:Sb2FM7pKN60PrRwU a dcat:Dataset ;
         Questo sistema facilita la classificazione e lo scambio di informazioni sulle varietà vegetali.
         """@it ;
     systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN .
+
+systemmap:Sc4ZWQq9h4HrEOf01 a dcat:Dataset ;
+    rdfs:label "Alteryx Prepared Data"@de,
+        "Alteryx Prepared Data"@en,
+        "Données préparées par Alteryx"@fr,
+        "Dati preparati da Alteryx"@it ;
+    rdfs:comment "Von Alteryx verarbeitete, bereinigte und strukturierte Daten vor dem Import ins DWH."@de,
+        "Data processed, cleaned, and structured by Alteryx before being imported into the DWH."@en,
+        "Données traitées, nettoyées et structurées par Alteryx avant leur importation dans le DWH."@fr,
+        "Dati elaborati, ripuliti e strutturati da Alteryx prima dell'importazione nel DWH."@it ;
+    prov:wasDerivedFrom systemmap:SDm3OAS8I15uUlN91 ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY .
 
 systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
     rdfs:label "Daten zur Milchproduktion"@de,
@@ -2805,6 +2861,19 @@ systemmap:SvAr93iMz2fj4HZBK a dcat:Dataset ;
         "Dati di mercato Uova"@it ;
     dcat:landingPage <https://www.agrarmarktdaten.ch/markt/eier> ;
     systemmap:containedIn systemmap:S1AkhvKmzBiJFCTc .
+
+systemmap:SxvsanBKE0ZN315DU a dcat:Dataset ;
+    rdfs:label "Public DWH Marktdaten"@de,
+        "Public DWH Market Data"@en,
+        "Données de marché du DWH Public"@fr,
+        "Dati di mercato del DWH Pubblico"@it ;
+    rdfs:comment "Für die Veröffentlichung freigegebene und im DWH Public bereitgestellte Marktdaten."@de,
+        "Market data approved for publication and stored in the DWH Public."@en,
+        "Données de marché approuvées pour publication et stockées dans le DWH Public."@fr,
+        "Dati di mercato approvati per la pubblicazione e archiviati nel DWH Pubblico."@it ;
+    prov:wasDerivedFrom systemmap:SYqYq3UTUnZHmyFRD ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
+    systemmap:informs systemmap:SHFSc6xgsHF70IlUd .
 
 systemmap:SyhthSmTCgM19Wysy a dcat:Dataset ;
     rdfs:label "Pflanzenschutzmittel"@de,
@@ -4177,6 +4246,16 @@ systemmap:SEI0Jp1SabxWUiGh0 a systemmap:MasterData ;
         Serve a identificare in modo univoco i luoghi in cui si trovano animali soggetti a epizoozie e a garantire la tracciabilità degli animali. 
         Il numero BDTA è collegato in modo fisso al numero di azienda cantonale (KT_ID_B) ed è quindi legato al luogo.
         """@it .
+
+systemmap:SbKCxLGicJtMGTQiD a systemmap:MasterData ;
+    rdfs:label "Stammdaten Marktanalyse"@de,
+        "Master Data Market Analysis"@en,
+        "Données de base de l'analyse de marché"@fr,
+        "Dati anagrafici dell'analisi di mercato"@it ;
+    rdfs:comment "Enthält die Kerndimensionen für die Marktanalyse, wie Produktlisten, Regionen, Produktionssysteme etc."@de,
+        "Contains the core dimensions for market analysis, such as product lists, regions, production systems, etc."@en,
+        "Contient les dimensions clés pour l'analyse de marché, telles que les listes de produits, les régions, les systèmes de production, etc."@fr,
+        "Contiene le dimensioni principali per l'analisi di mercato, come elenchi di prodotti, regioni, sistemi di produzione, ecc."@it .
 
 systemmap:Sl5KyePu7JtGiE3V a systemmap:MasterData ;
     rdfs:label "Produktekatalog"@de,

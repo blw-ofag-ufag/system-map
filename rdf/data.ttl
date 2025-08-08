@@ -2679,7 +2679,7 @@ systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
         "Préparations"@fr,
         "Preparazioni"@it ;
     rdfs:comment """
-        Mischungen oder Lösungen aus zwei oder mehr Stoffen.
+        Mischungen oder Lösungen aus zwei oder mehr Stoffen. 
         """@de,
         """
         Mixtures or solutions composed of two or more substances.

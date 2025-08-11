@@ -2697,11 +2697,12 @@ systemmap:SXIIUKFjUBDaaTzh6 a dcat:Dataset ;
         "Données sur le secteur du commerce de détail achetées à l'entreprise d'études de marché Nielsen."@fr,
         "Dati sul settore del commercio al dettaglio acquistati dalla società di ricerche di mercato Nielsen."@it .
 
-systemmap:SYqYq3UTUnZHmyFRD a dcat:Dataset ;
+systemmap:SYqYq3UTUnZHmyFRD a schema:SoftwareApplication ;
     rdfs:label "Data Warehouse (DWH)"@de,
         "Data Warehouse (DWH)"@en,
         "Data Warehouse (DWH)"@fr,
         "Data Warehouse (DWH)"@it ;
+    dcterms:isPartOf systemmap:ShZO092di7cBnOm7F ;
     rdfs:comment "DWH ist für die Datenhaltung aller Daten und deren Verarbeitung zuständig."@de,
         "DWH is responsible for the storage and processing of all data."@en,
         "Le DWH est responsable du stockage et du traitement de toutes les données."@fr,
@@ -2851,11 +2852,12 @@ systemmap:SvAr93iMz2fj4HZBK a dcat:Dataset ;
     dcat:landingPage <https://www.agrarmarktdaten.ch/markt/eier> ;
     systemmap:containedIn systemmap:S1AkhvKmzBiJFCTc .
 
-systemmap:SxvsanBKE0ZN315DU a dcat:Dataset ;
+systemmap:SxvsanBKE0ZN315DU a schema:SoftwareApplication ;
     rdfs:label "Public Data Warehouse (DWH Public)"@de,
         "Public Data Warehouse (DWH Public)"@en,
         "Public Data Warehouse (DWH Public)"@fr,
         "Public Data Warehouse (DWH Public)"@it ;
+    dcterms:isPartOf systemmap:ShZO092di7cBnOm7F ;
     rdfs:comment "DWH Public ist für die Datenhaltung für das öffentliche Reporting sowie für die Aktualisierung der Reports zuständig."@de,
         "DWH Public is responsible for data storage for public reporting and for updating the reports."@en,
         "DWH Public est responsable du stockage des données pour le reporting public ainsi que de la mise à jour des rapports."@fr,
@@ -2865,8 +2867,7 @@ systemmap:SxvsanBKE0ZN315DU a dcat:Dataset ;
         "DWH Public"@en,
         "DWH Public"@fr,
         "DWH Public"@it ;
-    systemmap:contains systemmap:Sc6kZqxTyS0gFGCY ;
-    systemmap:informs systemmap:SHFSc6xgsHF70IlUd .
+    systemmap:contains systemmap:Sc6kZqxTyS0gFGCY .
 
 systemmap:SyhthSmTCgM19Wysy a dcat:Dataset ;
     rdfs:label "Pflanzenschutzmittel"@de,

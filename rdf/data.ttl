@@ -2705,7 +2705,7 @@ systemmap:SXIIUKFjUBDaaTzh6 a dcat:Dataset ;
     rdfs:comment "Vom Marktforschungsunternehmen Nielsen zugekaufte Daten über den Einzelhandel."@de,
         "Data on the retail sector purchased from the market research company Nielsen."@en,
         "Données sur le secteur du commerce de détail achetées à l'entreprise d'études de marché Nielsen."@fr,
-        "Dati sul settore del commercio al dettaglio acquistati dalla società di ricerche di mercato Nielsen."@it ,
+        "Dati sul settore del commercio al dettaglio acquistati dalla società di ricerche di mercato Nielsen."@it .
 
 systemmap:SYqYq3UTUnZHmyFRD a dcat:Dataset ;
     rdfs:label "DWH Marktdaten"@de,

@@ -1585,7 +1585,7 @@ systemmap:Sc6kZqxTyS0gFGCY a schema:SoftwareApplication ;
         "MARS III"@en,
         "MARS III"@fr,
         "MARS III"@it ;
-    systemmap:isPartOf systemmap:SYqYq3UTUnZHmyFRD ;
+    systemmap:isPartOf systemmap:ShZO092di7cBnOm7F ;
     systemmap:operatedBy systemmap:SaVyVVsIDkiDMtQq4 .
 
 systemmap:Sd3egXVVG1pgbzgcA a schema:SoftwareApplication ;

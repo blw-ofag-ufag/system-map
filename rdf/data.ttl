@@ -2321,10 +2321,10 @@ systemmap:Sxlqf2df29PzK3039 a schema:SoftwareApplication ;
     systemmap:operatedBy zefix:414877 .
 
 systemmap:SxvsanBKE0ZN315DU a schema:SoftwareApplication ;
-    rdfs:label "Public Data Warehouse (DWH Public)"@de,
-        "Public Data Warehouse (DWH Public)"@en,
-        "Public Data Warehouse (DWH Public)"@fr,
-        "Public Data Warehouse (DWH Public)"@it ;
+    rdfs:label "Public Data Warehouse"@de,
+        "Public Data Warehouse"@en,
+        "Public Data Warehouse"@fr,
+        "Public Data Warehouse"@it ;
     dcterms:isPartOf systemmap:SYqYq3UTUnZHmyFRD ;
     rdfs:comment "DWH Public ist für die Datenhaltung für das öffentliche Reporting sowie für die Aktualisierung der Reports zuständig."@de,
         "DWH Public is responsible for data storage for public reporting and for updating the reports."@en,
@@ -2775,6 +2775,7 @@ systemmap:Sc4ZWQq9h4HrEOf01 a dcat:Dataset ;
         "Data processed, cleaned, and structured by Alteryx before being imported into the DWH."@en,
         "Données traitées, nettoyées et structurées par Alteryx avant leur importation dans le DWH."@fr,
         "Dati elaborati, ripuliti e strutturati da Alteryx prima dell'importazione nel DWH."@it ;
+    systemmap:usesMasterData systemmap:SbKCxLGicJtMGTQiD ;
     systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY .
 
 systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;

@@ -177,6 +177,7 @@ async function init() {
 
     // --- STATE ---
     let currentLang = getParam("lang") || "de";
+    let minDegree = parseInt(getParam("minDegree") || "0", 10);
     let pinnedNodeId = null,
         pinnedEdgeId = null;
     let allNodesData = {},
@@ -425,20 +426,30 @@ async function init() {
         document.getElementById("github-link").title = TEXT.githubTooltip;
         document.getElementById("email-link").title = TEXT.emailTooltip;
 
-        const nodeUpdates = Object.values(allNodesData).map(nodeData => {
-            const { text: label, lang: labelLang, isFallback } = getLocalizedText(nodeData.name, currentLang);
-            const { text: abbreviation } = getLocalizedText(nodeData.abbreviation, currentLang);
-            const htmlLabel = isFallback && labelLang ? `<b>${labelLang.toUpperCase()}:</b> <i>${shortenLabel(label, abbreviation)}</i>` : `<b>${shortenLabel(label, abbreviation)}</b>`;
-            return { id: nodeData.id, label: htmlLabel };
-        });
-        if (nodesDataset) nodesDataset.update(nodeUpdates);
+        if (nodesDataset) {
+            const nodeIdsInGraph = nodesDataset.getIds();
+            const nodeUpdates = nodeIdsInGraph.map(nodeId => {
+                const nodeData = allNodesData[nodeId];
+                if (!nodeData) return null;
+                const { text: label, lang: labelLang, isFallback } = getLocalizedText(nodeData.name, currentLang);
+                const { text: abbreviation } = getLocalizedText(nodeData.abbreviation, currentLang);
+                const htmlLabel = isFallback && labelLang ? `<b>${labelLang.toUpperCase()}:</b> <i>${shortenLabel(label, abbreviation)}</i>` : `<b>${shortenLabel(label, abbreviation)}</b>`;
+                return { id: nodeId, label: htmlLabel };
+            }).filter(Boolean);
+            nodesDataset.update(nodeUpdates);
+        }
 
-        const edgeUpdates = Object.values(allEdgesData).map(edgeData => {
-            const predicateMeta = allEdgeMetadata[edgeData.iri];
-            const { text: label } = getLocalizedText(predicateMeta?.label, currentLang);
-            return { id: edgeData.id, label: label };
-        });
-        if (edgesDataset) edgesDataset.update(edgeUpdates);
+        if (edgesDataset) {
+            const edgeIdsInGraph = edgesDataset.getIds();
+            const edgeUpdates = edgeIdsInGraph.map(edgeId => {
+                const edgeData = allEdgesData[edgeId];
+                if (!edgeData) return null;
+                const predicateMeta = allEdgeMetadata[edgeData.iri];
+                const { text: label } = getLocalizedText(predicateMeta?.label, currentLang);
+                return { id: edgeId, label: label };
+            }).filter(Boolean);
+            edgesDataset.update(edgeUpdates);
+        }
 
         if (!infoPanel.classList.contains("hidden")) {
             if (pinnedNodeId) {
@@ -456,18 +467,38 @@ async function init() {
 
     // --- INITIALIZE GRAPH & UI ---
     
-    const initialNodes = Object.values(allNodesData).map(nodeData => ({
-        id: nodeData.id, group: nodeData.group, label: " "
-    }));
-
-    const initialEdges = Object.values(allEdgesData).map(edgeData => {
-        const edge = { id: edgeData.id, from: edgeData.from, to: edgeData.to, label: " " };
-        if (APP_CONFIG.DASHED_PREDICATES.includes(edgeData.iri)) {
-            edge.dashes = [3, 4]; edge.length = 500; edge.springConstant = 0.001;
-        }
-        return edge;
+    // 1. Calculate degrees based on currently active edges from the query
+    const nodeDegrees = {};
+    Object.values(allEdgesData).forEach(edge => {
+        nodeDegrees[edge.from] = (nodeDegrees[edge.from] || 0) + 1;
+        nodeDegrees[edge.to] = (nodeDegrees[edge.to] || 0) + 1;
     });
+    console.log("Calculated Node Degrees (total in+out):", nodeDegrees);
 
+    // 2. Filter nodes based on the minDegree parameter
+    const filteredNodeIds = new Set(
+        Object.keys(allNodesData).filter(nodeId => (nodeDegrees[nodeId] || 0) >= minDegree)
+    );
+
+    // 3. Create initial node and edge arrays for vis.js using the filtered sets
+    const initialNodes = Object.values(allNodesData)
+        .filter(nodeData => filteredNodeIds.has(nodeData.id))
+        .map(nodeData => ({
+            id: nodeData.id,
+            group: nodeData.group,
+            label: " "
+        }));
+
+    const initialEdges = Object.values(allEdgesData)
+        .filter(edgeData => filteredNodeIds.has(edgeData.from) && filteredNodeIds.has(edgeData.to))
+        .map(edgeData => {
+            const edge = { id: edgeData.id, from: edgeData.from, to: edgeData.to, label: " " };
+            if (APP_CONFIG.DASHED_PREDICATES.includes(edgeData.iri)) {
+                edge.dashes = [3, 4]; edge.length = 500; edge.springConstant = 0.001;
+            }
+            return edge;
+        });
+        
     nodesDataset = new vis.DataSet(initialNodes);
     edgesDataset = new vis.DataSet(initialEdges);
     
@@ -491,12 +522,21 @@ async function init() {
       () => {
         const params = {};
         params.lang = currentLang;
+        
+        // Handle minDegree slider
+        const minDegreeValue = parseInt(document.getElementById('min-degree-slider').value, 10);
+        params.minDegree = minDegreeValue > 0 ? minDegreeValue : null;
+
+        // Handle class checkboxes
         document.querySelectorAll('#settings-classes input').forEach(cb => {
             params[cb.dataset.group.toLowerCase()] = cb.checked ? null : 'false';
         });
+
+        // Handle predicate checkboxes
         const allPredicateKeys = Object.keys(APP_CONFIG.PREDICATE_MAP);
         const selectedPreds = Array.from(document.querySelectorAll('#settings-predicates input')).filter(cb => cb.checked).map(cb => cb.dataset.key);
         params.predicates = selectedPreds.length === allPredicateKeys.length ? null : selectedPreds.join(';');
+        
         setParamsAndReload(params);
     });
 
@@ -557,10 +597,25 @@ async function init() {
         
         // Populate static text
         document.getElementById('settings-title').textContent = TEXT.settings;
+        document.getElementById('settings-min-degree-title').textContent = TEXT.minDegree;
         document.getElementById('settings-node-classes-title').textContent = TEXT.visibleNodeClasses;
         document.getElementById('settings-relationship-types-title').textContent = TEXT.visibleRelationshipTypes;
         document.getElementById('settingsCancel').textContent = TEXT.cancel;
         document.getElementById('settingsSave').textContent = TEXT.saveAndReload;
+
+        // Populate min degree slider
+        const minDegreeContainer = document.getElementById('settings-min-degree-container');
+        minDegreeContainer.innerHTML = `
+            <div class="settings-slider-wrapper">
+                <input type="range" min="0" max="5" value="${minDegree}" class="settings-slider" id="min-degree-slider">
+                <span id="min-degree-value">${minDegree}</span>
+            </div>
+        `;
+        const slider = document.getElementById('min-degree-slider');
+        const sliderValueDisplay = document.getElementById('min-degree-value');
+        slider.addEventListener('input', (e) => {
+            sliderValueDisplay.textContent = e.target.value;
+        });
 
         const createCheckboxItem = (container, { id, dataKey, dataValue, isChecked, label, comment, uri, curie, visualHtml }) => {
             let html = `<div class="settings-list-item">

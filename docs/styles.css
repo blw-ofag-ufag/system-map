@@ -340,3 +340,54 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.5;
     box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
+
+/* New Slider Styles */
+.settings-slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 0;
+}
+
+.settings-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 60%;
+    height: 3px;
+    background: var(--color-grey);
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.9;
+    transition: opacity .2s;
+}
+
+.settings-slider:hover {
+    opacity: 1;
+}
+
+.settings-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--color-font-dimmed);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid var(--color-background);
+}
+
+.settings-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--color-font-normal);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid var(--color-background);
+}
+
+#min-degree-value {
+    font-weight: 600;
+    font-size: 16px;
+    min-width: 20px; /* to avoid layout shift */
+    text-align: center;
+}

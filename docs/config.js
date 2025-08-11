@@ -67,6 +67,11 @@ const APP_CONFIG = {
      * This should be called once the DOM is ready.
      */
     initializeStylesFromCSS: function() {
+        // Create a reverse map from group name to IRI for easy lookup
+        this.GROUP_IRI_MAP = Object.fromEntries(
+            Object.entries(this.GROUP_MAP).map(([iri, group]) => [group, iri])
+        );
+
         this.GROUP_STYLES = {
             System: {
                 background: getCssVar('--color-group-system-bg'),

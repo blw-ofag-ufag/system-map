@@ -4,9 +4,6 @@ function getQueryParam(name, defaultValue) {
   return urlParams.get(name) || defaultValue;
 }
 
-// language code used in the queries
-window.lang = getQueryParam("lang", "de");
-
 // should schema:Organization, schema:SoftwareApplication, service:Service and dcat:Dataset be displayed
 window.organization = getQueryParam("organization", "true") === "true" ? "schema:Organization" : "";
 window.system = getQueryParam("system", "true") === "true" ? "schema:SoftwareApplication" : "";
@@ -42,7 +39,7 @@ window.predicateValues = predicateIris
 // set SPARQL endpoint from config
 window.ENDPOINT = APP_CONFIG.ENDPOINT;
 
-// query nodes
+// query nodes - fetches all language data at once
 window.NODE_QUERY = `
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
@@ -50,37 +47,20 @@ PREFIX schema: <http://schema.org/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX service: <http://purl.org/ontology/service#>
 
-SELECT ?id ?group ?displayLabel ?comment ?abbreviation
+SELECT ?id ?group ?name ?nameLang ?comment ?commentLang ?abbreviation ?abbreviationLang
 WHERE {
   GRAPH <https://lindas.admin.ch/foag/system-map> {
     ?id a ?group .
     VALUES ?group { ${organization} ${system} ${information} ${service} }
 
-    OPTIONAL { ?id schema:name ?l_user . FILTER( LANG(?l_user) = "${lang}" ) }
-    OPTIONAL { ?id schema:name ?l_en   . FILTER( LANG(?l_en)  = "en" ) }
-    OPTIONAL { ?id schema:name ?l_de   . FILTER( LANG(?l_de)  = "de" ) }
-    OPTIONAL { ?id schema:name ?l_fr   . FILTER( LANG(?l_fr)  = "fr" ) }
-    OPTIONAL { ?id schema:name ?l_it   . FILTER( LANG(?l_it)  = "it" ) }
-    BIND( COALESCE(?l_user, ?l_en, ?l_de, ?l_fr, ?l_it, "") AS ?displayLabel )
-
-    OPTIONAL { ?id schema:description ?c_user . FILTER( LANG(?c_user) = "${lang}" ) }
-    OPTIONAL { ?id schema:description ?c_en   . FILTER( LANG(?c_en)  = "en" ) }
-    OPTIONAL { ?id schema:description ?c_de   . FILTER( LANG(?c_de)  = "de" ) }
-    OPTIONAL { ?id schema:description ?c_fr   . FILTER( LANG(?c_fr)  = "fr" ) }
-    OPTIONAL { ?id schema:description ?c_it   . FILTER( LANG(?c_it)  = "it" ) }
-    BIND( COALESCE(?c_user, ?c_en, ?c_de, ?c_fr, ?c_it, "") AS ?comment )
-
-    OPTIONAL { ?id systemmap:abbreviation ?a_user . FILTER( LANG(?a_user) = "${lang}" ) }
-    OPTIONAL { ?id systemmap:abbreviation ?a_en . FILTER( LANG(?a_en) = "en" ) }
-    OPTIONAL { ?id systemmap:abbreviation ?a_de . FILTER( LANG(?a_de) = "de" ) }
-    OPTIONAL { ?id systemmap:abbreviation ?a_fr . FILTER( LANG(?a_fr) = "fr" ) }
-    OPTIONAL { ?id systemmap:abbreviation ?a_it . FILTER( LANG(?a_it) = "it" ) }
-    BIND( COALESCE(?a_user, ?a_en, ?a_de, ?a_fr, ?a_it, "") AS ?abbreviation )
+    OPTIONAL { ?id schema:name ?name . BIND(LANG(?name) AS ?nameLang) }
+    OPTIONAL { ?id schema:description ?comment . BIND(LANG(?comment) AS ?commentLang) }
+    OPTIONAL { ?id systemmap:abbreviation ?abbreviation . BIND(LANG(?abbreviation) AS ?abbreviationLang) }
   }
 }
 `;
 
-// query edges between the nodes
+// query edges between the nodes - fetches all language data at once
 window.EDGE_QUERY = `
 PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
@@ -90,7 +70,7 @@ PREFIX prov:   <http://www.w3.org/ns/prov#>
 PREFIX service:<http://purl.org/ontology/service#>
 PREFIX dcterms:<http://purl.org/dc/terms/>
 
-SELECT (?property AS ?id) ?from ?to ?label ?comment
+SELECT ?property ?from ?to ?label ?labelLang ?comment ?commentLang
 WHERE {
   GRAPH <https://lindas.admin.ch/foag/system-map> {
     ?from ?property ?to .
@@ -98,52 +78,30 @@ WHERE {
       ${predicateValues}
     }
 
-    OPTIONAL { ?property schema:name ?l_user . FILTER(LANG(?l_user) = "${lang}") }
-    OPTIONAL { ?property schema:name ?l_en . FILTER(LANG(?l_en) = "en") }
-    OPTIONAL { ?property schema:name ?l_de . FILTER(LANG(?l_de) = "de") }
-    OPTIONAL { ?property schema:name ?l_fr . FILTER(LANG(?l_fr) = "fr") }
-    OPTIONAL { ?property schema:name ?l_it . FILTER(LANG(?l_it) = "it") }
-    BIND(COALESCE(?l_user, ?l_en, ?l_de, ?l_fr, ?l_it, "") AS ?label)
-
-    OPTIONAL { ?property schema:description ?c_user . FILTER(LANG(?c_user) = "${lang}") }
-    OPTIONAL { ?property schema:description ?c_en . FILTER(LANG(?c_en) = "en") }
-    OPTIONAL { ?property schema:description ?c_de . FILTER(LANG(?c_de) = "de") }
-    OPTIONAL { ?property schema:description ?c_fr . FILTER(LANG(?c_fr) = "fr") }
-    OPTIONAL { ?property schema:description ?c_it . FILTER(LANG(?c_it) = "it") }
-    BIND(COALESCE(?c_user, ?c_en, ?c_de, ?c_fr, ?c_it, "") AS ?comment)
+    OPTIONAL { ?property schema:name ?label . BIND(LANG(?label) as ?labelLang) }
+    OPTIONAL { ?property schema:description ?comment . BIND(LANG(?comment) as ?commentLang) }
   }
 }
 `;
 
-// query top class names and comments for the settings panel
+// query top class names and comments - fetches all language data at once
 window.CLASS_QUERY = `
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX schema: <http://schema.org/>
   PREFIX dcat: <http://www.w3.org/ns/dcat#>
   PREFIX service: <http://purl.org/ontology/service#>
-  SELECT ?iri ?label ?comment
+  SELECT ?iri ?label ?labelLang ?comment ?commentLang
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/system-map> {
       VALUES ?iri { schema:Organization schema:SoftwareApplication dcat:Dataset service:Service }
       
-      OPTIONAL { ?iri schema:name ?l_user . FILTER(LANG(?l_user) = "${lang}") }
-      OPTIONAL { ?iri schema:name ?l_en . FILTER(LANG(?l_en) = "en") }
-      OPTIONAL { ?iri schema:name ?l_de . FILTER(LANG(?l_de) = "de") }
-      OPTIONAL { ?iri schema:name ?l_fr . FILTER(LANG(?l_fr) = "fr") }
-      OPTIONAL { ?iri schema:name ?l_it . FILTER(LANG(?l_it) = "it") }
-      BIND(COALESCE(?l_user, ?l_en, ?l_de, ?l_fr, ?l_it, "") AS ?label)
-
-      OPTIONAL { ?iri schema:description ?c_user . FILTER(LANG(?c_user) = "${lang}") }
-      OPTIONAL { ?iri schema:description ?c_en . FILTER(LANG(?c_en) = "en") }
-      OPTIONAL { ?iri schema:description ?c_de . FILTER(LANG(?c_de) = "de") }
-      OPTIONAL { ?iri schema:description ?c_fr . FILTER(LANG(?c_fr) = "fr") }
-      OPTIONAL { ?iri schema:description ?c_it . FILTER(LANG(?c_it) = "it") }
-      BIND(COALESCE(?c_user, ?c_en, ?c_de, ?c_fr, ?c_it, "") AS ?comment)
+      OPTIONAL { ?iri schema:name ?label . BIND(LANG(?label) AS ?labelLang) }
+      OPTIONAL { ?iri schema:description ?comment . BIND(LANG(?comment) AS ?commentLang) }
     }
   }
 `;
 
-// Query all possible predicates and their details for the settings panel
+// Query all possible predicates - fetches all language data at once
 window.PREDICATES_QUERY = `
   PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
   PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
@@ -152,7 +110,7 @@ window.PREDICATES_QUERY = `
   PREFIX prov:   <http://www.w3.org/ns/prov#>
   PREFIX service:<http://purl.org/ontology/service#>
   PREFIX dcterms:<http://purl.org/dc/terms/>
-  SELECT ?iri ?label ?comment
+  SELECT ?iri ?label ?labelLang ?comment ?commentLang
   WHERE {
     GRAPH <https://lindas.admin.ch/foag/system-map> {
       VALUES ?iri {
@@ -160,36 +118,20 @@ window.PREDICATES_QUERY = `
         systemmap:owns systemmap:contains systemmap:usesMasterData schema:memberOf
         service:provides service:consumes systemmap:access systemmap:references
       }
-      OPTIONAL { ?iri schema:name ?l_user . FILTER(LANG(?l_user) = "${lang}") }
-      OPTIONAL { ?iri schema:name ?l_en . FILTER(LANG(?l_en) = "en") }
-      OPTIONAL { ?iri schema:name ?l_de . FILTER(LANG(?l_de) = "de") }
-      OPTIONAL { ?iri schema:name ?l_fr . FILTER(LANG(?l_fr) = "fr") }
-      OPTIONAL { ?iri schema:name ?l_it . FILTER(LANG(?l_it) = "it") }
-      BIND(COALESCE(?l_user, ?l_en, ?l_de, ?l_fr, ?l_it, "") AS ?label)
-
-      OPTIONAL { ?iri schema:description ?c_user . FILTER(LANG(?c_user) = "${lang}") }
-      OPTIONAL { ?iri schema:description ?c_en . FILTER(LANG(?c_en) = "en") }
-      OPTIONAL { ?iri schema:description ?c_de . FILTER(LANG(?c_de) = "de") }
-      OPTIONAL { ?iri schema:description ?c_fr . FILTER(LANG(?c_fr) = "fr") }
-      OPTIONAL { ?iri schema:description ?c_it . FILTER(LANG(?c_it) = "it") }
-      BIND(COALESCE(?c_user, ?c_en, ?c_de, ?c_fr, ?c_it, "") AS ?comment)
+      OPTIONAL { ?iri schema:name ?label . BIND(LANG(?label) AS ?labelLang) }
+      OPTIONAL { ?iri schema:description ?comment . BIND(LANG(?comment) AS ?commentLang) }
     }
   }
 `;
 
-// query the ontology title
+// query the ontology title - fetches all language data at once
 window.TITLE_QUERY = `
 PREFIX schema: <http://schema.org/>
-SELECT ?title
+SELECT ?title ?lang
 WHERE {
   GRAPH <https://lindas.admin.ch/foag/system-map> {
     BIND(<https://agriculture.ld.admin.ch/system-map/metadata> as ?id)
-    OPTIONAL { ?id schema:name ?l_user . FILTER(LANG(?l_user) = "${lang}") }
-    OPTIONAL { ?id schema:name ?l_en . FILTER(LANG(?l_en) = "en") }
-    OPTIONAL { ?id schema:name ?l_de . FILTER(LANG(?l_de) = "de") }
-    OPTIONAL { ?id schema:name ?l_fr . FILTER(LANG(?l_fr) = "fr") }
-    OPTIONAL { ?id schema:name ?l_it . FILTER(LANG(?l_it) = "it") }
-    BIND(COALESCE(?l_user, ?l_en, ?l_de, ?l_fr, ?l_it, "System Map") AS ?title)
+    OPTIONAL { ?id schema:name ?title . BIND(LANG(?title) AS ?lang) }
   }
 }
 `;

@@ -150,9 +150,12 @@ function processSparqlResults(bindings, keyField, fields) {
 
         if (!dataMap[key]) {
             dataMap[key] = {
-                id: key
+                id: key,
+                // Add other non-language-tagged fields
+                ...(row.group && {group: mapClassIriToGroup(row.group.value)}),
+                ...(row.domain && {domain: row.domain.value}),
+                ...(row.range && {range: row.range.value})
             };
-            if (row.group) dataMap[key].group = mapClassIriToGroup(row.group.value);
             fields.forEach(f => dataMap[key][f] = {});
         }
 
@@ -179,10 +182,10 @@ async function init() {
         pinnedEdgeId = null;
     let allNodesData = {},
         allEdgesData = {},
+        allEdgeMetadata = {},
         allClassesData = {},
-        allPredicatesData = {},
         allTitles = {};
-    let network, nodesDataset, edgesDataset; // Make network and datasets globally accessible in init()
+    let network, nodesDataset, edgesDataset;
     // --- END STATE ---
 
     if (getParam("infopanel") === "false") {
@@ -191,62 +194,38 @@ async function init() {
 
     // --- DATA FETCHING & PROCESSING ---
     try {
-        const [titleJson, classesJson, predicatesJson, nodesJson, edgesJson] = await Promise.all([
-            getSparqlData(TITLE_QUERY), getSparqlData(CLASS_QUERY), getSparqlData(PREDICATES_QUERY),
-            getSparqlData(NODE_QUERY), getSparqlData(EDGE_QUERY)
+        const [titleJson, classesJson, edgeMetadataJson, nodesJson, edgesJson] = await Promise.all([
+            getSparqlData(TITLE_QUERY), 
+            getSparqlData(CLASS_QUERY), 
+            getSparqlData(EDGE_METADATA_QUERY),
+            getSparqlData(NODE_QUERY), 
+            getSparqlData(EDGE_QUERY)
         ]);
 
-        // Process nodes, classes, and predicates
         allNodesData = processSparqlResults(nodesJson.results.bindings, 'id', ['name', 'comment', 'abbreviation']);
         allClassesData = processSparqlResults(classesJson.results.bindings, 'iri', ['label', 'comment']);
-        allPredicatesData = processSparqlResults(predicatesJson.results.bindings, 'iri', ['label', 'comment']);
+        allEdgeMetadata = processSparqlResults(edgeMetadataJson.results.bindings, 'predicate', ['label', 'comment']);
         titleJson.results.bindings.forEach(row => {
             if (row.title) allTitles[row.lang.value || ''] = row.title.value;
         });
         
-        // --- CORRECT: Custom processing for edges to create unique IDs ---
         edgesJson.results.bindings.forEach(row => {
             const from = row.from.value;
             const to = row.to.value;
             const property = row.property.value;
-            // Create a unique ID for each edge instance
             const edgeId = `${from}-${property}-${to}`;
-
-            if (!allEdgesData[edgeId]) {
-                allEdgesData[edgeId] = {
-                    id: edgeId,    // Unique internal ID for vis.js
-                    iri: property, // The actual predicate IRI
-                    from: from,
-                    to: to,
-                    label: {},
-                    comment: {}
-                };
-            }
-
-            // Populate language maps for the edge
-            if (row.label) {
-                const lang = row.labelLang?.value || '';
-                allEdgesData[edgeId].label[lang] = row.label.value;
-            }
-            if (row.comment) {
-                const lang = row.commentLang?.value || '';
-                allEdgesData[edgeId].comment[lang] = row.comment.value;
-            }
+            allEdgesData[edgeId] = { id: edgeId, iri: property, from: from, to: to };
         });
-
 
     } catch (error) {
         console.error("Fatal error fetching or processing data:", error);
         document.getElementById("systemmapTitle").textContent = "Error loading data";
-        return; // Stop execution
+        return;
     }
 
     const infoPanel = document.getElementById("infoPanel");
 
-    /**
-     * Central function to apply all dynamic styling (dimming, search) to nodes and edges.
-     */
-    const applyAllStyles = () => {
+     const applyAllStyles = () => {
         const searchTerm = (getParam("search") || "").toLowerCase();
         const distMap = pinnedNodeId ? getDistancesUpToTwoHops(network, pinnedNodeId) : null;
         
@@ -280,7 +259,6 @@ async function init() {
                 }
             }
 
-            // Apply search highlighting
             if (searchTerm) {
                 const nodeData = allNodesData[n.id];
                 const isMatch = (
@@ -374,12 +352,7 @@ async function init() {
         const classIri = APP_CONFIG.GROUP_IRI_MAP[group];
         const { text: chipLabel } = getLocalizedText(allClassesData[classIri]?.label, currentLang);
 
-        const inlineStyle = `
-            background-color: ${chipStyle.background};
-            border-color: ${chipStyle.border};
-            color: ${chipStyle.font.color};
-        `;
-
+        const inlineStyle = `background-color: ${chipStyle.background}; border-color: ${chipStyle.border}; color: ${chipStyle.font.color};`;
         const classChipHtml = `<span class="info-panel-chip" style="${inlineStyle}">${chipLabel || group}</span>`;
         let titleHtml = isFallback && labelLang ? `${labelLang.toUpperCase()}: <i>${fullLabel}</i>` : fullLabel;
         if (abbreviation) titleHtml += ` (${abbreviation})`;
@@ -393,47 +366,81 @@ async function init() {
         return html;
     };
 
+
+    /**
+     * REVAMPED: Creates the HTML for the domain -> range visual diagram using SVG.
+     */
+    const createEdgeDiagramHtml = (predicateIri) => {
+        const metadata = allEdgeMetadata[predicateIri];
+        if (!metadata) return '';
+
+        const getIconHtml = (classIri) => {
+            if (!classIri || classIri === 'http://www.w3.org/2002/07/owl#Thing') {
+                return `<span class="edge-diagram-icon" style="background: white; border-color: #555; border-style: dashed; color: #555;">&nbsp;?&nbsp;</span>`;
+            }
+            const groupName = mapClassIriToGroup(classIri);
+            const style = APP_CONFIG.GROUP_STYLES[groupName] || APP_CONFIG.GROUP_STYLES.Other;
+            const { text: label } = getLocalizedText(allClassesData[classIri]?.label, currentLang);
+            
+            return `<span class="edge-diagram-icon" style="background-color: ${style.background}; border-color: ${style.border}; color: ${style.font.color};">${label || groupName}</span>`;
+        };
+
+        const domainIcon = getIconHtml(metadata.domain);
+        const rangeIcon = getIconHtml(metadata.range);
+
+        const isDashed = APP_CONFIG.DASHED_PREDICATES.includes(predicateIri);
+        const arrowDashStyle = isDashed ? `stroke-dasharray="3 4"` : '';
+
+        // TIGHTENED SVG for a smaller gap
+        const arrow = `
+            <svg width="30" height="14" viewBox="0 0 30 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+                <path d="M4 7 L26 7" stroke="#333" stroke-width="1.5" ${arrowDashStyle}></path>
+                <path d="M21 3 L26 7 L21 11" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>`;
+
+        return `<div class="edge-diagram">${domainIcon} ${arrow} ${rangeIcon}</div>`;
+    };
+
     const getEdgeInfoHtml = (edgeId) => {
         const edgeData = allEdgesData[edgeId];
-        const { text: label } = getLocalizedText(edgeData.label, currentLang);
-        const { text: comment } = getLocalizedText(edgeData.comment, currentLang);
+        const predicateMeta = allEdgeMetadata[edgeData.iri];
 
-        // CORRECT: Use the edge's `iri` for the link, not its internal `id`.
+        const { text: label } = getLocalizedText(predicateMeta?.label, currentLang);
+        const { text: comment } = getLocalizedText(predicateMeta?.comment, currentLang);
+
         let html = edgeData.iri ? `<a href="${edgeData.iri}" target="_blank"><small><code>${shortenIri(edgeData.iri)}</code></small></a><br/>` : '';
-        html += `<h4>${label}</h4>`;
-        if (comment) html += `<p><small>${comment}</small></p>`;
+        
+        // UPDATED for new left-aligned layout
+        html += `
+            <div class="edge-title-container">
+                <h4>${label}</h4>
+                ${createEdgeDiagramHtml(edgeData.iri)}
+            </div>
+        `;
+        
+        if (comment) html += `<p class="info-panel-comment"><small>${comment}</small></p>`;
         return html;
     };
 
 
-    /**
-     * NEW: Updates all language-sensitive elements in the UI.
-     */
     const updateUIForLanguage = () => {
-        // 1. Update Title
         document.getElementById("systemmapTitle").textContent = getLocalizedText(allTitles, currentLang).text || "System Map";
 
-        // 2. Update Node Labels
         const nodeUpdates = Object.values(allNodesData).map(nodeData => {
             const { text: label, lang: labelLang, isFallback } = getLocalizedText(nodeData.name, currentLang);
             const { text: abbreviation } = getLocalizedText(nodeData.abbreviation, currentLang);
-
-            const htmlLabel = isFallback && labelLang ?
-                `<b>${labelLang.toUpperCase()}:</b> <i>${shortenLabel(label, abbreviation)}</i>` :
-                `<b>${shortenLabel(label, abbreviation)}</b>`;
-
+            const htmlLabel = isFallback && labelLang ? `<b>${labelLang.toUpperCase()}:</b> <i>${shortenLabel(label, abbreviation)}</i>` : `<b>${shortenLabel(label, abbreviation)}</b>`;
             return { id: nodeData.id, label: htmlLabel };
         });
         if (nodesDataset) nodesDataset.update(nodeUpdates);
 
-        // 3. Update Edge Labels
         const edgeUpdates = Object.values(allEdgesData).map(edgeData => {
-            const { text: label } = getLocalizedText(edgeData.label, currentLang);
-            return { id: edgeData.id, label };
+            const predicateMeta = allEdgeMetadata[edgeData.iri];
+            const { text: label } = getLocalizedText(predicateMeta?.label, currentLang);
+            return { id: edgeData.id, label: label };
         });
         if (edgesDataset) edgesDataset.update(edgeUpdates);
 
-        // 4. Update Info Panel if visible
         if (!infoPanel.classList.contains("hidden")) {
             if (pinnedNodeId) {
                 showInfo(getNodeInfoHtml(pinnedNodeId));
@@ -442,7 +449,6 @@ async function init() {
             }
         }
         
-        // 5. Update settings panel if visible
         if(!document.getElementById('settings-overlay').classList.contains('hidden')) {
             populateSettings();
         }
@@ -451,26 +457,14 @@ async function init() {
 
     // --- INITIALIZE GRAPH & UI ---
     
-    // Initial node creation for Vis.js
     const initialNodes = Object.values(allNodesData).map(nodeData => ({
-        id: nodeData.id,
-        group: nodeData.group,
-        label: " " // will be populated by updateUIForLanguage
+        id: nodeData.id, group: nodeData.group, label: " "
     }));
 
-    // Initial edge creation for Vis.js
     const initialEdges = Object.values(allEdgesData).map(edgeData => {
-        const edge = {
-            id: edgeData.id,
-            from: edgeData.from,
-            to: edgeData.to,
-            label: " " // will be populated by updateUIForLanguage
-        };
-        // CORRECT: Check against the predicate IRI stored in `edgeData.iri`
+        const edge = { id: edgeData.id, from: edgeData.from, to: edgeData.to, label: " " };
         if (APP_CONFIG.DASHED_PREDICATES.includes(edgeData.iri)) {
-            edge.dashes = [2, 10];
-            edge.length = 500;
-            edge.springConstant = 0.001;
+            edge.dashes = [3, 4]; edge.length = 500; edge.springConstant = 0.001;
         }
         return edge;
     });
@@ -480,7 +474,7 @@ async function init() {
     
     const container = document.getElementById("network");
     const data = { nodes: nodesDataset, edges: edgesDataset };
-    const options = { /* ... your existing options ... */ 
+    const options = { /* ... */ 
         nodes: { shape: "box", widthConstraint: 150, heightConstraint: 40, chosen: { node: (values, id, selected, hovering) => { if (hovering) { let isDimmed = false; if (pinnedNodeId) { const distMap = getDistancesUpToTwoHops(network, pinnedNodeId); if (distMap[id] === undefined || distMap[id] > 2) { isDimmed = true; } } if (!isDimmed) { values.borderWidth = 3; values.borderColor = "#000"; } } } } },
         edges: { width: 2, selectionWidth: 1, font: { face: "Poppins", color: "#000000" }, chosen: false, arrows: { to: { enabled: true, scaleFactor: 0.8 } }, color: { color: '#000000', highlight: '#000000', inherit: false } },
         groups: APP_CONFIG.GROUP_STYLES,
@@ -491,14 +485,13 @@ async function init() {
     network = new vis.Network(container, data, options);
 
     // --- EVENT LISTENERS ---
-
     setupSearchBox(applyAllStyles);
     
     setupSettingsPanel(
-      () => populateSettings(), // pass function to re-populate on open
-      () => { // on save
+      () => populateSettings(),
+      () => {
         const params = {};
-        params.lang = currentLang; // Keep current language
+        params.lang = currentLang;
         params.infopanel = document.getElementById('settingsFocusMode').checked ? 'false' : null;
         document.querySelectorAll('#settings-classes input').forEach(cb => {
             params[cb.dataset.group.toLowerCase()] = cb.checked ? null : 'false';
@@ -534,7 +527,6 @@ async function init() {
         infoPanel.classList.toggle("fixed", !!(pinnedNodeId || pinnedEdgeId));
     });
 
-    // Language switcher logic
     const languageSelector = document.getElementById('languageSelector');
     languageSelector.value = currentLang;
     languageSelector.addEventListener('change', (e) => {
@@ -545,33 +537,48 @@ async function init() {
 
 
     // --- FINAL UI POPULATION ---
-    updateUIForLanguage(); // Initial population of all text
-    applyAllStyles(); // Initial application of styles
+    updateUIForLanguage();
+    applyAllStyles();
 
+    /**
+     * Creates the HTML for a node-like icon for the settings panel.
+     */
+    const createNodeIconHtml = (groupName) => {
+        const style = APP_CONFIG.GROUP_STYLES[groupName] || APP_CONFIG.GROUP_STYLES.Other;
+        const classIri = APP_CONFIG.GROUP_IRI_MAP[groupName];
+        const { text: label } = getLocalizedText(allClassesData[classIri]?.label, currentLang);
+        const inlineStyle = `background-color: ${style.background}; border-color: ${style.border}; color: ${style.font.color};`;
+        return `<div class="settings-node-icon" style="${inlineStyle}">${label || groupName}</div>`;
+    };
 
     /**
      * Populates the settings form with values from URL params and data.
      */
     function populateSettings() {
         document.getElementById('settingsFocusMode').checked = getParam("infopanel") === "false";
-
-        const createCheckboxItem = (container, { id, dataKey, dataValue, isChecked, label, comment, uri, curie, swatchColor }) => {
-            let html = `<div class="settings-list-item">`;
-            if (swatchColor) html += `<div class="settings-list-swatch" style="background: ${swatchColor}; border-color: #555;"></div>`;
-            html += `<div class="settings-list-item-content">
-                        <label>
-                            <input type="checkbox" id="${id}" data-${dataKey}="${dataValue}" ${isChecked ? 'checked' : ''}>
-                            <strong>${label}</strong>
-                            <code class="settings-curie"><a href="${uri}" target="_blank">${curie}<a></code>
-                        </label>
-                        ${comment ? `<span class="settings-list-item-comment">${comment}</span>`:``}
-                    </div></div>`;
+        
+        // REVAMPED for new layout
+        const createCheckboxItem = (container, { id, dataKey, dataValue, isChecked, label, comment, uri, curie, visualHtml }) => {
+            let html = `<div class="settings-list-item">
+                <div class="settings-list-item-content">
+                    <label>
+                        <input type="checkbox" id="${id}" data-${dataKey}="${dataValue}" ${isChecked ? 'checked' : ''}>
+                        <strong>${label}</strong>
+                        ${uri ? `<span>(<a href="${uri}" target="_blank">${curie}</a>)&nbsp;&nbsp;</span>` : ''}
+                        ${visualHtml || ''}
+                    </label>
+                    ${comment ? `<span class="settings-list-item-comment">${comment}</span>`:``}
+                </div></div>`;
             container.insertAdjacentHTML('beforeend', html);
         };
 
         const classesContainer = document.getElementById('settings-classes');
         classesContainer.innerHTML = '';
-        Object.values(allClassesData).forEach(classData => {
+        const sortedClasses = Object.values(allClassesData).sort((a,b) => 
+            (getLocalizedText(a.label, currentLang).text || '').localeCompare(getLocalizedText(b.label, currentLang).text || '')
+        );
+
+        sortedClasses.forEach(classData => {
             const groupName = mapClassIriToGroup(classData.id);
             createCheckboxItem(classesContainer, {
                 id: `setting-class-${groupName}`,
@@ -582,7 +589,7 @@ async function init() {
                 comment: getLocalizedText(classData.comment, currentLang).text || '',
                 uri: classData.id,
                 curie: shortenIri(classData.id),
-                swatchColor: APP_CONFIG.GROUP_STYLES[groupName]?.background
+                visualHtml: createNodeIconHtml(groupName) // Use new node icon
             });
         });
 
@@ -601,7 +608,7 @@ async function init() {
             }
         }
         
-        const sortedPredicates = Object.values(allPredicatesData).sort((a,b) => 
+        const sortedPredicates = Object.values(allEdgeMetadata).sort((a,b) => 
             (getLocalizedText(a.label, currentLang).text || '').localeCompare(getLocalizedText(b.label, currentLang).text || '')
         );
 
@@ -614,8 +621,10 @@ async function init() {
                     dataValue: key,
                     isChecked: currentPreds.includes(key),
                     label: getLocalizedText(predData.label, currentLang).text || 'No label',
+                    comment: null, // REMOVED comment for predicates
                     uri: predData.id,
-                    curie: shortenIri(predData.id)
+                    curie: shortenIri(predData.id),
+                    visualHtml: createEdgeDiagramHtml(predData.id)
                 });
             }
         });
@@ -623,15 +632,12 @@ async function init() {
 }
 
 
-/**
- * Manages the settings panel logic, events, and state.
- */
 function setupSettingsPanel(onOpen, onSave) {
     const overlay = document.getElementById('settings-overlay');
     const trigger = document.getElementById('settings-trigger');
 
     const openSettings = () => {
-        onOpen(); // Callback to populate the panel
+        onOpen();
         overlay.classList.remove('hidden');
     };
     const closeSettings = () => overlay.classList.add('hidden');

@@ -125,7 +125,7 @@ html, body {
     background: var(--color-background);
     padding: 20px 30px;
     border-radius: 8px;
-    width: 1000px;
+    width: 1100px;
     max-width: 90vw;
     max-height: 85vh;
     display: flex;
@@ -157,30 +157,13 @@ html, body {
     padding-right: 15px;
 }
 .settings-column:first-child {
-    flex: 1;
+    flex: 2;
 }
 .settings-column:last-child {
-    flex: 1;
+    flex: 3;
 }
 .settings-section {
     margin-bottom: 15px;
-}
-.settings-item {
-    display: flex;
-    align-items: center;
-    padding: 8px 0;
-    font-size: 14px;
-}
-.settings-item label {
-    flex-grow: 1;
-}
-.settings-item select {
-    padding: 5px;
-    border-radius: 4px;
-}
-.settings-item input {
-    margin-left: 15px;
-    transform: scale(1.2);
 }
 .settings-list-item {
     display: flex;
@@ -188,29 +171,26 @@ html, body {
     margin-bottom: 12px;
     font-size: 14px;
 }
-.settings-list-swatch {
-    width: 24px;
-    height: 12px;
-    border: 1px solid var(--color-foreground);
-    border-radius: 3px;
-    margin-right: 12px;
-    flex-shrink: 0;
-    margin-top: 5px;
-}
 .settings-list-item-content {
     flex-grow: 1;
 }
 .settings-list-item-content label {
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.3rem;
+    width: 100%;
     margin-bottom: 4px;
+    cursor: pointer;
 }
 .settings-list-item-content input {
-    margin-right: 8px;
+    margin-right: 0;
     margin-left: 0;
+    flex-shrink: 0;
 }
 .settings-list-item-content strong {
-    margin-right: auto;
+    margin-right: 0; /* Remove right auto margin to allow left alignment */
+    white-space: nowrap;
 }
 .settings-list-item-comment {
     font-size: 9pt;
@@ -222,6 +202,7 @@ html, body {
     color: var(--color-font-dimmed);
     padding: 2px 4px;
     border-radius: 3px;
+    flex-shrink: 0; /* Prevent from shrinking */
 }
 .settings-actions {
     display: flex;
@@ -322,4 +303,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 #infoPanel {
     word-wrap: break-word;
+}
+.edge-title-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 8px;
+}
+.edge-title-container h4 {
+    margin: 0 !important;
+}
+
+.edge-diagram {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Reduced gap */
+    flex-shrink: 0;
+}
+.edge-diagram-icon {
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    border-width: 1px;
+    border-style: solid;
+    white-space: nowrap;
+}
+.settings-node-icon {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    border-width: 1px;
+    border-style: solid;
+    white-space: nowrap;
+    line-height: 1.5;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }

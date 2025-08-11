@@ -1574,7 +1574,7 @@ systemmap:Sc6kZqxTyS0gFGCY a schema:SoftwareApplication ;
         "MARS III"@fr,
         "MARS III"@it ;
     systemmap:operatedBy systemmap:SaVyVVsIDkiDMtQq4 ;
-    systemmap:usesMasterData systemmap:SbKCxLGicJtMGTQiD .
+    systemmap:isPartOf systemmap:SYqYq3UTUnZHmyFRD .
 
 systemmap:Sd3egXVVG1pgbzgcA a schema:SoftwareApplication ;
     rdfs:label "ERP-System"@de,

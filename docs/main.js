@@ -59,8 +59,7 @@ function setParamsAndReload(paramsObj) {
     for (const [key, value] of Object.entries(paramsObj)) {
         (value === null || value === undefined || value === true) ? params.delete(key): params.set(key, value);
     }
-    if (params.get('infopanel') === 'true') params.delete('infopanel');
-
+    
     window.location.href = `${window.location.pathname}?${params.toString()}`;
 }
 
@@ -113,182 +112,130 @@ function setupSearchBox(onSearchChange) {
 }
 
 /**
+ * Selects the best localized text based on language preferences.
+ * @param {object} langMap - An object mapping lang codes to text (e.g., { de: 'Hallo', en: 'Hello' }).
+ * @param {string} currentLang - The desired language code.
+ * @returns {{text: string, lang: string, isFallback: boolean}}
+ */
+function getLocalizedText(langMap, currentLang) {
+    if (!langMap) return { text: '', lang: '', isFallback: true };
+    const langPrefs = [currentLang, 'en', 'de', 'fr', 'it', '']; // Added empty string for untagged literals
+    for (const lang of langPrefs) {
+        if (langMap[lang]) {
+            return {
+                text: langMap[lang],
+                lang: lang,
+                isFallback: lang !== currentLang
+            };
+        }
+    }
+    // Fallback to the first available language if none of the preferred ones match
+    const firstKey = Object.keys(langMap)[0];
+    if (firstKey) {
+        return { text: langMap[firstKey], lang: firstKey, isFallback: true };
+    }
+    return { text: '', lang: '', isFallback: true };
+}
+
+
+/**
+ * Processes raw SPARQL results into a structured map with all languages.
+ */
+function processSparqlResults(bindings, keyField, fields) {
+    const dataMap = {};
+    bindings.forEach(row => {
+        const key = row[keyField]?.value;
+        if (!key) return;
+
+        if (!dataMap[key]) {
+            dataMap[key] = {
+                id: key,
+                // Add other non-language-tagged fields
+                ...(row.group && {group: mapClassIriToGroup(row.group.value)}),
+                ...(row.domain && {domain: row.domain.value}),
+                ...(row.range && {range: row.range.value})
+            };
+            fields.forEach(f => dataMap[key][f] = {});
+        }
+
+        fields.forEach(f => {
+            if (row[f]) {
+                const lang = row[`${f}Lang`]?.value || '';
+                dataMap[key][f][lang] = row[f].value;
+            }
+        });
+    });
+    return dataMap;
+}
+
+/**
  * Main application initialization.
  */
 async function init() {
     // Initialize style constants by reading them from the CSS variables
     APP_CONFIG.initializeStylesFromCSS();
 
-    const currentLang = getParam("lang") || "de";
+    // --- STATE ---
+    let currentLang = getParam("lang") || "de";
+    let minDegree = parseInt(getParam("minDegree") || "0", 10);
     let pinnedNodeId = null,
         pinnedEdgeId = null;
+    let allNodesData = {},
+        allEdgesData = {},
+        allEdgeMetadata = {},
+        allClassesData = {},
+        allTitles = {};
+    let network, nodesDataset, edgesDataset;
+    // --- END STATE ---
 
-    if (getParam("infopanel") === "false") {
-        document.getElementById("infoPanel").classList.add("param-hidden");
-    }
-
+    // --- DATA FETCHING & PROCESSING ---
     try {
-        const titleJson = await getSparqlData(TITLE_QUERY);
-        document.getElementById("systemmapTitle").textContent = titleJson.results.bindings[0]?.title.value || "System Map";
+        const [titleJson, classesJson, edgeMetadataJson, nodesJson, edgesJson] = await Promise.all([
+            getSparqlData(TITLE_QUERY), 
+            getSparqlData(CLASS_QUERY), 
+            getSparqlData(EDGE_METADATA_QUERY),
+            getSparqlData(NODE_QUERY), 
+            getSparqlData(EDGE_QUERY)
+        ]);
+
+        allNodesData = processSparqlResults(nodesJson.results.bindings, 'id', ['name', 'comment', 'abbreviation']);
+        allClassesData = processSparqlResults(classesJson.results.bindings, 'iri', ['label', 'comment']);
+        allEdgeMetadata = processSparqlResults(edgeMetadataJson.results.bindings, 'predicate', ['label', 'comment']);
+        titleJson.results.bindings.forEach(row => {
+            if (row.title) allTitles[row.lang.value || ''] = row.title.value;
+        });
+        
+        edgesJson.results.bindings.forEach(row => {
+            const from = row.from.value;
+            const to = row.to.value;
+            const property = row.property.value;
+            const edgeId = `${from}-${property}-${to}`;
+            allEdgesData[edgeId] = { id: edgeId, iri: property, from: from, to: to };
+        });
+
     } catch (error) {
-        console.error("Error fetching title:", error);
+        console.error("Fatal error fetching or processing data:", error);
+        document.getElementById("systemmapTitle").textContent = APP_CONFIG.UI_TEXT[currentLang].errorLoading;
+        return;
     }
-
-    const [classesJson, predicatesJson, nodesJson, edgesJson] = await Promise.all([
-        getSparqlData(CLASS_QUERY), getSparqlData(PREDICATES_QUERY),
-        getSparqlData(NODE_QUERY), getSparqlData(EDGE_QUERY)
-    ]);
-
-    // Create a map from group name to its translated label for the info panel chip
-    const classLabelsByGroup = {};
-    classesJson.results.bindings.forEach(row => {
-        const groupName = mapClassIriToGroup(row.iri.value);
-        classLabelsByGroup[groupName] = row.label.value || groupName;
-    });
-
-    setupSettingsPanel(classesJson.results.bindings, predicatesJson.results.bindings);
-
-    const nodes = nodesJson.results.bindings.map(row => {
-        const label = row.displayLabel.value;
-        const abbreviation = row.abbreviation.value;
-        const labelLang = row.displayLabel["xml:lang"] || "";
-        const htmlLabel = labelLang && labelLang !== currentLang ?
-            `<b>${labelLang.toUpperCase()}:</b> <i>${shortenLabel(label, abbreviation)}</i>` :
-            `<b>${shortenLabel(label, abbreviation)}</b>`;
-
-        const groupName = mapClassIriToGroup(row.group.value);
-        return {
-            id: row.id.value,
-            label: htmlLabel,
-            group: groupName,
-            data: {
-                iri: row.id.value,
-                fullLabel: label,
-                abbreviation,
-                comment: row.comment.value,
-                isFallback: labelLang && labelLang !== currentLang,
-                labelLang
-            }
-        };
-    });
-
-    const edges = edgesJson.results.bindings.map(row => {
-        const edge = {
-            from: row.from.value,
-            to: row.to.value,
-            label: row.label.value,
-            comment: row.comment.value,
-            iri: row.id.value
-        };
-
-        // Use central config for dashed predicates
-        if (APP_CONFIG.DASHED_PREDICATES.includes(edge.iri)) {
-            edge.dashes = [2, 10];
-            edge.length = 500;
-            edge.springConstant = 0.001;
-        }
-        return edge;
-    });
-
-    const nodesDataset = new vis.DataSet(nodes);
-    const edgesDataset = new vis.DataSet(edges);
-    const container = document.getElementById("network");
-    const data = {
-        nodes: nodesDataset,
-        edges: edgesDataset
-    };
-
-    const options = {
-        nodes: {
-            shape: "box",
-            widthConstraint: 150,
-            heightConstraint: 40,
-            chosen: {
-                node: (values, id, selected, hovering) => {
-                    // Only apply hover effect if no node is pinned, OR if the hovered
-                    // node is within the 2-hop distance of the pinned node.
-                    if (hovering) {
-                        let isDimmed = false;
-                        if (pinnedNodeId) {
-                            const distMap = getDistancesUpToTwoHops(network, pinnedNodeId);
-                            if (distMap[id] === undefined || distMap[id] > 2) {
-                                isDimmed = true;
-                            }
-                        }
-                        // Apply highlight only if the node is not dimmed
-                        if (!isDimmed) {
-                            values.borderWidth = 3;
-                            values.borderColor = "#000";
-                        }
-                    }
-                }
-            }
-        },
-        edges: {
-            width: 2,
-            selectionWidth: 1,
-            font: {
-                face: "Poppins",
-                color: "#000000"
-            },
-            chosen: false,
-            arrows: {
-                to: {
-                    enabled: true,
-                    scaleFactor: 0.8
-                }
-            },
-            color: {
-                color: '#000000',
-                highlight: '#000000',
-                inherit: false
-            }
-        },
-        groups: APP_CONFIG.GROUP_STYLES, // Use styles from config
-        interaction: {
-            hover: true,
-            dragNodes: true,
-            hoverConnectedEdges: false,
-            zoomView: true,
-            dragView: true
-        },
-        physics: {
-            enabled: true,
-            barnesHut: {
-                gravitationalConstant: -9000,
-                centralGravity: 0.05,
-                springLength: 250,
-                springConstant: 0.2
-            },
-            stabilization: {
-                iterations: 100
-            }
-        }
-    };
-
-    const network = new vis.Network(container, data, options);
-
-    // Get original styles from the central config
-    const originalStyles = Object.fromEntries(nodes.map(n => {
-        const style = APP_CONFIG.GROUP_STYLES[n.group] || APP_CONFIG.GROUP_STYLES.Other;
-        return [n.id, {
-            background: style.background,
-            border: style.border,
-            fontColor: style.font.color
-        }];
-    }));
 
     const infoPanel = document.getElementById("infoPanel");
 
-    /**
-     * Central function to apply all dynamic styling (dimming, search) to nodes and edges.
-     */
-    const applyAllStyles = () => {
+     const applyAllStyles = () => {
         const searchTerm = (getParam("search") || "").toLowerCase();
         const distMap = pinnedNodeId ? getDistancesUpToTwoHops(network, pinnedNodeId) : null;
+        
+        const originalStyles = Object.fromEntries(nodesDataset.map(n => {
+            const style = APP_CONFIG.GROUP_STYLES[n.group] || APP_CONFIG.GROUP_STYLES.Other;
+            return [n.id, {
+                background: style.background,
+                border: style.border,
+                fontColor: style.font.color
+            }];
+        }));
 
         // Node styling
-        const nodeUpdates = nodes.map(n => {
+        const nodeUpdates = nodesDataset.map(n => {
             const originalStyle = originalStyles[n.id];
             let newColor = originalStyle.background;
             let newBorder = originalStyle.border;
@@ -308,13 +255,14 @@ async function init() {
                 }
             }
 
-            // Apply search highlighting, using the central config color
             if (searchTerm) {
+                const nodeData = allNodesData[n.id];
                 const isMatch = (
-                    (n.data.fullLabel || '').toLowerCase().includes(searchTerm) ||
-                    (n.data.comment || '').toLowerCase().includes(searchTerm) ||
-                    (n.data.abbreviation || '').toLowerCase().includes(searchTerm)
+                    Object.values(nodeData.name).some(val => val.toLowerCase().includes(searchTerm)) ||
+                    Object.values(nodeData.comment).some(val => val.toLowerCase().includes(searchTerm)) ||
+                    Object.values(nodeData.abbreviation).some(val => val.toLowerCase().includes(searchTerm))
                 );
+
                 if (isMatch) {
                     newColor = APP_CONFIG.SEARCH_HIGHLIGHT_COLOR.background;
                     newBorder = APP_CONFIG.SEARCH_HIGHLIGHT_COLOR.border;
@@ -338,10 +286,7 @@ async function init() {
         nodesDataset.update(nodeUpdates);
 
         // Edge styling logic
-        const allEdges = edgesDataset.get({
-            returnType: 'Array'
-        });
-        const edgeUpdates = allEdges.map(edge => {
+        const edgeUpdates = edgesDataset.map(edge => {
             let newColor = '#000000',
                 newWidth = 2,
                 fontUpdate = {
@@ -360,14 +305,12 @@ async function init() {
                     fontUpdate.color = '#00000000';
                     fontUpdate.strokeWidth = 0;
                 } else {
-                    const maxDist = Math.max(distFrom, distTo);
+                    const maxDist = Math.max(distFrom ?? 0, distTo ?? 0);
                     if (maxDist === 2) {
                         const dimRatio = 0.5;
                         newColor = blendHexColors('#000000', '#ffffff', dimRatio);
                         fontUpdate.color = blendHexColors('#000000', '#ffffff', dimRatio);
                         newWidth = 1;
-                    }
-                    else {
                     }
                 }
             }
@@ -383,8 +326,6 @@ async function init() {
         edgesDataset.update(edgeUpdates);
     };
 
-    setupSearchBox(applyAllStyles);
-    applyAllStyles();
 
     const showInfo = (html) => {
         infoPanel.innerHTML = html;
@@ -396,103 +337,366 @@ async function init() {
         infoPanel.classList.remove("fixed");
     };
 
-    // in main.js
+    const getNodeInfoHtml = (nodeId) => {
+        const nodeData = allNodesData[nodeId];
+        const { text: fullLabel, lang: labelLang, isFallback } = getLocalizedText(nodeData.name, currentLang);
+        const { text: abbreviation } = getLocalizedText(nodeData.abbreviation, currentLang);
+        const { text: comment } = getLocalizedText(nodeData.comment, currentLang);
+        const group = nodeData.group;
+
+        const chipStyle = APP_CONFIG.GROUP_STYLES[group] || APP_CONFIG.GROUP_STYLES.Other;
+        const classIri = APP_CONFIG.GROUP_IRI_MAP[group];
+        const { text: chipLabel } = getLocalizedText(allClassesData[classIri]?.label, currentLang);
+
+        const inlineStyle = `background-color: ${chipStyle.background}; border-color: ${chipStyle.border}; color: ${chipStyle.font.color};`;
+        const classChipHtml = `<span class="info-panel-chip" style="${inlineStyle}">${chipLabel || group}</span>`;
+        let titleHtml = isFallback && labelLang ? `${labelLang.toUpperCase()}: <i>${fullLabel}</i>` : fullLabel;
+        if (abbreviation) titleHtml += ` (${abbreviation})`;
+
+        let html = `
+            <a href="${nodeData.id}" target="_blank"><small><code>${shortenIri(nodeData.id)}</code></small></a>
+            <div class="info-panel-header">
+                <h4>${titleHtml} ${classChipHtml}</h4>
+            </div>`;
+        if (comment) html += `<p class="info-panel-comment"><small>${comment}</small></p>`;
+        return html;
+    };
+
+
+    /**
+     * Creates the HTML for the domain -> range visual diagram using SVG.
+     */
+    const createEdgeDiagramHtml = (predicateIri) => {
+        const metadata = allEdgeMetadata[predicateIri];
+        if (!metadata) return '';
+
+        const getIconHtml = (classIri) => {
+            if (!classIri || classIri === 'http://www.w3.org/2002/07/owl#Thing') {
+                return `<span class="edge-diagram-icon" style="background: white; border-color: #555; border-style: dashed; color: #555;">&nbsp;?&nbsp;</span>`;
+            }
+            const groupName = mapClassIriToGroup(classIri);
+            const style = APP_CONFIG.GROUP_STYLES[groupName] || APP_CONFIG.GROUP_STYLES.Other;
+            const { text: label } = getLocalizedText(allClassesData[classIri]?.label, currentLang);
+            
+            return `<span class="edge-diagram-icon" style="background-color: ${style.background}; border-color: ${style.border}; color: ${style.font.color};">${label || groupName}</span>`;
+        };
+
+        const domainIcon = getIconHtml(metadata.domain);
+        const rangeIcon = getIconHtml(metadata.range);
+
+        const isDashed = APP_CONFIG.DASHED_PREDICATES.includes(predicateIri);
+        const arrowDashStyle = isDashed ? `stroke-dasharray="3 4"` : '';
+
+        const arrow = `
+            <svg width="30" height="14" viewBox="0 0 30 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+                <path d="M4 7 L26 7" stroke="#333" stroke-width="1.5" ${arrowDashStyle}></path>
+                <path d="M21 3 L26 7 L21 11" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>`;
+
+        return `<div class="edge-diagram">${domainIcon} ${arrow} ${rangeIcon}</div>`;
+    };
+
+    const getEdgeInfoHtml = (edgeId) => {
+        const edgeData = allEdgesData[edgeId];
+        const predicateMeta = allEdgeMetadata[edgeData.iri];
+
+        const { text: label } = getLocalizedText(predicateMeta?.label, currentLang);
+        const { text: comment } = getLocalizedText(predicateMeta?.comment, currentLang);
+
+        let html = edgeData.iri ? `<a href="${edgeData.iri}" target="_blank"><small><code>${shortenIri(edgeData.iri)}</code></small></a><br/>` : '';
+        
+        html += `
+            <div class="edge-title-container">
+                <h4>${label}</h4>
+                ${createEdgeDiagramHtml(edgeData.iri)}
+            </div>
+        `;
+        
+        if (comment) html += `<p class="info-panel-comment"><small>${comment}</small></p>`;
+        return html;
+    };
+
+
+    const updateUIForLanguage = () => {
+        const TEXT = APP_CONFIG.UI_TEXT[currentLang];
+        document.title = TEXT.appTitle;
+        document.getElementById("systemmapTitle").textContent = getLocalizedText(allTitles, currentLang).text || TEXT.fallbackSystemMapTitle;
+        document.getElementById("search-box").placeholder = TEXT.searchPlaceholder;
+        document.getElementById("settings-trigger").title = TEXT.settingsTooltip;
+        document.getElementById("github-link").title = TEXT.githubTooltip;
+        document.getElementById("email-link").title = TEXT.emailTooltip;
+
+        if (nodesDataset) {
+            const nodeIdsInGraph = nodesDataset.getIds();
+            const nodeUpdates = nodeIdsInGraph.map(nodeId => {
+                const nodeData = allNodesData[nodeId];
+                if (!nodeData) return null;
+                const { text: label, lang: labelLang, isFallback } = getLocalizedText(nodeData.name, currentLang);
+                const { text: abbreviation } = getLocalizedText(nodeData.abbreviation, currentLang);
+                const htmlLabel = isFallback && labelLang ? `<b>${labelLang.toUpperCase()}:</b> <i>${shortenLabel(label, abbreviation)}</i>` : `<b>${shortenLabel(label, abbreviation)}</b>`;
+                return { id: nodeId, label: htmlLabel };
+            }).filter(Boolean);
+            nodesDataset.update(nodeUpdates);
+        }
+
+        if (edgesDataset) {
+            const edgeIdsInGraph = edgesDataset.getIds();
+            const edgeUpdates = edgeIdsInGraph.map(edgeId => {
+                const edgeData = allEdgesData[edgeId];
+                if (!edgeData) return null;
+                const predicateMeta = allEdgeMetadata[edgeData.iri];
+                const { text: label } = getLocalizedText(predicateMeta?.label, currentLang);
+                return { id: edgeId, label: label };
+            }).filter(Boolean);
+            edgesDataset.update(edgeUpdates);
+        }
+
+        if (!infoPanel.classList.contains("hidden")) {
+            if (pinnedNodeId) {
+                showInfo(getNodeInfoHtml(pinnedNodeId));
+            } else if (pinnedEdgeId) {
+                showInfo(getEdgeInfoHtml(pinnedEdgeId));
+            }
+        }
+        
+        if(!document.getElementById('settings-overlay').classList.contains('hidden')) {
+            populateSettings();
+        }
+    };
+
+
+    // --- INITIALIZE GRAPH & UI ---
+    
+    // 1. Calculate degrees based on currently active edges from the query
+    const nodeDegrees = {};
+    Object.values(allEdgesData).forEach(edge => {
+        nodeDegrees[edge.from] = (nodeDegrees[edge.from] || 0) + 1;
+        nodeDegrees[edge.to] = (nodeDegrees[edge.to] || 0) + 1;
+    });
+    console.log("Calculated Node Degrees (total in+out):", nodeDegrees);
+
+    // 2. Filter nodes based on the minDegree parameter
+    const filteredNodeIds = new Set(
+        Object.keys(allNodesData).filter(nodeId => (nodeDegrees[nodeId] || 0) >= minDegree)
+    );
+
+    // 3. Create initial node and edge arrays for vis.js using the filtered sets
+    const initialNodes = Object.values(allNodesData)
+        .filter(nodeData => filteredNodeIds.has(nodeData.id))
+        .map(nodeData => ({
+            id: nodeData.id,
+            group: nodeData.group,
+            label: " "
+        }));
+
+    const initialEdges = Object.values(allEdgesData)
+        .filter(edgeData => filteredNodeIds.has(edgeData.from) && filteredNodeIds.has(edgeData.to))
+        .map(edgeData => {
+            const edge = { id: edgeData.id, from: edgeData.from, to: edgeData.to, label: " " };
+            if (APP_CONFIG.DASHED_PREDICATES.includes(edgeData.iri)) {
+                edge.dashes = [3, 4]; edge.length = 500; edge.springConstant = 0.001;
+            }
+            return edge;
+        });
+        
+    nodesDataset = new vis.DataSet(initialNodes);
+    edgesDataset = new vis.DataSet(initialEdges);
+    
+    const container = document.getElementById("network");
+    const data = { nodes: nodesDataset, edges: edgesDataset };
+    const options = { /* ... */ 
+        nodes: { shape: "box", widthConstraint: 150, heightConstraint: 40, chosen: { node: (values, id, selected, hovering) => { if (hovering) { let isDimmed = false; if (pinnedNodeId) { const distMap = getDistancesUpToTwoHops(network, pinnedNodeId); if (distMap[id] === undefined || distMap[id] > 2) { isDimmed = true; } } if (!isDimmed) { values.borderWidth = 3; values.borderColor = "#000"; } } } } },
+        edges: { width: 2, selectionWidth: 1, font: { face: "Poppins", color: "#000000" }, chosen: false, arrows: { to: { enabled: true, scaleFactor: 0.8 } }, color: { color: '#000000', highlight: '#000000', inherit: false } },
+        groups: APP_CONFIG.GROUP_STYLES,
+        interaction: { hover: true, dragNodes: true, hoverConnectedEdges: false, zoomView: true, dragView: true },
+        physics: { enabled: true, barnesHut: { gravitationalConstant: -9000, centralGravity: 0.05, springLength: 250, springConstant: 0.2 }, stabilization: { iterations: 100 } }
+    };
+
+    network = new vis.Network(container, data, options);
+
+    // --- EVENT LISTENERS ---
+    setupSearchBox(applyAllStyles);
+    
+    setupSettingsPanel(
+      () => populateSettings(),
+      () => {
+        const params = {};
+        params.lang = currentLang;
+        
+        // Handle minDegree slider
+        const minDegreeValue = parseInt(document.getElementById('min-degree-slider').value, 10);
+        params.minDegree = minDegreeValue > 0 ? minDegreeValue : null;
+
+        // Handle class checkboxes
+        document.querySelectorAll('#settings-classes input').forEach(cb => {
+            params[cb.dataset.group.toLowerCase()] = cb.checked ? null : 'false';
+        });
+
+        // Handle predicate checkboxes
+        const allPredicateKeys = Object.keys(APP_CONFIG.PREDICATE_MAP);
+        const selectedPreds = Array.from(document.querySelectorAll('#settings-predicates input')).filter(cb => cb.checked).map(cb => cb.dataset.key);
+        params.predicates = selectedPreds.length === allPredicateKeys.length ? null : selectedPreds.join(';');
+        
+        setParamsAndReload(params);
+    });
 
     network.on("click", params => {
         let clickedNodeId = params.nodes[0] || null;
 
-        // If a node is currently pinned, check if the newly clicked node is a dimmed one.
-        // If so, treat it as a click on the background to un-pin everything.
         if (clickedNodeId && pinnedNodeId) {
             const distMap = getDistancesUpToTwoHops(network, pinnedNodeId);
             if (distMap[clickedNodeId] === undefined || distMap[clickedNodeId] > 2) {
-                clickedNodeId = null; // Ignore click on dimmed node
+                clickedNodeId = null; 
             }
         }
 
         pinnedNodeId = clickedNodeId;
-        // Only select an edge if no node was selected
         pinnedEdgeId = clickedNodeId ? null : params.edges[0] || null;
 
         if (pinnedNodeId) {
-            const selectedNode = nodesDataset.get(pinnedNodeId);
-            showInfo(getNodeInfoHtml(selectedNode.data, selectedNode.group));
+            showInfo(getNodeInfoHtml(pinnedNodeId));
         } else if (pinnedEdgeId) {
-            showInfo(getEdgeInfoHtml(edgesDataset.get(pinnedEdgeId)));
+            showInfo(getEdgeInfoHtml(pinnedEdgeId));
         } else {
-            // This now correctly triggers when clicking the background OR a dimmed node
             network.unselectAll();
             hideInfo();
         }
-
         applyAllStyles();
-
-        if (pinnedNodeId || pinnedEdgeId) {
-            infoPanel.classList.add("fixed");
-        } else {
-            infoPanel.classList.remove("fixed");
-        }
+        infoPanel.classList.toggle("fixed", !!(pinnedNodeId || pinnedEdgeId));
     });
 
-    const getNodeInfoHtml = ({
-        iri,
-        fullLabel,
-        abbreviation,
-        comment,
-        isFallback,
-        labelLang
-    }, group) => {
-        // Use styles from central config
-        const chipStyle = APP_CONFIG.GROUP_STYLES[group] || APP_CONFIG.GROUP_STYLES.Other;
-        const chipLabel = classLabelsByGroup[group] || group;
+    const languageSelector = document.getElementById('languageSelector');
+    languageSelector.value = currentLang;
+    languageSelector.addEventListener('change', (e) => {
+        currentLang = e.target.value;
+        setParamsWithoutReload({ lang: currentLang });
+        updateUIForLanguage();
+    });
 
-        const inlineStyle = `
-            background-color: ${chipStyle.background};
-            border-color: ${chipStyle.border};
-            color: ${chipStyle.font.color};
+
+    // --- FINAL UI POPULATION ---
+    updateUIForLanguage();
+    applyAllStyles();
+
+    /**
+     * Creates the HTML for a node-like icon for the settings panel.
+     */
+    const createNodeIconHtml = (groupName) => {
+        const style = APP_CONFIG.GROUP_STYLES[groupName] || APP_CONFIG.GROUP_STYLES.Other;
+        const classIri = APP_CONFIG.GROUP_IRI_MAP[groupName];
+        const { text: label } = getLocalizedText(allClassesData[classIri]?.label, currentLang);
+        const inlineStyle = `background-color: ${style.background}; border-color: ${style.border}; color: ${style.font.color};`;
+        return `<div class="settings-node-icon" style="${inlineStyle}">${label || groupName}</div>`;
+    };
+
+    /**
+     * Populates the settings form with values from URL params and data.
+     */
+    function populateSettings() {
+        const TEXT = APP_CONFIG.UI_TEXT[currentLang];
+        
+        // Populate static text
+        document.getElementById('settings-title').textContent = TEXT.settings;
+        document.getElementById('settings-min-degree-title').textContent = TEXT.minDegree;
+        document.getElementById('settings-node-classes-title').textContent = TEXT.visibleNodeClasses;
+        document.getElementById('settings-relationship-types-title').textContent = TEXT.visibleRelationshipTypes;
+        document.getElementById('settingsCancel').textContent = TEXT.cancel;
+        document.getElementById('settingsSave').textContent = TEXT.saveAndReload;
+
+        // Populate min degree slider
+        const minDegreeContainer = document.getElementById('settings-min-degree-container');
+        minDegreeContainer.innerHTML = `
+            <div class="settings-slider-wrapper">
+                <input type="range" min="0" max="5" value="${minDegree}" class="settings-slider" id="min-degree-slider">
+                <span id="min-degree-value">${minDegree}</span>
+            </div>
         `;
+        const slider = document.getElementById('min-degree-slider');
+        const sliderValueDisplay = document.getElementById('min-degree-value');
+        slider.addEventListener('input', (e) => {
+            sliderValueDisplay.textContent = e.target.value;
+        });
 
-        const classChipHtml = `<span class="info-panel-chip" style="${inlineStyle}">${chipLabel}</span>`;
+        const createCheckboxItem = (container, { id, dataKey, dataValue, isChecked, label, comment, uri, curie, visualHtml }) => {
+            let html = `<div class="settings-list-item">
+                <div class="settings-list-item-content">
+                    <label>
+                        <input type="checkbox" id="${id}" data-${dataKey}="${dataValue}" ${isChecked ? 'checked' : ''}>
+                        <strong>${label}</strong>
+                        ${uri ? `<span>(<a href="${uri}" target="_blank">${curie}</a>)&nbsp;&nbsp;</span>` : ''}
+                        ${visualHtml || ''}
+                    </label>
+                    ${comment ? `<span class="settings-list-item-comment">${comment}</span>`:``}
+                </div></div>`;
+            container.insertAdjacentHTML('beforeend', html);
+        };
 
-        let titleHtml = '';
-        titleHtml += isFallback ? `${labelLang.toUpperCase()}: <i>${fullLabel}</i>` : fullLabel;
-        if (abbreviation) titleHtml += ` (${abbreviation})`;
-        titleHtml += '';
+        const classesContainer = document.getElementById('settings-classes');
+        classesContainer.innerHTML = '';
+        const sortedClasses = Object.values(allClassesData).sort((a,b) => 
+            (getLocalizedText(a.label, currentLang).text || '').localeCompare(getLocalizedText(b.label, currentLang).text || '')
+        );
 
-        let html = `
-            <a href="${iri}" target="_blank"><small><code>${shortenIri(iri)}</code></small></a>
-            <div class="info-panel-header">
-                <h4>${titleHtml} ${classChipHtml}</h4>
-            </div>`;
+        sortedClasses.forEach(classData => {
+            const groupName = mapClassIriToGroup(classData.id);
+            createCheckboxItem(classesContainer, {
+                id: `setting-class-${groupName}`,
+                dataKey: 'group',
+                dataValue: groupName,
+                isChecked: getParam(groupName.toLowerCase()) !== "false",
+                label: getLocalizedText(classData.label, currentLang).text || TEXT.noLabel,
+                comment: getLocalizedText(classData.comment, currentLang).text || '',
+                uri: classData.id,
+                curie: shortenIri(classData.id),
+                visualHtml: createNodeIconHtml(groupName)
+            });
+        });
 
-        if (comment) {
-            html += `<p class="info-panel-comment"><small>${comment}</small></p>`;
+        const predicatesContainer = document.getElementById('settings-predicates');
+        predicatesContainer.innerHTML = '';
+        const rawPredParam = getParam("predicates");
+        const currentPreds = rawPredParam === null ? Object.keys(APP_CONFIG.PREDICATE_MAP) : (rawPredParam ? rawPredParam.split(/[;,+\s]+/) : []);
+
+        const iriToKeyMap = {};
+        const invertedPrefixes = Object.fromEntries(Object.entries(APP_CONFIG.PREFIXES).map(([base, prefix]) => [prefix, base]));
+        for (const [key, curie] of Object.entries(APP_CONFIG.PREDICATE_MAP)) {
+            const [prefix, suffix] = curie.split(':');
+            if (invertedPrefixes[prefix]) {
+                const iri = invertedPrefixes[prefix] + suffix;
+                iriToKeyMap[iri] = key;
+            }
         }
+        
+        const sortedPredicates = Object.values(allEdgeMetadata).sort((a,b) => 
+            (getLocalizedText(a.label, currentLang).text || '').localeCompare(getLocalizedText(b.label, currentLang).text || '')
+        );
 
-        return html;
-    };
-
-    const getEdgeInfoHtml = ({
-        iri,
-        label,
-        comment
-    }) => {
-        let html = iri ? `<a href="${iri}" target="_blank"><small><code>${shortenIri(iri)}</code></small></a><br/>` : '';
-        html += `<h4>${label}</h4>`;
-        if (comment) html += `<p><small>${comment}</small></p>`;
-        return html;
-    };
+        sortedPredicates.forEach(predData => {
+            const key = iriToKeyMap[predData.id];
+            if (key) {
+                createCheckboxItem(predicatesContainer, {
+                    id: `setting-pred-${key}`,
+                    dataKey: 'key',
+                    dataValue: key,
+                    isChecked: currentPreds.includes(key),
+                    label: getLocalizedText(predData.label, currentLang).text || TEXT.noLabel,
+                    comment: null, 
+                    uri: predData.id,
+                    curie: shortenIri(predData.id),
+                    visualHtml: createEdgeDiagramHtml(predData.id)
+                });
+            }
+        });
+    }
 }
 
-/**
- * Manages the settings panel logic, events, and state.
- */
-function setupSettingsPanel(classRows, predicateRows) {
+
+function setupSettingsPanel(onOpen, onSave) {
     const overlay = document.getElementById('settings-overlay');
     const trigger = document.getElementById('settings-trigger');
 
     const openSettings = () => {
-        populateSettings(classRows, predicateRows);
+        onOpen();
         overlay.classList.remove('hidden');
     };
     const closeSettings = () => overlay.classList.add('hidden');
@@ -505,104 +709,7 @@ function setupSettingsPanel(classRows, predicateRows) {
     overlay.addEventListener('click', (e) => {
         if (e.target === overlay) closeSettings();
     });
-
-    document.getElementById('settingsSave').addEventListener('click', () => {
-        const params = {};
-        params.lang = document.getElementById('settingsLanguage').value;
-        params.infopanel = document.getElementById('settingsFocusMode').checked ? 'false' : null;
-        document.querySelectorAll('#settings-classes input').forEach(cb => {
-            params[cb.dataset.group.toLowerCase()] = cb.checked ? null : 'false';
-        });
-
-        // Use central config for predicate keys
-        const allPredicateKeys = Object.keys(APP_CONFIG.PREDICATE_MAP);
-        const selectedPreds = Array.from(document.querySelectorAll('#settings-predicates input')).filter(cb => cb.checked).map(cb => cb.dataset.key);
-        params.predicates = selectedPreds.length === allPredicateKeys.length ? null : selectedPreds.join(';');
-
-        setParamsAndReload(params);
-    });
-}
-
-/**
- * Populates the settings form with values from URL params and SPARQL queries.
- */
-function populateSettings(classRows, predicateRows) {
-    document.getElementById('settingsLanguage').value = getParam("lang") || "de";
-    document.getElementById('settingsFocusMode').checked = getParam("infopanel") === "false";
-
-    const createCheckboxItem = (container, {
-        id,
-        dataKey,
-        dataValue,
-        isChecked,
-        label,
-        comment,
-        uri,
-        curie,
-        swatchColor
-    }) => {
-        let html = `<div class="settings-list-item">`;
-        if (swatchColor) html += `<div class="settings-list-swatch" style="background: ${swatchColor}; border-color: #555;"></div>`;
-        html += `<div class="settings-list-item-content">
-                    <label>
-                        <input type="checkbox" id="${id}" data-${dataKey}="${dataValue}" ${isChecked ? 'checked' : ''}>
-                        <strong>${label}</strong>
-                        <code class="settings-curie"><a href="${uri}" target="_blank">${curie}<a></code>
-                    </label>
-                    ${comment ? `<span class="settings-list-item-comment">${comment}</span>`:``}
-                </div></div>`;
-        container.insertAdjacentHTML('beforeend', html);
-    };
-
-    const classesContainer = document.getElementById('settings-classes');
-    classesContainer.innerHTML = '';
-    classRows.forEach(row => {
-        const groupName = mapClassIriToGroup(row.iri.value);
-        createCheckboxItem(classesContainer, {
-            id: `setting-class-${groupName}`,
-            dataKey: 'group',
-            dataValue: groupName,
-            isChecked: getParam(groupName.toLowerCase()) !== "false",
-            label: row.label.value || 'No label',
-            comment: row.comment.value || 'No comment',
-            uri: row.iri.value,
-            curie: shortenIri(row.iri.value),
-            swatchColor: APP_CONFIG.GROUP_STYLES[groupName]?.background
-        });
-    });
-
-    const predicatesContainer = document.getElementById('settings-predicates');
-    predicatesContainer.innerHTML = '';
-    const rawPredParam = getParam("predicates");
-    const currentPreds = rawPredParam === null ? Object.keys(APP_CONFIG.PREDICATE_MAP) : (rawPredParam ? rawPredParam.split(/[;,+\s]+/) : []);
-
-    // Create a map of full IRIs to their short keys (e.g., 'http://...#isPartOf' -> 'isPartOf')
-    const iriToKeyMap = {};
-    const invertedPrefixes = Object.fromEntries(
-        Object.entries(APP_CONFIG.PREFIXES).map(([base, prefix]) => [prefix, base])
-    );
-    for (const [key, curie] of Object.entries(APP_CONFIG.PREDICATE_MAP)) {
-        const [prefix, suffix] = curie.split(':');
-        if (invertedPrefixes[prefix]) {
-            const iri = invertedPrefixes[prefix] + suffix;
-            iriToKeyMap[iri] = key;
-        }
-    }
-
-    predicateRows.sort((a, b) => (a.label.value || '').localeCompare(b.label.value || '')).forEach(row => {
-        const key = iriToKeyMap[row.iri.value];
-        if (key) {
-            createCheckboxItem(predicatesContainer, {
-                id: `setting-pred-${key}`,
-                dataKey: 'key',
-                dataValue: key,
-                isChecked: currentPreds.includes(key),
-                label: row.label.value || 'No label',
-                uri: row.iri.value,
-                curie: shortenIri(row.iri.value)
-            });
-        }
-    });
+    document.getElementById('settingsSave').addEventListener('click', onSave);
 }
 
 document.addEventListener("DOMContentLoaded", init);

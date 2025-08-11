@@ -778,16 +778,6 @@ systemmap:SCporGQs4VQT7lJVs a schema:SoftwareApplication ;
     dcat:landingPage <https://www.smaxtec.com/> ;
     systemmap:operatedBy zefix:1566606 .
 
-systemmap:SDm3OAS8I15uUlN91 a schema:SoftwareApplication ;
-    rdfs:label "Alteryx"@de,
-        "Alteryx"@en,
-        "Alteryx"@fr,
-        "Alteryx"@it ;
-    rdfs:comment "Alteryx ist eine Software, um Daten zu verarbeiten, bereinigen und zu strukturieren, damit sie ins DWH importiert werden können."@de,
-        "Alteryx is a software to process, clean and structure data so that it can be imported into the DWH."@en,
-        "Alteryx est un logiciel pour traiter, nettoyer et structurer les données afin qu'elles puissent être importées dans le DWH."@fr,
-        "Alteryx è un software per elaborare, pulire e strutturare i dati in modo che possano essere importati nel DWH."@it .
-
 systemmap:SDoGAjF1AJCdFZQQl a schema:SoftwareApplication ;
     rdfs:label "E-Direct"@de,
         "E-Direct"@en,
@@ -2708,15 +2698,15 @@ systemmap:SXIIUKFjUBDaaTzh6 a dcat:Dataset ;
         "Dati sul settore del commercio al dettaglio acquistati dalla società di ricerche di mercato Nielsen."@it .
 
 systemmap:SYqYq3UTUnZHmyFRD a dcat:Dataset ;
-    rdfs:label "DWH Marktdaten"@de,
-        "DWH Market Data"@en,
-        "Données de marché du DWH"@fr,
-        "Dati di mercato del DWH"@it ;
-    rdfs:comment "Für Analysezwecke aufbereitete Marktdaten im internen DWH."@de,
-        "Market data prepared for analysis purposes in the internal DWH."@en,
-        "Données de marché préparées à des fins d'analyse dans le DWH interne."@fr,
-        "Dati di mercato preparati per scopi di analisi nel DWH interno."@it ;
-    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY .
+    rdfs:label "Data Warehouse (DWH)"@de,
+        "Data Warehouse (DWH)"@en,
+        "Data Warehouse (DWH)"@fr,
+        "Data Warehouse (DWH)"@it ;
+    rdfs:comment "DWH ist für die Datenhaltung aller Daten und deren Verarbeitung zuständig."@de,
+        "DWH is responsible for the storage and processing of all data."@en,
+        "Le DWH est responsable du stockage et du traitement de toutes les données."@fr,
+        "Il DWH è responsabile dell'archiviazione e dell'elaborazione di tutti i dati."@it ;
+    systemmap:contains systemmap:Sc6kZqxTyS0gFGCY .
 
 systemmap:SZBHsREMx369FArg a dcat:Dataset ;
     rdfs:label "Dünger"@de ;
@@ -2769,7 +2759,6 @@ systemmap:Sc4ZWQq9h4HrEOf01 a dcat:Dataset ;
         "Data processed, cleaned, and structured by Alteryx before being imported into the DWH."@en,
         "Données traitées, nettoyées et structurées par Alteryx avant leur importation dans le DWH."@fr,
         "Dati elaborati, ripuliti e strutturati da Alteryx prima dell'importazione nel DWH."@it ;
-    prov:wasDerivedFrom systemmap:SDm3OAS8I15uUlN91 ;
     systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY .
 
 systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
@@ -2863,16 +2852,20 @@ systemmap:SvAr93iMz2fj4HZBK a dcat:Dataset ;
     systemmap:containedIn systemmap:S1AkhvKmzBiJFCTc .
 
 systemmap:SxvsanBKE0ZN315DU a dcat:Dataset ;
-    rdfs:label "Public DWH Marktdaten"@de,
-        "Public DWH Market Data"@en,
-        "Données de marché du DWH Public"@fr,
-        "Dati di mercato del DWH Pubblico"@it ;
-    rdfs:comment "Für die Veröffentlichung freigegebene und im DWH Public bereitgestellte Marktdaten."@de,
-        "Market data approved for publication and stored in the DWH Public."@en,
-        "Données de marché approuvées pour publication et stockées dans le DWH Public."@fr,
-        "Dati di mercato approvati per la pubblicazione e archiviati nel DWH Pubblico."@it ;
+    rdfs:label "Public Data Warehouse (DWH Public)"@de,
+        "Public Data Warehouse (DWH Public)"@en,
+        "Public Data Warehouse (DWH Public)"@fr,
+        "Public Data Warehouse (DWH Public)"@it ;
+    rdfs:comment "DWH Public ist für die Datenhaltung für das öffentliche Reporting sowie für die Aktualisierung der Reports zuständig."@de,
+        "DWH Public is responsible for data storage for public reporting and for updating the reports."@en,
+        "DWH Public est responsable du stockage des données pour le reporting public ainsi que de la mise à jour des rapports."@fr,
+        "DWH Public è responsabile della conservazione dei dati per il reporting pubblico e dell'aggiornamento dei report."@it ;
     prov:wasDerivedFrom systemmap:SYqYq3UTUnZHmyFRD ;
-    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
+    systemmap:abbreviation "DWH Public"@de,
+        "DWH Public"@en,
+        "DWH Public"@fr,
+        "DWH Public"@it ;
+    systemmap:contains systemmap:Sc6kZqxTyS0gFGCY ;
     systemmap:informs systemmap:SHFSc6xgsHF70IlUd .
 
 systemmap:SyhthSmTCgM19Wysy a dcat:Dataset ;

@@ -15,6 +15,70 @@ const APP_CONFIG = {
     // SPARQL Endpoint for fetching data
     ENDPOINT: "https://lindas.admin.ch/query",
 
+    // User-facing text for translation
+    UI_TEXT: {
+        en: {
+            appTitle: "FOAG System Map",
+            settings: "Settings",
+            visibleNodeClasses: "Visible Node Classes",
+            visibleRelationshipTypes: "Visible Relationship Types",
+            cancel: "Cancel",
+            saveAndReload: "Save & Reload",
+            searchPlaceholder: "Search...",
+            settingsTooltip: "Settings",
+            githubTooltip: "GitHub",
+            emailTooltip: "Email",
+            errorLoading: "Error loading data",
+            fallbackSystemMapTitle: "System Map",
+            noLabel: "No label"
+        },
+        de: {
+            appTitle: "Systemkarte BLW",
+            settings: "Einstellungen",
+            visibleNodeClasses: "Sichtbare Knotentypen",
+            visibleRelationshipTypes: "Sichtbare Beziehungstypen",
+            cancel: "Abbrechen",
+            saveAndReload: "Speichern & neu laden",
+            searchPlaceholder: "Suchen...",
+            settingsTooltip: "Einstellungen",
+            githubTooltip: "GitHub",
+            emailTooltip: "E-Mail",
+            errorLoading: "Fehler beim Laden der Daten",
+            fallbackSystemMapTitle: "Systemkarte",
+            noLabel: "Ohne Bezeichnung"
+        },
+        fr: {
+            appTitle: "Carte des systèmes OFAG",
+            settings: "Paramètres",
+            visibleNodeClasses: "Classes de nœuds visibles",
+            visibleRelationshipTypes: "Types de relations visibles",
+            cancel: "Annuler",
+            saveAndReload: "Enregistrer & recharger",
+            searchPlaceholder: "Rechercher...",
+            settingsTooltip: "Paramètres",
+            githubTooltip: "GitHub",
+            emailTooltip: "E-mail",
+            errorLoading: "Erreur de chargement des données",
+            fallbackSystemMapTitle: "Carte du système",
+            noLabel: "Sans étiquette"
+        },
+        it: {
+            appTitle: "Mappa dei sistemi UFAG",
+            settings: "Impostazioni",
+            visibleNodeClasses: "Classi di nodi visibili",
+            visibleRelationshipTypes: "Tipi di relazioni visibili",
+            cancel: "Annulla",
+            saveAndReload: "Salva e ricarica",
+            searchPlaceholder: "Cerca...",
+            settingsTooltip: "Impostazioni",
+            githubTooltip: "GitHub",
+            emailTooltip: "E-mail",
+            errorLoading: "Errore nel caricamento dei dati",
+            fallbackSystemMapTitle: "Mappa del sistema",
+            noLabel: "Senza etichetta"
+        }
+    },
+
     // Prefixes for shortening IRIs into CURIEs
     PREFIXES: {
         "http://www.w3.org/2000/01/rdf-schema#": "rdfs",

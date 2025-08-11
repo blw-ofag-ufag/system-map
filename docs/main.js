@@ -59,8 +59,7 @@ function setParamsAndReload(paramsObj) {
     for (const [key, value] of Object.entries(paramsObj)) {
         (value === null || value === undefined || value === true) ? params.delete(key): params.set(key, value);
     }
-    if (params.get('infopanel') === 'true') params.delete('infopanel');
-
+    
     window.location.href = `${window.location.pathname}?${params.toString()}`;
 }
 
@@ -113,7 +112,7 @@ function setupSearchBox(onSearchChange) {
 }
 
 /**
- * NEW: Selects the best localized text based on language preferences.
+ * Selects the best localized text based on language preferences.
  * @param {object} langMap - An object mapping lang codes to text (e.g., { de: 'Hallo', en: 'Hello' }).
  * @param {string} currentLang - The desired language code.
  * @returns {{text: string, lang: string, isFallback: boolean}}
@@ -140,7 +139,7 @@ function getLocalizedText(langMap, currentLang) {
 
 
 /**
- * NEW: Processes raw SPARQL results into a structured map with all languages.
+ * Processes raw SPARQL results into a structured map with all languages.
  */
 function processSparqlResults(bindings, keyField, fields) {
     const dataMap = {};
@@ -188,10 +187,6 @@ async function init() {
     let network, nodesDataset, edgesDataset;
     // --- END STATE ---
 
-    if (getParam("infopanel") === "false") {
-        document.getElementById("infoPanel").classList.add("param-hidden");
-    }
-
     // --- DATA FETCHING & PROCESSING ---
     try {
         const [titleJson, classesJson, edgeMetadataJson, nodesJson, edgesJson] = await Promise.all([
@@ -219,7 +214,7 @@ async function init() {
 
     } catch (error) {
         console.error("Fatal error fetching or processing data:", error);
-        document.getElementById("systemmapTitle").textContent = "Error loading data";
+        document.getElementById("systemmapTitle").textContent = APP_CONFIG.UI_TEXT[currentLang].errorLoading;
         return;
     }
 
@@ -368,7 +363,7 @@ async function init() {
 
 
     /**
-     * REVAMPED: Creates the HTML for the domain -> range visual diagram using SVG.
+     * Creates the HTML for the domain -> range visual diagram using SVG.
      */
     const createEdgeDiagramHtml = (predicateIri) => {
         const metadata = allEdgeMetadata[predicateIri];
@@ -391,7 +386,6 @@ async function init() {
         const isDashed = APP_CONFIG.DASHED_PREDICATES.includes(predicateIri);
         const arrowDashStyle = isDashed ? `stroke-dasharray="3 4"` : '';
 
-        // TIGHTENED SVG for a smaller gap
         const arrow = `
             <svg width="30" height="14" viewBox="0 0 30 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
                 <path d="M4 7 L26 7" stroke="#333" stroke-width="1.5" ${arrowDashStyle}></path>
@@ -410,7 +404,6 @@ async function init() {
 
         let html = edgeData.iri ? `<a href="${edgeData.iri}" target="_blank"><small><code>${shortenIri(edgeData.iri)}</code></small></a><br/>` : '';
         
-        // UPDATED for new left-aligned layout
         html += `
             <div class="edge-title-container">
                 <h4>${label}</h4>
@@ -424,7 +417,13 @@ async function init() {
 
 
     const updateUIForLanguage = () => {
-        document.getElementById("systemmapTitle").textContent = getLocalizedText(allTitles, currentLang).text || "System Map";
+        const TEXT = APP_CONFIG.UI_TEXT[currentLang];
+        document.title = TEXT.appTitle;
+        document.getElementById("systemmapTitle").textContent = getLocalizedText(allTitles, currentLang).text || TEXT.fallbackSystemMapTitle;
+        document.getElementById("search-box").placeholder = TEXT.searchPlaceholder;
+        document.getElementById("settings-trigger").title = TEXT.settingsTooltip;
+        document.getElementById("github-link").title = TEXT.githubTooltip;
+        document.getElementById("email-link").title = TEXT.emailTooltip;
 
         const nodeUpdates = Object.values(allNodesData).map(nodeData => {
             const { text: label, lang: labelLang, isFallback } = getLocalizedText(nodeData.name, currentLang);
@@ -492,7 +491,6 @@ async function init() {
       () => {
         const params = {};
         params.lang = currentLang;
-        params.infopanel = document.getElementById('settingsFocusMode').checked ? 'false' : null;
         document.querySelectorAll('#settings-classes input').forEach(cb => {
             params[cb.dataset.group.toLowerCase()] = cb.checked ? null : 'false';
         });
@@ -555,9 +553,15 @@ async function init() {
      * Populates the settings form with values from URL params and data.
      */
     function populateSettings() {
-        document.getElementById('settingsFocusMode').checked = getParam("infopanel") === "false";
+        const TEXT = APP_CONFIG.UI_TEXT[currentLang];
         
-        // REVAMPED for new layout
+        // Populate static text
+        document.getElementById('settings-title').textContent = TEXT.settings;
+        document.getElementById('settings-node-classes-title').textContent = TEXT.visibleNodeClasses;
+        document.getElementById('settings-relationship-types-title').textContent = TEXT.visibleRelationshipTypes;
+        document.getElementById('settingsCancel').textContent = TEXT.cancel;
+        document.getElementById('settingsSave').textContent = TEXT.saveAndReload;
+
         const createCheckboxItem = (container, { id, dataKey, dataValue, isChecked, label, comment, uri, curie, visualHtml }) => {
             let html = `<div class="settings-list-item">
                 <div class="settings-list-item-content">
@@ -585,11 +589,11 @@ async function init() {
                 dataKey: 'group',
                 dataValue: groupName,
                 isChecked: getParam(groupName.toLowerCase()) !== "false",
-                label: getLocalizedText(classData.label, currentLang).text || 'No label',
+                label: getLocalizedText(classData.label, currentLang).text || TEXT.noLabel,
                 comment: getLocalizedText(classData.comment, currentLang).text || '',
                 uri: classData.id,
                 curie: shortenIri(classData.id),
-                visualHtml: createNodeIconHtml(groupName) // Use new node icon
+                visualHtml: createNodeIconHtml(groupName)
             });
         });
 
@@ -620,8 +624,8 @@ async function init() {
                     dataKey: 'key',
                     dataValue: key,
                     isChecked: currentPreds.includes(key),
-                    label: getLocalizedText(predData.label, currentLang).text || 'No label',
-                    comment: null, // REMOVED comment for predicates
+                    label: getLocalizedText(predData.label, currentLang).text || TEXT.noLabel,
+                    comment: null, 
                     uri: predData.id,
                     curie: shortenIri(predData.id),
                     visualHtml: createEdgeDiagramHtml(predData.id)

@@ -24,28 +24,15 @@
   <!-- Settings pop-up structure -->
   <div id="settings-overlay" class="hidden">
     <div id="settings-panel">
-      <h2>Settings</h2>
+      <h2 id="settings-title"></h2>
 
       <!-- Two-column layout container -->
       <div class="settings-columns">
         
-        <!-- Column 1: General & Classes -->
+        <!-- Column 1: Classes -->
         <div class="settings-column">
           <div class="settings-section">
-            <h3>General</h3>
-            <!-- UPDATED: Focus Mode now uses the standard list item structure -->
-            <div class="settings-list-item">
-                <div class="settings-list-item-content">
-                    <label>
-                        <input type="checkbox" id="settingsFocusMode">
-                        <strong>Focus Mode (hides Info Panel)</strong>
-                    </label>
-                </div>
-            </div>
-          </div>
-
-          <div class="settings-section">
-            <h3>Visible Node Classes</h3>
+            <h3 id="settings-node-classes-title"></h3>
             <div id="settings-classes">
               <!-- This will be dynamically populated by main.js -->
             </div>
@@ -55,7 +42,7 @@
         <!-- Column 2: Predicates -->
         <div class="settings-column">
           <div class="settings-section">
-            <h3>Visible Relationship Types</h3>
+            <h3 id="settings-relationship-types-title"></h3>
             <div id="settings-predicates">
               <!-- This will be dynamically populated by main.js -->
             </div>
@@ -66,8 +53,8 @@
 
       <!-- Action buttons remain at the bottom -->
       <div class="settings-actions">
-        <button id="settingsCancel">Cancel</button>
-        <button id="settingsSave">Save & Reload</button>
+        <button id="settingsCancel"></button>
+        <button id="settingsSave"></button>
       </div>
     </div>
   </div>
@@ -86,15 +73,15 @@
   <div class="social-icons">
     <div class="search-container">
       <i class="fas fa-search"></i>
-      <input type="text" id="search-box" placeholder="Search...">
+      <input type="text" id="search-box">
     </div>
-    <a href="#" id="settings-trigger" title="Settings">
+    <a href="#" id="settings-trigger">
         <i class="fas fa-cog"></i>
     </a>
-    <a href="https://github.com/blw-ofag-ufag/system-map" target="_blank" title="GitHub">
+    <a href="https://github.com/blw-ofag-ufag/system-map" target="_blank" id="github-link">
       <i class="fab fa-github"></i>
     </a>
-    <a href="mailto:kompetenzzentrumdigitaletransformation@blw.admin.ch?subject=Systemlandkarte%20DigiAgriFoodCH" title="Email">
+    <a href="mailto:kompetenzzentrumdigitaletransformation@blw.admin.ch?subject=Systemlandkarte%20DigiAgriFoodCH" id="email-link">
       <i class="fas fa-envelope"></i>
     </a>
   </div>

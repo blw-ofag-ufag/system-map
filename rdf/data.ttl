@@ -2429,8 +2429,8 @@ systemmap:S4ZuIO9s81WMS2bKB a dcat:Dataset ;
         "Market Data Animal Feed"@en,
         "Données de marché Aliments pour animaux"@fr,
         "Dati di mercato Mangimi"@it ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/futtermittel> ;
-    prov:wasDerivedFrom systemmap:S1AkhvKmzBiJFCTc .
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/futtermittel> .
 
 systemmap:S7mhWQjPZiSFc8dU a dcat:Dataset ;
     rdfs:label "Tierereignisdaten"@de,
@@ -2641,8 +2641,8 @@ systemmap:SLJMFAZ6GNdFvfb2L a dcat:Dataset ;
         "Market Data Fruits and Vegetables"@en,
         "Données de marché Fruits et légumes"@fr,
         "Dati di mercato Frutta e verdura"@it ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/fruchte-gemuese> ;
-    prov:wasDerivedFrom systemmap:S1AkhvKmzBiJFCTc .
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/fruchte-gemuese> .
 
 systemmap:SLXw4VofhYbzXVNKC a dcat:Dataset ;
     rdfs:label "Daten zur Milchverwertung"@de,
@@ -2689,8 +2689,8 @@ systemmap:SSyCUWt1u4bzJ4liA a dcat:Dataset ;
         "Market Data Potatoes and Potato Products"@en,
         "Données de marché Pommes de terre et produits à base de pommes de terre"@fr,
         "Dati di mercato Patate e prodotti a base di patate"@it ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/kartoffeln> ;
-    prov:wasDerivedFrom systemmap:S1AkhvKmzBiJFCTc .
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/kartoffeln> .
 
 systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
     rdfs:label "Zubereitungen"@de,
@@ -2796,16 +2796,16 @@ systemmap:SisV9d3pviAFO8vTK a dcat:Dataset ;
         "Market Data Oilseeds and Protein Crops"@en,
         "Données de marché Oléagineux et protéagineux"@fr,
         "Dati di mercato Semi oleosi e piante proteiche"@it ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/olsaaten> ;
-    prov:wasDerivedFrom systemmap:S1AkhvKmzBiJFCTc .
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/olsaaten> .
 
 systemmap:SkcU0PDb6fucIKa9k a dcat:Dataset ;
     rdfs:label "Marktdaten Brotgetreide, Mehl und Backwaren"@de,
         "Market Data Bread Cereals, Flour and Baked Goods"@en,
         "Données de marché Céréales panifiables, farine et produits de boulangerie"@fr,
         "Dati di mercato Cereali panificabili, farina e prodotti da forno"@it ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/getreide> ;
-    prov:wasDerivedFrom systemmap:S1AkhvKmzBiJFCTc .
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/getreide> .
 
 systemmap:SoBRgq7STLbZfEze a dcat:Dataset ;
     rdfs:label "Meldepflichtdaten (Schafe & Ziegen)"@de,
@@ -2835,8 +2835,8 @@ systemmap:SpT5dE2PIEfeWKafV a dcat:Dataset ;
         "Market Data Meat, Meat and Sausage Products"@en,
         "Données de marché Viande, produits carnés et charcuterie"@fr,
         "Dati di mercato Carne, prodotti a base di carne e insaccati"@it ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/fleisch> ;
-    prov:wasDerivedFrom systemmap:S1AkhvKmzBiJFCTc .
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/fleisch> .
 
 systemmap:Spqrv6Ul05KJySTs a dcat:Dataset ;
     rdfs:label "Nationaler Sortenkatalog"@de,
@@ -2855,8 +2855,8 @@ systemmap:SvAr93iMz2fj4HZBK a dcat:Dataset ;
         "Market Data Eggs"@en,
         "Données de marché Œufs"@fr,
         "Dati di mercato Uova"@it ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/eier> ;
-    prov:wasDerivedFrom systemmap:S1AkhvKmzBiJFCTc .
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/eier> .
 
 systemmap:SyhthSmTCgM19Wysy a dcat:Dataset ;
     rdfs:label "Pflanzenschutzmittel"@de,
@@ -2871,8 +2871,8 @@ systemmap:SzJ7aOICsI2KD9iOt a dcat:Dataset ;
         "Market Data Milk and Milk Products"@en,
         "Données de marché Lait et produits laitiers"@fr,
         "Dati di mercato Latte e prodotti lattiero-caseari"@it ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/milch-und-milchprodukte> ;
-    prov:wasDerivedFrom systemmap:S1AkhvKmzBiJFCTc .
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/milch-und-milchprodukte> .
 
 systemmap:SzcK9O3XZFxVW1IS a dcat:Dataset ;
     rdfs:label "Daten zur Milchsegmentierung"@de,

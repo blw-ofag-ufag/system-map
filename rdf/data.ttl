@@ -1,5 +1,6 @@
 @prefix LwG: <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -12,6 +13,14 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
+
+systemmap:Si8UnIQkj02jgbLEb a dcmitype:Collection ;
+    rdfs:label "digiFLUX Systemarchitektur"@de ;
+    dcterms:hasPart systemmap:S2Q2s27pTp6oRYHmf,
+        systemmap:SCkzllAJGWHIEermB,
+        systemmap:SjCVTMrYaOTygNcqF,
+        systemmap:SjhTrVt8CB9QFq0Yn,
+        systemmap:Sl5KyePu7JtGiE3V .
 
 systemmap:S0hwJxy2kXNPFbl4C a service:Service ;
     rdfs:label "Lineare Korrektur (LK)-Service"@de ;

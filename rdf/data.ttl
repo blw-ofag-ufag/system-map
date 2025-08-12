@@ -75,6 +75,15 @@ systemmap:StBV0qWzKXosN98bB a service:Service ;
         Dieser API-Service erlaubt es Unternehmen, neue Produkte über eine Schnittstelle an den Produktekatalog zu senden und bestehende Produkte abzufragen.
         """@de .
 
+systemmap:SyDlq7oQ0czCgyv61 a service:Service ;
+    rdfs:label "Berechnung der GVE"@de ;
+    service:providedBy systemmap:SaOtqyAB5qm1luNuX ;
+    rdfs:comment """
+        Die Grossvieheinheit (GVE) ist eine Recheneinheit, bei denen Tiere unterschiedlicher Arten (Rinder, Schafe, Ziegen, Pferde/Esel) und Alter zu einer einzigen Kennzahl zusammengefasst werden.
+        Diese und weitere Kennzahlen, wie die Normalstösse (NST), werden im Vollzug der landwirtschaftlichen Gesetzgebung verwendet.
+        Die GVE dient als Grundlage zur Berechnung verschiedener Beitragszahlungen, die in der Direktzahlungsverordnung geregelt sind.
+        """@de .
+
 systemmap:SyYykF7sxZpwuQdLO a service:Service ;
     rdfs:label "Berechnung der Direktzahlungen der Landwirtschaftsbetriebe"@de ;
     service:providedBy systemmap:SF3QXRhtAuQ7fcc0V .
@@ -1489,6 +1498,18 @@ systemmap:SZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
         systemmap:SUqub30lwOqlTtDN2,
         systemmap:SVpDMEiTfIVQsNzT8,
         systemmap:SoVAiCrMPYG2LJxsA .
+
+systemmap:SaOtqyAB5qm1luNuX a schema:SoftwareApplication ;
+    rdfs:label "GVE-Rechner"@de,
+        "Calculateur UGB"@fr,
+        "Calcolatore UBG"@it ;
+    rdfs:comment """
+        Der GVE-Rechner berechnet die GVE pro Betrieb, welche den kantonalen Landwirtschaftsämtern als Grundlage zur Berechnung verschiedener Beitragszahlungen dient.
+        Die Anwendung bietet nicht nur Funktionen für Vollzugsbehörden, sondern auch für die Bewirtschaftenden von landwirtschaftlichen Betrieben mit Nutztierhaltung.
+        Sie können sich über ihre betrieblichen Kennzahlen informieren und ihren Anspruch auf Direktzahlungen abschätzen.
+        Die Berechnungsgrundlagen für vergangene Auszahlungen sind im GVE-Rechner archiviert und auch nachträglich einsehbar.
+        """@de ;
+    systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS .
 
 systemmap:SbQMDyJD8k62AfApL a schema:SoftwareApplication ;
     rdfs:label "SAIMo"@de,

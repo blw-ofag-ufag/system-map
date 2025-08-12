@@ -1509,6 +1509,7 @@ systemmap:SaOtqyAB5qm1luNuX a schema:SoftwareApplication ;
         Sie können sich über ihre betrieblichen Kennzahlen informieren und ihren Anspruch auf Direktzahlungen abschätzen.
         Die Berechnungsgrundlagen für vergangene Auszahlungen sind im GVE-Rechner archiviert und auch nachträglich einsehbar.
         """@de ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS .
 
 systemmap:SbQMDyJD8k62AfApL a schema:SoftwareApplication ;

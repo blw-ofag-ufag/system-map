@@ -2170,6 +2170,19 @@ systemmap:StiztlHPN24VK1k8G a schema:SoftwareApplication ;
     dcat:landingPage <https://www.identitas.ch/produkte/agateway> ;
     systemmap:operatedBy zefix:449781 .
 
+systemmap:Su9RTb49BcaqL4EcQ a schema:SoftwareApplication ;
+    rdfs:label "NielsenIQ Datenbank"@de,
+        "NielsenIQ Database"@en,
+        "Base de données NielsenIQ"@fr,
+        "Database NielsenIQ"@it ;
+    rdfs:comment """
+        Die NielsenIQ Datenbank enthält Einzelhandelsdaten, welche vom BLW für die Marktanalyse gekauft werden"""@de,
+        "For market analysis, the FOAG acquires retail data contained in the NielsenIQ database."@en,
+        "La base de données NielsenIQ contient des données de commerce, qui sont achetées par l'OFAG pour l'analyse de marché."@fr,
+        "Per l'analisi di mercato, l'UFAG acquisisce i dati al dettaglio contenuti nel database di NielsenIQ."@it ;
+    systemmap:contains systemmap:SXIIUKFjUBDaaTzh6 ;
+    systemmap:operatedBy systemmap:SYfFBbBlmgKk9vmPg .
+
 systemmap:SuEtT7joC8HXVSfF a schema:SoftwareApplication ;
     rdfs:label "UID-Register"@de,
         "UID Register"@en,
@@ -4402,6 +4415,10 @@ systemmap:SQ3N7dTc23t2wzXr2 a systemmap:PrivateOrganization ;
 systemmap:SWdllcNbPnjdcm7om a systemmap:PrivateOrganization ;
     rdfs:label "Agroline"@de ;
     systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+
+systemmap:SYfFBbBlmgKk9vmPg a systemmap:PrivateOrganization ;
+    rdfs:label "NielsenIQ"@de ;
+    dcat:landingPage <https://nielseniq.com/global/de> .
 
 systemmap:ScS6Ziy08AYukFjjh a systemmap:PrivateOrganization ;
     rdfs:label "Schweizerischer Freibergerverband (SFV)"@de,

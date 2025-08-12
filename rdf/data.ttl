@@ -295,12 +295,16 @@ zefix:1138887 a schema:Organization ;
 zefix:119283 a schema:Organization ;
     rdfs:label "Migros-Genossenschafts-Bund"@de .
 
+zefix:121 a schema:Organization ;
+    rdfs:label "Genossenschaft Milchproduzenten Mittelland"@de .
+
 zefix:1256441 a schema:Organization,
         systemmap:PrivateOrganization ;
     rdfs:label "mooh Genossenschaft"@de .
 
 zefix:1469700 a schema:Organization ;
-    rdfs:label "digitalswitzerland"@en ;
+    rdfs:label "digitalswitzerland"@de,
+        "digitalswitzerland"@en ;
     schema:member zefix:1138887,
         zefix:119283,
         zefix:328631 .
@@ -340,6 +344,9 @@ zefix:469727 a schema:Organization,
         "Proviande Società Cooperativa"@it ;
     schema:member zefix:793667 ;
     dcat:landingPage <https://www.proviande.ch/> .
+
+zefix:793667 a schema:Organization ;
+    rdfs:label "Schweizerischer Schweinezucht- und Schweineproduzentenverband Suisseporcs"@de .
 
 zefix:871039 a schema:Organization ;
     rdfs:label "aaremilch AG"@de .

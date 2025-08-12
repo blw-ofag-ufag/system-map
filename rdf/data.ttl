@@ -75,6 +75,10 @@ systemmap:StBV0qWzKXosN98bB a service:Service ;
         Dieser API-Service erlaubt es Unternehmen, neue Produkte über eine Schnittstelle an den Produktekatalog zu senden und bestehende Produkte abzufragen.
         """@de .
 
+systemmap:SyYykF7sxZpwuQdLO a service:Service ;
+    rdfs:label "Berechnung der Direktzahlungen der Landwirtschaftsbetriebe"@de ;
+    service:providedBy systemmap:SF3QXRhtAuQ7fcc0V .
+
 systemmap:metadata a void:Dataset ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
         "DigiAgriFoodCH System Map"@en,
@@ -854,6 +858,16 @@ systemmap:SEcvzMJMYkUtSnTSB a schema:SoftwareApplication ;
         Moblin è un programma efficiente e facile da usare per i macelli. Copre tutti gli aspetti della macellazione, dalla ricezione degli animali, macellazione, pesatura, stampa di etichette e documenti di macellazione fino all’esportazione in contabilità. Il software è progettato per computer industriali touchscreen ed è stato sviluppato in collaborazione con un macello per un utilizzo pratico.
         """@it ;
     systemmap:operatedBy zefix:1099793 .
+
+systemmap:SF3QXRhtAuQ7fcc0V a schema:SoftwareApplication ;
+    rdfs:label "Beitragsberechnungsservice"@de ;
+    rdfs:comment """
+        Der Beitragsberechnungsservice (BBS) dient zur Berechnung der Direktzahlungen der Landwirtschaftsbetriebe.
+        Mit dem WEB-Service können die Kantonssysteme und AGIS die Direktzahlungen, Einzelkulturbeiträge und Sömmerungsbeiträge
+        sowie die Getreidezulage und Beiträge für In-situ-Erhaltungsflächen je Betrieb berechnen.
+        """@de ;
+    systemmap:abbreviation "BBS"@de ;
+    systemmap:operatedBy systemmap:ScoeXHl4TgJbke1Yf .
 
 systemmap:SGHEvT8M3jGEd8KdJ a schema:SoftwareApplication ;
     rdfs:label "SmartBeef®"@de,

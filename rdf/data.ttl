@@ -2504,6 +2504,7 @@ systemmap:SAUWzyCpeGZ6vVil a dcat:Dataset ;
         Questi dati garantiscono che tutti i movimenti e gli eventi degli animali possano essere correttamente attribuiti a un detentore, essenziale per la tracciabilità e il rispetto dei requisiti legali.
         """@it ;
     prov:wasDerivedFrom systemmap:SvNriWslaOR5xkdw ;
+    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
 systemmap:SBba3t3SyxjgPiHhX a dcat:Dataset ;
@@ -4811,6 +4812,7 @@ systemmap:SldiTYOuXQmoC3SV a termdat:52451 ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
 systemmap:SoY82Q0qEk9k0s3w3 a termdat:52451 ;
+    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 ;
     rdfs:label "Kontaktdaten Milchproduzenten"@de,
         "Contact details of milk producers"@en,
         "Coordonnées des producteurs de lait"@fr,

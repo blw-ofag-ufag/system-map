@@ -86,6 +86,12 @@ systemmap:SyDlq7oQ0czCgyv61 a service:Service ;
 
 systemmap:SyYykF7sxZpwuQdLO a service:Service ;
     rdfs:label "Berechnung der Direktzahlungen der Landwirtschaftsbetriebe"@de ;
+    service:consumedby systemmap:SMjqlEoVCR9wpTyN1,
+        systemmap:SPWOFHR512FuAc25b,
+        systemmap:SZ9LRAuSt2EOvBpqY,
+        systemmap:SmWEQ8lVlDS9ZwPkY,
+        systemmap:SpR2aDraNmiUXz55J,
+        systemmap:SvDlxaJ5YMkuZGH6k ;
     service:providedBy systemmap:SF3QXRhtAuQ7fcc0V .
 
 systemmap:metadata a void:Dataset ;
@@ -1503,13 +1509,13 @@ systemmap:SaOtqyAB5qm1luNuX a schema:SoftwareApplication ;
     rdfs:label "GVE-Rechner"@de,
         "Calculateur UGB"@fr,
         "Calcolatore UBG"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Der GVE-Rechner berechnet die GVE pro Betrieb, welche den kantonalen Landwirtschaftsämtern als Grundlage zur Berechnung verschiedener Beitragszahlungen dient.
         Die Anwendung bietet nicht nur Funktionen für Vollzugsbehörden, sondern auch für die Bewirtschaftenden von landwirtschaftlichen Betrieben mit Nutztierhaltung.
         Sie können sich über ihre betrieblichen Kennzahlen informieren und ihren Anspruch auf Direktzahlungen abschätzen.
         Die Berechnungsgrundlagen für vergangene Auszahlungen sind im GVE-Rechner archiviert und auch nachträglich einsehbar.
         """@de ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS .
 
 systemmap:SbQMDyJD8k62AfApL a schema:SoftwareApplication ;

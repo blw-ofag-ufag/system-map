@@ -2397,7 +2397,8 @@ systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
         "Agricultural market data includes information from various sources along the value chain of agricultural products. It is collected directly from the market by industry organizations, companies, and authorities such as the Federal Statistical Office. This data covers various stages, including production, processing, consumption, import, as well as information from foreign countries."@en,
         "Les données du marché agricole comprennent des informations provenant de diverses sources tout au long de la chaîne de valeur des produits agricoles. Elles sont collectées directement sur le marché par des organisations sectorielles, des entreprises et des autorités telles que l'Office fédéral de la statistique. Ces données couvrent différentes étapes, notamment la production, la transformation, la consommation, l'importation, ainsi que des informations provenant de l'étranger."@fr,
         "I dati del mercato agricolo includono informazioni da diverse fonti lungo la catena del valore dei prodotti agricoli. Vengono raccolti direttamente sul mercato da organizzazioni di settore, aziende e autorità come l'Ufficio federale di statistica. Questi dati coprono varie fasi, tra cui produzione, trasformazione, consumo, importazione, oltre a informazioni provenienti dall'estero."@it ;
-    systemmap:containedIn systemmap:SYqYq3UTUnZHmyFRD ;
+    systemmap:containedIn systemmap:SYqYq3UTUnZHmyFRD,
+        systemmap:SxvsanBKE0ZN315DU ;
     systemmap:usesMasterData systemmap:SbKCxLGicJtMGTQiD .
 
 systemmap:S4BoMPavXD5gIObm a dcat:Dataset ;

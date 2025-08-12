@@ -15,8 +15,11 @@
 @prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
 
 systemmap:Si8UnIQkj02jgbLEb a dcmitype:Collection ;
-    rdfs:label "digiFLUX Systemarchitektur"@de ;
-    dcterms:hasPart systemmap:S0hwJxy2kXNPFbl4C,
+    rdfs:label "digiFLUX Systemarchitektur"@de,
+        "digiFLUX System Architecture"@en,
+        "Architecture du système digiFLUX"@fr,
+        "Architettura del sistema digiFLUX"@it ;
+    systemmap:containsNodes systemmap:S0hwJxy2kXNPFbl4C,
         systemmap:S2Q2s27pTp6oRYHmf,
         systemmap:S2QF8BOhJczC0PGhe,
         systemmap:S3jZwzvmFKsXRWiI,

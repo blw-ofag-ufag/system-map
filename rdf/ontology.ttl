@@ -722,6 +722,11 @@ systemmap:contains a owl:ObjectProperty ;
     rdfs:range dcat:Dataset ;
     owl:inverseOf systemmap:containedIn .
 
+systemmap:containsNodes a owl:ObjectProperty ;
+    rdfs:label "Elemente in diesem Subgraph"@de,
+        "Elements in this subgraph"@en ;
+    rdfs:domain dcmitype:Collection .
+
 systemmap:hasLegalBasis a owl:ObjectProperty ;
     rdfs:label "hat Rechtsgrundlage"@de,
         "has legal basis"@en,

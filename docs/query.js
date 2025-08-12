@@ -48,7 +48,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT ?id ?group ?name ?nameLang ?comment ?commentLang ?abbreviation ?abbreviationLang
 WHERE {
   GRAPH <https://lindas.admin.ch/foag/system-map> {
-    ${ subgraph ? `systemmap:${subgraph} dcterms:hasPart ?id .` : "" }
+    ${ subgraph ? `systemmap:${subgraph} systemmap:containsNodes ?id .` : "" }
     ?id a ?group .
     VALUES ?group { ${organization} ${system} ${information} ${service} }
     OPTIONAL { ?id schema:name ?name . BIND(LANG(?name) AS ?nameLang) }

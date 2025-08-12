@@ -2546,7 +2546,8 @@ systemmap:SAUWzyCpeGZ6vVil a dcat:Dataset ;
         Questi dati garantiscono che tutti i movimenti e gli eventi degli animali possano essere correttamente attribuiti a un detentore, essenziale per la tracciabilità e il rispetto dei requisiti legali.
         """@it ;
     prov:wasDerivedFrom systemmap:SvNriWslaOR5xkdw ;
-    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
+    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ ;
+    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
 systemmap:SBba3t3SyxjgPiHhX a dcat:Dataset ;
     rdfs:label "Daten der Geburtsmeldungen"@de ;
@@ -4762,7 +4763,8 @@ systemmap:SakCt52w8AKrsSXi a termdat:52451 ;
         systemmap:SZ9LRAuSt2EOvBpqY,
         systemmap:SmWEQ8lVlDS9ZwPkY,
         systemmap:SpR2aDraNmiUXz55J ;
-    systemmap:informs systemmap:SzuDlnYUQMk3HaCb .
+    systemmap:informs systemmap:SzuDlnYUQMk3HaCb ;
+    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
 systemmap:SeUFazO70bpqCYJ5 a termdat:52451 ;
     rdfs:label "Stammdaten und Identifikatoren"@de,
@@ -4862,7 +4864,8 @@ systemmap:SoY82Q0qEk9k0s3w3 a termdat:52451 ;
         "Coordonnées des producteurs de lait, telles que les adresses, le numéro TVD, le numéro AGIS de l'exploitation, le numéro AGIS de l'exploitant et les informations de paiement pour la subvention pour le lait transformé en fromage et la subvention pour l'alimentation sans ensilage. Si possible, ces coordonnées sont obtenues auprès d'AGIS."@fr,
         "Dati di contatto dei produttori di latte, come indirizzi, numero TVD, numero AGIS dell'azienda, numero AGIS del gestore e informazioni di pagamento per il sussidio per il latte trasformato in formaggio e il sussidio per l'alimentazione senza insilato. Se possibile, questi dati di contatto vengono ottenuti da AGIS."@it ;
     prov:wasDerivedFrom systemmap:SvNriWslaOR5xkdw ;
-    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP ;
+    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
 systemmap:SqGp9THVAsRw71ZCg a termdat:52451 ;
     rdfs:label "Anmeldedaten für DZ-Programme"@de ;

@@ -4,6 +4,10 @@ function getQueryParam(name, defaultValue) {
   return urlParams.get(name) || defaultValue;
 }
 
+// Should there be any focus on a subset of a graph, a so-called subgraph?
+// Note that the subgraphs themselves are encoded in the RDF data!
+window.subgraph = getQueryParam("subgraph", "")
+
 // should schema:Organization, schema:SoftwareApplication, service:Service and dcat:Dataset be displayed
 window.organization = getQueryParam("organization", "true") === "true" ? "schema:Organization" : "";
 window.system = getQueryParam("system", "true") === "true" ? "schema:SoftwareApplication" : "";
@@ -39,13 +43,14 @@ PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
 PREFIX schema: <http://schema.org/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX service: <http://purl.org/ontology/service#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 
 SELECT ?id ?group ?name ?nameLang ?comment ?commentLang ?abbreviation ?abbreviationLang
 WHERE {
   GRAPH <https://lindas.admin.ch/foag/system-map> {
+    ${ subgraph ? `systemmap:${subgraph} dcterms:hasPart ?id .` : "" }
     ?id a ?group .
     VALUES ?group { ${organization} ${system} ${information} ${service} }
-
     OPTIONAL { ?id schema:name ?name . BIND(LANG(?name) AS ?nameLang) }
     OPTIONAL { ?id schema:description ?comment . BIND(LANG(?comment) AS ?commentLang) }
     OPTIONAL { ?id systemmap:abbreviation ?abbreviation . BIND(LANG(?abbreviation) AS ?abbreviationLang) }
@@ -126,10 +131,11 @@ window.CLASS_QUERY = `
 // query the ontology title - fetches all language data at once
 window.TITLE_QUERY = `
 PREFIX schema: <http://schema.org/>
+PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
 SELECT ?title ?lang
 WHERE {
   GRAPH <https://lindas.admin.ch/foag/system-map> {
-    BIND(<https://agriculture.ld.admin.ch/system-map/metadata> as ?id)
+    BIND(${ subgraph ? "systemmap:" + subgraph : "systemmap:metadata" } as ?id)
     OPTIONAL { ?id schema:name ?title . BIND(LANG(?title) AS ?lang) }
   }
 }

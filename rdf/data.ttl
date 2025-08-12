@@ -2313,7 +2313,7 @@ systemmap:SxvsanBKE0ZN315DU a schema:SoftwareApplication ;
         "Public Data Warehouse"@en,
         "Public Data Warehouse"@fr,
         "Public Data Warehouse"@it ;
-    dcterms:isPartOf systemmap:SYqYq3UTUnZHmyFRD ;
+    dcterms:isPartOf systemmap:ShZO092di7cBnOm7F ;
     rdfs:comment "DWH Public ist für die Datenhaltung für das öffentliche Reporting sowie für die Aktualisierung der Reports zuständig."@de,
         "DWH Public is responsible for data storage for public reporting and for updating the reports."@en,
         "DWH Public est responsable du stockage des données pour le reporting public ainsi que de la mise à jour des rapports."@fr,

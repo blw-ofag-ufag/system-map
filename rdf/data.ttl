@@ -16,11 +16,38 @@
 
 systemmap:Si8UnIQkj02jgbLEb a dcmitype:Collection ;
     rdfs:label "digiFLUX Systemarchitektur"@de ;
-    dcterms:hasPart systemmap:S2Q2s27pTp6oRYHmf,
+    dcterms:hasPart systemmap:S0hwJxy2kXNPFbl4C,
+        systemmap:S2Q2s27pTp6oRYHmf,
+        systemmap:S2QF8BOhJczC0PGhe,
+        systemmap:S3jZwzvmFKsXRWiI,
+        systemmap:S6lhRFiEflanK2rcl,
+        systemmap:S8WjMkerPw98ZkWA7,
+        systemmap:SAgmZXUKqNKTf35Fv,
         systemmap:SCkzllAJGWHIEermB,
+        systemmap:SENtOaRGg22EqHWXq,
+        systemmap:SFMUSGNRQVqCKBNHQ,
+        systemmap:SGayLcAMcywbigd3M,
+        systemmap:SHEaRYIgvZ3xrDLo,
+        systemmap:SHcRaVohogZJifUH4,
+        systemmap:SHyBeGX0LsQwjJ6Z,
+        systemmap:SIK56WC1if6riKNpM,
+        systemmap:SMBGW7qHXQfR1VB9W,
+        systemmap:SNbhMvt3Btta1U1d6,
+        systemmap:SOl0OAWrb7M910fp8,
+        systemmap:SWrEh3riVEhEddyRr,
+        systemmap:SZBHsREMx369FArg,
+        systemmap:SeUFazO70bpqCYJ5,
         systemmap:SjCVTMrYaOTygNcqF,
         systemmap:SjhTrVt8CB9QFq0Yn,
-        systemmap:Sl5KyePu7JtGiE3V .
+        systemmap:Sl5KyePu7JtGiE3V,
+        systemmap:SlfheulBjlQDwuaIM,
+        systemmap:SmWBzvRi0YEZiWMOd,
+        systemmap:SqGp9THVAsRw71ZCg,
+        systemmap:StBV0qWzKXosN98bB,
+        systemmap:SwlgSr7ukziL6iHsP,
+        systemmap:Sy4WeMDNoah4TkAYX,
+        systemmap:SyfZhzeyT1CqJU0BP,
+        systemmap:SyhthSmTCgM19Wysy .
 
 systemmap:S0hwJxy2kXNPFbl4C a service:Service ;
     rdfs:label "Lineare Korrektur (LK)-Service"@de ;

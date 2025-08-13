@@ -12,6 +12,7 @@ function getCssVar(name) {
  * Style-related values are dynamically populated from the CSS variables in styles.css.
  */
 const APP_CONFIG = {
+
     // SPARQL Endpoint for fetching data
     ENDPOINT: "https://lindas.admin.ch/query",
 
@@ -123,6 +124,7 @@ const APP_CONFIG = {
     DASHED_PREDICATES: [
         "http://www.w3.org/ns/prov#wasDerivedFrom",
         "http://purl.org/ontology/service#consumes",
+        "http://schema.org/memberOf",
         "https://agriculture.ld.admin.ch/system-map/owns",
         "https://agriculture.ld.admin.ch/system-map/usesMasterData",
         "https://agriculture.ld.admin.ch/system-map/access",

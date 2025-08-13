@@ -661,6 +661,11 @@ systemmap:S9VcxLSoIIwQjlZQ2 a schema:SoftwareApplication ;
     dcat:landingPage <https://farmx.ch/home> ;
     systemmap:operatedBy zefix:1373020 .
 
+zefix:1373020 a systemmap:PrivateOrganization ;
+    rdfs:label "FarmX GmbH"@de ;
+    dcat:landingPage <https://farmx.ch/home> ;
+
+
 systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
     rdfs:label "Acontrol"@de,
         "Acontrol"@en,

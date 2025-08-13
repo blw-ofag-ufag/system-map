@@ -4256,7 +4256,8 @@ systemmap:SbKCxLGicJtMGTQiD a systemmap:MasterData ;
     rdfs:comment "Enthält die Kerndimensionen für die Marktanalyse, wie Produktlisten, Regionen, Produktionssysteme etc."@de,
         "Contains the core dimensions for market analysis, such as product lists, regions, production systems, etc."@en,
         "Contient les dimensions clés pour l'analyse de marché, telles que les listes de produits, les régions, les systèmes de production, etc."@fr,
-        "Contiene le dimensioni principali per l'analisi di mercato, come elenchi di prodotti, regioni, sistemi di produzione, ecc."@it .
+        "Contiene le dimensioni principali per l'analisi di mercato, come elenchi di prodotti, regioni, sistemi di produzione, ecc."@it ;
+        systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY .
 
 systemmap:Sl5KyePu7JtGiE3V a systemmap:MasterData ;
     rdfs:label "Produktekatalog"@de,

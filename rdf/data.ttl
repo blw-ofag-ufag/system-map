@@ -372,8 +372,15 @@ zefix:1124097 a schema:Organization ;
 zefix:1138887 a schema:Organization ;
     rdfs:label "Coop Genossenschaft"@de .
 
+zefix:1149573 a schema:Organization ;
+    rdfs:label "Migros Industrie AG"@de ;
+    systemmap:owns zefix:130459 .
+
 zefix:119283 a schema:Organization ;
-    rdfs:label "Migros-Genossenschafts-Bund"@de .
+    rdfs:label "Migros-Genossenschafts-Bund"@de,
+        "Fédération des coopératives Migros"@fr ;
+    systemmap:abbreviation "MGB"@de ;
+    systemmap:owns zefix:1149573 .
 
 zefix:121 a schema:Organization ;
     rdfs:label "Genossenschaft Milchproduzenten Mittelland"@de .

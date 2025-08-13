@@ -323,6 +323,9 @@ zefix:319555 a schema:Organization ;
 zefix:350762 a schema:Organization ;
     rdfs:label "Arnold Produkte AG"@de .
 
+zefix:404097 a schema:Organization ;
+    rdfs:label "Berner Bauern Verband"@de .
+
 zefix:429308 a schema:Organization ;
     rdfs:label "Schweizer Bauernverband"@de,
         "Union Suisse des Paysans"@fr,
@@ -330,7 +333,16 @@ zefix:429308 a schema:Organization ;
     schema:abbreviation "SBV"@de,
         "USP"@fr,
         "USC"@it ;
-    schema:member zefix:328631 .
+    schema:member zefix:165954,
+        zefix:166248,
+        zefix:226184,
+        zefix:248029,
+        zefix:328631,
+        zefix:404097,
+        zefix:427343,
+        zefix:448334,
+        zefix:540574,
+        zefix:793667 .
 
 zefix:459488 a schema:Organization ;
     rdfs:label "Schweizer Milchproduzenten SMP Genossenschaft"@de ;
@@ -342,11 +354,21 @@ zefix:469727 a schema:Organization,
         "Proviande Cooperative"@en,
         "Proviande Société Coopérative"@fr,
         "Proviande Società Cooperativa"@it ;
-    schema:member zefix:793667 ;
+    schema:member zefix:119283,
+        zefix:130459,
+        zefix:429308,
+        zefix:459488,
+        zefix:7011,
+        zefix:793667 ;
     dcat:landingPage <https://www.proviande.ch/> .
 
+zefix:540574 a schema:Organization ;
+    rdfs:label "Zürcher Bauernverband"@de ;
+    systemmap:abbreviation "ZBV"@de .
+
 zefix:793667 a schema:Organization ;
-    rdfs:label "Schweizerischer Schweinezucht- und Schweineproduzentenverband Suisseporcs"@de .
+    rdfs:label "Schweizerischer Schweinezucht- und Schweineproduzentenverband Suisseporcs"@de ;
+    systemmap:abbreviation "Suisseporcs"@de .
 
 zefix:871039 a schema:Organization ;
     rdfs:label "aaremilch AG"@de .

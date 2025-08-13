@@ -661,11 +661,6 @@ systemmap:S9VcxLSoIIwQjlZQ2 a schema:SoftwareApplication ;
     dcat:landingPage <https://farmx.ch/home> ;
     systemmap:operatedBy zefix:1373020 .
 
-zefix:1373020 a systemmap:PrivateOrganization ;
-    rdfs:label "FarmX GmbH"@de ;
-    dcat:landingPage <https://farmx.ch/home> ;
-
-
 systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
     rdfs:label "Acontrol"@de,
         "Acontrol"@en,
@@ -2652,6 +2647,8 @@ systemmap:SKoClBiquflDf7yi6 a dcat:Dataset ;
         "Heterogeneous raw data (e.g., XLSX) from approx. 400 data suppliers."@en,
         "Données brutes hétérogènes (p. ex. XLSX) d'environ 400 fournisseurs de données."@fr,
         "Dati grezzi eterogenei (ad es. XLSX) da circa 400 fornitori di dati."@it ;
+    systemmap:containedIn systemmap:SYqYq3UTUnZHmyFRD,
+        systemmap:SxvsanBKE0ZN315DU ;
     systemmap:informs systemmap:S1AkhvKmzBiJFCTc .
 
 systemmap:SLJMFAZ6GNdFvfb2L a dcat:Dataset ;
@@ -4257,7 +4254,7 @@ systemmap:SbKCxLGicJtMGTQiD a systemmap:MasterData ;
         "Contains the core dimensions for market analysis, such as product lists, regions, production systems, etc."@en,
         "Contient les dimensions clés pour l'analyse de marché, telles que les listes de produits, les régions, les systèmes de production, etc."@fr,
         "Contiene le dimensioni principali per l'analisi di mercato, come elenchi di prodotti, regioni, sistemi di produzione, ecc."@it ;
-        systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY .
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY .
 
 systemmap:Sl5KyePu7JtGiE3V a systemmap:MasterData ;
     rdfs:label "Produktekatalog"@de,
@@ -4521,6 +4518,10 @@ zefix:1354082 a systemmap:PrivateOrganization ;
         "eOperations Suisse SA"@fr,
         "eOperations Svizzera SA"@it ;
     dcat:landingPage <https://www.eoperations.ch> .
+
+zefix:1373020 a systemmap:PrivateOrganization ;
+    rdfs:label "FarmX GmbH"@de ;
+    dcat:landingPage <https://farmx.ch/home> .
 
 zefix:1393629 a systemmap:PrivateOrganization ;
     rdfs:label "FarmConsult GmbH"@de,

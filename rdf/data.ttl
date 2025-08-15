@@ -390,7 +390,7 @@ zefix:1256441 a schema:Organization,
     rdfs:label "mooh Genossenschaft"@de .
 
 zefix:1292811 a schema:Organization ;
-    rdfs:label "Naturparkkäserei Diemtigtal AG" .
+    rdfs:label "Naturparkkäserei Diemtigtal AG"@de .
 
 zefix:1469700 a schema:Organization ;
     rdfs:label "digitalswitzerland"@de,
@@ -413,7 +413,8 @@ zefix:254421 a schema:Organization ;
     rdfs:label "Centravo Holding AG"@en .
 
 zefix:290876 a schema:Organization ;
-    rdfs:label "GVFI Ltd"@en,
+    rdfs:label "GVFI AG"@de,
+        "GVFI Ltd"@en,
         "GVFI SA"@fr .
 
 zefix:312944 a schema:Organization ;
@@ -458,8 +459,7 @@ zefix:429308 a schema:Organization ;
 
 zefix:455252 a schema:Organization,
         systemmap:PrivateOrganization ;
-    rdfs:label "Bell (Schweiz) AG"@de,
-        "Bell Schweiz AG"@de ;
+    rdfs:label "Bell Schweiz AG"@de ;
     dcat:landingPage <https://www.bell.ch/> ;
     systemmap:ownedBy zefix:38909 .
 
@@ -2986,8 +2986,7 @@ systemmap:SRT6X0n1ML8vX3uV a dcat:Dataset ;
     prov:wasDerivedFrom systemmap:S2XkdeKmzFiJFXWc .
 
 systemmap:SRT6X0n1ML8vwHUW a dcat:Dataset ;
-    rdfs:label "Linked Open Data"@de,
-        "Linked Open Data"@en ;
+    rdfs:label "Linked Open Data"@en ;
     systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd .
 
 systemmap:SSyCUWt1u4bzJ4liA a dcat:Dataset ;

@@ -24,12 +24,11 @@ def main():
 
     # Print overall results
     print("Conforms:", conforms)
-    print(results_text)
 
     if not conforms:
         # Print GitHub Actions annotation to clearly indicate a SHACL validation failure.
         # This annotation will be parsed by GitHub and shown inline on the PR.
-        print(f"::error title=SHACL Validation Failed::Graph does not conform to SHACL shapes. Details: {results_text}")
+        print(results_text)
         sys.exit(1)
 
 if __name__ == "__main__":

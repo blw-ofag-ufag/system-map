@@ -1,4 +1,4 @@
-# Step 1: Load necessary packages
+# Load necessary packages
 # package rdfhelper is from https://github.com/damian-oswald/rdfhelper
 
 library(rdfhelper)
@@ -7,7 +7,7 @@ library(ggraph)
 library(dplyr)
 library(stringr)
 
-# Step 2: Fetch the network data from the SPARQL endpoint
+# Fetch the network data from the SPARQL endpoint
 query <- '
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -59,7 +59,7 @@ WHERE
 
 edges <- sparql(query, 'https://ld.admin.ch/query')
 
-# Step 3: Assign numerical weights based on the predicate
+# Assign numerical weights based on the predicate
 edges_with_weights <- edges %>%
   mutate(weight = case_when(
     predicate %in% c("http://schema.org/memberOf",
@@ -74,20 +74,30 @@ edges_with_weights <- edges %>%
     TRUE ~ 1.0
   ))
 
-# Step 3: Create a graph object from the edge list
+# Create a graph object from the edge list
 graph <- graph_from_data_frame(edges_with_weights[,c(1,3:4)], directed = TRUE)
 
-# Step 4: Compute the canonical layout
+# Compute page-rank score
+PR <- igraph::page_rank(graph, directed = FALSE, weights = E(graph)$weight)
+
+# Compute the canonical layout
 set.seed(42)
 
 # First, create the layout using the default settings
 layout <- create_layout(graph,
                         layout = "fr",
                         niter = 5000,
-                        weights = E(graph)$weight)
+                        weights = E(graph)$weight)[,1:3]
 
-# normalize the positions (makes sure x, y are between -10 and 10)
-for (i in 1:2) layout[,i] <- scale(layout[,i]) * 10
+# Normalize the positions (makes sure x, y are between -10 and 10)
+layout[,1:2] <- scale(layout[,1:2]) * 10
 
-# Step 5: Write the canonical layout to a JSON file
-jsonlite::write_json(layout[,1:3], "docs/layout.json", pretty = TRUE, digits = 6)
+# Combine data to one data frame
+data <- data.frame(
+  layout,
+  score = PR$vector,
+  rank = as.integer(rank(-PR$vector))
+)
+
+# Write the canonical layout to a JSON file
+jsonlite::write_json(data, "docs/layout.json", pretty = TRUE, digits = 6)

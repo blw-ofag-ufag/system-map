@@ -14,6 +14,36 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
 
+systemmap:SaAA0IQkj02jgbLEb a dcmitype:Collection ;
+    rdfs:label "MARS III Systemarchitektur"@de ;
+    systemmap:containsNodes systemmap:S1AkhvKmzBiJFCTc,
+        systemmap:S1JvEmah9Tl0698au,
+        systemmap:S2XkdeKmzCiJFCTb,
+        systemmap:S2XkdeKmzFiJFXWc,
+        systemmap:S4ZuIO9s81WMS2bKB,
+        systemmap:S6VSaFePQaMGqU8vD,
+        systemmap:SHFSc6xgsHF70IlUd,
+        systemmap:SKoClBiquflDf7yi6,
+        systemmap:SLJMFAZ6GNdFvfb2L,
+        systemmap:SRT6X0n1ML8vX3uV,
+        systemmap:SRT6X0n1ML8vwHUW,
+        systemmap:SSyCUWt1u4bzJ4liA,
+        systemmap:SXIIUKFjUBDaaTzh6,
+        systemmap:SYfFBbBlmgKk9vmPg,
+        systemmap:SYqYq3UTUnZHmyFRD,
+        systemmap:SaVyVVsIDkiDMtQq4,
+        systemmap:SbKCxLGicJtMGTQiD,
+        systemmap:Sc6kZqxTyS0gFGCY,
+        systemmap:ShZO092di7cBnOm7F,
+        systemmap:SieZtzwlMAxzFY1op,
+        systemmap:SisV9d3pviAFO8vTK,
+        systemmap:SkcU0PDb6fucIKa9k,
+        systemmap:SpT5dE2PIEfeWKafV,
+        systemmap:Su9RTb49BcaqL4EcQ,
+        systemmap:SvAr93iMz2fj4HZBK,
+        systemmap:SxvsanBKE0ZN315DU,
+        systemmap:SzJ7aOICsI2KD9iOt .
+
 systemmap:Si8UnIQkj02jgbLEb a dcmitype:Collection ;
     rdfs:label "digiFLUX Systemarchitektur"@de,
         "digiFLUX System Architecture"@en,
@@ -1593,6 +1623,18 @@ systemmap:SYQt9hzLel1dEtlOn a schema:SoftwareApplication ;
     dcat:landingPage <https://brunanet.ch/BrunaNet/> ;
     systemmap:operatedBy zefix:226184 .
 
+systemmap:SYqYq3UTUnZHmyFRD a schema:SoftwareApplication ;
+    rdfs:label "Data Warehouse (DWH)"@de,
+        "Data Warehouse (DWH)"@en,
+        "Data Warehouse (DWH)"@fr,
+        "Data Warehouse (DWH)"@it ;
+    dcterms:isPartOf systemmap:Sc6kZqxTyS0gFGCY,
+        systemmap:ShZO092di7cBnOm7F ;
+    rdfs:comment "DWH ist für die Datenhaltung aller Daten und deren Verarbeitung zuständig."@de,
+        "DWH is responsible for the storage and processing of all data."@en,
+        "Le DWH est responsable du stockage et du traitement de toutes les données."@fr,
+        "Il DWH è responsabile dell'archiviazione e dell'elaborazione di tutti i dati."@it .
+
 systemmap:SZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
     rdfs:label "AGRICOLA"@de,
         "AGRICOLA"@en,
@@ -1734,6 +1776,7 @@ systemmap:Sc6kZqxTyS0gFGCY a schema:SoftwareApplication ;
         "MARS III"@en,
         "MARS III"@fr,
         "MARS III"@it ;
+    systemmap:isPartOf systemmap:ShZO092di7cBnOm7F ;
     systemmap:operatedBy systemmap:SaVyVVsIDkiDMtQq4 .
 
 systemmap:Sd3egXVVG1pgbzgcA a schema:SoftwareApplication ;
@@ -2330,6 +2373,19 @@ systemmap:StiztlHPN24VK1k8G a schema:SoftwareApplication ;
     dcat:landingPage <https://www.identitas.ch/produkte/agateway> ;
     systemmap:operatedBy zefix:449781 .
 
+systemmap:Su9RTb49BcaqL4EcQ a schema:SoftwareApplication ;
+    rdfs:label "NielsenIQ Datenbank"@de,
+        "NielsenIQ Database"@en,
+        "Base de données NielsenIQ"@fr,
+        "Database NielsenIQ"@it ;
+    rdfs:comment """
+        Die NielsenIQ Datenbank enthält Einzelhandelsdaten, welche vom BLW für die Marktanalyse gekauft werden"""@de,
+        "For market analysis, the FOAG acquires retail data contained in the NielsenIQ database."@en,
+        "La base de données NielsenIQ contient des données de commerce, qui sont achetées par l'OFAG pour l'analyse de marché."@fr,
+        "Per l'analisi di mercato, l'UFAG acquisisce i dati al dettaglio contenuti nel database di NielsenIQ."@it ;
+    systemmap:contains systemmap:SXIIUKFjUBDaaTzh6 ;
+    systemmap:operatedBy systemmap:SYfFBbBlmgKk9vmPg .
+
 systemmap:SuEtT7joC8HXVSfF a schema:SoftwareApplication ;
     rdfs:label "UID-Register"@de,
         "UID Register"@en,
@@ -2468,6 +2524,21 @@ systemmap:Sxlqf2df29PzK3039 a schema:SoftwareApplication ;
         """@de ;
     systemmap:operatedBy zefix:414877 .
 
+systemmap:SxvsanBKE0ZN315DU a schema:SoftwareApplication ;
+    rdfs:label "Public Data Warehouse"@de,
+        "Public Data Warehouse"@en,
+        "Public Data Warehouse"@fr,
+        "Public Data Warehouse"@it ;
+    dcterms:isPartOf systemmap:ShZO092di7cBnOm7F ;
+    rdfs:comment "DWH Public ist für die Datenhaltung für das öffentliche Reporting sowie für die Aktualisierung der Reports zuständig."@de,
+        "DWH Public is responsible for data storage for public reporting and for updating the reports."@en,
+        "DWH Public est responsable du stockage des données pour le reporting public ainsi que de la mise à jour des rapports."@fr,
+        "DWH Public è responsabile della conservazione dei dati per il reporting pubblico e dell'aggiornamento dei report."@it ;
+    systemmap:abbreviation "DWH Public"@de,
+        "DWH Public"@en,
+        "DWH Public"@fr,
+        "DWH Public"@it .
+
 systemmap:Sy4WeMDNoah4TkAYX a schema:SoftwareApplication ;
     rdfs:label "Nährstoffbilanzrechner"@de ;
     rdfs:comment """
@@ -2533,16 +2604,25 @@ systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:SRu4rav1Rlm2mUMWr .
 
 systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
-    rdfs:label "Agrarmarktdaten"@de,
-        "agricultural market data"@en,
-        "données du marché agricole"@fr,
-        "dati di mercato agricolo"@it ;
-    rdfs:comment "Marktdaten enthalten Preise, Mengen, Produktionssysteme."@de,
-        "Market data includes prices, quantities, production systems."@en,
-        "Les données de marché comprennent les prix, les quantités, les systèmes de production."@fr,
-        "I dati di mercato comprendono prezzi, quantità e sistemi di produzione."@it ;
-    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
-    systemmap:informs systemmap:SRT6X0n1ML8vwHUW .
+    rdfs:label "Preise und Mengen zum Agrarmarkt"@de ;
+    dcterms:isPartOf systemmap:S2XkdeKmzCiJFCTb ;
+    rdfs:comment """
+        Beinhaltet Preise und Mengen für verschiedene Produkte, Wertschöpfungsstufen, Regionen, Produktionssysteme etc.
+        """@de ;
+    systemmap:usesMasterData systemmap:SbKCxLGicJtMGTQiD .
+
+systemmap:S2XkdeKmzCiJFCTb a dcat:Dataset ;
+    rdfs:label "BLW-interne Agrarmarktdaten"@de ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY .
+
+systemmap:S2XkdeKmzFiJFXWc a dcat:Dataset ;
+    rdfs:label "Öffentlich einsehbare Agrarmarktdaten"@de ;
+    rdfs:comment """
+        Beinhaltet Preise und Mengen für verschiedene Produkte, Wertschöpfungsstufen, Regionen, Produktionssysteme etc.,
+        aber keine Informationen zu einzelnen Produzenten, sondern nur nach jeweiligen Gruppen aggregierte Zahlen.
+        """@de ;
+    prov:wasDerivedFrom systemmap:S2XkdeKmzCiJFCTb ;
+    systemmap:containedIn systemmap:SxvsanBKE0ZN315DU .
 
 systemmap:S4BoMPavXD5gIObm a dcat:Dataset ;
     rdfs:label "Tieridentifikationsdaten"@de,
@@ -2566,6 +2646,14 @@ systemmap:S4BoMPavXD5gIObm a dcat:Dataset ;
         Questi dati principali costituiscono la base per la tracciabilità senza interruzioni nel TVD.
         """@it ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
+
+systemmap:S4ZuIO9s81WMS2bKB a dcat:Dataset ;
+    rdfs:label "Marktdaten Futtermittel"@de,
+        "Market Data Animal Feed"@en,
+        "Données de marché Aliments pour animaux"@fr,
+        "Dati di mercato Mangimi"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/futtermittel> .
 
 systemmap:S7mhWQjPZiSFc8dU a dcat:Dataset ;
     rdfs:label "Tierereignisdaten"@de,
@@ -2761,6 +2849,27 @@ systemmap:SIsQ6LSUJc3xbG9B a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
+systemmap:SKoClBiquflDf7yi6 a dcat:Dataset ;
+    rdfs:label "Rohdaten der Datenlieferanten"@de,
+        "Raw data from data suppliers"@en,
+        "Données brutes des fournisseurs de données"@fr,
+        "Dati grezzi dei fornitori di dati"@it ;
+    rdfs:comment "Heterogene Rohdaten (z.B. XLSX) von ca. 400 Datenlieferanten."@de,
+        "Heterogeneous raw data (e.g., XLSX) from approx. 400 data suppliers."@en,
+        "Données brutes hétérogènes (p. ex. XLSX) d'environ 400 fournisseurs de données."@fr,
+        "Dati grezzi eterogenei (ad es. XLSX) da circa 400 fornitori di dati."@it ;
+    prov:wasDerivedFrom systemmap:SXIIUKFjUBDaaTzh6 ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
+    systemmap:informs systemmap:S1AkhvKmzBiJFCTc .
+
+systemmap:SLJMFAZ6GNdFvfb2L a dcat:Dataset ;
+    rdfs:label "Marktdaten Früchte und Gemüse"@de,
+        "Market Data Fruits and Vegetables"@en,
+        "Données de marché Fruits et légumes"@fr,
+        "Dati di mercato Frutta e verdura"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/fruchte-gemuese> .
+
 systemmap:SLXw4VofhYbzXVNKC a dcat:Dataset ;
     rdfs:label "Daten zur Milchverwertung"@de,
         "Data on milk utilization"@en,
@@ -2793,13 +2902,28 @@ systemmap:SPCig1xdekUHDV4r a dcat:Dataset ;
         "Statistiche mensili e confronti pluriennali contenenti informazioni sul latte prodotto e sulla sua trasformazione in diverse categorie di prodotti."@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
+systemmap:SRT6X0n1ML8vX3uV a dcat:Dataset ;
+    rdfs:label "Offene Marktdaten"@de,
+        "Open market data"@en ;
+    dcterms:isPartOf systemmap:SRT6X0n1ML8vwHUW ;
+    rdfs:comment """
+        Marktdaten wie Preise und Mengen zu verschiedenen Produkten im Agrar- und Ernährungssektor, welche in RDF-Form öffentlich zugänglich und herunterladbar sind.
+        Die Marktdaten, welche aus der NielsenIQ Datenbank bezogen wurden, sind hier aus vertraglichen Gründen nicht mit enthalten.
+        """@de ;
+    prov:wasDerivedFrom systemmap:S2XkdeKmzFiJFXWc .
+
 systemmap:SRT6X0n1ML8vwHUW a dcat:Dataset ;
-    rdfs:label "Linked Data"@de,
-        "Linked Data"@en,
-        "Linked Data"@fr,
-        "Linked Data"@it ;
-    systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd,
-        systemmap:SpLZd1ojPxF0CvH28 .
+    rdfs:label "Linked Open Data"@de,
+        "Linked Open Data"@en ;
+    systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd .
+
+systemmap:SSyCUWt1u4bzJ4liA a dcat:Dataset ;
+    rdfs:label "Marktdaten Kartoffeln und Kartoffelprodukte"@de,
+        "Market Data Potatoes and Potato Products"@en,
+        "Données de marché Pommes de terre et produits à base de pommes de terre"@fr,
+        "Dati di mercato Patate e prodotti a base di patate"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/kartoffeln> .
 
 systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
     rdfs:label "Zubereitungen"@de,
@@ -2807,7 +2931,7 @@ systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
         "Préparations"@fr,
         "Preparazioni"@it ;
     rdfs:comment """
-        Mischungen oder Lösungen aus zwei oder mehr Stoffen.
+        Mischungen oder Lösungen aus zwei oder mehr Stoffen. 
         """@de,
         """
         Mixtures or solutions composed of two or more substances.
@@ -2823,6 +2947,16 @@ systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
 systemmap:SVXa3t3SyxjgPiLBx a dcat:Dataset ;
     rdfs:label "Daten der Geburtsmeldungen"@de ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
+
+systemmap:SXIIUKFjUBDaaTzh6 a dcat:Dataset ;
+    rdfs:label "Einzelhandelsdaten (Nielsen)"@de,
+        "Retail Data (Nielsen)"@en,
+        "Données du commerce de détail (Nielsen)"@fr,
+        "Dati del commercio al dettaglio (Nielsen)"@it ;
+    rdfs:comment "Vom Marktforschungsunternehmen Nielsen zugekaufte Daten über den Einzelhandel."@de,
+        "Data on the retail sector purchased from the market research company Nielsen."@en,
+        "Données sur le secteur du commerce de détail achetées à l'entreprise d'études de marché Nielsen."@fr,
+        "Dati sul settore del commercio al dettaglio acquistati dalla società di ricerche di mercato Nielsen."@it .
 
 systemmap:SZBHsREMx369FArg a dcat:Dataset ;
     rdfs:label "Dünger"@de ;
@@ -2889,6 +3023,22 @@ systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
+systemmap:SisV9d3pviAFO8vTK a dcat:Dataset ;
+    rdfs:label "Marktdaten Ölsaaten und Eiweisspflanzen"@de,
+        "Market Data Oilseeds and Protein Crops"@en,
+        "Données de marché Oléagineux et protéagineux"@fr,
+        "Dati di mercato Semi oleosi e piante proteiche"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/olsaaten> .
+
+systemmap:SkcU0PDb6fucIKa9k a dcat:Dataset ;
+    rdfs:label "Marktdaten Brotgetreide, Mehl und Backwaren"@de,
+        "Market Data Bread Cereals, Flour and Baked Goods"@en,
+        "Données de marché Céréales panifiables, farine et produits de boulangerie"@fr,
+        "Dati di mercato Cereali panificabili, farina e prodotti da forno"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/getreide> .
+
 systemmap:SoBRgq7STLbZfEze a dcat:Dataset ;
     rdfs:label "Meldepflichtdaten (Schafe & Ziegen)"@de,
         "Mandatory reporting data (sheep & goats)"@en,
@@ -2912,6 +3062,14 @@ systemmap:SoBRgq7STLbZfEze a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
+systemmap:SpT5dE2PIEfeWKafV a dcat:Dataset ;
+    rdfs:label "Marktdaten Fleisch, Fleisch- und Wurstwaren"@de,
+        "Market Data Meat, Meat and Sausage Products"@en,
+        "Données de marché Viande, produits carnés et charcuterie"@fr,
+        "Dati di mercato Carne, prodotti a base di carne e insaccati"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/fleisch> .
+
 systemmap:Spqrv6Ul05KJySTs a dcat:Dataset ;
     rdfs:label "Nationaler Sortenkatalog"@de,
         "National variety catalog"@en,
@@ -2924,6 +3082,14 @@ systemmap:Spqrv6Ul05KJySTs a dcat:Dataset ;
     prov:wasDerivedFrom systemmap:Sb2FM7pKN60PrRwU ;
     systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj .
 
+systemmap:SvAr93iMz2fj4HZBK a dcat:Dataset ;
+    rdfs:label "Marktdaten Eier"@de,
+        "Market Data Eggs"@en,
+        "Données de marché Œufs"@fr,
+        "Dati di mercato Uova"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/eier> .
+
 systemmap:SyhthSmTCgM19Wysy a dcat:Dataset ;
     rdfs:label "Pflanzenschutzmittel"@de,
         "Plant Protection Products"@en,
@@ -2931,6 +3097,14 @@ systemmap:SyhthSmTCgM19Wysy a dcat:Dataset ;
         "Prodotti fitosanitari"@it ;
     dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
     prov:wasDerivedFrom systemmap:S9J1HTMKIxnCgmYc .
+
+systemmap:SzJ7aOICsI2KD9iOt a dcat:Dataset ;
+    rdfs:label "Marktdaten Milch und Milchprodukte"@de,
+        "Market Data Milk and Milk Products"@en,
+        "Données de marché Lait et produits laitiers"@fr,
+        "Dati di mercato Latte e prodotti lattiero-caseari"@it ;
+    dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/milch-und-milchprodukte> .
 
 systemmap:SzcK9O3XZFxVW1IS a dcat:Dataset ;
     rdfs:label "Daten zur Milchsegmentierung"@de,
@@ -4288,6 +4462,17 @@ systemmap:SEI0Jp1SabxWUiGh0 a systemmap:MasterData ;
         Il numero BDTA è collegato in modo fisso al numero di azienda cantonale (KT_ID_B) ed è quindi legato al luogo.
         """@it .
 
+systemmap:SbKCxLGicJtMGTQiD a systemmap:MasterData ;
+    rdfs:label "Stammdaten Marktanalyse"@de,
+        "Master Data Market Analysis"@en,
+        "Données de base de l'analyse de marché"@fr,
+        "Dati anagrafici dell'analisi di mercato"@it ;
+    dcterms:isPartOf systemmap:S2XkdeKmzCiJFCTb ;
+    rdfs:comment "Enthält die Kerndimensionen für die Marktanalyse, wie Produktlisten, Regionen, Produktionssysteme etc."@de,
+        "Contains the core dimensions for market analysis, such as product lists, regions, production systems, etc."@en,
+        "Contient les dimensions clés pour l'analyse de marché, telles que les listes de produits, les régions, les systèmes de production, etc."@fr,
+        "Contiene le dimensioni principali per l'analisi di mercato, come elenchi di prodotti, regioni, sistemi di produzione, ecc."@it .
+
 systemmap:Sl5KyePu7JtGiE3V a systemmap:MasterData ;
     rdfs:label "Produktekatalog"@de,
         "Product catalog"@en,
@@ -4420,6 +4605,10 @@ systemmap:SWdllcNbPnjdcm7om a systemmap:PrivateOrganization ;
     rdfs:label "Agroline"@de ;
     systemmap:ownedBy zefix:328631 .
 
+systemmap:SYfFBbBlmgKk9vmPg a systemmap:PrivateOrganization ;
+    rdfs:label "NielsenIQ"@de ;
+    dcat:landingPage <https://nielseniq.com/global/de> .
+
 systemmap:ScS6Ziy08AYukFjjh a systemmap:PrivateOrganization ;
     rdfs:label "Schweizerischer Freibergerverband (SFV)"@de,
         "Swiss Federation of Franches-Montagnes Horse Breeders (SFV)"@en,
@@ -4512,6 +4701,10 @@ zefix:1354082 a systemmap:PrivateOrganization ;
         "eOperations Suisse SA"@fr,
         "eOperations Svizzera SA"@it ;
     dcat:landingPage <https://www.eoperations.ch> .
+
+zefix:1373020 a systemmap:PrivateOrganization ;
+    rdfs:label "FarmX GmbH"@de ;
+    dcat:landingPage <https://farmx.ch/home> .
 
 zefix:1393629 a systemmap:PrivateOrganization ;
     rdfs:label "FarmConsult GmbH"@de,
@@ -5099,6 +5292,4 @@ systemmap:SfXioR1gkj8eDuTF a termdat:52453 ;
         "Données sur les mesures administratives et les sanctions pénales"@fr,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
     systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
-
-zefix:1373020 rdfs:label "FARMX GmbH"@de .
 

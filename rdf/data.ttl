@@ -14,7 +14,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
 
-systemmap:Si8UnIQkj02jgbLEb a dcmitype:Collection ;
+systemmap:SaAA0IQkj02jgbLEb a dcmitype:Collection ;
     rdfs:label "MARS III Systemarchitektur"@de ;
     systemmap:containsNodes systemmap:S1AkhvKmzBiJFCTc,
         systemmap:S1JvEmah9Tl0698au,

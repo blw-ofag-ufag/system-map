@@ -2740,7 +2740,8 @@ systemmap:SRT6X0n1ML8vX3uV a dcat:Dataset ;
     prov:wasDerivedFrom systemmap:S2XkdeKmzFiJFXWc .
 
 systemmap:SRT6X0n1ML8vwHUW a dcat:Dataset ;
-    rdfs:label "Linked Open Data"@en ;
+    rdfs:label "Linked Open Data"@de,
+        "Linked Open Data"@en ;
     systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd .
 
 systemmap:SSyCUWt1u4bzJ4liA a dcat:Dataset ;

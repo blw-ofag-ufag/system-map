@@ -71,7 +71,7 @@ layout <- data.frame(
     graph,
     layout = 'fr', # use Fruchterman-Reingold force-directed layout
     niter = 500
-    )
+    )[,1:2]
 )
 names(layout) <- c("uri", "x", "y")
 

@@ -17,24 +17,32 @@
 systemmap:Si8UnIQkj02jgbLEb a dcmitype:Collection ;
     rdfs:label "MARS III Systemarchitektur"@de ;
     systemmap:containsNodes systemmap:S1AkhvKmzBiJFCTc,
+        systemmap:S1JvEmah9Tl0698au,
+        systemmap:S2XkdeKmzCiJFCTb,
+        systemmap:S2XkdeKmzFiJFXWc,
         systemmap:S4ZuIO9s81WMS2bKB,
+        systemmap:S6VSaFePQaMGqU8vD,
+        systemmap:SHFSc6xgsHF70IlUd,
         systemmap:SKoClBiquflDf7yi6,
         systemmap:SLJMFAZ6GNdFvfb2L,
+        systemmap:SRT6X0n1ML8vX3uV,
+        systemmap:SRT6X0n1ML8vwHUW,
         systemmap:SSyCUWt1u4bzJ4liA,
         systemmap:SXIIUKFjUBDaaTzh6,
         systemmap:SYfFBbBlmgKk9vmPg,
         systemmap:SYqYq3UTUnZHmyFRD,
+        systemmap:SaVyVVsIDkiDMtQq4,
         systemmap:SbKCxLGicJtMGTQiD,
         systemmap:Sc6kZqxTyS0gFGCY,
         systemmap:ShZO092di7cBnOm7F,
+        systemmap:SieZtzwlMAxzFY1op,
         systemmap:SisV9d3pviAFO8vTK,
         systemmap:SkcU0PDb6fucIKa9k,
         systemmap:SpT5dE2PIEfeWKafV,
         systemmap:Su9RTb49BcaqL4EcQ,
         systemmap:SvAr93iMz2fj4HZBK,
         systemmap:SxvsanBKE0ZN315DU,
-        systemmap:SzJ7aOICsI2KD9iOt,
-        zefix:1373020 .
+        systemmap:SzJ7aOICsI2KD9iOt .
 
 systemmap:S0hwJxy2kXNPFbl4C a service:Service ;
     rdfs:label "Lineare Korrektur (LK)-Service"@de ;
@@ -2424,18 +2432,25 @@ systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:SRu4rav1Rlm2mUMWr .
 
 systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
-    rdfs:label "Agrarmarktdaten"@de,
-        "Agricultural Market Data"@en,
-        "Données du marché agricole"@fr,
-        "Dati di mercato agricolo"@it ;
-    dcterms:isPartOf systemmap:SRT6X0n1ML8vwHUW ;
-    rdfs:comment "Agrarmarktdaten umfassen Informationen aus verschiedenen Quellen entlang der Wertschöpfungskette landwirtschaftlicher Produkte. Sie werden direkt am Markt von Branchenorganisationen, Unternehmen und Behörden wie dem Bundesamt für Statistik erhoben. Diese Daten decken verschiedene Stufen ab, darunter Produktion, Verarbeitung, Konsum, Import sowie Informationen aus dem Ausland."@de,
-        "Agricultural market data includes information from various sources along the value chain of agricultural products. It is collected directly from the market by industry organizations, companies, and authorities such as the Federal Statistical Office. This data covers various stages, including production, processing, consumption, import, as well as information from foreign countries."@en,
-        "Les données du marché agricole comprennent des informations provenant de diverses sources tout au long de la chaîne de valeur des produits agricoles. Elles sont collectées directement sur le marché par des organisations sectorielles, des entreprises et des autorités telles que l'Office fédéral de la statistique. Ces données couvrent différentes étapes, notamment la production, la transformation, la consommation, l'importation, ainsi que des informations provenant de l'étranger."@fr,
-        "I dati del mercato agricolo includono informazioni da diverse fonti lungo la catena del valore dei prodotti agricoli. Vengono raccolti direttamente sul mercato da organizzazioni di settore, aziende e autorità come l'Ufficio federale di statistica. Questi dati coprono varie fasi, tra cui produzione, trasformazione, consumo, importazione, oltre a informazioni provenienti dall'estero."@it ;
-    systemmap:containedIn systemmap:SYqYq3UTUnZHmyFRD,
-        systemmap:SxvsanBKE0ZN315DU ;
+    rdfs:label "Preise und Mengen zum Agrarmarkt"@de ;
+    dcterms:isPartOf systemmap:S2XkdeKmzCiJFCTb ;
+    rdfs:comment """
+        Beinhaltet Preise und Mengen für verschiedene Produkte, Wertschöpfungsstufen, Regionen, Produktionssysteme etc.
+        """@de ;
     systemmap:usesMasterData systemmap:SbKCxLGicJtMGTQiD .
+
+systemmap:S2XkdeKmzCiJFCTb a dcat:Dataset ;
+    rdfs:label "BLW-interne Agrarmarktdaten"@de ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY .
+
+systemmap:S2XkdeKmzFiJFXWc a dcat:Dataset ;
+    rdfs:label "Öffentlich einsehbare Agrarmarktdaten"@de ;
+    rdfs:comment """
+        Beinhaltet Preise und Mengen für verschiedene Produkte, Wertschöpfungsstufen, Regionen, Produktionssysteme etc.,
+        aber keine Informationen zu einzelnen Produzenten, sondern nur nach jeweiligen Gruppen aggregierte Zahlen.
+        """@de ;
+    prov:wasDerivedFrom systemmap:S2XkdeKmzCiJFCTb ;
+    systemmap:containedIn systemmap:SxvsanBKE0ZN315DU .
 
 systemmap:S4BoMPavXD5gIObm a dcat:Dataset ;
     rdfs:label "Tieridentifikationsdaten"@de,
@@ -2670,8 +2685,8 @@ systemmap:SKoClBiquflDf7yi6 a dcat:Dataset ;
         "Heterogeneous raw data (e.g., XLSX) from approx. 400 data suppliers."@en,
         "Données brutes hétérogènes (p. ex. XLSX) d'environ 400 fournisseurs de données."@fr,
         "Dati grezzi eterogenei (ad es. XLSX) da circa 400 fornitori di dati."@it ;
-    systemmap:containedIn systemmap:SYqYq3UTUnZHmyFRD,
-        systemmap:SxvsanBKE0ZN315DU ;
+    prov:wasDerivedFrom systemmap:SXIIUKFjUBDaaTzh6 ;
+    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
     systemmap:informs systemmap:S1AkhvKmzBiJFCTc .
 
 systemmap:SLJMFAZ6GNdFvfb2L a dcat:Dataset ;
@@ -2714,13 +2729,19 @@ systemmap:SPCig1xdekUHDV4r a dcat:Dataset ;
         "Statistiche mensili e confronti pluriennali contenenti informazioni sul latte prodotto e sulla sua trasformazione in diverse categorie di prodotti."@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
+systemmap:SRT6X0n1ML8vX3uV a dcat:Dataset ;
+    rdfs:label "Offene Marktdaten"@de,
+        "Open market data"@en ;
+    dcterms:isPartOf systemmap:SRT6X0n1ML8vwHUW ;
+    rdfs:comment """
+        Marktdaten wie Preise und Mengen zu verschiedenen Produkten im Agrar- und Ernährungssektor, welche in RDF-Form öffentlich zugänglich und herunterladbar sind.
+        Die Marktdaten, welche aus der NielsenIQ Datenbank bezogen wurden, sind hier aus vertraglichen Gründen nicht mit enthalten.
+        """@de ;
+    prov:wasDerivedFrom systemmap:S2XkdeKmzFiJFXWc .
+
 systemmap:SRT6X0n1ML8vwHUW a dcat:Dataset ;
-    rdfs:label "Linked Data"@de,
-        "Linked Data"@en,
-        "Linked Data"@fr,
-        "Linked Data"@it ;
-    systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd,
-        systemmap:SpLZd1ojPxF0CvH28 .
+    rdfs:label "Linked Open Data"@en ;
+    systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd .
 
 systemmap:SSyCUWt1u4bzJ4liA a dcat:Dataset ;
     rdfs:label "Marktdaten Kartoffeln und Kartoffelprodukte"@de,
@@ -2758,7 +2779,6 @@ systemmap:SXIIUKFjUBDaaTzh6 a dcat:Dataset ;
         "Retail Data (Nielsen)"@en,
         "Données du commerce de détail (Nielsen)"@fr,
         "Dati del commercio al dettaglio (Nielsen)"@it ;
-    dcterms:isPartOf systemmap:SKoClBiquflDf7yi6 ;
     rdfs:comment "Vom Marktforschungsunternehmen Nielsen zugekaufte Daten über den Einzelhandel."@de,
         "Data on the retail sector purchased from the market research company Nielsen."@en,
         "Données sur le secteur du commerce de détail achetées à l'entreprise d'études de marché Nielsen."@fr,
@@ -4273,11 +4293,11 @@ systemmap:SbKCxLGicJtMGTQiD a systemmap:MasterData ;
         "Master Data Market Analysis"@en,
         "Données de base de l'analyse de marché"@fr,
         "Dati anagrafici dell'analisi di mercato"@it ;
+    dcterms:isPartOf systemmap:S2XkdeKmzCiJFCTb ;
     rdfs:comment "Enthält die Kerndimensionen für die Marktanalyse, wie Produktlisten, Regionen, Produktionssysteme etc."@de,
         "Contains the core dimensions for market analysis, such as product lists, regions, production systems, etc."@en,
         "Contient les dimensions clés pour l'analyse de marché, telles que les listes de produits, les régions, les systèmes de production, etc."@fr,
-        "Contiene le dimensioni principali per l'analisi di mercato, come elenchi di prodotti, regioni, sistemi di produzione, ecc."@it ;
-    systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY .
+        "Contiene le dimensioni principali per l'analisi di mercato, come elenchi di prodotti, regioni, sistemi di produzione, ecc."@it .
 
 systemmap:Sl5KyePu7JtGiE3V a systemmap:MasterData ;
     rdfs:label "Produktekatalog"@de,

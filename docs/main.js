@@ -473,7 +473,6 @@ async function init() {
         nodeDegrees[edge.from] = (nodeDegrees[edge.from] || 0) + 1;
         nodeDegrees[edge.to] = (nodeDegrees[edge.to] || 0) + 1;
     });
-    console.log("Calculated Node Degrees (total in+out):", nodeDegrees);
 
     // 2. Filter nodes based on the minDegree parameter
     const filteredNodeIds = new Set(

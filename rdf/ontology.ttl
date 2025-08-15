@@ -1,4 +1,5 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -45,6 +46,10 @@ dcat:Dataset a rdfs:Class,
         Il concetto di dataset in DCAT è ampio e inclusivo, con l'intenzione di includere tipi di risorse provenienti da tutte le comunità.
         I dati possono assumere molte forme, inclusi numeri, testo, pixel, immagini, suoni e altri media, e potenzialmente altri tipi, che possono essere raccolti in un dataset.
         """@it .
+
+dcmitype:Collection a owl:Class ;
+    rdfs:label "Collection"@en ;
+    rdfs:comment "A collection is described as a group; its parts may also be separately described."@en .
 
 service:Service a owl:Class ;
     rdfs:label "IT-Service"@de,
@@ -716,6 +721,11 @@ systemmap:contains a owl:ObjectProperty ;
     rdfs:domain schema:SoftwareApplication ;
     rdfs:range dcat:Dataset ;
     owl:inverseOf systemmap:containedIn .
+
+systemmap:containsNodes a owl:ObjectProperty ;
+    rdfs:label "Elemente in diesem Subgraph"@de,
+        "Elements in this subgraph"@en ;
+    rdfs:domain dcmitype:Collection .
 
 systemmap:hasLegalBasis a owl:ObjectProperty ;
     rdfs:label "hat Rechtsgrundlage"@de,

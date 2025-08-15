@@ -38,16 +38,17 @@ Add or change the parameters below to filter what you see or to switch language.
 | **`system`**       | `true` \| `false`                                                                    | `true`            | Show or hide **IT systems** (`schema:SoftwareApplication`).                                                                                                                                                                                                                                                                                                                                                                                        |
 | **`information`**  | `true` \| `false`                                                                    | `true`            | Show or hide **information units** (`dcat:Dataset`).                                                                                                                                                                                                                                                                                                                                                                                               |
 | **`predicates`**   | *semicolon-, comma- or plus-separated* list of keys<br>`isPartOf;parentOrg;provides` | *(empty)* = *all* | Limit the **edge types** that are fetched from LINDAS. Keys map to properties as follows:<br>`isPartOf` → `dcterms:isPartOf`<br>`wasDerivedFrom` → `prov:wasDerivedFrom`<br>`parentOrg` → `schema:parentOrganization`<br>`operates` → `systemmap:operates`<br>`owns` → `systemmap:owns`<br>`contains` → `systemmap:contains`<br>`usesMasterData` → `systemmap:usesMasterData`<br>`memberOf` → `schema:memberOf`<br>`provides` → `service:provides` |
-| **`infopanel`**    | `true` \| `false`                                                                    | `true`            | Show or hide the info-panel (top-right).                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **`legend`**       | `true` \| `false`                                                                    | `true`            | Show or hide the legend (bottom-left).                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **`subgraph`**     | Select a subgraph by its IRI slug (only `systemmap` base URL is allowed).            |                   | This parameter sets a filter, only nodes have a connection via `dct:isPartOf` to the subgraph collection are shown. The page title is set to the subgraph title as well. Example: `?subgraph=Si8UnIQkj02jgbLE` |
 
-*Only systems and their data flows, French UI:*
+## Some examples
+
+Only systems and their data flows, French UI:
 
 ```
 …/index.html?lang=fr&organization=false
 ```
 
-*Everything in German, but show **only** “is part of”, “parent organisation” and “provides” edges:*
+Everything in German, but show **only** “is part of”, “parent organisation” and “provides” edges:
 
 ```
 …/index.html?lang=de&predicates=isPartOf;parentOrg;provides
@@ -55,6 +56,12 @@ Add or change the parameters below to filter what you see or to switch language.
 
 If the `predicates` parameter is omitted (or all keys are invalid) the
 visualisation falls back to **all** edge types listed above.
+
+Subgraph filtering:
+
+```
+.../index.html?lang=de&subgraph=Si8UnIQkj02jgbLE
+```
 
 # 🔎 Examples of SPARQL queries from LINDAS
 

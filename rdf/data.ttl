@@ -1,5 +1,6 @@
 @prefix LwG: <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -12,6 +13,55 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
+
+systemmap:Si8UnIQkj02jgbLEb a dcmitype:Collection ;
+    rdfs:label "digiFLUX Systemarchitektur"@de,
+        "digiFLUX System Architecture"@en,
+        "Architecture du système digiFLUX"@fr,
+        "Architettura del sistema digiFLUX"@it ;
+    systemmap:containsNodes systemmap:S0hwJxy2kXNPFbl4C,
+        systemmap:S2Q2s27pTp6oRYHmf,
+        systemmap:S2QF8BOhJczC0PGhe,
+        systemmap:S3jZwzvmFKsXRWiI,
+        systemmap:S6lhRFiEflanK2rcl,
+        systemmap:S8WjMkerPw98ZkWA7,
+        systemmap:SAgmZXUKqNKTf35Fv,
+        systemmap:SCkzllAJGWHIEermB,
+        systemmap:SENtOaRGg22EqHWXq,
+        systemmap:SFMUSGNRQVqCKBNHQ,
+        systemmap:SGayLcAMcywbigd3M,
+        systemmap:SHEaRYIgvZ3xrDLo,
+        systemmap:SHcRaVohogZJifUH4,
+        systemmap:SHyBeGX0LsQwjJ6Z,
+        systemmap:SIK56WC1if6riKNpM,
+        systemmap:SMBGW7qHXQfR1VB9W,
+        systemmap:SMjqlEoVCR9wpTyN1,
+        systemmap:SNbhMvt3Btta1U1d6,
+        systemmap:SOl0OAWrb7M910fp8,
+        systemmap:SOqI5Nd7eaHDXIhDG,
+        systemmap:SPWOFHR512FuAc25b,
+        systemmap:SWrEh3riVEhEddyRr,
+        systemmap:SYYaTBjwIUU2yNIUN,
+        systemmap:SZ9LRAuSt2EOvBpqY,
+        systemmap:SZBHsREMx369FArg,
+        systemmap:SakCt52w8AKrsSXi,
+        systemmap:SeUFazO70bpqCYJ5,
+        systemmap:SjCVTMrYaOTygNcqF,
+        systemmap:SjhTrVt8CB9QFq0Yn,
+        systemmap:SkvXyKniPPKwKNRqo,
+        systemmap:Sl5KyePu7JtGiE3V,
+        systemmap:SldiTYOuXQmoC3SV,
+        systemmap:SlfheulBjlQDwuaIM,
+        systemmap:SmWBzvRi0YEZiWMOd,
+        systemmap:SmWEQ8lVlDS9ZwPkY,
+        systemmap:SpR2aDraNmiUXz55J,
+        systemmap:SqGp9THVAsRw71ZCg,
+        systemmap:StBV0qWzKXosN98bB,
+        systemmap:SvDlxaJ5YMkuZGH6k,
+        systemmap:SwlgSr7ukziL6iHsP,
+        systemmap:Sy4WeMDNoah4TkAYX,
+        systemmap:SyfZhzeyT1CqJU0BP,
+        systemmap:SyhthSmTCgM19Wysy .
 
 systemmap:S0hwJxy2kXNPFbl4C a service:Service ;
     rdfs:label "Lineare Korrektur (LK)-Service"@de ;

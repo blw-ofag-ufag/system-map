@@ -85,16 +85,23 @@ const APP_CONFIG = {
 
     // Prefixes for shortening IRIs into CURIEs
     PREFIXES: {
-        "http://www.w3.org/2000/01/rdf-schema#": "rdfs",
-        "http://www.w3.org/2002/07/owl#": "owl",
-        "https://agriculture.ld.admin.ch/system-map/": "systemmap",
-        "http://schema.org/": "schema",
+        "https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#": "LwG",
         "http://www.w3.org/ns/dcat#": "dcat",
-        "http://www.w3.org/ns/prov#": "prov",
-        "http://purl.org/ontology/service#": "service",
         "http://purl.org/dc/terms/": "dcterms",
+        "http://purl.org/dc/dcmitype/": "dcmitype",
+        "http://www.w3.org/2002/07/owl#": "owl",
+        "http://www.w3.org/ns/prov#": "prov",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs",
+        "http://schema.org/": "schema",
+        "http://purl.org/ontology/service#": "service",
+        "https://register.ld.admin.ch/staatskalender/organization/": "staatskalender",
+        "https://agriculture.ld.admin.ch/system-map/": "systemmap",
+        "https://register.ld.admin.ch/termdat/": "termdat",
+        "http://rdfs.org/ns/void#": "void",
+        "http://www.w3.org/2004/02/skos/core#": "skos",
+        "http://www.w3.org/2001/XMLSchema#": "xsd",
         "https://register.ld.admin.ch/zefix/company/": "zefix"
-    },
+    },    
 
     // Maps keys used in URL parameters to their corresponding predicate IRIs
     PREDICATE_MAP: {

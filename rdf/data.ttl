@@ -1,5 +1,6 @@
 @prefix LwG: <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -12,6 +13,28 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
+
+systemmap:Si8UnIQkj02jgbLEb a dcmitype:Collection ;
+    rdfs:label "MARS III Systemarchitektur"@de ;
+    systemmap:containsNodes systemmap:S1AkhvKmzBiJFCTc,
+        systemmap:S4ZuIO9s81WMS2bKB,
+        systemmap:SKoClBiquflDf7yi6,
+        systemmap:SLJMFAZ6GNdFvfb2L,
+        systemmap:SSyCUWt1u4bzJ4liA,
+        systemmap:SXIIUKFjUBDaaTzh6,
+        systemmap:SYfFBbBlmgKk9vmPg,
+        systemmap:SYqYq3UTUnZHmyFRD,
+        systemmap:SbKCxLGicJtMGTQiD,
+        systemmap:Sc6kZqxTyS0gFGCY,
+        systemmap:ShZO092di7cBnOm7F,
+        systemmap:SisV9d3pviAFO8vTK,
+        systemmap:SkcU0PDb6fucIKa9k,
+        systemmap:SpT5dE2PIEfeWKafV,
+        systemmap:Su9RTb49BcaqL4EcQ,
+        systemmap:SvAr93iMz2fj4HZBK,
+        systemmap:SxvsanBKE0ZN315DU,
+        systemmap:SzJ7aOICsI2KD9iOt,
+        zefix:1373020 .
 
 systemmap:S0hwJxy2kXNPFbl4C a service:Service ;
     rdfs:label "Lineare Korrektur (LK)-Service"@de ;

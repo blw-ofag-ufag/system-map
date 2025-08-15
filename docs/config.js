@@ -20,7 +20,7 @@ const APP_CONFIG = {
         en: {
             appTitle: "FOAG System Map",
             settings: "Settings",
-            minDegree: "Minimum Node Connections",
+            hidePercentLabel: "Hide least important nodes (%)",
             visibleNodeClasses: "Visible Node Classes",
             visibleRelationshipTypes: "Visible Relationship Types",
             cancel: "Cancel",
@@ -36,7 +36,7 @@ const APP_CONFIG = {
         de: {
             appTitle: "Systemkarte BLW",
             settings: "Einstellungen",
-            minDegree: "Minimale Anzahl Verbindungen",
+            hidePercentLabel: "Unwichtigste Knoten ausblenden (%)",
             visibleNodeClasses: "Sichtbare Knotentypen",
             visibleRelationshipTypes: "Sichtbare Beziehungstypen",
             cancel: "Abbrechen",
@@ -52,7 +52,7 @@ const APP_CONFIG = {
         fr: {
             appTitle: "Carte des systèmes OFAG",
             settings: "Paramètres",
-            minDegree: "Nombre de connexions de nœuds minimum",
+            hidePercentLabel: "Masquer les nœuds les moins importants (%)",
             visibleNodeClasses: "Classes de nœuds visibles",
             visibleRelationshipTypes: "Types de relations visibles",
             cancel: "Annuler",
@@ -68,7 +68,7 @@ const APP_CONFIG = {
         it: {
             appTitle: "Mappa dei sistemi UFAG",
             settings: "Impostazioni",
-            minDegree: "Numero minimo di connessioni dei nodi",
+            hidePercentLabel: "Nascondi i nodi meno importanti (%)",
             visibleNodeClasses: "Classi di nodi visibili",
             visibleRelationshipTypes: "Tipi di relazioni visibili",
             cancel: "Annulla",

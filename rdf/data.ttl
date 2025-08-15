@@ -372,8 +372,15 @@ zefix:1124097 a schema:Organization ;
 zefix:1138887 a schema:Organization ;
     rdfs:label "Coop Genossenschaft"@de .
 
+zefix:1149573 a schema:Organization ;
+    rdfs:label "Migros Industrie AG"@de ;
+    systemmap:owns zefix:130459 .
+
 zefix:119283 a schema:Organization ;
-    rdfs:label "Migros-Genossenschafts-Bund"@de .
+    rdfs:label "Migros-Genossenschafts-Bund"@de,
+        "Fédération des coopératives Migros"@fr ;
+    systemmap:abbreviation "MGB"@de ;
+    systemmap:owns zefix:1149573 .
 
 zefix:121 a schema:Organization ;
     rdfs:label "Genossenschaft Milchproduzenten Mittelland"@de .
@@ -381,6 +388,9 @@ zefix:121 a schema:Organization ;
 zefix:1256441 a schema:Organization,
         systemmap:PrivateOrganization ;
     rdfs:label "mooh Genossenschaft"@de .
+
+zefix:1292811 a schema:Organization ;
+    rdfs:label "Naturparkkäserei Diemtigtal AG"@de .
 
 zefix:1469700 a schema:Organization ;
     rdfs:label "digitalswitzerland"@de,
@@ -393,6 +403,20 @@ zefix:230936 a schema:Organization ;
     rdfs:label "Fédération des sociétés fribourgeoises de laiterie"@de ;
     systemmap:abbreviation "FSFL"@fr .
 
+zefix:239872 a schema:Organization ;
+    rdfs:label "Federazione Ticinese Produttori di Latte - Società Cooperativa"@it .
+
+zefix:240631 a schema:Organization ;
+    rdfs:label "Laiteries Réunies Société coopérative"@fr .
+
+zefix:254421 a schema:Organization ;
+    rdfs:label "Centravo Holding AG"@en .
+
+zefix:290876 a schema:Organization ;
+    rdfs:label "GVFI AG"@de,
+        "GVFI Ltd"@en,
+        "GVFI SA"@fr .
+
 zefix:312944 a schema:Organization ;
     rdfs:label "Walliser Milchverband Genossenschaft"@de ;
     systemmap:abbreviation "WMV"@de .
@@ -400,8 +424,20 @@ zefix:312944 a schema:Organization ;
 zefix:319555 a schema:Organization ;
     rdfs:label "MIBA Genossenschaft"@de .
 
+zefix:324994 a schema:Organization ;
+    rdfs:label "Genossenschaft Vereinigte Milchbauern Mitte-Ost"@de .
+
 zefix:350762 a schema:Organization ;
     rdfs:label "Arnold Produkte AG"@de .
+
+zefix:358851 a schema:Organization ;
+    rdfs:label "Schweizer Agrarmedien AG"@de .
+
+zefix:38909 a schema:Organization ;
+    rdfs:label "Coop-Gruppe Genossenschaft"@de .
+
+zefix:404097 a schema:Organization ;
+    rdfs:label "Berner Bauern Verband"@de .
 
 zefix:429308 a schema:Organization ;
     rdfs:label "Schweizer Bauernverband"@de,
@@ -410,11 +446,34 @@ zefix:429308 a schema:Organization ;
     schema:abbreviation "SBV"@de,
         "USP"@fr,
         "USC"@it ;
-    schema:member zefix:328631 .
+    schema:member zefix:165954,
+        zefix:166248,
+        zefix:226184,
+        zefix:248029,
+        zefix:328631,
+        zefix:404097,
+        zefix:427343,
+        zefix:448334,
+        zefix:540574,
+        zefix:793667 .
+
+zefix:455252 a schema:Organization,
+        systemmap:PrivateOrganization ;
+    rdfs:label "Bell Schweiz AG"@de ;
+    dcat:landingPage <https://www.bell.ch/> ;
+    systemmap:ownedBy zefix:38909 .
 
 zefix:459488 a schema:Organization ;
     rdfs:label "Schweizer Milchproduzenten SMP Genossenschaft"@de ;
-    systemmap:abbreviation "SMP"@de .
+    schema:member zefix:1292811,
+        zefix:230936,
+        zefix:239872,
+        zefix:240631,
+        zefix:312944,
+        zefix:319555,
+        zefix:324994 ;
+    systemmap:abbreviation "SMP"@de ;
+    systemmap:owns zefix:358851 .
 
 zefix:469727 a schema:Organization,
         systemmap:PrivateOrganization ;
@@ -422,11 +481,25 @@ zefix:469727 a schema:Organization,
         "Proviande Cooperative"@en,
         "Proviande Société Coopérative"@fr,
         "Proviande Società Cooperativa"@it ;
-    schema:member zefix:793667 ;
+    schema:member zefix:119283,
+        zefix:130459,
+        zefix:254421,
+        zefix:290876,
+        zefix:38909,
+        zefix:429308,
+        zefix:455252,
+        zefix:459488,
+        zefix:7011,
+        zefix:793667 ;
     dcat:landingPage <https://www.proviande.ch/> .
 
+zefix:540574 a schema:Organization ;
+    rdfs:label "Zürcher Bauernverband"@de ;
+    systemmap:abbreviation "ZBV"@de .
+
 zefix:793667 a schema:Organization ;
-    rdfs:label "Schweizerischer Schweinezucht- und Schweineproduzentenverband Suisseporcs"@de .
+    rdfs:label "Schweizerischer Schweinezucht- und Schweineproduzentenverband Suisseporcs"@de ;
+    systemmap:abbreviation "Suisseporcs"@de .
 
 zefix:871039 a schema:Organization ;
     rdfs:label "aaremilch AG"@de .
@@ -2913,8 +2986,7 @@ systemmap:SRT6X0n1ML8vX3uV a dcat:Dataset ;
     prov:wasDerivedFrom systemmap:S2XkdeKmzFiJFXWc .
 
 systemmap:SRT6X0n1ML8vwHUW a dcat:Dataset ;
-    rdfs:label "Linked Open Data"@de,
-        "Linked Open Data"@en ;
+    rdfs:label "Linked Open Data"@en ;
     systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd .
 
 systemmap:SSyCUWt1u4bzJ4liA a dcat:Dataset ;
@@ -4651,10 +4723,6 @@ systemmap:SrG5yvnwax87iuQw8 a systemmap:PrivateOrganization ;
 systemmap:SzqZmzij2bxSZEIL9 a systemmap:PrivateOrganization ;
     rdfs:label "CSB-System SE"@de ;
     dcat:landingPage <https://www.csb.com/> .
-
-zefix:1008597 a systemmap:PrivateOrganization ;
-    rdfs:label "Bell (Schweiz) AG"@de ;
-    dcat:landingPage <https://www.bell.ch/> .
 
 zefix:1013423 a systemmap:PrivateOrganization ;
     rdfs:label "Datapass.ch AG"@de ;

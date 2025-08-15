@@ -15,7 +15,7 @@
 # 1.1. Multilingual Labels for Key Entities
 #    - For every instance of:
 #      schema:Organization, schema:SoftwareApplication, dcat:Dataset
-#      => Must have at least one rdfs:label @de
+#      => Must have at least one rdfs:label in de, fr, it, or en
 # ------------------------------------------------------------------------------
 
 :MultilingualLabelShape
@@ -25,19 +25,20 @@
         schema:SoftwareApplication,
         dcat:Dataset ;
 
-    # Must have at least one label in German
+    # Must have at least one label in German, French, Italian, or English
     sh:property [
         sh:path rdfs:label ;
 
         # We use a qualifiedValueShape to say: among all rdfs:label values,
-        # at least one must match "languageIn ('de')".
+        # at least one must match "languageIn ('de', 'fr', 'it', 'en')".
         sh:qualifiedValueShape [
             sh:datatype rdf:langString ;
-            sh:languageIn ("de") ;
+            sh:languageIn ("de" "fr" "it" "en") ;
         ] ;
         sh:qualifiedMinCount 1 ;
 
-        sh:message "A label in German is required (rdfs:label @de)."
+        # Updated the message to reflect the new requirement
+        sh:message "A label in German, French, Italian, or English is required (rdfs:label @de, @fr, @it, or @en)."
     ] .
 
 # ------------------------------------------------------------------------------
@@ -78,7 +79,10 @@
             systemmap:operatedBy
         ) ;
         sh:minCount 1 ;
-        sh:message "Every software application must be operated by at least one organization -- either directly (systemmap:operatedBy on itself) or via the system it is part of." ;
+        sh:message """
+        Every software application must be operated by at least one organization --
+        either directly (systemmap:operatedBy on itself) or via the system it is part of.
+        """ ;
     ] .
 
 # ------------------------------------------------------------------------------
@@ -100,9 +104,9 @@
         sh:class schema:SoftwareApplication ;
         sh:minCount 1 ;
         sh:message """
-Every piece of information (dcat:Dataset) must be contained in at least one IT system—
-either directly (systemmap:containedIn on itself) or via a dataset it is part of.
-""" ;
+        Every piece of information (dcat:Dataset) must be contained in at least one IT system—
+        either directly (systemmap:containedIn on itself) or via a dataset it is part of.
+        """ ;
     ] .
 
 # ------------------------------------------------------------------------------
@@ -128,12 +132,6 @@ either directly (systemmap:containedIn on itself) or via a dataset it is part of
         sh:uniqueLang true ;
         sh:message "Each node must have at most one rdfs:comment per language."
     ] .
-
-
-
-################################################################################
-#                          Range and Domain checks                             #
-################################################################################
 
 # ------------------------------------------------------------------------------
 # 2.1. Domain and Range check for schema:member

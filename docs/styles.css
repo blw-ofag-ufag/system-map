@@ -68,6 +68,7 @@ html, body {
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     pointer-events: none;
+    z-index: 100; /* Ensure info panel is above language selector */
 }
 .info-panel.hidden {
     display: none;
@@ -89,6 +90,21 @@ html, body {
     font-size: 36px;
     z-index: 100;
 }
+/* Language Selector Styles */
+.language-selector-container {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 99; /* Below the info panel */
+}
+#languageSelector {
+    padding: 5px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--color-grey);
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    background: var(--color-background);
+}
 /* SETTINGS POP-UP STYLES */
 #settings-overlay {
     position: fixed;
@@ -109,7 +125,7 @@ html, body {
     background: var(--color-background);
     padding: 20px 30px;
     border-radius: 8px;
-    width: 1000px;
+    width: 1100px;
     max-width: 90vw;
     max-height: 85vh;
     display: flex;
@@ -141,30 +157,13 @@ html, body {
     padding-right: 15px;
 }
 .settings-column:first-child {
-    flex: 1;
+    flex: 2;
 }
 .settings-column:last-child {
-    flex: 1;
+    flex: 3;
 }
 .settings-section {
     margin-bottom: 15px;
-}
-.settings-item {
-    display: flex;
-    align-items: center;
-    padding: 8px 0;
-    font-size: 14px;
-}
-.settings-item label {
-    flex-grow: 1;
-}
-.settings-item select {
-    padding: 5px;
-    border-radius: 4px;
-}
-.settings-item input {
-    margin-left: 15px;
-    transform: scale(1.2);
 }
 .settings-list-item {
     display: flex;
@@ -172,29 +171,26 @@ html, body {
     margin-bottom: 12px;
     font-size: 14px;
 }
-.settings-list-swatch {
-    width: 24px;
-    height: 12px;
-    border: 1px solid var(--color-foreground);
-    border-radius: 3px;
-    margin-right: 12px;
-    flex-shrink: 0;
-    margin-top: 5px;
-}
 .settings-list-item-content {
     flex-grow: 1;
 }
 .settings-list-item-content label {
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.3rem;
+    width: 100%;
     margin-bottom: 4px;
+    cursor: pointer;
 }
 .settings-list-item-content input {
-    margin-right: 8px;
+    margin-right: 0;
     margin-left: 0;
+    flex-shrink: 0;
 }
 .settings-list-item-content strong {
-    margin-right: auto;
+    margin-right: 0; /* Remove right auto margin to allow left alignment */
+    white-space: nowrap;
 }
 .settings-list-item-comment {
     font-size: 9pt;
@@ -206,6 +202,7 @@ html, body {
     color: var(--color-font-dimmed);
     padding: 2px 4px;
     border-radius: 3px;
+    flex-shrink: 0; /* Prevent from shrinking */
 }
 .settings-actions {
     display: flex;
@@ -306,4 +303,91 @@ h1, h2, h3, h4, h5, h6 {
 }
 #infoPanel {
     word-wrap: break-word;
+}
+.edge-title-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 8px;
+}
+.edge-title-container h4 {
+    margin: 0 !important;
+}
+
+.edge-diagram {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Reduced gap */
+    flex-shrink: 0;
+}
+.edge-diagram-icon {
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    border-width: 1px;
+    border-style: solid;
+    white-space: nowrap;
+}
+.settings-node-icon {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    border-width: 1px;
+    border-style: solid;
+    white-space: nowrap;
+    line-height: 1.5;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* New Slider Styles */
+.settings-slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 0;
+}
+
+.settings-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 60%;
+    height: 3px;
+    background: var(--color-grey);
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.9;
+    transition: opacity .2s;
+}
+
+.settings-slider:hover {
+    opacity: 1;
+}
+
+.settings-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--color-font-dimmed);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid var(--color-background);
+}
+
+.settings-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--color-font-normal);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid var(--color-background);
+}
+
+#min-degree-value {
+    font-weight: 600;
+    font-size: 16px;
+    min-width: 20px; /* to avoid layout shift */
+    text-align: center;
 }

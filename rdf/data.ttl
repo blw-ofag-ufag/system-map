@@ -44,6 +44,55 @@ systemmap:SaAA0IQkj02jgbLEb a dcmitype:Collection ;
         systemmap:SxvsanBKE0ZN315DU,
         systemmap:SzJ7aOICsI2KD9iOt .
 
+systemmap:Si8UnIQkj02jgbLEb a dcmitype:Collection ;
+    rdfs:label "digiFLUX Systemarchitektur"@de,
+        "digiFLUX System Architecture"@en,
+        "Architecture du système digiFLUX"@fr,
+        "Architettura del sistema digiFLUX"@it ;
+    systemmap:containsNodes systemmap:S0hwJxy2kXNPFbl4C,
+        systemmap:S2Q2s27pTp6oRYHmf,
+        systemmap:S2QF8BOhJczC0PGhe,
+        systemmap:S3jZwzvmFKsXRWiI,
+        systemmap:S6lhRFiEflanK2rcl,
+        systemmap:S8WjMkerPw98ZkWA7,
+        systemmap:SAgmZXUKqNKTf35Fv,
+        systemmap:SCkzllAJGWHIEermB,
+        systemmap:SENtOaRGg22EqHWXq,
+        systemmap:SFMUSGNRQVqCKBNHQ,
+        systemmap:SGayLcAMcywbigd3M,
+        systemmap:SHEaRYIgvZ3xrDLo,
+        systemmap:SHcRaVohogZJifUH4,
+        systemmap:SHyBeGX0LsQwjJ6Z,
+        systemmap:SIK56WC1if6riKNpM,
+        systemmap:SMBGW7qHXQfR1VB9W,
+        systemmap:SMjqlEoVCR9wpTyN1,
+        systemmap:SNbhMvt3Btta1U1d6,
+        systemmap:SOl0OAWrb7M910fp8,
+        systemmap:SOqI5Nd7eaHDXIhDG,
+        systemmap:SPWOFHR512FuAc25b,
+        systemmap:SWrEh3riVEhEddyRr,
+        systemmap:SYYaTBjwIUU2yNIUN,
+        systemmap:SZ9LRAuSt2EOvBpqY,
+        systemmap:SZBHsREMx369FArg,
+        systemmap:SakCt52w8AKrsSXi,
+        systemmap:SeUFazO70bpqCYJ5,
+        systemmap:SjCVTMrYaOTygNcqF,
+        systemmap:SjhTrVt8CB9QFq0Yn,
+        systemmap:SkvXyKniPPKwKNRqo,
+        systemmap:Sl5KyePu7JtGiE3V,
+        systemmap:SldiTYOuXQmoC3SV,
+        systemmap:SlfheulBjlQDwuaIM,
+        systemmap:SmWBzvRi0YEZiWMOd,
+        systemmap:SmWEQ8lVlDS9ZwPkY,
+        systemmap:SpR2aDraNmiUXz55J,
+        systemmap:SqGp9THVAsRw71ZCg,
+        systemmap:StBV0qWzKXosN98bB,
+        systemmap:SvDlxaJ5YMkuZGH6k,
+        systemmap:SwlgSr7ukziL6iHsP,
+        systemmap:Sy4WeMDNoah4TkAYX,
+        systemmap:SyfZhzeyT1CqJU0BP,
+        systemmap:SyhthSmTCgM19Wysy .
+
 systemmap:S0hwJxy2kXNPFbl4C a service:Service ;
     rdfs:label "Lineare Korrektur (LK)-Service"@de ;
     dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr ;
@@ -105,6 +154,25 @@ systemmap:StBV0qWzKXosN98bB a service:Service ;
     rdfs:comment """
         Dieser API-Service erlaubt es Unternehmen, neue Produkte über eine Schnittstelle an den Produktekatalog zu senden und bestehende Produkte abzufragen.
         """@de .
+
+systemmap:SyDlq7oQ0czCgyv61 a service:Service ;
+    rdfs:label "Berechnung der GVE"@de ;
+    service:providedBy systemmap:SaOtqyAB5qm1luNuX ;
+    rdfs:comment """
+        Die Grossvieheinheit (GVE) ist eine Recheneinheit, bei denen Tiere unterschiedlicher Arten (Rinder, Schafe, Ziegen, Pferde/Esel) und Alter zu einer einzigen Kennzahl zusammengefasst werden.
+        Diese und weitere Kennzahlen, wie die Normalstösse (NST), werden im Vollzug der landwirtschaftlichen Gesetzgebung verwendet.
+        Die GVE dient als Grundlage zur Berechnung verschiedener Beitragszahlungen, die in der Direktzahlungsverordnung geregelt sind.
+        """@de .
+
+systemmap:SyYykF7sxZpwuQdLO a service:Service ;
+    rdfs:label "Berechnung der Direktzahlungen der Landwirtschaftsbetriebe"@de ;
+    service:consumedby systemmap:SMjqlEoVCR9wpTyN1,
+        systemmap:SPWOFHR512FuAc25b,
+        systemmap:SZ9LRAuSt2EOvBpqY,
+        systemmap:SmWEQ8lVlDS9ZwPkY,
+        systemmap:SpR2aDraNmiUXz55J,
+        systemmap:SvDlxaJ5YMkuZGH6k ;
+    service:providedBy systemmap:SF3QXRhtAuQ7fcc0V .
 
 systemmap:metadata a void:Dataset ;
     rdfs:label "DigiAgriFoodCH Systemlandkarte"@de,
@@ -285,6 +353,87 @@ systemmap:SGayLcAMcywbigd3M a schema:Organization ;
 systemmap:ShM5kJNFhO8vOAEdK a schema:Organization ;
     rdfs:label "Europäische Kommission"@de,
         "European Commission"@en .
+
+zefix:1124097 a schema:Organization ;
+    rdfs:label "Branchenorganisation Milch (BO Milch)"@de,
+        "Interprofession du lait (IP lait)"@fr ;
+    schema:member zefix:121,
+        zefix:1256441,
+        zefix:126288,
+        zefix:230936,
+        zefix:312944,
+        zefix:319555,
+        zefix:350762,
+        zefix:459488,
+        zefix:871039 ;
+    systemmap:abbreviation "BO Milch"@de,
+        "IP lait"@fr .
+
+zefix:1138887 a schema:Organization ;
+    rdfs:label "Coop Genossenschaft"@de .
+
+zefix:119283 a schema:Organization ;
+    rdfs:label "Migros-Genossenschafts-Bund"@de .
+
+zefix:121 a schema:Organization ;
+    rdfs:label "Genossenschaft Milchproduzenten Mittelland"@de .
+
+zefix:1256441 a schema:Organization,
+        systemmap:PrivateOrganization ;
+    rdfs:label "mooh Genossenschaft"@de .
+
+zefix:1469700 a schema:Organization ;
+    rdfs:label "digitalswitzerland"@de,
+        "digitalswitzerland"@en ;
+    schema:member zefix:1138887,
+        zefix:119283,
+        zefix:328631 .
+
+zefix:230936 a schema:Organization ;
+    rdfs:label "Fédération des sociétés fribourgeoises de laiterie"@de ;
+    systemmap:abbreviation "FSFL"@fr .
+
+zefix:312944 a schema:Organization ;
+    rdfs:label "Walliser Milchverband Genossenschaft"@de ;
+    systemmap:abbreviation "WMV"@de .
+
+zefix:319555 a schema:Organization ;
+    rdfs:label "MIBA Genossenschaft"@de .
+
+zefix:350762 a schema:Organization ;
+    rdfs:label "Arnold Produkte AG"@de .
+
+zefix:429308 a schema:Organization ;
+    rdfs:label "Schweizer Bauernverband"@de,
+        "Union Suisse des Paysans"@fr,
+        "Unione Svizzera dei Contadini"@it ;
+    schema:abbreviation "SBV"@de,
+        "USP"@fr,
+        "USC"@it ;
+    schema:member zefix:328631 .
+
+zefix:459488 a schema:Organization ;
+    rdfs:label "Schweizer Milchproduzenten SMP Genossenschaft"@de ;
+    systemmap:abbreviation "SMP"@de .
+
+zefix:469727 a schema:Organization,
+        systemmap:PrivateOrganization ;
+    rdfs:label "Proviande Genossenschaft"@de,
+        "Proviande Cooperative"@en,
+        "Proviande Société Coopérative"@fr,
+        "Proviande Società Cooperativa"@it ;
+    schema:member zefix:793667 ;
+    dcat:landingPage <https://www.proviande.ch/> .
+
+zefix:793667 a schema:Organization ;
+    rdfs:label "Schweizerischer Schweinezucht- und Schweineproduzentenverband Suisseporcs"@de .
+
+zefix:871039 a schema:Organization ;
+    rdfs:label "aaremilch AG"@de .
+
+zefix:126288 a schema:PrivateOrganization ;
+    rdfs:label "Nestlé AG"@de,
+        "Nestlé S.A."@fr .
 
 systemmap:S0hwJxyshSNPXbP34 a schema:SoftwareApplication,
         systemmap:FMIS ;
@@ -885,6 +1034,16 @@ systemmap:SEcvzMJMYkUtSnTSB a schema:SoftwareApplication ;
         Moblin è un programma efficiente e facile da usare per i macelli. Copre tutti gli aspetti della macellazione, dalla ricezione degli animali, macellazione, pesatura, stampa di etichette e documenti di macellazione fino all’esportazione in contabilità. Il software è progettato per computer industriali touchscreen ed è stato sviluppato in collaborazione con un macello per un utilizzo pratico.
         """@it ;
     systemmap:operatedBy zefix:1099793 .
+
+systemmap:SF3QXRhtAuQ7fcc0V a schema:SoftwareApplication ;
+    rdfs:label "Beitragsberechnungsservice"@de ;
+    rdfs:comment """
+        Der Beitragsberechnungsservice (BBS) dient zur Berechnung der Direktzahlungen der Landwirtschaftsbetriebe.
+        Mit dem WEB-Service können die Kantonssysteme und AGIS die Direktzahlungen, Einzelkulturbeiträge und Sömmerungsbeiträge
+        sowie die Getreidezulage und Beiträge für In-situ-Erhaltungsflächen je Betrieb berechnen.
+        """@de ;
+    systemmap:abbreviation "BBS"@de ;
+    systemmap:operatedBy systemmap:ScoeXHl4TgJbke1Yf .
 
 systemmap:SGHEvT8M3jGEd8KdJ a schema:SoftwareApplication ;
     rdfs:label "SmartBeef®"@de,
@@ -1518,6 +1677,19 @@ systemmap:SZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
         systemmap:SUqub30lwOqlTtDN2,
         systemmap:SVpDMEiTfIVQsNzT8,
         systemmap:SoVAiCrMPYG2LJxsA .
+
+systemmap:SaOtqyAB5qm1luNuX a schema:SoftwareApplication ;
+    rdfs:label "GVE-Rechner"@de,
+        "Calculateur UGB"@fr,
+        "Calcolatore UBG"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Der GVE-Rechner berechnet die GVE pro Betrieb, welche den kantonalen Landwirtschaftsämtern als Grundlage zur Berechnung verschiedener Beitragszahlungen dient.
+        Die Anwendung bietet nicht nur Funktionen für Vollzugsbehörden, sondern auch für die Bewirtschaftenden von landwirtschaftlichen Betrieben mit Nutztierhaltung.
+        Sie können sich über ihre betrieblichen Kennzahlen informieren und ihren Anspruch auf Direktzahlungen abschätzen.
+        Die Berechnungsgrundlagen für vergangene Auszahlungen sind im GVE-Rechner archiviert und auch nachträglich einsehbar.
+        """@de ;
+    systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS .
 
 systemmap:SbQMDyJD8k62AfApL a schema:SoftwareApplication ;
     rdfs:label "SAIMo"@de,
@@ -2593,7 +2765,8 @@ systemmap:SAUWzyCpeGZ6vVil a dcat:Dataset ;
         Questi dati garantiscono che tutti i movimenti e gli eventi degli animali possano essere correttamente attribuiti a un detentore, essenziale per la tracciabilità e il rispetto dei requisiti legali.
         """@it ;
     prov:wasDerivedFrom systemmap:SvNriWslaOR5xkdw ;
-    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
+    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ ;
+    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
 systemmap:SBba3t3SyxjgPiHhX a dcat:Dataset ;
     rdfs:label "Daten der Geburtsmeldungen"@de ;
@@ -4351,38 +4524,7 @@ systemmap:SDetpcQhSMo4IAeAb a systemmap:PrivateOrganization ;
         La piattaforma integra varie funzioni agronomiche e amministrative e consente una gestione efficiente delle risorse.
         Barto AG collabora con partner del settore agricolo per fornire soluzioni digitali innovative.
         """@it ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
-
-systemmap:SFAcWHo27bji7sVts a systemmap:PrivateOrganization ;
-    rdfs:label "Fenaco Genossenschaft"@de,
-        "Fenaco Cooperative"@en,
-        "Coopérative Fenaco"@fr,
-        "Cooperativa Fenaco"@it ;
-    rdfs:comment """
-        Die Fenaco Genossenschaft ist ein schweizerisches Agrarunternehmen, das die Landwirtinnen und Landwirte dabei unterstützt, ihre Betriebe wirtschaftlich erfolgreich zu führen.
-        Sie ist in den Bereichen Agrarhandel, Lebensmittelproduktion, Detailhandel und Energie tätig.
-        Fenaco ist Eigentümerin von Marken wie Landi, Volg, Agrola und diverse Lebensmittelproduzenten.
-        Die Genossenschaft gehört Schweizer Landwirten und hat ihren Hauptsitz in Bern.
-        """@de,
-        """
-        The Fenaco Cooperative is a Swiss agricultural company that supports farmers in running their businesses successfully.
-        It operates in the areas of agricultural trade, food production, retail, and energy.
-        Fenaco owns brands such as Landi, Volg, Agrola, and various food producers.
-        The cooperative is owned by Swiss farmers and is headquartered in Bern.
-        """@en,
-        """
-        La coopérative Fenaco est une entreprise agricole suisse qui aide les agriculteurs à gérer leurs exploitations avec succès.
-        Elle est active dans les domaines du commerce agricole, de la production alimentaire, du commerce de détail et de l'énergie.
-        Fenaco possède des marques telles que Landi, Volg, Agrola et divers producteurs alimentaires.
-        La coopérative appartient aux agriculteurs suisses et son siège est à Berne.
-        """@fr,
-        """
-        La cooperativa Fenaco è un'azienda agricola svizzera che supporta gli agricoltori nella gestione economica delle loro aziende.
-        Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia.
-        Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari.
-        La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna.
-        """@it ;
-    owl:sameAs zefix:328631 .
+    systemmap:ownedBy zefix:328631 .
 
 systemmap:SGWW0nzBJjBsx2QTr a systemmap:PrivateOrganization ;
     rdfs:label "Farmable"@de .
@@ -4460,7 +4602,7 @@ systemmap:SQ3N7dTc23t2wzXr2 a systemmap:PrivateOrganization ;
 
 systemmap:SWdllcNbPnjdcm7om a systemmap:PrivateOrganization ;
     rdfs:label "Agroline"@de ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+    systemmap:ownedBy zefix:328631 .
 
 systemmap:SYfFBbBlmgKk9vmPg a systemmap:PrivateOrganization ;
     rdfs:label "NielsenIQ"@de ;
@@ -4547,9 +4689,6 @@ zefix:1226256 a systemmap:PrivateOrganization ;
 zefix:1249135 a systemmap:PrivateOrganization ;
     rdfs:label "Verein Kometian"@de ;
     dcat:landingPage <https://www.kometian.ch> .
-
-zefix:1256441 a systemmap:PrivateOrganization ;
-    rdfs:label "mooh Genossenschaft"@de .
 
 zefix:130459 a systemmap:PrivateOrganization ;
     rdfs:label "Micarna SA"@de ;
@@ -4638,9 +4777,40 @@ zefix:278958 a systemmap:PrivateOrganization ;
 zefix:304729 a systemmap:PrivateOrganization ;
     rdfs:label "DeLaval AG"@de .
 
+zefix:328631 a systemmap:PrivateOrganization ;
+    rdfs:label "Fenaco Genossenschaft"@de,
+        "Fenaco Cooperative"@en,
+        "Coopérative Fenaco"@fr,
+        "Cooperativa Fenaco"@it ;
+    rdfs:comment """
+        Die Fenaco Genossenschaft ist ein schweizerisches Agrarunternehmen, das die Landwirtinnen und Landwirte dabei unterstützt, ihre Betriebe wirtschaftlich erfolgreich zu führen.
+        Sie ist in den Bereichen Agrarhandel, Lebensmittelproduktion, Detailhandel und Energie tätig.
+        Fenaco ist Eigentümerin von Marken wie Landi, Volg, Agrola und diverse Lebensmittelproduzenten.
+        Die Genossenschaft gehört Schweizer Landwirten und hat ihren Hauptsitz in Bern.
+        """@de,
+        """
+        The Fenaco Cooperative is a Swiss agricultural company that supports farmers in running their businesses successfully.
+        It operates in the areas of agricultural trade, food production, retail, and energy.
+        Fenaco owns brands such as Landi, Volg, Agrola, and various food producers.
+        The cooperative is owned by Swiss farmers and is headquartered in Bern.
+        """@en,
+        """
+        La coopérative Fenaco est une entreprise agricole suisse qui aide les agriculteurs à gérer leurs exploitations avec succès.
+        Elle est active dans les domaines du commerce agricole, de la production alimentaire, du commerce de détail et de l'énergie.
+        Fenaco possède des marques telles que Landi, Volg, Agrola et divers producteurs alimentaires.
+        La coopérative appartient aux agriculteurs suisses et son siège est à Berne.
+        """@fr,
+        """
+        La cooperativa Fenaco è un'azienda agricola svizzera che supporta gli agricoltori nella gestione economica delle loro aziende.
+        Opera nei settori del commercio agricolo, della produzione alimentare, del commercio al dettaglio e dell'energia.
+        Fenaco possiede marchi come Landi, Volg, Agrola e vari produttori alimentari.
+        La cooperativa è di proprietà degli agricoltori svizzeri e ha la sua sede principale a Berna.
+        """@it ;
+    owl:sameAs zefix:328631 .
+
 zefix:330180 a systemmap:PrivateOrganization ;
     rdfs:label "Bison Schweiz AG"@de ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+    systemmap:ownedBy zefix:328631 .
 
 zefix:336983 a systemmap:PrivateOrganization ;
     rdfs:label "CSN AG"@de ;
@@ -4653,7 +4823,7 @@ zefix:367883 a systemmap:PrivateOrganization ;
 zefix:371013 a systemmap:PrivateOrganization ;
     rdfs:label "Ernst Sutter AG"@de ;
     dcat:landingPage <https://www.ernstsutter.ch> ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+    systemmap:ownedBy zefix:328631 .
 
 zefix:414877 a systemmap:PrivateOrganization ;
     rdfs:label "Suisag"@de .
@@ -4671,7 +4841,7 @@ zefix:427343 a systemmap:PrivateOrganization ;
 
 zefix:432768 a systemmap:PrivateOrganization ;
     rdfs:label "TRAVECO Transporte AG"@de ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+    systemmap:ownedBy zefix:328631 .
 
 zefix:443420 a systemmap:PrivateOrganization ;
     rdfs:label "Reichmuth Fleischwaren AG"@de ;
@@ -4683,7 +4853,7 @@ zefix:445706 a systemmap:PrivateOrganization ;
 
 zefix:446080 a systemmap:PrivateOrganization ;
     rdfs:label "frigemo ag"@de ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+    systemmap:ownedBy zefix:328631 .
 
 zefix:448334 a systemmap:PrivateOrganization ;
     rdfs:label "swissgenetics"@de ;
@@ -4691,13 +4861,6 @@ zefix:448334 a systemmap:PrivateOrganization ;
 
 zefix:449781 a systemmap:PrivateOrganization ;
     rdfs:label "Identitas AG"@de .
-
-zefix:469727 a systemmap:PrivateOrganization ;
-    rdfs:label "Proviande Genossenschaft"@de,
-        "Proviande Cooperative"@en,
-        "Proviande Société Coopérative"@fr,
-        "Proviande Società Cooperativa"@it ;
-    dcat:landingPage <https://www.proviande.ch/> .
 
 zefix:505628 a systemmap:PrivateOrganization ;
     rdfs:label "Isagri GmbH"@de .
@@ -4716,7 +4879,7 @@ zefix:625989 a systemmap:PrivateOrganization ;
 zefix:7011 a systemmap:PrivateOrganization ;
     rdfs:label "Anicom AG"@de ;
     dcat:landingPage <https://www.anicom.ch> ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+    systemmap:ownedBy zefix:328631 .
 
 zefix:76051 a systemmap:PrivateOrganization ;
     rdfs:label "Meliofeed AG"@de,
@@ -4726,7 +4889,7 @@ zefix:76051 a systemmap:PrivateOrganization ;
 
 zefix:76693 a systemmap:PrivateOrganization ;
     rdfs:label "Halag Chemie AG"@de ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+    systemmap:ownedBy zefix:328631 .
 
 zefix:769392 a systemmap:PrivateOrganization ;
     rdfs:label "Mutterkuh Schweiz"@de,
@@ -4737,7 +4900,7 @@ zefix:769392 a systemmap:PrivateOrganization ;
 
 zefix:787227 a systemmap:PrivateOrganization ;
     rdfs:label "RAMSEIER Suisse AG"@de ;
-    systemmap:ownedBy systemmap:SFAcWHo27bji7sVts .
+    systemmap:ownedBy zefix:328631 .
 
 zefix:804864 a systemmap:PrivateOrganization ;
     rdfs:label "Qualitas AG"@de ;
@@ -4913,7 +5076,8 @@ systemmap:SakCt52w8AKrsSXi a termdat:52451 ;
         systemmap:SZ9LRAuSt2EOvBpqY,
         systemmap:SmWEQ8lVlDS9ZwPkY,
         systemmap:SpR2aDraNmiUXz55J ;
-    systemmap:informs systemmap:SzuDlnYUQMk3HaCb .
+    systemmap:informs systemmap:SzuDlnYUQMk3HaCb ;
+    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
 systemmap:SeUFazO70bpqCYJ5 a termdat:52451 ;
     rdfs:label "Stammdaten und Identifikatoren"@de,
@@ -5013,7 +5177,8 @@ systemmap:SoY82Q0qEk9k0s3w3 a termdat:52451 ;
         "Coordonnées des producteurs de lait, telles que les adresses, le numéro TVD, le numéro AGIS de l'exploitation, le numéro AGIS de l'exploitant et les informations de paiement pour la subvention pour le lait transformé en fromage et la subvention pour l'alimentation sans ensilage. Si possible, ces coordonnées sont obtenues auprès d'AGIS."@fr,
         "Dati di contatto dei produttori di latte, come indirizzi, numero TVD, numero AGIS dell'azienda, numero AGIS del gestore e informazioni di pagamento per il sussidio per il latte trasformato in formaggio e il sussidio per l'alimentazione senza insilato. Se possibile, questi dati di contatto vengono ottenuti da AGIS."@it ;
     prov:wasDerivedFrom systemmap:SvNriWslaOR5xkdw ;
-    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP ;
+    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
 systemmap:SqGp9THVAsRw71ZCg a termdat:52451 ;
     rdfs:label "Anmeldedaten für DZ-Programme"@de ;

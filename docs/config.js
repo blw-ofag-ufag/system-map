@@ -15,18 +15,93 @@ const APP_CONFIG = {
     // SPARQL Endpoint for fetching data
     ENDPOINT: "https://lindas.admin.ch/query",
 
+    // User-facing text for translation
+    UI_TEXT: {
+        en: {
+            appTitle: "FOAG System Map",
+            settings: "Settings",
+            minDegree: "Minimum Node Connections",
+            visibleNodeClasses: "Visible Node Classes",
+            visibleRelationshipTypes: "Visible Relationship Types",
+            cancel: "Cancel",
+            saveAndReload: "Save & Reload",
+            searchPlaceholder: "Search...",
+            settingsTooltip: "Settings",
+            githubTooltip: "GitHub",
+            emailTooltip: "Email",
+            errorLoading: "Error loading data",
+            fallbackSystemMapTitle: "System Map",
+            noLabel: "No label"
+        },
+        de: {
+            appTitle: "Systemkarte BLW",
+            settings: "Einstellungen",
+            minDegree: "Minimale Anzahl Verbindungen",
+            visibleNodeClasses: "Sichtbare Knotentypen",
+            visibleRelationshipTypes: "Sichtbare Beziehungstypen",
+            cancel: "Abbrechen",
+            saveAndReload: "Speichern & neu laden",
+            searchPlaceholder: "Suchen...",
+            settingsTooltip: "Einstellungen",
+            githubTooltip: "GitHub",
+            emailTooltip: "E-Mail",
+            errorLoading: "Fehler beim Laden der Daten",
+            fallbackSystemMapTitle: "Systemkarte",
+            noLabel: "Ohne Bezeichnung"
+        },
+        fr: {
+            appTitle: "Carte des systèmes OFAG",
+            settings: "Paramètres",
+            minDegree: "Nombre de connexions de nœuds minimum",
+            visibleNodeClasses: "Classes de nœuds visibles",
+            visibleRelationshipTypes: "Types de relations visibles",
+            cancel: "Annuler",
+            saveAndReload: "Enregistrer & recharger",
+            searchPlaceholder: "Rechercher...",
+            settingsTooltip: "Paramètres",
+            githubTooltip: "GitHub",
+            emailTooltip: "E-mail",
+            errorLoading: "Erreur de chargement des données",
+            fallbackSystemMapTitle: "Carte du système",
+            noLabel: "Sans étiquette"
+        },
+        it: {
+            appTitle: "Mappa dei sistemi UFAG",
+            settings: "Impostazioni",
+            minDegree: "Numero minimo di connessioni dei nodi",
+            visibleNodeClasses: "Classi di nodi visibili",
+            visibleRelationshipTypes: "Tipi di relazioni visibili",
+            cancel: "Annulla",
+            saveAndReload: "Salva e ricarica",
+            searchPlaceholder: "Cerca...",
+            settingsTooltip: "Impostazioni",
+            githubTooltip: "GitHub",
+            emailTooltip: "E-mail",
+            errorLoading: "Errore nel caricamento dei dati",
+            fallbackSystemMapTitle: "Mappa del sistema",
+            noLabel: "Senza etichetta"
+        }
+    },
+
     // Prefixes for shortening IRIs into CURIEs
     PREFIXES: {
-        "http://www.w3.org/2000/01/rdf-schema#": "rdfs",
-        "http://www.w3.org/2002/07/owl#": "owl",
-        "https://agriculture.ld.admin.ch/system-map/": "systemmap",
-        "http://schema.org/": "schema",
+        "https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#": "LwG",
         "http://www.w3.org/ns/dcat#": "dcat",
-        "http://www.w3.org/ns/prov#": "prov",
-        "http://purl.org/ontology/service#": "service",
         "http://purl.org/dc/terms/": "dcterms",
+        "http://purl.org/dc/dcmitype/": "dcmitype",
+        "http://www.w3.org/2002/07/owl#": "owl",
+        "http://www.w3.org/ns/prov#": "prov",
+        "http://www.w3.org/2000/01/rdf-schema#": "rdfs",
+        "http://schema.org/": "schema",
+        "http://purl.org/ontology/service#": "service",
+        "https://register.ld.admin.ch/staatskalender/organization/": "staatskalender",
+        "https://agriculture.ld.admin.ch/system-map/": "systemmap",
+        "https://register.ld.admin.ch/termdat/": "termdat",
+        "http://rdfs.org/ns/void#": "void",
+        "http://www.w3.org/2004/02/skos/core#": "skos",
+        "http://www.w3.org/2001/XMLSchema#": "xsd",
         "https://register.ld.admin.ch/zefix/company/": "zefix"
-    },
+    },    
 
     // Maps keys used in URL parameters to their corresponding predicate IRIs
     PREDICATE_MAP: {
@@ -67,6 +142,11 @@ const APP_CONFIG = {
      * This should be called once the DOM is ready.
      */
     initializeStylesFromCSS: function() {
+        // Create a reverse map from group name to IRI for easy lookup
+        this.GROUP_IRI_MAP = Object.fromEntries(
+            Object.entries(this.GROUP_MAP).map(([iri, group]) => [group, iri])
+        );
+
         this.GROUP_STYLES = {
             System: {
                 background: getCssVar('--color-group-system-bg'),

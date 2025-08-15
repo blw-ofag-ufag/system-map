@@ -19,7 +19,7 @@ PREFIX service: <http://purl.org/ontology/service#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX zefix: <https://register.ld.admin.ch/zefix/company/>
 
-SELECT ?subject ?object
+SELECT ?subject ?predicate ?object
 FROM <https://lindas.admin.ch/foag/system-map>
 WHERE
 {
@@ -59,21 +59,35 @@ WHERE
 
 edges <- sparql(query, 'https://ld.admin.ch/query')
 
+# Step 3: Assign numerical weights based on the predicate
+edges_with_weights <- edges %>%
+  mutate(weight = case_when(
+    predicate %in% c("http://schema.org/memberOf",
+                     "http://purl.org/ontology/service#consumes",
+                     "https://agriculture.ld.admin.ch/system-map/owns",
+                     "https://agriculture.ld.admin.ch/system-map/access") ~ 0.1,
+    predicate %in% c("https://agriculture.ld.admin.ch/system-map/usesMasterData",
+                     "http://www.w3.org/ns/prov#wasDerivedFrom",
+                     "https://agriculture.ld.admin.ch/system-map/references") ~ 0.5,
+    predicate %in% c("http://purl.org/dc/terms/isPartOf",
+                     "https://agriculture.ld.admin.ch/system-map/contains") ~ 1.5,
+    TRUE ~ 1.0
+  ))
+
 # Step 3: Create a graph object from the edge list
-# The 'edges' tibble is a data frame of connections, perfect for igraph.
-graph <- graph_from_data_frame(edges, directed = TRUE)
+graph <- graph_from_data_frame(edges_with_weights[,c(1,3:4)], directed = TRUE)
 
 # Step 4: Compute the canonical layout
 set.seed(42)
-layout <- data.frame(
-  V(graph)$name,
-  create_layout(
-    graph,
-    layout = 'fr', # use Fruchterman-Reingold force-directed layout
-    niter = 500
-    )[,1:2]
-)
-names(layout) <- c("uri", "x", "y")
+
+# First, create the layout using the default settings
+layout <- create_layout(graph,
+                        layout = "fr",
+                        niter = 5000,
+                        weights = E(graph)$weight)
+
+# normalize the positions (makes sure x, y are between -10 and 10)
+for (i in 1:2) layout[,i] <- scale(layout[,i]) * 10
 
 # Step 5: Write the canonical layout to a JSON file
-jsonlite::write_json(layout, "docs/layout.json", pretty = TRUE, digits = 6)
+jsonlite::write_json(layout[,1:3], "docs/layout.json", pretty = TRUE, digits = 6)

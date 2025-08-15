@@ -184,18 +184,20 @@ async function init() {
         allEdgesData = {},
         allEdgeMetadata = {},
         allClassesData = {},
-        allTitles = {};
+        allTitles = {},
+        nodePositions = {};
     let network, nodesDataset, edgesDataset;
     // --- END STATE ---
 
     // --- DATA FETCHING & PROCESSING ---
     try {
-        const [titleJson, classesJson, edgeMetadataJson, nodesJson, edgesJson] = await Promise.all([
+        const [titleJson, classesJson, edgeMetadataJson, nodesJson, edgesJson, layoutJson] = await Promise.all([
             getSparqlData(TITLE_QUERY), 
             getSparqlData(CLASS_QUERY), 
             getSparqlData(EDGE_METADATA_QUERY),
             getSparqlData(NODE_QUERY), 
-            getSparqlData(EDGE_QUERY)
+            getSparqlData(EDGE_QUERY),
+            fetch('layout.json').then(res => res.json())
         ]);
 
         allNodesData = processSparqlResults(nodesJson.results.bindings, 'id', ['name', 'comment', 'abbreviation']);
@@ -205,6 +207,10 @@ async function init() {
             if (row.title) allTitles[row.lang.value || ''] = row.title.value;
         });
         
+        layoutJson.forEach(pos => {
+            nodePositions[pos.name] = { x: pos.x, y: pos.y };
+        });
+
         edgesJson.results.bindings.forEach(row => {
             const from = row.from.value;
             const to = row.to.value;
@@ -483,11 +489,21 @@ async function init() {
     // 3. Create initial node and edge arrays for vis.js using the filtered sets
     const initialNodes = Object.values(allNodesData)
         .filter(nodeData => filteredNodeIds.has(nodeData.id))
-        .map(nodeData => ({
-            id: nodeData.id,
-            group: nodeData.group,
-            label: " "
-        }));
+        .map(nodeData => {
+            const node = {
+                id: nodeData.id,
+                group: nodeData.group,
+                label: " "
+            };
+
+            if (nodePositions[node.id]) {
+                const scalingFactor = 150;
+                node.x = nodePositions[node.id].x * scalingFactor;
+                node.y = nodePositions[node.id].y * scalingFactor;
+                node.fixed = true;
+            }
+            return node;
+        });
 
     const initialEdges = Object.values(allEdgesData)
         .filter(edgeData => filteredNodeIds.has(edgeData.from) && filteredNodeIds.has(edgeData.to))
@@ -506,10 +522,10 @@ async function init() {
     const data = { nodes: nodesDataset, edges: edgesDataset };
     const options = { /* ... */ 
         nodes: { shape: "box", widthConstraint: 150, heightConstraint: 40, chosen: { node: (values, id, selected, hovering) => { if (hovering) { let isDimmed = false; if (pinnedNodeId) { const distMap = getDistancesUpToTwoHops(network, pinnedNodeId); if (distMap[id] === undefined || distMap[id] > 2) { isDimmed = true; } } if (!isDimmed) { values.borderWidth = 3; values.borderColor = "#000"; } } } } },
-        edges: { width: 2, selectionWidth: 1, font: { face: "Poppins", color: "#000000" }, chosen: false, arrows: { to: { enabled: true, scaleFactor: 0.8 } }, color: { color: '#000000', highlight: '#000000', inherit: false } },
+        edges: { width: 2, selectionWidth: 1, font: { face: "Poppins", color: "#000000" }, chosen: false, arrows: { to: { enabled: true, scaleFactor: 0.8 } }, color: { color: '#000000', highlight: '#000000', inherit: false }, smooth: { type: 'continuous', roundness: 0.5 } },
         groups: APP_CONFIG.GROUP_STYLES,
         interaction: { hover: true, dragNodes: true, hoverConnectedEdges: false, zoomView: true, dragView: true },
-        physics: { enabled: true, barnesHut: { gravitationalConstant: -9000, centralGravity: 0.05, springLength: 250, springConstant: 0.2 }, stabilization: { iterations: 100 } }
+        physics: { enabled: false }
     };
 
     network = new vis.Network(container, data, options);

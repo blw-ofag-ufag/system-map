@@ -424,7 +424,7 @@ systemmap:abbreviation a owl:DatatypeProperty ;
         """@it ;
     rdfs:range xsd:string .
 
-service:consumedby a owl:ObjectProperty ;
+service:consumedBy a owl:ObjectProperty ;
     rdfs:label "wird verwendet von"@de,
         "is used by"@en,
         "est utilisé par"@fr,

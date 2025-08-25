@@ -166,7 +166,7 @@ systemmap:SyDlq7oQ0czCgyv61 a service:Service ;
 
 systemmap:SyYykF7sxZpwuQdLO a service:Service ;
     rdfs:label "Berechnung der Direktzahlungen der Landwirtschaftsbetriebe"@de ;
-    service:consumedby systemmap:SMjqlEoVCR9wpTyN1,
+    service:consumedBy systemmap:SMjqlEoVCR9wpTyN1,
         systemmap:SPWOFHR512FuAc25b,
         systemmap:SZ9LRAuSt2EOvBpqY,
         systemmap:SmWEQ8lVlDS9ZwPkY,

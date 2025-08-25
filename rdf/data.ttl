@@ -716,6 +716,7 @@ systemmap:S6J4iyI6nMI2RCXSY a schema:SoftwareApplication ;
         "CePa"@en,
         "CePa"@fr,
         "CePa"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment "CePa ist eine IT-Anwendung für die digitale Verwaltung von Verfahren und Korrespondenz im Rahmen des Pflanzenpassesystems sowie der amtlichen Zertifizierung von Vermehrungsmaterial. Sie optimiert Zertifizierungsabläufe und stellt die Einhaltung pflanzengesundheitlicher Vorschriften sicher. Auf diese Weise wird die Rückverfolgbarkeit und Qualitätskontrolle von Pflanzenmaterial unterstützt."@de,
         "CePa is an IT application for the digital management of procedures and correspondence within the framework of the plant passport system and the official certification of propagation material. It optimizes certification processes and ensures compliance with plant health regulations. In this way, it supports traceability and quality control of plant material."@en,
         "CePa est une application informatique pour la gestion numérique des procédures et de la correspondance dans le cadre du système de passeport phytosanitaire ainsi que de la certification officielle du matériel de multiplication. Elle optimise les processus de certification et garantit le respect des réglementations phytosanitaires. De cette manière, elle soutient la traçabilité et le contrôle de la qualité du matériel végétal."@fr,
@@ -1066,6 +1067,7 @@ systemmap:SE5DY78J7vgfoiDLj a schema:SoftwareApplication ;
         "Protection Variété"@en,
         "Protection Variété"@fr,
         "Protection Variété"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         ProVar bedeutet Sortenschutz (protection variété) und ist die Datenbank zur Verwaltung aller wichtigen Informationen zu den Sortenarten von Pflanzen.
         Das Sortenschutzrecht regelt den gewerblichen Schutz neuer Pflanzenzüchtungen sowie deren gewerbsmässige Nutzung.
@@ -1559,7 +1561,7 @@ systemmap:SU88cJmqj8nBRl2KZ a schema:SoftwareApplication ;
         "TVD"@en,
         "BDTA"@fr,
         "BDTA"@it ;
-    systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS .
+    systemmap:operatedBy zefix:449781 .
 
 systemmap:SVetDbLmnPqR2tYvCxDE a schema:SoftwareApplication ;
     rdfs:label "VET-DB"@de,
@@ -1762,7 +1764,7 @@ systemmap:SaOtqyAB5qm1luNuX a schema:SoftwareApplication ;
         Sie können sich über ihre betrieblichen Kennzahlen informieren und ihren Anspruch auf Direktzahlungen abschätzen.
         Die Berechnungsgrundlagen für vergangene Auszahlungen sind im GVE-Rechner archiviert und auch nachträglich einsehbar.
         """@de ;
-    systemmap:operatedBy systemmap:SHObqf1JYpt7KGLFS .
+    systemmap:operatedBy zefix:449781 .
 
 systemmap:SbQMDyJD8k62AfApL a schema:SoftwareApplication ;
     rdfs:label "SAIMo"@de,
@@ -1899,6 +1901,7 @@ systemmap:SeJ36zAhO3AJJix8t a schema:SoftwareApplication ;
         "National Information System for Plant Genetic Resources for Food and Agriculture"@en,
         "Système national d'information sur les ressources phytogénétiques pour l'alimentation et l'agriculture"@fr,
         "Sistema informativo nazionale sulle risorse genetiche vegetali per l'alimentazione e l'agricoltura"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment "Das Nationale Informationssystem für die Pflanzengenetischen Ressourcen für Ernährung und Landwirtschaft (PGREL-NIS) macht Daten des Aktionsplans zur Vielfalt der Kulturpflanzen öffentlich zugänglich. Es bietet einen Überblick und Zugriff auf Informationen zu Pflanzengenetischen Ressourcen. Damit trägt es zur Erhaltung und Förderung pflanzengenetischer Vielfalt bei."@de,
         "The National Information System for Plant Genetic Resources for Food and Agriculture (PGREL-NIS) provides public access to data from the Action Plan for Crop Diversity. It offers an overview and access to information on plant genetic resources. This contributes to the conservation and promotion of plant genetic diversity."@en,
         "Le Système national d'information sur les ressources phytogénétiques pour l'alimentation et l'agriculture (PGREL-NIS) donne accès aux données du plan d'action sur la diversité des cultures. Il offre une vue d'ensemble et un accès aux informations sur les ressources phytogénétiques. Cela contribue à la conservation et à la promotion de la diversité génétique des plantes."@fr,
@@ -2065,6 +2068,7 @@ systemmap:SjCVTMrYaOTygNcqF a schema:SoftwareApplication ;
         "digiFLUX"@en,
         "digiFLUX"@fr,
         "digiFLUX"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         digiFLUX ist eine Webanwendung, die zur Umsetzung der Meldepflicht für den Handel und die Anwendung von Pflanzenschutzmitteln sowie für den Handel mit Nährstoffen entwickelt wurde.
         Sie ermöglicht den Akteuren eine einheitliche Schnittstelle zur Eingabe aller erforderlichen Angaben.
@@ -2429,6 +2433,7 @@ systemmap:SsUV3nTDKTJ3nQ5L9 a schema:SoftwareApplication ;
 
 systemmap:StGKp6nS3OwEm4I0 a schema:SoftwareApplication ;
     rdfs:label "eMapis"@de ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         eMapis wurde entwickelt, um die veraltete MAPIS-Applikation abzulösen und die digitale Verwaltung von Finanzhilfegesuchen, wie Bundesbeiträge und zinslose Darlehen, zu ermöglichen.
         Das System zentralisiert die Erfassung und Verwaltung von Daten sowie Dokumenten, wodurch Doppelerfassungen vermieden werden.
@@ -2665,6 +2670,7 @@ systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
         "eQuotas"@en,
         "eContingents"@fr,
         "eContingenti"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """  
         eKontingente ist eine webbasierte Anwendung, mit der allgemeine Einfuhrbewilligungen beantragt, an Auktionen teilgenommen, Einfuhrgesuche eingereicht und zugeteilte Kontingentanteile verwaltet werden können.  
         Sie ermöglicht eine effiziente Verwaltung von Einfuhrkontingenten. Dadurch wird eine faire und transparente Vergabe von Einfuhrrechten gewährleistet.  
@@ -4621,35 +4627,6 @@ systemmap:SDetpcQhSMo4IAeAb a systemmap:PrivateOrganization ;
 systemmap:SGWW0nzBJjBsx2QTr a systemmap:PrivateOrganization ;
     rdfs:label "Farmable"@de .
 
-systemmap:SHObqf1JYpt7KGLFS a systemmap:PrivateOrganization ;
-    rdfs:label "Identitas AG"@de,
-        "Identitas AG"@en,
-        "Identitas AG"@fr,
-        "Identitas AG"@it ;
-    rdfs:comment """
-        Die Identitas AG entwickelt und betreibt Informationssysteme für die Tierverkehrsdatenbank der Schweiz.
-        Sie stellt Lösungen für die Rückverfolgbarkeit von Tieren, Tiergesundheit und Lebensmittelsicherheit bereit.
-        Als IT-Dienstleister für Bund, Kantone und private Akteure bietet Identitas AG digitale Services zur Erfassung, Verarbeitung und Analyse von Tier- und Betriebsdaten an.
-        Das Unternehmen hat seinen Sitz in Bern.
-        """@de,
-        """
-        Identitas AG develops and operates information systems for Switzerland's animal traffic database.
-        It provides solutions for animal traceability, animal health, and food safety.
-        As an IT service provider for the federal government, cantons, and private actors, Identitas AG offers digital services for recording, processing, and analyzing animal and farm data.
-        The company is based in Bern."""@en,
-        """
-        Identitas AG développe et exploite des systèmes d'information pour la base de données du trafic des animaux en Suisse.
-        Elle propose des solutions pour la traçabilité des animaux, la santé animale et la sécurité alimentaire.
-        En tant que prestataire de services informatiques pour la Confédération, les cantons et les acteurs privés, Identitas AG fournit des services numériques pour la saisie, le traitement et l'analyse des données animales et agricoles.
-        L'entreprise est basée à Berne."""@fr,
-        """
-        Identitas AG sviluppa e gestisce sistemi informativi per la banca dati del traffico degli animali in Svizzera.
-        Fornisce soluzioni per la tracciabilità degli animali, la salute animale e la sicurezza alimentare.
-        In qualità di fornitore di servizi IT per la Confederazione, i cantoni e gli attori privati, Identitas AG offre servizi digitali per la registrazione, l'elaborazione e l'analisi dei dati sugli animali e sulle aziende agricole.
-        L'azienda ha sede a Berna.
-        """@it ;
-    owl:sameAs zefix:449781 .
-
 systemmap:SJqSPxOD2hdgsgJDI a systemmap:PrivateOrganization ;
     rdfs:label "Schweizerischer Eringerviehzuchtverband"@de,
         "Swiss Hérens Cattle Breeders' Federation"@en,
@@ -4948,7 +4925,33 @@ zefix:448334 a systemmap:PrivateOrganization ;
     dcat:landingPage <https://www.swissgenetics.ch/> .
 
 zefix:449781 a systemmap:PrivateOrganization ;
-    rdfs:label "Identitas AG"@de .
+    rdfs:label "Identitas AG"@de,
+        "Identitas AG"@en,
+        "Identitas AG"@fr,
+        "Identitas AG"@it ;
+    rdfs:comment """
+        Die Identitas AG entwickelt und betreibt Informationssysteme für die Tierverkehrsdatenbank der Schweiz.
+        Sie stellt Lösungen für die Rückverfolgbarkeit von Tieren, Tiergesundheit und Lebensmittelsicherheit bereit.
+        Als IT-Dienstleister für Bund, Kantone und private Akteure bietet Identitas AG digitale Services zur Erfassung, Verarbeitung und Analyse von Tier- und Betriebsdaten an.
+        Das Unternehmen hat seinen Sitz in Bern.
+        """@de,
+        """
+        Identitas AG develops and operates information systems for Switzerland's animal traffic database.
+        It provides solutions for animal traceability, animal health, and food safety.
+        As an IT service provider for the federal government, cantons, and private actors, Identitas AG offers digital services for recording, processing, and analyzing animal and farm data.
+        The company is based in Bern."""@en,
+        """
+        Identitas AG développe et exploite des systèmes d'information pour la base de données du trafic des animaux en Suisse.
+        Elle propose des solutions pour la traçabilité des animaux, la santé animale et la sécurité alimentaire.
+        En tant que prestataire de services informatiques pour la Confédération, les cantons et les acteurs privés, Identitas AG fournit des services numériques pour la saisie, le traitement et l'analyse des données animales et agricoles.
+        L'entreprise est basée à Berne."""@fr,
+        """
+        Identitas AG sviluppa e gestisce sistemi informativi per la banca dati del traffico degli animali in Svizzera.
+        Fornisce soluzioni per la tracciabilità degli animali, la salute animale e la sicurezza alimentare.
+        In qualità di fornitore di servizi IT per la Confederazione, i cantoni e gli attori privati, Identitas AG offre servizi digitali per la registrazione, l'elaborazione e l'analisi dei dati sugli animali e sulle aziende agricole.
+        L'azienda ha sede a Berna.
+        """@it ;
+    owl:sameAs zefix:449781 .
 
 zefix:505628 a systemmap:PrivateOrganization ;
     rdfs:label "Isagri GmbH"@de .

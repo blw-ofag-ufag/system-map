@@ -2028,6 +2028,17 @@ systemmap:Shhoiq8azX3SHGL3W a schema:SoftwareApplication ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2010/340> ;
     systemmap:operatedBy systemmap:SoqmfoevPVgr3d0AA .
 
+systemmap:Shk82ubUQrICbOXZh a schema:SoftwareApplication ;
+    rdfs:label "ASAN"@de ;
+    rdfs:comment """
+        Mit ASAN können gemeldete Probleme wie Tierschutzvergehen bearbeitet werden; entsprechende Massnahmen können erlassen und Bewilligungsgesuche (mit der anschliessenden Erteilung respektive Ablehnung der Bewilligung) evaluiert werden.
+        Ebenso ist es möglich, die entsprechenden Dokumente wie Verfügungen oder Bewilligungen zu erstellen und zu speichern.
+        Eine wesentliche Erweiterung bilden die sogenannten "Programme", die es erlauben, eine Vielzahl ähnlicher Geschäftsfälle – z. B. im Rahmen einer Tierseuchenbekämpfung – gemeinsam «en masse» zu verwalten.
+        Die zentral zur Verfügung stehenden Daten von Bund und Kantonen können zudem für die Erledigung gesetzlich vorgeschriebener Aufgaben weiterverwendet werden.
+        Asan basiert auf den aktuellen Register- und Strukturdaten (Adressdaten, Spezies etc.) aus AGIS, TVD und BUR, sowie auf Amicus- und zusätzlichen manuell erfassten Personendaten.
+        """@de ;
+    systemmap:operatedBy systemmap:Sg6T9dU4npL98bHrb .
+
 systemmap:Shu8wJsNr6s2DSkrI a schema:SoftwareApplication ;
     rdfs:label "Agrosoft Farmsolution"@de,
         "Agrosoft Farmsolution"@en,
@@ -3094,6 +3105,14 @@ systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
         L'UFAG necessita di queste informazioni per l'assegnazione del sussidio per il latte di consumo.
         """@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
+
+systemmap:Shk82ubUQrICbOYZi a dcat:Dataset ;
+    rdfs:label "ASAN-Daten"@de ;
+    systemmap:containedIn systemmap:Shk82ubUQrICbOXZh ;
+    systemmap:usesMasterData systemmap:SAUWzyCpeGZ6vVil,
+        systemmap:SeUFazO70bpqCYJ5,
+        systemmap:SvNriWslaOR5xkdw,
+        systemmap:SzuDlnYUQMk3HaCb .
 
 systemmap:SisV9d3pviAFO8vTK a dcat:Dataset ;
     rdfs:label "Marktdaten Ölsaaten und Eiweisspflanzen"@de,

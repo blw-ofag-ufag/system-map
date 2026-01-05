@@ -528,7 +528,7 @@ zefix:793667 a schema:Organization ;
 zefix:871039 a schema:Organization ;
     rdfs:label "aaremilch AG"@de .
 
-zefix:126288 a schema:PrivateOrganization ;
+zefix:126288 a systemmap:PrivateOrganization ;
     rdfs:label "Nestlé AG"@de,
         "Nestlé S.A."@fr .
 

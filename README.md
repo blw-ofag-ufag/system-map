@@ -26,6 +26,33 @@ If instead you are interested in the *actual* data, you can have a look at the f
 
 Actually, there is a python script *reasoning* over the two files. This is described in more detail below.
 
+# 🔄 Run the data processing pipeline
+
+To run the data processing and upload to LINDAS, follow these steps:
+
+1. Add variables to `.env`
+
+  ``` sh
+  USER=lindas-foag
+  PASSWORD=********
+  GRAPH=https://lindas.admin.ch/foag/crops
+  ENDPOINT=https://stardog.cluster.ldbar.ch/lindas
+  ```
+
+2. Start a virtual environment and install libraries:
+
+  ``` sh
+  python -m venv venv
+  source venv/bin/activate  # On Windows use: venv\Scripts\activate
+  pip install -r requirements.txt
+  ```
+
+3. Execute `upload.sh`
+
+  ``` sh
+  sh upload.sh
+  ```
+
 # ⚙️ Setting query parameters in the system map visualization
 
 The visualisation is driven entirely from its own URL.

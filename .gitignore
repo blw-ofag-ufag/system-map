@@ -6,3 +6,4 @@ prompt.*
 rdf/test.ttl
 rdf/graph.ttl
 .env
+venv/

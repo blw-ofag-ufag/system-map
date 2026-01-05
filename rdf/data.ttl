@@ -14,6 +14,30 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
 
+systemmap:SAAAX37V802JgbLEb a dcmitype:Collection ;
+    rdfs:label "AGIS Systemarchitektur"@de ;
+    systemmap:containsNodes systemmap:S9SbhGAwWjtvcRIZ,
+        systemmap:SDLEUPczkJ9AWZeC,
+        systemmap:SDqb9NPoB6n3MZf2,
+        systemmap:SE8y4MuFWW5BKqK92,
+        systemmap:SHyBeGX0LsQwjJ6Z,
+        systemmap:SMjqlEoVCR9wpTyN1,
+        systemmap:SNbhMvt3Btta1U1d6,
+        systemmap:SPWOFHR512FuAc25b,
+        systemmap:SQ2MIhpz1CvdqK6f,
+        systemmap:SX1qchbxSZKWI6Up,
+        systemmap:SZ5quKnfPEEV1CVmE,
+        systemmap:SZ9LRAuSt2EOvBpqY,
+        systemmap:SakCt52w8AKrsSXi,
+        systemmap:SfkMzUrMhERjP9vhy,
+        systemmap:SldiTYOuXQmoC3SV,
+        systemmap:SmWEQ8lVlDS9ZwPkY,
+        systemmap:SpR2aDraNmiUXz55J,
+        systemmap:SuEtT7joC8HXVSfF,
+        systemmap:SvDlxaJ5YMkuZGH6k,
+        systemmap:SvNriWslaOR5xkdw,
+        systemmap:SzuDlnYUQMk3HaCb .
+
 systemmap:SaAA0IQkj02jgbLEb a dcmitype:Collection ;
     rdfs:label "MARS III Systemarchitektur"@de ;
     systemmap:containsNodes systemmap:S1AkhvKmzBiJFCTc,

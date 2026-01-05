@@ -1,6 +1,8 @@
 .DS_Store
 *.sh
+!upload.sh
 notes.md
 prompt.*
 rdf/test.ttl
 rdf/graph.ttl
+.env

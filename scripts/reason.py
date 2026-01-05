@@ -42,13 +42,11 @@ def save_graph(graph: Graph, output_path: Path):
         serializer.serialize(f)
 
 def main():
-    print("Starting Python Reasoning...")
     g_ont = load_graph(ONTOLOGY_PATH)
     g_data = load_graph(DATA_PATH)
     full_graph = g_ont + g_data
     apply_rules(full_graph, RULES_DIR)
     save_graph(full_graph, OUTPUT_PATH)
-    print("Done.")
 
 if __name__ == "__main__":
     main()

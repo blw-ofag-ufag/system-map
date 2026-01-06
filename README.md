@@ -90,7 +90,7 @@ Subgraph filtering:
 .../index.html?lang=de&subgraph=Si8UnIQkj02jgbLE
 ```
 
-Have a look at the subgraphs for [MARS III](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=SaAA0IQkj02jgbLEb) and [digiFLUX](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=Si8UnIQkj02jgbLEb).
+Have a look at the subgraphs for [MARS III](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=SaAA0IQkj02jgbLEb) and [digiFLUX](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=Si8UnIQkj02jgbLEb). If you want a complete list of subgraphs, you can [query the system map accordingly](https://s.zazuko.com/221bFQW).
 
 # 🔎 Examples of SPARQL queries from LINDAS
 

@@ -53,7 +53,8 @@ systemmap:Sa9PcqsvnAMuiYCjx a dcmitype:Collection ;
         systemmap:ScoeXHl4TgJbke1Yf,
         systemmap:SfXioR1gkj8eDuTF,
         systemmap:SqeNr0H0FGL6Uv5Rr,
-        systemmap:SsJ9OfSkUgPD8dkz3 .
+        systemmap:SsJ9OfSkUgPD8dkz3,
+        zefix:231059 .
 
 systemmap:SaAA0IQkj02jgbLEb a dcmitype:Collection ;
     rdfs:label "MARS III Systemarchitektur"@de ;
@@ -4812,6 +4813,11 @@ zefix:212388 a systemmap:PrivateOrganization ;
 zefix:226184 a systemmap:PrivateOrganization ;
     rdfs:label "Genossenschaft Braunvieh Schweiz"@de ;
     dcat:landingPage <https://www.braunvieh.ch> .
+
+zefix:231059 a systemmap:PrivateOrganization ;
+    rdfs:label "Bedag Informatik AG"@de,
+        "Bedag Informatique SA"@fr ;
+    systemmap:develops systemmap:S9VcxLSoIIwQjoexY .
 
 zefix:248029 a systemmap:PrivateOrganization ;
     rdfs:label "Schweizerischer Ziegenzuchtverband (SZZV) Genossenschaft"@de,

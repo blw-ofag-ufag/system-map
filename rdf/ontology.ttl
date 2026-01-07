@@ -727,6 +727,24 @@ systemmap:containsNodes a owl:ObjectProperty ;
         "Elements in this subgraph"@en ;
     rdfs:domain dcmitype:Collection .
 
+systemmap:developedBy a owl:ObjectProperty ;
+    rdfs:label "entwickelt von"@de,
+        "developed by"@en ;
+    rdfs:range schema:Organization ;
+    owl:inverseOf systemmap:develops .
+
+systemmap:develops a owl:ObjectProperty ;
+    rdfs:label "entwickelt"@de,
+        "develops"@en ;
+    rdfs:comment """
+        Zeigt an, welche Organisation ein System, eine Datenbank oder einen Servce entwickelt hat.
+        """@de ,
+        """
+        Shows, what organization developed a system, a database or a service.
+        """@en ;
+    rdfs:domain schema:Organization ;
+    owl:inverseOf systemmap:developedBy .
+
 systemmap:hasLegalBasis a owl:ObjectProperty ;
     rdfs:label "hat Rechtsgrundlage"@de,
         "has legal basis"@en,

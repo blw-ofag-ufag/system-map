@@ -39,7 +39,10 @@ systemmap:SAAAX37V802JgbLEb a dcmitype:Collection ;
         systemmap:SzuDlnYUQMk3HaCb .
 
 systemmap:Sa9PcqsvnAMuiYCjx a dcmitype:Collection ;
-    rdfs:label "Acontrol Systemarchitektur"@de ;
+    rdfs:label "Acontrol Systemarchitektur"@de,
+        "Acontrol System Architecture"@en,
+        "Architecture du système Acontrol"@fr,
+        "Architettura del sistema Acontrol"@it ;
     systemmap:containsNodes systemmap:S1JvEmah9Tl0698au,
         systemmap:S2tIdqNmt3uS5Ny6D,
         systemmap:S9VcxLSoIIwQjoexY,

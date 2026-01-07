@@ -1,0 +1,10 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+CONSTRUCT {
+  ?o ?i ?s .
+}
+WHERE {
+  ?p owl:inverseOf ?i .
+  ?s ?p ?o .
+  FILTER NOT EXISTS { ?o ?i ?s }
+}

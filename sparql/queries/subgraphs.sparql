@@ -1,0 +1,17 @@
+# SUBGRAPHS IN THE SYSTEM MAP
+# Returns a table listing all subgraphs, their German name and the number of nodes in said subgraph.
+
+PREFIX schema: <http://schema.org/>
+PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
+
+SELECT ?subgraph ?name (COUNT(?node) AS ?nodes)
+FROM <https://lindas.admin.ch/foag/system-map>
+WHERE {
+  ?subgraph a dcmitype:Collection .
+  ?subgraph schema:name ?name .
+  ?subgraph systemmap:containsNodes ?node .
+  FILTER(LANG(?name) = "de")
+}
+GROUP BY ?subgraph ?name
+ORDER BY DESC(?nodes)

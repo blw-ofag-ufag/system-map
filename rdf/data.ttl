@@ -38,6 +38,20 @@ systemmap:SAAAX37V802JgbLEb a dcmitype:Collection ;
         systemmap:SvNriWslaOR5xkdw,
         systemmap:SzuDlnYUQMk3HaCb .
 
+systemmap:Sa9PcqsvnAMuiYCjx a dcmitype:Collection ;
+    rdfs:label "Acontrol Systemarchitektur"@de ;
+    systemmap:containsNodes systemmap:S1JvEmah9Tl0698au,
+        systemmap:S2tIdqNmt3uS5Ny6D,
+        systemmap:S9VcxLSoIIwQjoexY,
+        systemmap:SGdyOoksCnRRZwi2Q,
+        systemmap:SK6JOIUV1UjrOYD7f,
+        systemmap:SQbNLiw8h9MnSXuyo,
+        systemmap:SY9n2yTOBWXtZ6se,
+        systemmap:ScoeXHl4TgJbke1Yf,
+        systemmap:SfXioR1gkj8eDuTF,
+        systemmap:SqeNr0H0FGL6Uv5Rr,
+        systemmap:SsJ9OfSkUgPD8dkz3 .
+
 systemmap:SaAA0IQkj02jgbLEb a dcmitype:Collection ;
     rdfs:label "MARS III Systemarchitektur"@de ;
     systemmap:containsNodes systemmap:S1AkhvKmzBiJFCTc,
@@ -527,10 +541,6 @@ zefix:793667 a schema:Organization ;
 
 zefix:871039 a schema:Organization ;
     rdfs:label "aaremilch AG"@de .
-
-zefix:126288 a systemmap:PrivateOrganization ;
-    rdfs:label "Nestlé AG"@de,
-        "Nestlé S.A."@fr .
 
 systemmap:S0hwJxyshSNPXbP34 a schema:SoftwareApplication,
         systemmap:FMIS ;
@@ -4778,6 +4788,10 @@ zefix:1226256 a systemmap:PrivateOrganization ;
 zefix:1249135 a systemmap:PrivateOrganization ;
     rdfs:label "Verein Kometian"@de ;
     dcat:landingPage <https://www.kometian.ch> .
+
+zefix:126288 a systemmap:PrivateOrganization ;
+    rdfs:label "Nestlé AG"@de,
+        "Nestlé S.A."@fr .
 
 zefix:130459 a systemmap:PrivateOrganization ;
     rdfs:label "Micarna SA"@de ;

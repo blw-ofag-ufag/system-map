@@ -44,16 +44,26 @@ systemmap:Sa9PcqsvnAMuiYCjx a dcmitype:Collection ;
         "Architecture du système Acontrol"@fr,
         "Architettura del sistema Acontrol"@it ;
     systemmap:containsNodes systemmap:S1JvEmah9Tl0698au,
+        systemmap:S1u8DDdB8YZ67H5l5,
+        systemmap:S1u8FFdB8YZ67H5X6,
         systemmap:S2tIdqNmt3uS5Ny6D,
+        systemmap:S3Rf79NI3Pm1rfOlN,
         systemmap:S9VcxLSoIIwQjoexY,
+        systemmap:SAGHyCcjQ9LRiSsV0,
+        systemmap:SAGHyCxJM29RiSsV8,
+        systemmap:SFZjIqVSzjv6ua4Mz,
         systemmap:SGdyOoksCnRRZwi2Q,
         systemmap:SK6JOIUV1UjrOYD7f,
         systemmap:SQbNLiw8h9MnSXuyo,
+        systemmap:SXcby9KwakDGhBdP,
         systemmap:SY9n2yTOBWXtZ6se,
         systemmap:ScoeXHl4TgJbke1Yf,
         systemmap:SfXioR1gkj8eDuTF,
+        systemmap:Sg6T9dU4npL98bHrb,
+        systemmap:Shk82ubUQrICbOXZh,
         systemmap:SqeNr0H0FGL6Uv5Rr,
         systemmap:SsJ9OfSkUgPD8dkz3,
+        systemmap:SzB95Xoyj1a1EJNBe,
         zefix:231059 .
 
 systemmap:SaAA0IQkj02jgbLEb a dcmitype:Collection ;
@@ -140,6 +150,14 @@ systemmap:S0hwJxy2kXNPFbl4C a service:Service ;
     dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr ;
     rdfs:comment """
         Service, der auf Basis gemeldeter Futterzusammensetzungen die Nährstoffausscheidungen der Tiere korrigiert (bei nährstoffreduziertem Futter o. Ä.).
+        """@de .
+
+systemmap:SAGHyCxJM29RiSsV8 a service:Service ;
+    rdfs:label "Zentraler Business- und Daten-Service für das landwirtschaftliche Kontrollwesen"@de ;
+    service:providedBy systemmap:SzB95Xoyj1a1EJNBe ;
+    rdfs:comment """
+        ISVet-SOA fungiert als das zentrale Backend-System, das die gesamte Geschäftslogik und Datenhaltung für die Primärproduktionskontrollen kapselt.
+        Der Service stellt den Frontend-Anwendungen Acontrol und Asan über eine SOAP-Webservice-Schnittstelle Funktionen zur Verwaltung von Einheiten (Personen/Betriebe), Kontrollkampagnen, Inspektionsergebnissen sowie Geschäftsgängen zur Verfügung, wobei er als alleinige Quelle der Wahrheit ("Single Source of Truth") dient.
         """@de .
 
 systemmap:SAgmZXUKqNKTf35Fv a service:Service ;
@@ -642,7 +660,8 @@ systemmap:S2Q2s27pTp6oRYHmf a schema:SoftwareApplication ;
     dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF ;
     rdfs:comment """
         digiFLUX Core ist die zentrale Softwareanwendung des Gesamtsystems digiFLUX, welche das Erfassen, Ändern, Einsehen etc. von Produktelieferungen und -anwendungen erlaubt.
-        """@de .
+        """@de ;
+    systemmap:developedBy zefix:249959 .
 
 systemmap:S2S8th7MLY4xUNjh5 a schema:SoftwareApplication ;
     rdfs:label "CapraNet"@de,
@@ -967,7 +986,8 @@ systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
         "Acontrol"@en,
         "Acontrol"@fr,
         "Acontrol"@it ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    service:consumes systemmap:SAGHyCxJM29RiSsV8,
+        systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         Acontrol ist das Informationssystem des BLW, das für die Planung, Erfassung und Verwaltung landwirtschaftlicher Inspektionen eingesetzt wird.
         Es vereinfacht die Kontrollprozesse durch eine zentrale Plattform für Dateneingabe und -abfrage.
@@ -988,6 +1008,7 @@ systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
         Semplifica i processi di controllo attraverso una piattaforma centrale per l'inserimento e il recupero dei dati.
         In questo modo, garantisce un monitoraggio efficiente e il rispetto degli standard agricoli.
         """@it ;
+    systemmap:developedBy zefix:231059 ;
     systemmap:hasLegalBasis LwG:art_165_d ;
     systemmap:operatedBy systemmap:ScoeXHl4TgJbke1Yf .
 
@@ -1690,6 +1711,7 @@ systemmap:SXcby9KwakDGhBdP a schema:SoftwareApplication ;
         """
         ACmobile è una soluzione mobile indipendente dalla piattaforma per la registrazione elettronica dei risultati delle ispezioni e delle misure.
         """@it ;
+    systemmap:developedBy zefix:231059 ;
     systemmap:operatedBy systemmap:SmI5VgF2mECWT74i2 .
 
 systemmap:SYOd1TkacTh6cr0xP a schema:SoftwareApplication ;
@@ -1701,27 +1723,28 @@ systemmap:SYOd1TkacTh6cr0xP a schema:SoftwareApplication ;
     rdfs:comment """
         Die Datenbank Milch (dbmilch.ch) ist eine Webapplikation der TSM Treuhand GmbH.
         Sie ist die Online-Plattform der Akteure der Schweizer Milchwirtschaft.
-        Die von der Bedag Solutions AG entwickelte Lösung kann von den kantonalen Veterinär- und Landwirtschaftsämtern oder auch anderen Organisationen in Verbindung mit Acontrol genutzt werden.
+        Die von der Bedag Informatik AG entwickelte Lösung kann von den kantonalen Veterinär- und Landwirtschaftsämtern oder auch anderen Organisationen in Verbindung mit Acontrol genutzt werden.
         """@de,
         """
         The Milk Database (dbmilch.ch) is a web application developed by TSM Treuhand GmbH.
         It serves as the online platform for stakeholders in the Swiss dairy industry.
-        The solution, developed by Bedag Solutions AG, can be used by cantonal veterinary and agricultural offices or other organizations in connection with Acontrol.
+        The solution, developed by Bedag Informatik AG, can be used by cantonal veterinary and agricultural offices or other organizations in connection with Acontrol.
         """@en,
         """
         La base de données lait (dbmilch.ch) est une application web de TSM Treuhand GmbH.
         Elle est la plateforme en ligne des acteurs de l'industrie laitière suisse.
-        La solution développée par Bedag Solutions AG peut être utilisée par les offices vétérinaires et agricoles cantonaux ou par d'autres organisations en lien avec Acontrol.
+        La solution développée par Bedag Informatik AG peut être utilisée par les offices vétérinaires et agricoles cantonaux ou par d'autres organisations en lien avec Acontrol.
         """@fr,
         """
         La database latte (dbmilch.ch) è un'applicazione web di TSM Treuhand GmbH.
         È la piattaforma online per gli attori dell'industria lattiero-casearia svizzera.
-        La soluzione sviluppata da Bedag Solutions AG può essere utilizzata dagli uffici veterinari e agricoli cantonali o da altre organizzazioni in combinazione con Acontrol.
+        La soluzione sviluppata da Bedag Informatik AG può essere utilizzata dagli uffici veterinari e agricoli cantonali o da altre organizzazioni in combinazione con Acontrol.
         """@it ;
     systemmap:abbreviation "dbmilch"@de,
         "dbmilch"@en,
         "dbmilch"@fr,
         "dbmilch"@it ;
+    systemmap:developedBy zefix:231059 ;
     systemmap:operatedBy systemmap:SQ3N7dTc23t2wzXr2 .
 
 systemmap:SYQt9hzLel1dEtlOn a schema:SoftwareApplication ;
@@ -2734,11 +2757,20 @@ systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
         eContingenti è un'applicazione web che consente di richiedere autorizzazioni generali all'importazione, partecipare ad aste, presentare domande di importazione e gestire le quote di contingenti assegnate.  
         Consente una gestione efficiente dei contingenti di importazione. Ciò garantisce un'assegnazione equa e trasparente dei diritti di importazione.  
         """@it ;
+    systemmap:developedBy zefix:249959 ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1998/3244_3244_3244>,
         <https://www.fedlex.admin.ch/eli/cc/2003/791>,
         <https://www.fedlex.admin.ch/eli/cc/2011/770>,
         <https://www.fedlex.admin.ch/eli/cc/2016/565> ;
     systemmap:operatedBy systemmap:SRu4rav1Rlm2mUMWr .
+
+systemmap:SzB95Xoyj1a1EJNBe a schema:SoftwareApplication ;
+    rdfs:label "ISVet-SOA"@de ;
+    rdfs:comment """
+        ISVet-SOA ist ein .NET-basiertes Backend-System, das die zentrale Datenhaltung sowie die Geschäftslogik für die Webapplikationen Acontrol und ASAN bereitstellt.
+        Es fungiert als SOAP-Webservice-Schnittstelle, über welche Anwendungen wie Acontrol oder die mobile Erfassung (ACmobile) auf Funktionen und Daten zugreifen.
+        """@de ;
+    systemmap:operatedBy systemmap:Sg6T9dU4npL98bHrb .
 
 systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
     rdfs:label "Preise und Mengen zum Agrarmarkt"@de ;
@@ -2747,6 +2779,19 @@ systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
         Beinhaltet Preise und Mengen für verschiedene Produkte, Wertschöpfungsstufen, Regionen, Produktionssysteme etc.
         """@de ;
     systemmap:usesMasterData systemmap:SbKCxLGicJtMGTQiD .
+
+systemmap:S1u8DDdB8YZ67H5l5 a dcat:Dataset ;
+    rdfs:label "Kontrolldaten"@de ;
+    systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe .
+
+systemmap:S1u8FFdB8YZ67H5X6 a dcat:Dataset ;
+    rdfs:label "Kontrollinhalte"@de ;
+    dcterms:isPartOf systemmap:S1u8DDdB8YZ67H5l5 ;
+    rdfs:comment """
+        Auflistung aller zu kontrollierenden Punkte gemäss DZV [...].
+        Jeder sogenannte Kontrollpunkt wird in Deutsch, Französisch und Italienisch gehalten und hat einen Namen und eine Beschreibung.
+        Die Kontrollpunkte sind in Bereiche, Rubriken und Gruppen organisiert.
+        """@de .
 
 systemmap:S2XkdeKmzCiJFCTb a dcat:Dataset ;
     rdfs:label "BLW-interne Agrarmarktdaten"@de ;
@@ -4816,14 +4861,19 @@ zefix:226184 a systemmap:PrivateOrganization ;
 
 zefix:231059 a systemmap:PrivateOrganization ;
     rdfs:label "Bedag Informatik AG"@de,
-        "Bedag Informatique SA"@fr ;
-    systemmap:develops systemmap:S9VcxLSoIIwQjoexY .
+        "Bedag Informatique SA"@fr .
 
 zefix:248029 a systemmap:PrivateOrganization ;
     rdfs:label "Schweizerischer Ziegenzuchtverband (SZZV) Genossenschaft"@de,
         "Fédération suisse d'élevage caprin (FSEC) coopérative"@fr,
         "Federazione svizzera allevamento caprino (FSAC) cooperativa"@it ;
     dcat:landingPage <https://szzv.ch/> .
+
+zefix:249959 a systemmap:PrivateOrganization ;
+    rdfs:label "ELCA Informatik AG"@de,
+        "ELCA Informatics Ltd"@en,
+        "ELCA Informatique SA"@fr,
+        "ELCA Informatica SA"@it .
 
 zefix:2595 a systemmap:PrivateOrganization ;
     rdfs:label "ASF Tiervermarktung AG"@de ;
@@ -5034,6 +5084,10 @@ systemmap:S6lhRFiEflanK2rcl a termdat:52451 ;
     systemmap:containedIn systemmap:SjhTrVt8CB9QFq0Yn ;
     systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
+systemmap:SAGHyCcjQ9LRiSsV0 a termdat:52451 ;
+    rdfs:label "Kontrollergebnisse"@de ;
+    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se .
+
 systemmap:SCkzllAJGWHIEermB a termdat:52451 ;
     rdfs:label "Nutzerdaten digiFLUX Core"@de ;
     rdfs:comment """
@@ -5041,6 +5095,10 @@ systemmap:SCkzllAJGWHIEermB a termdat:52451 ;
         """@de ;
     systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf ;
     systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
+
+systemmap:SFZjIqVSzjv6ua4Mz a termdat:52451 ;
+    rdfs:label "Kontrollgrunddaten"@de ;
+    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se .
 
 systemmap:SJuklUVKfEwj2Xpc a termdat:52451 ;
     rdfs:label "Kontaktdaten Züchter"@de,
@@ -5102,7 +5160,7 @@ systemmap:SY9n2yTOBWXtZ6se a termdat:52451 ;
         "Data on inspections and inspection results"@en,
         "Données sur les contrôles et les résultats des contrôles"@fr,
         "Dati sui controlli e sui risultati dei controlli"@it ;
-    systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
+    dcterms:isPartOf systemmap:S1u8DDdB8YZ67H5l5 .
 
 systemmap:SYYaTBjwIUU2yNIUN a termdat:52451 ;
     rdfs:label "Anwendungen von Pflanzenschutzmittel"@de ;
@@ -5376,5 +5434,5 @@ systemmap:SfXioR1gkj8eDuTF a termdat:52453 ;
         "Data on administrative measures and criminal sanctions"@en,
         "Données sur les mesures administratives et les sanctions pénales"@fr,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
-    systemmap:containedIn systemmap:S9VcxLSoIIwQjoexY .
+    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se .
 

@@ -545,6 +545,15 @@ zefix:793667 a schema:Organization ;
 zefix:871039 a schema:Organization ;
     rdfs:label "aaremilch AG"@de .
 
+systemmap:S00fVJvGUmwXh0cOz a schema:SoftwareApplication ;
+    rdfs:label "agridata.ch"@de ;
+    rdfs:comment """
+        agridata.ch bildet die Grundlage für den Datenraum des Schweizer Agrar- und Ernährungssektors.
+        Der Datenübertragungsdienst ermöglicht den sicheren, effizienten und vertrauenswürdigen Austausch von Daten, die Umsetzung der Interoperabilität sowie das Once-Only Prinzip.
+        """@de ;
+    dcat:landingPage <https://agridata.ch/> ;
+    systemmap:operatedBy systemmap:SFAwQAwxBcNnaURgO .
+
 systemmap:S0hwJxyshSNPXbP34 a schema:SoftwareApplication,
         systemmap:FMIS ;
     rdfs:label "PiNUS21"@de ;
@@ -3830,34 +3839,13 @@ systemmap:S8WjMkerPw98ZkWA7 a systemmap:FederalOrganization ;
         "UFSP"@it .
 
 systemmap:SE8y4MuFWW5BKqK92 a systemmap:FederalOrganization ;
-    rdfs:label "Fachbereich Agrarinformationssysteme"@de,
-        "Agricultural Information Systems Division"@en,
-        "Secteur d'information sur l'agriculture"@fr,
-        "Settore Sistemi d’informazione sull’agricoltura"@it ;
-    schema:parentOrganization systemmap:S1JvEmah9Tl0698au ;
-    rdfs:comment "Der Fachbereich Agrarinformationssysteme ist die zentrale Drehscheibe für Agrardaten. Er ist zuständig für das Portal Agate – den Online-Schalter für die Landwirtschaft – sowie für die zentralen Informationssysteme. Er setzt die fachlichen Vorgaben in technische Lösungen um und gewährleistet eine hohe Datenqualität. Dabei setzen wir auf medienbruchfreie, digitale Prozesse und Standards. FBAIS bietet Schnittstellen an für den Bezug und die Weitergabe der Daten an andere Bundesämter und auch an Dritte ausserhalb der Verwaltung."@de,
-        "The Agricultural Information Systems Division is the central hub for agricultural data. It is responsible for the Agate portal – the online gateway for agriculture – as well as for central information systems. It implements professional requirements into technical solutions and ensures high data quality. We rely on seamless, digital processes and standards. FBAIS provides interfaces for retrieving and sharing data with other federal offices and third parties outside the administration."@en,
-        "L'Unité des systèmes d'information agricole est la plaque tournante centrale des données agricoles. Elle est responsable du portail Agate – la plateforme en ligne pour l'agriculture – ainsi que des systèmes d'information centraux. Elle met en œuvre les exigences professionnelles en solutions techniques et garantit une haute qualité des données. Nous misons sur des processus et des standards numériques sans rupture. FBAIS propose des interfaces pour l'accès et la transmission des données à d'autres offices fédéraux ainsi qu'à des tiers en dehors de l'administration."@fr,
-        "La Divisione dei sistemi informativi agricoli è il punto di riferimento centrale per i dati agricoli. È responsabile del portale Agate – lo sportello online per l'agricoltura – e dei sistemi informativi centrali. Implementa i requisiti professionali in soluzioni tecniche e garantisce un'elevata qualità dei dati. Puntiamo su processi e standard digitali senza interruzioni. FBAIS fornisce interfacce per l'accesso e la condivisione dei dati con altri uffici federali e con terzi al di fuori dell'amministrazione."@it ;
-    systemmap:abbreviation "FBAIS"@de,
-        "FBAIS"@en,
-        "FBAIS"@fr,
-        "FBAIS"@it .
+    rdfs:label "Gruppe Agrarinformationssystem AGIS"@de ;
+    schema:parentOrganization systemmap:SaVyVVsIDkiDMtQq4 .
 
 systemmap:SFAwQAwxBcNnaURgO a systemmap:FederalOrganization ;
-    rdfs:label "Kompetenzzentrum für die digitale Transformation"@de,
-        "Competence Center for Digital Transformation"@en,
-        "Centre de compétence pour la transformation numérique"@fr,
-        "Centro di competenza per la trasformazione digitale"@it ;
+    rdfs:label "Fachbereich Datenraum und Datenmanagement"@de ;
     schema:parentOrganization systemmap:S1JvEmah9Tl0698au ;
-    rdfs:comment "Das Kompetenzzentrum für die digitale Transformation widmet sich der Standardisierung und Harmonisierung von Daten im Agrar- und Ernährungssektor und ermöglicht deren Mehrfachnutzung nach dem Once-Only-Prinzip. Es führt und koordiniert die digitale Transformation des Sektors, indem es rechtliche, semantische, technische und organisatorische Herausforderungen angeht. Darüber hinaus fördert es die Kommunikation zwischen den Akteuren, um einen reibungslosen und effektiven Übergang zu digitalen Prozessen zu gewährleisten."@de,
-        "The Competence Center for Digital Transformation is dedicated to standardizing and harmonizing data in the agri-food sector while enabling multiple data uses through the Once-Only Principle. It leads and coordinates the sector’s digital transformation by addressing legal, semantic, technical, and organizational challenges. Additionally, it fosters communication among stakeholders to ensure a smooth and effective transition to digital processes."@en,
-        "Le Centre de compétence pour la transformation numérique se consacre à la standardisation et à l'harmonisation des données dans le secteur agroalimentaire, tout en permettant leur réutilisation multiple selon le principe du « Once-Only ». Il dirige et coordonne la transformation numérique du secteur en relevant les défis juridiques, sémantiques, techniques et organisationnels. De plus, il favorise la communication entre les parties prenantes afin d'assurer une transition fluide et efficace vers des processus numériques."@fr,
-        "Il Centro di competenza per la trasformazione digitale si dedica alla standardizzazione e all'armonizzazione dei dati nel settore agroalimentare, consentendone il riutilizzo multiplo secondo il principio del « Once-Only ». Guida e coordina la trasformazione digitale del settore affrontando le sfide legali, semantiche, tecniche e organizzative. Inoltre, promuove la comunicazione tra le parti interessate per garantire una transizione fluida ed efficace ai processi digitali."@it ;
-    systemmap:abbreviation "GRKDT"@de,
-        "GRKDT"@en,
-        "GRKDT"@fr,
-        "GRKDT"@it .
+    systemmap:abbreviation "FBDD"@de .
 
 systemmap:SFKPRpdGa5UISiJlx a systemmap:FederalOrganization ;
     rdfs:label "Bundesamt für Zoll und Grenzsicherheit"@de,
@@ -4034,32 +4022,12 @@ systemmap:SNbhMvt3Btta1U1d6 a systemmap:FederalOrganization ;
         "UST"@it .
 
 systemmap:SQbNLiw8h9MnSXuyo a systemmap:FederalOrganization ;
-    rdfs:label "Fachbereich Informatikführung"@de,
-        "Information Technology Management Division"@en,
-        "Secteur Gestion Informatique"@fr,
-        "Settore Gestione Informatica"@it ;
+    rdfs:label "Fachbereich Informatik und Digitalisierung"@de,
+        "Secteur Informatique et numérisation"@fr,
+        "Settore Informatica e digitalizzazione"@it ;
     schema:parentOrganization systemmap:S1JvEmah9Tl0698au ;
-    rdfs:comment """
-        Der Fachbereich Informatikführung verantwortet die strategische Planung, Umsetzung und Sicherheit der Informatik im BLW, einschliesslich des Managements von Projekten, Budgets und Fachanwendungen.
-        Er fungiert als Schnittstelle zu Dienstleistern, koordiniert Change-Management-Prozesse und stellt die Ausbildung sowie die Verwaltung von Mutationen und Berechtigungen sicher.
-        """@de,
-        """
-        The Information Technology Management Division is responsible for the strategic planning, implementation, and security of IT within the FOAG, including the management of projects, budgets, and specialized applications.
-        It serves as an interface with service providers, coordinates change management processes, and ensures training as well as the administration of modifications and access rights.
-        """@en,
-        """
-        Le Secteur Gestion Informatique est responsable de la planification stratégique, de la mise en œuvre et de la sécurité de l’informatique au sein de l’OFAG, y compris la gestion des projets, des budgets et des applications spécialisées.
-        Il sert d’interface avec les prestataires de services, coordonne les processus de gestion du changement et assure la formation ainsi que l’administration des modifications et des droits d’accès.
-        """@fr,
-        """
-        Il Settore Gestione Informatica è responsabile della pianificazione strategica, dell’attuazione e della sicurezza dell’informatica all’interno dell’UFAG, compresa la gestione di progetti, budget e applicazioni specializzate.
-        Funziona come interfaccia con i fornitori di servizi, coordina i processi di gestione del cambiamento e garantisce la formazione nonché l’amministrazione delle modifiche e dei diritti di accesso.
-        """@it ;
     owl:sameAs staatskalender:10003237 ;
-    systemmap:abbreviation "FBIF"@de,
-        "ITMD"@en,
-        "SGI"@fr,
-        "SGI"@it .
+    systemmap:abbreviation "FBID"@de .
 
 systemmap:SRu4rav1Rlm2mUMWr a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Ein- und Ausfuhr"@de,
@@ -4116,31 +4084,11 @@ systemmap:SW5qcGjvfz5WXYTVl a systemmap:FederalOrganization ;
     owl:sameAs staatskalender:20035162 .
 
 systemmap:SaVyVVsIDkiDMtQq4 a systemmap:FederalOrganization ;
-    rdfs:label "Fachbereich Marktanalyse"@de,
-        "Market Analysis Division"@en,
-        "Secteur analyses du marché"@fr,
-        "Settore analisi di mercato"@it ;
+    rdfs:label "Fachbereich Agrardaten und Marktanalysen"@de,
+        "Secteur Données agricoles et analyses du marché"@fr,
+        "Settore Dati agricoli e analisi del mercato"@it ;
     schema:parentOrganization systemmap:S1JvEmah9Tl0698au ;
-    rdfs:comment """
-        Der Fachbereich Marktanalysen informiert regelmässig über die Preisentwicklung in den Agrarmärkten mit dem Ziel, die Markttransparenz zu erhöhen und langfristige Entwicklungen aufzuzeigen.
-        Dazu werden in verschiedenen Marktbereichen Preise entlang der Wertschöpfungsketten erhoben und ausgewiesen sowie datengestützte Marktanalysen erstellt.
-        """@de,
-        """
-        The Market Analysis Division regularly provides information on price developments in agricultural markets with the aim of increasing market transparency and highlighting long-term trends.
-        To this end, prices are collected and reported along the value chains in various market sectors, and data-driven market analyses are created.
-        """@en,
-        """
-        Le Secteur analyses du marché informe régulièrement sur l'évolution des prix sur les marchés agricoles dans le but d'accroître la transparence du marché et de mettre en évidence les tendances à long terme.
-        À cette fin, les prix sont collectés et publiés tout au long des chaînes de valeur dans divers secteurs du marché, et des analyses de marché basées sur les données sont élaborées.
-        """@fr,
-        """
-        Il Settore analisi di mercato informa regolarmente sull'andamento dei prezzi nei mercati agricoli con l'obiettivo di aumentare la trasparenza del mercato e evidenziare le tendenze a lungo termine.
-        A tal fine, i prezzi vengono raccolti e riportati lungo le catene del valore in vari settori di mercato e vengono create analisi di mercato basate sui dati.
-        """@it ;
-    systemmap:abbreviation "FBMA"@de,
-        "MAD"@en,
-        "SAM"@fr,
-        "SAM"@it ;
+    systemmap:abbreviation "FBAM"@de ;
     systemmap:hasLegalBasis LwG:art_27,
         <https://www.fedlex.admin.ch/eli/cc/1999/71> .
 
@@ -4271,7 +4219,7 @@ systemmap:SieZtzwlMAxzFY1op a systemmap:FederalOrganization ;
         "Business Intelligence Competence Center"@en,
         "Centre de compétence Business Intelligence"@fr,
         "Centro di competenza Business Intelligence"@it ;
-    schema:parentOrganization systemmap:S1JvEmah9Tl0698au ;
+    schema:parentOrganization systemmap:SFAwQAwxBcNnaURgO ;
     rdfs:comment """  
         Das Business Intelligence Competence Center (BI) ist verantwortlich für die Entwicklung und Umsetzung der BI-Strategie sowie die Planung und Durchführung von BI-Projekten.  
         Zu seinen Aufgaben gehören die Datenvisualisierung, das Reporting, die Beratung und Schulung von BI-Fachanwendern sowie die Analyse, Modellierung und Integration von Daten.  

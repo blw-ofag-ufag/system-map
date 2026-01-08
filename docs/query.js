@@ -93,9 +93,7 @@ SELECT DISTINCT ?predicate ?label ?labelLang ?comment ?commentLang ?domain ?rang
 WHERE {
   GRAPH <https://lindas.admin.ch/foag/system-map> {
     VALUES ?predicate {
-      dcterms:isPartOf prov:wasDerivedFrom schema:parentOrganization systemmap:operates
-      systemmap:owns systemmap:contains systemmap:usesMasterData schema:memberOf
-      service:provides service:consumes systemmap:access systemmap:references
+      ${predicateValues}
     }
     
     # This ensures we only get metadata for predicates that are actually in use

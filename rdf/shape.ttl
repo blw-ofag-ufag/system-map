@@ -389,3 +389,19 @@ systemmap:UsesIdentifierRangeShape
     sh:targetObjectsOf systemmap:usesIdentifier ;
     sh:class systemmap:Identifier ;
     sh:message "Objects of systemmap:usesIdentifier must be a systemmap:Identifier" .
+
+# ------------------------------------------------------------------------------
+# 2.16. Domain and Range check for systemmap:develops and systemmap:developedBy
+# ------------------------------------------------------------------------------
+
+systemmap:DevelopsDomainShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf systemmap:develops ;
+    sh:class schema:Organization ;
+    sh:message "The subject of systemmap:develops must be a schema:Organization" .
+
+systemmap:DevelopedByRangeShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf systemmap:developedBy ;
+    sh:class schema:Organization ;
+    sh:message "The object of systemmap:developedBy must be a schema:Organization" .

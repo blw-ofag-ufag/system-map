@@ -117,7 +117,8 @@ const APP_CONFIG = {
         provides: "service:provides",
         consumes: "service:consumes",
         access: "systemmap:access",
-        references: "systemmap:references"
+        references: "systemmap:references",
+        develops: "systemmap:develops"
     },
 
     // A list of predicates that should be rendered as dashed lines in the graph
@@ -128,7 +129,8 @@ const APP_CONFIG = {
         "https://agriculture.ld.admin.ch/system-map/owns",
         "https://agriculture.ld.admin.ch/system-map/usesMasterData",
         "https://agriculture.ld.admin.ch/system-map/access",
-        "https://agriculture.ld.admin.ch/system-map/references"
+        "https://agriculture.ld.admin.ch/system-map/references",
+        "https://agriculture.ld.admin.ch/system-map/develops"
     ],
 
     // Maps RDF class IRIs to the group names used for styling and filtering

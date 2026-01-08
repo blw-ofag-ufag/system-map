@@ -1708,7 +1708,8 @@ systemmap:SXcby9KwakDGhBdP a schema:SoftwareApplication ;
         "ACmobile"@en,
         "ACmobile"@fr,
         "ACmobile"@it ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    service:consumes systemmap:SAGHyCxJM29RiSsV8,
+        systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         ACmobile ist eine plattformunabhängige, mobile Lösung für die elektronische Erfassung von Kontrollergebnissen und Massnahmen.
         """@de,
@@ -2793,15 +2794,20 @@ systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
 
 systemmap:S1u8DDdB8YZ67H5l5 a dcat:Dataset ;
     rdfs:label "Kontrolldaten"@de ;
+    rdfs:comment """
+        Umfassender Datensatz zum landwirtschaftlichen Kontrollwesen.
+        Die Datenstruktur bildet den gesamten Kontrollzyklus ab, differenziert nach Vorgaben (Soll) und effektiver Durchführung (Ist).
+        Dies umfasst die Dokumentation der Kontrollaktivitäten auf Betriebsebene einschliesslich Akteurszuweisung, zeitlicher Einordnung, Prüfergebnissen sowie abgeleiteter Massnahmen oder Sanktionen.
+        """@de ;
     systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe .
 
 systemmap:S1u8FFdB8YZ67H5X6 a dcat:Dataset ;
     rdfs:label "Kontrollinhalte"@de ;
     dcterms:isPartOf systemmap:S1u8DDdB8YZ67H5l5 ;
     rdfs:comment """
-        Auflistung aller zu kontrollierenden Punkte gemäss DZV [...].
-        Jeder sogenannte Kontrollpunkt wird in Deutsch, Französisch und Italienisch gehalten und hat einen Namen und eine Beschreibung.
-        Die Kontrollpunkte sind in Bereiche, Rubriken und Gruppen organisiert.
+        Umfassender Merkmalskatalog der landwirtschaftlichen Kontrollinhalte, welcher die normativen Vorgaben (bspw. gemäss DZV) in eine systematische Prüfstruktur übersetzt.
+        Der Datensatz gliedert die Kontrollmaterie hierarchisch in Kontrollbereiche, Rubriken, Punktegruppen und einzelne Kontrollpunkte und stellt die entsprechenden Bezeichnungen sowie Beschreibungen als verbindliche Referenz für den Vollzug und die Erfassung der Kontrollresultate bereit.
+        Sämtliche Beschreibungen sind auf Deutsch, Französisch sowie Italienisch vorhanden.
         """@de .
 
 systemmap:S2XkdeKmzCiJFCTb a dcat:Dataset ;
@@ -2915,7 +2921,10 @@ systemmap:S8cKNg0hfPy97TUB a dcat:Dataset ;
 
 systemmap:S8i4yv54m4VbGEqza a dcat:Dataset ;
     rdfs:label "Tierdaten"@de ;
-    systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe .
+    dcterms:isPartOf systemmap:SY3MaMtlZPlOgUn4j ;
+    rdfs:comment """
+        Daten zu den Tierbeständen aller in ISVet-SOA gehaltener Betriebe.
+        """@de .
 
 systemmap:S9J1HTMKIxnCgmYc a dcat:Dataset ;
     rdfs:label "Pflanzenschutzmittel"@de,
@@ -3156,6 +3165,11 @@ systemmap:SXIIUKFjUBDaaTzh6 a dcat:Dataset ;
 
 systemmap:SY3MaMtlZPlOgUn4j a dcat:Dataset ;
     rdfs:label "Betriebsdaten"@de ;
+    rdfs:comment """
+        Stammdatenbestand der landwirtschaftlichen Betriebe.
+        Der Datensatz aggregiert die administrativen Registerdaten (u. a. Anmeldungs-, Tier- und Pflanzenbaudaten), die zur Erstellung des Betriebsblattes erforderlich sind.
+        Dabei bildet er die Verknüpfungen zwischen Betrieb und Bewirtschafter (Eigentümer) sowie die referenziellen Identifikatoren (BUR-Nummer, UID, AGIS-ID, TVD-Nr., sowie die kantonale Betriebs-ID) ab.
+        """@de ;
     systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe ;
     systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5,
         systemmap:SvNriWslaOR5xkdw .
@@ -5127,7 +5141,13 @@ systemmap:S6lhRFiEflanK2rcl a termdat:52451 ;
 
 systemmap:SAGHyCcjQ9LRiSsV0 a termdat:52451 ;
     rdfs:label "Kontrollergebnisse"@de ;
-    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se .
+    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se ;
+    rdfs:comment """
+        Systematische Erfassung der Prüfbefunde einer jeweiligen Kontrolle.
+        Der Datensatz dokumentiert primär Abweichungen in Form von Mängeln unter Angabe von Schweregrad, Umfang und Wiederholung.
+        Ergänzend können Status "Nicht kontrolliert" oder "Nicht zutreffend" ausgewiesen werden.
+        Nicht explizit aufgeführte Kontrollpunkte gelten implizit als "ohne Mangel" geprüft.
+        """@de .
 
 systemmap:SCkzllAJGWHIEermB a termdat:52451 ;
     rdfs:label "Nutzerdaten digiFLUX Core"@de ;
@@ -5139,7 +5159,14 @@ systemmap:SCkzllAJGWHIEermB a termdat:52451 ;
 
 systemmap:SFZjIqVSzjv6ua4Mz a termdat:52451 ;
     rdfs:label "Kontrollgrunddaten"@de ;
-    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se .
+    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se ;
+    rdfs:comment """
+        Zusammenfassung der definierenden Merkmale und administrativen Rahmenbedingungen eines Kontrollereignisses.
+        Der Datensatz dient der eindeutigen Identifikation der Kontrolle (mittels Inspection-ID)  und dokumentiert die Durchführungsparameter.
+        Dazu zählen der kontrollierte Betrieb, das Datum der Kontrolle, die ausführende Organisation (Kontrollstelle) sowie optional die Kontrolleurin oder der Kontrolleur.
+        Inhaltlich wird die Kontrolle durch den Kontrollgrund (Grundkontrolle, Verdacht, Nachkontrolle, Zwischenkontrolle/Risikokontrolle, Laboranalysen, Andere) sowie die Kontrollart (angemeldet/unangemeldet)  klassifiziert und kann durch generelle Bemerkungen erläutert werden.
+        """@de ;
+    rdfs:seeAlso <https://www.blw.admin.ch/dam/de/sd-web/DrVHoIPp9VQl/AC%20Merkmalskatalog_V4.8.pdf> .
 
 systemmap:SJuklUVKfEwj2Xpc a termdat:52451 ;
     rdfs:label "Kontaktdaten Züchter"@de,
@@ -5201,7 +5228,15 @@ systemmap:SY9n2yTOBWXtZ6se a termdat:52451 ;
         "Data on inspections and inspection results"@en,
         "Données sur les contrôles et les résultats des contrôles"@fr,
         "Dati sui controlli e sui risultati dei controlli"@it ;
-    dcterms:isPartOf systemmap:S1u8DDdB8YZ67H5l5 .
+    dcterms:isPartOf systemmap:S1u8DDdB8YZ67H5l5 ;
+    rdfs:comment """
+        Diese Daten über Kontrollen und Kontrollergebnisse werden von den Kantonen laufend an das BLW übermittelt. (Die Frist hierfür liegt zwischen fünf Tagen und einem Monat.)
+        Die Datensammlung integriert drei wesentliche Teile:
+        die administrativen Daten der Kontrolle (Grunddaten),
+        die detaillierte Erfassung der Prüfbefunde (Ergebnisse) sowie
+        die Dokumentation der vollzogenen rechtlichen Konsequenzen (Massnahmen und Sanktionen).
+        Damit wird die lückenlose Nachvollziehbarkeit des Kontrollprozesses von der Prüfung vor Ort bis zum administrativen Vollzug gewährleistet.
+        """@de .
 
 systemmap:SYYaTBjwIUU2yNIUN a termdat:52451 ;
     rdfs:label "Anwendungen von Pflanzenschutzmittel"@de ;
@@ -5475,5 +5510,10 @@ systemmap:SfXioR1gkj8eDuTF a termdat:52453 ;
         "Data on administrative measures and criminal sanctions"@en,
         "Données sur les mesures administratives et les sanctions pénales"@fr,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
-    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se .
+    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se ;
+    rdfs:comment """
+        Dokumentation der durch die zuständige Vollzugsstelle ergriffenen Folgemassnahmen basierend auf festgestellten Mängeln.
+        Der Datensatz differenziert zwischen direktzahlungsrelevanten Kürzungen (in CHF oder Punkten) und weiteren administrativen oder strafrechtlichen Anordnungen.
+        Dieser Katalog umfasst Massnahmentypen wie Tierhalteverbote, Beschlagnahmungen, Sperren, Bewilligungsentzüge sowie die Einleitung von Strafverfahren oder die Verfügung von Bussen.
+        """@de .
 

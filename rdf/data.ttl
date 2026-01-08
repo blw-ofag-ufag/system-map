@@ -3070,7 +3070,8 @@ systemmap:SKH5iXBfDQX2meMGo a dcat:Dataset ;
     rdfs:label "Obstdaten"@de ;
     dcterms:isPartOf systemmap:SaBrXH2dHae5TTGXD ;
     rdfs:comment """
-        Werden im Rahmen der Strukturdatenerhebung von den Kantonen mitgeliefert, sind aber in einem separaten Kontext entstanden. Für die Obstdaten ist der Fachbereich Pflanzliche Produkte zuständig.
+        Spezifischer Teil der Strukturdaten, der Flächen und Details zu Obstanlagen erfasst.
+        Die Datenstruktur unterscheidet nach Kulturcodes und Dichtepflanzungen gemäss den Vorgaben des Fachbereichs Pflanzliche Produkte.
         """@de .
 
 systemmap:SKoClBiquflDf7yi6 a dcat:Dataset ;
@@ -3113,8 +3114,8 @@ systemmap:SMBGW7qHXQfR1VB9W a dcat:Dataset ;
 systemmap:SOnojYdZDj18fW8Ko a dcat:Dataset ;
     rdfs:label "Betriebliche Jahresmilchleistung"@de ;
     rdfs:comment """
-        Datensatz der aggregierten Jahresmilchleistung (kg) je Betriebseinheit.
-        Die Übermittlung wird als Direkteinspeisung der TSM Treuhand AG in die zentrale AGIS-Datenbank realisiert, ohne Transit über kantonale Infrastrukturen.
+        Datensatz der aggregierten Milchproduktionsdaten (kg Milch) pro Betriebseinheit.
+        Die Daten werden über eine Schnittstelle der TSM Treuhand GmbH (DB Milch) in AGIS integriert und dienen der Überwachung der Milchproduktion sowie statistischen Auswertungen.
         """@de ;
     prov:wasDerivedFrom systemmap:Se6Nt3cqogxz2d10g ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
@@ -3216,14 +3217,15 @@ systemmap:SaBrXH2dHae5TTGXD a dcat:Dataset ;
     rdfs:label "Flächen- und Kulturdaten"@de ;
     dcterms:isPartOf systemmap:SzuDlnYUQMk3HaCb ;
     rdfs:comment """
-        Hauptkulturen, Hangflächen, Biodiversitätsförderflächen, Vernetzungsflächen, Landschaftsqualität, Ressourceneffizienz, Obstanlagen, Insitu-Flächen, Sömmerungsflächen.
+        Kernbestandteil der Strukturdaten, der sämtliche landwirtschaftlichen Nutzflächen nach Kulturart (Hauptkulturen, Zwischenkulturen) und Nutzungstyp (z. B. Biodiversitätsförderflächen) klassifiziert.
+        Beinhaltet auch spezifische Attribute für Hanglagen und Vernetzungsprojekte.
         """@de .
 
 systemmap:SaDr294dHxD5TTDxT a dcat:Dataset ;
     rdfs:label "Daten zum Nährstoffmanagement"@de ;
     dcterms:isPartOf systemmap:SzuDlnYUQMk3HaCb ;
     rdfs:comment """
-        Diese Daten wurden bzw. werden im Rahmen eines Pilotprojektes von den GELAN-Kantonen an AGIS übermittelt. Ob sie ursprünglich aus HODUFLU stammen, ist nicht bekannt.
+        Daten über das Nährstoffmanagement von Betrieben, welche im Rahmen eines Pilotprojektes von den GELAN-Kantonen an AGIS übermittelt wurden bzw. werden.
         """@de .
 
 systemmap:Sb2FM7pKN60PrRwU a dcat:Dataset ;
@@ -3262,6 +3264,11 @@ systemmap:ScCrXM2dHaelTTGLf a dcat:Dataset ;
     dcterms:isPartOf systemmap:SzuDlnYUQMk3HaCb ;
     rdfs:comment """
         Daten zu den Tierbeständen der Betriebe. Diese werden, wenn möglich, von der TVD an Kantonssysteme übermittelt. Da nicht alle Tiere in der TVD registriert werden, ergänzen die Landwirt:innen die Tierbestände in den Kantonssystemen. Von da aus fliessen die Daten zu AGIS.
+        """@de,
+        """
+        Umfasst die detaillierten Tierbestände pro Tierkategorie am Stichtag.
+        Für Rinder und Equiden erfolgt der Abgleich über die TVD-Nummer, während andere Kategorien (z. B. Geflügel) direkt über kantonale Erhebungen gemeldet werden.
+        Die Daten sind Teil der Strukturdatenerhebung.
         """@de .
 
 systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
@@ -5418,21 +5425,9 @@ systemmap:SldiTYOuXQmoC3SV a termdat:52451 ;
         "Inscriptions pour les types de paiements directs"@fr,
         "Iscrizioni per tipi di pagamenti diretti"@it ;
     rdfs:comment """
-        Umfasst den Prozess und die zugehörigen Daten zur Registrierung für unterschiedliche Direktzahlungsarten.
-        Enthalten sind Informationen zu Anmeldeverfahren, Fristen, Voraussetzungen und den verwendeten Formularen zur Antragstellung.
-        """@de,
-        """
-        Covers the process and related data for registration for different types of direct payments.
-        It includes information on registration procedures, deadlines, requirements, and the forms used for application.
-        """@en,
-        """
-        Couvre le processus et les données associées à l'inscription aux différents types de paiements directs.
-        Il comprend des informations sur les procédures d'inscription, les délais, les conditions requises et les formulaires utilisés pour la demande.
-        """@fr,
-        """
-        Copre il processo e i dati relativi alla registrazione per diversi tipi di pagamenti diretti.
-        Include informazioni sulle procedure di iscrizione, le scadenze, i requisiti e i moduli utilizzati per la richiesta.
-        """@it ;
+        Beinhaltet die jährlichen Anmeldedaten (Stichtag im August) für spezifische Direktzahlungsprogramme (z. B. BTS, RAUS, Ressourceneffizienz) sowie für den Ökologischen Leistungsnachweis (ÖLN).
+        Der Datensatz dient primär der Koordination der landwirtschaftlichen Kontrollen im Folgejahr und der Schätzung der finanziellen Beteiligung.
+        """@de ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
 systemmap:SoY82Q0qEk9k0s3w3 a termdat:52451 ;
@@ -5475,28 +5470,10 @@ systemmap:SvNriWslaOR5xkdw a termdat:52451 ;
         "Données des exploitations"@fr,
         "Dati sull'azienda"@it ;
     rdfs:comment """
-        Enthält grundlegende Informationen zu landwirtschaftlichen Betrieben und deren Bewirtschaftern. 
-        Ein Betrieb kann von einer Natürlichen Person, einer Einfachen Gesellschaft, oder einer Juristischen Person bewirtschaftet werden. 
-        Registerdaten enthalten Daten zur Person, Daten zu der Betriebs- und Gemeinschaftsform des Betriebes und Daten zu Beziehungen zwischen Personen und Betrieben. 
-        Registerdaten werden fast täglich aktualisiert.
-        """@de,
-        """
-        Contains basic information on agricultural holdings and their operators. 
-        An agricultural businesses may be managed by a natural person, a simple partnership, or a legal entity. 
-        Register data includes personal data, data on the type of holding and type of community, and data on relationships between persons and holdings. 
-        Register data is updated almost daily.
-        """@en,
-        """
-        Contient des informations de base sur les exploitations agricoles et leurs exploitants. 
-        Une exploitation peut être gérée par une personne physique, une société simple ou une personne morale. 
-        Les données du registre contiennent des informations sur la personne, le type d'exploitation et la forme de communauté de l'exploitation, ainsi que sur les relations entre les personnes et les exploitations. 
-        Les données du registre sont mises à jour presque quotidiennement.
-        """@fr,
-        """Contiene informazioni di base sulle aziende agricole e sui loro gestori. 
-        Un'azienda può essere gestita da una persona fisica, una società semplice o una persona giuridica. 
-        I dati del registro contengono informazioni sulla persona, sulla forma aziendale e comunitaria dell'azienda e sui rapporti tra persone e aziende. 
-        I dati del registro vengono aggiornati quasi quotidianamente.
-        """@it ;
+        Zentraler Stammdatensatz zur Identifikation und Verwaltung aller landwirtschaftlichen Betriebsformen und Personen (Bewirtschafter).
+        Er bildet die Basis für alle anderen Fachdaten in AGIS und steuert die Zugriffsrechte (z. B. Agate).
+        Die Daten werden laufend (fast täglich) aktualisiert und enthalten historische Verläufe von Betriebsstrukturen und Personenidentitäten.
+        """@de ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
     systemmap:informs systemmap:SX1qchbxSZKWI6Up .
 

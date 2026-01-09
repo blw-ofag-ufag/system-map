@@ -2335,6 +2335,7 @@ systemmap:SmWEQ8lVlDS9ZwPkY a schema:SoftwareApplication ;
         Offre funzionalità GIS e soluzioni mobili per i controlli.
         Il sistema gestisce circa 26.000 aziende agricole e 180.000 particelle e dispone di moduli aggiuntivi per la viticoltura (passaporto dell'uva) e la silvicoltura (portale forestale).
         """@it ;
+    systemmap:developedBy zefix:180673 ;
     systemmap:operatedBy systemmap:S3wI1gDSK1eZB4l36,
         systemmap:S4uUJh3cptyvoesgV,
         systemmap:SI9jTsa43C0A052y9,
@@ -4963,6 +4964,9 @@ zefix:1663457 a systemmap:PrivateOrganization ;
 zefix:177634 a systemmap:PrivateOrganization ;
     rdfs:label "Silvestri AG"@de ;
     dcat:landingPage <https://www.silvestri.ch/> .
+
+zefix:180673 a systemmap:PrivateOrganization ;
+    rdfs:label "Softec AG"@de .
 
 zefix:201495 a systemmap:PrivateOrganization ;
     rdfs:label "MSD Animal Health GmbH"@de,

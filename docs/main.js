@@ -258,6 +258,7 @@ async function init() {
             if (searchTerm) {
                 const nodeData = allNodesData[n.id];
                 const isMatch = (
+                    nodeData.id.toLowerCase().includes(searchTerm) ||
                     Object.values(nodeData.name).some(val => val.toLowerCase().includes(searchTerm)) ||
                     Object.values(nodeData.comment).some(val => val.toLowerCase().includes(searchTerm)) ||
                     Object.values(nodeData.abbreviation).some(val => val.toLowerCase().includes(searchTerm))
@@ -362,7 +363,6 @@ async function init() {
         return html;
     };
 
-
     /**
      * Creates the HTML for the domain -> range visual diagram using SVG.
      */
@@ -416,7 +416,6 @@ async function init() {
         return html;
     };
 
-
     const updateUIForLanguage = () => {
         const TEXT = APP_CONFIG.UI_TEXT[currentLang];
         document.title = TEXT.appTitle;
@@ -463,7 +462,6 @@ async function init() {
             populateSettings();
         }
     };
-
 
     // --- INITIALIZE GRAPH & UI ---
     
@@ -571,7 +569,6 @@ async function init() {
         setParamsWithoutReload({ lang: currentLang });
         updateUIForLanguage();
     });
-
 
     // --- FINAL UI POPULATION ---
     updateUIForLanguage();

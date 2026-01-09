@@ -26,6 +26,21 @@ If instead you are interested in the *actual* data, you can have a look at the f
 
 Actually, there is a python script *reasoning* over the two files. This is described in more detail below.
 
+# 🔎 Subgraphs
+
+Subgraphs of the system map allow inspecting one part of the overall system without being disturbed by the multitude of connected nodes around it. Have a look at the subgraphs for [MARS III](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=SaAA0IQkj02jgbLEb) and [digiFLUX](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=Si8UnIQkj02jgbLEb). If you want a complete list of all subgraphs and their size, you can [query the system map accordingly](https://s.zazuko.com/221bFQW).
+
+# ⚙️ Examples of SPARQL queries from LINDAS
+
+The DigiAgriFoodCH System Map graph on LINDAS can be queried to return various tables as *data products* from one source. Here are some examples:
+
+- [Is there (sensitive) personal data in a system?](https://s.zazuko.com/2qaY2av)
+- [Table of Cantons, their agricultural IT-Systems and the respective operating agency (if given)](https://s.zazuko.com/2vz9Y8X)
+- [Table of federal offices, suborganizations and information they have access to](https://s.zazuko.com/2Upq8Qj)
+- [Label and comment length for all objects](https://s.zazuko.com/2aYzkVt)
+- [Get the name and address of all the companies](https://s.zazuko.com/3jQpKD3)
+- [Count the number of datasets in each system, considering it may have subsystems and subdatasets.](https://s.zazuko.com/2rW3HSS) Query written as a one-liner property path.
+
 # 🔄 Run the data processing pipeline
 
 To run the data processing and upload to LINDAS, follow these steps:
@@ -53,56 +68,4 @@ To run the data processing and upload to LINDAS, follow these steps:
   sh upload.sh
   ```
 
-# ⚙️ Setting query parameters in the system map visualization
-
-The visualisation is driven entirely from its own URL.
-Add or change the parameters below to filter what you see or to switch language.
-
-| Parameter          | Values & Format                                                                      | Default           | What it does                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ------------------ | ------------------------------------------------------------------------------------ | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`lang`**         | `de`, `fr`, `it`, `en`                                                               | `de`              | Pick the UI language for labels and comments. If the chosen language is missing, the app falls back to **en → de → fr → it** and shows the fall-back text in *italic*.                                                                                                                                                                                                                                                                             |
-| **`organization`** | `true` \| `false`                                                                    | `true`            | Show or hide **organisations** (`schema:Organization`).                                                                                                                                                                                                                                                                                                                                                                                            |
-| **`system`**       | `true` \| `false`                                                                    | `true`            | Show or hide **IT systems** (`schema:SoftwareApplication`).                                                                                                                                                                                                                                                                                                                                                                                        |
-| **`information`**  | `true` \| `false`                                                                    | `true`            | Show or hide **information units** (`dcat:Dataset`).                                                                                                                                                                                                                                                                                                                                                                                               |
-| **`predicates`**   | *semicolon-, comma- or plus-separated* list of keys<br>`isPartOf;parentOrg;provides` | *(empty)* = *all* | Limit the **edge types** that are fetched from LINDAS. Keys map to properties as follows:<br>`isPartOf` → `dcterms:isPartOf`<br>`wasDerivedFrom` → `prov:wasDerivedFrom`<br>`parentOrg` → `schema:parentOrganization`<br>`operates` → `systemmap:operates`<br>`owns` → `systemmap:owns`<br>`contains` → `systemmap:contains`<br>`usesMasterData` → `systemmap:usesMasterData`<br>`memberOf` → `schema:memberOf`<br>`provides` → `service:provides` |
-| **`subgraph`**     | Select a subgraph by its IRI slug (only `systemmap` base URL is allowed).            |                   | This parameter sets a filter, only nodes have a connection via `dct:isPartOf` to the subgraph collection are shown. The page title is set to the subgraph title as well. Example: `?subgraph=Si8UnIQkj02jgbLE` |
-
-## Some examples
-
-Only systems and their data flows, French UI:
-
-```
-…/index.html?lang=fr&organization=false
-```
-
-Everything in German, but show **only** “is part of”, “parent organisation” and “provides” edges:
-
-```
-…/index.html?lang=de&predicates=isPartOf;parentOrg;provides
-```
-
-If the `predicates` parameter is omitted (or all keys are invalid) the
-visualisation falls back to **all** edge types listed above.
-
-Subgraph filtering:
-
-```
-.../index.html?lang=de&subgraph=Si8UnIQkj02jgbLE
-```
-
-Have a look at the subgraphs for [MARS III](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=SaAA0IQkj02jgbLEb) and [digiFLUX](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=Si8UnIQkj02jgbLEb). If you want a complete list of subgraphs, you can [query the system map accordingly](https://s.zazuko.com/221bFQW).
-
-# 🔎 Examples of SPARQL queries from LINDAS
-
-The DigiAgriFoodCH System Map graph on LINDAS can be queried to return various tables as *data products* from one source. Here are some examples:
-
-- [Is there (sensitive) personal data in a system?](https://s.zazuko.com/2qaY2av)
-- [Table of Cantons, their agricultural IT-Systems and the respective operating agency (if given)](https://s.zazuko.com/2vz9Y8X)
-- [Table of federal offices, suborganizations and information they have access to](https://s.zazuko.com/2Upq8Qj)
-- [Label and comment length for all objects](https://s.zazuko.com/2aYzkVt)
-- [Get the name and address of all the companies](https://s.zazuko.com/3jQpKD3)
-- [Count the number of datasets in each system, considering it may have subsystems and subdatasets.](https://s.zazuko.com/2rW3HSS) Query written as a one-liner property path.
-
-# 📚 Further documentation
-
-For a more detailed and technical documentation of the DigiAgriFoodCH System Map, we refer to our dedicated [GitHub wiki page](https://github.com/blw-ofag-ufag/system-map/wiki). There, you can learn about the repository structure, the thoughts behind the ontology, how the data is structured and how it is processed before being pushed to LINDAS.
+You can find the rest of the technical documentation [on the Wiki of this repository](https://github.com/blw-ofag-ufag/system-map/wiki). There, the ontology, the data processing pipeline and the visualization tool are explained in much more detail.

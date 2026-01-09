@@ -1,0 +1,62 @@
+# LABEL AND COMMENT LENGTH FOR ALL OBJECTS
+# This table shows the string length (number of characters) for all
+# labels and comments of all objects in the system map. It does so separately
+# for German, French, Italian and English labels or comments.
+
+PREFIX fn: <http://www.w3.org/2005/xpath-functions#>
+PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
+SELECT 
+  (?x AS ?URI) 
+  (fn:string-length(?labelDE) AS ?llde) 
+  (fn:string-length(?commentDE) AS ?clde)
+  (fn:string-length(?labelFR) AS ?llfr) 
+  (fn:string-length(?commentFR) AS ?clfr)
+  (fn:string-length(?labelIT) AS ?llit) 
+  (fn:string-length(?commentIT) AS ?clit)
+  (fn:string-length(?labelEN) AS ?llen) 
+  (fn:string-length(?commentEN) AS ?clen)
+WHERE {
+  GRAPH <https://lindas.admin.ch/foag/system-map> {
+    ?x a ?class .
+    
+    OPTIONAL {
+      ?x rdfs:label ?labelDE .
+      FILTER(LANG(?labelDE) = "de")
+    }
+    OPTIONAL {
+      ?x rdfs:comment ?commentDE .
+      FILTER(LANG(?commentDE) = "de")
+    }
+    
+    OPTIONAL {
+      ?x rdfs:label ?labelFR .
+      FILTER(LANG(?labelFR) = "fr")
+    }
+    OPTIONAL {
+      ?x rdfs:comment ?commentFR .
+      FILTER(LANG(?commentFR) = "fr")
+    }
+    
+    OPTIONAL {
+      ?x rdfs:label ?labelIT .
+      FILTER(LANG(?labelIT) = "it")
+    }
+    OPTIONAL {
+      ?x rdfs:comment ?commentIT .
+      FILTER(LANG(?commentIT) = "it")
+    }
+    
+    OPTIONAL {
+      ?x rdfs:label ?labelEN .
+      FILTER(LANG(?labelEN) = "en")
+    }
+    OPTIONAL {
+      ?x rdfs:comment ?commentEN .
+      FILTER(LANG(?commentEN) = "en")
+    }
+
+    VALUES ?class { schema:Organization schema:SoftwareApplication systemmap:Information }
+  }
+}

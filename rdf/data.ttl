@@ -3263,11 +3263,8 @@ systemmap:ScCrXM2dHaelTTGLf a dcat:Dataset ;
     rdfs:label "Tierdaten"@de ;
     dcterms:isPartOf systemmap:SzuDlnYUQMk3HaCb ;
     rdfs:comment """
-        Daten zu den Tierbeständen der Betriebe. Diese werden, wenn möglich, von der TVD an Kantonssysteme übermittelt. Da nicht alle Tiere in der TVD registriert werden, ergänzen die Landwirt:innen die Tierbestände in den Kantonssystemen. Von da aus fliessen die Daten zu AGIS.
-        """@de,
-        """
         Umfasst die detaillierten Tierbestände pro Tierkategorie am Stichtag.
-        Für Rinder und Equiden erfolgt der Abgleich über die TVD-Nummer, während andere Kategorien (z. B. Geflügel) direkt über kantonale Erhebungen gemeldet werden.
+        Für Rinder und Equiden erfolgt der Abgleich über die TVD-Nummer, während andere Kategorien direkt über kantonale Erhebungen gemeldet werden.
         Die Daten sind Teil der Strukturdatenerhebung.
         """@de .
 

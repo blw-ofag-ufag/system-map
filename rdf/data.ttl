@@ -810,6 +810,29 @@ systemmap:S6J4iyI6nMI2RCXSY a schema:SoftwareApplication ;
         "CePa è un'applicazione IT per la gestione digitale delle procedure e della corrispondenza nell'ambito del sistema del passaporto delle piante e della certificazione ufficiale del materiale di propagazione. Ottimizza i processi di certificazione e garantisce il rispetto delle normative fitosanitarie. In questo modo, supporta la tracciabilità e il controllo della qualità del materiale vegetale."@it ;
     systemmap:operatedBy systemmap:SFL2DYxeNnVaFsv64 .
 
+systemmap:S7DUZFs3emPOPYErT a schema:SoftwareApplication ;
+    rdfs:label "Neues interkantonales Agrarsystem"@de ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    rdfs:comment """
+        Gemeinsame IT-Plattform von 12 Schweizer Kantonen für den Vollzug der Landwirtschaftspolitik. 
+        NikA dient der Verwaltung von Strukturdaten, Direktzahlungen und ökologischen Massnahmen. 
+        Technisch basiert das System auf der Plattform "LAWIS"
+        und löst die Altsysteme "Agricola" und "agriPortal" ab.
+        Die Geschäftsstelle liegt bei eOperations Schweiz.
+        """@de ;
+    systemmap:abbreviation "NikA"@de ;
+    systemmap:developedBy zefix:180673 ;
+    systemmap:operatedBy systemmap:SAz4vX5eiySS4vwuk,
+        systemmap:SDMGFgrGMHxc0eoLM,
+        systemmap:SDp3fNLQF81wWfMDp,
+        systemmap:SEoV4sz2peVmH5wY0,
+        systemmap:SJJVVNtVPxf8nt8VM,
+        systemmap:SNWHuNKVk7ijs7Cbc,
+        systemmap:SU0OUwGdItzXRya4Q,
+        systemmap:SU6T65pDC37fWWSHG,
+        systemmap:SVpDMEiTfIVQsNzT8,
+        systemmap:SoVAiCrMPYG2LJxsA .
+
 systemmap:S7aG1r5IoOvAalIFb a schema:SoftwareApplication ;
     rdfs:label "KGS"@de,
         "KGS"@en,
@@ -1832,18 +1855,8 @@ systemmap:SZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
         Oltre ai pagamenti diretti, supporta anche settori come i miglioramenti strutturali, il diritto fondiario e degli affitti, nonché la protezione della natura.
         Più di 21.000 agricoltori e 1.000 dipendenti amministrativi utilizzano il sistema, che gestisce flussi finanziari di oltre 1 miliardo di franchi svizzeri all'anno.
         """@it ;
-    systemmap:operatedBy systemmap:SAz4vX5eiySS4vwuk,
-        systemmap:SDMGFgrGMHxc0eoLM,
-        systemmap:SDp3fNLQF81wWfMDp,
-        systemmap:SEoV4sz2peVmH5wY0,
-        systemmap:SJJVVNtVPxf8nt8VM,
-        systemmap:SNWHuNKVk7ijs7Cbc,
-        systemmap:STqW9eQHHZNwyCH8i,
-        systemmap:SU0OUwGdItzXRya4Q,
-        systemmap:SU6T65pDC37fWWSHG,
-        systemmap:SUqub30lwOqlTtDN2,
-        systemmap:SVpDMEiTfIVQsNzT8,
-        systemmap:SoVAiCrMPYG2LJxsA .
+    systemmap:operatedBy systemmap:STqW9eQHHZNwyCH8i,
+        systemmap:SUqub30lwOqlTtDN2 .
 
 systemmap:SaOtqyAB5qm1luNuX a schema:SoftwareApplication ;
     rdfs:label "GVE-Rechner"@de,
@@ -2322,6 +2335,7 @@ systemmap:SmWEQ8lVlDS9ZwPkY a schema:SoftwareApplication ;
         Offre funzionalità GIS e soluzioni mobili per i controlli.
         Il sistema gestisce circa 26.000 aziende agricole e 180.000 particelle e dispone di moduli aggiuntivi per la viticoltura (passaporto dell'uva) e la silvicoltura (portale forestale).
         """@it ;
+    systemmap:developedBy zefix:180673 ;
     systemmap:operatedBy systemmap:S3wI1gDSK1eZB4l36,
         systemmap:S4uUJh3cptyvoesgV,
         systemmap:SI9jTsa43C0A052y9,
@@ -4951,6 +4965,9 @@ zefix:177634 a systemmap:PrivateOrganization ;
     rdfs:label "Silvestri AG"@de ;
     dcat:landingPage <https://www.silvestri.ch/> .
 
+zefix:180673 a systemmap:PrivateOrganization ;
+    rdfs:label "Softec AG"@de .
+
 zefix:201495 a systemmap:PrivateOrganization ;
     rdfs:label "MSD Animal Health GmbH"@de,
         "MSD Animal Health LLC"@en,
@@ -5343,7 +5360,8 @@ systemmap:SakCt52w8AKrsSXi a termdat:52451 ;
         "Information from the structural data survey"@en,
         "Informations de l'enquête sur les données structurelles"@fr,
         "Informazioni dall'indagine sui dati strutturali"@it ;
-    systemmap:containedIn systemmap:SMjqlEoVCR9wpTyN1,
+    systemmap:containedIn systemmap:S7DUZFs3emPOPYErT,
+        systemmap:SMjqlEoVCR9wpTyN1,
         systemmap:SPWOFHR512FuAc25b,
         systemmap:SZ9LRAuSt2EOvBpqY,
         systemmap:SmWEQ8lVlDS9ZwPkY,

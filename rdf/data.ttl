@@ -16,23 +16,34 @@
 
 systemmap:SAAAX37V802JgbLEb a dcmitype:Collection ;
     rdfs:label "AGIS Systemarchitektur"@de ;
-    systemmap:containsNodes systemmap:S9SbhGAwWjtvcRIZ,
+    systemmap:containsNodes systemmap:S1JvEmah9Tl0698au,
+        systemmap:S2tIdqNmt3uS5Ny6D,
+        systemmap:S9SbhGAwWjtvcRIZ,
         systemmap:SDLEUPczkJ9AWZeC,
         systemmap:SDqb9NPoB6n3MZf2,
         systemmap:SE8y4MuFWW5BKqK92,
         systemmap:SHyBeGX0LsQwjJ6Z,
+        systemmap:SKH5iXBfDQX2meMGo,
         systemmap:SMjqlEoVCR9wpTyN1,
         systemmap:SNbhMvt3Btta1U1d6,
+        systemmap:SOnojYdZDj18fW8Ko,
         systemmap:SPWOFHR512FuAc25b,
         systemmap:SQ2MIhpz1CvdqK6f,
+        systemmap:SQ3N7dTc23t2wzXr2,
         systemmap:SX1qchbxSZKWI6Up,
+        systemmap:SYOd1TkacTh6cr0xP,
         systemmap:SZ5quKnfPEEV1CVmE,
         systemmap:SZ9LRAuSt2EOvBpqY,
+        systemmap:SaBrXH2dHae5TTGXD,
+        systemmap:SaVyVVsIDkiDMtQq4,
         systemmap:SakCt52w8AKrsSXi,
+        systemmap:ScCrXM2dHaelTTGLf,
+        systemmap:Se6Nt3cqogxz2d10g,
         systemmap:SfkMzUrMhERjP9vhy,
         systemmap:SldiTYOuXQmoC3SV,
         systemmap:SmWEQ8lVlDS9ZwPkY,
         systemmap:SpR2aDraNmiUXz55J,
+        systemmap:SqeNr0H0FGL6Uv5Rr,
         systemmap:SuEtT7joC8HXVSfF,
         systemmap:SvDlxaJ5YMkuZGH6k,
         systemmap:SvNriWslaOR5xkdw,
@@ -1708,7 +1719,8 @@ systemmap:SXcby9KwakDGhBdP a schema:SoftwareApplication ;
         "ACmobile"@en,
         "ACmobile"@fr,
         "ACmobile"@it ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    service:consumes systemmap:SAGHyCxJM29RiSsV8,
+        systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
         ACmobile ist eine plattformunabhängige, mobile Lösung für die elektronische Erfassung von Kontrollergebnissen und Massnahmen.
         """@de,
@@ -2793,15 +2805,20 @@ systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
 
 systemmap:S1u8DDdB8YZ67H5l5 a dcat:Dataset ;
     rdfs:label "Kontrolldaten"@de ;
+    rdfs:comment """
+        Umfassender Datensatz zum landwirtschaftlichen Kontrollwesen.
+        Die Datenstruktur bildet den gesamten Kontrollzyklus ab, differenziert nach Vorgaben (Soll) und effektiver Durchführung (Ist).
+        Dies umfasst die Dokumentation der Kontrollaktivitäten auf Betriebsebene einschliesslich Akteurszuweisung, zeitlicher Einordnung, Prüfergebnissen sowie abgeleiteter Massnahmen oder Sanktionen.
+        """@de ;
     systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe .
 
 systemmap:S1u8FFdB8YZ67H5X6 a dcat:Dataset ;
     rdfs:label "Kontrollinhalte"@de ;
     dcterms:isPartOf systemmap:S1u8DDdB8YZ67H5l5 ;
     rdfs:comment """
-        Auflistung aller zu kontrollierenden Punkte gemäss DZV [...].
-        Jeder sogenannte Kontrollpunkt wird in Deutsch, Französisch und Italienisch gehalten und hat einen Namen und eine Beschreibung.
-        Die Kontrollpunkte sind in Bereiche, Rubriken und Gruppen organisiert.
+        Umfassender Merkmalskatalog der landwirtschaftlichen Kontrollinhalte, welcher die normativen Vorgaben (bspw. gemäss DZV) in eine systematische Prüfstruktur übersetzt.
+        Der Datensatz gliedert die Kontrollmaterie hierarchisch in Kontrollbereiche, Rubriken, Punktegruppen und einzelne Kontrollpunkte und stellt die entsprechenden Bezeichnungen sowie Beschreibungen als verbindliche Referenz für den Vollzug und die Erfassung der Kontrollresultate bereit.
+        Sämtliche Beschreibungen sind auf Deutsch, Französisch sowie Italienisch vorhanden.
         """@de .
 
 systemmap:S2XkdeKmzCiJFCTb a dcat:Dataset ;
@@ -2915,7 +2932,10 @@ systemmap:S8cKNg0hfPy97TUB a dcat:Dataset ;
 
 systemmap:S8i4yv54m4VbGEqza a dcat:Dataset ;
     rdfs:label "Tierdaten"@de ;
-    systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe .
+    dcterms:isPartOf systemmap:SY3MaMtlZPlOgUn4j ;
+    rdfs:comment """
+        Daten zu den Tierbeständen aller in ISVet-SOA gehaltener Betriebe.
+        """@de .
 
 systemmap:S9J1HTMKIxnCgmYc a dcat:Dataset ;
     rdfs:label "Pflanzenschutzmittel"@de,
@@ -3046,6 +3066,14 @@ systemmap:SIsQ6LSUJc3xbG9B a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
+systemmap:SKH5iXBfDQX2meMGo a dcat:Dataset ;
+    rdfs:label "Obstdaten"@de ;
+    dcterms:isPartOf systemmap:SaBrXH2dHae5TTGXD ;
+    rdfs:comment """
+        Spezifischer Teil der Strukturdaten, der Flächen und Details zu Obstanlagen erfasst.
+        Die Datenstruktur unterscheidet nach Kulturcodes und Dichtepflanzungen gemäss den Vorgaben des Fachbereichs Pflanzliche Produkte.
+        """@de .
+
 systemmap:SKoClBiquflDf7yi6 a dcat:Dataset ;
     rdfs:label "Rohdaten der Datenlieferanten"@de,
         "Raw data from data suppliers"@en,
@@ -3082,6 +3110,15 @@ systemmap:SMBGW7qHXQfR1VB9W a dcat:Dataset ;
     rdfs:label "Mineraldünger"@de ;
     dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
     prov:wasDerivedFrom systemmap:SZBHsREMx369FArg .
+
+systemmap:SOnojYdZDj18fW8Ko a dcat:Dataset ;
+    rdfs:label "Betriebliche Jahresmilchleistung"@de ;
+    rdfs:comment """
+        Datensatz der aggregierten Milchproduktionsdaten (kg Milch) pro Betriebseinheit.
+        Die Daten werden über eine Schnittstelle der TSM Treuhand GmbH (DB Milch) in AGIS integriert und dienen der Überwachung der Milchproduktion sowie statistischen Auswertungen.
+        """@de ;
+    prov:wasDerivedFrom systemmap:Se6Nt3cqogxz2d10g ;
+    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
 systemmap:SOqI5Nd7eaHDXIhDG a dcat:Dataset ;
     rdfs:label "Hof- und Recycling-Dünger"@de ;
@@ -3156,6 +3193,11 @@ systemmap:SXIIUKFjUBDaaTzh6 a dcat:Dataset ;
 
 systemmap:SY3MaMtlZPlOgUn4j a dcat:Dataset ;
     rdfs:label "Betriebsdaten"@de ;
+    rdfs:comment """
+        Stammdatenbestand der landwirtschaftlichen Betriebe.
+        Der Datensatz aggregiert die administrativen Registerdaten (u. a. Anmeldungs-, Tier- und Pflanzenbaudaten), die zur Erstellung des Betriebsblattes erforderlich sind.
+        Dabei bildet er die Verknüpfungen zwischen Betrieb und Bewirtschafter (Eigentümer) sowie die referenziellen Identifikatoren (BUR-Nummer, UID, AGIS-ID, TVD-Nr., sowie die kantonale Betriebs-ID) ab.
+        """@de ;
     systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe ;
     systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5,
         systemmap:SvNriWslaOR5xkdw .
@@ -3170,6 +3212,21 @@ systemmap:SZBHsREMx369FArg a dcat:Dataset ;
     rdfs:seeAlso <https://backend.blw.admin.ch/fileservice/sdweb-docs-prod-blwch-files/files/2024/11/14/0bddf556-3864-4fa4-ada6-a3120e26d6dc.pdf>,
         <https://www.blw.admin.ch/de/duenger> ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
+
+systemmap:SaBrXH2dHae5TTGXD a dcat:Dataset ;
+    rdfs:label "Flächen- und Kulturdaten"@de ;
+    dcterms:isPartOf systemmap:SzuDlnYUQMk3HaCb ;
+    rdfs:comment """
+        Kernbestandteil der Strukturdaten, der sämtliche landwirtschaftlichen Nutzflächen nach Kulturart (Hauptkulturen, Zwischenkulturen) und Nutzungstyp (z. B. Biodiversitätsförderflächen) klassifiziert.
+        Beinhaltet auch spezifische Attribute für Hanglagen und Vernetzungsprojekte.
+        """@de .
+
+systemmap:SaDr294dHxD5TTDxT a dcat:Dataset ;
+    rdfs:label "Daten zum Nährstoffmanagement"@de ;
+    dcterms:isPartOf systemmap:SzuDlnYUQMk3HaCb ;
+    rdfs:comment """
+        Daten über das Nährstoffmanagement von Betrieben, welche im Rahmen eines Pilotprojektes von den GELAN-Kantonen an AGIS übermittelt wurden bzw. werden.
+        """@de .
 
 systemmap:Sb2FM7pKN60PrRwU a dcat:Dataset ;
     rdfs:label "Globale Pflanzenliste"@de,
@@ -3201,6 +3258,15 @@ systemmap:Sb2FM7pKN60PrRwU a dcat:Dataset ;
         Questo sistema facilita la classificazione e lo scambio di informazioni sulle varietà vegetali.
         """@it ;
     systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN .
+
+systemmap:ScCrXM2dHaelTTGLf a dcat:Dataset ;
+    rdfs:label "Tierdaten"@de ;
+    dcterms:isPartOf systemmap:SzuDlnYUQMk3HaCb ;
+    rdfs:comment """
+        Umfasst die detaillierten Tierbestände pro Tierkategorie am Stichtag.
+        Für Rinder und Equiden erfolgt der Abgleich über die TVD-Nummer, während andere Kategorien direkt über kantonale Erhebungen gemeldet werden.
+        Die Daten sind Teil der Strukturdatenerhebung.
+        """@de .
 
 systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
     rdfs:label "Daten zur Milchproduktion"@de,
@@ -5127,7 +5193,13 @@ systemmap:S6lhRFiEflanK2rcl a termdat:52451 ;
 
 systemmap:SAGHyCcjQ9LRiSsV0 a termdat:52451 ;
     rdfs:label "Kontrollergebnisse"@de ;
-    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se .
+    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se ;
+    rdfs:comment """
+        Systematische Erfassung der Prüfbefunde einer jeweiligen Kontrolle.
+        Der Datensatz dokumentiert primär Abweichungen in Form von Mängeln unter Angabe von Schweregrad, Umfang und Wiederholung.
+        Ergänzend können Status "Nicht kontrolliert" oder "Nicht zutreffend" ausgewiesen werden.
+        Nicht explizit aufgeführte Kontrollpunkte gelten implizit als "ohne Mangel" geprüft.
+        """@de .
 
 systemmap:SCkzllAJGWHIEermB a termdat:52451 ;
     rdfs:label "Nutzerdaten digiFLUX Core"@de ;
@@ -5139,7 +5211,14 @@ systemmap:SCkzllAJGWHIEermB a termdat:52451 ;
 
 systemmap:SFZjIqVSzjv6ua4Mz a termdat:52451 ;
     rdfs:label "Kontrollgrunddaten"@de ;
-    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se .
+    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se ;
+    rdfs:comment """
+        Zusammenfassung der definierenden Merkmale und administrativen Rahmenbedingungen eines Kontrollereignisses.
+        Der Datensatz dient der eindeutigen Identifikation der Kontrolle (mittels Inspection-ID)  und dokumentiert die Durchführungsparameter.
+        Dazu zählen der kontrollierte Betrieb, das Datum der Kontrolle, die ausführende Organisation (Kontrollstelle) sowie optional die Kontrolleurin oder der Kontrolleur.
+        Inhaltlich wird die Kontrolle durch den Kontrollgrund (Grundkontrolle, Verdacht, Nachkontrolle, Zwischenkontrolle/Risikokontrolle, Laboranalysen, Andere) sowie die Kontrollart (angemeldet/unangemeldet)  klassifiziert und kann durch generelle Bemerkungen erläutert werden.
+        """@de ;
+    rdfs:seeAlso <https://www.blw.admin.ch/dam/de/sd-web/DrVHoIPp9VQl/AC%20Merkmalskatalog_V4.8.pdf> .
 
 systemmap:SJuklUVKfEwj2Xpc a termdat:52451 ;
     rdfs:label "Kontaktdaten Züchter"@de,
@@ -5201,7 +5280,15 @@ systemmap:SY9n2yTOBWXtZ6se a termdat:52451 ;
         "Data on inspections and inspection results"@en,
         "Données sur les contrôles et les résultats des contrôles"@fr,
         "Dati sui controlli e sui risultati dei controlli"@it ;
-    dcterms:isPartOf systemmap:S1u8DDdB8YZ67H5l5 .
+    dcterms:isPartOf systemmap:S1u8DDdB8YZ67H5l5 ;
+    rdfs:comment """
+        Diese Daten über Kontrollen und Kontrollergebnisse werden von den Kantonen laufend an das BLW übermittelt. (Die Frist hierfür liegt zwischen fünf Tagen und einem Monat.)
+        Die Datensammlung integriert drei wesentliche Teile:
+        die administrativen Daten der Kontrolle (Grunddaten),
+        die detaillierte Erfassung der Prüfbefunde (Ergebnisse) sowie
+        die Dokumentation der vollzogenen rechtlichen Konsequenzen (Massnahmen und Sanktionen).
+        Damit wird die lückenlose Nachvollziehbarkeit des Kontrollprozesses von der Prüfung vor Ort bis zum administrativen Vollzug gewährleistet.
+        """@de .
 
 systemmap:SYYaTBjwIUU2yNIUN a termdat:52451 ;
     rdfs:label "Anwendungen von Pflanzenschutzmittel"@de ;
@@ -5335,21 +5422,9 @@ systemmap:SldiTYOuXQmoC3SV a termdat:52451 ;
         "Inscriptions pour les types de paiements directs"@fr,
         "Iscrizioni per tipi di pagamenti diretti"@it ;
     rdfs:comment """
-        Umfasst den Prozess und die zugehörigen Daten zur Registrierung für unterschiedliche Direktzahlungsarten.
-        Enthalten sind Informationen zu Anmeldeverfahren, Fristen, Voraussetzungen und den verwendeten Formularen zur Antragstellung.
-        """@de,
-        """
-        Covers the process and related data for registration for different types of direct payments.
-        It includes information on registration procedures, deadlines, requirements, and the forms used for application.
-        """@en,
-        """
-        Couvre le processus et les données associées à l'inscription aux différents types de paiements directs.
-        Il comprend des informations sur les procédures d'inscription, les délais, les conditions requises et les formulaires utilisés pour la demande.
-        """@fr,
-        """
-        Copre il processo e i dati relativi alla registrazione per diversi tipi di pagamenti diretti.
-        Include informazioni sulle procedure di iscrizione, le scadenze, i requisiti e i moduli utilizzati per la richiesta.
-        """@it ;
+        Beinhaltet die jährlichen Anmeldedaten (Stichtag im August) für spezifische Direktzahlungsprogramme (z. B. BTS, RAUS, Ressourceneffizienz) sowie für den Ökologischen Leistungsnachweis (ÖLN).
+        Der Datensatz dient primär der Koordination der landwirtschaftlichen Kontrollen im Folgejahr und der Schätzung der finanziellen Beteiligung.
+        """@de ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
 systemmap:SoY82Q0qEk9k0s3w3 a termdat:52451 ;
@@ -5392,28 +5467,10 @@ systemmap:SvNriWslaOR5xkdw a termdat:52451 ;
         "Données des exploitations"@fr,
         "Dati sull'azienda"@it ;
     rdfs:comment """
-        Enthält grundlegende Informationen zu landwirtschaftlichen Betrieben und deren Bewirtschaftern. 
-        Ein Betrieb kann von einer Natürlichen Person, einer Einfachen Gesellschaft, oder einer Juristischen Person bewirtschaftet werden. 
-        Registerdaten enthalten Daten zur Person, Daten zu der Betriebs- und Gemeinschaftsform des Betriebes und Daten zu Beziehungen zwischen Personen und Betrieben. 
-        Registerdaten werden fast täglich aktualisiert.
-        """@de,
-        """
-        Contains basic information on agricultural holdings and their operators. 
-        An agricultural businesses may be managed by a natural person, a simple partnership, or a legal entity. 
-        Register data includes personal data, data on the type of holding and type of community, and data on relationships between persons and holdings. 
-        Register data is updated almost daily.
-        """@en,
-        """
-        Contient des informations de base sur les exploitations agricoles et leurs exploitants. 
-        Une exploitation peut être gérée par une personne physique, une société simple ou une personne morale. 
-        Les données du registre contiennent des informations sur la personne, le type d'exploitation et la forme de communauté de l'exploitation, ainsi que sur les relations entre les personnes et les exploitations. 
-        Les données du registre sont mises à jour presque quotidiennement.
-        """@fr,
-        """Contiene informazioni di base sulle aziende agricole e sui loro gestori. 
-        Un'azienda può essere gestita da una persona fisica, una società semplice o una persona giuridica. 
-        I dati del registro contengono informazioni sulla persona, sulla forma aziendale e comunitaria dell'azienda e sui rapporti tra persone e aziende. 
-        I dati del registro vengono aggiornati quasi quotidianamente.
-        """@it ;
+        Zentraler Stammdatensatz zur Identifikation und Verwaltung aller landwirtschaftlichen Betriebsformen und Personen (Bewirtschafter).
+        Er bildet die Basis für alle anderen Fachdaten in AGIS und steuert die Zugriffsrechte (z. B. Agate).
+        Die Daten werden laufend (fast täglich) aktualisiert und enthalten historische Verläufe von Betriebsstrukturen und Personenidentitäten.
+        """@de ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
     systemmap:informs systemmap:SX1qchbxSZKWI6Up .
 
@@ -5422,6 +5479,7 @@ systemmap:SDqb9NPoB6n3MZf2 a termdat:52453 ;
         "Reductions in direct payments"@en,
         "Réductions des paiements directs"@fr,
         "Riduzioni dei pagamenti diretti"@it ;
+    dcterms:isPartOf systemmap:SQ2MIhpz1CvdqK6f ;
     rdfs:comment """  
         Enthält Informationen über die Regelungen und Verfahren, nach denen Direktzahlungen an landwirtschaftliche Betriebe gekürzt werden.  
         Die Daten umfassen Kriterien, Berechnungsgrundlagen, betroffene Zeiträume und administrative Abläufe, die zu solchen Kürzungen führen können.  
@@ -5437,8 +5495,7 @@ systemmap:SDqb9NPoB6n3MZf2 a termdat:52453 ;
         """  
         Contiene informazioni sulle normative e le procedure in base alle quali i pagamenti diretti alle aziende agricole vengono ridotti.  
         I dati includono criteri, basi di calcolo, periodi interessati e processi amministrativi che possono portare a tali riduzioni.  
-        """@it ;
-    systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
+        """@it .
 
 systemmap:SLvuxq7SeZ6X0GYA a termdat:52453 ;
     rdfs:label "Resultate der Milchprüfung"@de,
@@ -5475,5 +5532,10 @@ systemmap:SfXioR1gkj8eDuTF a termdat:52453 ;
         "Data on administrative measures and criminal sanctions"@en,
         "Données sur les mesures administratives et les sanctions pénales"@fr,
         "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
-    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se .
+    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se ;
+    rdfs:comment """
+        Dokumentation der durch die zuständige Vollzugsstelle ergriffenen Folgemassnahmen basierend auf festgestellten Mängeln.
+        Der Datensatz differenziert zwischen direktzahlungsrelevanten Kürzungen (in CHF oder Punkten) und weiteren administrativen oder strafrechtlichen Anordnungen.
+        Dieser Katalog umfasst Massnahmentypen wie Tierhalteverbote, Beschlagnahmungen, Sperren, Bewilligungsentzüge sowie die Einleitung von Strafverfahren oder die Verfügung von Bussen.
+        """@de .
 

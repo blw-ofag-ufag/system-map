@@ -1,0 +1,41 @@
+# TABLE OF CANTONS AND THEIR AGRICULTURAL IT SYSTEMS
+# This query returns a table of all cantons, their agricultural IT systems,
+# the system's abbreviation (if available) as well as the canton's sub-organization
+# responsible for the IT-system (if provided).
+
+PREFIX schema: <http://schema.org/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
+
+SELECT
+  ?cantonName ?cantonAbbreviation
+  (?subOrgName AS ?subOrganization)
+  ?systemName ?systemAbbreviation
+WHERE {
+  GRAPH <https://lindas.admin.ch/foag/system-map> {
+    # Get all top-level cantons
+    ?canton a systemmap:CantonalOrganization .
+    ?canton rdfs:label ?cantonName .
+    ?canton systemmap:abbreviation ?cantonAbbreviation .
+    FILTER NOT EXISTS { ?canton schema:parentOrganization ?x . }
+    
+    # Either the canton directly operates the software application
+    { 
+      ?canton systemmap:operates ?system .
+    }
+    UNION
+    # Or a sub-organization of the canton operates it.
+    { 
+      ?canton schema:subOrganization ?subOrg .
+      ?subOrg systemmap:operates ?system .
+      ?subOrg rdfs:label ?subOrgName .
+    }
+    
+    ?system a schema:SoftwareApplication .
+    ?system rdfs:label ?systemName .
+    OPTIONAL { ?system systemmap:abbreviation ?systemAbbreviation . }
+    
+    FILTER(LANG(?cantonName)="de"&&LANG(?systemName)="de")
+  }
+}

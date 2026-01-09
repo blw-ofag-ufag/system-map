@@ -1,0 +1,48 @@
+# PRIVATE SECTOR SYSTEM ENGAGEMENT
+# This table aggregates Private Organizations represented in the system map, projecting
+# their administrative metadata (Swiss UID, consolidated address) alongside the number
+# of systems they either develop(ed) or operate.
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
+PREFIX zefix: <https://register.ld.admin.ch/zefix/company/>
+
+SELECT
+  ?organization 
+  ?name ?UID
+  (CONCAT(?street, ", ", ?zip, " ", ?city) AS ?address)
+  (COUNT(DISTINCT ?system) AS ?systems)
+WHERE {
+  ?organization a systemmap:PrivateOrganization .
+  ?organization rdfs:label ?name .
+  FILTER(LANG(?name)="de")
+  
+  # Relationship to systems (for counting)
+  ?organization (systemmap:operates|systemmap:develops) ?system .
+
+  # Address retrieval: Check direct address OR sameAs address
+  OPTIONAL {
+    {
+      ?organization schema:address ?addrNode .
+    } UNION {
+      ?organization owl:sameAs ?sameOrganization .
+      ?sameOrganization schema:address ?addrNode .
+    }
+    ?addrNode schema:streetAddress ?street ;
+              schema:postalCode ?zip ;
+              schema:addressLocality ?city .
+  }
+  
+  # Company UID retrieval
+  OPTIONAL {
+    ?organization schema:identifier [
+      schema:name "CompanyUID" ;
+      schema:value ?UID ;
+    ]
+  }
+}
+GROUP BY ?organization ?name ?UID ?street ?zip ?city
+ORDER BY DESC(?systems)

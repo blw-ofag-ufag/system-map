@@ -1,0 +1,14 @@
+# TABLE OF ALL IT-SYSTEMS AND THE NUMBER OF DATASETS THEY CONTAIN
+# Note: This query makes heavy use of SPARQL property paths.
+
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX schema: <http://schema.org/>
+PREFIX : <https://agriculture.ld.admin.ch/system-map/>
+SELECT ?system (COUNT(*) AS ?N)
+WHERE
+{
+  ?system ^schema:name / dcterms:hasPart* / :contains / dcterms:hasPart* / schema:name ?dataset .
+  FILTER(LANG(?system)="de" && LANG(?dataset)="de")
+}
+GROUP BY ?system
+ORDER BY DESC(?N)

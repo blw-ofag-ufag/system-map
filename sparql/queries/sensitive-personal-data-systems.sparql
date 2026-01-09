@@ -1,0 +1,68 @@
+# IS THERE (SENSITIVE) PERSONAL DATA IN A SYSTEM?
+# This query lists all systems with abbreviations and responsible organization
+# and checks if they contain declared (sensitive) personal data. Note: with the
+# open world assumption, the absence of declared (sensitive) personal data does
+# not mean there is none. Hence, respective cells in the table are blank.
+
+PREFIX termdat: <https://register.ld.admin.ch/termdat/>
+PREFIX schema: <http://schema.org/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
+
+SELECT
+  ?system
+  ?systemName
+  ?systemAbbreviation
+  (GROUP_CONCAT(DISTINCT ?parentName; separator=", ") AS ?organization)
+  ?personal
+  ?sensitive
+WHERE {
+  GRAPH <https://lindas.admin.ch/foag/system-map> {
+    ?system a schema:SoftwareApplication .
+    ?system systemmap:operatedBy ?operator .
+    ?operator schema:parentOrganization* ?parent .
+    FILTER (NOT EXISTS { ?parent schema:parentOrganization ?grandparent . } )
+    ?parent rdfs:label ?parentName .
+    FILTER(LANG(?parentName) = "de")
+    
+    ?system rdfs:label ?systemName .
+    FILTER(LANG(?systemName) = "de")
+    
+    OPTIONAL {
+      ?system systemmap:abbreviation ?systemAbbreviation .
+      FILTER(LANG(?systemAbbreviation) = "de")
+    }
+  }
+  
+  # Logic for Personal Data (termdat:52451)
+  OPTIONAL {
+    SELECT ?system (IF(COUNT(?pi) > 0, "x", "") AS ?personalValue)
+    WHERE {
+      ?system systemmap:contains ?info .
+      OPTIONAL {
+        ?info a termdat:52451 .
+        BIND(?info AS ?pi)
+      }
+    }
+    GROUP BY ?system
+  }
+
+  # COALESCE handles cases where the subquery returns nothing (unbound)
+  BIND(COALESCE(?personalValue, "") AS ?personal)
+  
+  # Logic for Sensitive Personal Data (termdat:52453)
+  OPTIONAL {
+    SELECT ?system (IF(COUNT(?pi) > 0, "x", "") AS ?sensitivePersonalValue)
+    WHERE {
+      ?system systemmap:contains ?info .
+      OPTIONAL {
+        ?info a termdat:52453 .
+        BIND(?info AS ?pi)
+      }
+    }
+    GROUP BY ?system
+  }
+  BIND(COALESCE(?sensitivePersonalValue, "") AS ?sensitive)
+}
+GROUP BY ?system ?systemName ?systemAbbreviation ?personal ?sensitive

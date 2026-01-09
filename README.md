@@ -34,12 +34,11 @@ Subgraphs of the system map allow inspecting one part of the overall system with
 
 The DigiAgriFoodCH System Map graph on LINDAS can be queried to return various tables as *data products* from one source. Here are some examples:
 
-- [Is there (sensitive) personal data in a system?](https://s.zazuko.com/2qaY2av)
-- [Table of Cantons, their agricultural IT-Systems and the respective operating agency (if given)](https://s.zazuko.com/2vz9Y8X)
-- [Table of federal offices, suborganizations and information they have access to](https://s.zazuko.com/2Upq8Qj)
-- [Label and comment length for all objects](https://s.zazuko.com/2aYzkVt)
-- [Get the name and address of all the companies](https://s.zazuko.com/3jQpKD3)
-- [Count the number of datasets in each system, considering it may have subsystems and subdatasets.](https://s.zazuko.com/2rW3HSS) Query written as a one-liner property path.
+- [Is there (sensitive) personal data in a system?](https://s.zazuko.com/xTGEjj)
+- [Label and comment length for all objects in any language](https://s.zazuko.com/3AANqKA)
+- [Private sector system engagement](https://s.zazuko.com/4AqBRH)
+
+You may find more examples [in this directory](sparql/queries/)
 
 # 🔄 Run the data processing pipeline
 

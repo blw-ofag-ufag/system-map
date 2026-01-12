@@ -81,11 +81,13 @@ systemmap:Sa9PcqsvnAMuiYCjx a dcmitype:Collection ;
         systemmap:SeUFazO70bpqCYJ5,
         systemmap:SfXioR1gkj8eDuTF,
         systemmap:Shk82ubUQrICbOXZh,
+        systemmap:SldiTYOuXQmoC3SV,
         systemmap:SqeNr0H0FGL6Uv5Rr,
         systemmap:SsJ9OfSkUgPD8dkz3,
         systemmap:SvDlxaJ5YMkuZGH6k,
         systemmap:SvNriWslaOR5xkdw,
         systemmap:SzB95Xoyj1a1EJNBe,
+        systemmap:SzuDlnYUQMk3HaCb,
         zefix:231059 .
 
 systemmap:SaAA0IQkj02jgbLEb a dcmitype:Collection ;
@@ -2946,13 +2948,6 @@ systemmap:S8cKNg0hfPy97TUB a dcat:Dataset ;
         """@it ;
     systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
-systemmap:S8i4yv54m4VbGEqza a dcat:Dataset ;
-    rdfs:label "Tierdaten"@de ;
-    dcterms:isPartOf systemmap:SY3MaMtlZPlOgUn4j ;
-    rdfs:comment """
-        Daten zu den Tierbeständen aller in ISVet-SOA gehaltener Betriebe.
-        """@de .
-
 systemmap:S9J1HTMKIxnCgmYc a dcat:Dataset ;
     rdfs:label "Pflanzenschutzmittel"@de,
         "Plant Protection Products"@en,
@@ -3214,9 +3209,11 @@ systemmap:SY3MaMtlZPlOgUn4j a dcat:Dataset ;
         Der Datensatz aggregiert die administrativen Registerdaten (u. a. Anmeldungs-, Tier- und Pflanzenbaudaten), die zur Erstellung des Betriebsblattes erforderlich sind.
         Dabei bildet er die Verknüpfungen zwischen Betrieb und Bewirtschafter (Eigentümer) sowie die referenziellen Identifikatoren (BUR-Nummer, UID, AGIS-ID, TVD-Nr., sowie die kantonale Betriebs-ID) ab.
         """@de ;
+    prov:wasDerivedFrom systemmap:SldiTYOuXQmoC3SV,
+        systemmap:SvNriWslaOR5xkdw,
+        systemmap:SzuDlnYUQMk3HaCb ;
     systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe ;
-    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5,
-        systemmap:SvNriWslaOR5xkdw .
+    systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
 systemmap:SZBHsREMx369FArg a dcat:Dataset ;
     rdfs:label "Dünger"@de ;
@@ -5449,10 +5446,7 @@ systemmap:SkvXyKniPPKwKNRqo a termdat:52451 ;
     systemmap:usesMasterData systemmap:SakCt52w8AKrsSXi .
 
 systemmap:SldiTYOuXQmoC3SV a termdat:52451 ;
-    rdfs:label "Anmeldungen für Direktzahlungsarten"@de,
-        "Registrations for direct payment types"@en,
-        "Inscriptions pour les types de paiements directs"@fr,
-        "Iscrizioni per tipi di pagamenti diretti"@it ;
+    rdfs:label "Anmeldungen für Direktzahlungsprogramme"@de ;
     rdfs:comment """
         Beinhaltet die jährlichen Anmeldedaten (Stichtag im August) für spezifische Direktzahlungsprogramme (z. B. BTS, RAUS, Ressourceneffizienz) sowie für den Ökologischen Leistungsnachweis (ÖLN).
         Der Datensatz dient primär der Koordination der landwirtschaftlichen Kontrollen im Folgejahr und der Schätzung der finanziellen Beteiligung.

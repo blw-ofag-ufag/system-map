@@ -63,11 +63,14 @@ systemmap:Sa9PcqsvnAMuiYCjx a dcmitype:Collection ;
         systemmap:S9VcxLSoIIwQjoexY,
         systemmap:SAGHyCcjQ9LRiSsV0,
         systemmap:SAGHyCxJM29RiSsV8,
+        systemmap:SATtn9FhKGDNXjBLM,
         systemmap:SE8y4MuFWW5BKqK92,
         systemmap:SFZjIqVSzjv6ua4Mz,
         systemmap:SGdyOoksCnRRZwi2Q,
         systemmap:SHyBeGX0LsQwjJ6Z,
+        systemmap:SJFcc0xsgJmHYGgDv,
         systemmap:SK6JOIUV1UjrOYD7f,
+        systemmap:SLekJnxsXE7F1IQyK,
         systemmap:SNbhMvt3Btta1U1d6,
         systemmap:SQbNLiw8h9MnSXuyo,
         systemmap:SXcby9KwakDGhBdP,
@@ -77,7 +80,6 @@ systemmap:Sa9PcqsvnAMuiYCjx a dcmitype:Collection ;
         systemmap:ScoeXHl4TgJbke1Yf,
         systemmap:SeUFazO70bpqCYJ5,
         systemmap:SfXioR1gkj8eDuTF,
-        systemmap:Sg6T9dU4npL98bHrb,
         systemmap:Shk82ubUQrICbOXZh,
         systemmap:SqeNr0H0FGL6Uv5Rr,
         systemmap:SsJ9OfSkUgPD8dkz3,
@@ -2133,7 +2135,7 @@ systemmap:Shk82ubUQrICbOXZh a schema:SoftwareApplication ;
         Die zentral zur Verfügung stehenden Daten von Bund und Kantonen können zudem für die Erledigung gesetzlich vorgeschriebener Aufgaben weiterverwendet werden.
         Asan basiert auf den aktuellen Register- und Strukturdaten (Adressdaten, Spezies etc.) aus AGIS, TVD und BUR, sowie auf Amicus- und zusätzlichen manuell erfassten Personendaten.
         """@de ;
-    systemmap:operatedBy systemmap:Sg6T9dU4npL98bHrb .
+    systemmap:operatedBy systemmap:SLekJnxsXE7F1IQyK .
 
 systemmap:Shu8wJsNr6s2DSkrI a schema:SoftwareApplication ;
     rdfs:label "Agrosoft Farmsolution"@de,
@@ -2793,7 +2795,7 @@ systemmap:SzB95Xoyj1a1EJNBe a schema:SoftwareApplication ;
         ISVet-SOA ist ein .NET-basiertes Backend-System, das die zentrale Datenhaltung sowie die Geschäftslogik für die Webapplikationen Acontrol und ASAN bereitstellt.
         Es fungiert als SOAP-Webservice-Schnittstelle, über welche Anwendungen wie Acontrol oder die mobile Erfassung (ACmobile) auf Funktionen und Daten zugreifen.
         """@de ;
-    systemmap:operatedBy systemmap:Sg6T9dU4npL98bHrb .
+    systemmap:operatedBy systemmap:SLekJnxsXE7F1IQyK .
 
 systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
     rdfs:label "Preise und Mengen zum Agrarmarkt"@de ;
@@ -3975,6 +3977,10 @@ systemmap:S8hkiMuKPR8gkm3Zb a systemmap:FederalOrganization ;
         "FDHA"@en,
         "DFI"@fr .
 
+systemmap:SATtn9FhKGDNXjBLM a systemmap:FederalOrganization ;
+    rdfs:label "Abteilung Ressourcen"@de ;
+    schema:parentOrganization systemmap:SJFcc0xsgJmHYGgDv .
+
 systemmap:SE8y4MuFWW5BKqK92 a systemmap:FederalOrganization ;
     rdfs:label "Gruppe Agrarinformationssystem AGIS"@de ;
     schema:parentOrganization systemmap:SaVyVVsIDkiDMtQq4 .
@@ -4094,6 +4100,10 @@ systemmap:SIo1a8l3IT4lBqBJE a systemmap:FederalOrganization ;
         """@it ;
     owl:sameAs staatskalender:10003634 .
 
+systemmap:SJFcc0xsgJmHYGgDv a systemmap:FederalOrganization ;
+    rdfs:label "Direktion"@de ;
+    schema:parentOrganization systemmap:S3Rf79NI3Pm1rfOlN .
+
 systemmap:SKrd0rj3P7vHUQ7h7 a systemmap:FederalOrganization ;
     rdfs:label "Eidgenössische Technische Hochschule Zürich"@de,
         "Swiss Federal Institute of Technology Zurich"@en,
@@ -4104,6 +4114,10 @@ systemmap:SKrd0rj3P7vHUQ7h7 a systemmap:FederalOrganization ;
         "ETH Zurich"@en,
         "EPF Zurich"@fr,
         "ETH Zurigo"@it .
+
+systemmap:SLekJnxsXE7F1IQyK a systemmap:FederalOrganization ;
+    rdfs:label "Fachbereich Fachanwendungen"@de ;
+    schema:parentOrganization systemmap:SATtn9FhKGDNXjBLM .
 
 systemmap:SMnIieexlpOQHsGvN a systemmap:FederalOrganization ;
     rdfs:label "Genetische Ressourcen, Produktionssicherheit und Futtermittel"@de,

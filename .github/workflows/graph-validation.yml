@@ -35,6 +35,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - name: Run owl-based inferencing to construct `graph.ttl`
+        run: python scripts/reason.py
       
       - name: Install PySHACL
         run: pip install pyshacl

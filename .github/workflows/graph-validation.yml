@@ -11,38 +11,33 @@ jobs:
     name: Validate turtle files (`.ttl`) syntax
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       
       - name: Install RDF library
         run: pip install rdflib
 
-      - name: Validate turtle syntax of all `.ttl` files
-        run: |
-          python scripts/validate-syntax.py
+      - name: Validate turtle syntax
+        run: python scripts/validate-syntax.py
 
   validate-graph-shacl:
     name: Validate shape of `rdf/graph.ttl`
+    needs: validate-ttl-syntax
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       
-      - name: Install RDF and SHACL libraries
-        run: pip install pyshacl rdflib otsrdflib
+      - name: Install PySHACL
+        run: pip install pyshacl
       
-      - name: Run reasoning script to construct an extended graph
-        run: |
-          python scripts/reason.py
-
-      - name: Validate graph shape with SHACL
-        run: |
-          python scripts/validate-shape.py
+      - name: Validate graph shape with SHACL CLI
+        run: pyshacl -s rdf/shape.ttl -f human rdf/graph.ttl

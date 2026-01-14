@@ -36,11 +36,13 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install PySHACL
+        run: |
+          pip install rdflib
+          pip install pyshacl
+
       - name: Run owl-based inferencing to construct `graph.ttl`
         run: python scripts/reason.py
-      
-      - name: Install PySHACL
-        run: pip install pyshacl
       
       - name: Validate graph shape with SHACL CLI
         run: pyshacl -s rdf/shape.ttl -f human rdf/graph.ttl

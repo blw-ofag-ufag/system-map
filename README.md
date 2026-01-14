@@ -28,7 +28,14 @@ Actually, there is a python script *reasoning* over the two files. This is descr
 
 # 🔎 Subgraphs
 
-Subgraphs of the system map allow inspecting one part of the overall system without being disturbed by the multitude of connected nodes around it. Have a look at the subgraphs for [MARS III](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=SaAA0IQkj02jgbLEb) and [digiFLUX](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=Si8UnIQkj02jgbLEb). If you want a complete list of all subgraphs and their size, you can [query the system map accordingly](https://s.zazuko.com/221bFQW).
+Subgraphs of the system map allow inspecting one part of the overall system without being disturbed by the multitude of connected nodes around it. Have a look at the subgraphs for
+
+- [MARS III](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=SaAA0IQkj02jgbLEb)
+- [digiFLUX](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=Si8UnIQkj02jgbLEb)
+- [Acontrol](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=Sa9PcqsvnAMuiYCjx)
+- [AGIS](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=SAAAX37V802JgbLEb)
+
+If you want a always up-to-date list of all subgraphs and their size, you can [query the system map accordingly](https://s.zazuko.com/221bFQW).
 
 # ⚙️ Examples of SPARQL queries from LINDAS
 

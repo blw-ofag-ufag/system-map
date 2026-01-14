@@ -2645,7 +2645,7 @@ systemmap:SvDlxaJ5YMkuZGH6k a schema:SoftwareApplication ;
         "SIPA"@fr,
         "AGIS"@it ;
     systemmap:hasLegalBasis LwG:art_165_c ;
-    systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
+    systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92, systemmap:SIsQ6LSUJc3xbG9B .
 
 systemmap:Svbcr8GEkZLb3HmRI a schema:SoftwareApplication ;
     rdfs:label "LAWIS plus"@de,

@@ -1328,7 +1328,8 @@ systemmap:SHFSc6xgsHF70IlUd a schema:SoftwareApplication ;
         "Linked Data Services LINDAS allow public administrations to publish their data in the form of Knowledge Graphs and make them accessible via https://lindas.admin.ch"@en,
         "Avec les services Linked Data LINDAS, les administrations publiques peuvent publier leurs données sous forme de graphe de connaissances et les rendre accessibles via https://lindas.admin.ch."@fr,
         "Con i Linked Data Services LINDAS, le pubbliche amministrazioni possono pubblicare i loro dati sotto forma di grafi di conoscenza e renderli accessibili attraverso https://lindas.admin.ch."@it ;
-    systemmap:operatedBy systemmap:S6VSaFePQaMGqU8vD .
+    systemmap:operatedBy systemmap:S6VSaFePQaMGqU8vD ;
+    systemmap:contains [ rdfs:label "DigiAgriFoodCH Systemlandkarte"@de ] .
 
 systemmap:SHyBeGX0LsQwjJ6Z a schema:SoftwareApplication ;
     rdfs:label "Betriebs- und Unternehmensregister"@de,

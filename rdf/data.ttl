@@ -372,7 +372,6 @@ systemmap:S6VSaFePQaMGqU8vD a schema:Organization ;
         "Swiss Federal Archives"@en,
         "Archives fédérales suisses"@fr,
         "Archivio federale svizzero"@it ;
-    schema:parentOrganization systemmap:S8hkiMuKPR8gkm3Zb ;
     rdfs:comment """
         Das Schweizerische Bundesarchiv (BAR) sichert die Dokumentation staatlichen Handelns und macht diese zugänglich.
         """@de,
@@ -3907,7 +3906,6 @@ systemmap:S2tIdqNmt3uS5Ny6D a systemmap:FederalOrganization ;
         "Federal Office for Agriculture"@en,
         "Office fédéral de l'agriculture"@fr,
         "Ufficio federale dell'agricoltura"@it ;
-    schema:parentOrganization systemmap:SWIz0jhB1cWpmciJJ ;
     rdfs:comment "Das Bundesamt für Landwirtschaft (BLW) ist das Kompetenzzentrum des Bundes für alle Kernfragen im Zusammenhang mit dem Agrarsektor."@de,
         "The Federal Office for Agriculture (FOAG) is the Confederation's competence centre for all core issues relating to the agricultural sector."@en,
         "L'Office fédéral de l'agriculture (OFAG) est le centre de compétence de la Confédération pour toutes les questions essentielles liées au secteur agricole."@fr,
@@ -3924,7 +3922,6 @@ systemmap:S3Rf79NI3Pm1rfOlN a systemmap:FederalOrganization ;
         "Federal Food Safety and Veterinary Office"@en,
         "Office fédéral de la sécurité alimentaire et des affaires vétérinaires"@fr,
         "Ufficio federale della sicurezza alimentare e di veterinaria"@it ;
-    schema:parentOrganization systemmap:S8hkiMuKPR8gkm3Zb ;
     rdfs:comment """  
         Hauptaufgabe des BLV ist es, die Gesundheit und das Wohlbefinden von Mensch und Tier aktiv zu fördern.  
         Die Hauptpfeiler dafür sind beim Menschen Lebensmittelsicherheit und gesunde Ernährung und beim Tier Tierschutz und Tiergesundheit.  
@@ -3952,7 +3949,6 @@ systemmap:S8WjMkerPw98ZkWA7 a systemmap:FederalOrganization ;
         "Federal Office of Public Health"@en,
         "Office fédéral de la santé publique"@fr,
         "Ufficio federale della sanità pubblica"@it ;
-    schema:parentOrganization systemmap:S8hkiMuKPR8gkm3Zb ;
     rdfs:comment """
         Das Bundesamt für Gesundheit (BAG) ist verantwortlich für die nationale Gesundheitspolitik der Schweiz und fördert die Gesundheit der Bevölkerung in Zusammenarbeit mit den Kantonen.
         Es setzt sich für ein leistungsfähiges und bezahlbares Gesundheitssystem ein.
@@ -3978,15 +3974,6 @@ systemmap:S8WjMkerPw98ZkWA7 a systemmap:FederalOrganization ;
         "FOPH"@en,
         "OFSP"@fr,
         "UFSP"@it .
-
-systemmap:S8hkiMuKPR8gkm3Zb a systemmap:FederalOrganization ;
-    rdfs:label "Eidgenössisches Departement des Innern"@de,
-        "Federal Department of Home Affairs"@en,
-        "Département fédéral de l'intérieur"@fr ;
-    schema:parentOrganization systemmap:SGX0myi3WYhgSLHwY ;
-    systemmap:abbreviation "EDI"@de,
-        "FDHA"@en,
-        "DFI"@fr .
 
 systemmap:SATtn9FhKGDNXjBLM a systemmap:FederalOrganization ;
     rdfs:label "Abteilung Ressourcen"@de ;
@@ -4072,16 +4059,6 @@ systemmap:SG8fSveeGZNcYzoUN a systemmap:FederalOrganization ;
         Zudem behandelt er Fragen der Raumplanung und der Infrastrukturen.
         Weitere Themen sind Management natürlicher Ressourcen, Klimawandel mit Blick auf Boden/Wasserhaushalt.
         """@de .
-
-systemmap:SGX0myi3WYhgSLHwY a systemmap:FederalOrganization ;
-    rdfs:label "Der Bundesrat"@de,
-        "The Federal Council"@en,
-        "Le Conseil fédéral"@fr,
-        "Il Consiglio federale"@it ;
-    rdfs:comment "Der Bundesrat ist die oberste leitende und vollziehende Behörde des Bundes. Er setzt sich aus sieben gleichberechtigten Mitgliedern zusammen und entscheidet als Kollegialbehörde."@de,
-        "The Federal Council is the supreme governing and executive authority of the Confederation. It consists of seven members and makes decisions as a collegial body."@en,
-        "Le Conseil fédéral est l'autorité directoriale et exécutive suprême de la Confédération. Il se compose de sept membres et prend ses décisions en tant qu'autorité collégiale."@fr,
-        "Il Consiglio federale è la suprema autorità direttiva ed esecutiva della Confederazione. È composto di sette membri e decide quale autorità collegiale."@it .
 
 systemmap:SIo1a8l3IT4lBqBJE a systemmap:FederalOrganization ;
     rdfs:label "Agroscope"@de,
@@ -4171,7 +4148,6 @@ systemmap:SNbhMvt3Btta1U1d6 a systemmap:FederalOrganization ;
         "Federal Statistical Office"@en,
         "Office fédéral de la statistique"@fr,
         "Ufficio federale di statistica"@it ;
-    schema:parentOrganization systemmap:S8hkiMuKPR8gkm3Zb ;
     rdfs:comment """
         Als nationales Kompetenzzentrum der öffentlichen Statistik ist das Bundesamt für Statistik (BFS) der zentrale Knotenpunkt im Datennökosystem der Schweiz.
         Es unterstützt und stärkt die gesamte öffentliche Verwaltung im Umgang mit Daten.
@@ -4255,11 +4231,6 @@ systemmap:SW5qcGjvfz5WXYTVl a systemmap:FederalOrganization ;
         Inoltre, informa il pubblico su temi nutrizionali e collabora con partner nazionali e internazionali.
         """@it ;
     owl:sameAs staatskalender:20035162 .
-
-systemmap:SWIz0jhB1cWpmciJJ a systemmap:FederalOrganization ;
-    rdfs:label "Departement für Wirtschaft, Bildung und Forschung"@de ;
-    schema:parentOrganization systemmap:SGX0myi3WYhgSLHwY ;
-    systemmap:abbreviation "WBF"@de .
 
 systemmap:SaVyVVsIDkiDMtQq4 a systemmap:FederalOrganization ;
     rdfs:label "Fachbereich Agrardaten und Marktanalysen"@de,

@@ -41,6 +41,7 @@ systemmap:SAAAX37V802JgbLEb a dcmitype:Collection ;
         systemmap:Se6Nt3cqogxz2d10g,
         systemmap:SfkMzUrMhERjP9vhy,
         systemmap:SldiTYOuXQmoC3SV,
+        systemmap:SldiTYOuXQmoC4TW,
         systemmap:SmWEQ8lVlDS9ZwPkY,
         systemmap:SpR2aDraNmiUXz55J,
         systemmap:SqeNr0H0FGL6Uv5Rr,
@@ -61,6 +62,7 @@ systemmap:Sa9PcqsvnAMuiYCjx a dcmitype:Collection ;
         systemmap:S3Rf79NI3Pm1rfOlN,
         systemmap:S8i4yv54m4VbGEqza,
         systemmap:S9VcxLSoIIwQjoexY,
+        systemmap:S9dITYOuP43UB4TW,
         systemmap:SAGHyCcjQ9LRiSsV0,
         systemmap:SAGHyCxJM29RiSsV8,
         systemmap:SATtn9FhKGDNXjBLM,
@@ -4643,6 +4645,11 @@ systemmap:S3jZwzvmFKsXRWiI a systemmap:MasterData ;
         "BURNR"@fr,
         "BURNR"@it .
 
+systemmap:S9dITYOuP43UB4TW a systemmap:MasterData ;
+    rdfs:label "Kontrollorganisationen"@de ;
+    dcterms:isPartOf systemmap:SldiTYOuXQmoC3SV ;
+    rdfs:comment "Liste der landwirtschaftlichen Kontrollorganisationen entsprechenden Schlüsseln und Attributen."@de .
+
 systemmap:SDLEUPczkJ9AWZeC a systemmap:MasterData ;
     rdfs:label "UID"@de,
         "UID"@en,
@@ -5217,7 +5224,8 @@ systemmap:SFZjIqVSzjv6ua4Mz a termdat:52451 ;
         Dazu zählen der kontrollierte Betrieb, das Datum der Kontrolle, die ausführende Organisation (Kontrollstelle) sowie optional die Kontrolleurin oder der Kontrolleur.
         Inhaltlich wird die Kontrolle durch den Kontrollgrund (Grundkontrolle, Verdacht, Nachkontrolle, Zwischenkontrolle/Risikokontrolle, Laboranalysen, Andere) sowie die Kontrollart (angemeldet/unangemeldet)  klassifiziert und kann durch generelle Bemerkungen erläutert werden.
         """@de ;
-    rdfs:seeAlso <https://www.blw.admin.ch/dam/de/sd-web/DrVHoIPp9VQl/AC%20Merkmalskatalog_V4.8.pdf> .
+    rdfs:seeAlso <https://www.blw.admin.ch/dam/de/sd-web/DrVHoIPp9VQl/AC%20Merkmalskatalog_V4.8.pdf> ;
+    systemmap:usesMasterData systemmap:S9dITYOuP43UB4TW .
 
 systemmap:SJuklUVKfEwj2Xpc a termdat:52451 ;
     rdfs:label "Kontaktdaten Züchter"@de,
@@ -5287,7 +5295,8 @@ systemmap:SY9n2yTOBWXtZ6se a termdat:52451 ;
         die detaillierte Erfassung der Prüfbefunde (Ergebnisse) sowie
         die Dokumentation der vollzogenen rechtlichen Konsequenzen (Massnahmen und Sanktionen).
         Damit wird die lückenlose Nachvollziehbarkeit des Kontrollprozesses von der Prüfung vor Ort bis zum administrativen Vollzug gewährleistet.
-        """@de .
+        """@de ;
+    systemmap:usesMasterData systemmap:S1u8FFdB8YZ67H5X6 .
 
 systemmap:SYYaTBjwIUU2yNIUN a termdat:52451 ;
     rdfs:label "Anwendungen von Pflanzenschutzmittel"@de ;
@@ -5417,7 +5426,7 @@ systemmap:SkvXyKniPPKwKNRqo a termdat:52451 ;
     systemmap:usesMasterData systemmap:SakCt52w8AKrsSXi .
 
 systemmap:SldiTYOuXQmoC3SV a termdat:52451 ;
-    rdfs:label "Anmeldungen für Direktzahlungsprogramme"@de ;
+    rdfs:label "Anmeldungen für Direktzahlungsprogramme, den ÖLN, den NPR-Futtereinsatz und Wahl einer Kontrollstelle"@de ;
     rdfs:comment """
         Beinhaltet die jährlichen Anmeldedaten (Stichtag im August) für spezifische Direktzahlungsprogramme (z. B. BTS, RAUS, Ressourceneffizienz) sowie für den Ökologischen Leistungsnachweis (ÖLN).
         Der Datensatz dient primär der Koordination der landwirtschaftlichen Kontrollen im Folgejahr und der Schätzung der finanziellen Beteiligung.

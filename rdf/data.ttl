@@ -366,6 +366,12 @@ LwG:art_27 a schema:Legislation ;
         "Ordonnance sur l’importation de produits agricoles"@fr,
         "Ordinanza concernente l’importazione di prodotti agricoli"@it .
 
+<https://www.fedlex.admin.ch/eli/cc/2013/733/de#annex_2/lvl_u1/lvl_1> a schema:Legislation ;
+    rdfs:label "Anh. 2 Ziff. 1 ISLV"@de .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_6> a schema:Legislation ;
+    rdfs:label "Art. 6 ISLV"@de .
+
 <https://www.fedlex.admin.ch/eli/cc/2016/565> a schema:Legislation ;
     rdfs:label "Verordnung des BLW über die Festlegung von Perioden und Fristen sowie die Freigabe von Zollkontingentsteilmengen für die Einfuhr von frischem Gemüse und frischem Obst (VEAGOG-Freigabeverordnung)"@de .
 
@@ -2829,8 +2835,8 @@ systemmap:S1u8DDdB8YZ67H5l5 a dcat:Dataset ;
         Die Datenstruktur bildet den gesamten Kontrollzyklus ab, differenziert nach Vorgaben (Soll) und effektiver Durchführung (Ist).
         Dies umfasst die Dokumentation der Kontrollaktivitäten auf Betriebsebene einschliesslich Akteurszuweisung, zeitlicher Einordnung, Prüfergebnissen sowie abgeleiteter Massnahmen oder Sanktionen.
         """@de ;
-    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2013/733/de#sec_3> ;
-    systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe .
+    systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe ;
+    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_6> .
 
 systemmap:S1u8FFdB8YZ67H5X6 a dcat:Dataset ;
     rdfs:label "Kontrollinhalte"@de ;

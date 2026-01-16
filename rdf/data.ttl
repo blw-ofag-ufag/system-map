@@ -2829,6 +2829,7 @@ systemmap:S1u8DDdB8YZ67H5l5 a dcat:Dataset ;
         Die Datenstruktur bildet den gesamten Kontrollzyklus ab, differenziert nach Vorgaben (Soll) und effektiver Durchführung (Ist).
         Dies umfasst die Dokumentation der Kontrollaktivitäten auf Betriebsebene einschliesslich Akteurszuweisung, zeitlicher Einordnung, Prüfergebnissen sowie abgeleiteter Massnahmen oder Sanktionen.
         """@de ;
+    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2013/733/de#sec_3> ;
     systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe .
 
 systemmap:S1u8FFdB8YZ67H5X6 a dcat:Dataset ;
@@ -5219,12 +5220,13 @@ systemmap:SFZjIqVSzjv6ua4Mz a termdat:52451 ;
     rdfs:label "Kontrollgrunddaten"@de ;
     dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se ;
     rdfs:comment """
-        Zusammenfassung der definierenden Merkmale und administrativen Rahmenbedingungen eines Kontrollereignisses.
-        Der Datensatz dient der eindeutigen Identifikation der Kontrolle (mittels Inspection-ID)  und dokumentiert die Durchführungsparameter.
-        Dazu zählen der kontrollierte Betrieb, das Datum der Kontrolle, die ausführende Organisation (Kontrollstelle) sowie optional die Kontrolleurin oder der Kontrolleur.
-        Inhaltlich wird die Kontrolle durch den Kontrollgrund (Grundkontrolle, Verdacht, Nachkontrolle, Zwischenkontrolle/Risikokontrolle, Laboranalysen, Andere) sowie die Kontrollart (angemeldet/unangemeldet)  klassifiziert und kann durch generelle Bemerkungen erläutert werden.
+        Dieser Datensatz umfasst die administrativen Metadaten eines Kontrollereignisses, die zur eindeutigen Identifizierung und Einordnung der Kontrolle selbst dienen.
+        Dazu zählen der kontrollierte Betrieb, der grobe Kontrollinhalt (eine oder mehrere Kontrollrubriken), das Kontrolldatum, die Kontrollstelle (also die ausführende Organisation) sowie optional die Kontrolleurin oder der Kontrolleur.
+        Inhaltlich wird die Kontrolle durch den Kontrollgrund (Grundkontrolle, Verdacht, Nachkontrolle, Zwischenkontrolle/Risikokontrolle, Laboranalysen, Andere) sowie die Kontrollart (angemeldet/unangemeldet) klassifiziert und kann durch generelle Bemerkungen erläutert werden.
+        Der Kontrollstatus gibt den Status der Erfassung der Ergebnisse und Massnahmen an.
         """@de ;
     rdfs:seeAlso <https://www.blw.admin.ch/dam/de/sd-web/DrVHoIPp9VQl/AC%20Merkmalskatalog_V4.8.pdf> ;
+    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2013/733/de#annex_2/lvl_u1/lvl_1> ;
     systemmap:usesMasterData systemmap:S9dITYOuP43UB4TW .
 
 systemmap:SJuklUVKfEwj2Xpc a termdat:52451 ;

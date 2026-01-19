@@ -5398,6 +5398,18 @@ systemmap:SfQ6BN8rDjKhTWL4 a termdat:52451 ;
         """@it ;
     systemmap:containedIn systemmap:S7u1Bh6qfXUbSDkv .
 
+systemmap:SfXioR1gkj8eDuTF a termdat:52451 ;
+    rdfs:label "Daten über Verwaltungsmassnahmen und strafrechtliche Sanktionen"@de,
+        "Data on administrative measures and criminal sanctions"@en,
+        "Données sur les mesures administratives et les sanctions pénales"@fr,
+        "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
+    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se ;
+    rdfs:comment """
+        Dokumentation der durch die zuständige Vollzugsstelle ergriffenen Folgemassnahmen basierend auf festgestellten Mängeln.
+        Der Datensatz differenziert zwischen direktzahlungsrelevanten Kürzungen (in CHF oder Punkten) und weiteren administrativen oder strafrechtlichen Anordnungen.
+        Dieser Katalog umfasst Massnahmentypen wie Tierhalteverbote, Beschlagnahmungen, Sperren, Bewilligungsentzüge sowie die Einleitung von Strafverfahren oder die Verfügung von Bussen.
+        """@de .
+
 systemmap:SfkMzUrMhERjP9vhy a termdat:52451 ;
     rdfs:label "Betriebs- und Gemeinschaftsform"@de,
         "Operating and community form"@en,
@@ -5540,16 +5552,4 @@ systemmap:SLvuxq7SeZ6X0GYA a termdat:52453 ;
         I risultati del controllo del latte sono resi disponibili ai soggetti autorizzati tramite la piattaforma dbmilch.ch.
         """@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
-
-systemmap:SfXioR1gkj8eDuTF a termdat:52453 ;
-    rdfs:label "Daten über Verwaltungsmassnahmen und strafrechtliche Sanktionen"@de,
-        "Data on administrative measures and criminal sanctions"@en,
-        "Données sur les mesures administratives et les sanctions pénales"@fr,
-        "Dati sulle misure amministrative e sulle sanzioni penali"@it ;
-    dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se ;
-    rdfs:comment """
-        Dokumentation der durch die zuständige Vollzugsstelle ergriffenen Folgemassnahmen basierend auf festgestellten Mängeln.
-        Der Datensatz differenziert zwischen direktzahlungsrelevanten Kürzungen (in CHF oder Punkten) und weiteren administrativen oder strafrechtlichen Anordnungen.
-        Dieser Katalog umfasst Massnahmentypen wie Tierhalteverbote, Beschlagnahmungen, Sperren, Bewilligungsentzüge sowie die Einleitung von Strafverfahren oder die Verfügung von Bussen.
-        """@de .
 

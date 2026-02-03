@@ -60,7 +60,7 @@ dcat:Dataset a rdfs:Class,
         a owl:Restriction ;
         owl:onProperty dcat:keyword ;
         owl:allValuesFrom skos:Concept
-    ].
+    ] .
 
 dcmitype:Collection a owl:Class ;
     rdfs:label "Collection"@en ;
@@ -765,6 +765,10 @@ systemmap:containsNodes a owl:ObjectProperty ;
 systemmap:developedBy a owl:ObjectProperty ;
     rdfs:label "entwickelt von"@de,
         "developed by"@en ;
+    rdfs:domain [ 
+        a owl:Class ;
+        owl:unionOf ( dcat:Dataset service:Service schema:SoftwareApplication )
+    ] ;
     rdfs:range schema:Organization ;
     owl:inverseOf systemmap:develops .
 
@@ -778,7 +782,11 @@ systemmap:develops a owl:ObjectProperty ;
         Shows, what organization developed a system, a database or a service.
         """@en ;
     rdfs:domain schema:Organization ;
-    owl:inverseOf systemmap:developedBy .
+    owl:inverseOf systemmap:developedBy ;
+    rdfs:range [ 
+        a owl:Class ;
+        owl:unionOf ( dcat:Dataset service:Service schema:SoftwareApplication )
+    ] .
 
 systemmap:hasLegalBasis a owl:ObjectProperty ;
     rdfs:label "hat Rechtsgrundlage"@de,

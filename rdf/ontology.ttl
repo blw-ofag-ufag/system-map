@@ -45,7 +45,17 @@ dcat:Dataset a rdfs:Class,
         """
         Il concetto di dataset in DCAT è ampio e inclusivo, con l'intenzione di includere tipi di risorse provenienti da tutte le comunità.
         I dati possono assumere molte forme, inclusi numeri, testo, pixel, immagini, suoni e altri media, e potenzialmente altri tipi, che possono essere raccolti in un dataset.
-        """@it .
+        """@it ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty dcterms:hasPart ;
+        owl:allValuesFrom dcat:Dataset
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty dcterms:isPartOf ;
+        owl:allValuesFrom dcat:Dataset
+    ] .
 
 dcmitype:Collection a owl:Class ;
     rdfs:label "Collection"@en ;
@@ -67,7 +77,17 @@ service:Service a owl:Class ;
         """@fr,
         """
         Un componente tecnico del software che fornisce funzionalità attraverso interfacce chiaramente definite per l'uso o l'integrazione esterna.
-        """@it .
+        """@it ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty dcterms:hasPart ;
+        owl:allValuesFrom service:Service
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty dcterms:isPartOf ;
+        owl:allValuesFrom service:Service
+    ] .
 
 schema:DefinedTermSet a owl:Class ;
     rdfs:label "Reference data"@en ;
@@ -159,7 +179,17 @@ schema:SoftwareApplication a owl:Class ;
         """@fr,
         """
         Qualsiasi sistema IT (in senso astratto), spesso con uno o più database associati.
-        """@it .
+        """@it ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty dcterms:hasPart ;
+        owl:allValuesFrom schema:SoftwareApplication
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty dcterms:isPartOf ;
+        owl:allValuesFrom schema:SoftwareApplication
+    ] .
 
 systemmap:CantonalAgriculturalAdvisor a owl:Class ;
     rdfs:label "Kantonale Beratungsstelle"@de,

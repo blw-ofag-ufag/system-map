@@ -21,7 +21,7 @@ You can visually explore this work on the following pages:
 
 If instead you are interested in the *actual* data, you can have a look at the following files:
 
-- [**`ontology.ttl`**](https://github.com/blw-ofag-ufag/system-map/blob/main/rdf/ontology.ttl) contains information about how the data is structured.
+- [**`ontology.ttl`**](https://github.com/blw-ofag-ufag/system-map/blob/main/rdf/ontology.ttl) contains information about how the data is structured. You can visualize it [using WebVOWL](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/system-map/refs/heads/main/rdf/ontology.ttl).
 - [**`data.ttl`**](https://github.com/blw-ofag-ufag/system-map/blob/main/rdf/data.ttl) contains information about the organizations, systems and information units themselves.
 
 Actually, there is a python script *reasoning* over the two files. This is described in more detail below.

@@ -55,7 +55,12 @@ dcat:Dataset a rdfs:Class,
         a owl:Restriction ;
         owl:onProperty dcterms:isPartOf ;
         owl:allValuesFrom dcat:Dataset
-    ] .
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty dcat:keyword ;
+        owl:allValuesFrom skos:Concept
+    ].
 
 dcmitype:Collection a owl:Class ;
     rdfs:label "Collection"@en ;

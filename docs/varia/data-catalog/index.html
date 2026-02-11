@@ -3,37 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LINDAS Data Registry</title>
+    <title>LINDAS System Map</title>
 
     <script src="https://cdn.jsdelivr.net/npm/jsonld@8.2.0/dist/jsonld.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <style>
-        /* --- MODERN 2025 THEME VARIABLES --- */
         :root {
             --bg-body: #f8f9fa;
             --bg-card: #ffffff;
             --text-primary: #1a1a1a;
             --text-secondary: #6c757d;
-
-            /* Swiss Style Accent Palette */
             --accent-color: #0d6efd;
-            --accent-hover: #0b5ed7;
-
-            /* Tag Colors */
             --tag-sys-bg: #e7f1ff;
             --tag-sys-text: #0d6efd;
             --tag-alert-bg: #fff3cd;
             --tag-alert-text: #856404;
             --tag-danger-bg: #f8d7da;
             --tag-danger-text: #721c24;
-
+            --radius: 12px;
             --shadow-sm: 0 2px 4px rgba(0,0,0,0.02);
             --shadow-md: 0 8px 16px rgba(0,0,0,0.04);
-            --radius: 12px;
         }
 
-        /* --- RESET & TYPOGRAPHY --- */
         * { box-sizing: border-box; }
 
         body {
@@ -42,10 +34,8 @@
             color: var(--text-primary);
             margin: 0;
             padding-bottom: 60px;
-            -webkit-font-smoothing: antialiased;
         }
 
-        /* --- HEADER & CONTROLS --- */
         header {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
@@ -73,14 +63,12 @@
         h1 {
             font-size: 1.5rem;
             font-weight: 800;
-            letter-spacing: -0.5px;
             margin: 0;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        /* Search & Toggles */
         .control-bar {
             display: grid;
             grid-template-columns: 1fr auto;
@@ -88,10 +76,7 @@
             align-items: center;
         }
 
-        .search-wrapper {
-            position: relative;
-        }
-
+        .search-wrapper { position: relative; }
         .search-wrapper i {
             position: absolute;
             left: 15px;
@@ -106,10 +91,8 @@
             border: 1px solid #e0e0e0;
             border-radius: var(--radius);
             font-size: 1rem;
-            transition: all 0.2s;
             background: var(--bg-body);
         }
-
         input[type="text"]:focus {
             outline: none;
             border-color: var(--accent-color);
@@ -117,11 +100,7 @@
             box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
         }
 
-        .toggles {
-            display: flex;
-            gap: 15px;
-        }
-
+        .toggles { display: flex; gap: 15px; }
         .toggle-btn {
             cursor: pointer;
             padding: 8px 16px;
@@ -133,25 +112,21 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            transition: all 0.2s;
             user-select: none;
         }
-
         .toggle-btn:hover { background: #f1f1f1; }
-
         .toggle-btn.active {
             background: var(--text-primary);
             color: #fff;
             border-color: var(--text-primary);
         }
 
-        /* Active Filter Chips */
         .active-filters {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-top: 15px;
-            min-height: 32px; /* Prevent jump */
+            min-height: 32px;
         }
 
         .filter-chip {
@@ -166,18 +141,14 @@
             gap: 8px;
             cursor: pointer;
         }
-
         .filter-chip:hover { opacity: 0.8; }
-        .filter-chip i { font-size: 1rem; }
 
-        /* --- GRID LAYOUT --- */
         #catalog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
             gap: 24px;
         }
 
-        /* --- CARD DESIGN --- */
         .card {
             background: var(--bg-card);
             border-radius: var(--radius);
@@ -187,21 +158,15 @@
             display: flex;
             flex-direction: column;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            position: relative;
-            overflow: hidden;
         }
-
         .card:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-md);
             border-color: rgba(0,0,0,0.08);
+            z-index: 10;
         }
 
-        /* Card Header */
-        .card-header {
-            margin-bottom: 12px;
-        }
-
+        .card-header { margin-bottom: 12px; }
         .card-title {
             font-size: 1.15rem;
             font-weight: 700;
@@ -210,58 +175,93 @@
             color: var(--text-primary);
         }
 
-        /* Truncated Description */
         .card-desc {
             font-size: 0.95rem;
             color: var(--text-secondary);
             margin-bottom: 20px;
             line-height: 1.6;
-
-            /* The 3-line clamp magic */
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
 
-        /* Metadata & Actions */
-        .meta-row {
-            margin-top: auto; /* Push to bottom */
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        /* Tags Row */
-        .tag-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
+        .meta-row { margin-top: auto; display: flex; flex-direction: column; gap: 12px; }
+        .tag-row { display: flex; flex-wrap: wrap; gap: 8px; }
 
         .tag {
             font-size: 0.75rem;
             padding: 4px 8px;
             border-radius: 6px;
             font-weight: 600;
-            letter-spacing: 0.3px;
             text-transform: uppercase;
             cursor: default;
         }
 
-        /* Clickable System Tag */
+        /* Tooltips */
         .tag-sys {
             background: var(--tag-sys-bg);
             color: var(--tag-sys-text);
             cursor: pointer;
             transition: background 0.2s;
+            position: relative;
         }
         .tag-sys:hover { background: #d0e4ff; }
+
+        .tag-sys .custom-tooltip {
+            visibility: hidden;
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: left;
+            border-radius: 8px;
+            padding: 12px;
+            position: absolute;
+            z-index: 999;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            font-weight: 400;
+            text-transform: none;
+            letter-spacing: normal;
+            pointer-events: none;
+        }
+        .tag-sys .custom-tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+        .tag-sys:hover .custom-tooltip { visibility: visible; opacity: 1; }
+
+        .tt-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .tt-abbr {
+            background: rgba(255,255,255,0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-family: monospace;
+        }
+        .tt-desc { font-size: 0.8rem; color: #ddd; line-height: 1.4; }
 
         .tag-personal { background: var(--tag-alert-bg); color: var(--tag-alert-text); }
         .tag-sensitive { background: var(--tag-danger-bg); color: var(--tag-danger-text); }
 
-        /* Organization Footer */
         .org-footer {
             border-top: 1px solid #f0f0f0;
             padding-top: 12px;
@@ -294,7 +294,6 @@
         }
         .address-link:hover { color: var(--text-primary); text-decoration: underline; }
 
-        /* --- LOADING & EMPTY STATES --- */
         #status-msg {
             text-align: center;
             padding: 60px;
@@ -360,10 +359,8 @@
 </div>
 
 <script>
-    // --- CONFIGURATION ---
     const ENDPOINT = "https://lindas.admin.ch/query";
 
-    // --- SPARQL QUERY (Hierarchical) ---
     const SPARQL_QUERY = `
     PREFIX schema: <http://schema.org/>
     PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
@@ -382,7 +379,16 @@
 
       ?directSystem a schema:SoftwareApplication ;
         schema:name ?systemName ;
+        schema:description ?systemDesc ;
+        systemmap:abbreviation ?systemAbbr ;
+        dcterms:isPartOf ?parentSystem ;
         schema:provider ?org .
+
+      ?parentSystem a schema:SoftwareApplication ;
+        schema:name ?parentName ;
+        schema:description ?parentDesc ;
+        systemmap:abbreviation ?parentAbbr ;
+        dcterms:isPartOf ?grandparentSystem .
 
       ?org a schema:Organization ;
         schema:name ?orgName ;
@@ -390,7 +396,7 @@
     }
     WHERE {
         ?directSystem a schema:SoftwareApplication ;
-                      systemmap:contains ?dataset .
+                      dcterms:hasPart*/systemmap:contains ?dataset .
 
         ?dataset rdfs:label ?datasetName .
         FILTER(LANG(?datasetName) = "de")
@@ -403,12 +409,21 @@
         BIND(EXISTS { ?dataset a termdat:52451 } AS ?isPersonal)
         BIND(EXISTS { ?dataset a termdat:52453 } AS ?isSensitive)
 
-        ?directSystem rdfs:label ?systemName .
+        # Get System Hierarchy
+        ?directSystem dcterms:isPartOf* ?s .
+        ?s rdfs:label ?systemName .
         FILTER(LANG(?systemName) = "de")
 
+        OPTIONAL { ?s systemmap:abbreviation ?systemAbbr . FILTER(LANG(?systemAbbr)="de") }
+        OPTIONAL { ?s schema:description ?systemDesc . FILTER(LANG(?systemDesc)="de") }
+
+        OPTIONAL { ?s dcterms:isPartOf ?parentSystem . }
+        FILTER(?s = ?directSystem || ?s = ?parentSystem || ?s = ?grandparentSystem)
+
+        # Organization Traversal
         OPTIONAL {
-            ?directSystem dcterms:isPartOf* ?parentSystem .
-            ?parentSystem systemmap:operatedBy ?operator .
+            ?directSystem dcterms:isPartOf* ?pathSystem .
+            ?pathSystem systemmap:operatedBy ?operator .
             ?operator schema:parentOrganization* ?org .
             FILTER(NOT EXISTS { ?org schema:parentOrganization ?grandparent })
             ?org rdfs:label ?orgName .
@@ -429,12 +444,21 @@
         "@context": {
             "schema": "http://schema.org/",
             "systemmap": "https://agriculture.ld.admin.ch/system-map/",
-            "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+            "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+            "dcterms": "http://purl.org/dc/terms/"
         },
         "@type": "schema:Dataset",
         "systemmap:inSystem": {
             "@embed": "@always",
             "@type": "schema:SoftwareApplication",
+            "dcterms:isPartOf": {
+                 "@embed": "@always",
+                 "@type": "schema:SoftwareApplication",
+                 "dcterms:isPartOf": {
+                     "@embed": "@always",
+                     "@type": "schema:SoftwareApplication"
+                 }
+            },
             "schema:provider": {
                 "@embed": "@always",
                 "@type": "schema:Organization"
@@ -442,24 +466,42 @@
         }
     };
 
-    // --- APPLICATION STATE ---
-    let allDatasets = [];
+    let flatItems = [];
     let state = {
         search: '',
         personal: false,
         sensitive: false,
-        filterSystem: null, // Stores system name
-        filterOrg: null     // Stores org name
+        filterSystem: null,
+        filterOrg: null
     };
 
-    // --- INITIALIZATION ---
     async function init() {
         try {
             const rawJsonLd = await fetchSparql(SPARQL_QUERY);
             const framed = await jsonld.frame(rawJsonLd, FRAME);
 
-            allDatasets = framed["@graph"] || [];
-            if (!Array.isArray(allDatasets)) allDatasets = [allDatasets];
+            const rawDatasets = framed["@graph"] || [];
+            const datasets = Array.isArray(rawDatasets) ? rawDatasets : [rawDatasets];
+
+            flatItems = datasets.flatMap(ds => {
+                let systems = ds["systemmap:inSystem"];
+                if (!systems) return [];
+                if (!Array.isArray(systems)) systems = [systems];
+
+                return systems.flatMap(sys => {
+                    let providers = sys["schema:provider"];
+                    if (!providers) {
+                        return [{ dataset: ds, system: sys, org: null }];
+                    }
+                    if (!Array.isArray(providers)) providers = [providers];
+
+                    return providers.map(org => ({
+                        dataset: ds,
+                        system: sys,
+                        org: org
+                    }));
+                });
+            });
 
             document.getElementById('search-input').addEventListener('input', (e) => {
                 state.search = e.target.value.toLowerCase();
@@ -471,55 +513,49 @@
         } catch (e) {
             document.getElementById('catalog-grid').innerHTML =
                 `<div id="status-msg" style="color:red">Error: ${e.message}</div>`;
+            console.error(e);
         }
     }
 
-    // --- RENDERING CORE ---
     function render() {
-        // 1. Update Controls UI
         document.getElementById('btn-personal').classList.toggle('active', state.personal);
         document.getElementById('btn-sensitive').classList.toggle('active', state.sensitive);
         renderActiveFilters();
 
-        // 2. Filter Data
-        const filtered = allDatasets.filter(ds => {
-            // A. Text Search
-            const title = (getValue(ds["schema:name"]) || "").toLowerCase();
-            const desc = (getValue(ds["schema:description"]) || "").toLowerCase();
-            const sysObj = Array.isArray(ds["systemmap:inSystem"]) ? ds["systemmap:inSystem"][0] : ds["systemmap:inSystem"];
-            const sysName = (sysObj && getValue(sysObj["schema:name"])) ? getValue(sysObj["schema:name"]) : "Unknown System";
-            const sysNameLower = sysName.toLowerCase();
+        const filtered = flatItems.filter(item => {
+            const { dataset, system, org } = item;
 
-            // Org Name extraction
-            let orgName = "Unknown Org";
-            if (sysObj && sysObj["schema:provider"]) {
-                orgName = getValue(sysObj["schema:provider"]["schema:name"]) || orgName;
-            }
-            const orgNameLower = orgName.toLowerCase();
+            const title = (getValue(dataset["schema:name"]) || "").toLowerCase();
+            const desc = (getValue(dataset["schema:description"]) || "").toLowerCase();
+            const orgName = org ? (getValue(org["schema:name"]) || "Unknown Org") : "Unknown Org";
+
+            let hierarchyNames = getAllSystemNames(system).join(" ").toLowerCase();
 
             const matchesText = title.includes(state.search) ||
                                 desc.includes(state.search) ||
-                                sysNameLower.includes(state.search);
+                                hierarchyNames.includes(state.search);
 
-            // B. Booleans
-            const isPersonal = getValue(ds["systemmap:isPersonal"]) === true || getValue(ds["systemmap:isPersonal"]) === "true";
-            const isSensitive = getValue(ds["systemmap:isSensitive"]) === true || getValue(ds["systemmap:isSensitive"]) === "true";
+            if (!matchesText) return false;
+
+            const isPersonal = getValue(dataset["systemmap:isPersonal"]) === true || getValue(dataset["systemmap:isPersonal"]) === "true";
+            const isSensitive = getValue(dataset["systemmap:isSensitive"]) === true || getValue(dataset["systemmap:isSensitive"]) === "true";
 
             if (state.personal && !isPersonal) return false;
             if (state.sensitive && !isSensitive) return false;
 
-            // C. Strict Filters (Clickable)
-            if (state.filterSystem && sysName !== state.filterSystem) return false;
+            if (state.filterSystem) {
+                const names = getAllSystemNames(system);
+                if (!names.includes(state.filterSystem)) return false;
+            }
             if (state.filterOrg && orgName !== state.filterOrg) return false;
 
-            return matchesText;
+            return true;
         });
 
-        // 3. Render Grid
         const grid = document.getElementById('catalog-grid');
         const count = document.getElementById('count-display');
 
-        count.innerText = `${filtered.length} dataset${filtered.length!==1?'s':''} found`;
+        count.innerText = `${filtered.length} entries found`;
         grid.innerHTML = '';
 
         if (filtered.length === 0) {
@@ -533,8 +569,6 @@
     function renderActiveFilters() {
         const container = document.getElementById('active-filters');
         container.innerHTML = '';
-
-        // Helper to create chips
         const addChip = (text, onClick) => {
             const chip = document.createElement('div');
             chip.className = 'filter-chip';
@@ -542,41 +576,71 @@
             chip.onclick = onClick;
             container.appendChild(chip);
         };
-
-        if (state.filterSystem) {
-            addChip(`System: ${state.filterSystem}`, () => setFilter('system', null));
-        }
-        if (state.filterOrg) {
-            addChip(`Org: ${state.filterOrg}`, () => setFilter('org', null));
-        }
+        if (state.filterSystem) addChip(`System: ${state.filterSystem}`, () => setFilter('system', null));
+        if (state.filterOrg) addChip(`Org: ${state.filterOrg}`, () => setFilter('org', null));
     }
 
-    function createCard(dataset) {
-        // Data Extraction
+    function getSystemHierarchy(systemNode) {
+        let hierarchy = [];
+        let current = systemNode;
+        while(current) {
+            hierarchy.push(current);
+            let parent = current["dcterms:isPartOf"];
+            if (Array.isArray(parent)) parent = parent[0];
+            current = parent;
+        }
+        return hierarchy.reverse();
+    }
+
+    function getAllSystemNames(systemNode) {
+        return getSystemHierarchy(systemNode).map(s => getValue(s["schema:name"]));
+    }
+
+    function createCard(item) {
+        const { dataset, system, org } = item;
+
         const title = getValue(dataset["schema:name"]) || "Untitled";
         const desc = getValue(dataset["schema:description"]) || "No description available.";
+
         const isPersonal = getValue(dataset["systemmap:isPersonal"]) === true || getValue(dataset["systemmap:isPersonal"]) === "true";
         const isSensitive = getValue(dataset["systemmap:isSensitive"]) === true || getValue(dataset["systemmap:isSensitive"]) === "true";
 
-        const sysObj = Array.isArray(dataset["systemmap:inSystem"]) ? dataset["systemmap:inSystem"][0] : dataset["systemmap:inSystem"];
-        const sysName = (sysObj && getValue(sysObj["schema:name"])) ? getValue(sysObj["schema:name"]) : "Unknown System";
+        const orgName = org ? (getValue(org["schema:name"]) || "Unknown Org") : "Unknown Org";
+        const orgAddress = org ? getValue(org["schema:address"]) : null;
 
-        let orgName = "Unknown Org";
-        let orgAddress = "";
-        if (sysObj && sysObj["schema:provider"]) {
-            orgName = getValue(sysObj["schema:provider"]["schema:name"]) || orgName;
-            orgAddress = getValue(sysObj["schema:provider"]["schema:address"]);
-        }
-
-        // DOM Construction
-        const card = document.createElement('div');
-        card.className = 'card';
-
-        // Maps URL
+        // Corrected URL interpolation
         const mapsUrl = orgAddress
             ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(orgAddress)}`
             : '#';
 
+        const systemNodes = getSystemHierarchy(system);
+
+        // Using data attributes for click handling to prevent quoting errors
+        const tagsHtml = systemNodes.map(node => {
+            const name = getValue(node["schema:name"]);
+            const abbr = getValue(node["systemmap:abbreviation"]);
+            const sysDesc = getValue(node["schema:description"]) || "No description.";
+
+            return `
+            <span class="tag tag-sys"
+                  data-name="${escapeHtml(name)}"
+                  onclick="setFilter('system', this.dataset.name)"
+                  style="margin-right:0;">
+                <i class="bi bi-cpu"></i> ${escapeHtml(name)}
+                <div class="custom-tooltip">
+                    <div class="tt-header">
+                        <span>
+                          ${escapeHtml(name)}
+                          ${abbr ? `(${escapeHtml(abbr)})` : ''}
+                        </span>
+                    </div>
+                    <div class="tt-desc">${escapeHtml(sysDesc)}</div>
+                </div>
+            </span>`;
+        }).join('<span style="color:#ccc; font-size: 0.8rem; display:flex; align-items:center;">&nbsp;/&nbsp;</span>');
+
+        const card = document.createElement('div');
+        card.className = 'card';
         card.innerHTML = `
             <div class="card-header">
                 <h3 class="card-title">${escapeHtml(title)}</h3>
@@ -587,15 +651,15 @@
 
             <div class="meta-row">
                 <div class="tag-row">
-                    <span class="tag tag-sys" onclick="setFilter('system', '${escapeHtml(sysName)}')">
-                        <i class="bi bi-cpu"></i> ${escapeHtml(sysName)}
-                    </span>
+                    ${tagsHtml}
                     ${isPersonal ? `<span class="tag tag-personal"><i class="bi bi-person"></i> Personal</span>` : ''}
                     ${isSensitive ? `<span class="tag tag-sensitive"><i class="bi bi-shield-lock"></i> Sensitive</span>` : ''}
                 </div>
 
                 <div class="org-footer">
-                    <span class="org-link" onclick="setFilter('org', '${escapeHtml(orgName)}')">
+                    <span class="org-link"
+                          data-org="${escapeHtml(orgName)}"
+                          onclick="setFilter('org', this.dataset.org)">
                         <i class="bi bi-building"></i> ${escapeHtml(orgName)}
                     </span>
                     ${orgAddress ? `
@@ -609,11 +673,7 @@
         return card;
     }
 
-    // --- ACTIONS ---
-    function toggleState(key) {
-        state[key] = !state[key];
-        render();
-    }
+    function toggleState(key) { state[key] = !state[key]; render(); }
 
     window.setFilter = function(type, value) {
         if (type === 'system') state.filterSystem = value;
@@ -621,7 +681,6 @@
         render();
     };
 
-    // --- UTILS ---
     async function fetchSparql(query) {
         const url = new URL(ENDPOINT);
         url.searchParams.append('query', query);
@@ -638,14 +697,18 @@
         return prop;
     }
 
+    // Robust HTML Escaping
     function escapeHtml(str) {
         if (!str) return '';
-        return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "\\'");
+        return String(str)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#39;");
     }
 
-    // Start
     init();
-
 </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 # load environment variables
-. ./.env
+. .env
 
 # Run the Python/SPARQL reasoning script
 echo "Running Python reasoning script..."

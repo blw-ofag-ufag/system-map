@@ -1,0 +1,95 @@
+# ==============================================================================
+# PREFIXES
+# ==============================================================================
+
+@prefix LwG: <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix service: <http://purl.org/ontology/service#> .
+@prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
+@prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
+@prefix termdat: <https://register.ld.admin.ch/termdat/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
+
+# ==============================================================================
+# SUBGRAPH DEFINITION
+# ==============================================================================
+
+systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
+    schema:name "IT-Systemlandschaft im Schweizer Nutztiersektor"@de ;
+    systemmap:containsNodes zefix:1457969,
+        zefix:804864,
+        systemmap:SeAMQkVkDZ2SUpEVq,
+        systemmap:S7aG1r5IoOvAalIFb,
+        systemmap:SbcLBABffpMBvu7OP .
+
+# ==============================================================================
+# ORGANIZATIONS
+# ==============================================================================
+
+zefix:1457969 a schema:Organization ;
+    schema:name "Nutztiergesundheit Schweiz"@de ;
+    schema:description "Der Verein Nutztiergesundheit Schweiz (NTGS) setzt sich für eine gesunde und zukunftsfähige Nutztierhaltung in der Schweiz ein. Gegründet im Juni 2020, vereint NTGS nationale Organisationen aus Landwirtschaft, Tierärzteschaft, Forschung, sowie Tierhalter-, Züchter- und Viehhändlerverbände. Gemeinsam arbeiten wir daran, die Tiergesundheit nachhaltig zu fördern. Der Sitz von NTGS ist in Zollikofen."@de .
+
+zefix:804864 a systemmap:PrivateOrganization ;
+    schema:name "Qualitas AG"@de ;
+    schema:description "Die Qualitas AG entwickelt IT-Lösungen für die Schweizer Nutztierbranche und bietet diese und Dienstleistungen für die Tierzucht an."@de ;
+    dcat:landingPage <https://www.qualitasag.ch/> .
+
+systemmap:SeAMQkVkDZ2SUpEVq a systemmap:CantonalOrganization ;
+    schema:name "Universität Bern"@de,
+        "University of Bern"@en,
+        "Université de Berne"@fr,
+        "Università di Berna"@it ;
+    dcat:landingPage <https://www.unibe.ch/> ;
+    systemmap:access systemmap:SbcLBABffpMBvu7OP .
+
+# ==============================================================================
+# IT SYSTEMS
+# ==============================================================================
+
+systemmap:S7aG1r5IoOvAalIFb a schema:SoftwareApplication ;
+    schema:name "KGS"@de,
+        "KGS"@en,
+        "KGS"@fr,
+        "KGS"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    schema:description "Der Kälbergesundheitsdienst (KGS) ist eine Online-Plattform für das Management und die Überwachung der Kälbergesundheit in der Schweizer Nutztierhaltung. Qualitas AG entwickelt und betreibt diese Lösung als Teil ihres Angebots für die Schweizer Tierzucht."@de,
+        "The Calf Health Service (KGS) is an online platform for managing and monitoring calf health in Swiss livestock farming. Qualitas AG develops and operates this solution as part of its offering for Swiss animal breeding."@en,
+        "Le Service de santé des veaux (KGS) est une plateforme en ligne pour la gestion et la surveillance de la santé des veaux dans l'élevage suisse. Qualitas AG développe et exploite cette solution dans le cadre de son offre pour l'élevage animal suisse."@fr,
+        "Il Servizio di salute dei vitelli (KGS) è una piattaforma online per la gestione e il monitoraggio della salute dei vitelli nell'allevamento svizzero. Qualitas AG sviluppa e gestisce questa soluzione come parte della sua offerta per l'allevamento animale svizzero."@it ;
+    dcat:landingPage <https://kgd.qualitasag.ch/KGS/> ;
+    systemmap:operatedBy zefix:804864 .
+
+systemmap:SbcLBABffpMBvu7OP a schema:SoftwareApplication ;
+    schema:name "Gesunde Klauen Projektdaten"@de,
+        "Healthy Hooves Project Data"@en,
+        "Données du projet Sabots Sains"@fr,
+        "Dati del progetto Zoccoli Sani"@it ;
+    schema:description """
+        Ein vom BLW unterstütztes Ressourcenprojekt zur Verbesserung der Klauengesundheit bei Schweizer Rindern durch systematische Datenerfassung via Klauenpfleger.
+        Die Daten werden bei der Qualitas AG gespeichert und von Partnern wie der Vetsuisse-Fakultät Bern und Zuchtorganisationen für Forschung und Zuchtwertschätzung genutzt.
+        Das Projekt fördert die Zusammenarbeit zwischen Tierhaltern, Tierärzten und Klauenpflegern.
+        """@de,
+        """
+        A resource project supported by the FOAG to improve hoof health in Swiss cattle through systematic data collection by hoof trimmers. The data is stored at Qualitas AG and used by partners such as the Vetsuisse Faculty Bern and breeding organizations for research and breeding value estimation. The project promotes collaboration between animal owners, veterinarians, and hoof trimmers.
+        """@en,
+        """
+        Un projet de ressources soutenu par l'OFAG visant àaméliorer la santé des onglons des bovins suisses grâce à la collecte systématique de données par les pédicures bovins. Les données sont stockées chez Qualitas AG et utilisées par des partenaires tels que la Faculté Vetsuisse de Berne et les organisations d'élevage pour la recherche et l'estimation des valeurs d'élevage. Le projet encourage la collaboration entre éleveurs, vétérinaires et pédicures bovins.
+        """@fr,
+        """
+        Un progetto di risorse sostenuto dall'UFAG per migliorare la salute degli zoccoli dei bovini svizzeri attraverso la raccolta sistematica di dati da parte dei pareggiatori. I dati sono conservati presso Qualitas AG e utilizzati da partner come la Facoltà Vetsuisse di Berna e le organizzazioni di allevamento per la ricerca e la stima del valore genetico. Il progetto promuove la collaborazione tra allevatori, veterinari e pareggiatori.
+        """@it ;
+    dcat:landingPage <https://www.gesundeklauen.unibe.ch/> ;
+    systemmap:operatedBy zefix:804864 .
+
+# ==============================================================================
+# DATASETS
+# ==============================================================================

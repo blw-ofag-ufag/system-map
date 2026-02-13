@@ -52,6 +52,14 @@ systemmap:SAAAX37V802JgbLEb a dcmitype:Collection ;
         systemmap:SvNriWslaOR5xkdw,
         systemmap:SzuDlnYUQMk3HaCb .
 
+systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
+    schema:name "IT-Systemlandschaft im Schweizer Nutztiersektor"@de ;
+    systemmap:containsNodes systemmap:S7aG1r5IoOvAalIFb,
+        systemmap:SbcLBABffpMBvu7OP,
+        systemmap:SeAMQkVkDZ2SUpEVq,
+        zefix:1457969,
+        zefix:804864 .
+
 systemmap:Sa9PcqsvnAMuiYCjx a dcmitype:Collection ;
     schema:name "Acontrol Systemarchitektur"@de,
         "Acontrol System Architecture"@en,
@@ -486,6 +494,10 @@ zefix:1256441 a schema:Organization,
 zefix:1292811 a schema:Organization ;
     schema:name "Naturparkkäserei Diemtigtal AG"@de .
 
+zefix:1457969 a schema:Organization ;
+    schema:description "Der Verein Nutztiergesundheit Schweiz (NTGS) setzt sich für eine gesunde und zukunftsfähige Nutztierhaltung in der Schweiz ein. Gegründet im Juni 2020, vereint NTGS nationale Organisationen aus Landwirtschaft, Tierärzteschaft, Forschung, sowie Tierhalter-, Züchter- und Viehhändlerverbände. Gemeinsam arbeiten wir daran, die Tiergesundheit nachhaltig zu fördern. Der Sitz von NTGS ist in Zollikofen."@de ;
+    schema:name "Nutztiergesundheit Schweiz"@de .
+
 zefix:1469700 a schema:Organization ;
     schema:member zefix:1138887,
         zefix:119283,
@@ -848,18 +860,10 @@ systemmap:S7DUZFs3emPOPYErT a schema:SoftwareApplication ;
 
 systemmap:S7aG1r5IoOvAalIFb a schema:SoftwareApplication ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
-    schema:description """
-        Der Kälbergesundheitsdienst (KGS) ist eine Online-Plattform für das Management und die Überwachung der Kälbergesundheit in der Schweizer Nutztierhaltung. Qualitas AG entwickelt und betreibt diese Lösung als Teil ihres Angebots für die Schweizer Tierzucht.
-        """@de,
-        """
-        The Calf Health Service (KGS) is an online platform for managing and monitoring calf health in Swiss livestock farming. Qualitas AG develops and operates this solution as part of its offering for Swiss animal breeding.
-        """@en,
-        """
-        Le Service de santé des veaux (KGS) est une plateforme en ligne pour la gestion et la surveillance de la santé des veaux dans l'élevage suisse. Qualitas AG développe et exploite cette solution dans le cadre de son offre pour l'élevage animal suisse.
-        """@fr,
-        """
-        Il Servizio di salute dei vitelli (KGS) è una piattaforma online per la gestione e il monitoraggio della salute dei vitelli nell'allevamento svizzero. Qualitas AG sviluppa e gestisce questa soluzione come parte della sua offerta per l'allevamento animale svizzero.
-        """@it ;
+    schema:description "Der Kälbergesundheitsdienst (KGS) ist eine Online-Plattform für das Management und die Überwachung der Kälbergesundheit in der Schweizer Nutztierhaltung. Qualitas AG entwickelt und betreibt diese Lösung als Teil ihres Angebots für die Schweizer Tierzucht."@de,
+        "The Calf Health Service (KGS) is an online platform for managing and monitoring calf health in Swiss livestock farming. Qualitas AG develops and operates this solution as part of its offering for Swiss animal breeding."@en,
+        "Le Service de santé des veaux (KGS) est une plateforme en ligne pour la gestion et la surveillance de la santé des veaux dans l'élevage suisse. Qualitas AG développe et exploite cette solution dans le cadre de son offre pour l'élevage animal suisse."@fr,
+        "Il Servizio di salute dei vitelli (KGS) è una piattaforma online per la gestione e il monitoraggio della salute dei vitelli nell'allevamento svizzero. Qualitas AG sviluppa e gestisce questa soluzione come parte della sua offerta per l'allevamento animale svizzero."@it ;
     schema:name "KGS"@de,
         "KGS"@en,
         "KGS"@fr,
@@ -3233,10 +3237,10 @@ termdat:52453 a owl:Class ;
         "Dati personali degni di particolare protezione"@it ;
     rdfs:subClassOf termdat:52451 .
 
-_:nbb8dbc0c4c5f4a02bf509211f5ec64b0b12 a owl:Class ;
+_:n0a662712146947308fd8520fbd636ee6b12 a owl:Class ;
     owl:unionOf ( dcat:Dataset service:Service schema:SoftwareApplication ) .
 
-_:nbb8dbc0c4c5f4a02bf509211f5ec64b0b8 a owl:Class ;
+_:n0a662712146947308fd8520fbd636ee6b8 a owl:Class ;
     owl:unionOf ( dcat:Dataset service:Service schema:SoftwareApplication ) .
 
 systemmap:abbreviation a owl:DatatypeProperty ;
@@ -3568,7 +3572,7 @@ systemmap:containsNodes a owl:ObjectProperty ;
 systemmap:developedBy a owl:ObjectProperty ;
     schema:name "entwickelt von"@de,
         "developed by"@en ;
-    rdfs:domain _:nbb8dbc0c4c5f4a02bf509211f5ec64b0b8 ;
+    rdfs:domain _:n0a662712146947308fd8520fbd636ee6b8 ;
     rdfs:range schema:Organization ;
     owl:inverseOf systemmap:develops .
 
@@ -3582,7 +3586,7 @@ systemmap:develops a owl:ObjectProperty ;
     schema:name "entwickelt"@de,
         "develops"@en ;
     rdfs:domain schema:Organization ;
-    rdfs:range _:nbb8dbc0c4c5f4a02bf509211f5ec64b0b12 ;
+    rdfs:range _:n0a662712146947308fd8520fbd636ee6b12 ;
     owl:inverseOf systemmap:developedBy .
 
 systemmap:hasLegalBasis a owl:ObjectProperty ;
@@ -6138,6 +6142,7 @@ zefix:787227 a systemmap:PrivateOrganization ;
     systemmap:ownedBy zefix:328631 .
 
 zefix:804864 a systemmap:PrivateOrganization ;
+    schema:description "Die Qualitas AG entwickelt IT-Lösungen für die Schweizer Nutztierbranche und bietet diese und Dienstleistungen für die Tierzucht an."@de ;
     schema:name "Qualitas AG"@de ;
     dcat:landingPage <https://www.qualitasag.ch/> .
 

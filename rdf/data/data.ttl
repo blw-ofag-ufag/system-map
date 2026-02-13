@@ -4979,9 +4979,6 @@ zefix:371013 a systemmap:PrivateOrganization ;
     dcat:landingPage <https://www.ernstsutter.ch> ;
     systemmap:ownedBy zefix:328631 .
 
-zefix:414877 a systemmap:PrivateOrganization ;
-    schema:name "Suisag"@de .
-
 zefix:417741 a systemmap:PrivateOrganization ;
     schema:name "GRANOVIT AG"@de ;
     dcat:landingPage <https://www.granovit.ch> .

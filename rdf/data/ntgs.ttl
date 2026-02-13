@@ -30,20 +30,21 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         zefix:804864,
         zefix:984853,
         zefix:1457969,
-        systemmap:OrgFachstelleAHIS,
+        systemmap:S2uXY2dnx1jijxpXr,
+        systemmap:S3Rf79NI3Pm1rfOlN,
         
         # IT-Systeme (Klartext-URIs)
-        systemmap:SysASPRisikoampel,
-        systemmap:SysCHIS,
-        systemmap:SysFLEKO,
-        systemmap:SysInfoSM,
-        systemmap:SysISABV,
-        systemmap:SysPHIS,
-        systemmap:SysQGSEBJ,
-        systemmap:SysReproJournal,
-        systemmap:SysSuisData,
-        systemmap:SysSuisSanoEBJ,
-        systemmap:SysUFA2000Planer,
+        systemmap:SSRl55QBjhFeGUWhn,
+        systemmap:SOK9kQP8T3M2qPNEL,
+        systemmap:SJKVNhaCVFoHhWjks,
+        systemmap:SP86YzKhzJHZDD9Dj,
+        systemmap:S6v6k2SMlwAVdLFmI,
+        systemmap:SPDsRNDwfr6fKFrRc,
+        systemmap:SXekzo74vRcL6VkjL,
+        systemmap:ShjUfLjdanc83Dr0d,
+        systemmap:SWSDKVAr9pdy3T38R,
+        systemmap:SzrnfKnzjo2egouKl,
+        systemmap:Sqv5Vh286L7iinjmy,
         systemmap:SysVetera,
         
         # IT-Systeme und generische Knoten (Hash-URIs)
@@ -56,25 +57,25 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         systemmap:SnZ8gXlT0SOcf5XnZ,
         
         # Datensätze (Datasets)
-        systemmap:DatasetCHISTiergesundheit,
-        systemmap:DatasetDianaMedikamente,
-        systemmap:DatasetDianaTiergesundheit,
-        systemmap:DatasetFLEKOTiergesundheit,
-        systemmap:DatasetISABVAntibiotika,
-        systemmap:DatasetISABVTiergesundheit,
-        systemmap:DatasetPHISTiergesundheit,
-        systemmap:DatasetQGSEBJTiergesundheit,
-        systemmap:DatasetQGSTierbehandlungen,
-        systemmap:DatasetReproJournalTiergesundheit,
-        systemmap:DatasetSuisDataTiergesundheit,
-        systemmap:DatasetSuisSanoEBJTiergesundheit,
-        systemmap:DatasetSuisSanoTierbehandlungen,
-        systemmap:DatasetTierseuchenmeldungen,
-        systemmap:DatasetUfa2000Deckregister,
-        systemmap:DatasetUfa2000Sauenblatt,
-        systemmap:DatasetUfa2000Wurferfassung,
-        systemmap:DatasetVeteraMedikamente,
-        systemmap:DatasetVeteraTiergesundheit,
+        systemmap:Sa2vJ733dT4GOkwZk,
+        systemmap:SugFxfLwGaME1mDiA,
+        systemmap:S8nHLngDLQtFaaCwm,
+        systemmap:SSBg29n8Wei8fxx1a,
+        systemmap:STf8Ef1Y8b5AICZh3,
+        systemmap:SnfWhcliKG1DvHlSs,
+        systemmap:S4x04ackmG5yne5By,
+        systemmap:SySrDkY16tb6SzA01,
+        systemmap:SySJqbKVIZvMcXJNf,
+        systemmap:SXIwI6eU6lZZOFVR4,
+        systemmap:SvmW0FRiWcALdXgAa,
+        systemmap:SCnkbsCJntAwYZz1Y,
+        systemmap:SSMBJhVTP6uajYFb2,
+        systemmap:SuZ6UFD05DBvC5E09,
+        systemmap:SXDe1c5blay5pm1f7,
+        systemmap:SGXgfZIB9hCBv4fIa,
+        systemmap:Se35WpC7gmVkMSoME,
+        systemmap:SODrAbMM6KbwlpmH1,
+        systemmap:S8y8UdAPhbDQ78DW3,
         
         # Services
         systemmap:SK6JOIUV1UjrOYD7f .
@@ -112,10 +113,6 @@ systemmap:OrgVeteraGmbH a systemmap:PrivateOrganization ;
     schema:name "Vetera GmbH"@de ;
     schema:description "Vetera GmbH ist ein Softwareanbieter für die Tiermedizin in der DACH-Region mit Hauptsitz in Deutschland."@de .
 
-systemmap:OrgBLV a schema:GovernmentOrganization ;
-    schema:name "BLV"@de ;
-    schema:description "Hauptaufgabe des BLV ist es, die Gesundheit und das Wohlbefinden von Mensch und Tier aktiv zu fördern. Die Hauptpfeiler dafür sind beim Menschen Lebensmittelsicherheit und gesunde Ernährung und beim Tier Tierschutz und Tiergesundheit."@de .
-
 zefix:414877 a systemmap:PrivateOrganization ;
     schema:name "Suisag"@de ;
     schema:description "Die SUISAG ist ein Unternehmen für die Schweizer Schweineproduzenten und internationalen Genetik-Kunden. Sie bietet im Bereich Schweineproduktion Schweizer Genetik, Gesundheitsprogramme und weitere Dienstleistungen an."@de .
@@ -124,12 +121,13 @@ zefix:1441172 a systemmap:PrivateOrganization ;
     schema:name "Gesundheitsservice der Qualiporc Genossenschaft QGS"@de ;
     schema:description "Der Gesundheitsservice der Qualiporc Genossenschaft (QGS) ist ein schweizweit tätiger Gesundheitsdienst für die Schweineproduktion."@de .
 
-systemmap:OrgQualiporcGenossenschaft a systemmap:PrivateOrganization ;
+systemmap:Swl6L9sDOknvl3fAZ a systemmap:PrivateOrganization ;
     schema:name "Qualiporc Genossenschaft"@de ;
     schema:description "Die Qualiporc Genossenschaft ist mit ihrem Gesundheits- & Zuchtservice eine Genossenschaft für Schweinezüchtern und -mästern in der Schweiz."@de .
 
-systemmap:OrgFachstelleAHIS a schema:Organization ;
-    schema:name "Fachstelle Animal Health Info System, NTGS"@de ;
+systemmap:S2uXY2dnx1jijxpXr a schema:Organization ;
+    schema:name "Fachstelle Animal Health Info System"@de ;
+    schema:parentOrganization zefix:1457969 ;
     schema:description "Die Fachstelle AHIS ist primär für den Betrieb von \"Pig Health Info System\" und \"Cattle Health Info System\" zuständig. Dies beinhaltet die Betreuung und Unterstützung der Nutzer:innen, aber auch das Testen der Neuentwicklungen und die Planung derer Veröffentlichung. Ausserdem ist die Fachstelle für die Betreuung und Administration der Programme PathoPig und ZoE-BTA zuständig. Organisatorisch ist die Fachstelle Nutztiergesundheit Schweiz mit Sitz in Zollikofen angegliedert."@de ;
     systemmap:parentOrganization zefix:1457969 .
 
@@ -185,81 +183,80 @@ systemmap:Sce5n6iUiSgdU3Mvv a schema:SoftwareApplication ;
     schema:name "Diana Suisse"@de ;
     schema:description "DianaSuisse ist eine Software für eine effiziente Verwaltung einer Tierarztpraxis oder Klinik: von der Terminorganisation über die Patientenverwaltung bis hin zur Rechnungsstellung."@de ;
     systemmap:operatedBy zefix:430315 ;
-    systemmap:contains systemmap:DatasetDianaTiergesundheit,
-        systemmap:DatasetDianaMedikamente .
+    systemmap:contains systemmap:S8nHLngDLQtFaaCwm,
+        systemmap:SugFxfLwGaME1mDiA .
 
 systemmap:SysVetera a schema:SoftwareApplication ;
     schema:name "Vetera"@de ;
+    schema:description "Spezialisierte Praxismanagement-Software für die Veterinärmedizin zur systematischen Erfassung, Verwaltung und Auswertung klinischer Tiergesundheits- sowie Medikamentendaten."@de ;
     systemmap:operatedBy systemmap:OrgVeteraGmbH ;
-    systemmap:contains systemmap:DatasetVeteraTiergesundheit,
-        systemmap:DatasetVeteraMedikamente .
+    systemmap:contains systemmap:S8y8UdAPhbDQ78DW3,
+        systemmap:SODrAbMM6KbwlpmH1 .
 
-systemmap:SysFLEKO a schema:SoftwareApplication ;
+systemmap:SJKVNhaCVFoHhWjks a schema:SoftwareApplication ;
     schema:name "FLEKO"@de ;
-    systemmap:operatedBy systemmap:OrgBLV ;
-    systemmap:contains systemmap:DatasetFLEKOTiergesundheit .
+    systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN ;
+    systemmap:contains systemmap:SSBg29n8Wei8fxx1a .
 
-systemmap:SysInfoSM a schema:SoftwareApplication ;
+systemmap:SP86YzKhzJHZDD9Dj a schema:SoftwareApplication ;
     schema:name "Informationssystem Seuchenmeldungen infoSM"@de ;
     schema:description "Das Informationssystem „Seuchenmeldungen“ dient der Publikation von aktuellen Ausbrüchen von Tierseuchen, deren Entwicklung und der regionalen Verteilung. Es wird vom BLV unterhalten."@de ;
-    systemmap:operatedBy systemmap:OrgBLV ;
-    systemmap:contains systemmap:DatasetTierseuchenmeldungen .
+    systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN ;
+    systemmap:contains systemmap:SuZ6UFD05DBvC5E09 .
 
-systemmap:SysISABV a schema:SoftwareApplication ;
+systemmap:S6v6k2SMlwAVdLFmI a schema:SoftwareApplication ;
     schema:name "Informationssystem Antibiotika in der Veterinärmedizin IS ABV"@de ;
     schema:description "Das IS ABV (Informationssystem Antibiotika in der Veterinärmedizin) dient der Erfassung von Antibiotikaverschreibungen für Tiere."@de ;
-    systemmap:operatedBy systemmap:OrgBLV ;
-    systemmap:contains systemmap:DatasetISABVTiergesundheit,
-        systemmap:DatasetISABVAntibiotika .
+    systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN ;
+    systemmap:contains systemmap:SnfWhcliKG1DvHlSs,
+        systemmap:STf8Ef1Y8b5AICZh3 .
 
-systemmap:SysSuisSanoEBJ a schema:SoftwareApplication ;
+systemmap:SzrnfKnzjo2egouKl a schema:SoftwareApplication ;
     schema:name "SuisSano EBJ"@de ;
     systemmap:operatedBy zefix:804864 ;
-    systemmap:ownedBy zefix:414877 ;
-    systemmap:contains systemmap:DatasetSuisSanoEBJTiergesundheit,
-        systemmap:DatasetSuisSanoTierbehandlungen .
+    systemmap:contains systemmap:SCnkbsCJntAwYZz1Y,
+        systemmap:SSMBJhVTP6uajYFb2 .
 
-systemmap:SysQGSEBJ a schema:SoftwareApplication ;
+systemmap:SXekzo74vRcL6VkjL a schema:SoftwareApplication ;
     schema:name "QGS EBJ"@de ;
     schema:description "Das Elektronische Behandlungsjournal (EBJ) ist ein webbasiertes Tool von Qualiporcs Gesundheitsservice QGS zur einheitlichen elektronischen Erfassung und Auswertung von Medikamenteneinsätzen sowie Behandlungen einzelner Tiere und Tiergruppen auf Schweine-Zucht- und Mastbetrieben, inklusive Dosierungsberechnung, Absetzfristenmanagement und Quartalsvergleichen zum Antibiotikaeinsatz."@de ;
     systemmap:operatedBy zefix:804864 ;
-    systemmap:ownedBy zefix:1441172 ;
-    systemmap:contains systemmap:DatasetQGSEBJTiergesundheit,
-        systemmap:DatasetQGSTierbehandlungen .
+    systemmap:contains systemmap:SySrDkY16tb6SzA01,
+        systemmap:SySJqbKVIZvMcXJNf .
 
-systemmap:SysPHIS a schema:SoftwareApplication ;
+systemmap:SPDsRNDwfr6fKFrRc a schema:SoftwareApplication ;
     schema:name "Pig Health Info System"@de ;
     schema:description "Das Pig Health Info System PHIS einer App dient der Erfassung von Schweinegesundheitsdaten im Rahmen von Bestandes- und Einzeltier-Untersuchungen, mit Erzeugen von automatischen Berichten. Es dient weiterhin den TierärztInnen und den TierhalterInnen als Dokumentation, vereinfacht aber auch den Informationsfluss von den TierärztInnen zu den TierhalterInnen. In PHIS werden ausserdem Daten zu den Programmen \"ZoE BTA\" und \"PathoPig\" erfasst und verwaltet."@de ;
-    systemmap:operatedBy systemmap:OrgFachstelleAHIS ;
-    systemmap:contains systemmap:DatasetPHISTiergesundheit .
+    systemmap:operatedBy systemmap:S2uXY2dnx1jijxpXr ;
+    systemmap:contains systemmap:S4x04ackmG5yne5By .
 
-systemmap:SysSuisData a schema:SoftwareApplication ;
+systemmap:SWSDKVAr9pdy3T38R a schema:SoftwareApplication ;
     schema:name "SuisData"@de ;
     systemmap:operatedBy zefix:414877 ;
-    systemmap:contains systemmap:DatasetSuisDataTiergesundheit .
+    systemmap:contains systemmap:SvmW0FRiWcALdXgAa .
 
-systemmap:SysReproJournal a schema:SoftwareApplication ;
+systemmap:ShjUfLjdanc83Dr0d a schema:SoftwareApplication ;
     schema:name "ReproJournal"@de ;
     systemmap:operatedBy zefix:414877 ;
-    systemmap:contains systemmap:DatasetReproJournalTiergesundheit .
+    systemmap:contains systemmap:SXIwI6eU6lZZOFVR4 .
 
-systemmap:SysASPRisikoampel a schema:SoftwareApplication ;
+systemmap:SSRl55QBjhFeGUWhn a schema:SoftwareApplication ;
     schema:name "ASP-Risikoampel"@de ;
     systemmap:operatedBy zefix:414877 .
 
-systemmap:SysUFA2000Planer a schema:SoftwareApplication ;
+systemmap:Sqv5Vh286L7iinjmy a schema:SoftwareApplication ;
     schema:name "UFA2000-Planer"@de ;
     schema:description "Der UFA2000-Planer ist ein Auswertungsprogramm für Leistungen und Produktionszahlen in der Schweineproduktion. So kann zum Beispiel das Deckregister oder das Sauenblatt hier geführt werden. Mit einem überbetrieblichen Vergleich können Stärken und Schwächen auf dem eigenen Betrieb erkannt werden."@de ;
     systemmap:operatedBy zefix:321790 ;
-    systemmap:contains systemmap:DatasetUfa2000Deckregister,
-        systemmap:DatasetUfa2000Sauenblatt,
-        systemmap:DatasetUfa2000Wurferfassung .
+    systemmap:contains systemmap:SXDe1c5blay5pm1f7,
+        systemmap:SGXgfZIB9hCBv4fIa,
+        systemmap:Se35WpC7gmVkMSoME .
 
-systemmap:SysCHIS a schema:SoftwareApplication ;
+systemmap:SOK9kQP8T3M2qPNEL a schema:SoftwareApplication ;
     schema:name "Cattle Health Info System"@de ;
     schema:description "Das Cattle Health Info System in Form einer App dient der Erfassung von Rindergesundheitsdaten im Rahmen von Bestandes- und Einzeltier-Untersuchungen, mit Erzeugen von automatischen Berichten. Es dient weiterhin den TierärztInnen und den TierhalterInnen als Dokumentation, vereinfacht aber auch den Informationsfluss von den TierärztInnen zu den TierhalterInnen."@de ;
-    systemmap:operatedBy systemmap:OrgFachstelleAHIS ;
-    systemmap:contains systemmap:DatasetCHISTiergesundheit .
+    systemmap:operatedBy systemmap:S2uXY2dnx1jijxpXr ;
+    systemmap:contains systemmap:Sa2vJ733dT4GOkwZk .
 
 # ==============================================================================
 # DATASETS
@@ -282,7 +279,7 @@ systemmap:SnZ8gXlT0SOcf5XnZ a dcat:Dataset ;
         keyword:livestock,
         keyword:veterinarymedicine .
 
-systemmap:DatasetDianaTiergesundheit a dcat:Dataset ;
+systemmap:S8nHLngDLQtFaaCwm a dcat:Dataset ;
     schema:name "Diana Tiergesundheitsdaten"@de ;
     schema:description "Beinhaltet unter anderem Angaben zu Befunden und Diagnosen von Nutztieren und Nutztierbeständen."@de ;
     dcat:keyword keyword:animalhealth,
@@ -290,7 +287,7 @@ systemmap:DatasetDianaTiergesundheit a dcat:Dataset ;
         keyword:diagnostics,
         keyword:veterinarymedicine .
 
-systemmap:DatasetDianaMedikamente a dcat:Dataset ;
+systemmap:SugFxfLwGaME1mDiA a dcat:Dataset ;
     schema:name "Diana Medikamentendaten"@de ;
     schema:description "Beinhaltet unter anderem Angaben zu medikamentenelln Behandlungen bei Nutztieren und Nutztierbeständen."@de ;
     dcat:keyword keyword:antibiotics,
@@ -298,7 +295,7 @@ systemmap:DatasetDianaMedikamente a dcat:Dataset ;
         keyword:livestock,
         keyword:veterinarymedicine .
 
-systemmap:DatasetVeteraTiergesundheit a dcat:Dataset ;
+systemmap:S8y8UdAPhbDQ78DW3 a dcat:Dataset ;
     schema:name "Vetera Tiergesundheitsdaten"@de ;
     schema:description "Beinhaltet unter anderem Angaben zu Befunden und Diagnosen von Nutztieren und Nutztierbeständen."@de ;
     dcat:keyword keyword:animalhealth,
@@ -306,7 +303,7 @@ systemmap:DatasetVeteraTiergesundheit a dcat:Dataset ;
         keyword:diagnostics,
         keyword:veterinarymedicine .
 
-systemmap:DatasetVeteraMedikamente a dcat:Dataset ;
+systemmap:SODrAbMM6KbwlpmH1 a dcat:Dataset ;
     schema:name "Vetera Medikamentendaten"@de ;
     schema:description "Beinhaltet unter anderem Angaben zu medikamentenelln Behandlungen bei Nutztieren und Nutztierbeständen."@de ;
     dcat:keyword keyword:antibiotics,
@@ -314,60 +311,60 @@ systemmap:DatasetVeteraMedikamente a dcat:Dataset ;
         keyword:livestock,
         keyword:veterinarymedicine .
 
-systemmap:DatasetFLEKOTiergesundheit a dcat:Dataset ;
+systemmap:SSBg29n8Wei8fxx1a a dcat:Dataset ;
     schema:name "FLEKO Tiergesundheitsdaten"@de ;
     schema:description "Beinhaltet unter anderem Befunde aus der Schlachttier- und Fleischuntersuchung von Nutztieren"@de ;
     dcat:keyword keyword:animalhealth,
         keyword:livestock,
         keyword:diagnostics .
 
-systemmap:DatasetTierseuchenmeldungen a dcat:Dataset ;
+systemmap:SuZ6UFD05DBvC5E09 a dcat:Dataset ;
     schema:name "Tierseuchenmeldungen"@de ;
     schema:description "Enthält Angaben zum Vorkommen, der Entwicklung und regionalen Verteilung von Tierseuchen in der Schweiz."@de ;
     dcat:keyword keyword:epizooticdiseases,
         keyword:animalhealth .
 
-systemmap:DatasetISABVTiergesundheit a dcat:Dataset ;
+systemmap:SnfWhcliKG1DvHlSs a dcat:Dataset ;
     schema:name "IS-ABV Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Befunde und Diagnosen von Tieren"@de ;
     dcat:keyword keyword:animalhealth,
         keyword:diagnostics,
         keyword:veterinarymedicine .
 
-systemmap:DatasetISABVAntibiotika a dcat:Dataset ;
+systemmap:STf8Ef1Y8b5AICZh3 a dcat:Dataset ;
     schema:name "IS-ABV Antibiotika"@de ;
     schema:description "Enthält unter anderem Vertriebs- und Verschreibungsdaten von Antibiotika an Tieren"@de ;
     dcat:keyword keyword:antibiotics,
         keyword:veterinarydrugs,
         keyword:veterinarymedicine .
 
-systemmap:DatasetSuisSanoEBJTiergesundheit a dcat:Dataset ;
+systemmap:SCnkbsCJntAwYZz1Y a dcat:Dataset ;
     schema:name "EBJ Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Befunde und Diagnosen im Zusammenhang mit Behandlungen von Schweinen"@de ;
     dcat:keyword keyword:animalhealth, keyword:livestock, keyword:diagnostics .
 
-systemmap:DatasetSuisSanoTierbehandlungen a dcat:Dataset ;
+systemmap:SSMBJhVTP6uajYFb2 a dcat:Dataset ;
     schema:name "Tierbehandlungen Schwein"@de ;
     schema:description "Enthält unter anderem Angaben zu medikamentellen Behandlungen von Schweinen wie Präparat, Dosierung, Behandlungsdauer und Anzahl behandelter Schweine"@de ;
     dcat:keyword keyword:veterinarydrugs,
         keyword:antibiotics,
         keyword:livestock .
 
-systemmap:DatasetQGSEBJTiergesundheit a dcat:Dataset ;
+systemmap:SySrDkY16tb6SzA01 a dcat:Dataset ;
     schema:name "EBJ Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Befunde und Diagnosen im Zusammenhang mit Behandlungen von Schweinen"@de ;
     dcat:keyword keyword:animalhealth,
         keyword:livestock,
         keyword:diagnostics .
 
-systemmap:DatasetQGSTierbehandlungen a dcat:Dataset ;
+systemmap:SySJqbKVIZvMcXJNf a dcat:Dataset ;
     schema:name "Tierbehandlungen Schwein"@de ;
     schema:description "Enthält unter anderem Angaben zu medikamentellen Behandlungen von Schweinen wie Präparat, Dosierung, Behandlungsdauer und Anzahl behandelter Schweine"@de ;
     dcat:keyword keyword:veterinarydrugs,
         keyword:antibiotics,
         keyword:livestock .
 
-systemmap:DatasetPHISTiergesundheit a dcat:Dataset ;
+systemmap:S4x04ackmG5yne5By a dcat:Dataset ;
     schema:name "PHIS Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Schwein aus Routineuntersuchen, TAM-Besuchen oder den Programmen ZoE-BTA und PathoPig"@de ;
     dcat:keyword keyword:animalhealth,
@@ -375,42 +372,42 @@ systemmap:DatasetPHISTiergesundheit a dcat:Dataset ;
         keyword:diagnostics,
         keyword:veterinarymedicine .
 
-systemmap:DatasetSuisDataTiergesundheit a dcat:Dataset ;
+systemmap:SvmW0FRiWcALdXgAa a dcat:Dataset ;
     schema:name "SuisData Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Schwein aus Routine-oder Spezialuntersuchen."@de ;
     dcat:keyword keyword:animalhealth,
         keyword:livestock,
         keyword:diagnostics .
 
-systemmap:DatasetReproJournalTiergesundheit a dcat:Dataset ;
+systemmap:SXIwI6eU6lZZOFVR4 a dcat:Dataset ;
     schema:name "ReproJournal Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Angaben zu Fruchtbarkeitsleistungen von Schweinen."@de ;
     dcat:keyword keyword:reproduction,
         keyword:animalbreeding,
         keyword:livestock .
 
-systemmap:DatasetUfa2000Deckregister a dcat:Dataset ;
+systemmap:SXDe1c5blay5pm1f7 a dcat:Dataset ;
     schema:name "Ufa2000 Deckregister"@de ;
     schema:description "Enthält unter anderem Angaben zu Belegungen von Schweinen."@de ;
     dcat:keyword keyword:reproduction,
         keyword:animalbreeding,
         keyword:livestock .
 
-systemmap:DatasetUfa2000Sauenblatt a dcat:Dataset ;
+systemmap:SGXgfZIB9hCBv4fIa a dcat:Dataset ;
     schema:name "Ufa2000 Sauenblatt"@de ;
     schema:description "Enthält unter anderem Angaben zu Trächtigkeitsdaten von Sauen"@de ;
     dcat:keyword keyword:reproduction,
         keyword:animalbreeding,
         keyword:livestock .
 
-systemmap:DatasetUfa2000Wurferfassung a dcat:Dataset ;
+systemmap:Se35WpC7gmVkMSoME a dcat:Dataset ;
     schema:name "Ufa2000 Wurferfassung"@de ;
     schema:description "Enthält unter anderem Angaben zu Wurfdaten von Sauen"@de ;
     dcat:keyword keyword:reproduction,
         keyword:animalbreeding,
         keyword:livestock .
 
-systemmap:DatasetCHISTiergesundheit a dcat:Dataset ;
+systemmap:Sa2vJ733dT4GOkwZk a dcat:Dataset ;
     schema:name "CHIS Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Rind aus Routineuntersuchen oder Tierarzneimittel-Besuchen."@de ;
     dcat:keyword keyword:animalhealth,

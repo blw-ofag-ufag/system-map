@@ -71,7 +71,7 @@ To run the data processing and upload to LINDAS, follow these steps:
 3. Execute `upload.sh`
 
   ``` sh
-  sh upload.sh
+  bash upload.bash
   ```
 
 You can find the rest of the technical documentation [on the Wiki of this repository](https://github.com/blw-ofag-ufag/system-map/wiki). There, the ontology, the data processing pipeline and the visualization tool are explained in much more detail.

@@ -8,3 +8,4 @@ rdf/graph.ttl
 .env
 deprecated/
 venv/
+test.sparqlbook

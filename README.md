@@ -68,7 +68,7 @@ To run the data processing and upload to LINDAS, follow these steps:
   pip install -r requirements.txt
   ```
 
-3. Execute `upload.sh`
+3. Execute `upload.bash`
 
   ``` sh
   bash upload.bash

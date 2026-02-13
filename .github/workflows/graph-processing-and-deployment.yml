@@ -17,16 +17,19 @@ jobs:
         with:
           python-version: '3.12'
       
-      - name: Install RDF library
-        run: pip install rdflib otsrdflib
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
       - name: Validate turtle syntax of all `.ttl` files
         run: |
-          python scripts/validate-syntax.py
+          python src/python/validate.py
 
       - name: Run reasoning script to construct an extended graph
         run: |
-          python scripts/reason.py
+          python src/python/rdf-processing.py \
+            -i rdf/ontology/*.ttl rdf/data/*.ttl rdf/shape/*.ttl \
+            -o rdf/processed/graph.ttl \
+            -r src/sparql/inference-rules/*.sparql
       
       - name: Clear the old graph on LINDAS PROD
         run: |

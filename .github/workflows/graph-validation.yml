@@ -18,11 +18,11 @@ jobs:
         with:
           python-version: '3.12'
       
-      - name: Install RDF library
-        run: pip install rdflib
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
       - name: Validate turtle syntax
-        run: python scripts/validate-syntax.py
+        run: python src/python/validate.py
 
   validate-graph-shacl:
     name: Validate shape of `rdf/graph.ttl`
@@ -36,14 +36,15 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install PySHACL
-        run: |
-          pip install rdflib
-          pip install pyshacl
-          pip install otsrdflib
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
       - name: Run owl-based inferencing to construct `graph.ttl`
-        run: python scripts/reason.py
+        run: |
+          python src/python/rdf-processing.py \
+            -i rdf/ontology/*.ttl rdf/data/*.ttl rdf/shape/*.ttl \
+            -o rdf/processed/graph.ttl \
+            -r src/sparql/inference-rules/*.sparql
       
       - name: Validate graph shape with SHACL CLI
-        run: pyshacl -s rdf/shape.ttl -f human rdf/graph.ttl
+        run: pyshacl -s rdf/shape/shape.ttl -f human rdf/processed/graph.ttl

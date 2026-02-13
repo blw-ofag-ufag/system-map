@@ -17,7 +17,7 @@ python3 src/python/rdf-processing.py \
   -r src/sparql/inference-rules/*.sparql
 
 echo Apply SHACL rules to check for constraint violations
-pyshacl -s rdf/shape.ttl -f human rdf/graph.ttl
+pyshacl -s rdf/shape/shape.ttl -f human rdf/processed/graph.ttl
 
 echo Delete existing data from LINDAS
 curl \
@@ -30,7 +30,7 @@ curl \
   --user "$USER:$PASSWORD" \
   -X POST \
   -H "Content-Type: text/turtle" \
-  --data-binary @rdf/graph.ttl \
+  --data-binary @rdf/processed/graph.ttl \
   "$ENDPOINT?graph=$GRAPH"
 
 echo All commands executed

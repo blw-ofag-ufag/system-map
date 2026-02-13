@@ -277,47 +277,69 @@ systemmap:SnZ8gXlT0SOcf5XnX
 systemmap:SnZ8gXlT0SOcf5XnZ a dcat:Dataset ;
     schema:name "Oblon Medikamentendaten"@de ;
     schema:description "Beinhaltet unter anderem Angaben zu medikamentenelln Behandlungen bei Nutztieren und Nutztierbeständen."@de ;
-    dcat:keyword keyword:antibiotics, keyword:veterinarydrugs, keyword:livestock, keyword:veterinarymedicine .
+    dcat:keyword keyword:antibiotics,
+        keyword:veterinarydrugs,
+        keyword:livestock,
+        keyword:veterinarymedicine .
 
 systemmap:DatasetDianaTiergesundheit a dcat:Dataset ;
     schema:name "Diana Tiergesundheitsdaten"@de ;
     schema:description "Beinhaltet unter anderem Angaben zu Befunden und Diagnosen von Nutztieren und Nutztierbeständen."@de ;
-    dcat:keyword keyword:animalhealth, keyword:livestock, keyword:diagnostics, keyword:veterinarymedicine .
+    dcat:keyword keyword:animalhealth,
+        keyword:livestock,
+        keyword:diagnostics,
+        keyword:veterinarymedicine .
 
 systemmap:DatasetDianaMedikamente a dcat:Dataset ;
     schema:name "Diana Medikamentendaten"@de ;
     schema:description "Beinhaltet unter anderem Angaben zu medikamentenelln Behandlungen bei Nutztieren und Nutztierbeständen."@de ;
-    dcat:keyword keyword:antibiotics, keyword:veterinarydrugs, keyword:livestock, keyword:veterinarymedicine .
+    dcat:keyword keyword:antibiotics,
+        keyword:veterinarydrugs,
+        keyword:livestock,
+        keyword:veterinarymedicine .
 
 systemmap:DatasetVeteraTiergesundheit a dcat:Dataset ;
     schema:name "Vetera Tiergesundheitsdaten"@de ;
     schema:description "Beinhaltet unter anderem Angaben zu Befunden und Diagnosen von Nutztieren und Nutztierbeständen."@de ;
-    dcat:keyword keyword:animalhealth, keyword:livestock, keyword:diagnostics, keyword:veterinarymedicine .
+    dcat:keyword keyword:animalhealth,
+        keyword:livestock,
+        keyword:diagnostics,
+        keyword:veterinarymedicine .
 
 systemmap:DatasetVeteraMedikamente a dcat:Dataset ;
     schema:name "Vetera Medikamentendaten"@de ;
     schema:description "Beinhaltet unter anderem Angaben zu medikamentenelln Behandlungen bei Nutztieren und Nutztierbeständen."@de ;
-    dcat:keyword keyword:antibiotics, keyword:veterinarydrugs, keyword:livestock, keyword:veterinarymedicine .
+    dcat:keyword keyword:antibiotics,
+        keyword:veterinarydrugs,
+        keyword:livestock,
+        keyword:veterinarymedicine .
 
 systemmap:DatasetFLEKOTiergesundheit a dcat:Dataset ;
     schema:name "FLEKO Tiergesundheitsdaten"@de ;
     schema:description "Beinhaltet unter anderem Befunde aus der Schlachttier- und Fleischuntersuchung von Nutztieren"@de ;
-    dcat:keyword keyword:animalhealth, keyword:livestock, keyword:diagnostics .
+    dcat:keyword keyword:animalhealth,
+        keyword:livestock,
+        keyword:diagnostics .
 
 systemmap:DatasetTierseuchenmeldungen a dcat:Dataset ;
     schema:name "Tierseuchenmeldungen"@de ;
     schema:description "Enthält Angaben zum Vorkommen, der Entwicklung und regionalen Verteilung von Tierseuchen in der Schweiz."@de ;
-    dcat:keyword keyword:epizooticdiseases, keyword:animalhealth .
+    dcat:keyword keyword:epizooticdiseases,
+        keyword:animalhealth .
 
 systemmap:DatasetISABVTiergesundheit a dcat:Dataset ;
     schema:name "IS-ABV Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Befunde und Diagnosen von Tieren"@de ;
-    dcat:keyword keyword:animalhealth, keyword:diagnostics, keyword:veterinarymedicine .
+    dcat:keyword keyword:animalhealth,
+        keyword:diagnostics,
+        keyword:veterinarymedicine .
 
 systemmap:DatasetISABVAntibiotika a dcat:Dataset ;
     schema:name "IS-ABV Antibiotika"@de ;
     schema:description "Enthält unter anderem Vertriebs- und Verschreibungsdaten von Antibiotika an Tieren"@de ;
-    dcat:keyword keyword:antibiotics, keyword:veterinarydrugs, keyword:veterinarymedicine .
+    dcat:keyword keyword:antibiotics,
+        keyword:veterinarydrugs,
+        keyword:veterinarymedicine .
 
 systemmap:DatasetSuisSanoEBJTiergesundheit a dcat:Dataset ;
     schema:name "EBJ Tiergesundheit"@de ;
@@ -327,49 +349,71 @@ systemmap:DatasetSuisSanoEBJTiergesundheit a dcat:Dataset ;
 systemmap:DatasetSuisSanoTierbehandlungen a dcat:Dataset ;
     schema:name "Tierbehandlungen Schwein"@de ;
     schema:description "Enthält unter anderem Angaben zu medikamentellen Behandlungen von Schweinen wie Präparat, Dosierung, Behandlungsdauer und Anzahl behandelter Schweine"@de ;
-    dcat:keyword keyword:veterinarydrugs, keyword:antibiotics, keyword:livestock .
+    dcat:keyword keyword:veterinarydrugs,
+        keyword:antibiotics,
+        keyword:livestock .
 
 systemmap:DatasetQGSEBJTiergesundheit a dcat:Dataset ;
     schema:name "EBJ Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Befunde und Diagnosen im Zusammenhang mit Behandlungen von Schweinen"@de ;
-    dcat:keyword keyword:animalhealth, keyword:livestock, keyword:diagnostics .
+    dcat:keyword keyword:animalhealth,
+        keyword:livestock,
+        keyword:diagnostics .
 
 systemmap:DatasetQGSTierbehandlungen a dcat:Dataset ;
     schema:name "Tierbehandlungen Schwein"@de ;
     schema:description "Enthält unter anderem Angaben zu medikamentellen Behandlungen von Schweinen wie Präparat, Dosierung, Behandlungsdauer und Anzahl behandelter Schweine"@de ;
-    dcat:keyword keyword:veterinarydrugs, keyword:antibiotics, keyword:livestock .
+    dcat:keyword keyword:veterinarydrugs,
+        keyword:antibiotics,
+        keyword:livestock .
 
 systemmap:DatasetPHISTiergesundheit a dcat:Dataset ;
     schema:name "PHIS Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Schwein aus Routineuntersuchen, TAM-Besuchen oder den Programmen ZoE-BTA und PathoPig"@de ;
-    dcat:keyword keyword:animalhealth, keyword:livestock, keyword:diagnostics, keyword:veterinarymedicine .
+    dcat:keyword keyword:animalhealth,
+        keyword:livestock,
+        keyword:diagnostics,
+        keyword:veterinarymedicine .
 
 systemmap:DatasetSuisDataTiergesundheit a dcat:Dataset ;
     schema:name "SuisData Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Schwein aus Routine-oder Spezialuntersuchen."@de ;
-    dcat:keyword keyword:animalhealth, keyword:livestock, keyword:diagnostics .
+    dcat:keyword keyword:animalhealth,
+        keyword:livestock,
+        keyword:diagnostics .
 
 systemmap:DatasetReproJournalTiergesundheit a dcat:Dataset ;
     schema:name "ReproJournal Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Angaben zu Fruchtbarkeitsleistungen von Schweinen."@de ;
-    dcat:keyword keyword:reproduction, keyword:animalbreeding, keyword:livestock .
+    dcat:keyword keyword:reproduction,
+        keyword:animalbreeding,
+        keyword:livestock .
 
 systemmap:DatasetUfa2000Deckregister a dcat:Dataset ;
     schema:name "Ufa2000 Deckregister"@de ;
     schema:description "Enthält unter anderem Angaben zu Belegungen von Schweinen."@de ;
-    dcat:keyword keyword:reproduction, keyword:animalbreeding, keyword:livestock .
+    dcat:keyword keyword:reproduction,
+        keyword:animalbreeding,
+        keyword:livestock .
 
 systemmap:DatasetUfa2000Sauenblatt a dcat:Dataset ;
     schema:name "Ufa2000 Sauenblatt"@de ;
     schema:description "Enthält unter anderem Angaben zu Trächtigkeitsdaten von Sauen"@de ;
-    dcat:keyword keyword:reproduction, keyword:animalbreeding, keyword:livestock .
+    dcat:keyword keyword:reproduction,
+        keyword:animalbreeding,
+        keyword:livestock .
 
 systemmap:DatasetUfa2000Wurferfassung a dcat:Dataset ;
     schema:name "Ufa2000 Wurferfassung"@de ;
     schema:description "Enthält unter anderem Angaben zu Wurfdaten von Sauen"@de ;
-    dcat:keyword keyword:reproduction, keyword:animalbreeding, keyword:livestock .
+    dcat:keyword keyword:reproduction,
+        keyword:animalbreeding,
+        keyword:livestock .
 
 systemmap:DatasetCHISTiergesundheit a dcat:Dataset ;
     schema:name "CHIS Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Rind aus Routineuntersuchen oder Tierarzneimittel-Besuchen."@de ;
-    dcat:keyword keyword:animalhealth, keyword:livestock, keyword:diagnostics, keyword:veterinarymedicine .
+    dcat:keyword keyword:animalhealth,
+        keyword:livestock,
+        keyword:diagnostics,
+        keyword:veterinarymedicine .

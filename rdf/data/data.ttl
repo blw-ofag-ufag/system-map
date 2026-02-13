@@ -896,31 +896,6 @@ systemmap:S8RVk8dQzkXzXYSZX a schema:SoftwareApplication ;
         """@de ;
     systemmap:operatedBy zefix:1663457 .
 
-systemmap:S8awijRdrkgdpXxgz a schema:SoftwareApplication ;
-    schema:name "Oblon"@de,
-        "Oblon"@en,
-        "Oblon"@fr,
-        "Oblon"@it ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
-    schema:description """
-        OblonData ist eine umfassende Praxis- und Klinikverwaltungssoftware für Tierärzte in der Nutztier-, Pferde- und Kleintierpraxis.
-        Sie bietet Funktionen für Patienten-, Konsultations- und Finanzmanagement, Terminverwaltung, elektronische Krankengeschichte, Lagerverwaltung und zahlreiche Schnittstellen zu anderen Systemen.
-        """@de,
-        """
-        OblonData is a comprehensive practice and clinic management software for veterinarians in livestock, equine, and small animal practices.
-        It offers tools for managing patients, consultations, finances, scheduling, electronic medical records, inventory, and multiple system interfaces.
-        """@en,
-        """
-        OblonData est un logiciel complet de gestion de cabinet et de clinique pour les vétérinaires en pratique des animaux de rente, des chevaux et des petits animaux.
-        Il propose des fonctions de gestion des patients, des consultations, des finances, de la planification, du dossier médical électronique, de la gestion des stocks et de nombreuses interfaces.
-        """@fr,
-        """
-        OblonData è un software completo per la gestione di studi e cliniche veterinarie per animali da reddito, cavalli e piccoli animali.
-        Offre strumenti per la gestione di pazienti, consultazioni, finanze, appuntamenti, cartelle cliniche elettroniche, magazzino e molte interfacce.
-        """@it ;
-    dcat:landingPage <https://oblondata.ch> ;
-    systemmap:operatedBy zefix:984853 .
-
 systemmap:S8lqf2UM29PzK3029 a schema:SoftwareApplication ;
     schema:name "Elektronisches Behandlungsjournal"@de ;
     schema:description """
@@ -5116,10 +5091,6 @@ zefix:885059 a systemmap:PrivateOrganization ;
         "AGRIDEA Association suisse pour le développement de l'agriculture et de l'espace rural"@fr,
         "AGRIDEA Associazione svizzera per lo sviluppo dell'agricoltura e delle aree rurali"@it ;
     dcat:landingPage <https://www.agridea.ch> .
-
-zefix:984853 a systemmap:PrivateOrganization ;
-    schema:name "Amacker & Partner Informatik AG"@de ;
-    dcat:landingPage <https://www.amacker.ch> .
 
 systemmap:S6ILF4g1j5sNf9aG a termdat:52451 ;
     schema:name "Informationen zur Einfuhr von PSM"@de,

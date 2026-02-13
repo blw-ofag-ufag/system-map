@@ -1,0 +1,8 @@
+@prefix keyword: <https://agriculture.ld.admin.ch/system-map/keyword/> .
+@prefix schema: <http://schema.org/> .
+
+keyword:animalhealth schema:name "Tiergesundheit"@de ,
+    "Animal health"@en .
+
+keyword:antibiotics schema:name "Antibiotika"@de ,
+    "Antibiotics"@en .

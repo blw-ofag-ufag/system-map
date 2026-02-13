@@ -2,6 +2,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix keyword: <https://agriculture.ld.admin.ch/system-map/keyword/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -55,10 +56,15 @@ systemmap:SAAAX37V802JgbLEb a dcmitype:Collection ;
 systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
     schema:name "IT-Systemlandschaft im Schweizer Nutztiersektor"@de ;
     systemmap:containsNodes systemmap:S7aG1r5IoOvAalIFb,
+        systemmap:S8awijRdrkgdpXxgz,
         systemmap:SbcLBABffpMBvu7OP,
+        systemmap:Sce5n6iUiSgdU3Mvv,
         systemmap:SeAMQkVkDZ2SUpEVq,
+        systemmap:SnZ8gXlT0SOcf5XnX,
+        systemmap:SnZ8gXlT0SOcf5XnZ,
         zefix:1457969,
-        zefix:804864 .
+        zefix:804864,
+        zefix:984853 .
 
 systemmap:Sa9PcqsvnAMuiYCjx a dcmitype:Collection ;
     schema:name "Acontrol Systemarchitektur"@de,
@@ -946,6 +952,8 @@ systemmap:S8awijRdrkgdpXxgz a schema:SoftwareApplication ;
         "Oblon"@fr,
         "Oblon"@it ;
     dcat:landingPage <https://oblondata.ch> ;
+    systemmap:contains systemmap:SnZ8gXlT0SOcf5XnX,
+        systemmap:SnZ8gXlT0SOcf5XnZ ;
     systemmap:operatedBy zefix:984853 .
 
 systemmap:S8lqf2UM29PzK3029 a schema:SoftwareApplication ;
@@ -1975,6 +1983,10 @@ systemmap:Sc6kZqxTyS0gFGCY a schema:SoftwareApplication ;
         "MARS III"@it ;
     systemmap:isPartOf systemmap:ShZO092di7cBnOm7F ;
     systemmap:operatedBy systemmap:SaVyVVsIDkiDMtQq4 .
+
+systemmap:Sce5n6iUiSgdU3Mvv a schema:SoftwareApplication ;
+    schema:description "DianaSuisse ist eine Software für eine effiziente Verwaltung einer Tierarztpraxis oder Klinik: von der Terminorganisation über die Patientenverwaltung bis hin zur Rechnungsstellung."@de ;
+    schema:name "Diana Suisse"@de .
 
 systemmap:Sd3egXVVG1pgbzgcA a schema:SoftwareApplication ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -3237,10 +3249,10 @@ termdat:52453 a owl:Class ;
         "Dati personali degni di particolare protezione"@it ;
     rdfs:subClassOf termdat:52451 .
 
-_:n0a662712146947308fd8520fbd636ee6b12 a owl:Class ;
+_:n63a5cbae24fe45cc96cbc31f007fa3c6b12 a owl:Class ;
     owl:unionOf ( dcat:Dataset service:Service schema:SoftwareApplication ) .
 
-_:n0a662712146947308fd8520fbd636ee6b8 a owl:Class ;
+_:n63a5cbae24fe45cc96cbc31f007fa3c6b8 a owl:Class ;
     owl:unionOf ( dcat:Dataset service:Service schema:SoftwareApplication ) .
 
 systemmap:abbreviation a owl:DatatypeProperty ;
@@ -3572,7 +3584,7 @@ systemmap:containsNodes a owl:ObjectProperty ;
 systemmap:developedBy a owl:ObjectProperty ;
     schema:name "entwickelt von"@de,
         "developed by"@en ;
-    rdfs:domain _:n0a662712146947308fd8520fbd636ee6b8 ;
+    rdfs:domain _:n63a5cbae24fe45cc96cbc31f007fa3c6b8 ;
     rdfs:range schema:Organization ;
     owl:inverseOf systemmap:develops .
 
@@ -3586,7 +3598,7 @@ systemmap:develops a owl:ObjectProperty ;
     schema:name "entwickelt"@de,
         "develops"@en ;
     rdfs:domain schema:Organization ;
-    rdfs:range _:n0a662712146947308fd8520fbd636ee6b12 ;
+    rdfs:range _:n63a5cbae24fe45cc96cbc31f007fa3c6b12 ;
     owl:inverseOf systemmap:developedBy .
 
 systemmap:hasLegalBasis a owl:ObjectProperty ;
@@ -4310,6 +4322,16 @@ systemmap:SkcU0PDb6fucIKa9k a dcat:Dataset ;
         "Données de marché Céréales panifiables, farine et produits de boulangerie"@fr,
         "Dati di mercato Cereali panificabili, farina e prodotti da forno"@it ;
     dcat:landingPage <https://www.agrarmarktdaten.ch/markt/getreide> .
+
+systemmap:SnZ8gXlT0SOcf5XnX a dcat:Dataset ;
+    schema:description "Beinhaltet unter anderem Angaben zu Befunden und Diagnosen von Nutztieren und Nutztierbeständen."@de ;
+    schema:name "Oblon Tiergesundheitsdaten"@de ;
+    dcat:keyword keyword:animalhealth .
+
+systemmap:SnZ8gXlT0SOcf5XnZ a dcat:Dataset ;
+    schema:description "Beinhaltet unter anderem Angaben zu medikamentenelln Behandlungen bei Nutztieren und Nutztierbeständen."@de ;
+    schema:name "Oblon Medikamentendaten"@de ;
+    dcat:keyword keyword:antibiotics .
 
 systemmap:SoBRgq7STLbZfEze a dcat:Dataset ;
     schema:description """
@@ -6052,6 +6074,10 @@ zefix:427343 a systemmap:PrivateOrganization ;
         "Bio Suisse, Federazione delle organizzazioni svizzere dell’agricoltura biologica"@it ;
     dcat:landingPage <https://www.bio-suisse.ch> .
 
+zefix:430315 a systemmap:PrivateOrganization ;
+    schema:description "Das Team der Diana Software AG isetzt sich unter anderem aus ehemaligen tiermedizinischen Praxisassistentinnen sowie erfahrenen Top-Entwicklern zusammen. Diana Software AG wurde 1998 gegründet und bietet Software für die Tiermedizin an."@de ;
+    schema:name "Diana Software AG"@de .
+
 zefix:432768 a systemmap:PrivateOrganization ;
     schema:name "TRAVECO Transporte AG"@de ;
     systemmap:ownedBy zefix:328631 .
@@ -6536,4 +6562,10 @@ systemmap:SLvuxq7SeZ6X0GYA a termdat:52453 ;
         "Résultats du contrôle du lait"@fr,
         "Risultati del controllo del latte"@it ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
+
+keyword:animalhealth schema:name "Tiergesundheit"@de,
+        "Animal health"@en .
+
+keyword:antibiotics schema:name "Antibiotika"@de,
+        "Antibiotics"@en .
 

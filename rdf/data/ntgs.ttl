@@ -2,6 +2,9 @@
 # PREFIXES
 # ==============================================================================
 
+@prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
+@prefix keyword: <https://agriculture.ld.admin.ch/system-map/keyword/> .
+
 @prefix LwG: <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
@@ -12,9 +15,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix service: <http://purl.org/ontology/service#> .
 @prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
-@prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
 @prefix termdat: <https://register.ld.admin.ch/termdat/> .
-@prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
 
@@ -28,7 +29,12 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         zefix:804864,
         systemmap:SeAMQkVkDZ2SUpEVq,
         systemmap:S7aG1r5IoOvAalIFb,
-        systemmap:SbcLBABffpMBvu7OP .
+        systemmap:SbcLBABffpMBvu7OP,
+        systemmap:S8awijRdrkgdpXxgz,
+        systemmap:SnZ8gXlT0SOcf5XnZ,
+        zefix:984853,
+        systemmap:Sce5n6iUiSgdU3Mvv,
+        systemmap:SnZ8gXlT0SOcf5XnX .
 
 # ==============================================================================
 # ORGANIZATIONS
@@ -43,6 +49,10 @@ zefix:804864 a systemmap:PrivateOrganization ;
     schema:description "Die Qualitas AG entwickelt IT-Lösungen für die Schweizer Nutztierbranche und bietet diese und Dienstleistungen für die Tierzucht an."@de ;
     dcat:landingPage <https://www.qualitasag.ch/> .
 
+zefix:984853 a systemmap:PrivateOrganization ;
+    schema:name "Amacker & Partner Informatik AG"@de ;
+    dcat:landingPage <https://www.amacker.ch> .
+
 systemmap:SeAMQkVkDZ2SUpEVq a systemmap:CantonalOrganization ;
     schema:name "Universität Bern"@de,
         "University of Bern"@en,
@@ -50,6 +60,10 @@ systemmap:SeAMQkVkDZ2SUpEVq a systemmap:CantonalOrganization ;
         "Università di Berna"@it ;
     dcat:landingPage <https://www.unibe.ch/> ;
     systemmap:access systemmap:SbcLBABffpMBvu7OP .
+
+zefix:430315 a systemmap:PrivateOrganization ;
+    schema:name "Diana Software AG"@de ;
+    schema:description "Das Team der Diana Software AG isetzt sich unter anderem aus ehemaligen tiermedizinischen Praxisassistentinnen sowie erfahrenen Top-Entwicklern zusammen. Diana Software AG wurde 1998 gegründet und bietet Software für die Tiermedizin an."@de .
 
 # ==============================================================================
 # IT SYSTEMS
@@ -73,23 +87,42 @@ systemmap:SbcLBABffpMBvu7OP a schema:SoftwareApplication ;
         "Healthy Hooves Project Data"@en,
         "Données du projet Sabots Sains"@fr,
         "Dati del progetto Zoccoli Sani"@it ;
-    schema:description """
-        Ein vom BLW unterstütztes Ressourcenprojekt zur Verbesserung der Klauengesundheit bei Schweizer Rindern durch systematische Datenerfassung via Klauenpfleger.
-        Die Daten werden bei der Qualitas AG gespeichert und von Partnern wie der Vetsuisse-Fakultät Bern und Zuchtorganisationen für Forschung und Zuchtwertschätzung genutzt.
-        Das Projekt fördert die Zusammenarbeit zwischen Tierhaltern, Tierärzten und Klauenpflegern.
-        """@de,
-        """
-        A resource project supported by the FOAG to improve hoof health in Swiss cattle through systematic data collection by hoof trimmers. The data is stored at Qualitas AG and used by partners such as the Vetsuisse Faculty Bern and breeding organizations for research and breeding value estimation. The project promotes collaboration between animal owners, veterinarians, and hoof trimmers.
-        """@en,
-        """
-        Un projet de ressources soutenu par l'OFAG visant àaméliorer la santé des onglons des bovins suisses grâce à la collecte systématique de données par les pédicures bovins. Les données sont stockées chez Qualitas AG et utilisées par des partenaires tels que la Faculté Vetsuisse de Berne et les organisations d'élevage pour la recherche et l'estimation des valeurs d'élevage. Le projet encourage la collaboration entre éleveurs, vétérinaires et pédicures bovins.
-        """@fr,
-        """
-        Un progetto di risorse sostenuto dall'UFAG per migliorare la salute degli zoccoli dei bovini svizzeri attraverso la raccolta sistematica di dati da parte dei pareggiatori. I dati sono conservati presso Qualitas AG e utilizzati da partner come la Facoltà Vetsuisse di Berna e le organizzazioni di allevamento per la ricerca e la stima del valore genetico. Il progetto promuove la collaborazione tra allevatori, veterinari e pareggiatori.
-        """@it ;
+    schema:description "Ein vom BLW unterstütztes Ressourcenprojekt zur Verbesserung der Klauengesundheit bei Schweizer Rindern durch systematische Datenerfassung via Klauenpfleger. Die Daten werden bei der Qualitas AG gespeichert und von Partnern wie der Vetsuisse-Fakultät Bern und Zuchtorganisationen für Forschung und Zuchtwertschätzung genutzt. Das Projekt fördert die Zusammenarbeit zwischen Tierhaltern, Tierärzten und Klauenpflegern."@de,
+        "A resource project supported by the FOAG to improve hoof health in Swiss cattle through systematic data collection by hoof trimmers. The data is stored at Qualitas AG and used by partners such as the Vetsuisse Faculty Bern and breeding organizations for research and breeding value estimation. The project promotes collaboration between animal owners, veterinarians, and hoof trimmers."@en,
+        "Un projet de ressources soutenu par l'OFAG visant àaméliorer la santé des onglons des bovins suisses grâce à la collecte systématique de données par les pédicures bovins. Les données sont stockées chez Qualitas AG et utilisées par des partenaires tels que la Faculté Vetsuisse de Berne et les organisations d'élevage pour la recherche et l'estimation des valeurs d'élevage. Le projet encourage la collaboration entre éleveurs, vétérinaires et pédicures bovins."@fr,
+        "Un progetto di risorse sostenuto dall'UFAG per migliorare la salute degli zoccoli dei bovini svizzeri attraverso la raccolta sistematica di dati da parte dei pareggiatori. I dati sono conservati presso Qualitas AG e utilizzati da partner come la Facoltà Vetsuisse di Berna e le organizzazioni di allevamento per la ricerca e la stima del valore genetico. Il progetto promuove la collaborazione tra allevatori, veterinari e pareggiatori."@it ;
     dcat:landingPage <https://www.gesundeklauen.unibe.ch/> ;
     systemmap:operatedBy zefix:804864 .
+
+systemmap:S8awijRdrkgdpXxgz a schema:SoftwareApplication ;
+    schema:name "Oblon"@de,
+        "Oblon"@en,
+        "Oblon"@fr,
+        "Oblon"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    schema:description "OblonData ist eine umfassende Praxis- und Klinikverwaltungssoftware für Tierärzte in der Nutztier-, Pferde- und Kleintierpraxis. Sie bietet Funktionen für Patienten-, Konsultations- und Finanzmanagement, Terminverwaltung, elektronische Krankengeschichte, Lagerverwaltung und zahlreiche Schnittstellen zu anderen Systemen."@de,
+        "OblonData is a comprehensive practice and clinic management software for veterinarians in livestock, equine, and small animal practices. It offers tools for managing patients, consultations, finances, scheduling, electronic medical records, inventory, and multiple system interfaces."@en,
+        "OblonData est un logiciel complet de gestion de cabinet et de clinique pour les vétérinaires en pratique des animaux de rente, des chevaux et des petits animaux. Il propose des fonctions de gestion des patients, des consultations, des finances, de la planification, du dossier médical électronique, de la gestion des stocks et de nombreuses interfaces."@fr,
+        "OblonData è un software completo per la gestione di studi e cliniche veterinarie per animali da reddito, cavalli e piccoli animali. Offre strumenti per la gestione di pazienti, consultazioni, finanze, appuntamenti, cartelle cliniche elettroniche, magazzino e molte interfacce."@it ;
+    dcat:landingPage <https://oblondata.ch> ;
+    systemmap:contains systemmap:SnZ8gXlT0SOcf5XnX,
+        systemmap:SnZ8gXlT0SOcf5XnZ ;
+    systemmap:operatedBy zefix:984853 .
+
+systemmap:Sce5n6iUiSgdU3Mvv a schema:SoftwareApplication ;
+    schema:name "Diana Suisse"@de ;
+    schema:description "DianaSuisse ist eine Software für eine effiziente Verwaltung einer Tierarztpraxis oder Klinik: von der Terminorganisation über die Patientenverwaltung bis hin zur Rechnungsstellung."@de .
 
 # ==============================================================================
 # DATASETS
 # ==============================================================================
+
+systemmap:SnZ8gXlT0SOcf5XnX a dcat:Dataset ;
+    schema:name "Oblon Tiergesundheitsdaten"@de ;
+    schema:description "Beinhaltet unter anderem Angaben zu Befunden und Diagnosen von Nutztieren und Nutztierbeständen."@de ;
+    dcat:keyword keyword:animalhealth .
+
+systemmap:SnZ8gXlT0SOcf5XnZ a dcat:Dataset ;
+    schema:name "Oblon Medikamentendaten"@de ;
+    schema:description "Beinhaltet unter anderem Angaben zu medikamentenelln Behandlungen bei Nutztieren und Nutztierbeständen."@de ;
+    dcat:keyword keyword:antibiotics .

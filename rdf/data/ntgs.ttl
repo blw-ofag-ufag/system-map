@@ -1,0 +1,425 @@
+# ==============================================================================
+# PREFIXES
+# ==============================================================================
+
+@prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
+@prefix keyword: <https://agriculture.ld.admin.ch/system-map/keyword/> .
+
+@prefix LwG: <https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix service: <http://purl.org/ontology/service#> .
+@prefix staatskalender: <https://register.ld.admin.ch/staatskalender/organization/> .
+@prefix termdat: <https://register.ld.admin.ch/termdat/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
+
+# ==============================================================================
+# SUBGRAPH DEFINITION
+# ==============================================================================
+
+systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
+    schema:name "IT-Systemlandschaft im Schweizer Nutztiersektor"@de ;
+    systemmap:containsNodes 
+        # Organisationen (Zefix & Systemmap)
+        zefix:804864,
+        zefix:984853,
+        zefix:1457969,
+        zefix:414877,
+        zefix:321790,
+        systemmap:SCN2FR1ecbZOlXssf,
+        systemmap:S2uXY2dnx1jijxpXr,
+        systemmap:S3Rf79NI3Pm1rfOlN,
+        
+        # IT-Systeme (Klartext-URIs)
+        systemmap:SSRl55QBjhFeGUWhn,
+        systemmap:SOK9kQP8T3M2qPNEL,
+        systemmap:SJKVNhaCVFoHhWjks,
+        systemmap:SP86YzKhzJHZDD9Dj,
+        systemmap:S6v6k2SMlwAVdLFmI,
+        systemmap:SPDsRNDwfr6fKFrRc,
+        systemmap:SXekzo74vRcL6VkjL,
+        systemmap:ShjUfLjdanc83Dr0d,
+        systemmap:SWSDKVAr9pdy3T38R,
+        systemmap:SzrnfKnzjo2egouKl,
+        systemmap:Sqv5Vh286L7iinjmy,
+        systemmap:SysVetera,
+        
+        # IT-Systeme und generische Knoten (Hash-URIs)
+        systemmap:S7aG1r5IoOvAalIFb,
+        systemmap:S8awijRdrkgdpXxgz,
+        systemmap:SbcLBABffpMBvu7OP,
+        systemmap:Sce5n6iUiSgdU3Mvv,
+        systemmap:SeAMQkVkDZ2SUpEVq,
+        systemmap:SnZ8gXlT0SOcf5XnX,
+        systemmap:SnZ8gXlT0SOcf5XnZ,
+        
+        # Datensätze (Datasets)
+        systemmap:Sa2vJ733dT4GOkwZk,
+        systemmap:SugFxfLwGaME1mDiA,
+        systemmap:S8nHLngDLQtFaaCwm,
+        systemmap:SSBg29n8Wei8fxx1a,
+        systemmap:STf8Ef1Y8b5AICZh3,
+        systemmap:SnfWhcliKG1DvHlSs,
+        systemmap:S4x04ackmG5yne5By,
+        systemmap:SySrDkY16tb6SzA01,
+        systemmap:SySJqbKVIZvMcXJNf,
+        systemmap:SXIwI6eU6lZZOFVR4,
+        systemmap:SvmW0FRiWcALdXgAa,
+        systemmap:SCnkbsCJntAwYZz1Y,
+        systemmap:SSMBJhVTP6uajYFb2,
+        systemmap:SuZ6UFD05DBvC5E09,
+        systemmap:SXDe1c5blay5pm1f7,
+        systemmap:SGXgfZIB9hCBv4fIa,
+        systemmap:Se35WpC7gmVkMSoME,
+        systemmap:SODrAbMM6KbwlpmH1,
+        systemmap:S8y8UdAPhbDQ78DW3,
+        
+        # Services
+        systemmap:SK6JOIUV1UjrOYD7f .
+
+# ==============================================================================
+# ORGANIZATIONS
+# ==============================================================================
+
+zefix:1457969 a schema:Organization ;
+    schema:name "Nutztiergesundheit Schweiz"@de ;
+    schema:description "Der Verein Nutztiergesundheit Schweiz (NTGS) setzt sich für eine gesunde und zukunftsfähige Nutztierhaltung in der Schweiz ein. Gegründet im Juni 2020, vereint NTGS nationale Organisationen aus Landwirtschaft, Tierärzteschaft, Forschung, sowie Tierhalter-, Züchter- und Viehhändlerverbände. Gemeinsam arbeiten wir daran, die Tiergesundheit nachhaltig zu fördern. Der Sitz von NTGS ist in Zollikofen."@de .
+
+systemmap:S2uXY2dnx1jijxpXr a schema:Organization ;
+    schema:name "Fachstelle Animal Health Info System"@de ;
+    schema:parentOrganization zefix:1457969 ;
+    schema:description "Die Fachstelle AHIS ist primär für den Betrieb von \"Pig Health Info System\" und \"Cattle Health Info System\" zuständig. Dies beinhaltet die Betreuung und Unterstützung der Nutzer:innen, aber auch das Testen der Neuentwicklungen und die Planung derer Veröffentlichung. Ausserdem ist die Fachstelle für die Betreuung und Administration der Programme PathoPig und ZoE-BTA zuständig. Organisatorisch ist die Fachstelle Nutztiergesundheit Schweiz mit Sitz in Zollikofen angegliedert."@de ;
+    systemmap:parentOrganization zefix:1457969 .
+
+zefix:804864 a systemmap:PrivateOrganization ;
+    schema:name "Qualitas AG"@de ;
+    schema:description "Die Qualitas AG entwickelt IT-Lösungen für die Schweizer Nutztierbranche und bietet diese und Dienstleistungen für die Tierzucht an."@de ;
+    dcat:landingPage <https://www.qualitasag.ch/> .
+
+zefix:984853 a systemmap:PrivateOrganization ;
+    schema:name "Amacker & Partner Informatik AG"@de ;
+    dcat:landingPage <https://www.amacker.ch> .
+
+systemmap:SeAMQkVkDZ2SUpEVq a systemmap:CantonalOrganization ;
+    schema:name "Universität Bern"@de,
+        "University of Bern"@en,
+        "Université de Berne"@fr,
+        "Università di Berna"@it ;
+    dcat:landingPage <https://www.unibe.ch/> ;
+    systemmap:access systemmap:SbcLBABffpMBvu7OP .
+
+zefix:430315 a systemmap:PrivateOrganization ;
+    schema:name "Diana Software AG"@de ;
+    schema:description "Das Team der Diana Software AG isetzt sich unter anderem aus ehemaligen tiermedizinischen Praxisassistentinnen sowie erfahrenen Top-Entwicklern zusammen. Diana Software AG wurde 1998 gegründet und bietet Software für die Tiermedizin an."@de .
+
+systemmap:SCN2FR1ecbZOlXssf a systemmap:PrivateOrganization ;
+    schema:name "Vetera GmbH"@de ;
+    schema:description "Vetera GmbH ist ein Softwareanbieter für die Tiermedizin in der DACH-Region mit Hauptsitz in Deutschland."@de .
+
+zefix:414877 a systemmap:PrivateOrganization ;
+    schema:name "Suisag"@de ;
+    schema:description "Die SUISAG ist ein Unternehmen für die Schweizer Schweineproduzenten und internationalen Genetik-Kunden. Sie bietet im Bereich Schweineproduktion Schweizer Genetik, Gesundheitsprogramme und weitere Dienstleistungen an."@de .
+
+zefix:1441172 a systemmap:PrivateOrganization ;
+    schema:name "Gesundheitsservice der Qualiporc Genossenschaft QGS"@de ;
+    schema:description "Der Gesundheitsservice der Qualiporc Genossenschaft (QGS) ist ein schweizweit tätiger Gesundheitsdienst für die Schweineproduktion."@de .
+
+zefix:823951 a systemmap:PrivateOrganization ;
+    schema:name "Qualiporc Genossenschaft"@de ;
+    schema:description "Die Qualiporc Genossenschaft ist mit ihrem Gesundheits- & Zuchtservice eine Genossenschaft für Schweinezüchtern und -mästern in der Schweiz."@de .
+
+zefix:321790 a systemmap:PrivateOrganization ;
+    schema:name "UFA AG"@de ;
+    schema:description "Die UFA AG ist ein Schweizer Unternehmen für Tierernährung. Sie bietet neben Futtermitteln, Mineralsalzen und Spezialitäten auch Dienstleistungen in Fütterungs- und Managementfragen an. Die Ufa AG hat regionale Beratungsdienste in Puidoux, Lyssach, Sursee und Oberbüren sowie dezentrale Mischfutterwerke und ist damit schweizweit vertreten."@de ;
+    systemmap:ownedBy zefix:328631 .
+
+# ==============================================================================
+# IT SYSTEMS
+# ==============================================================================
+
+systemmap:S7aG1r5IoOvAalIFb a schema:SoftwareApplication ;
+    schema:name "KGS"@de,
+        "KGS"@en,
+        "KGS"@fr,
+        "KGS"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    schema:description "Der Kälbergesundheitsdienst (KGS) ist eine Online-Plattform für das Management und die Überwachung der Kälbergesundheit in der Schweizer Nutztierhaltung. Qualitas AG entwickelt und betreibt diese Lösung als Teil ihres Angebots für die Schweizer Tierzucht."@de,
+        "The Calf Health Service (KGS) is an online platform for managing and monitoring calf health in Swiss livestock farming. Qualitas AG develops and operates this solution as part of its offering for Swiss animal breeding."@en,
+        "Le Service de santé des veaux (KGS) est une plateforme en ligne pour la gestion et la surveillance de la santé des veaux dans l'élevage suisse. Qualitas AG développe et exploite cette solution dans le cadre de son offre pour l'élevage animal suisse."@fr,
+        "Il Servizio di salute dei vitelli (KGS) è una piattaforma online per la gestione e il monitoraggio della salute dei vitelli nell'allevamento svizzero. Qualitas AG sviluppa e gestisce questa soluzione come parte della sua offerta per l'allevamento animale svizzero."@it ;
+    dcat:landingPage <https://kgd.qualitasag.ch/KGS/> ;
+    systemmap:operatedBy zefix:804864 .
+
+systemmap:SbcLBABffpMBvu7OP a schema:SoftwareApplication ;
+    schema:name "Gesunde Klauen Projektdaten"@de,
+        "Healthy Hooves Project Data"@en,
+        "Données du projet Sabots Sains"@fr,
+        "Dati del progetto Zoccoli Sani"@it ;
+    schema:description "Ein vom BLW unterstütztes Ressourcenprojekt zur Verbesserung der Klauengesundheit bei Schweizer Rindern durch systematische Datenerfassung via Klauenpfleger. Die Daten werden bei der Qualitas AG gespeichert und von Partnern wie der Vetsuisse-Fakultät Bern und Zuchtorganisationen für Forschung und Zuchtwertschätzung genutzt. Das Projekt fördert die Zusammenarbeit zwischen Tierhaltern, Tierärzten und Klauenpflegern."@de,
+        "A resource project supported by the FOAG to improve hoof health in Swiss cattle through systematic data collection by hoof trimmers. The data is stored at Qualitas AG and used by partners such as the Vetsuisse Faculty Bern and breeding organizations for research and breeding value estimation. The project promotes collaboration between animal owners, veterinarians, and hoof trimmers."@en,
+        "Un projet de ressources soutenu par l'OFAG visant àaméliorer la santé des onglons des bovins suisses grâce à la collecte systématique de données par les pédicures bovins. Les données sont stockées chez Qualitas AG et utilisées par des partenaires tels que la Faculté Vetsuisse de Berne et les organisations d'élevage pour la recherche et l'estimation des valeurs d'élevage. Le projet encourage la collaboration entre éleveurs, vétérinaires et pédicures bovins."@fr,
+        "Un progetto di risorse sostenuto dall'UFAG per migliorare la salute degli zoccoli dei bovini svizzeri attraverso la raccolta sistematica di dati da parte dei pareggiatori. I dati sono conservati presso Qualitas AG e utilizzati da partner come la Facoltà Vetsuisse di Berna e le organizzazioni di allevamento per la ricerca e la stima del valore genetico. Il progetto promuove la collaborazione tra allevatori, veterinari e pareggiatori."@it ;
+    dcat:landingPage <https://www.gesundeklauen.unibe.ch/> ;
+    systemmap:operatedBy zefix:804864 .
+
+systemmap:S8awijRdrkgdpXxgz a schema:SoftwareApplication ;
+    schema:name "Oblon"@de,
+        "Oblon"@en,
+        "Oblon"@fr,
+        "Oblon"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    schema:description "OblonData ist eine umfassende Praxis- und Klinikverwaltungssoftware für Tierärzte in der Nutztier-, Pferde- und Kleintierpraxis. Sie bietet Funktionen für Patienten-, Konsultations- und Finanzmanagement, Terminverwaltung, elektronische Krankengeschichte, Lagerverwaltung und zahlreiche Schnittstellen zu anderen Systemen."@de,
+        "OblonData is a comprehensive practice and clinic management software for veterinarians in livestock, equine, and small animal practices. It offers tools for managing patients, consultations, finances, scheduling, electronic medical records, inventory, and multiple system interfaces."@en,
+        "OblonData est un logiciel complet de gestion de cabinet et de clinique pour les vétérinaires en pratique des animaux de rente, des chevaux et des petits animaux. Il propose des fonctions de gestion des patients, des consultations, des finances, de la planification, du dossier médical électronique, de la gestion des stocks et de nombreuses interfaces."@fr,
+        "OblonData è un software completo per la gestione di studi e cliniche veterinarie per animali da reddito, cavalli e piccoli animali. Offre strumenti per la gestione di pazienti, consultazioni, finanze, appuntamenti, cartelle cliniche elettroniche, magazzino e molte interfacce."@it ;
+    dcat:landingPage <https://oblondata.ch> ;
+    systemmap:contains systemmap:SnZ8gXlT0SOcf5XnX,
+        systemmap:SnZ8gXlT0SOcf5XnZ ;
+    systemmap:operatedBy zefix:984853 .
+
+systemmap:Sce5n6iUiSgdU3Mvv a schema:SoftwareApplication ;
+    schema:name "Diana Suisse"@de ;
+    schema:description "DianaSuisse ist eine Software für eine effiziente Verwaltung einer Tierarztpraxis oder Klinik: von der Terminorganisation über die Patientenverwaltung bis hin zur Rechnungsstellung."@de ;
+    systemmap:operatedBy zefix:430315 ;
+    systemmap:contains systemmap:S8nHLngDLQtFaaCwm,
+        systemmap:SugFxfLwGaME1mDiA .
+
+systemmap:SysVetera a schema:SoftwareApplication ;
+    schema:name "Vetera"@de ;
+    schema:description "Spezialisierte Praxismanagement-Software für die Veterinärmedizin zur systematischen Erfassung, Verwaltung und Auswertung klinischer Tiergesundheits- sowie Medikamentendaten."@de ;
+    systemmap:operatedBy systemmap:SCN2FR1ecbZOlXssf ;
+    systemmap:contains systemmap:S8y8UdAPhbDQ78DW3,
+        systemmap:SODrAbMM6KbwlpmH1 .
+
+systemmap:SJKVNhaCVFoHhWjks a schema:SoftwareApplication ;
+    schema:name "FLEKO"@de ;
+    schema:description "FLEKO ist eine Webapplikation des Bundesamtes für Lebensmittelsicherheit und Veterinärwesen (BLV) zur online-basierten Erfassung und Auswertung der amtlichen Fleischkontrolldaten in Schweizer Schlachtbetrieben."@de ;
+    systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN ;
+    systemmap:contains systemmap:SSBg29n8Wei8fxx1a .
+
+systemmap:SP86YzKhzJHZDD9Dj a schema:SoftwareApplication ;
+    schema:name "Informationssystem Seuchenmeldungen infoSM"@de ;
+    schema:description "Das Informationssystem „Seuchenmeldungen“ dient der Publikation von aktuellen Ausbrüchen von Tierseuchen, deren Entwicklung und der regionalen Verteilung. Es wird vom BLV unterhalten."@de ;
+    systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN ;
+    systemmap:contains systemmap:SuZ6UFD05DBvC5E09 .
+
+systemmap:S6v6k2SMlwAVdLFmI a schema:SoftwareApplication ;
+    schema:name "Informationssystem Antibiotika in der Veterinärmedizin IS ABV"@de ;
+    schema:description "Das IS ABV (Informationssystem Antibiotika in der Veterinärmedizin) dient der Erfassung von Antibiotikaverschreibungen für Tiere."@de ;
+    systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN ;
+    systemmap:contains systemmap:SnfWhcliKG1DvHlSs,
+        systemmap:STf8Ef1Y8b5AICZh3 .
+
+systemmap:SzrnfKnzjo2egouKl a schema:SoftwareApplication ;
+    schema:name "SuisSano EBJ"@de ;
+    schema:description "Das SuisSano EBJ ist ein elektronisches Behandlungsjournal für die Schweineproduktion, welches die gesetzliche Aufzeichnungspflicht von Medikamenten- und Behandlungsdaten digitalisiert und vereinfacht."@de ;
+    systemmap:operatedBy zefix:804864 ;
+    systemmap:contains systemmap:SCnkbsCJntAwYZz1Y,
+        systemmap:SSMBJhVTP6uajYFb2 .
+
+systemmap:SXekzo74vRcL6VkjL a schema:SoftwareApplication ;
+    schema:name "QGS EBJ"@de ;
+    schema:description "Das Elektronische Behandlungsjournal (EBJ) ist ein webbasiertes Tool von Qualiporcs Gesundheitsservice QGS zur einheitlichen elektronischen Erfassung und Auswertung von Medikamenteneinsätzen sowie Behandlungen einzelner Tiere und Tiergruppen auf Schweine-Zucht- und Mastbetrieben, inklusive Dosierungsberechnung, Absetzfristenmanagement und Quartalsvergleichen zum Antibiotikaeinsatz."@de ;
+    systemmap:operatedBy zefix:804864 ;
+    systemmap:contains systemmap:SySrDkY16tb6SzA01,
+        systemmap:SySJqbKVIZvMcXJNf .
+
+systemmap:SPDsRNDwfr6fKFrRc a schema:SoftwareApplication ;
+    schema:name "Pig Health Info System"@de ;
+    schema:description "Das Pig Health Info System PHIS einer App dient der Erfassung von Schweinegesundheitsdaten im Rahmen von Bestandes- und Einzeltier-Untersuchungen, mit Erzeugen von automatischen Berichten. Es dient weiterhin den TierärztInnen und den TierhalterInnen als Dokumentation, vereinfacht aber auch den Informationsfluss von den TierärztInnen zu den TierhalterInnen. In PHIS werden ausserdem Daten zu den Programmen \"ZoE BTA\" und \"PathoPig\" erfasst und verwaltet."@de ;
+    systemmap:operatedBy systemmap:S2uXY2dnx1jijxpXr ;
+    systemmap:contains systemmap:S4x04ackmG5yne5By .
+
+systemmap:SWSDKVAr9pdy3T38R a schema:SoftwareApplication ;
+    schema:name "SuisData"@de ;
+    schema:description "SuisData ist eine webbasierte Managementsoftware der SUISAG für Schweinehalter zur digitalen Erfassung, Auswertung und Verwaltung von tierindividuellen Leistungs- und Zuchtdaten."@de ;
+    systemmap:operatedBy zefix:414877 ;
+    systemmap:contains systemmap:SvmW0FRiWcALdXgAa .
+
+systemmap:ShjUfLjdanc83Dr0d a schema:SoftwareApplication ;
+    schema:name "ReproJournal"@de ;
+    schema:description "Das ReproJournal ist eine schlanke Webanwendung der SUISAG zur Dokumentation und Auswertung grundlegender Reproduktionsdaten in der Schweinehaltung."@de ;
+    systemmap:operatedBy zefix:414877 ;
+    systemmap:contains systemmap:SXIwI6eU6lZZOFVR4 .
+
+systemmap:SSRl55QBjhFeGUWhn a schema:SoftwareApplication ;
+    schema:name "ASP-Risikoampel"@de ;
+    schema:description "Die ASP-Risikoampel ist ein Online-Tool der SUISAG, mit dem Schweinehalter die betriebliche Biosicherheit systematisch überprüfen und das Einschleppungsrisiko der Afrikanischen Schweinepest minimieren können."@de ;
+    systemmap:operatedBy zefix:414877 .
+
+systemmap:Sqv5Vh286L7iinjmy a schema:SoftwareApplication ;
+    schema:name "UFA2000-Planer"@de ;
+    schema:description "Der UFA2000-Planer ist ein Auswertungsprogramm für Leistungen und Produktionszahlen in der Schweineproduktion. So kann zum Beispiel das Deckregister oder das Sauenblatt hier geführt werden. Mit einem überbetrieblichen Vergleich können Stärken und Schwächen auf dem eigenen Betrieb erkannt werden."@de ;
+    systemmap:operatedBy zefix:321790 ;
+    systemmap:contains systemmap:SXDe1c5blay5pm1f7,
+        systemmap:SGXgfZIB9hCBv4fIa,
+        systemmap:Se35WpC7gmVkMSoME .
+
+systemmap:SOK9kQP8T3M2qPNEL a schema:SoftwareApplication ;
+    schema:name "Cattle Health Info System"@de ;
+    schema:description "Das Cattle Health Info System in Form einer App dient der Erfassung von Rindergesundheitsdaten im Rahmen von Bestandes- und Einzeltier-Untersuchungen, mit Erzeugen von automatischen Berichten. Es dient weiterhin den TierärztInnen und den TierhalterInnen als Dokumentation, vereinfacht aber auch den Informationsfluss von den TierärztInnen zu den TierhalterInnen."@de ;
+    systemmap:operatedBy systemmap:S2uXY2dnx1jijxpXr ;
+    systemmap:contains systemmap:Sa2vJ733dT4GOkwZk .
+
+# ==============================================================================
+# DATASETS
+# ==============================================================================
+
+systemmap:SnZ8gXlT0SOcf5XnX
+    a dcat:Dataset ;
+    schema:name "Oblon Tiergesundheitsdaten"@de ;
+    schema:description "Beinhaltet unter anderem Angaben zu Befunden und Diagnosen von Nutztieren und Nutztierbeständen."@de ;
+    dcat:keyword keyword:animalhealth,
+        keyword:livestock,
+        keyword:diagnostics,
+        keyword:veterinarymedicine .
+
+systemmap:SnZ8gXlT0SOcf5XnZ a dcat:Dataset ;
+    schema:name "Oblon Medikamentendaten"@de ;
+    schema:description "Beinhaltet unter anderem Angaben zu medikamentenelln Behandlungen bei Nutztieren und Nutztierbeständen."@de ;
+    dcat:keyword keyword:antibiotics,
+        keyword:veterinarydrugs,
+        keyword:livestock,
+        keyword:veterinarymedicine .
+
+systemmap:S8nHLngDLQtFaaCwm a dcat:Dataset ;
+    schema:name "Diana Tiergesundheitsdaten"@de ;
+    schema:description "Beinhaltet unter anderem Angaben zu Befunden und Diagnosen von Nutztieren und Nutztierbeständen."@de ;
+    dcat:keyword keyword:animalhealth,
+        keyword:livestock,
+        keyword:diagnostics,
+        keyword:veterinarymedicine .
+
+systemmap:SugFxfLwGaME1mDiA a dcat:Dataset ;
+    schema:name "Diana Medikamentendaten"@de ;
+    schema:description "Beinhaltet unter anderem Angaben zu medikamentenelln Behandlungen bei Nutztieren und Nutztierbeständen."@de ;
+    dcat:keyword keyword:antibiotics,
+        keyword:veterinarydrugs,
+        keyword:livestock,
+        keyword:veterinarymedicine .
+
+systemmap:S8y8UdAPhbDQ78DW3 a dcat:Dataset ;
+    schema:name "Vetera Tiergesundheitsdaten"@de ;
+    schema:description "Beinhaltet unter anderem Angaben zu Befunden und Diagnosen von Nutztieren und Nutztierbeständen."@de ;
+    dcat:keyword keyword:animalhealth,
+        keyword:livestock,
+        keyword:diagnostics,
+        keyword:veterinarymedicine .
+
+systemmap:SODrAbMM6KbwlpmH1 a dcat:Dataset ;
+    schema:name "Vetera Medikamentendaten"@de ;
+    schema:description "Beinhaltet unter anderem Angaben zu medikamentenelln Behandlungen bei Nutztieren und Nutztierbeständen."@de ;
+    dcat:keyword keyword:antibiotics,
+        keyword:veterinarydrugs,
+        keyword:livestock,
+        keyword:veterinarymedicine .
+
+systemmap:SSBg29n8Wei8fxx1a a dcat:Dataset ;
+    schema:name "FLEKO Tiergesundheitsdaten"@de ;
+    schema:description "Beinhaltet unter anderem Befunde aus der Schlachttier- und Fleischuntersuchung von Nutztieren"@de ;
+    dcat:keyword keyword:animalhealth,
+        keyword:livestock,
+        keyword:diagnostics .
+
+systemmap:SuZ6UFD05DBvC5E09 a dcat:Dataset ;
+    schema:name "Tierseuchenmeldungen"@de ;
+    schema:description "Enthält Angaben zum Vorkommen, der Entwicklung und regionalen Verteilung von Tierseuchen in der Schweiz."@de ;
+    dcat:keyword keyword:epizooticdiseases,
+        keyword:animalhealth .
+
+systemmap:SnfWhcliKG1DvHlSs a dcat:Dataset ;
+    schema:name "IS-ABV Tiergesundheit"@de ;
+    schema:description "Enthält unter anderem Befunde und Diagnosen von Tieren"@de ;
+    dcat:keyword keyword:animalhealth,
+        keyword:diagnostics,
+        keyword:veterinarymedicine .
+
+systemmap:STf8Ef1Y8b5AICZh3 a dcat:Dataset ;
+    schema:name "IS-ABV Antibiotika"@de ;
+    schema:description "Enthält unter anderem Vertriebs- und Verschreibungsdaten von Antibiotika an Tieren"@de ;
+    dcat:keyword keyword:antibiotics,
+        keyword:veterinarydrugs,
+        keyword:veterinarymedicine .
+
+systemmap:SCnkbsCJntAwYZz1Y a dcat:Dataset ;
+    schema:name "EBJ Tiergesundheit"@de ;
+    schema:description "Enthält unter anderem Befunde und Diagnosen im Zusammenhang mit Behandlungen von Schweinen"@de ;
+    dcat:keyword keyword:animalhealth, keyword:livestock, keyword:diagnostics .
+
+systemmap:SSMBJhVTP6uajYFb2 a dcat:Dataset ;
+    schema:name "Tierbehandlungen Schwein"@de ;
+    schema:description "Enthält unter anderem Angaben zu medikamentellen Behandlungen von Schweinen wie Präparat, Dosierung, Behandlungsdauer und Anzahl behandelter Schweine"@de ;
+    dcat:keyword keyword:veterinarydrugs,
+        keyword:antibiotics,
+        keyword:livestock .
+
+systemmap:SySrDkY16tb6SzA01 a dcat:Dataset ;
+    schema:name "EBJ Tiergesundheit"@de ;
+    schema:description "Enthält unter anderem Befunde und Diagnosen im Zusammenhang mit Behandlungen von Schweinen"@de ;
+    dcat:keyword keyword:animalhealth,
+        keyword:livestock,
+        keyword:diagnostics .
+
+systemmap:SySJqbKVIZvMcXJNf a dcat:Dataset ;
+    schema:name "Tierbehandlungen Schwein"@de ;
+    schema:description "Enthält unter anderem Angaben zu medikamentellen Behandlungen von Schweinen wie Präparat, Dosierung, Behandlungsdauer und Anzahl behandelter Schweine"@de ;
+    dcat:keyword keyword:veterinarydrugs,
+        keyword:antibiotics,
+        keyword:livestock .
+
+systemmap:S4x04ackmG5yne5By a dcat:Dataset ;
+    schema:name "PHIS Tiergesundheit"@de ;
+    schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Schwein aus Routineuntersuchen, TAM-Besuchen oder den Programmen ZoE-BTA und PathoPig"@de ;
+    dcat:keyword keyword:animalhealth,
+        keyword:livestock,
+        keyword:diagnostics,
+        keyword:veterinarymedicine .
+
+systemmap:SvmW0FRiWcALdXgAa a dcat:Dataset ;
+    schema:name "SuisData Tiergesundheit"@de ;
+    schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Schwein aus Routine-oder Spezialuntersuchen."@de ;
+    dcat:keyword keyword:animalhealth,
+        keyword:livestock,
+        keyword:diagnostics .
+
+systemmap:SXIwI6eU6lZZOFVR4 a dcat:Dataset ;
+    schema:name "ReproJournal Tiergesundheit"@de ;
+    schema:description "Enthält unter anderem Angaben zu Fruchtbarkeitsleistungen von Schweinen."@de ;
+    dcat:keyword keyword:reproduction,
+        keyword:animalbreeding,
+        keyword:livestock .
+
+systemmap:SXDe1c5blay5pm1f7 a dcat:Dataset ;
+    schema:name "Ufa2000 Deckregister"@de ;
+    schema:description "Enthält unter anderem Angaben zu Belegungen von Schweinen."@de ;
+    dcat:keyword keyword:reproduction,
+        keyword:animalbreeding,
+        keyword:livestock .
+
+systemmap:SGXgfZIB9hCBv4fIa a dcat:Dataset ;
+    schema:name "Ufa2000 Sauenblatt"@de ;
+    schema:description "Enthält unter anderem Angaben zu Trächtigkeitsdaten von Sauen"@de ;
+    dcat:keyword keyword:reproduction,
+        keyword:animalbreeding,
+        keyword:livestock .
+
+systemmap:Se35WpC7gmVkMSoME a dcat:Dataset ;
+    schema:name "Ufa2000 Wurferfassung"@de ;
+    schema:description "Enthält unter anderem Angaben zu Wurfdaten von Sauen"@de ;
+    dcat:keyword keyword:reproduction,
+        keyword:animalbreeding,
+        keyword:livestock .
+
+systemmap:Sa2vJ733dT4GOkwZk a dcat:Dataset ;
+    schema:name "CHIS Tiergesundheit"@de ;
+    schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Rind aus Routineuntersuchen oder Tierarzneimittel-Besuchen."@de ;
+    dcat:keyword keyword:animalhealth,
+        keyword:livestock,
+        keyword:diagnostics,
+        keyword:veterinarymedicine .

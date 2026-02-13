@@ -1,0 +1,70 @@
+# ==============================================================================
+# PREFIXES
+# ==============================================================================
+
+@prefix keyword: <https://agriculture.ld.admin.ch/system-map/keyword/> .
+@prefix schema: <http://schema.org/> .
+
+# ==============================================================================
+# KEYWORD DEFINITIONS
+# ==============================================================================
+
+keyword:animalbreeding a schema:DefinedTerm ;
+    schema:name "Tierzucht"@de ,
+        "Animal breeding"@en ,
+        "Élevage"@fr ,
+        "Zootecnia"@it .
+
+keyword:animalhealth a schema:DefinedTerm ;
+    schema:name "Tiergesundheit"@de ,
+        "Animal health"@en ,
+        "Santé animale"@fr ,
+        "Salute degli animali"@it .
+
+keyword:animalwelfare a schema:DefinedTerm ;
+    schema:name "Tierschutz"@de ,
+        "Animal welfare"@en ,
+        "Protection des animaux"@fr ,
+        "Protezione degli animali"@it .
+
+keyword:antibiotics a schema:DefinedTerm ;
+    schema:name "Antibiotika"@de ,
+        "Antibiotics"@en ,
+        "Antibiotiques"@fr ,
+        "Antibiotici"@it .
+
+keyword:diagnostics a schema:DefinedTerm ;
+    schema:name "Diagnostik"@de ,
+        "Diagnostics"@en ,
+        "Diagnostics"@fr ,
+        "Diagnostica"@it .
+
+keyword:epizooticdiseases a schema:DefinedTerm ;
+    schema:name "Tierseuchen"@de ,
+        "Epizootic diseases"@en ,
+        "Épizooties"@fr ,
+        "Epizoozie"@it .
+
+keyword:livestock a schema:DefinedTerm ;
+    schema:name "Nutztiere"@de ,
+        "Livestock"@en ,
+        "Animaux de rente"@fr ,
+        "Animali da reddito"@it .
+
+keyword:reproduction a schema:DefinedTerm ;
+    schema:name "Reproduktion"@de ,
+        "Reproduction"@en ,
+        "Reproduction"@fr ,
+        "Riproduzione"@it .
+
+keyword:veterinarydrugs a schema:DefinedTerm ;
+    schema:name "Tierarzneimittel"@de ,
+        "Veterinary drugs"@en ,
+        "Médicaments vétérinaires"@fr ,
+        "Medicamenti veterinari"@it .
+
+keyword:veterinarymedicine a schema:DefinedTerm ;
+    schema:name "Veterinärmedizin"@de ,
+        "Veterinary medicine"@en ,
+        "Médecine vétérinaire"@fr ,
+        "Medicina veterinaria"@it .

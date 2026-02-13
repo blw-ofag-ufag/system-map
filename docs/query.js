@@ -58,6 +58,23 @@ WHERE {
 }
 `;
 
+// NEW: Query for keywords associated with nodes
+window.KEYWORD_QUERY = `
+PREFIX schema: <http://schema.org/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
+
+SELECT ?node ?keyword ?label ?lang
+WHERE {
+  GRAPH <https://lindas.admin.ch/foag/system-map> {
+    ${ subgraph ? `systemmap:${subgraph} systemmap:containsNodes ?node .` : "" }
+    ?node dcat:keyword ?keyword .
+    ?keyword schema:name ?label .
+    BIND(LANG(?label) AS ?lang)
+  }
+}
+`;
+
 // Simplified query for edge instances
 window.EDGE_QUERY = `
 PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>

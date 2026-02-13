@@ -844,27 +844,6 @@ systemmap:S7DUZFs3emPOPYErT a schema:SoftwareApplication ;
         systemmap:SVpDMEiTfIVQsNzT8,
         systemmap:SoVAiCrMPYG2LJxsA .
 
-systemmap:S7aG1r5IoOvAalIFb a schema:SoftwareApplication ;
-    schema:name "KGS"@de,
-        "KGS"@en,
-        "KGS"@fr,
-        "KGS"@it ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
-    schema:description """
-        Der Kälbergesundheitsdienst (KGS) ist eine Online-Plattform für das Management und die Überwachung der Kälbergesundheit in der Schweizer Nutztierhaltung. Qualitas AG entwickelt und betreibt diese Lösung als Teil ihres Angebots für die Schweizer Tierzucht.
-        """@de,
-        """
-        The Calf Health Service (KGS) is an online platform for managing and monitoring calf health in Swiss livestock farming. Qualitas AG develops and operates this solution as part of its offering for Swiss animal breeding.
-        """@en,
-        """
-        Le Service de santé des veaux (KGS) est une plateforme en ligne pour la gestion et la surveillance de la santé des veaux dans l'élevage suisse. Qualitas AG développe et exploite cette solution dans le cadre de son offre pour l'élevage animal suisse.
-        """@fr,
-        """
-        Il Servizio di salute dei vitelli (KGS) è una piattaforma online per la gestione e il monitoraggio della salute dei vitelli nell'allevamento svizzero. Qualitas AG sviluppa e gestisce questa soluzione come parte della sua offerta per l'allevamento animale svizzero.
-        """@it ;
-    dcat:landingPage <https://kgd.qualitasag.ch/KGS/> ;
-    systemmap:operatedBy zefix:804864 .
-
 systemmap:S7u1Bh6qfXUbSDkv a schema:SoftwareApplication ;
     schema:name "e-Deklaration"@de,
         "e-declaration"@en,
@@ -916,31 +895,6 @@ systemmap:S8RVk8dQzkXzXYSZX a schema:SoftwareApplication ;
         Entwickelt von Agro-Office AG (heute Averio AG) seit 1992, legt es Wert auf intuitive Bedienung und praxisgerechte Funktionen.
         """@de ;
     systemmap:operatedBy zefix:1663457 .
-
-systemmap:S8awijRdrkgdpXxgz a schema:SoftwareApplication ;
-    schema:name "Oblon"@de,
-        "Oblon"@en,
-        "Oblon"@fr,
-        "Oblon"@it ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
-    schema:description """
-        OblonData ist eine umfassende Praxis- und Klinikverwaltungssoftware für Tierärzte in der Nutztier-, Pferde- und Kleintierpraxis.
-        Sie bietet Funktionen für Patienten-, Konsultations- und Finanzmanagement, Terminverwaltung, elektronische Krankengeschichte, Lagerverwaltung und zahlreiche Schnittstellen zu anderen Systemen.
-        """@de,
-        """
-        OblonData is a comprehensive practice and clinic management software for veterinarians in livestock, equine, and small animal practices.
-        It offers tools for managing patients, consultations, finances, scheduling, electronic medical records, inventory, and multiple system interfaces.
-        """@en,
-        """
-        OblonData est un logiciel complet de gestion de cabinet et de clinique pour les vétérinaires en pratique des animaux de rente, des chevaux et des petits animaux.
-        Il propose des fonctions de gestion des patients, des consultations, des finances, de la planification, du dossier médical électronique, de la gestion des stocks et de nombreuses interfaces.
-        """@fr,
-        """
-        OblonData è un software completo per la gestione di studi e cliniche veterinarie per animali da reddito, cavalli e piccoli animali.
-        Offre strumenti per la gestione di pazienti, consultazioni, finanze, appuntamenti, cartelle cliniche elettroniche, magazzino e molte interfacce.
-        """@it ;
-    dcat:landingPage <https://oblondata.ch> ;
-    systemmap:operatedBy zefix:984853 .
 
 systemmap:S8lqf2UM29PzK3029 a schema:SoftwareApplication ;
     schema:name "Elektronisches Behandlungsjournal"@de ;
@@ -1923,28 +1877,6 @@ systemmap:SbbbXta7RwMcmH9aB a schema:SoftwareApplication ;
         """@it ;
     systemmap:abbreviation "NAV Schlachtviehabrechnung"@de ;
     systemmap:operatedBy zefix:469727 .
-
-systemmap:SbcLBABffpMBvu7OP a schema:SoftwareApplication ;
-    schema:name "Gesunde Klauen Projektdaten"@de,
-        "Healthy Hooves Project Data"@en,
-        "Données du projet Sabots Sains"@fr,
-        "Dati del progetto Zoccoli Sani"@it ;
-    schema:description """
-        Ein vom BLW unterstütztes Ressourcenprojekt zur Verbesserung der Klauengesundheit bei Schweizer Rindern durch systematische Datenerfassung via Klauenpfleger.
-        Die Daten werden bei der Qualitas AG gespeichert und von Partnern wie der Vetsuisse-Fakultät Bern und Zuchtorganisationen für Forschung und Zuchtwertschätzung genutzt.
-        Das Projekt fördert die Zusammenarbeit zwischen Tierhaltern, Tierärzten und Klauenpflegern.
-        """@de,
-        """
-        A resource project supported by the FOAG to improve hoof health in Swiss cattle through systematic data collection by hoof trimmers. The data is stored at Qualitas AG and used by partners such as the Vetsuisse Faculty Bern and breeding organizations for research and breeding value estimation. The project promotes collaboration between animal owners, veterinarians, and hoof trimmers.
-        """@en,
-        """
-        Un projet de ressources soutenu par l'OFAG visant àaméliorer la santé des onglons des bovins suisses grâce à la collecte systématique de données par les pédicures bovins. Les données sont stockées chez Qualitas AG et utilisées par des partenaires tels que la Faculté Vetsuisse de Berne et les organisations d'élevage pour la recherche et l'estimation des valeurs d'élevage. Le projet encourage la collaboration entre éleveurs, vétérinaires et pédicures bovins.
-        """@fr,
-        """
-        Un progetto di risorse sostenuto dall'UFAG per migliorare la salute degli zoccoli dei bovini svizzeri attraverso la raccolta sistematica di dati da parte dei pareggiatori. I dati sono conservati presso Qualitas AG e utilizzati da partner come la Facoltà Vetsuisse di Berna e le organizzazioni di allevamento per la ricerca e la stima del valore genetico. Il progetto promuove la collaborazione tra allevatori, veterinari e pareggiatori.
-        """@it ;
-    dcat:landingPage <https://www.gesundeklauen.unibe.ch/> ;
-    systemmap:operatedBy zefix:804864 .
 
 systemmap:Sc6kZqxTyS0gFGCY a schema:SoftwareApplication ;
     schema:name "Marktdaten Analyse- und Reporting-System"@de,
@@ -3713,14 +3645,6 @@ systemmap:SXgifgY4eK6N4W9jr a systemmap:CantonalOrganization ;
     schema:name "Departement Finanzen und Ressourcen"@de ;
     schema:parentOrganization systemmap:SGkAVZIrJPw0HqHLs .
 
-systemmap:SeAMQkVkDZ2SUpEVq a systemmap:CantonalOrganization ;
-    schema:name "Universität Bern"@de,
-        "University of Bern"@en,
-        "Université de Berne"@fr,
-        "Università di Berna"@it ;
-    dcat:landingPage <https://www.unibe.ch/> ;
-    systemmap:access systemmap:SbcLBABffpMBvu7OP .
-
 systemmap:SfCWpkO67ty1HLzmK a systemmap:CantonalOrganization ;
     schema:name "Kanton Basel-Stadt"@de,
         "Canton of Basel-Stadt"@en,
@@ -5055,9 +4979,6 @@ zefix:371013 a systemmap:PrivateOrganization ;
     dcat:landingPage <https://www.ernstsutter.ch> ;
     systemmap:ownedBy zefix:328631 .
 
-zefix:414877 a systemmap:PrivateOrganization ;
-    schema:name "Suisag"@de .
-
 zefix:417741 a systemmap:PrivateOrganization ;
     schema:name "GRANOVIT AG"@de ;
     dcat:landingPage <https://www.granovit.ch> .
@@ -5158,10 +5079,6 @@ zefix:787227 a systemmap:PrivateOrganization ;
     schema:name "RAMSEIER Suisse AG"@de ;
     systemmap:ownedBy zefix:328631 .
 
-zefix:804864 a systemmap:PrivateOrganization ;
-    schema:name "Qualitas AG"@de ;
-    dcat:landingPage <https://www.qualitasag.ch/> .
-
 zefix:848149 a systemmap:PrivateOrganization ;
     schema:name "Agrosolution AG"@de .
 
@@ -5171,10 +5088,6 @@ zefix:885059 a systemmap:PrivateOrganization ;
         "AGRIDEA Association suisse pour le développement de l'agriculture et de l'espace rural"@fr,
         "AGRIDEA Associazione svizzera per lo sviluppo dell'agricoltura e delle aree rurali"@it ;
     dcat:landingPage <https://www.agridea.ch> .
-
-zefix:984853 a systemmap:PrivateOrganization ;
-    schema:name "Amacker & Partner Informatik AG"@de ;
-    dcat:landingPage <https://www.amacker.ch> .
 
 systemmap:S6ILF4g1j5sNf9aG a termdat:52451 ;
     schema:name "Informationen zur Einfuhr von PSM"@de,

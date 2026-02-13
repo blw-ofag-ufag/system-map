@@ -190,15 +190,42 @@ async function init() {
 
     // --- DATA FETCHING & PROCESSING ---
     try {
-        const [titleJson, classesJson, edgeMetadataJson, nodesJson, edgesJson] = await Promise.all([
+        const [titleJson, classesJson, edgeMetadataJson, nodesJson, edgesJson, keywordsJson] = await Promise.all([
             getSparqlData(TITLE_QUERY), 
             getSparqlData(CLASS_QUERY), 
             getSparqlData(EDGE_METADATA_QUERY),
             getSparqlData(NODE_QUERY), 
-            getSparqlData(EDGE_QUERY)
+            getSparqlData(EDGE_QUERY),
+            getSparqlData(KEYWORD_QUERY)
         ]);
 
         allNodesData = processSparqlResults(nodesJson.results.bindings, 'id', ['name', 'comment', 'abbreviation']);
+        
+        // Process keywords separately as it's a one-to-many relation
+        const nodeKeywords = {};
+        keywordsJson.results.bindings.forEach(row => {
+            const nodeId = row.node.value;
+            const kwUri = row.keyword.value;
+            const label = row.label.value;
+            const lang = row.lang.value;
+            
+            if (!nodeKeywords[nodeId]) nodeKeywords[nodeId] = {};
+            if (!nodeKeywords[nodeId][kwUri]) nodeKeywords[nodeId][kwUri] = { id: kwUri, labels: {} };
+            
+            nodeKeywords[nodeId][kwUri].labels[lang] = label;
+        });
+        
+        // Merge keywords into allNodesData
+        Object.keys(allNodesData).forEach(nodeId => {
+            if (nodeKeywords[nodeId]) {
+                allNodesData[nodeId].keywords = Object.values(nodeKeywords[nodeId]).sort((a, b) => {
+                    const labelA = (a.labels[currentLang] || Object.values(a.labels)[0] || "").toLowerCase();
+                    const labelB = (b.labels[currentLang] || Object.values(b.labels)[0] || "").toLowerCase();
+                    return labelA.localeCompare(labelB);
+                });
+            }
+        });
+
         allClassesData = processSparqlResults(classesJson.results.bindings, 'iri', ['label', 'comment']);
         allEdgeMetadata = processSparqlResults(edgeMetadataJson.results.bindings, 'predicate', ['label', 'comment']);
         titleJson.results.bindings.forEach(row => {
@@ -327,7 +354,6 @@ async function init() {
         edgesDataset.update(edgeUpdates);
     };
 
-
     const showInfo = (html) => {
         infoPanel.innerHTML = html;
         infoPanel.classList.remove("hidden");
@@ -360,6 +386,16 @@ async function init() {
                 <h4>${titleHtml} ${classChipHtml}</h4>
             </div>`;
         if (comment) html += `<p class="info-panel-comment"><small>${comment}</small></p>`;
+
+        // Render Keywords
+        if (nodeData.keywords && nodeData.keywords.length > 0) {
+            const keywordHtmls = nodeData.keywords.map(kw => {
+                const { text } = getLocalizedText(kw.labels, currentLang);
+                return `<span class="keyword-chip">${text}</span>`;
+            }).join("");
+            html += `<div class="keyword-container">${keywordHtmls}</div>`;
+        }
+
         return html;
     };
 

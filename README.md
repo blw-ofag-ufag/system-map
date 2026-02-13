@@ -35,6 +35,7 @@ Subgraphs of the system map allow inspecting one part of the overall system with
 - [digiFLUX](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=Si8UnIQkj02jgbLEb)
 - [Acontrol](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=Sa9PcqsvnAMuiYCjx)
 - [AGIS](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=SAAAX37V802JgbLEb)
+- [NGTS](https://blw-ofag-ufag.github.io/system-map/index.html?lang=en&subgraph=SH7U7SUsgqWmNqXA5)
 
 If you want a always up-to-date list of all subgraphs and their size, you can [query the system map accordingly](https://s.zazuko.com/221bFQW).
 

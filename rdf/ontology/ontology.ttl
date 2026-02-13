@@ -13,11 +13,11 @@
 
 dcat:Dataset a rdfs:Class,
         owl:Class ;
-    rdfs:label "Datensatz"@de,
+    schema:name "Datensatz"@de,
         "Dataset"@en,
         "Jeu de données"@fr,
         "Dataset"@it ;
-    rdfs:comment """
+    schema:description """
         Eine Sammlung von Daten, die von einer einzigen Quelle veröffentlicht oder kuratiert wurde und in einer oder mehreren Darstellungen zugänglich oder herunterladbar ist.
         """@de,
         """
@@ -63,15 +63,15 @@ dcat:Dataset a rdfs:Class,
     ] .
 
 dcmitype:Collection a owl:Class ;
-    rdfs:label "Collection"@en ;
-    rdfs:comment "A collection is described as a group; its parts may also be separately described."@en .
+    schema:name "Collection"@en ;
+    schema:description "A collection is described as a group; its parts may also be separately described."@en .
 
 service:Service a owl:Class ;
-    rdfs:label "IT-Service"@de,
+    schema:name "IT-Service"@de,
         "IT service"@en,
         "Service informatique"@fr,
         "Servizio IT"@it ;
-    rdfs:comment """
+    schema:description """
         Eine technische Softwarekomponente, die Funktionalitäten über klar definierte Schnittstellen zur externen Nutzung oder Integration bereitstellt.
         """@de,
         """
@@ -95,8 +95,8 @@ service:Service a owl:Class ;
     ] .
 
 schema:DefinedTermSet a owl:Class ;
-    rdfs:label "Reference data"@en ;
-    rdfs:comment """
+    schema:name "Reference data"@en ;
+    schema:description """
         Codelists are a specific form of reference data, where reference data is structured as a list consisting codes and their associated meanings.
         In the FOAG context, the terms codelist and reference data are often used interchangeably, as the concept of codelist is more readily understood.
         """@en ;
@@ -106,11 +106,11 @@ schema:DefinedTermSet a owl:Class ;
         "Enumerated type list"@en .
 
 schema:GovernmentOrganization a owl:Class ;
-    rdfs:label "Öffentlich-rechtliche Organisation"@de,
+    schema:name "Öffentlich-rechtliche Organisation"@de,
         "Public-sector organization"@en,
         "Organisation de droit public"@fr,
         "Organizzazione di diritto pubblico"@it ;
-    rdfs:comment """
+    schema:description """
         Eine öffentlich-rechtliche Organisation ist eine juristische Person oder eine Untereinheit einer solchen des öffentlichen Rechts, die durch einen Hoheitsakt gegründet wurde.
         Sie erfüllt öffentliche Aufgaben und ist dabei an gesetzliche Vorgaben gebunden.
         Beispiele sind Gebietskörperschaften wie Gemeinden oder Körperschaften des öffentlichen Rechts wie Universitäten.
@@ -133,11 +133,11 @@ schema:GovernmentOrganization a owl:Class ;
     rdfs:subClassOf schema:Organization .
 
 schema:Legislation a owl:Class ;
-    rdfs:label "Gesetzgebung"@de,
+    schema:name "Gesetzgebung"@de,
         "Legislation"@en,
         "Législation"@fr,
         "Legislazione"@it ;
-    rdfs:comment """
+    schema:description """
         Ein Rechtsdokument wie ein Gesetz, Dekret, Entwurf etc. (vollstreckbar oder nicht) oder ein Bestandteil eines Rechtsakts (wie ein Artikel).
         """@de,
         """
@@ -151,11 +151,11 @@ schema:Legislation a owl:Class ;
         """@it .
 
 schema:Organization a owl:Class ;
-    rdfs:label "Organisation"@de,
+    schema:name "Organisation"@de,
         "Organization"@en,
         "Organisation"@fr,
         "Organizzazione"@it ;
-    rdfs:comment """
+    schema:description """
         Eine (juristische) Person wie ein Unternehmen, eine Behörde oder eine NGO oder eine Untereinheit einer solchen.
         """@de,
         """
@@ -169,11 +169,11 @@ schema:Organization a owl:Class ;
         """@it .
 
 schema:SoftwareApplication a owl:Class ;
-    rdfs:label "IT-System"@de,
+    schema:name "IT-System"@de,
         "IT system"@en,
         "Système informatique"@fr,
         "Sistema IT"@it ;
-    rdfs:comment """
+    schema:description """
         Jedes IT-System (im abstrakten Sinne), oft mit einer oder mehreren dazugehörigen Datenbanken.
         """@de,
         """
@@ -197,11 +197,11 @@ schema:SoftwareApplication a owl:Class ;
     ] .
 
 systemmap:CantonalAgriculturalAdvisor a owl:Class ;
-    rdfs:label "Kantonale Beratungsstelle"@de,
+    schema:name "Kantonale Beratungsstelle"@de,
         "Cantonal advice center"@en,
         "Centre de conseil cantonal"@fr,
         "Centro di consulenza cantonale"@it ;
-    rdfs:comment """
+    schema:description """
         Eine kantonale Beratungsstelle bietet landwirtschaftlichen Betrieben Unterstützung und Orientierungshilfen in einem sich rasch wandelnden agrarpolitischen Umfeld.
         Sie fördert die beruflichen Qualifikationen und die Weiterentwicklung fachlicher sowie betriebswirtschaftlicher Kompetenzen der Landwirte.
         Beispiele sind der Strickhof im Kanton Zürich oder das Inforama im Kanton Bern.
@@ -224,11 +224,11 @@ systemmap:CantonalAgriculturalAdvisor a owl:Class ;
     rdfs:subClassOf systemmap:CantonalOrganization .
 
 systemmap:CantonalAgriculturalOffice a owl:Class ;
-    rdfs:label "Landwirtschaftsamt eines Kantons"@de,
+    schema:name "Landwirtschaftsamt eines Kantons"@de,
         "Cantonal agricultural office"@en,
         "Office agricole cantonal"@fr,
         "Ufficio agricolo cantonale"@it ;
-    rdfs:comment """
+    schema:description """
         Ein kantonales Landwirtschaftsamt ist die zuständige Behörde für die Umsetzung der Agrargesetzgebung auf kantonaler Ebene.
         Es unterstützt Landwirte durch Beratung, Weiterbildung und finanzielle Beiträge und fördert eine nachhaltige und wettbewerbsfähige Landwirtschaft.
         Beispiele sind das Amt für Landwirtschaft im Kanton Schwyz oder das Amt für Landwirtschaft und Natur im Kanton Bern.
@@ -251,11 +251,11 @@ systemmap:CantonalAgriculturalOffice a owl:Class ;
     rdfs:subClassOf systemmap:CantonalOrganization .
 
 systemmap:CantonalOrganization a owl:Class ;
-    rdfs:label "Kantonale Organisation"@de,
+    schema:name "Kantonale Organisation"@de,
         "Cantonal organization"@en,
         "Organisation cantonale"@fr,
         "Organizzazione cantonale"@it ;
-    rdfs:comment """
+    schema:description """
         Eine kantonale Organisation ist eine Behörde oder Einrichtung, die im Auftrag eines Kantons öffentliche Aufgaben wahrnimmt.
         Sie kann in verschiedenen Bereichen wie Bildung, Landwirtschaft oder Gesundheit tätig sein.
         Beispiele sind kantonale Landwirtschaftsämter oder Bildungsdirektionen.
@@ -278,11 +278,11 @@ systemmap:CantonalOrganization a owl:Class ;
     rdfs:subClassOf schema:GovernmentOrganization .
 
 systemmap:CantonalVeterinaryService a owl:Class ;
-    rdfs:label "Kantonaler Veterinärdienst"@de,
+    schema:name "Kantonaler Veterinärdienst"@de,
         "Cantonal Veterinary Service"@en,
         "Service vétérinaire cantonal"@fr,
         "Servizio veterinario cantonale"@it ;
-    rdfs:comment """
+    schema:description """
         Der Kantonale Veterinärdienst ist eine kantonale Behörde, die für den Vollzug der Tierseuchen- und Tierschutzgesetzgebung sowie der Lebensmittel- und Heilmittelgesetzgebung im Veterinärbereich zuständig ist.
         Seine Aufgaben umfassen den Schutz der Tiergesundheit, die Überwachung des Tierschutzes und die Sicherstellung der Lebensmittelsicherheit tierischer Herkunft.
         Zudem ist er für die Kontrolle des Viehhandels, die Fleischhygiene und die Bewilligung von Tierversuchen verantwortlich.
@@ -305,11 +305,11 @@ systemmap:CantonalVeterinaryService a owl:Class ;
     rdfs:subClassOf systemmap:CantonalOrganization .
 
 systemmap:FMIS a owl:Class ;
-    rdfs:label "Farm-Management-Informationssystem"@de,
+    schema:name "Farm-Management-Informationssystem"@de,
         "Farm Management Information System"@en,
         "Système d'information pour la gestion agricole"@fr,
         "Sistema informativo per la gestione agricola"@it ;
-    rdfs:comment """
+    schema:description """
         Ein FMIS ist ein System zur Erfassung, Verarbeitung, Speicherung und Verbreitung landwirtschaftlicher Daten zur Unterstützung betrieblicher Entscheidungen.
         """@de,
         """
@@ -326,11 +326,11 @@ systemmap:FMIS a owl:Class ;
         "FMIS"@en .
 
 systemmap:FederalOrganization a owl:Class ;
-    rdfs:label "Organisation des Bundes"@de,
+    schema:name "Organisation des Bundes"@de,
         "Federal organization"@en,
         "Organisation fédérale"@fr,
         "Organizzazione federale"@it ;
-    rdfs:comment """
+    schema:description """
         Eine Organisation des Bundes ist eine Behörde oder Institution auf Bundesebene oder eine Untereinheit davon, die öffentliche Aufgaben wahrnimmt.
         Sie kann in verschiedenen Bereichen wie Sicherheit, Finanzen oder Umwelt tätig sein.
         Beispiele sind das Bundesamt für Umwelt oder das Staatssekretariat für Wirtschaft.
@@ -353,9 +353,9 @@ systemmap:FederalOrganization a owl:Class ;
     rdfs:subClassOf schema:GovernmentOrganization .
 
 systemmap:MasterData a owl:Class ;
-    rdfs:label "Stammdaten"@de,
+    schema:name "Stammdaten"@de,
         "Masterdata"@en ;
-    rdfs:comment """
+    schema:description """
         Master data describes core business entities such as customers, products, suppliers, and employees but also, in the FOAG context, animals or plant varieties.
         Master data needs to be consistent across the entire organization.
         It ensures consistency and accuracy across business processes and systems, allowing different parts of the organization to refer to well-identified entities that can be enriched for specific business purposes.
@@ -363,11 +363,11 @@ systemmap:MasterData a owl:Class ;
     rdfs:subClassOf dcat:Dataset .
 
 systemmap:PrivateOrganization a owl:Class ;
-    rdfs:label "Privatrechtliche Organisation"@de,
+    schema:name "Privatrechtliche Organisation"@de,
         "Private-sector organization"@en,
         "Organisation de droit privé"@fr,
         "Organizzazione di diritto privato"@it ;
-    rdfs:comment """
+    schema:description """
         Eine privatrechtliche Organisation ist eine juristische Person oder eine Untereinheit davon, die nach privatem Recht organisiert ist.
         Dazu gehören Unternehmen, Vereine, Stiftungen oder Genossenschaften.
         Beispiele sind Aktiengesellschaften, Sportvereine oder karitative Stiftungen.
@@ -390,8 +390,8 @@ systemmap:PrivateOrganization a owl:Class ;
     rdfs:subClassOf schema:Organization .
 
 systemmap:TransactionalData a owl:Class ;
-    rdfs:label "Transactional data"@en ;
-    rdfs:comment """
+    schema:name "Transactional data"@en ;
+    schema:description """
         Transactional data is generated from day-to-day business operations.
         It represents the facts that usually come to mind when we think about data.
         Transactional data can be generated by various events and is gathered or measured by dedicated systems.
@@ -399,11 +399,11 @@ systemmap:TransactionalData a owl:Class ;
     rdfs:subClassOf dcat:Dataset .
 
 termdat:52451 a owl:Class ;
-    rdfs:label "Personendaten"@de,
+    schema:name "Personendaten"@de,
         "Personal data"@en,
         "Données personnelles"@fr,
         "Dati personali"@it ;
-    rdfs:comment """
+    schema:description """
         Angaben, die sich auf eine bestimmte oder bestimmbare natürliche Person beziehen.
         """@de,
         """
@@ -418,11 +418,11 @@ termdat:52451 a owl:Class ;
     rdfs:subClassOf dcat:Dataset .
 
 termdat:52453 a owl:Class ;
-    rdfs:label "Besonders schützenswerte Personendaten"@de,
+    schema:name "Besonders schützenswerte Personendaten"@de,
         "Sensitive personal data"@en,
         "Données personnelles sensibles"@fr,
         "Dati personali degni di particolare protezione"@it ;
-    rdfs:comment """
+    schema:description """
         Personendaten über religiöse, weltanschauliche, politische oder gewerkschaftliche Ansichten oder Tätigkeiten, über die Gesundheit, Intimsphäre, Ethnien- oder Rassenzugehörigkeit, über verwaltungs- und strafrechtliche Verfolgungen oder Sanktionen und Massnahmen der sozialen Hilfe sowie genetische oder biometrische Daten, die eine natürliche Person eindeutig identifizien.
         """@de,
         """
@@ -437,11 +437,11 @@ termdat:52453 a owl:Class ;
     rdfs:subClassOf termdat:52451 .
 
 systemmap:abbreviation a owl:DatatypeProperty ;
-    rdfs:label "Abkürzung"@de,
+    schema:name "Abkürzung"@de,
         "Abbreviation"@en,
         "Abréviation"@fr,
         "Abbreviazione"@it ;
-    rdfs:comment """
+    schema:description """
         Eine Abkürzung wird nur angegeben, wenn sie nicht bereits der bevorzugte Name ist.
         Beispiel: Die Fenaco Genossenschaft (fédération nationale des coopératives agricoles) wird üblicherweise als "Fenaco" bezeichnet, sodass keine separate Abkürzung erforderlich ist.
         """@de,
@@ -460,11 +460,11 @@ systemmap:abbreviation a owl:DatatypeProperty ;
     rdfs:range xsd:string .
 
 service:consumedBy a owl:ObjectProperty ;
-    rdfs:label "wird verwendet von"@de,
+    schema:name "wird verwendet von"@de,
         "is used by"@en,
         "est utilisé par"@fr,
         "è utilizzato da"@it ;
-    rdfs:comment """
+    schema:description """
         Zeigt an, dass ein IT-Service von einem beliebigen Objekt verwendet wird.
         """@de,
         """
@@ -481,11 +481,11 @@ service:consumedBy a owl:ObjectProperty ;
     owl:inverseOf service:consumes .
 
 service:consumes a owl:ObjectProperty ;
-    rdfs:label "nutzt IT-Service"@de,
+    schema:name "nutzt IT-Service"@de,
         "uses IT service"@en,
         "utilise un service informatique"@fr,
         "utilizza un servizio IT"@it ;
-    rdfs:comment """
+    schema:description """
         Zeigt an, dass ein beliebiges Objekt (IT-System, Organisation etc.) einen bestimmten technischen IT-Service nutzt.
         """@de,
         """
@@ -501,11 +501,11 @@ service:consumes a owl:ObjectProperty ;
     rdfs:range service:Service .
 
 service:providedBy a owl:ObjectProperty ;
-    rdfs:label "wird bereitgestellt von"@de,
+    schema:name "wird bereitgestellt von"@de,
         "is provided by"@en,
         "est fourni par"@fr,
         "è fornito da"@it ;
-    rdfs:comment """
+    schema:description """
         Zeigt an, dass ein technischer Service von einem bestimmten IT-System bereitgestellt wird.
         """@de,
         """
@@ -522,11 +522,11 @@ service:providedBy a owl:ObjectProperty ;
     owl:inverseOf service:provides .
 
 service:provides a owl:ObjectProperty ;
-    rdfs:label "bietet Service an"@de,
+    schema:name "bietet Service an"@de,
         "provides service"@en,
         "fournit un service"@fr,
         "fornisce un servizio"@it ;
-    rdfs:comment """
+    schema:description """
         Diese Beziehung zeigt an, dass ein IT-System einen technischen Service bereitstellt, z. B. eine API, Benutzeroberfläche oder sonstige Schnittstelle zur externen Nutzung.
         """@de,
         """
@@ -543,11 +543,11 @@ service:provides a owl:ObjectProperty ;
     owl:inverseOf service:providedBy .
 
 schema:member a owl:ObjectProperty ;
-    rdfs:label "hat Mitglied"@de,
+    schema:name "hat Mitglied"@de,
         "has member"@en,
         "a des membres"@fr,
         "ha membri"@it ;
-    rdfs:comment """
+    schema:description """
         Gibt an, dass eine Organisation X eine andere Organisation Y als Mitgliedsorganisation hat.
         Diese Beziehung stellt Mitgliedschaften in Branchenorganisationen, Berufsverbänden oder anderen formellen Vereinigungen dar, bei denen Organisationen als Mitglieder teilnehmen.
         Informelle Beziehungen gehören nicht dazu.
@@ -572,11 +572,11 @@ schema:member a owl:ObjectProperty ;
     owl:inverseOf schema:memberOf .
 
 schema:memberOf a owl:ObjectProperty ;
-    rdfs:label "Mitglied von"@de,
+    schema:name "Mitglied von"@de,
         "member of"@en,
         "membre de"@fr,
         "membro di"@it ;
-    rdfs:comment """  
+    schema:description """  
         Gibt an, dass eine Organisation X eine Mitgliedsorganisation einer anderen Organisation Y ist.
         Die Beziehung soll Mitgliedschaften von Branchenorganisationen, Berufsverbänden oder anderen formellen Vereinigungen darstellen, bei denen Organisationen als Mitglieder teilnehmen.
         Informelle Beziehungen gehören nicht dazu.
@@ -602,11 +602,11 @@ schema:memberOf a owl:ObjectProperty ;
 
 schema:parentOrganization a owl:ObjectProperty,
         owl:TransitiveProperty ;
-    rdfs:label "gehört zu"@de,
+    schema:name "gehört zu"@de,
         "belongs to"@en,
         "fait partie de"@fr,
         "fa parte di"@it ;
-    rdfs:comment """
+    schema:description """
         Zeigt an, dass die (Teil-)Organisation ein Teil von einer (Über-)Organisation Y ist.
         """@de,
         """  
@@ -623,11 +623,11 @@ schema:parentOrganization a owl:ObjectProperty,
 
 schema:subOrganization a owl:ObjectProperty,
         owl:TransitiveProperty ;
-    rdfs:label "beinhaltet Suborganisation"@de,
+    schema:name "beinhaltet Suborganisation"@de,
         "contains suborganization"@en,
         "contient une sous-organisation"@fr,
         "contiene un'organizzazione subordinata"@it ;
-    rdfs:comment """  
+    schema:description """  
         Gibt an, dass eine Organisation eine oder mehrere Suborganisationen unter sich hat.
         Diese Beziehung stellt eine hierarchische Struktur zwischen Organisationen dar.
         """@de,
@@ -648,11 +648,11 @@ schema:subOrganization a owl:ObjectProperty,
     owl:inverseOf schema:parentOrganization .
 
 dcat:landingPage a owl:ObjectProperty ;
-    rdfs:label "hat Landingpage"@de,
+    schema:name "hat Landingpage"@de,
         "has landing page"@en,
         "a page d'accueil"@fr,
         "ha pagina di destinazione"@it ;
-    rdfs:comment """  
+    schema:description """  
         Eine Webseite, die in einem Webbrowser aufgerufen werden kann, um auf den Katalog, ein Dataset, seine Distributionen und/oder zusätzliche Informationen zuzugreifen.
         """@de,
         """  
@@ -666,11 +666,11 @@ dcat:landingPage a owl:ObjectProperty ;
         """@it .
 
 prov:wasDerivedFrom a owl:ObjectProperty ;
-    rdfs:label "wurde abgeleitet von"@de,
+    schema:name "wurde abgeleitet von"@de,
         "was derived from"@en,
         "a été dérivé de"@fr,
         "è stato derivato da"@it ;
-    rdfs:comment """
+    schema:description """
         Eine Ableitung ist die Transformation einer Entität in eine andere, 
         eine Aktualisierung einer Entität, die zu einer neuen führt, 
         oder die Konstruktion einer neuen Entität auf der Grundlage einer bereits existierenden.
@@ -695,11 +695,11 @@ prov:wasDerivedFrom a owl:ObjectProperty ;
     owl:inverseOf systemmap:informs .
 
 systemmap:access a owl:ObjectProperty ;
-    rdfs:label "hat Zugriff auf"@de,
+    schema:name "hat Zugriff auf"@de,
         "has access to"@en,
         "a accès à"@fr,
         "ha accesso a"@it ;
-    rdfs:comment """  
+    schema:description """  
         Zeigt an, dass eine Organisation X die Rechte zum Zugriff etwas hat.
         """@de,
         """  
@@ -708,11 +708,11 @@ systemmap:access a owl:ObjectProperty ;
     rdfs:domain schema:Organization .
 
 systemmap:containedIn a owl:ObjectProperty ;
-    rdfs:label "ist beinhaltet in"@de,
+    schema:name "ist beinhaltet in"@de,
         "is contained in"@en,
         "est contenu dans"@fr,
         "è contenuto in"@it ;
-    rdfs:comment """  
+    schema:description """  
         Gibt an, dass eine Informationseinheit X im IT-System Y enthalten ist.
         Beispielsweise sind Informationen über landwirtschaftliche Flächen in der Schweiz in AGIS enthalten.
         """@de,
@@ -733,11 +733,11 @@ systemmap:containedIn a owl:ObjectProperty ;
     owl:inverseOf systemmap:contains .
 
 systemmap:contains a owl:ObjectProperty ;
-    rdfs:label "beinhaltet"@de,
+    schema:name "beinhaltet"@de,
         "contains"@en,
         "contient"@fr,
         "contiene"@it ;
-    rdfs:comment """  
+    schema:description """  
         Gibt an, dass ein IT-System X die Informationseinheit Y enthält.
         Beispielsweise enthält AGIS Informationen über landwirtschaftliche Flächen in der Schweiz.
         """@de,
@@ -758,12 +758,12 @@ systemmap:contains a owl:ObjectProperty ;
     owl:inverseOf systemmap:containedIn .
 
 systemmap:containsNodes a owl:ObjectProperty ;
-    rdfs:label "Elemente in diesem Subgraph"@de,
+    schema:name "Elemente in diesem Subgraph"@de,
         "Elements in this subgraph"@en ;
     rdfs:domain dcmitype:Collection .
 
 systemmap:developedBy a owl:ObjectProperty ;
-    rdfs:label "entwickelt von"@de,
+    schema:name "entwickelt von"@de,
         "developed by"@en ;
     rdfs:domain [ 
         a owl:Class ;
@@ -773,9 +773,9 @@ systemmap:developedBy a owl:ObjectProperty ;
     owl:inverseOf systemmap:develops .
 
 systemmap:develops a owl:ObjectProperty ;
-    rdfs:label "entwickelt"@de,
+    schema:name "entwickelt"@de,
         "develops"@en ;
-    rdfs:comment """
+    schema:description """
         Zeigt an, welche Organisation ein System, eine Datenbank oder einen Servce entwickelt hat.
         """@de ,
         """
@@ -789,11 +789,11 @@ systemmap:develops a owl:ObjectProperty ;
     ] .
 
 systemmap:hasLegalBasis a owl:ObjectProperty ;
-    rdfs:label "hat Rechtsgrundlage"@de,
+    schema:name "hat Rechtsgrundlage"@de,
         "has legal basis"@en,
         "a une base légale"@fr,
         "ha una base legale"@it ;
-    rdfs:comment """  
+    schema:description """  
         Zeigt an, dass irgendetwas X eine Rechtsgrundlage mit (einem bestimmten Teil) der Legislation Y hat.
         """@de,
         """  
@@ -808,11 +808,11 @@ systemmap:hasLegalBasis a owl:ObjectProperty ;
     rdfs:range schema:Legislation .
 
 systemmap:informs a owl:ObjectProperty ;
-    rdfs:label "informiert"@de,
+    schema:name "informiert"@de,
         "informs"@en,
         "informe"@fr,
         "informa"@it ;
-    rdfs:comment """
+    schema:description """
         Zeigt auf, dass Informationseinheit X durch eine andere Informationseinheit Y informiert wird; d.h. dass irgendwie Daten fliessen.
         Das kann über manuelles Abschreiben, E-Mail-Versandt von Tabellen, APIs etc. geschehen.
         """@de,
@@ -833,11 +833,11 @@ systemmap:informs a owl:ObjectProperty ;
     owl:inverseOf prov:wasDerivedFrom .
 
 systemmap:operatedBy a owl:ObjectProperty ;
-    rdfs:label "wird betrieben von"@de,
+    schema:name "wird betrieben von"@de,
         "is operated by"@en,
         "est exploité par"@fr,
         "è gestito da"@it ;
-    rdfs:comment """  
+    schema:description """  
         Gibt an, dass ein IT-System X durch eine Organisation Y betrieben wird.
         Das bedeutet, dass die Organisation Y für den Betrieb von System X zuständig ist.
         """@de,
@@ -858,11 +858,11 @@ systemmap:operatedBy a owl:ObjectProperty ;
     owl:inverseOf systemmap:operates .
 
 systemmap:operates a owl:ObjectProperty ;
-    rdfs:label "betreibt"@de,
+    schema:name "betreibt"@de,
         "operates"@en,
         "exploite"@fr,
         "gestisce"@it ;
-    rdfs:comment """
+    schema:description """
         Diese Beziehung zeigt an, dass Organisation X für das Betriebssystem Y verantwortlich ist.
         Wenn Organisation Y den Betrieb eines Systems X an einen Dienstleister Z auslagert, verwenden Sie weiterhin diese Betriebsbeziehung zwischen X und Y, da sie eher die Verantwortlichkeit als den technischen Betrieb widerspiegelt.
         Die Beziehung ist auf niedrigstmöglicher Organisationsebene zu verwenden.
@@ -887,11 +887,11 @@ systemmap:operates a owl:ObjectProperty ;
     owl:inverseOf systemmap:operatedBy .
 
 systemmap:ownedBy a owl:ObjectProperty ;
-    rdfs:label "ist (teilweise) in Besitz von"@de,
+    schema:name "ist (teilweise) in Besitz von"@de,
         "is (partially) owned by"@en,
         "est (partiellement) détenu par"@fr,
         "è (parzialmente) di proprietà di"@it ;
-    rdfs:comment """
+    schema:description """
         Diese Beziehung zeigt an, dass eine Organisation X (teilweise) im Besitz einer anderen Organisation Y ist.
         """@de,
         """
@@ -908,11 +908,11 @@ systemmap:ownedBy a owl:ObjectProperty ;
     owl:inverseOf systemmap:owns .
 
 systemmap:owns a owl:ObjectProperty ;
-    rdfs:label "besitzt (teilweise)"@de,
+    schema:name "besitzt (teilweise)"@de,
         "(partially) owns"@en,
         "possède (partiellement)"@fr,
         "possiede (parzialmente)"@it ;
-    rdfs:comment """
+    schema:description """
         Diese Beziehung zeigt an, dass eine Organisation X eine andere Organisation Y (teilweise) besitzt.
         """@de,
         """
@@ -929,19 +929,19 @@ systemmap:owns a owl:ObjectProperty ;
     owl:inverseOf systemmap:ownedBy .
 
 systemmap:references a owl:ObjectProperty ;
-    rdfs:label "referenziert"@de,
+    schema:name "referenziert"@de,
         "references"@en ;
     rdfs:domain dcat:Dataset ;
     rdfs:range schema:DefinedTermSet .
 
 systemmap:usesMasterData a owl:ObjectProperty ;
-    rdfs:label "hat Masterdaten"@de,
+    schema:name "hat Masterdaten"@de,
         "has master data"@en ;
     rdfs:domain dcat:Dataset ;
     rdfs:range systemmap:MasterData .
 
 systemmap: a owl:Ontology ;
-    rdfs:label "Ontologie der DigiAgriFoodCH Systemlandkarte"@de,
+    schema:name "Ontologie der DigiAgriFoodCH Systemlandkarte"@de,
         "DigiAgriFoodCH System Map Ontology"@en,
         "Ontologie de la carte du système DigiAgriFoodCH"@fr,
         "Ontologia della mappa del sistema DigiAgriFoodCH"@it ;
@@ -965,11 +965,11 @@ systemmap: a owl:Ontology ;
     owl:versionInfo "0.4.0" .
 
 dcterms:hasPart a owl:TransitiveProperty ;
-    rdfs:label "hat Teil"@de,
+    schema:name "hat Teil"@de,
         "has part"@en,
         "a pour partie"@fr,
         "ha parte"@it ;
-    rdfs:comment """
+    schema:description """
         Eine verwandte Ressource, die physisch oder logisch in der beschriebenen Ressource enthalten ist.
         """@de,
         """
@@ -984,11 +984,11 @@ dcterms:hasPart a owl:TransitiveProperty ;
     owl:inverseOf dcterms:isPartOf .
 
 dcterms:isPartOf a owl:TransitiveProperty ;
-    rdfs:label "ist Teil von"@de,
+    schema:name "ist Teil von"@de,
         "is part of"@en,
         "fait partie de"@fr,
         "fa parte di"@it ;
-    rdfs:comment """
+    schema:description """
         Eine verwandte Ressource, in der die beschriebene Ressource physisch oder logisch enthalten ist.
         """@de,
         """

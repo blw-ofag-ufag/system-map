@@ -17,14 +17,15 @@ You can visually explore this work on the following pages:
 - [**Circular system map**](https://blw-ofag-ufag.github.io/system-map/varia/circle), an alternative visualization in circular arrangement.
 - [**Table on a federal demo site**](https://blw-ofag-ufag.github.io/system-map/varia/table/) that shows (a) how quickly we can query LINDAS data and perform some computation and (b) how this information can be displayed on a (federal) webpage.
 - [**Standalone search site**](https://blw-ofag-ufag.github.io/system-map/varia/search) to help you find an entity in case you're lost.
+- [**Tiny data catalog demo**](https://blw-ofag-ufag.github.io/system-map/varia/data-catalog) to visualize datasets more conventionally.
 - [**Nanoid generator**](https://blw-ofag-ufag.github.io/system-map/varia/nanoid) just for internal use.
 
-If instead you are interested in the *actual* data, you can have a look at the following files:
+If instead you are interested in the *actual* data, you can have a look at the following folders:
 
-- [**`ontology.ttl`**](https://github.com/blw-ofag-ufag/system-map/blob/main/rdf/ontology.ttl) contains information about how the data is structured. You can visualize it [using WebVOWL](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/system-map/refs/heads/main/rdf/ontology.ttl).
-- [**`data.ttl`**](https://github.com/blw-ofag-ufag/system-map/blob/main/rdf/data.ttl) contains information about the organizations, systems and information units themselves.
+- [**Ontology files**](https://github.com/blw-ofag-ufag/system-map/rdf/ontology/) contains information about how the data is structured. You can visualize it [using WebVOWL](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/system-map/refs/heads/main/rdf/processed/ontology.ttl).[^1]
+- [**Data files**](https://github.com/blw-ofag-ufag/system-map/blob/main/rdf/data/) contains information about the organizations, systems and information units themselves.
 
-Actually, there is a python script *reasoning* over the two files. This is described in more detail below.
+[^1]: Note that because WebVOWL expects rdfs:label and rdfs:comment and doesn't recognize the similar schema.org properties, we bind a separately written file here.
 
 # 🔎 Subgraphs
 

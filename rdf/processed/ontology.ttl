@@ -63,6 +63,7 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         systemmap:S8awijRdrkgdpXxgz,
         systemmap:S8nHLngDLQtFaaCwm,
         systemmap:S8y8UdAPhbDQ78DW3,
+        systemmap:SCN2FR1ecbZOlXssf,
         systemmap:SCnkbsCJntAwYZz1Y,
         systemmap:SGXgfZIB9hCBv4fIa,
         systemmap:SJKVNhaCVFoHhWjks,
@@ -97,6 +98,8 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         systemmap:SysVetera,
         systemmap:SzrnfKnzjo2egouKl,
         zefix:1457969,
+        zefix:321790,
+        zefix:414877,
         zefix:804864,
         zefix:984853 .
 
@@ -1528,6 +1531,7 @@ systemmap:SJ15CI0vn3S1JgcOd a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:SrG5yvnwax87iuQw8 .
 
 systemmap:SJKVNhaCVFoHhWjks a schema:SoftwareApplication ;
+    schema:description "FLEKO ist eine Webapplikation des Bundesamtes für Lebensmittelsicherheit und Veterinärwesen (BLV) zur online-basierten Erfassung und Auswertung der amtlichen Fleischkontrolldaten in Schweizer Schlachtbetrieben."@de ;
     schema:name "FLEKO"@de ;
     systemmap:contains systemmap:SSBg29n8Wei8fxx1a ;
     systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN .
@@ -1767,6 +1771,7 @@ systemmap:SSALCAfutureLmnPqR1tYvCxD8 a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:SIo1a8l3IT4lBqBJE .
 
 systemmap:SSRl55QBjhFeGUWhn a schema:SoftwareApplication ;
+    schema:description "Die ASP-Risikoampel ist ein Online-Tool der SUISAG, mit dem Schweinehalter die betriebliche Biosicherheit systematisch überprüfen und das Einschleppungsrisiko der Afrikanischen Schweinepest minimieren können."@de ;
     schema:name "ASP-Risikoampel"@de ;
     systemmap:operatedBy zefix:414877 .
 
@@ -1885,6 +1890,7 @@ systemmap:SWPaPOSDJI3Kdv83m a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:SJqSPxOD2hdgsgJDI .
 
 systemmap:SWSDKVAr9pdy3T38R a schema:SoftwareApplication ;
+    schema:description "SuisData ist eine webbasierte Managementsoftware der SUISAG für Schweinehalter zur digitalen Erfassung, Auswertung und Verwaltung von tierindividuellen Leistungs- und Zuchtdaten."@de ;
     schema:name "SuisData"@de ;
     systemmap:contains systemmap:SvmW0FRiWcALdXgAa ;
     systemmap:operatedBy zefix:414877 .
@@ -2293,6 +2299,7 @@ systemmap:Shhoiq8azX3SHGL3W a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:SoqmfoevPVgr3d0AA .
 
 systemmap:ShjUfLjdanc83Dr0d a schema:SoftwareApplication ;
+    schema:description "Das ReproJournal ist eine schlanke Webanwendung der SUISAG zur Dokumentation und Auswertung grundlegender Reproduktionsdaten in der Schweinehaltung."@de ;
     schema:name "ReproJournal"@de ;
     systemmap:contains systemmap:SXIwI6eU6lZZOFVR4 ;
     systemmap:operatedBy zefix:414877 .
@@ -2946,7 +2953,7 @@ systemmap:SysVetera a schema:SoftwareApplication ;
     schema:name "Vetera"@de ;
     systemmap:contains systemmap:S8y8UdAPhbDQ78DW3,
         systemmap:SODrAbMM6KbwlpmH1 ;
-    systemmap:operatedBy systemmap:OrgVeteraGmbH .
+    systemmap:operatedBy systemmap:SCN2FR1ecbZOlXssf .
 
 systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2986,6 +2993,7 @@ systemmap:SzB95Xoyj1a1EJNBe a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:SLekJnxsXE7F1IQyK .
 
 systemmap:SzrnfKnzjo2egouKl a schema:SoftwareApplication ;
+    schema:description "Das SuisSano EBJ ist ein elektronisches Behandlungsjournal für die Schweineproduktion, welches die gesetzliche Aufzeichnungspflicht von Medikamenten- und Behandlungsdaten digitalisiert und vereinfacht."@de ;
     schema:name "SuisSano EBJ"@de ;
     systemmap:contains systemmap:SCnkbsCJntAwYZz1Y,
         systemmap:SSMBJhVTP6uajYFb2 ;
@@ -3402,10 +3410,10 @@ termdat:52453 a owl:Class ;
         "Dati personali degni di particolare protezione"@it ;
     rdfs:subClassOf termdat:52451 .
 
-_:nc80729187c44433e9e1d28df3cc8c6a9b12 a owl:Class ;
+_:nd2c3c51d68e44e79bf7ba97ea8c5cbf8b12 a owl:Class ;
     owl:unionOf ( dcat:Dataset service:Service schema:SoftwareApplication ) .
 
-_:nc80729187c44433e9e1d28df3cc8c6a9b8 a owl:Class ;
+_:nd2c3c51d68e44e79bf7ba97ea8c5cbf8b8 a owl:Class ;
     owl:unionOf ( dcat:Dataset service:Service schema:SoftwareApplication ) .
 
 systemmap:abbreviation a owl:DatatypeProperty ;
@@ -3737,7 +3745,7 @@ systemmap:containsNodes a owl:ObjectProperty ;
 systemmap:developedBy a owl:ObjectProperty ;
     schema:name "entwickelt von"@de,
         "developed by"@en ;
-    rdfs:domain _:nc80729187c44433e9e1d28df3cc8c6a9b8 ;
+    rdfs:domain _:nd2c3c51d68e44e79bf7ba97ea8c5cbf8b8 ;
     rdfs:range schema:Organization ;
     owl:inverseOf systemmap:develops .
 
@@ -3751,7 +3759,7 @@ systemmap:develops a owl:ObjectProperty ;
     schema:name "entwickelt"@de,
         "develops"@en ;
     rdfs:domain schema:Organization ;
-    rdfs:range _:nc80729187c44433e9e1d28df3cc8c6a9b12 ;
+    rdfs:range _:nd2c3c51d68e44e79bf7ba97ea8c5cbf8b12 ;
     owl:inverseOf systemmap:developedBy .
 
 systemmap:hasLegalBasis a owl:ObjectProperty ;
@@ -6043,7 +6051,7 @@ systemmap:Sl5KyePu7JtGiE3V a systemmap:MasterData ;
         "Catalogo dei prodotti"@it ;
     systemmap:containedIn systemmap:SjhTrVt8CB9QFq0Yn .
 
-systemmap:OrgVeteraGmbH a systemmap:PrivateOrganization ;
+systemmap:SCN2FR1ecbZOlXssf a systemmap:PrivateOrganization ;
     schema:description "Vetera GmbH ist ein Softwareanbieter für die Tiermedizin in der DACH-Region mit Hauptsitz in Deutschland."@de ;
     schema:name "Vetera GmbH"@de .
 
@@ -6169,10 +6177,6 @@ systemmap:Sng7djgBb3dkdoxbU a systemmap:PrivateOrganization ;
 systemmap:SrG5yvnwax87iuQw8 a systemmap:PrivateOrganization ;
     schema:name "Vetera GmbH"@de ;
     dcat:landingPage <https://vetera.net/> .
-
-systemmap:Swl6L9sDOknvl3fAZ a systemmap:PrivateOrganization ;
-    schema:description "Die Qualiporc Genossenschaft ist mit ihrem Gesundheits- & Zuchtservice eine Genossenschaft für Schweinezüchtern und -mästern in der Schweiz."@de ;
-    schema:name "Qualiporc Genossenschaft"@de .
 
 systemmap:SzqZmzij2bxSZEIL9 a systemmap:PrivateOrganization ;
     schema:name "CSB-System SE"@de ;
@@ -6322,8 +6326,9 @@ zefix:304729 a systemmap:PrivateOrganization ;
     schema:name "DeLaval AG"@de .
 
 zefix:321790 a systemmap:PrivateOrganization ;
-    schema:description "Die Ufa AG ist ein Schweizer Unternehmen für Tierernährung. Sie bietet neben Futtermitteln, Mineralsalzen und Spezialitäten auch Dienstleistungen in Fütterungs- und Managementfragen an. Die Ufa AG hat regionale Beratungsdienste in Puidoux, Lyssach, Sursee und Oberbüren sowie dezentrale Mischfutterwerke und ist damit schweizweit vertreten."@de ;
-    schema:name "Ufa AG"@de .
+    schema:description "Die UFA AG ist ein Schweizer Unternehmen für Tierernährung. Sie bietet neben Futtermitteln, Mineralsalzen und Spezialitäten auch Dienstleistungen in Fütterungs- und Managementfragen an. Die Ufa AG hat regionale Beratungsdienste in Puidoux, Lyssach, Sursee und Oberbüren sowie dezentrale Mischfutterwerke und ist damit schweizweit vertreten."@de ;
+    schema:name "UFA AG"@de ;
+    systemmap:ownedBy zefix:328631 .
 
 zefix:328631 a systemmap:PrivateOrganization ;
     schema:description """
@@ -6485,6 +6490,10 @@ zefix:804864 a systemmap:PrivateOrganization ;
     schema:description "Die Qualitas AG entwickelt IT-Lösungen für die Schweizer Nutztierbranche und bietet diese und Dienstleistungen für die Tierzucht an."@de ;
     schema:name "Qualitas AG"@de ;
     dcat:landingPage <https://www.qualitasag.ch/> .
+
+zefix:823951 a systemmap:PrivateOrganization ;
+    schema:description "Die Qualiporc Genossenschaft ist mit ihrem Gesundheits- & Zuchtservice eine Genossenschaft für Schweinezüchtern und -mästern in der Schweiz."@de ;
+    schema:name "Qualiporc Genossenschaft"@de .
 
 zefix:848149 a systemmap:PrivateOrganization ;
     schema:name "Agrosolution AG"@de .

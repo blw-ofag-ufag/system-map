@@ -30,6 +30,9 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         zefix:804864,
         zefix:984853,
         zefix:1457969,
+        zefix:414877,
+        zefix:321790,
+        systemmap:SCN2FR1ecbZOlXssf,
         systemmap:S2uXY2dnx1jijxpXr,
         systemmap:S3Rf79NI3Pm1rfOlN,
         
@@ -88,6 +91,12 @@ zefix:1457969 a schema:Organization ;
     schema:name "Nutztiergesundheit Schweiz"@de ;
     schema:description "Der Verein Nutztiergesundheit Schweiz (NTGS) setzt sich für eine gesunde und zukunftsfähige Nutztierhaltung in der Schweiz ein. Gegründet im Juni 2020, vereint NTGS nationale Organisationen aus Landwirtschaft, Tierärzteschaft, Forschung, sowie Tierhalter-, Züchter- und Viehhändlerverbände. Gemeinsam arbeiten wir daran, die Tiergesundheit nachhaltig zu fördern. Der Sitz von NTGS ist in Zollikofen."@de .
 
+systemmap:S2uXY2dnx1jijxpXr a schema:Organization ;
+    schema:name "Fachstelle Animal Health Info System"@de ;
+    schema:parentOrganization zefix:1457969 ;
+    schema:description "Die Fachstelle AHIS ist primär für den Betrieb von \"Pig Health Info System\" und \"Cattle Health Info System\" zuständig. Dies beinhaltet die Betreuung und Unterstützung der Nutzer:innen, aber auch das Testen der Neuentwicklungen und die Planung derer Veröffentlichung. Ausserdem ist die Fachstelle für die Betreuung und Administration der Programme PathoPig und ZoE-BTA zuständig. Organisatorisch ist die Fachstelle Nutztiergesundheit Schweiz mit Sitz in Zollikofen angegliedert."@de ;
+    systemmap:parentOrganization zefix:1457969 .
+
 zefix:804864 a systemmap:PrivateOrganization ;
     schema:name "Qualitas AG"@de ;
     schema:description "Die Qualitas AG entwickelt IT-Lösungen für die Schweizer Nutztierbranche und bietet diese und Dienstleistungen für die Tierzucht an."@de ;
@@ -109,7 +118,7 @@ zefix:430315 a systemmap:PrivateOrganization ;
     schema:name "Diana Software AG"@de ;
     schema:description "Das Team der Diana Software AG isetzt sich unter anderem aus ehemaligen tiermedizinischen Praxisassistentinnen sowie erfahrenen Top-Entwicklern zusammen. Diana Software AG wurde 1998 gegründet und bietet Software für die Tiermedizin an."@de .
 
-systemmap:OrgVeteraGmbH a systemmap:PrivateOrganization ;
+systemmap:SCN2FR1ecbZOlXssf a systemmap:PrivateOrganization ;
     schema:name "Vetera GmbH"@de ;
     schema:description "Vetera GmbH ist ein Softwareanbieter für die Tiermedizin in der DACH-Region mit Hauptsitz in Deutschland."@de .
 
@@ -121,19 +130,14 @@ zefix:1441172 a systemmap:PrivateOrganization ;
     schema:name "Gesundheitsservice der Qualiporc Genossenschaft QGS"@de ;
     schema:description "Der Gesundheitsservice der Qualiporc Genossenschaft (QGS) ist ein schweizweit tätiger Gesundheitsdienst für die Schweineproduktion."@de .
 
-systemmap:Swl6L9sDOknvl3fAZ a systemmap:PrivateOrganization ;
+zefix:823951 a systemmap:PrivateOrganization ;
     schema:name "Qualiporc Genossenschaft"@de ;
     schema:description "Die Qualiporc Genossenschaft ist mit ihrem Gesundheits- & Zuchtservice eine Genossenschaft für Schweinezüchtern und -mästern in der Schweiz."@de .
 
-systemmap:S2uXY2dnx1jijxpXr a schema:Organization ;
-    schema:name "Fachstelle Animal Health Info System"@de ;
-    schema:parentOrganization zefix:1457969 ;
-    schema:description "Die Fachstelle AHIS ist primär für den Betrieb von \"Pig Health Info System\" und \"Cattle Health Info System\" zuständig. Dies beinhaltet die Betreuung und Unterstützung der Nutzer:innen, aber auch das Testen der Neuentwicklungen und die Planung derer Veröffentlichung. Ausserdem ist die Fachstelle für die Betreuung und Administration der Programme PathoPig und ZoE-BTA zuständig. Organisatorisch ist die Fachstelle Nutztiergesundheit Schweiz mit Sitz in Zollikofen angegliedert."@de ;
-    systemmap:parentOrganization zefix:1457969 .
-
 zefix:321790 a systemmap:PrivateOrganization ;
-    schema:name "Ufa AG"@de ;
-    schema:description "Die Ufa AG ist ein Schweizer Unternehmen für Tierernährung. Sie bietet neben Futtermitteln, Mineralsalzen und Spezialitäten auch Dienstleistungen in Fütterungs- und Managementfragen an. Die Ufa AG hat regionale Beratungsdienste in Puidoux, Lyssach, Sursee und Oberbüren sowie dezentrale Mischfutterwerke und ist damit schweizweit vertreten."@de .
+    schema:name "UFA AG"@de ;
+    schema:description "Die UFA AG ist ein Schweizer Unternehmen für Tierernährung. Sie bietet neben Futtermitteln, Mineralsalzen und Spezialitäten auch Dienstleistungen in Fütterungs- und Managementfragen an. Die Ufa AG hat regionale Beratungsdienste in Puidoux, Lyssach, Sursee und Oberbüren sowie dezentrale Mischfutterwerke und ist damit schweizweit vertreten."@de ;
+    systemmap:ownedBy zefix:328631 .
 
 # ==============================================================================
 # IT SYSTEMS
@@ -189,12 +193,13 @@ systemmap:Sce5n6iUiSgdU3Mvv a schema:SoftwareApplication ;
 systemmap:SysVetera a schema:SoftwareApplication ;
     schema:name "Vetera"@de ;
     schema:description "Spezialisierte Praxismanagement-Software für die Veterinärmedizin zur systematischen Erfassung, Verwaltung und Auswertung klinischer Tiergesundheits- sowie Medikamentendaten."@de ;
-    systemmap:operatedBy systemmap:OrgVeteraGmbH ;
+    systemmap:operatedBy systemmap:SCN2FR1ecbZOlXssf ;
     systemmap:contains systemmap:S8y8UdAPhbDQ78DW3,
         systemmap:SODrAbMM6KbwlpmH1 .
 
 systemmap:SJKVNhaCVFoHhWjks a schema:SoftwareApplication ;
     schema:name "FLEKO"@de ;
+    schema:description "FLEKO ist eine Webapplikation des Bundesamtes für Lebensmittelsicherheit und Veterinärwesen (BLV) zur online-basierten Erfassung und Auswertung der amtlichen Fleischkontrolldaten in Schweizer Schlachtbetrieben."@de ;
     systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN ;
     systemmap:contains systemmap:SSBg29n8Wei8fxx1a .
 
@@ -213,6 +218,7 @@ systemmap:S6v6k2SMlwAVdLFmI a schema:SoftwareApplication ;
 
 systemmap:SzrnfKnzjo2egouKl a schema:SoftwareApplication ;
     schema:name "SuisSano EBJ"@de ;
+    schema:description "Das SuisSano EBJ ist ein elektronisches Behandlungsjournal für die Schweineproduktion, welches die gesetzliche Aufzeichnungspflicht von Medikamenten- und Behandlungsdaten digitalisiert und vereinfacht."@de ;
     systemmap:operatedBy zefix:804864 ;
     systemmap:contains systemmap:SCnkbsCJntAwYZz1Y,
         systemmap:SSMBJhVTP6uajYFb2 .
@@ -232,16 +238,19 @@ systemmap:SPDsRNDwfr6fKFrRc a schema:SoftwareApplication ;
 
 systemmap:SWSDKVAr9pdy3T38R a schema:SoftwareApplication ;
     schema:name "SuisData"@de ;
+    schema:description "SuisData ist eine webbasierte Managementsoftware der SUISAG für Schweinehalter zur digitalen Erfassung, Auswertung und Verwaltung von tierindividuellen Leistungs- und Zuchtdaten."@de ;
     systemmap:operatedBy zefix:414877 ;
     systemmap:contains systemmap:SvmW0FRiWcALdXgAa .
 
 systemmap:ShjUfLjdanc83Dr0d a schema:SoftwareApplication ;
     schema:name "ReproJournal"@de ;
+    schema:description "Das ReproJournal ist eine schlanke Webanwendung der SUISAG zur Dokumentation und Auswertung grundlegender Reproduktionsdaten in der Schweinehaltung."@de ;
     systemmap:operatedBy zefix:414877 ;
     systemmap:contains systemmap:SXIwI6eU6lZZOFVR4 .
 
 systemmap:SSRl55QBjhFeGUWhn a schema:SoftwareApplication ;
     schema:name "ASP-Risikoampel"@de ;
+    schema:description "Die ASP-Risikoampel ist ein Online-Tool der SUISAG, mit dem Schweinehalter die betriebliche Biosicherheit systematisch überprüfen und das Einschleppungsrisiko der Afrikanischen Schweinepest minimieren können."@de ;
     systemmap:operatedBy zefix:414877 .
 
 systemmap:Sqv5Vh286L7iinjmy a schema:SoftwareApplication ;

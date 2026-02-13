@@ -15,7 +15,7 @@
 # 1.1. Multilingual Labels for Key Entities
 #    - For every instance of:
 #      schema:Organization, schema:SoftwareApplication, dcat:Dataset
-#      => Must have at least one rdfs:label in de, fr, it, or en
+#      => Must have at least one schema:name in de, fr, it, or en
 # ------------------------------------------------------------------------------
 
 :MultilingualLabelShape
@@ -27,9 +27,9 @@
 
     # Must have at least one label in German, French, Italian, or English
     sh:property [
-        sh:path rdfs:label ;
+        sh:path schema:name ;
 
-        # We use a qualifiedValueShape to say: among all rdfs:label values,
+        # We use a qualifiedValueShape to say: among all schema:name values,
         # at least one must match "languageIn ('de', 'fr', 'it', 'en')".
         sh:qualifiedValueShape [
             sh:datatype rdf:langString ;
@@ -38,13 +38,13 @@
         sh:qualifiedMinCount 1 ;
 
         # Updated the message to reflect the new requirement
-        sh:message "A label in German, French, Italian, or English is required (rdfs:label @de, @fr, @it, or @en)."
+        sh:message "A label in German, French, Italian, or English is required (schema:name @de, @fr, @it, or @en)."
     ] .
 
 # ------------------------------------------------------------------------------
 # 1.2. Multilingual Comments for IT Systems
 #    - Every instance of schema:SoftwareApplication => Must have
-#      at least one rdfs:comment @de
+#      at least one schema:description @de
 # ------------------------------------------------------------------------------
 
 :SoftwareApplicationMultilingualCommentShape
@@ -53,13 +53,13 @@
 
     # Must have at least one comment in German
     sh:property [
-        sh:path rdfs:comment ;
+        sh:path schema:description ;
         sh:qualifiedValueShape [
             sh:datatype rdf:langString ;
             sh:languageIn ("de") ;
         ] ;
         sh:qualifiedMinCount 1 ;
-        sh:message "A comment in German is required (rdfs:comment @de)."
+        sh:message "A comment in German is required (schema:description @de)."
     ] .
 
 # ------------------------------------------------------------------------------
@@ -110,27 +110,27 @@
     ] .
 
 # ------------------------------------------------------------------------------
-# 1.5. Unique Language Constraint for rdfs:label and rdfs:comment
-#    - Every node can have at most one rdfs:label per language and at most one
-#      rdfs:comment per language.
+# 1.5. Unique Language Constraint for schema:name and schema:description
+#    - Every node can have at most one schema:name per language and at most one
+#      schema:description per language.
 # ------------------------------------------------------------------------------
 
 :UniqueLangLabelShape
     a sh:NodeShape ;
-    sh:targetSubjectsOf rdfs:label ;
+    sh:targetSubjectsOf schema:name ;
     sh:property [
-        sh:path rdfs:label ;
+        sh:path schema:name ;
         sh:uniqueLang true ;
-        sh:message "Each node must have at most one rdfs:label per language."
+        sh:message "Each node must have at most one schema:name per language."
     ] .
 
 :UniqueLangCommentShape
     a sh:NodeShape ;
-    sh:targetSubjectsOf rdfs:comment ;
+    sh:targetSubjectsOf schema:description ;
     sh:property [
-        sh:path rdfs:comment ;
+        sh:path schema:description ;
         sh:uniqueLang true ;
-        sh:message "Each node must have at most one rdfs:comment per language."
+        sh:message "Each node must have at most one schema:description per language."
     ] .
 
 # ------------------------------------------------------------------------------

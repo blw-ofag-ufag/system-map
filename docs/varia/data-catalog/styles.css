@@ -308,3 +308,8 @@ input[type="text"]:focus {
     .control-bar { grid-template-columns: 1fr; }
     .toggles { flex-wrap: wrap; }
 }
+
+.tag-masterdata { 
+    background: #d1e7dd; 
+    color: #0f5132; 
+}

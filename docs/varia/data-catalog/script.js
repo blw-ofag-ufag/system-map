@@ -14,6 +14,7 @@ CONSTRUCT {
     schema:description ?datasetDesc ;
     systemmap:isPersonal ?isPersonal ;
     systemmap:isSensitive ?isSensitive ;
+    systemmap:isMasterData ?isMasterData ;
     systemmap:inSystem ?directSystem .
 
   ?directSystem a schema:SoftwareApplication ;
@@ -47,6 +48,7 @@ WHERE {
 
     BIND(EXISTS { ?dataset a termdat:52451 } AS ?isPersonal)
     BIND(EXISTS { ?dataset a termdat:52453 } AS ?isSensitive)
+    BIND(EXISTS { ?dataset a systemmap:MasterData } AS ?isMasterData)
 
     # Get System Hierarchy
     ?directSystem dcterms:isPartOf* ?s .
@@ -110,6 +112,7 @@ let state = {
     search: '',
     personal: false,
     sensitive: false,
+    masterdata: false,
     filterSystem: null,
     filterOrg: null
 };
@@ -122,24 +125,28 @@ async function init() {
         const rawDatasets = framed["@graph"] || [];
         const datasets = Array.isArray(rawDatasets) ? rawDatasets : [rawDatasets];
 
-        flatItems = datasets.flatMap(ds => {
+        // Group purely by dataset to prevent duplication entirely
+        flatItems = datasets.map(ds => {
             let systems = ds["systemmap:inSystem"];
-            if (!systems) return [];
+            if (!systems) systems = [];
             if (!Array.isArray(systems)) systems = [systems];
 
-            return systems.flatMap(sys => {
+            let orgsMap = new Map();
+            systems.forEach(sys => {
                 let providers = sys["schema:provider"];
-                if (!providers) {
-                    return [{ dataset: ds, system: sys, org: null }];
+                if (providers) {
+                    if (!Array.isArray(providers)) providers = [providers];
+                    providers.forEach(org => {
+                        if (org["@id"]) orgsMap.set(org["@id"], org);
+                    });
                 }
-                if (!Array.isArray(providers)) providers = [providers];
-
-                return providers.map(org => ({
-                    dataset: ds,
-                    system: sys,
-                    org: org
-                }));
             });
+
+            return {
+                dataset: ds,
+                systems: systems,
+                orgs: Array.from(orgsMap.values())
+            };
         });
 
         document.getElementById('search-input').addEventListener('input', (e) => {
@@ -159,16 +166,16 @@ async function init() {
 function render() {
     document.getElementById('btn-personal').classList.toggle('active', state.personal);
     document.getElementById('btn-sensitive').classList.toggle('active', state.sensitive);
+    document.getElementById('btn-masterdata').classList.toggle('active', state.masterdata);
     renderActiveFilters();
 
     const filtered = flatItems.filter(item => {
-        const { dataset, system, org } = item;
+        const { dataset, systems, orgs } = item;
 
         const title = (getValue(dataset["schema:name"]) || "").toLowerCase();
         const desc = (getValue(dataset["schema:description"]) || "").toLowerCase();
-        const orgName = org ? (getValue(org["schema:name"]) || "Unknown Org") : "Unknown Org";
 
-        let hierarchyNames = getAllSystemNames(system).join(" ").toLowerCase();
+        let hierarchyNames = systems.flatMap(sys => getAllSystemNames(sys)).join(" ").toLowerCase();
 
         const matchesText = title.includes(state.search) ||
                             desc.includes(state.search) ||
@@ -178,15 +185,21 @@ function render() {
 
         const isPersonal = getValue(dataset["systemmap:isPersonal"]) === true || getValue(dataset["systemmap:isPersonal"]) === "true";
         const isSensitive = getValue(dataset["systemmap:isSensitive"]) === true || getValue(dataset["systemmap:isSensitive"]) === "true";
+        const isMasterData = getValue(dataset["systemmap:isMasterData"]) === true || getValue(dataset["systemmap:isMasterData"]) === "true";
 
         if (state.personal && !isPersonal) return false;
         if (state.sensitive && !isSensitive) return false;
+        if (state.masterdata && !isMasterData) return false;
 
         if (state.filterSystem) {
-            const names = getAllSystemNames(system);
+            const names = systems.flatMap(sys => getAllSystemNames(sys));
             if (!names.includes(state.filterSystem)) return false;
         }
-        if (state.filterOrg && orgName !== state.filterOrg) return false;
+
+        if (state.filterOrg) {
+            const orgNames = orgs.length > 0 ? orgs.map(o => getValue(o["schema:name"])) : ["Unknown Org"];
+            if (!orgNames.includes(state.filterOrg)) return false;
+        }
 
         return true;
     });
@@ -236,34 +249,37 @@ function getAllSystemNames(systemNode) {
 }
 
 function createCard(item) {
-    const { dataset, system, org } = item;
+    const { dataset, systems, orgs } = item;
 
     const title = getValue(dataset["schema:name"]) || "Untitled";
     const desc = getValue(dataset["schema:description"]) || "No description available.";
 
     const isPersonal = getValue(dataset["systemmap:isPersonal"]) === true || getValue(dataset["systemmap:isPersonal"]) === "true";
     const isSensitive = getValue(dataset["systemmap:isSensitive"]) === true || getValue(dataset["systemmap:isSensitive"]) === "true";
+    const isMasterData = getValue(dataset["systemmap:isMasterData"]) === true || getValue(dataset["systemmap:isMasterData"]) === "true";
 
-    const orgName = org ? (getValue(org["schema:name"]) || "Unknown Org") : "Unknown Org";
-    const orgAddress = org ? getValue(org["schema:address"]) : null;
+    // Deduplicate all system nodes involved for this dataset
+    const allSystemNodes = systems.flatMap(sys => getSystemHierarchy(sys));
+    const uniqueSysNodes = [];
+    const seenSys = new Set();
+    allSystemNodes.forEach(node => {
+        const id = node["@id"] || getValue(node["schema:name"]);
+        if (!seenSys.has(id)) {
+            seenSys.add(id);
+            uniqueSysNodes.push(node);
+        }
+    });
 
-    // Corrected URL interpolation syntax here
-    const mapsUrl = orgAddress
-        ? `https://www.google.com/maps/search/?api=1&query=$${encodeURIComponent(orgAddress)}`
-        : '#';
-
-    const systemNodes = getSystemHierarchy(system);
-
-    const tagsHtml = systemNodes.map(node => {
+    const tagsHtml = uniqueSysNodes.map(node => {
         const name = getValue(node["schema:name"]);
         const abbr = getValue(node["systemmap:abbreviation"]);
         const sysDesc = getValue(node["schema:description"]) || "No description.";
 
+        // Notice the margin-right has been removed to rely purely on CSS gap, and join string is empty
         return `
         <span class="tag tag-sys"
               data-name="${name}"
-              onclick="setFilter('system', this.dataset.name)"
-              style="margin-right:0;">
+              onclick="setFilter('system', this.dataset.name)">
             <i class="bi bi-cpu"></i> ${name}
             <div class="custom-tooltip">
                 <div class="tt-header">
@@ -275,7 +291,36 @@ function createCard(item) {
                 <div class="tt-desc">${sysDesc}</div>
             </div>
         </span>`;
-    }).join('<span style="color:#ccc; font-size: 0.8rem; display:flex; align-items:center;"> / </span>');
+    }).join(''); // Replaced ' / ' join string with ''
+
+    const orgsHtml = orgs.length > 0 ? orgs.map(org => {
+        const orgName = getValue(org["schema:name"]) || "Unknown Org";
+        const orgAddress = getValue(org["schema:address"]);
+        
+        // Bonus fix: URL schema was slightly broken in your provided code
+        const mapsUrl = orgAddress
+            ? `https://maps.google.com/?q=${encodeURIComponent(orgAddress)}`
+            : '#';
+
+        return `
+            <div class="org-footer">
+                <span class="org-link"
+                      data-org="${orgName}"
+                      onclick="setFilter('org', this.dataset.org)">
+                    <i class="bi bi-building"></i> ${orgName}
+                </span>
+                ${orgAddress ? `
+                    <a href="${mapsUrl}" target="_blank" class="address-link">
+                        <i class="bi bi-geo-alt"></i> ${orgAddress}
+                    </a>
+                ` : ''}
+            </div>
+        `;
+    }).join('') : `
+        <div class="org-footer">
+            <span class="org-link"><i class="bi bi-building"></i> Unknown Org</span>
+        </div>
+    `;
 
     const card = document.createElement('div');
     card.className = 'card';
@@ -290,21 +335,13 @@ function createCard(item) {
         <div class="meta-row">
             <div class="tag-row">
                 ${tagsHtml}
+                ${isMasterData ? `<span class="tag tag-masterdata"><i class="bi bi-database-fill-gear"></i> Stammdaten</span>` : ''}
                 ${isPersonal ? `<span class="tag tag-personal"><i class="bi bi-person"></i> Personal</span>` : ''}
                 ${isSensitive ? `<span class="tag tag-sensitive"><i class="bi bi-shield-lock"></i> Sensitive</span>` : ''}
             </div>
 
-            <div class="org-footer">
-                <span class="org-link"
-                      data-org="${orgName}"
-                      onclick="setFilter('org', this.dataset.org)">
-                    <i class="bi bi-building"></i> ${orgName}
-                </span>
-                ${orgAddress ? `
-                    <a href="${mapsUrl}" target="_blank" class="address-link">
-                        <i class="bi bi-geo-alt"></i> ${orgAddress}
-                    </a>
-                ` : ''}
+            <div style="display: flex; flex-direction: column;">
+                ${orgsHtml}
             </div>
         </div>
     `;

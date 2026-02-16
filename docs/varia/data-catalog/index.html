@@ -210,7 +210,7 @@
 
         .tag-sys .custom-tooltip {
             visibility: hidden;
-            width: 250px;
+            width: 400px;
             background-color: #333;
             color: #fff;
             text-align: left;
@@ -359,7 +359,7 @@
 </div>
 
 <script>
-    const ENDPOINT = "https://lindas.admin.ch/query";
+    const ENDPOINT = "https://cached.lindas.admin.ch/query";
 
     const SPARQL_QUERY = `
     PREFIX schema: <http://schema.org/>
@@ -398,11 +398,11 @@
         ?directSystem a schema:SoftwareApplication ;
                       dcterms:hasPart*/systemmap:contains ?dataset .
 
-        ?dataset rdfs:label ?datasetName .
+        ?dataset schema:name ?datasetName .
         FILTER(LANG(?datasetName) = "de")
 
         OPTIONAL {
-            ?dataset rdfs:comment|schema:description ?datasetDesc .
+            ?dataset schema:description|schema:description ?datasetDesc .
             FILTER(LANG(?datasetDesc) = "de")
         }
 
@@ -411,7 +411,7 @@
 
         # Get System Hierarchy
         ?directSystem dcterms:isPartOf* ?s .
-        ?s rdfs:label ?systemName .
+        ?s schema:name ?systemName .
         FILTER(LANG(?systemName) = "de")
 
         OPTIONAL { ?s systemmap:abbreviation ?systemAbbr . FILTER(LANG(?systemAbbr)="de") }
@@ -426,7 +426,7 @@
             ?pathSystem systemmap:operatedBy ?operator .
             ?operator schema:parentOrganization* ?org .
             FILTER(NOT EXISTS { ?org schema:parentOrganization ?grandparent })
-            ?org rdfs:label ?orgName .
+            ?org schema:name ?orgName .
             FILTER(LANG(?orgName) = "de")
 
             OPTIONAL {

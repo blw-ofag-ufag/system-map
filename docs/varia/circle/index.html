@@ -139,7 +139,7 @@
         GRAPH <https://lindas.admin.ch/foag/system-map> {
           ?id a ?group .
           VALUES ?group { schema:Organization schema:SoftwareApplication dcat:Dataset }
-          ?id rdfs:label ?label .
+          ?id schema:name ?label .
           FILTER(LANG(?label)="de")
         }
       }

@@ -22,7 +22,7 @@ You can visually explore this work on the following pages:
 
 If instead you are interested in the *actual* data, you can have a look at the following folders:
 
-- [**Ontology files**](https://github.com/blw-ofag-ufag/system-map/rdf/ontology/) contains information about how the data is structured. You can visualize it [using WebVOWL](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/system-map/refs/heads/main/rdf/processed/ontology.ttl).[^1]
+- [**Ontology files**](https://github.com/blw-ofag-ufag/system-map/blob/main/rdf/ontology/ontology.ttl) contains information about how the data is structured. You can visualize it [using WebVOWL](https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/blw-ofag-ufag/system-map/refs/heads/main/rdf/processed/ontology.ttl).[^1]
 - [**Data files**](https://github.com/blw-ofag-ufag/system-map/blob/main/rdf/data/) contains information about the organizations, systems and information units themselves.
 
 [^1]: Note that because WebVOWL expects rdfs:label and rdfs:comment and doesn't recognize the similar schema.org properties, we bind a separately written file here.

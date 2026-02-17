@@ -8,7 +8,7 @@ echo Create a dedicated ontology file for subsequent WebVOWL visualization
 python3 src/python/rdf-processing.py \
   -i rdf/ontology/*.ttl rdf/data/*.ttl \
   -o rdf/processed/ontology.ttl \
-  -r src/sparql/inference-rules/*.rq src/sparql/processing-rules/*.rq
+  -r src/sparql/inference-rules/*.sparql src/sparql/processing-rules/*.sparql
 
 echo Merge all data into one graph for subsequent LINDAS upload
 python3 src/python/rdf-processing.py \

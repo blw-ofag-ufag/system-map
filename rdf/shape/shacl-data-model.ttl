@@ -1,0 +1,316 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shape: <https://agriculture.ld.admin.ch/system-map/shape/> .
+@prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
+@prefix keyword: <https://agriculture.ld.admin.ch/system-map/keyword/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix schema: <http://schema.org/> .
+@prefix service: <http://purl.org/ontology/service#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix termdat: <https://register.ld.admin.ch/termdat/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# ==============================================================================
+# ORGANIZATION
+# ==============================================================================
+
+shape:Organization a sh:NodeShape ;
+    sh:targetClass schema:Organization, 
+                   schema:GovernmentOrganization,
+                   systemmap:PrivateOrganization, 
+                   systemmap:CantonalOrganization, 
+                   systemmap:FederalOrganization,
+                   systemmap:CantonalAgriculturalOffice,
+                   systemmap:CantonalVeterinaryService,
+                   systemmap:CantonalAgriculturalAdvisor ;
+    sh:order 2 ;
+    sh:property [
+        sh:path schema:name ;
+        sh:name "Organization Name"@en ;
+        sh:description "The official name of the organization."@en ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path systemmap:abbreviation ;
+        sh:name "Abbreviation"@en ;
+        sh:description "A short form or acronym for the organization (e.g., FOAG)."@en ;
+        sh:datatype rdf:langString ; 
+        sh:order 2 ;
+    ] ;
+    sh:property [
+        sh:path schema:description ;
+        sh:name "Description"@en ;
+        sh:description "A textual description of the organization's role and function."@en ;
+        sh:datatype rdf:langString ;
+        sh:order 3 ;
+    ] ;
+    sh:property [
+        sh:path dcat:landingPage ;
+        sh:name "Website"@en ;
+        sh:description "Link to the official website of the organization."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:order 4 ;
+    ] ;
+    sh:property [
+        sh:path schema:parentOrganization ;
+        sh:name "Parent Organization"@en ;
+        sh:description "The larger organization that this entity is a part of (e.g., a Department or Federal Office)."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class schema:Organization ;
+        sh:maxCount 1 ;
+        sh:order 5 ;
+    ] ;
+    sh:property [
+        sh:path schema:member ;
+        sh:name "Members"@en ;
+        sh:description "Other organizations that are registered members of this organization (e.g., members of an association)."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class schema:Organization ;
+        sh:order 6 ;
+    ] ;
+    sh:property [
+        sh:path systemmap:ownedBy ;
+        sh:name "Owner"@en ;
+        sh:description "The organization that legally owns this entity (partially or fully)."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class schema:Organization ;
+        sh:order 7 ;
+    ] ;
+    sh:property [
+        sh:path systemmap:access ;
+        sh:name "Access Rights"@en ;
+        sh:description "Indicates that this organization has specific access rights to a dataset or system."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:order 8 ;
+    ] .
+
+# ==============================================================================
+# SOFTWARE APPLICATION (IT SYSTEM) SHAPE
+# ==============================================================================
+
+shape:SoftwareApplication a sh:NodeShape ;
+    sh:targetClass schema:SoftwareApplication, systemmap:FMIS ;
+    sh:order 3 ;
+    sh:property [
+        sh:path schema:name ;
+        sh:name "System Name"@en ;
+        sh:description "The name of the software application or IT system."@en ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path systemmap:abbreviation ;
+        sh:name "Abbreviation"@en ;
+        sh:description "Short code or acronym for the system (e.g., AGIS)."@en ;
+        sh:datatype rdf:langString ;
+        sh:order 2 ;
+    ] ;
+    sh:property [
+        sh:path schema:description ;
+        sh:name "Description"@en ;
+        sh:description "A description of the system's purpose and functionality."@en ;
+        sh:datatype rdf:langString ;
+        sh:order 3 ;
+    ] ;
+    sh:property [
+        sh:path dcat:landingPage ;
+        sh:name "Login/Info Page"@en ;
+        sh:description "Web URL to access the system or view its documentation."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:order 4 ;
+    ] ;
+    sh:property [
+        sh:path systemmap:operatedBy ;
+        sh:name "Operated By"@en ;
+        sh:description "The organization responsible for the technical or business operation of the system."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class schema:Organization ;
+        sh:minCount 1 ; 
+        sh:order 5 ;
+    ] ;
+    sh:property [
+        sh:path systemmap:developedBy ;
+        sh:name "Developed By"@en ;
+        sh:description "The organization (usually a software vendor) that developed the system."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class schema:Organization ;
+        sh:order 6 ;
+    ] ;
+    sh:property [
+        sh:path systemmap:hasLegalBasis ;
+        sh:name "Legal Basis"@en ;
+        sh:description "Laws or ordinances that mandate the existence or use of this system."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class schema:Legislation ;
+        sh:order 7 ;
+    ] ;
+    sh:property [
+        sh:path dcterms:isPartOf ;
+        sh:name "Module Of"@en ;
+        sh:description "Indicates if this application is a sub-module of a larger software suite."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class schema:SoftwareApplication ;
+        sh:order 8 ;
+    ] ;
+    sh:property [
+        sh:path service:consumes ;
+        sh:name "Consumes Service"@en ;
+        sh:description "Technical services (APIs) that this system uses to function."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class service:Service ;
+        sh:order 9 ;
+    ] .
+
+# ==============================================================================
+# SERVICE SHAPE
+# ==============================================================================
+
+shape:Service a sh:NodeShape ;
+    sh:targetClass service:Service ;
+    sh:description "Shape for technical IT services, APIs, and calculation engines."@en ;
+    sh:order 4 ;
+    sh:property [
+        sh:path schema:name ;
+        sh:name "Service Name"@en ;
+        sh:description "The name of the technical service."@en ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path schema:description ;
+        sh:name "Description"@en ;
+        sh:description "Technical or functional description of what the service provides."@en ;
+        sh:datatype rdf:langString ;
+        sh:order 2 ;
+    ] ;
+    sh:property [
+        sh:path service:providedBy ;
+        sh:name "Provided By"@en ;
+        sh:description "The software application that hosts or exposes this service."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class schema:SoftwareApplication ;
+        sh:maxCount 1 ;
+        sh:order 3 ;
+    ] ;
+    sh:property [
+        sh:path dcterms:isPartOf ;
+        sh:name "Part Of Service"@en ;
+        sh:description "If this service is a specific endpoint or calculation within a larger service group."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class service:Service ;
+        sh:order 4 ;
+    ] .
+
+# ==============================================================================
+# DATASET SHAPE
+# ==============================================================================
+
+shape:Dataset a sh:NodeShape ;
+    sh:targetClass dcat:Dataset, 
+                   systemmap:MasterData, 
+                   systemmap:TransactionalData, 
+                   schema:DefinedTermSet,
+                   termdat:52451, # Personal Data
+                   termdat:52453 ; # Sensitive Personal Data
+    sh:order 5 ;
+    sh:property [
+        sh:path schema:name ;
+        sh:name "Dataset Name"@en ;
+        sh:description "The name of the dataset."@en ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path schema:description ;
+        sh:name "Description"@en ;
+        sh:description "Detailed description of the data content."@en ;
+        sh:datatype rdf:langString ;
+        sh:order 2 ;
+    ] ;
+    sh:property [
+        sh:path systemmap:containedIn ;
+        sh:name "Contained In System"@en ;
+        sh:description "The IT System where this dataset is physically or logically stored."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class schema:SoftwareApplication ;
+        sh:order 3 ;
+    ] ;
+    sh:property [
+        sh:path prov:wasDerivedFrom ;
+        sh:name "Derived From"@en ;
+        sh:description "The source dataset from which this data was transformed, calculated, or aggregated."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class dcat:Dataset ;
+        sh:order 4 ;
+    ] ;
+    sh:property [
+        sh:path dcterms:isPartOf ;
+        sh:name "Part Of Dataset"@en ;
+        sh:description "Indicates that this dataset is a subset of a larger dataset."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class dcat:Dataset ;
+        sh:order 5 ;
+    ] ;
+    sh:property [
+        sh:path systemmap:usesMasterData ;
+        sh:name "Uses Master Data"@en ;
+        sh:description "References to master data or catalogs used to structure this dataset (e.g. Code Lists)."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class dcat:Dataset ;
+        sh:order 6 ;
+    ] ;
+    sh:property [
+        sh:path systemmap:hasLegalBasis ;
+        sh:name "Legal Basis"@en ;
+        sh:description "Legislation that governs the collection or management of this data."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class schema:Legislation ;
+        sh:order 7 ;
+    ] ;
+    sh:property [
+        sh:path schema:keywords ;
+        sh:in ( keyword:animalbreeding sh:antibiotic keyword:animalhealth )
+    ] .
+
+# ==============================================================================
+# LEGISLATION SHAPE
+# ==============================================================================
+
+shape:Legislation a sh:NodeShape ;
+    sh:targetClass schema:Legislation ;
+    sh:order 6 ;
+    sh:property [
+        sh:path schema:name ;
+        sh:name "Title"@en ;
+        sh:description "The official title of the legislation or ordinance."@en ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path systemmap:abbreviation ;
+        sh:name "Abbreviation"@en ;
+        sh:description "Short code for the law (e.g., LwG, PSMV)."@en ;
+        sh:datatype rdf:langString ;
+        sh:order 2 ;
+    ] .
+
+keyword:animalbreeding a schema:DefinedTerm ;
+    schema:name "Tierzucht"@de ,
+        "Animal breeding"@en ,
+        "Élevage"@fr ,
+        "Zootecnia"@it .
+
+keyword:animalhealth a schema:DefinedTerm ;
+    schema:name "Tiergesundheit"@de ,
+        "Animal health"@en ,
+        "Santé animale"@fr ,
+        "Salute degli animali"@it .

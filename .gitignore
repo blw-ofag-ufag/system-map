@@ -8,4 +8,7 @@ rdf/graph.ttl
 .env
 deprecated/
 venv/
-test.sparqlbook
+
+# ignore any test files or test folders
+test.*
+test/

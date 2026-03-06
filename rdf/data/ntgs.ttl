@@ -54,7 +54,7 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         zefix:165954,
         zefix:278958,
         zefix:448334,
-        systemmap:Sf01af02906b2ccb,
+        zefix:769392,
         zefix:1393629,
         systemmap:Sa0c51880ac95ed6,
         systemmap:Se8a0552eb8cf7fe,
@@ -67,7 +67,7 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         zefix:278958,
         systemmap:S459e99499065540,
         systemmap:S1979cece7ba6873,
-        systemmap:S588d58eda01c96b,
+        zefix:249299,
         systemmap:Sa21b4bf6b691ef6,
         systemmap:S38b682bd68968a4,
         systemmap:Sc4ba6ce6ae8d41c,
@@ -77,11 +77,11 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         zefix:463295,
         zefix:166248,
         zefix:248029,
-        systemmap:S1a3cf7bfb644cba,
-        systemmap:S13e98eba0e760c8,
+        zefix:417008,
+        zefix:1457969,
         systemmap:S8awijRdrkgdpXxgz,
         systemmap:Sce5n6iUiSgdU3Mvv,
-        systemmap:SysVetera,
+        systemmap:Sb35n3iHP8gdx3MXZ,
         systemmap:S3371e59cf6a7c46,
         systemmap:SPASZffcsCMdIFEsZ,
         systemmap:SP86YzKhzJHZDD9Dj,
@@ -92,18 +92,21 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         systemmap:SPDsRNDwfr6fKFrRc,
         systemmap:SWSDKVAr9pdy3T38R,
         systemmap:ShjUfLjdanc83Dr0d,
-        systemmap:SSRl55QBjhFeGUWhn,
+        systemmap:S2lqf2px29PzK3059,
         systemmap:Sqv5Vh286L7iinjmy,
         systemmap:SOK9kQP8T3M2qPNEL,
         systemmap:Sb9170e5822932c9,
         systemmap:Sacff15d7f07af30,
+        systemmap:Sacff15d7f07af31,
+        systemmap:Sacff15d7f07af32,
+        systemmap:Sacff15d7f07af33,
         systemmap:Se1bff29f5b7c68c,
         systemmap:S8c40c23705714a0,
         systemmap:Sb51c844b32eb867,
         systemmap:Sacf3b075f9fa6a3,
         systemmap:Sbc5a844a4f0c51a,
         systemmap:S94be3e9cc38c5b7,
-        systemmap:Sea304536dc13663,
+        systemmap:SAIg9IaUyZYcHjEZ4,
         systemmap:Sdb697580a17102a,
         systemmap:S092d445cc8b3960,
         systemmap:Sc355c0e0b1d5ec2,
@@ -158,7 +161,11 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         systemmap:Sfae06196dfd6ef4,
         systemmap:SlTSOXsBC2LN7Qkp,
         systemmap:SDetpcQhSMo4IAeAb,
-        zefix:328631 .
+        zefix:328631 ,
+        systemmap:Sbf2a33246ce235f,
+        systemmap:Sou0GnQeSqCPHGhze,
+        systemmap:S7aG1r5IoOvAalIFb,
+        systemmap:S1ag5b1IxXvAalIFc .
 
 # ==============================================================================
 # ORGANIZATIONS
@@ -166,6 +173,7 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
 
 zefix:1457969 a schema:Organization ;
     schema:name "Nutztiergesundheit Schweiz"@de ;
+    systemmap:abbreviation "NTGS"@de ;
     schema:description "Der Verein Nutztiergesundheit Schweiz (NTGS) setzt sich für eine gesunde und zukunftsfähige Nutztierhaltung in der Schweiz ein. Gegründet im Juni 2020, vereint NTGS nationale Organisationen aus Landwirtschaft, Tierärzteschaft, Forschung, sowie Tierhalter-, Züchter- und Viehhändlerverbände. Gemeinsam arbeiten wir daran, die Tiergesundheit nachhaltig zu fördern. Der Sitz von NTGS ist in Zollikofen."@de .
 
 zefix:804864 a schema:Organization ;
@@ -177,7 +185,7 @@ zefix:984853 a schema:Organization ;
 
 zefix:430315 a schema:Organization ;
     schema:name "Diana Software AG"@de ;
-    schema:description "Das Team der Diana Software AG isetzt sich unter anderem aus ehemaligen tiermedizinischen Praxisassistentinnen sowie erfahrenen Top-Entwicklern zusammen. Diana Software AG wurde 1998 gegründet und bietet Software für die Tiermedizin an."@de .
+    schema:description "Das Team der Diana Software AG setzt sich unter anderem aus ehemaligen tiermedizinischen Praxisassistentinnen sowie erfahrenen Top-Entwicklern zusammen. Diana Software AG wurde 1998 gegründet und bietet Software für die Tiermedizin an."@de .
 
 systemmap:SCN2FR1ecbZOlXssf a schema:Organization ;
     schema:name "Vetera GmbH"@de ;
@@ -191,20 +199,22 @@ systemmap:S713c8cc22340cd0 a schema:Organization ;
     schema:name "Vetsuisse Bern"@de .
 
 systemmap:Sd9cbfdc59776e2b a schema:Organization ;
-    schema:name "Vetsuisse Zürich"@de .
+    schema:name "Vetsuisse Zürich"@de ;
+    schema:parentOrganization systemmap:SqbzqGjI3ws0stDBH .
 
 zefix:414877 a schema:Organization ;
     schema:name "SUISAG"@de ;
     schema:description "Die SUISAG ist ein Unternehmen für die Schweizer Schweineproduzenten und internationalen Genetik-Kunden. Sie bietet im Bereich Schweineproduktion Schweizer Genetik, Gesundheitsprogramme und weitere Dienstleistungen an."@de .
 
 zefix:1441172 a schema:Organization ;
-    schema:name "Qualiporc Genossenschaft, betrieben von Qualitas"@de ;
-    schema:description "Der Gesundheitsservice der Qualiporc Genossenschaft (QGS) ist ein schweizweit tätiger Gesundheitsdienst für die Schweineproduktion."@de .
+    schema:name "qualiporc Genossenschaft"@de ;
+    schema:description "Der Gesundheitsservice der qualiporc Genossenschaft (QGS) ist ein schweizweit tätiger Gesundheitsdienst für die Schweineproduktion."@de .
 
 systemmap:S9ef677e7b565bf9 a schema:Organization ;
-    schema:name "Fachstelle Animal Health Info System, NTGS"@de ;
+    schema:name "Fachstelle Animal Health Info System"@de ;
     schema:description "Die Fachstelle AHIS ist primär für den Betrieb von \"Pig Health Info System\" und \"Catle Health Info System\" zuständig. Dies beinhaltet idie Betreuung  und  Unterstützung der Nutzer:innen, aber auch das Testen der Neuentwicklungen und die Planung derer Veröffentlichung . Ausserdem ist die Fachstelle für die Betreuung und Administration der Programme PathoPig und ZoE-BTA zuständig. Organisatorisch ist die Fachstelle Nutztiergesundheit Schweiz mit Sitz in Zollikofen angegliedert."@de ;
-    schema:parentOrganization systemmap:S13e98eba0e760c8 .
+    systemmap:abbreviation "AHIS"@en ;
+    schema:parentOrganization zefix:1457969 .
 
 zefix:321790 a schema:Organization ;
     schema:name "UFA AG"@de ;
@@ -229,15 +239,15 @@ systemmap:S7c2f7f8f6ca9c70 a schema:Organization ;
 
 zefix:226184 a systemmap:PrivateOrganization ;
     schema:name "Braunvieh Schweiz"@de ;
-    schema:memberOf systemmap:S1a3cf7bfb644cba ;
+    schema:memberOf zefix:417008 ;
     schema:description "Braunvieh Schweiz vertritt die Interessen der Braunviehzüchter. Sie legt die Zuchtziele und die Zuchtprogramme beim Braunvieh fest und führt für die Rassen Braunvieh, Jersey, Grauvieh und Hinterwälder das Herdebuch und die Leistungsprüfungen und Zuchtwertschätzungen durch.  Braunvieh Schweiz wurde 1897 gegründet."@de ;
     dcat:landingPage <https://www.braunvieh.ch> .
 
-zefix:165954 schema:memberOf systemmap:S1a3cf7bfb644cba .
+zefix:165954 schema:memberOf zefix:417008 .
 
-systemmap:Sf01af02906b2ccb a schema:Organization ;
+zefix:769392 a schema:Organization ;
     schema:name "Mutterkuh Schweiz"@de ;
-    schema:memberOf systemmap:S1a3cf7bfb644cba ;
+    schema:memberOf zefix:417008 ;
     schema:description "Mutterkuh Schweiz ist der Verein der Mutterkuh­haltenden und Fleisch­rinder­züchtenden der Schweiz. Er steht allen Mutterkuhhaltenden und interessierten Personen offen."@de .
 
 zefix:1393629 a schema:Organization ;
@@ -269,32 +279,36 @@ systemmap:Saf2a33246ce133f a schema:Organization ;
     schema:description "CowManager ist ein international tätiges Unternehmen, das Sensorsysteme und zugehörige Auswertungsprogramme für Milchviehbestände anbietet. Hauptsitz ist in den Niederlanden."@de .
 
 zefix:417008 a schema:Organization ;
-    schema:name "Arbeitsgemeinschaft Schweizerischer Rinderzüchter (ASR)"@de ;
+    schema:name "Arbeitsgemeinschaft Schweizerischer Rinderzüchter"@de ;
+    systemmap:abbreviation "ASR"@de ;
     schema:description "Die Arbeitsgemeinschaft Schweizerischer Rinderzüchter (ASR) ist die Dachorgansiation der (Stand 2026: sieben) Schweizer Rinderzuchtorganisationen."@de .
 
 zefix:278958 a schema:Organization ;
     schema:name "Holstein Switzerland Genossenschaft"@de, "Coopérative Holstein Switzerland"@fr ;
-    schema:memberOf systemmap:S1a3cf7bfb644cba .
+    schema:memberOf zefix:417008 .
 
 systemmap:S459e99499065540 a schema:Organization ;
     schema:name "Schweizer Eringerzuchtverband"@de ;
-    schema:memberOf systemmap:S1a3cf7bfb644cba ;
+    schema:memberOf zefix:417008 ;
     schema:description "Der Schweizerische Eringerviehzuchtverband wurde 1920 gegründet und vereinigt heute 63 Genossenschaften und 2 Sektionen (deutschsprachig/ französischsprachig). Der Verband erarbeitet ein Zuchtprogramm, das hauptsächlich auf die Vereinheitlichung des Zuchttyps, die Förderung der wirtschaftlichen Produktivität (insbesondere Milch-und Fleischproduktion) und die Erhaltung der Gesundheit, Fruchtbarkeit und Kampflust der Eringer abzielt."@de .
 
 systemmap:S1979cece7ba6873 a schema:Organization ;
-    schema:name "Swissherbook Ost"@de ;
-    schema:memberOf systemmap:S1a3cf7bfb644cba ;
-    schema:description "Swissherbook Ost ist ein Zuchtverband, der sich der Förderung und Weiterentwicklung der Rinderzucht in der Ostschweiz widmet."@de .
+    schema:name "Verband swissherbook Ost"@de ;
+    systemmap:abbreviation "VsO"@de ;
+    schema:description "Swissherbook Ost ist ein Zuchtverband, der sich der Förderung und Weiterentwicklung der Rinderzucht in der Ostschweiz widmet."@de ;
+    schema:memberOf zefix:417008 ;
+    dcat:landingPage <https://swissherdbook-ost.ch/> .
 
-systemmap:S588d58eda01c96b a schema:Organization ;
-    schema:name "Verbandsgenossenschaft für Simmentaler Alpenfleckvieh und Alpwirschaft"@de ;
+zefix:249299 a schema:Organization ;
+    schema:name "Verbandsgenossenschaft für Simmentaler Alpfleckviehzucht und Alpwirtschaft"@de ;
     schema:description "Der Verbandsgenossenschaft für Simmentaler Alpfleckviehzucht und Alpwirtschaft gehören 128 Viehzuchtgenossenschaften und -vereine mit rund 30`000 Herdebuchtieren des Berner Oberlandes an. Sie bezweckt die Erhaltung und Förderung der Qualitätszucht der Simmentaler Fleckviehrasse, der Förderung des Viehabsatzes, der Vertretung in verschiedenen Organisationen und Verbänden und der Verbesserung der wirtschaftlichen Grundlage der Alpwirtschaft."@de ;
     systemmap:abbreviation "VSA"@de ;
-    schema:memberOf systemmap:S1a3cf7bfb644cba .
+    schema:memberOf zefix:417008 .
 
 systemmap:Sa21b4bf6b691ef6 a schema:Organization ;
     schema:name "SwissBeef"@de ;
-    schema:description "SwissBeef ist die Vereinigung der Schweizer Qualitäts-Rindfleischproduzenten mit Sitz in Brugg. Die Vereinigung setzt sich im Interesse der Rindermäster für optimale Rahmenbedingungen für die Produktion und am Markt ein. Als kompetenter Ansprechpartner für Politik, Handel, Verarbeiter sowie Forschung und Ausbildung werden die Interessen der Mitglieder vertreten. Swiss Beef CH hat drei Sektionen: Swiss Beef Region Ost, Swiss Beef Mittelland und Swiss Beef Romandie."@de .
+    schema:description "SwissBeef ist die Vereinigung der Schweizer Qualitäts-Rindfleischproduzenten mit Sitz in Brugg. Die Vereinigung setzt sich im Interesse der Rindermäster für optimale Rahmenbedingungen für die Produktion und am Markt ein. Als kompetenter Ansprechpartner für Politik, Handel, Verarbeiter sowie Forschung und Ausbildung werden die Interessen der Mitglieder vertreten. Swiss Beef CH hat drei Sektionen: Swiss Beef Region Ost, Swiss Beef Mittelland und Swiss Beef Romandie."@de ;
+    dcat:landingPage <https://www.swissbeef.ch/> .
 
 systemmap:S38b682bd68968a4 a schema:Organization ;
     schema:name "Schweizer Kälbermäster-Verband (SKMV)"@de ;
@@ -303,15 +317,18 @@ systemmap:S38b682bd68968a4 a schema:Organization ;
 systemmap:Sc4ba6ce6ae8d41c a schema:Organization ;
     schema:name "Rindergesundheit Schweiz"@de ;
     schema:parentOrganization zefix:1457969 ;
-    schema:description "Rindergesundheit Schweiz (RGS) bietet Dienstleistungen und Gesundheitsprogramme für Rinderbestände an. RGS unterstützt Betriebsleitende und Bestandestierärzte/-tierärztinnen durch Beratung, Bestandesdiagnostikbesuche, Bildungsveranstaltungen, Fachvorträge und Fachinformationen. Als Organisation ist RGS dem Verein Nutztiergesundheit Schweiz (NTGS) angegliedert und ist am 01.10.2021 aus dem ehemaligen Rindergesundheitsdienst, vereint mit dem Schweizer Kälbergesundheitsdienst (KGD), entstanden. Seit dem 01.07.2023 hat RGS die operativen Tätigkeiten des KGD vollständig übernommen.  Die zwei Standorte befinden sich in  Zollikofen und in Zürich."@de .
+    schema:description "Rindergesundheit Schweiz (RGS) bietet Dienstleistungen und Gesundheitsprogramme für Rinderbestände an. RGS unterstützt Betriebsleitende und Bestandestierärzte/-tierärztinnen durch Beratung, Bestandesdiagnostikbesuche, Bildungsveranstaltungen, Fachvorträge und Fachinformationen. Als Organisation ist RGS dem Verein Nutztiergesundheit Schweiz (NTGS) angegliedert und ist am 01.10.2021 aus dem ehemaligen Rindergesundheitsdienst, vereint mit dem Schweizer Kälbergesundheitsdienst (KGD), entstanden. Seit dem 01.07.2023 hat RGS die operativen Tätigkeiten des KGD vollständig übernommen.  Die zwei Standorte befinden sich in  Zollikofen und in Zürich."@de ;
+    systemmap:access systemmap:SOK9kQP8T3M2qPNEL .
 
 zefix:1695977 a schema:Organization ;
     schema:name "Gallosuisse"@de ;
     schema:description "GalloSuisse mit Sitz in Zollikofen ist die Genossenschaft der Schweizer Eierproduzenten und umfasst Betriebe mit Lege- und Aufzuchthennen. Gemeinsam mit seinen Sektionen setzt sich GalloSuisse ein für faire Rahmenbedingungen im Eiermarkt ein, vertritt die Interessen der Produzenten in Politik und Gesellschaft und plant und realisiert das Marketing für «Das Schweizer Ei»."@de .
 
 systemmap:Sc138712066f7ff2 a schema:Organization ;
-    schema:name "Schweizer Geflügelproduzentenverband SGP"@de ;
-    schema:description "Schweizer Geflügelproduzentenverband vertritt die Interessen der Geflügelproduzenten gegenüber Politik, Markt, regionalen und nationalen Behörden, Organisationen und Konsumenten."@de .
+    schema:name "Schweizer Geflügelproduzenten"@de ;
+    systemmap:abbreviation "SGP"@de ;
+    schema:description "Der Schweizer Geflügelproduzentenverband vertritt die Interessen der Geflügelproduzenten gegenüber Politik, Markt, regionalen und nationalen Behörden, Organisationen und Konsumenten."@de ;
+    dcat:landingPage <https://www.schweizer-gefluegel.ch/> .
 
 zefix:1537663 a schema:Organization ;
     schema:name "dsm-firmenich"@de ;
@@ -328,15 +345,24 @@ zefix:248029 a schema:Organization ;
     schema:name "Schweizerischer Ziegenzuchtverband (SZZV) Genossenschaft"@de ;
     schema:description "Der Schweizerische Ziegenzuchtverband wurde 1906 gegründet. Mitglieder des Verbandes sind kantonale und überkantonale Ziegenzucht- oder Kleinviehzuchtverbände/-vereine, Ziegenzuchtgenossenschaften und -vereine sowie Ziegenzüchterinnen und Ziegenzüchter von Rassen, für welche der SZZV das Herdebuch führt.  Der SZZV ist verantwortlich für die schweizerische Ziegenzucht und fördert deren Wirtschaftlichkeit."@de .
 
-systemmap:S1a3cf7bfb644cba a schema:Organization ;
-    schema:name "ASR"@de .
-
-systemmap:S13e98eba0e760c8 a schema:Organization ;
-    schema:name "NTGS"@de .
+systemmap:S1ag5b1IxXvAalIFc a schema:Organization ;
+    schema:name "Kälbergesundheitsdienst"@de ;
+    systemmap:abbreviation "KGD"@de ;
+    schema:parentOrganization systemmap:Sc4ba6ce6ae8d41c .
 
 # ==============================================================================
 # IT SYSTEMS
 # ==============================================================================
+
+systemmap:S7aG1r5IoOvAalIFb a schema:SoftwareApplication ;
+    schema:name "KGS"@de,
+        "KGS"@en,
+        "KGS"@fr,
+        "KGS"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    schema:description "Der Kälbergesundheitsdienst (KGS) ist eine Online-Plattform für das Management und die Überwachung der Kälbergesundheit in der Schweizer Nutztierhaltung. Qualitas AG entwickelt und betreibt diese Lösung als Teil ihres Angebots für die Schweizer Tierzucht."@de ;
+    dcat:landingPage <https://kgd.qualitasag.ch/KGS/> ;
+    systemmap:operatedBy zefix:804864 , systemmap:S1ag5b1IxXvAalIFc .
 
 systemmap:S8awijRdrkgdpXxgz a schema:SoftwareApplication ;
     schema:name "Oblon"@de,
@@ -356,13 +382,13 @@ systemmap:Sce5n6iUiSgdU3Mvv a schema:SoftwareApplication ;
     schema:name "Diana Suisse"@de ;
     schema:description "DianaSuisse ist eine Software für eine effiziente Verwaltung einer Tierarztpraxis oder Klinik: von der Terminorganisation über die Patientenverwaltung bis hin zur Rechnungsstellung."@de ;
     systemmap:operatedBy zefix:430315 ;
-    systemmap:contains systemmap:S70ed53aa68083c9 .
+    systemmap:contains systemmap:S70ed53aa68083c8 .
 
-systemmap:SysVetera a schema:SoftwareApplication ;
+systemmap:Sb35n3iHP8gdx3MXZ a schema:SoftwareApplication ;
     schema:name "Vetera"@de ;
     schema:description "Spezialisierte Praxismanagement-Software für die Veterinärmedizin zur systematischen Erfassung, Verwaltung und Auswertung klinischer Tiergesundheits- sowie Medikamentendaten."@de ;
     systemmap:operatedBy systemmap:SCN2FR1ecbZOlXssf ;
-    systemmap:contains systemmap:S70ed53aa68083c9 .
+    systemmap:contains systemmap:S70ed53aa68083c7 .
 
 systemmap:S3371e59cf6a7c46 a schema:SoftwareApplication ;
     schema:name "VetConnect PLUS"@de ;
@@ -376,18 +402,10 @@ systemmap:SPASZffcsCMdIFEsZ a schema:SoftwareApplication ;
         "Fleko"@fr,
         "Fleko"@it ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
-    schema:description """
-        Die Fleischkontrolldatenbank Fleko ist eine Webanwendung zur Erfassung und Verwaltung der Befunde aus der Schlachttier- und Fleischuntersuchung in der Schweiz. Sie dient der Dokumentation der Genusstauglichkeit und ermöglicht die Verwaltung von Gebühren und Leistungen im Bereich der Fleischkontrolle. Die Anwendung wird zentral vom BLV betreut und ist für kantonale Sachbearbeiter, Fleischkontrolleure und Administratoren zugänglich.
-        """@de,
-        """
-        Fleko is the Swiss national meat inspection database, a web application used to record and manage findings from slaughter animal and meat inspections. It documents fitness for consumption and allows for the administration of fees and services related to meat inspection. The system is centrally operated by the Federal Food Safety and Veterinary Office (FSVO) and is accessible to cantonal officers, meat inspectors, and administrators.
-        """@en,
-        """
-        Fleko est la base de données suisse pour le contrôle des viandes, une application web permettant la saisie et la gestion des résultats des inspections des animaux de boucherie et de la viande. Elle sert à documenter l’aptitude à la consommation et à gérer les taxes et prestations liées au contrôle des viandes. Le système est géré de manière centralisée par l’OSAV et accessible aux collaborateurs cantonaux, contrôleurs des viandes et administrateurs.
-        """@fr,
-        """
-        Fleko è la banca dati svizzera per il controllo delle carni, un’applicazione web per la registrazione e la gestione dei risultati delle ispezioni degli animali da macello e delle carni. Serve a documentare l’idoneità al consumo e consente la gestione di tasse e prestazioni nel settore del controllo delle carni. Il sistema è gestito centralmente dall’USAV ed è accessibile a funzionari cantonali, ispettori delle carni e amministratori.
-        """@it ;
+    schema:description "Die Fleischkontrolldatenbank Fleko ist eine Webanwendung zur Erfassung und Verwaltung der Befunde aus der Schlachttier- und Fleischuntersuchung in der Schweiz. Sie dient der Dokumentation der Genusstauglichkeit und ermöglicht die Verwaltung von Gebühren und Leistungen im Bereich der Fleischkontrolle. Die Anwendung wird zentral vom BLV betreut und ist für kantonale Sachbearbeiter, Fleischkontrolleure und Administratoren zugänglich."@de,
+        "Fleko is the Swiss national meat inspection database, a web application used to record and manage findings from slaughter animal and meat inspections. It documents fitness for consumption and allows for the administration of fees and services related to meat inspection. The system is centrally operated by the Federal Food Safety and Veterinary Office (FSVO) and is accessible to cantonal officers, meat inspectors, and administrators."@en,
+        "Fleko est la base de données suisse pour le contrôle des viandes, une application web permettant la saisie et la gestion des résultats des inspections des animaux de boucherie et de la viande. Elle sert à documenter l’aptitude à la consommation et à gérer les taxes et prestations liées au contrôle des viandes. Le système est géré de manière centralisée par l’OSAV et accessible aux collaborateurs cantonaux, contrôleurs des viandes et administrateurs."@fr,
+        "Fleko è la banca dati svizzera per il controllo delle carni, un’applicazione web per la registrazione e la gestione dei risultati delle ispezioni degli animali da macello e delle carni. Serve a documentare l’idoneità al consumo e consente la gestione di tasse e prestazioni nel settore del controllo delle carni. Il sistema è gestito centralmente dall’USAV ed è accessibile a funzionari cantonali, ispettori delle carni e amministratori."@it ;
     dcat:landingPage <https://www.blv.admin.ch/blv/de/home/lebensmittel-und-ernaehrung/lebensmittelsicherheit/verantwortlichkeiten/fleischkontrolle/fleko.html> ;
     systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN ;
     systemmap:contains systemmap:SSBg29n8Wei8fxx1a .
@@ -418,10 +436,12 @@ systemmap:S49a6caf92b3058d a schema:SoftwareApplication ;
     systemmap:contains systemmap:S59098ed667cb3bd .
 
 systemmap:SzrnfKnzjo2egouKl a schema:SoftwareApplication ;
-    schema:name "SuisSano EBJ"@de ;
+    schema:name "SuisSano Elektronisches Behandlungsjournal"@de ;
+    systemmap:abbreviation "EBJ"@de ;
     schema:description "Die elektronische Erfassung der Behandlung eines Einzeltieres oder von Tiergruppen ist dank des Elektronischen Behandlungsjournals EBJ einfach möglich. Es ermöglicht die flächendeckend einheitliche Erfassung und Auswertung der Medikamenteneinsätze auf Schweinezucht- und Mastbetrieben."@de ;
-    systemmap:operatedBy zefix:414877 ;
-    systemmap:contains systemmap:S7ddb5605c1326b4 .
+    systemmap:operatedBy zefix:414877, zefix:804864 ; # at the moment, there is no differentiation between the owner and the service provider here...
+    systemmap:contains systemmap:S7ddb5605c1326b4 ;
+    dcat:landingPage <https://www.suisag.com/ch-de/softwares/ebj/> .
 
 systemmap:SXekzo74vRcL6VkjL a schema:SoftwareApplication ;
     schema:name "QGS EBJ"@de ;
@@ -430,10 +450,11 @@ systemmap:SXekzo74vRcL6VkjL a schema:SoftwareApplication ;
     schema:description "Das Elektronische Behandlungsjournal (EBJ) ist ein webbasiertes Tool von Qualiporcs Gesundheitsservice QGS zur einheitlichen elektronischen Erfassung und Auswertung von Medikamenteneinsätzen sowie Behandlungen einzelner Tiere und Tiergruppen auf Schweine-Zucht- und Mastbetrieben, inklusive Dosierungsberechnung, Absetzfristenmanagement und Quartalsvergleichen zum Antibiotikaeinsatz."@de .
 
 systemmap:SPDsRNDwfr6fKFrRc a schema:SoftwareApplication ;
-    schema:name "Pig Health Info System"@de ;
+    schema:name "Pig Health Info System"@en ;
+    schema:description "Das Pig Health Info System PHIS einer App dient der Erfassung von Schweinegesundheitsdaten im Rahmen von Bestandes- und Einzeltier-Untersuchungen, mit Erzeugen von automatischen Berichten. Es dient weitrhin den TierärztInnen und den TierhalterInnen als Dokumentation, vereinfacht aber auch den Informationsfluss von den TierärztInnen zu den TierhalterInnen. In PHIS werden ausserdem Dazen zu den Programmen \"ZoE BTA\" und \"PathoPig\" erfasst und verwaltet."@de ;
+    systemmap:abbreviation "PHIS"@en ;
     systemmap:operatedBy systemmap:S9ef677e7b565bf9 ;
-    systemmap:contains systemmap:S4x04ackmG5yne5By ;
-    schema:description "Das Pig Health Info System PHIS  einer App dient der Erfassung von Schweinegesundheitsdaten im Rahmen von Bestandes- und Einzeltier-Untersuchungen, mit Erzeugen von automatischen Berichten. Es dient weitrhin den TierärztInnen und den TierhalterInnen als Dokumentation, vereinfacht aber auch den Informationsfluss von den TierärztInnen zu den TierhalterInnen. In PHIS werden ausserdem Dazen zu den Programmen \"ZoE BTA\" und \"PathoPig\" erfasst und verwaltet."@de .
+    systemmap:contains systemmap:S4x04ackmG5yne5By .
 
 systemmap:SWSDKVAr9pdy3T38R a schema:SoftwareApplication ;
     schema:name "SuisData"@de ;
@@ -447,9 +468,10 @@ systemmap:ShjUfLjdanc83Dr0d a schema:SoftwareApplication ;
     systemmap:operatedBy zefix:414877 ;
     systemmap:contains systemmap:SXIwI6eU6lZZOFVR4 .
 
-systemmap:SSRl55QBjhFeGUWhn a schema:SoftwareApplication ;
+systemmap:S2lqf2px29PzK3059 a schema:SoftwareApplication ;
     schema:name "ASP-Risikoampel"@de ;
     schema:description "Die ASP-Risikoampel ist ein Online-Tool der SUISAG, mit dem Schweinehalter die betriebliche Biosicherheit systematisch überprüfen und das Einschleppungsrisiko der Afrikanischen Schweinepest minimieren können."@de ;
+    dcat:landingPage <https://www.suisag.com/ch-de/softwares/asp-risikoampel/> ;
     systemmap:operatedBy zefix:414877 .
 
 systemmap:Sqv5Vh286L7iinjmy a schema:SoftwareApplication ;
@@ -462,10 +484,9 @@ systemmap:Sqv5Vh286L7iinjmy a schema:SoftwareApplication ;
 
 systemmap:SOK9kQP8T3M2qPNEL a schema:SoftwareApplication ;
     schema:name "Cattle Health Info System"@de ;
-    schema:name "Cattle Health Info System"@de ;
+    schema:description "Das Cattle Health Info System in Form einer App dient der Erfassung von Rindergesundheitsdaten im Rahmen von Bestandes- und Einzeltier-Untersuchungen, mit Erzeugen von automatischen Berichten. Es dient weitrhin den TierärztInnen und den TierhalterInnen als Dokumentation, vereinfacht aber auch den Informationsfluss von den Tierärzt:innen zu den Tierhalter:innen."@de ;
     systemmap:operatedBy systemmap:S9ef677e7b565bf9 ;
-    systemmap:contains systemmap:Sd6e0fe2eee8f943 ;
-    schema:description "Das Cattle Health Info System in Form einer App dient der Erfassung von Rindergesundheitsdaten im Rahmen von Bestandes- und Einzeltier-Untersuchungen, mit Erzeugen von automatischen Berichten. Es dient weitrhin den TierärztInnen und den TierhalterInnen als Dokumentation, vereinfacht aber auch den Informationsfluss von den TierärztInnen zu den TierhalterInnen."@de .
+    systemmap:contains systemmap:Sd6e0fe2eee8f943 .
 
 systemmap:Sb9170e5822932c9 a schema:SoftwareApplication ;
     schema:name "Lely Horizon"@de ;
@@ -473,11 +494,27 @@ systemmap:Sb9170e5822932c9 a schema:SoftwareApplication ;
     systemmap:contains systemmap:Se28f3bb2be7ce5e ;
     schema:description "Die Lely Horizon Software dient als permente, zusätzliche Überwachung der Herde, der Geräte und deren Sensoren. Sie erkennt frühzeitig relevante Situationen und ermöglicht ein rechtzeitiges Eingreifen.  Die Technologie sammelt detaillierte Datenpunkte über die Roboter und Kühe und wandelt sie in  verständliche Informationen um. Lely Horizon vereint individuelle Kuhdaten von den eigenen Lely Geräten mit ausgewählten Informationen von Dritten. Die Tierhaltenden entscheiden, wie und mit wem sie ihre Daten teilen möchten. Die Software sammelt und verabeitet Daten zu Betriebsabläufen, Tiergesundheit, Reproduktion, Melken und Fütterung (sofern die entsprechenden Lely-Geräte benutzt werden)."@de .
 
-systemmap:Sacff15d7f07af30 a schema:SoftwareApplication ;
+systemmap:Sacff15d7f07af30 a schema:SoftwareApplication,
+        systemmap:FMIS ;
     schema:name "DeLaval DelPro™"@de ;
     systemmap:operatedBy zefix:304729 ;
     systemmap:contains systemmap:Se11c26403a91b7f ;
     schema:description "DeLaval DelPro™ bietet eine Managementplattform für Milchviehbetriebe, indem es Daten aus verschiedenen Quellen wie Sensoren und Anwendungen analysiert und verständlich aufbereitet, interpretiert und dokumentiert. Das System fokussiert sich auf fünf  Schlüsselbereiche des Betriebsmanagements:  Milchleistung, Fütterung, Reproduktionsleistung, Tiergesundheit und Herdenleistung."@de .
+
+systemmap:Sacff15d7f07af31 a schema:SoftwareApplication ;
+    schema:name "DelPros Cow Monitor"@de ;
+    systemmap:operatedBy zefix:304729 ;
+    schema:description "Der DelPros Cow Monitor bildet für jede Kuh einen Gesundheitsindex. Dieser ist ein Wert, der aus einer Kombination vieler Daten aggregiert wird."@de .
+
+systemmap:Sacff15d7f07af32 a schema:SoftwareApplication ;
+    schema:name "DelPro Farm Manager"@de ;
+    systemmap:operatedBy zefix:304729 ;
+    schema:description "Der DelPro Farm Manager erlaubt die Modellierung der somatischen Zellzahl (SCC) des Milchtanks, basierend auf dem Einfluss jeder Kuh."@de .
+
+systemmap:Sacff15d7f07af33 a schema:SoftwareApplication ;
+    schema:name "DelPro Tierarztbesuch- und Impfprotokollfunktionalität"@de ;
+    systemmap:operatedBy zefix:304729 ;
+    schema:description "DelPros Tierarztbesuch- und Impfprotokollfunktionalität dient der Erstellung von Tierlisten mit Angaben zu anstehenden tiermedizinischen Tätigkeiten wie Impfungen oder Klauenpflege."@de .
 
 systemmap:Se1bff29f5b7c68c a schema:SoftwareApplication ;
     schema:name "M²erlin DataView"@de ;
@@ -498,10 +535,11 @@ systemmap:Sb51c844b32eb867 a schema:SoftwareApplication ;
     systemmap:contains systemmap:S08be1fdcd1d8675 .
 
 systemmap:Sacf3b075f9fa6a3 a schema:SoftwareApplication ;
-    schema:name "Redonline (Software)"@de ;
+    schema:name "Redonline"@de ;
     schema:description "Tool für schweizerische Viehzüchter zum Herdenmanagement."@de ;
     systemmap:operatedBy zefix:165954 ;
-    systemmap:contains systemmap:S6abacb381c3b305 .
+    systemmap:contains systemmap:S6abacb381c3b305 ;
+    dcat:landingPage <https://redonline.ch/redonline/> .
 
 systemmap:Sbc5a844a4f0c51a a schema:SoftwareApplication ;
     schema:name "Holsteinvision"@de ;
@@ -511,15 +549,21 @@ systemmap:Sbc5a844a4f0c51a a schema:SoftwareApplication ;
 
 systemmap:S94be3e9cc38c5b7 a schema:SoftwareApplication ;
     schema:name "SmartCow"@de ;
-    systemmap:operatedBy systemmap:Sf01af02906b2ccb ;
+    systemmap:operatedBy zefix:226184, zefix:769392, zefix:448334, zefix:165954 ;
     systemmap:contains systemmap:Scdb0a211b8eef1c ;
     schema:description "SmartCow ist eine gemeinsame App von Braunvieh Schweiz, Mutterkuh Schweiz, Swissgenetics und swissherdbook. Jede Landwirtin und jeder Landwirt mit einem Agate-Login kann die Herdemanagement-App SmartCow kostenlos nutzen. In SmartCow können alle Tierdaten verwaltet werden und im Brunstkalender, Behandlungsjournal, Leistungsblatt, als Laborbericht oder als Besamungen und Belegungen erfasst werden. Weiterhin sind TVD-Meldungen, Berechnung von Erbfehler- und Inzuchtrisiko, IP-Suisse Label-Meldungen und -Abfragen und das Erstellung von Begleitdokumenten möglich. Schweinehalter/-innen können den Zugang von Jagern über die App melden."@de .
 
-systemmap:Sea304536dc13663 a schema:SoftwareApplication ;
+systemmap:SAIg9IaUyZYcHjEZ4 a schema:SoftwareApplication ;
     schema:name "DSA Expert"@de ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    schema:description """
+DSA Expert ist ein Entscheidungshilfe-Tool für die technische und wirtschaftliche Führung landwirtschaftlicher Betriebe.
+Die Software für Herdenmanagement im Rinderbereich unterstützt die präventive Veterinärmedizin in Kanada und Europa.
+Das System wird ständig weiterentwickelt und verbessert und passt sich den Herausforderungen der 4.0-Medizin und dem Smart Farming an.
+        """@de ;
+    dcat:landingPage <https://farmconsult.ch/logiciel-de/> ;
     systemmap:operatedBy zefix:1393629 ;
-    systemmap:contains systemmap:Sd8ce041d235ac8a ;
-    schema:description "Bestehenden TExt ergänzen um: Die Software für Herdenmanagement im Rinderbereich unterstützt die präventive Veterinärmedizin in Kanada und Europa. Das System wird ständig weiterentwickelt und verbessert und passt sich den Herausforderungen der 4.0-Medizin und dem Smart Farming an."@de .
+    systemmap:contains systemmap:Sd8ce041d235ac8a .
 
 systemmap:Sdb697580a17102a a schema:SoftwareApplication ;
     schema:name "GEA DairyNet® Herden- und Betriebsmanagement"@de ;
@@ -575,10 +619,10 @@ systemmap:Sbf2a33246ce235f a schema:SoftwareApplication ;
     schema:description "CowManager ist ein Sensorsystem zur Kuhüberwachung und besteht aus verschiedenen Modulen: Fruchtbarkeit, Gesundheit und Transitphase- & Fütterung. Der Ohrsensor misst die Temperatur in Kombination mit dem Fress- und Wiederkauverhalten sowie der Bewegungsaktivität. So werden brünstige Kühe und kranke Tiere erkannt. «CowManager» ermöglicht eine einfache Installation: Ein Sensor wird am Ohr des Tieres angebracht, der Router sowie die Schnittstelle zum Herdenmanagementprogramm werden installiert. Anschliessend können die Daten der Herde auf dem Endgerät empfangen werden."@de .
 
 systemmap:Se5bcee032bfbd65 a schema:SoftwareApplication ;
-    schema:name "nutzt: Cattle Health Info System"@de ;
+    schema:name "Cattle Health Info System"@de ;
     systemmap:operatedBy systemmap:Sc4ba6ce6ae8d41c ;
     systemmap:contains systemmap:S27626110a39e3ed ;
-    schema:description "Das Cattle Health Info System in Form einer App dient der Erfassung von Rindergesundheitsdaten im Rahmen von Bestandes- und Einzeltier-Untersuchungen, mit Erzeugen von automatischen Berichten. Es dient weitrhin den TierärztInnen und den TierhalterInnen als Dokumentation, vereinfacht aber auch den Informationsfluss von den TierärztInnen zu den TierhalterInnen."@de .
+    schema:description "Das Cattle Health Info System in Form einer App dient der Erfassung von Rindergesundheitsdaten im Rahmen von Bestandes- und Einzeltier-Untersuchungen, mit Erzeugen von automatischen Berichten. Es dient weitrhin den Tierärzt:innen und den Tierhalter:innen als Dokumentation, vereinfacht aber auch den Informationsfluss von den Tierärzt:innen zu den Tierhalter:innen."@de .
 
 systemmap:S5aa8657dd97155b a schema:SoftwareApplication ;
     schema:name "Barto-Baustein UFA Gallo Support"@de ;
@@ -618,17 +662,29 @@ systemmap:S2S8th7MLY4xUNjh5 a schema:SoftwareApplication ;
 # ==============================================================================
 
 systemmap:S70ed53aa68083c9 a dcat:Dataset ;
-    schema:name "Tiergesundheits- und Tierbehandlungsdaten"@de ;
+    schema:name "Tiergesundheits und -behandlungsdaten"@de ;
     schema:description "Beinhaltet unter anderem Angaben zu Befunden und Diagnosen sowie zu medikamentellen Behandlungen bei Nutztieren und Nutztierbeständen."@de ;
-    dcat:keyword keyword:animalhealth .
+    dcat:keyword keyword:animalhealth, keyword:antibiotics .
+
+systemmap:S70ed53aa68083c8 a dcat:Dataset ;
+    schema:name "Tiergesundheits und -behandlungsdaten"@de ;
+    schema:description "Beinhaltet unter anderem Angaben zu Befunden und Diagnosen sowie zu medikamentellen Behandlungen bei Nutztieren und Nutztierbeständen."@de ;
+    dcat:keyword keyword:animalhealth, keyword:antibiotics .
+
+systemmap:S70ed53aa68083c7 a dcat:Dataset ;
+    schema:name "Tiergesundheits und -behandlungsdaten"@de ;
+    schema:description "Beinhaltet unter anderem Angaben zu Befunden und Diagnosen sowie zu medikamentellen Behandlungen bei Nutztieren und Nutztierbeständen."@de ;
+    dcat:keyword keyword:animalhealth, keyword:antibiotics .
 
 systemmap:S6320a5a3f8829b8 a dcat:Dataset ;
     schema:name "Testergebnisse und Gesundheitsdaten"@de ;
-    schema:description "Beinhaltet unter anderem Laborbefunde, Gesundheitsdaten von Tieren und Befunde."@de .
+    schema:description "Beinhaltet unter anderem Laborbefunde, Gesundheitsdaten von Tieren und Befunde."@de ;
+    dcat:keyword keyword:animalhealth .
 
 systemmap:SSBg29n8Wei8fxx1a a dcat:Dataset ;
     schema:name "FLEKO Tiergesundheitsdaten"@de ;
-    schema:description "Beinhaltet unter anderem Befunde aus der Schlachttier- und Fleischuntersuchung von Nutztieren"@de .
+    schema:description "Beinhaltet unter anderem Befunde aus der Schlachttier- und Fleischuntersuchung von Nutztieren"@de ;
+    dcat:keyword keyword:animalhealth .
 
 systemmap:SuZ6UFD05DBvC5E09 a dcat:Dataset ;
     schema:name "Tierseuchenmeldungen"@de ;
@@ -636,9 +692,9 @@ systemmap:SuZ6UFD05DBvC5E09 a dcat:Dataset ;
     dcat:keyword keyword:animalhealth .
 
 systemmap:S80e7173e5ad86e9 a dcat:Dataset ;
-    schema:name "IS-ABV"@de ;
+    schema:name "IS-ABV-Daten"@de ;
     schema:description "Enthält unter anderem Befunde und Diagnosen von Tieren sowie Vertriebs- und Verschreibungsdaten von Antibiotika an Tieren"@de ;
-    dcat:keyword keyword:animalhealth .
+    dcat:keyword keyword:animalhealth, keyword:antibiotics .
 
 systemmap:S59098ed667cb3bd a dcat:Dataset ;
     schema:name "Labordaten"@de ;
@@ -648,35 +704,42 @@ systemmap:S59098ed667cb3bd a dcat:Dataset ;
 systemmap:S7ddb5605c1326b4 a dcat:Dataset ;
     schema:name "Elektronisches Behandlungsjournal SuisSano"@de ;
     schema:description "Enthält unter anderem Befunde und Diagnosen im Zusammenhang mit Behandlungen von Schweinen. Die Angaben zur medikamentellen Behandlungen von Schweinen umfassen beispielsweise Präparat, Dosierung, Behandlungsdauer und Anzahl behandelter Schweine."@de ;
-    dcat:keyword keyword:animalhealth .
+    dcat:keyword keyword:animalhealth, keyword:antibiotics .
 
 systemmap:S8944f12a7ca83e4 a dcat:Dataset ;
     schema:name "Elektronisches Behandlungsjournal QGS"@de ;
-    schema:description "Enthält unter anderem Befunde und Diagnosen im Zusammenhang mit Behandlungen von Schweinen. Die Angaben zur medikamentellen Behandlungen von Schweinen umfassen beispielsweise Präparat, Dosierung, Behandlungsdauer und Anzahl behandelter Schweine."@de .
+    schema:description "Enthält unter anderem Befunde und Diagnosen im Zusammenhang mit Behandlungen von Schweinen. Die Angaben zur medikamentellen Behandlungen von Schweinen umfassen beispielsweise Präparat, Dosierung, Behandlungsdauer und Anzahl behandelter Schweine."@de ;
+    dcat:keyword keyword:animalhealth, keyword:antibiotics .
 
 systemmap:S4x04ackmG5yne5By a dcat:Dataset ;
     schema:name "PHIS Tiergesundheit"@de ;
-    schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Schwein aus Routineuntersuchen, TAM-Besuchen oder den Programmen ZoE-BTA und PathoPig"@de .
+    schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Schwein aus Routineuntersuchen, TAM-Besuchen oder den Programmen ZoE-BTA und PathoPig"@de ;
+    dcat:keyword keyword:animalhealth .
 
 systemmap:SvmW0FRiWcALdXgAa a dcat:Dataset ;
     schema:name "SuisData Tiergesundheit"@de ;
-    schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Schwein aus Routine-oder Spezialuntersuchen."@de .
+    schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Schwein aus Routine-oder Spezialuntersuchen."@de ;
+    dcat:keyword keyword:animalhealth .
 
 systemmap:SXIwI6eU6lZZOFVR4 a dcat:Dataset ;
     schema:name "ReproJournal Tiergesundheit"@de ;
-    schema:description "Enthält unter anderem Angaben zu Fruchtbarkeitsleitsungen von Schweinen."@de .
+    schema:description "Enthält unter anderem Angaben zu Fruchtbarkeitsleitsungen von Schweinen."@de ;
+    dcat:keyword keyword:animalhealth .
 
 systemmap:SXDe1c5blay5pm1f7 a dcat:Dataset ;
     schema:name "UFA2000 Deckregister"@de ;
-    schema:description "Enthält unter anderem Angaben zu Belegungen von Schweinen."@de .
+    schema:description "Enthält unter anderem Angaben zu Belegungen von Schweinen."@de ;
+    dcat:keyword keyword:animalhealth .
 
 systemmap:SGXgfZIB9hCBv4fIa a dcat:Dataset ;
     schema:name "UFA2000 Sauenblatt"@de ;
-    schema:description "Enthält unter anderem Angaben zu Trächtigkeitsdaten von Sauen"@de .
+    schema:description "Enthält unter anderem Angaben zu Trächtigkeitsdaten von Sauen"@de ;
+    dcat:keyword keyword:animalhealth .
 
 systemmap:Se35WpC7gmVkMSoME a dcat:Dataset ;
     schema:name "UFA2000 Wurferfassung"@de ;
-    schema:description "Enthält unter anderem Angaben zu Wurfdaten von Sauen"@de .
+    schema:description "Enthält unter anderem Angaben zu Wurfdaten von Sauen"@de ;
+    dcat:keyword keyword:animalhealth .
 
 systemmap:Sd6e0fe2eee8f943 a dcat:Dataset ;
     schema:name "Cattle-Health-Info-System-Daten"@de ;
@@ -686,7 +749,7 @@ systemmap:Sd6e0fe2eee8f943 a dcat:Dataset ;
 systemmap:Se28f3bb2be7ce5e a dcat:Dataset ;
     schema:name "Lely Horizon"@de ;
     schema:description "Aktuelle Daten aus verschiedenen Quellen werden konsolidiert und analysiert, um Prognosen und Ratschläge zu erstellen, die helfen, Gesundheitsprobleme früher zu erkennen. Weiterhin kann Horizon eine 24/7-Überwachung der Brunst bieten."@de ;
-    dcat:keyword keyword:animalhealth .
+    dcat:keyword keyword:animalhealth, keyword:antibiotics .
 
 systemmap:Se11c26403a91b7f a dcat:Dataset ;
     schema:name "DeLaval Tiergesundheit"@de ;
@@ -716,7 +779,7 @@ systemmap:S6abacb381c3b305 a dcat:Dataset ;
 systemmap:S0f4b28b02fcdb51 a dcat:Dataset ;
     schema:name "Holsteinvision Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Daten zu Befunden und Leistungen der Kühe. Diese sind Teil der Basis für das Herdenmanagement, aber auch unter anderem Grundlage für die Weitergabe der Zuchtbeiträge des BLW an die Tierhaltenden und die Entschädigung für alle erfassten Daten zur Mastitis und zu Stoffwechselkrankheiten."@de ;
-    dcat:keyword keyword:animalhealth .
+    dcat:keyword keyword:animalhealth, keyword:antibiotics .
 
 systemmap:Scdb0a211b8eef1c a dcat:Dataset ;
     schema:name "Smart Cow"@de ;
@@ -726,12 +789,12 @@ systemmap:Scdb0a211b8eef1c a dcat:Dataset ;
 systemmap:Sd8ce041d235ac8a a dcat:Dataset ;
     schema:name "DAS Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Daten zu Befunden und Leistungen der Milchkühe. Es ist möglich, Tierbehandlungsdaten abzulegen."@de ;
-    dcat:keyword keyword:animalhealth .
+    dcat:keyword keyword:animalhealth, keyword:antibiotics .
 
 systemmap:Sd30080af44facc4 a dcat:Dataset ;
     schema:name "GEA DairyNet Tiergesundheit"@de ;
     schema:description "Enthält zum Beispiel Angaben zu Tiergesundheit, Reproduktion und Klauenerkrankungen. Es ist möglich, Medikamente und Diagnosen für die Tiere und die Herde zu erfassen."@de ;
-    dcat:keyword keyword:animalhealth .
+    dcat:keyword keyword:animalhealth, keyword:antibiotics .
 
 systemmap:Sd07915cb6d4b0d2 a dcat:Dataset ;
     schema:name "GEA CowScout Tiergesundheit"@de ;
@@ -776,7 +839,7 @@ systemmap:S27626110a39e3ed a dcat:Dataset ;
 systemmap:S1df451f0356426f a dcat:Dataset ;
     schema:name "Gallo Support Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Daten zu Einstallung des Geflügels, Tierbewegungen, Fütterung, Wasser- und Futterverbrauch, Gewicht, Legeleistung und Abgängen wie auch Behandlungen und Impfungen."@de ;
-    dcat:keyword keyword:animalhealth .
+    dcat:keyword keyword:animalhealth, keyword:antibiotics .
 
 systemmap:Sfffaefb08722c2d a dcat:Dataset ;
     schema:name "Verax™ Tiergesundheit"@de ;

@@ -717,14 +717,6 @@ systemmap:S2gC2BTVjYNH05BNf a schema:SoftwareApplication ;
     dcat:landingPage <https://datapass.ch/software/> ;
     systemmap:operatedBy zefix:1013423 .
 
-systemmap:S2lqf2px29PzK3059 a schema:SoftwareApplication ;
-    schema:name "ASP-Risikoampel"@de ;
-    schema:description """
-        Die ASP-Risikoampel ist ein kostenloses Online-Tool von SUISAG zur Risikobewertung der betrieblichen Biosicherheit gegenüber Afrikanischer Schweinepest mit individueller Optimierungsanalyse und konkreten Handlungsempfehlungen.
-        """@de ;
-    dcat:landingPage <https://www.suisag.com/ch-de/softwares/asp-risikoampel/> ;
-    systemmap:operatedBy zefix:414877 .
-
 systemmap:S3TSqZWni4DBTqkAV a schema:SoftwareApplication ;
     schema:name "SmartCow"@de,
         "SmartCow"@en,
@@ -847,15 +839,6 @@ systemmap:S8RVk8dQzkXzXYSZX a schema:SoftwareApplication ;
         """@de ;
     systemmap:operatedBy zefix:1663457 .
 
-systemmap:S8lqf2UM29PzK3029 a schema:SoftwareApplication ;
-    schema:name "Elektronisches Behandlungsjournal"@de ;
-    schema:description """
-        Das Elektronische Behandlungsjournal (EBJ) ist ein webbasiertes Tool von SUISAG zur einheitlichen elektronischen Erfassung und Auswertung von Medikamenteneinsätzen sowie Behandlungen einzelner Tiere und Tiergruppen auf Schweine-Zucht- und Mastbetrieben, inklusive Dosierungsberechnung, Absetzfristenmanagement und Quartalsvergleichen zum Antibiotikaeinsatz.
-        """@de ;
-    dcat:landingPage <https://www.suisag.com/ch-de/softwares/ebj/> ;
-    systemmap:abbreviation "EBJ"@de ;
-    systemmap:operatedBy zefix:414877 .
-
 systemmap:S8wfrZtWOCmMSB6sv a schema:SoftwareApplication ;
     schema:name "Holstein Vision"@de,
         "Holstein Vision"@en,
@@ -971,24 +954,6 @@ systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
     systemmap:developedBy zefix:231059 ;
     systemmap:hasLegalBasis LwG:art_165_d ;
     systemmap:operatedBy systemmap:ScoeXHl4TgJbke1Yf .
-
-systemmap:SAIg9IaUyZYcHjEZ4 a schema:SoftwareApplication ;
-    schema:name "DSA Expert"@de ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
-    schema:description """
-        DSA Expert ist ein Entscheidungshilfe-Tool für die technische und wirtschaftliche Führung landwirtschaftlicher Betriebe.
-        """@de,
-        """
-        DSA Expert is a decision-support tool for the technical and economic management of agricultural holdings.
-        """@en,
-        """
-        DSA Expert est un outil d'aide à la décision pour la gestion technique et économique des exploitations agricoles.
-        """@fr,
-        """
-        DSA Expert è uno strumento di supporto decisionale per la gestione tecnica ed economica delle aziende agricole.
-        """@it ;
-    dcat:landingPage <https://farmconsult.ch/logiciel-de/> ;
-    systemmap:operatedBy zefix:1393629 .
 
 systemmap:SAPDp3o8XAHPuZnhB a schema:SoftwareApplication ;
     schema:name "redonline"@de,
@@ -1322,14 +1287,6 @@ systemmap:SJ15CI0vn3S1JgcOd a schema:SoftwareApplication ;
         """@it ;
     dcat:landingPage <https://vetera.net/> ;
     systemmap:operatedBy systemmap:SrG5yvnwax87iuQw8 .
-
-systemmap:SLDduDXvpvEDmqYSJ a schema:SoftwareApplication,
-        systemmap:FMIS ;
-    schema:name "DeLaval DelPro™"@de ;
-    schema:description """
-        DeLaval DelPro™ ist eine umfassende Farm-Management-Plattform, die Daten von Melksystemen, Sensoren und Tieren zentral erfasst, verarbeitet und analysiert, um eine effiziente und profitable Milchviehhaltung zu ermöglichen.
-        """@de ;
-    systemmap:operatedBy zefix:304729 .
 
 systemmap:SLxeXHOfmC6DkBGl a schema:SoftwareApplication ;
     schema:name "Zentrale Auswertung von Agrarumweltindikatoren"@de ;
@@ -2585,13 +2542,6 @@ systemmap:Sxi0p2NlmE7ff8oEC a schema:SoftwareApplication ;
         portale clienti digitale di Granovit AG
         """@it ;
     systemmap:operatedBy zefix:417741 .
-
-systemmap:Sxlqf2df29PzK3039 a schema:SoftwareApplication ;
-    schema:name "Reprojournal"@de ;
-    schema:description """
-        Der ReproJournal ist ein webbasiertes Erfassungs- und Auswertungsprogramm der SUISAG für Mastferkelproduzenten ohne eigenes Datenauswertungssystem, das die elektronische Erfassung der wichtigsten Leistungsdaten aus Deck- und Abferkelstall sowie deren anschließende Auswertung ermöglicht.
-        """@de ;
-    systemmap:operatedBy zefix:414877 .
 
 systemmap:SxvsanBKE0ZN315DU a schema:SoftwareApplication ;
     schema:name "Public Data Warehouse"@de,

@@ -63,7 +63,6 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         systemmap:S16f05ee9c9c6de2,
         systemmap:S1979cece7ba6873,
         systemmap:S1JvEmah9Tl0698au,
-        systemmap:S1ag5b1IxXvAalIFc,
         systemmap:S1df451f0356426f,
         systemmap:S250c89579908e54,
         systemmap:S27626110a39e3ed,
@@ -81,6 +80,7 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         systemmap:S59098ed667cb3bd,
         systemmap:S5aa8657dd97155b,
         systemmap:S6320a5a3f8829b8,
+        systemmap:S6VoEiipMp2iFhpvi,
         systemmap:S6abacb381c3b305,
         systemmap:S6e777b275a43632,
         systemmap:S6v6k2SMlwAVdLFmI,
@@ -101,6 +101,7 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         systemmap:S94be3e9cc38c5b7,
         systemmap:S98fbf4f4b3f4d13,
         systemmap:S9ef677e7b565bf9,
+        systemmap:S9oFBawOIYUs3mJqf,
         systemmap:SAIg9IaUyZYcHjEZ4,
         systemmap:SCN2FR1ecbZOlXssf,
         systemmap:SDetpcQhSMo4IAeAb,
@@ -159,6 +160,7 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         systemmap:ShjUfLjdanc83Dr0d,
         systemmap:SlTSOXsBC2LN7Qkp,
         systemmap:Sou0GnQeSqCPHGhze,
+        systemmap:SqbzqGjI3ws0stDBH,
         systemmap:SqeNr0H0FGL6Uv5Rr,
         systemmap:Sqv5Vh286L7iinjmy,
         systemmap:SsFdxnjM8hgUdzVT5,
@@ -589,17 +591,13 @@ systemmap:S1979cece7ba6873 a schema:Organization ;
     dcat:landingPage <https://swissherdbook-ost.ch/> ;
     systemmap:abbreviation "VsO"@de .
 
-systemmap:S1ag5b1IxXvAalIFc a schema:Organization ;
-    schema:name "Kälbergesundheitsdienst"@de ;
-    schema:parentOrganization systemmap:Sc4ba6ce6ae8d41c ;
-    systemmap:abbreviation "KGD"@de .
-
 systemmap:S250c89579908e54 a schema:Organization ;
     schema:description "MSD Tiergesundheit ist ein weltweit tätiger forschenden Anbieter für Gesundheitslösungen für Haus- und Nutztiere."@de ;
     schema:name "Intervet Deutschland GmbH, Ein Unternehmen der MSD Tiergesundheit und: Swissgenetics"@de .
 
 systemmap:S38b682bd68968a4 a schema:Organization ;
     schema:description "Zu den wichtigsten Aufgaben des Schweizer Kälbermäster-Verbandes gehören die Wissensvermittlung, die Qualitätsförderung sowie die Interessensvertretung seiner Mitglieder in der Politik, bei den beteiligten Wirtschaftszweigen und der übrigen Landwirtschaft. Der Sitz des Verbands ist in Brugg. Zum SKMV gehören die regionalen Sektionen Appenzell , Bern, Graubünden, Luzern, Obwalden/Nidwalden/Uri, St. Gallen und der IG Kalbfleisch (ganze Schweiz)."@de ;
+    schema:memberOf zefix:1457969 ;
     schema:name "Schweizer Kälbermäster-Verband (SKMV)"@de .
 
 systemmap:S459e99499065540 a schema:Organization ;
@@ -626,8 +624,13 @@ systemmap:S6VSaFePQaMGqU8vD a schema:Organization ;
         "AFS"@fr,
         "AFS"@it .
 
+systemmap:S6VoEiipMp2iFhpvi a schema:Organization ;
+    schema:name "Universität Bern"@de ;
+    systemmap:abbreviation "UniBE"@de .
+
 systemmap:S713c8cc22340cd0 a schema:Organization ;
-    schema:name "Vetsuisse Bern"@de .
+    schema:name "Vetsuisse Bern"@de ;
+    schema:parentOrganization systemmap:S9oFBawOIYUs3mJqf .
 
 systemmap:S7c2f7f8f6ca9c70 a schema:Organization ;
     schema:description "BouMatic ist ein US-amrikanisches Unternehmen im Beeich der Melktechnologie. Es wurde 1938 in Wisconsin gegründet, international tätig und hat sein Portfolio unter anderem um Fütterungs- und Reinigungssysteme erweitert. Der Hauptsitz ist in Madison, Wisconsin."@de ;
@@ -638,6 +641,12 @@ systemmap:S9ef677e7b565bf9 a schema:Organization ;
     schema:name "Fachstelle Animal Health Info System"@de ;
     schema:parentOrganization zefix:1457969 ;
     systemmap:abbreviation "AHIS"@en .
+
+systemmap:S9oFBawOIYUs3mJqf a schema:Organization ;
+    schema:description "Die Vetsuisse-Fakultät ist mit ihren beiden Standorten Bern und Zürich die akkreditierte Ausbildungsstelle für Veterinärmedizin in der gesamten Schweiz"@de ;
+    schema:name "Vetsuisse-Fakultät"@de ;
+    schema:parentOrganization systemmap:S6VoEiipMp2iFhpvi,
+        systemmap:SqbzqGjI3ws0stDBH .
 
 systemmap:SBLH2G6TSKaqhqk4n a schema:Organization ;
     schema:description """
@@ -697,6 +706,7 @@ systemmap:Sa0c51880ac95ed6 a schema:Organization ;
 
 systemmap:Sa21b4bf6b691ef6 a schema:Organization ;
     schema:description "SwissBeef ist die Vereinigung der Schweizer Qualitäts-Rindfleischproduzenten mit Sitz in Brugg. Die Vereinigung setzt sich im Interesse der Rindermäster für optimale Rahmenbedingungen für die Produktion und am Markt ein. Als kompetenter Ansprechpartner für Politik, Handel, Verarbeiter sowie Forschung und Ausbildung werden die Interessen der Mitglieder vertreten. Swiss Beef CH hat drei Sektionen: Swiss Beef Region Ost, Swiss Beef Mittelland und Swiss Beef Romandie."@de ;
+    schema:memberOf zefix:1457969 ;
     schema:name "SwissBeef"@de ;
     dcat:landingPage <https://www.swissbeef.ch/> .
 
@@ -718,7 +728,7 @@ systemmap:Sc4ba6ce6ae8d41c a schema:Organization ;
 
 systemmap:Sd9cbfdc59776e2b a schema:Organization ;
     schema:name "Vetsuisse Zürich"@de ;
-    schema:parentOrganization systemmap:SqbzqGjI3ws0stDBH .
+    schema:parentOrganization systemmap:S9oFBawOIYUs3mJqf .
 
 systemmap:Se8a0552eb8cf7fe a schema:Organization ;
     schema:description "GEA bietet Lösungen für die Lebensmittel-, Getränke-, Chemie-, Pharma-, Milchverarbeitungs-/Milchproduktions- und die Marineindustrie an. Zum Portfolio gehören Maschinen und Anlagen ebenso wie  Prozesstechnik, Komponenten und Servicedienstleistungen. Im Bereich Farm Technologies werden integrierte Lösungen für die Milchproduktion und Nutztierhaltung wie automatische Melk- und Fütterungssysteme, konventionelle Melkanlagen, digitale Herdenmanagement-Tools sowie Güllemanagement-Lösungen angeboten."@de ;
@@ -727,6 +737,19 @@ systemmap:Se8a0552eb8cf7fe a schema:Organization ;
 systemmap:ShM5kJNFhO8vOAEdK a schema:Organization ;
     schema:name "Europäische Kommission"@de,
         "European Commission"@en .
+
+systemmap:SqbzqGjI3ws0stDBH a schema:Organization,
+        systemmap:CantonalOrganization ;
+    schema:name "Universität Zürich"@de,
+        "University of Zurich"@en,
+        "Université de Zurich"@fr,
+        "Università di Zurigo"@it ;
+    schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i ;
+    dcat:landingPage <https://www.uzh.ch> ;
+    systemmap:abbreviation "UZH"@de,
+        "UZH"@en,
+        "UZH"@fr,
+        "UZH"@it .
 
 zefix:106474 a schema:Organization ;
     schema:description "Fullwood JOZ bietet flexible, intelligente Melklösungen für Kühe an. Das Unternehmen enstand 2022 aus der Übernahme des britischen Melkmaschinenherstellers Fullwood Ltd durch die niederländische Firma JOZ ,spezialisert auf Stallreinigung, und hat seinen Hauptsitz in Middenmeer, Niederlande."@de ;
@@ -810,6 +833,7 @@ zefix:166248 a schema:Organization,
 
 zefix:1695977 a schema:Organization ;
     schema:description "GalloSuisse mit Sitz in Zollikofen ist die Genossenschaft der Schweizer Eierproduzenten und umfasst Betriebe mit Lege- und Aufzuchthennen. Gemeinsam mit seinen Sektionen setzt sich GalloSuisse ein für faire Rahmenbedingungen im Eiermarkt ein, vertritt die Interessen der Produzenten in Politik und Gesellschaft und plant und realisiert das Marketing für «Das Schweizer Ei»."@de ;
+    schema:memberOf zefix:1457969 ;
     schema:name "Gallosuisse"@de .
 
 zefix:230936 a schema:Organization ;
@@ -1242,7 +1266,7 @@ systemmap:S7aG1r5IoOvAalIFb a schema:SoftwareApplication ;
         "KGS"@fr,
         "KGS"@it ;
     dcat:landingPage <https://kgd.qualitasag.ch/KGS/> ;
-    systemmap:operatedBy systemmap:S1ag5b1IxXvAalIFc,
+    systemmap:operatedBy systemmap:Sc4ba6ce6ae8d41c,
         zefix:804864 .
 
 systemmap:S7u1Bh6qfXUbSDkv a schema:SoftwareApplication ;
@@ -1464,6 +1488,7 @@ Das System wird ständig weiterentwickelt und verbessert und passt sich den Hera
     schema:name "DSA Expert"@de ;
     dcat:landingPage <https://farmconsult.ch/logiciel-de/> ;
     systemmap:contains systemmap:Sd8ce041d235ac8a ;
+    systemmap:developedBy systemmap:Sa0c51880ac95ed6 ;
     systemmap:operatedBy zefix:1393629 .
 
 systemmap:SAPDp3o8XAHPuZnhB a schema:SoftwareApplication ;
@@ -3327,8 +3352,8 @@ systemmap:SzrnfKnzjo2egouKl a schema:SoftwareApplication ;
     dcat:landingPage <https://www.suisag.com/ch-de/softwares/ebj/> ;
     systemmap:abbreviation "EBJ"@de ;
     systemmap:contains systemmap:S7ddb5605c1326b4 ;
-    systemmap:operatedBy zefix:414877,
-        zefix:804864 .
+    systemmap:developedBy zefix:804864 ;
+    systemmap:operatedBy zefix:414877 .
 
 dcat:Dataset a rdfs:Class,
         owl:Class ;
@@ -3741,10 +3766,10 @@ termdat:52453 a owl:Class ;
         "Dati personali degni di particolare protezione"@it ;
     rdfs:subClassOf termdat:52451 .
 
-_:n8074bab4cda94ed89f6a973834055301b12 a owl:Class ;
+_:n3e141743626b489baa51acb66dcef617b12 a owl:Class ;
     owl:unionOf ( dcat:Dataset service:Service schema:SoftwareApplication ) .
 
-_:n8074bab4cda94ed89f6a973834055301b8 a owl:Class ;
+_:n3e141743626b489baa51acb66dcef617b8 a owl:Class ;
     owl:unionOf ( dcat:Dataset service:Service schema:SoftwareApplication ) .
 
 systemmap:abbreviation a owl:DatatypeProperty ;
@@ -4076,7 +4101,7 @@ systemmap:containsNodes a owl:ObjectProperty ;
 systemmap:developedBy a owl:ObjectProperty ;
     schema:name "entwickelt von"@de,
         "developed by"@en ;
-    rdfs:domain _:n8074bab4cda94ed89f6a973834055301b8 ;
+    rdfs:domain _:n3e141743626b489baa51acb66dcef617b8 ;
     rdfs:range schema:Organization ;
     owl:inverseOf systemmap:develops .
 
@@ -4090,7 +4115,7 @@ systemmap:develops a owl:ObjectProperty ;
     schema:name "entwickelt"@de,
         "develops"@en ;
     rdfs:domain schema:Organization ;
-    rdfs:range _:n8074bab4cda94ed89f6a973834055301b12 ;
+    rdfs:range _:n3e141743626b489baa51acb66dcef617b12 ;
     owl:inverseOf systemmap:developedBy .
 
 systemmap:hasLegalBasis a owl:ObjectProperty ;
@@ -5473,18 +5498,6 @@ systemmap:Sp5pkmAETRpXrudck a systemmap:CantonalOrganization ;
 systemmap:SpJ9AAjLlCAkFBhVU a systemmap:CantonalOrganization ;
     schema:name "Strategie und Planung"@de ;
     schema:parentOrganization systemmap:SDMGFgrGMHxc0eoLM .
-
-systemmap:SqbzqGjI3ws0stDBH a systemmap:CantonalOrganization ;
-    schema:name "Universität Zürich"@de,
-        "University of Zurich"@en,
-        "Université de Zurich"@fr,
-        "Università di Zurigo"@it ;
-    schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i ;
-    dcat:landingPage <https://www.uzh.ch> ;
-    systemmap:abbreviation "UZH"@de,
-        "UZH"@en,
-        "UZH"@fr,
-        "UZH"@it .
 
 systemmap:Sqo5ZJtzXw1gg3RYC a systemmap:CantonalOrganization ;
     schema:description "Die kantonale Verwaltung von Genf."@de,

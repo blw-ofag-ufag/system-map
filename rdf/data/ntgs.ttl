@@ -164,8 +164,11 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
         zefix:328631 ,
         systemmap:Sbf2a33246ce235f,
         systemmap:Sou0GnQeSqCPHGhze,
-        systemmap:S7aG1r5IoOvAalIFb,
-        systemmap:S1ag5b1IxXvAalIFc .
+        systemmap:S9oFBawOIYUs3mJqf,
+        systemmap:SqbzqGjI3ws0stDBH, 
+        systemmap:S6VoEiipMp2iFhpvi ,
+        systemmap:S7aG1r5IoOvAalIFb .
+
 
 # ==============================================================================
 # ORGANIZATIONS
@@ -196,11 +199,25 @@ zefix:278206 a schema:Organization ;
     schema:description "IDEXX ist ein weltweit tätiges Unternehmen und bietet Produkte und Dienstleistungen im Bereich Diagnostik und Software für Nutz- und Heimtiere. IDEXX Diavet AG ist die Schweizer Vertretung mit Sitz in Bäch und bietet Dienstleistungen für Tierärzt:innnen, zum Beispiel Diagnostik an klinischen Proben."@de .
 
 systemmap:S713c8cc22340cd0 a schema:Organization ;
-    schema:name "Vetsuisse Bern"@de .
+    schema:name "Vetsuisse Bern"@de ;
+    schema:parentOrganization systemmap:S9oFBawOIYUs3mJqf .
+
+systemmap:SqbzqGjI3ws0stDBH a schema:Organization ;
+    schema:name "Universität Zürich"@de ;
+    systemmap:abbreviation "UZH"@de .
+
+systemmap:S9oFBawOIYUs3mJqf a schema:Organization ;
+    schema:name "Vetsuisse-Fakultät"@de ;
+    schema:description "Die Vetsuisse-Fakultät ist mit ihren beiden Standorten Bern und Zürich die akkreditierte Ausbildungsstelle für Veterinärmedizin in der gesamten Schweiz"@de ;
+    schema:parentOrganization systemmap:SqbzqGjI3ws0stDBH, systemmap:S6VoEiipMp2iFhpvi .
+
+systemmap:S6VoEiipMp2iFhpvi a schema:Organization ;
+    schema:name "Universität Bern"@de ;
+    systemmap:abbreviation "UniBE"@de .
 
 systemmap:Sd9cbfdc59776e2b a schema:Organization ;
     schema:name "Vetsuisse Zürich"@de ;
-    schema:parentOrganization systemmap:SqbzqGjI3ws0stDBH .
+    schema:parentOrganization systemmap:S9oFBawOIYUs3mJqf .
 
 zefix:414877 a schema:Organization ;
     schema:name "SUISAG"@de ;
@@ -308,10 +325,12 @@ zefix:249299 a schema:Organization ;
 systemmap:Sa21b4bf6b691ef6 a schema:Organization ;
     schema:name "SwissBeef"@de ;
     schema:description "SwissBeef ist die Vereinigung der Schweizer Qualitäts-Rindfleischproduzenten mit Sitz in Brugg. Die Vereinigung setzt sich im Interesse der Rindermäster für optimale Rahmenbedingungen für die Produktion und am Markt ein. Als kompetenter Ansprechpartner für Politik, Handel, Verarbeiter sowie Forschung und Ausbildung werden die Interessen der Mitglieder vertreten. Swiss Beef CH hat drei Sektionen: Swiss Beef Region Ost, Swiss Beef Mittelland und Swiss Beef Romandie."@de ;
+    schema:memberOf zefix:1457969 ;
     dcat:landingPage <https://www.swissbeef.ch/> .
 
 systemmap:S38b682bd68968a4 a schema:Organization ;
     schema:name "Schweizer Kälbermäster-Verband (SKMV)"@de ;
+    schema:memberOf zefix:1457969 ;
     schema:description "Zu den wichtigsten Aufgaben des Schweizer Kälbermäster-Verbandes gehören die Wissensvermittlung, die Qualitätsförderung sowie die Interessensvertretung seiner Mitglieder in der Politik, bei den beteiligten Wirtschaftszweigen und der übrigen Landwirtschaft. Der Sitz des Verbands ist in Brugg. Zum SKMV gehören die regionalen Sektionen Appenzell , Bern, Graubünden, Luzern, Obwalden/Nidwalden/Uri, St. Gallen und der IG Kalbfleisch (ganze Schweiz)."@de .
 
 systemmap:Sc4ba6ce6ae8d41c a schema:Organization ;
@@ -322,6 +341,7 @@ systemmap:Sc4ba6ce6ae8d41c a schema:Organization ;
 
 zefix:1695977 a schema:Organization ;
     schema:name "Gallosuisse"@de ;
+    schema:memberOf zefix:1457969 ;
     schema:description "GalloSuisse mit Sitz in Zollikofen ist die Genossenschaft der Schweizer Eierproduzenten und umfasst Betriebe mit Lege- und Aufzuchthennen. Gemeinsam mit seinen Sektionen setzt sich GalloSuisse ein für faire Rahmenbedingungen im Eiermarkt ein, vertritt die Interessen der Produzenten in Politik und Gesellschaft und plant und realisiert das Marketing für «Das Schweizer Ei»."@de .
 
 systemmap:Sc138712066f7ff2 a schema:Organization ;
@@ -345,10 +365,6 @@ zefix:248029 a schema:Organization ;
     schema:name "Schweizerischer Ziegenzuchtverband (SZZV) Genossenschaft"@de ;
     schema:description "Der Schweizerische Ziegenzuchtverband wurde 1906 gegründet. Mitglieder des Verbandes sind kantonale und überkantonale Ziegenzucht- oder Kleinviehzuchtverbände/-vereine, Ziegenzuchtgenossenschaften und -vereine sowie Ziegenzüchterinnen und Ziegenzüchter von Rassen, für welche der SZZV das Herdebuch führt.  Der SZZV ist verantwortlich für die schweizerische Ziegenzucht und fördert deren Wirtschaftlichkeit."@de .
 
-systemmap:S1ag5b1IxXvAalIFc a schema:Organization ;
-    schema:name "Kälbergesundheitsdienst"@de ;
-    systemmap:abbreviation "KGD"@de ;
-    schema:parentOrganization systemmap:Sc4ba6ce6ae8d41c .
 
 # ==============================================================================
 # IT SYSTEMS
@@ -362,7 +378,7 @@ systemmap:S7aG1r5IoOvAalIFb a schema:SoftwareApplication ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     schema:description "Der Kälbergesundheitsdienst (KGS) ist eine Online-Plattform für das Management und die Überwachung der Kälbergesundheit in der Schweizer Nutztierhaltung. Qualitas AG entwickelt und betreibt diese Lösung als Teil ihres Angebots für die Schweizer Tierzucht."@de ;
     dcat:landingPage <https://kgd.qualitasag.ch/KGS/> ;
-    systemmap:operatedBy zefix:804864 , systemmap:S1ag5b1IxXvAalIFc .
+    systemmap:operatedBy zefix:804864 , systemmap:Sc4ba6ce6ae8d41c .
 
 systemmap:S8awijRdrkgdpXxgz a schema:SoftwareApplication ;
     schema:name "Oblon"@de,
@@ -439,7 +455,8 @@ systemmap:SzrnfKnzjo2egouKl a schema:SoftwareApplication ;
     schema:name "SuisSano Elektronisches Behandlungsjournal"@de ;
     systemmap:abbreviation "EBJ"@de ;
     schema:description "Die elektronische Erfassung der Behandlung eines Einzeltieres oder von Tiergruppen ist dank des Elektronischen Behandlungsjournals EBJ einfach möglich. Es ermöglicht die flächendeckend einheitliche Erfassung und Auswertung der Medikamenteneinsätze auf Schweinezucht- und Mastbetrieben."@de ;
-    systemmap:operatedBy zefix:414877, zefix:804864 ; # at the moment, there is no differentiation between the owner and the service provider here...
+    systemmap:developedBy zefix:804864 ;
+    systemmap:operatedBy zefix:414877 ; # at the moment, there is no differentiation between the owner and the service provider here...
     systemmap:contains systemmap:S7ddb5605c1326b4 ;
     dcat:landingPage <https://www.suisag.com/ch-de/softwares/ebj/> .
 
@@ -563,6 +580,7 @@ Das System wird ständig weiterentwickelt und verbessert und passt sich den Hera
         """@de ;
     dcat:landingPage <https://farmconsult.ch/logiciel-de/> ;
     systemmap:operatedBy zefix:1393629 ;
+    systemmap:developedBy systemmap:Sa0c51880ac95ed6 ;
     systemmap:contains systemmap:Sd8ce041d235ac8a .
 
 systemmap:Sdb697580a17102a a schema:SoftwareApplication ;

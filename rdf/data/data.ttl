@@ -841,7 +841,9 @@ systemmap:S7DUZFs3emPOPYErT a schema:SoftwareApplication ;
         systemmap:SU0OUwGdItzXRya4Q,
         systemmap:SU6T65pDC37fWWSHG,
         systemmap:SVpDMEiTfIVQsNzT8,
-        systemmap:SoVAiCrMPYG2LJxsA .
+        systemmap:SoVAiCrMPYG2LJxsA,
+        systemmap:STqW9eQHHZNwyCH8i,
+        systemmap:SUqub30lwOqlTtDN2 .
 
 systemmap:S7u1Bh6qfXUbSDkv a schema:SoftwareApplication ;
     schema:name "e-Deklaration"@de,
@@ -1788,39 +1790,6 @@ systemmap:SYqYq3UTUnZHmyFRD a schema:SoftwareApplication ;
         "DWH is responsible for the storage and processing of all data."@en,
         "Le DWH est responsable du stockage et du traitement de toutes les données."@fr,
         "Il DWH è responsabile dell'archiviazione e dell'elaborazione di tutti i dati."@it .
-
-systemmap:SZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
-    schema:name "AGRICOLA"@de,
-        "AGRICOLA"@en,
-        "AGRICOLA"@fr,
-        "AGRICOLA"@it ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
-    schema:description """
-        AGRICOLA kommt in 12 Kantonen zum Einsatz, darunter Aargau, Zürich, St. Gallen und Graubünden.
-        Es besteht aus verschiedenen Softwareprodukten für Datenverwaltung, Dateneingabe, mobile Kontrollen und GIS.
-        Neben Direktzahlungen unterstützt es auch Bereiche wie Strukturverbesserung, Boden- und Pachtrecht sowie Naturschutz.
-        Über 21'000 Landwirte und 1000 Verwaltungsmitarbeiter nutzen das System, das Finanzflüsse von über 1 Milliarde Franken jährlich verwaltet.
-        """@de,
-        """
-        AGRICOLA is used in 12 cantons, including Aargau, Zurich, St. Gallen, and Graubünden.
-        It consists of various software products for data management, data entry, mobile inspections, and GIS.
-        In addition to direct payments, it also supports areas such as structural improvements, land and lease law, and nature conservation.
-        More than 21,000 farmers and 1,000 administrative employees use the system, which manages financial flows of over 1 billion Swiss francs annually.
-        """@en,
-        """
-        AGRICOLA est utilisé dans 12 cantons, dont Argovie, Zurich, Saint-Gall et les Grisons.
-        Il se compose de divers logiciels pour la gestion des données, la saisie des données, les contrôles mobiles et le SIG.
-        En plus des paiements directs, il prend également en charge des domaines tels que les améliorations structurelles, le droit foncier et locatif ainsi que la protection de la nature.
-        Plus de 21 000 agriculteurs et 1 000 employés administratifs utilisent le système, qui gère des flux financiers de plus d'un milliard de francs suisses par an.
-        """@fr,
-        """
-        AGRICOLA è utilizzato in 12 cantoni, tra cui Argovia, Zurigo, San Gallo e Grigioni.
-        È composto da diversi software per la gestione dei dati, l'inserimento dei dati, i controlli mobili e i sistemi GIS.
-        Oltre ai pagamenti diretti, supporta anche settori come i miglioramenti strutturali, il diritto fondiario e degli affitti, nonché la protezione della natura.
-        Più di 21.000 agricoltori e 1.000 dipendenti amministrativi utilizzano il sistema, che gestisce flussi finanziari di oltre 1 miliardo di franchi svizzeri all'anno.
-        """@it ;
-    systemmap:operatedBy systemmap:STqW9eQHHZNwyCH8i,
-        systemmap:SUqub30lwOqlTtDN2 .
 
 systemmap:SaOtqyAB5qm1luNuX a schema:SoftwareApplication ;
     schema:name "GVE-Rechner"@de,

@@ -822,16 +822,15 @@ systemmap:S6J4iyI6nMI2RCXSY a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:SFL2DYxeNnVaFsv64 .
 
 systemmap:S7DUZFs3emPOPYErT a schema:SoftwareApplication ;
-    schema:name "Neues interkantonales Agrarsystem"@de ;
+    schema:name "LAWIS plus"@de ;
+    schema:alternateName "Neues interkanonales Agrarinformationssystem"@de, "NikA"@de ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     schema:description """
         Gemeinsame IT-Plattform von 12 Schweizer Kantonen für den Vollzug der Landwirtschaftspolitik. 
-        NikA dient der Verwaltung von Strukturdaten, Direktzahlungen und ökologischen Massnahmen. 
-        Technisch basiert das System auf der Plattform "LAWIS"
-        und löst die Altsysteme "Agricola" und "agriPortal" ab.
+        LAWIS plus dient der Verwaltung von Strukturdaten, Direktzahlungen und ökologischen Massnahmen. 
+        Technisch basiert das System auf der Plattform "LAWIS" und löst die Altsysteme "Agricola" und "agriPortal" ab.
         Die Geschäftsstelle liegt bei eOperations Schweiz.
         """@de ;
-    systemmap:abbreviation "NikA"@de ;
     systemmap:developedBy zefix:180673 ;
     systemmap:operatedBy systemmap:SAz4vX5eiySS4vwuk,
         systemmap:SDMGFgrGMHxc0eoLM,

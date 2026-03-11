@@ -554,6 +554,7 @@ zefix:455252 a schema:Organization,
 
 zefix:459488 a schema:Organization ;
     schema:name "Schweizer Milchproduzenten SMP Genossenschaft"@de ;
+    schema:description "Die SMP ist eine Genossenschaft aus zwölf regionalen Milchproduzentenorganisationen und steht zusammen mit diesen im Dienst aller Schweizer Milchproduzenten. Daher richtet sie sich nach den übergeordneten Interessen der Schweizer Milchproduktion."@de ;
     schema:member zefix:1292811,
         zefix:230936,
         zefix:239872,
@@ -692,31 +693,6 @@ systemmap:S2Q2s27pTp6oRYHmf a schema:SoftwareApplication ;
         """@de ;
     systemmap:developedBy zefix:249959 .
 
-systemmap:S2S8th7MLY4xUNjh5 a schema:SoftwareApplication ;
-    schema:name "CapraNet"@de,
-        "CapraNet"@en,
-        "CapraNet"@fr,
-        "CapraNet"@it ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
-    schema:description """
-        CapraNet ist das Online-Herdebuch des Schweizerischen Ziegenzuchtverbands.
-        Es bietet Züchtern eine Herdenübersicht mit Zuchtwerten und Abstammungsnachweisen sowie Werkzeuge zur Zuchtplanung und zur selbstständigen Erfassung von Ereignissen wie Belegungen und Geburten.
-        """@de,
-        """
-        CapraNet is the online herdbook of the Swiss Goat Breeding Association.
-        It provides breeders with a herd overview including breeding values and pedigree certificates, as well as tools for breeding planning and for independently recording events such as matings and births.
-        """@en,
-        """
-        CapraNet est le livre généalogique en ligne de la Fédération suisse d'élevage caprin.
-        Il offre aux éleveurs un aperçu du troupeau avec les valeurs d'élevage et les certificats d'ascendance, ainsi que des outils pour la planification de l'élevage et l'enregistrement autonome d'événements tels que les saillies et les naissances.
-        """@fr,
-        """
-        CapraNet è il libro genealogico online della Federazione svizzera di allevamento caprino.
-        Offre agli allevatori una panoramica della mandria con i valori genetici e i certificati di pedigree, oltre a strumenti per la pianificazione della selezione e la registrazione autonoma di eventi come accoppiamenti e nascite.
-        """@it ;
-    dcat:landingPage <https://www.capranet.ch/> ;
-    systemmap:operatedBy zefix:248029 .
-
 systemmap:S2gC2BTVjYNH05BNf a schema:SoftwareApplication ;
     schema:name "Datapass"@de,
         "Datapass"@en,
@@ -737,14 +713,6 @@ systemmap:S2gC2BTVjYNH05BNf a schema:SoftwareApplication ;
         """@it ;
     dcat:landingPage <https://datapass.ch/software/> ;
     systemmap:operatedBy zefix:1013423 .
-
-systemmap:S2lqf2px29PzK3059 a schema:SoftwareApplication ;
-    schema:name "ASP-Risikoampel"@de ;
-    schema:description """
-        Die ASP-Risikoampel ist ein kostenloses Online-Tool von SUISAG zur Risikobewertung der betrieblichen Biosicherheit gegenüber Afrikanischer Schweinepest mit individueller Optimierungsanalyse und konkreten Handlungsempfehlungen.
-        """@de ;
-    dcat:landingPage <https://www.suisag.com/ch-de/softwares/asp-risikoampel/> ;
-    systemmap:operatedBy zefix:414877 .
 
 systemmap:S3TSqZWni4DBTqkAV a schema:SoftwareApplication ;
     schema:name "SmartCow"@de,
@@ -770,31 +738,6 @@ systemmap:S3TSqZWni4DBTqkAV a schema:SoftwareApplication ;
         """@it ;
     dcat:landingPage <https://www.swissgenetics.ch/de/smartcow-managen-sie-ihre-herde-digital> ;
     systemmap:operatedBy zefix:448334 .
-
-systemmap:S4gV9U3dvmENkSnj a schema:SoftwareApplication ;
-    schema:name "Informationssystem für meldepflichtige Krankheiten"@de,
-        "Information system for cases of notifiable diseases"@en,
-        "Système d'information pour les maladies à déclaration obligatoire"@fr,
-        "Sistema informativo per le malattie soggette a notifica"@it ;
-    schema:description """
-        Dashboard zur Visualisierung und Filterung verknüpfter Tierseuchendaten, die vom Bundesamt für Lebensmittelsicherheit und Veterinärwesen veröffentlicht werden.
-        """@de,
-        """
-        Dashboard for the visualization and filtering of linked animal diseases data published by the Swiss Federal Food Safety and Veterinary Office.
-        """@en,
-        """
-        Tableau de bord pour la visualisation et le filtrage des données liées aux maladies animales publiées par l'Office fédéral de la sécurité alimentaire et des affaires vétérinaires.
-        """@fr,
-        """
-        Dashboard per la visualizzazione e il filtraggio dei dati sulle malattie animali pubblicati dall'Ufficio federale della sicurezza alimentare e di veterinaria.
-        """@it ;
-    rdfs:seeAlso <https://github.com/digital-sustainability/blv-infosm> ;
-    dcat:landingPage <https://www.dashboard.blv.admin.ch/> ;
-    systemmap:abbreviation "InfoSM"@de,
-        "InfoSM"@en,
-        "InfoSM"@fr,
-        "InfoSM"@it ;
-    systemmap:operatedBy systemmap:SsFdxnjM8hgUdzVT5 .
 
 systemmap:S4wIBXSXQwmbyHy9i a schema:SoftwareApplication ;
     schema:name "I14Y"@de,
@@ -893,15 +836,6 @@ systemmap:S8RVk8dQzkXzXYSZX a schema:SoftwareApplication ;
         Entwickelt von Agro-Office AG (heute Averio AG) seit 1992, legt es Wert auf intuitive Bedienung und praxisgerechte Funktionen.
         """@de ;
     systemmap:operatedBy zefix:1663457 .
-
-systemmap:S8lqf2UM29PzK3029 a schema:SoftwareApplication ;
-    schema:name "Elektronisches Behandlungsjournal"@de ;
-    schema:description """
-        Das Elektronische Behandlungsjournal (EBJ) ist ein webbasiertes Tool von SUISAG zur einheitlichen elektronischen Erfassung und Auswertung von Medikamenteneinsätzen sowie Behandlungen einzelner Tiere und Tiergruppen auf Schweine-Zucht- und Mastbetrieben, inklusive Dosierungsberechnung, Absetzfristenmanagement und Quartalsvergleichen zum Antibiotikaeinsatz.
-        """@de ;
-    dcat:landingPage <https://www.suisag.com/ch-de/softwares/ebj/> ;
-    systemmap:abbreviation "EBJ"@de ;
-    systemmap:operatedBy zefix:414877 .
 
 systemmap:S8wfrZtWOCmMSB6sv a schema:SoftwareApplication ;
     schema:name "Holstein Vision"@de,
@@ -1018,24 +952,6 @@ systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
     systemmap:developedBy zefix:231059 ;
     systemmap:hasLegalBasis LwG:art_165_d ;
     systemmap:operatedBy systemmap:ScoeXHl4TgJbke1Yf .
-
-systemmap:SAIg9IaUyZYcHjEZ4 a schema:SoftwareApplication ;
-    schema:name "DSA Expert"@de ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
-    schema:description """
-        DSA Expert ist ein Entscheidungshilfe-Tool für die technische und wirtschaftliche Führung landwirtschaftlicher Betriebe.
-        """@de,
-        """
-        DSA Expert is a decision-support tool for the technical and economic management of agricultural holdings.
-        """@en,
-        """
-        DSA Expert est un outil d'aide à la décision pour la gestion technique et économique des exploitations agricoles.
-        """@fr,
-        """
-        DSA Expert è uno strumento di supporto decisionale per la gestione tecnica ed economica delle aziende agricole.
-        """@it ;
-    dcat:landingPage <https://farmconsult.ch/logiciel-de/> ;
-    systemmap:operatedBy zefix:1393629 .
 
 systemmap:SAPDp3o8XAHPuZnhB a schema:SoftwareApplication ;
     schema:name "redonline"@de,
@@ -1370,14 +1286,6 @@ systemmap:SJ15CI0vn3S1JgcOd a schema:SoftwareApplication ;
     dcat:landingPage <https://vetera.net/> ;
     systemmap:operatedBy systemmap:SrG5yvnwax87iuQw8 .
 
-systemmap:SLDduDXvpvEDmqYSJ a schema:SoftwareApplication,
-        systemmap:FMIS ;
-    schema:name "DeLaval DelPro™"@de ;
-    schema:description """
-        DeLaval DelPro™ ist eine umfassende Farm-Management-Plattform, die Daten von Melksystemen, Sensoren und Tieren zentral erfasst, verarbeitet und analysiert, um eine effiziente und profitable Milchviehhaltung zu ermöglichen.
-        """@de ;
-    systemmap:operatedBy zefix:304729 .
-
 systemmap:SLxeXHOfmC6DkBGl a schema:SoftwareApplication ;
     schema:name "Zentrale Auswertung von Agrarumweltindikatoren"@de ;
     schema:description """
@@ -1459,27 +1367,6 @@ systemmap:SOL6kHAvPFNIuM9E a schema:SoftwareApplication ;
         Es handelt sich um ein eine Webanwendung der Europäischen Union und unterstützt den grenzüberschreitenden Verkehr von Tieren, Lebensmitteln und tierischen Nebenprodukten.
         """@de ;
     systemmap:operatedBy systemmap:ShM5kJNFhO8vOAEdK .
-
-systemmap:SPASZffcsCMdIFEsZ a schema:SoftwareApplication ;
-    schema:name "Fleko"@de,
-        "Fleko"@en,
-        "Fleko"@fr,
-        "Fleko"@it ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
-    schema:description """
-        Die Fleischkontrolldatenbank Fleko ist eine Webanwendung zur Erfassung und Verwaltung der Befunde aus der Schlachttier- und Fleischuntersuchung in der Schweiz. Sie dient der Dokumentation der Genusstauglichkeit und ermöglicht die Verwaltung von Gebühren und Leistungen im Bereich der Fleischkontrolle. Die Anwendung wird zentral vom BLV betreut und ist für kantonale Sachbearbeiter, Fleischkontrolleure und Administratoren zugänglich.
-        """@de,
-        """
-        Fleko is the Swiss national meat inspection database, a web application used to record and manage findings from slaughter animal and meat inspections. It documents fitness for consumption and allows for the administration of fees and services related to meat inspection. The system is centrally operated by the Federal Food Safety and Veterinary Office (FSVO) and is accessible to cantonal officers, meat inspectors, and administrators.
-        """@en,
-        """
-        Fleko est la base de données suisse pour le contrôle des viandes, une application web permettant la saisie et la gestion des résultats des inspections des animaux de boucherie et de la viande. Elle sert à documenter l’aptitude à la consommation et à gérer les taxes et prestations liées au contrôle des viandes. Le système est géré de manière centralisée par l’OSAV et accessible aux collaborateurs cantonaux, contrôleurs des viandes et administrateurs.
-        """@fr,
-        """
-        Fleko è la banca dati svizzera per il controllo delle carni, un’applicazione web per la registrazione e la gestione dei risultati delle ispezioni degli animali da macello e delle carni. Serve a documentare l’idoneità al consumo e consente la gestione di tasse e prestazioni nel settore del controllo delle carni. Il sistema è gestito centralmente dall’USAV ed è accessibile a funzionari cantonali, ispettori delle carni e amministratori.
-        """@it ;
-    dcat:landingPage <https://www.blv.admin.ch/blv/de/home/lebensmittel-und-ernaehrung/lebensmittelsicherheit/verantwortlichkeiten/fleischkontrolle/fleko.html> ;
-    systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN .
 
 systemmap:SPWOFHR512FuAc25b a schema:SoftwareApplication ;
     schema:name "Gesamtlösung EDV Landwirtschaft & Natur"@de,
@@ -2621,13 +2508,6 @@ systemmap:Sxi0p2NlmE7ff8oEC a schema:SoftwareApplication ;
         """@it ;
     systemmap:operatedBy zefix:417741 .
 
-systemmap:Sxlqf2df29PzK3039 a schema:SoftwareApplication ;
-    schema:name "Reprojournal"@de ;
-    schema:description """
-        Der ReproJournal ist ein webbasiertes Erfassungs- und Auswertungsprogramm der SUISAG für Mastferkelproduzenten ohne eigenes Datenauswertungssystem, das die elektronische Erfassung der wichtigsten Leistungsdaten aus Deck- und Abferkelstall sowie deren anschließende Auswertung ermöglicht.
-        """@de ;
-    systemmap:operatedBy zefix:414877 .
-
 systemmap:SxvsanBKE0ZN315DU a schema:SoftwareApplication ;
     schema:name "Public Data Warehouse"@de,
         "Public Data Warehouse"@en,
@@ -2641,7 +2521,8 @@ systemmap:SxvsanBKE0ZN315DU a schema:SoftwareApplication ;
     systemmap:abbreviation "DWH Public"@de,
         "DWH Public"@en,
         "DWH Public"@fr,
-        "DWH Public"@it .
+        "DWH Public"@it ;
+    systemmap:operatedBy systemmap:SieZtzwlMAxzFY1op .
 
 systemmap:Sy4WeMDNoah4TkAYX a schema:SoftwareApplication ;
     schema:name "Nährstoffbilanzrechner"@de ;
@@ -3360,7 +3241,7 @@ systemmap:S3wI1gDSK1eZB4l36 a systemmap:CantonalOrganization ;
         "The cantonal administration of Thurgau."@en,
         "L'administration cantonale de Thurgau."@fr,
         "L'amministrazione cantonale di Turgovia."@it ;
-    systemmap:abbreviation "TG" .
+    systemmap:abbreviation "TG"@de, "TG"@fr .
 
 systemmap:S4uUJh3cptyvoesgV a systemmap:CantonalOrganization ;
     schema:name "Landwirtschaft"@de ;
@@ -3380,7 +3261,7 @@ systemmap:S7eiByZp1HPEEO9Ty a systemmap:CantonalOrganization ;
         "The cantonal administration of Vaud."@en,
         "L'administration cantonale de Vaud."@fr,
         "L'amministrazione cantonale di Vaud."@it ;
-    systemmap:abbreviation "VD" .
+    systemmap:abbreviation "VD"@de, "VD"@fr .
 
 systemmap:SAz4vX5eiySS4vwuk a systemmap:CantonalOrganization ;
     schema:name "Kanton Obwalden"@de,
@@ -4837,6 +4718,7 @@ zefix:162591 a systemmap:PrivateOrganization ;
 
 zefix:165954 a systemmap:PrivateOrganization ;
     schema:name "Genossenschaft swissherdbook Zollikofen"@de ;
+    schema:description "Die Genossenschaft swissherdbook ist ein Rindviehzuchtverband in der Schweiz und vertritt die Interessen von rund 8'000 aktiven Viehzüchtern. swissherdbook bezweckt die Förderung der wirtschaftlichen Interessen der Mitglieder und bietet diesen Dienstleistungen wie Herdebuchführung, Zucht, Leistungsprüfung und Datenverarbeitung an. Insbesondere der Rassen Red Holstein und Holstein, Swiss Fleckvieh, Simmental, Montbéliarde, Normande, Wasserbüffel, Evolèner und Pinzgauer werden betreut. Entstanden im Jahr 1890, ist swissherdbook heute ein Zusammenschluss von Genossenschaften und Vereinen."@de ;
     dcat:landingPage <https://www.swissherdbook.ch> .
 
 zefix:166248 a systemmap:PrivateOrganization ;
@@ -4864,10 +4746,6 @@ zefix:212388 a systemmap:PrivateOrganization ;
     schema:name "Zentralschlachthof Hinwil AG"@de ;
     dcat:landingPage <https://zshag.ch> .
 
-zefix:226184 a systemmap:PrivateOrganization ;
-    schema:name "Genossenschaft Braunvieh Schweiz"@de ;
-    dcat:landingPage <https://www.braunvieh.ch> .
-
 zefix:231059 a systemmap:PrivateOrganization ;
     schema:name "Bedag Informatik AG"@de,
         "Bedag Informatique SA"@fr .
@@ -4892,9 +4770,6 @@ zefix:278958 a systemmap:PrivateOrganization ;
     schema:name "Holstein Switzerland Genossenschaft"@de,
         "Coopérative Holstein Switzerland"@fr ;
     dcat:landingPage <https://www.holstein.ch/> .
-
-zefix:304729 a systemmap:PrivateOrganization ;
-    schema:name "DeLaval AG"@de .
 
 zefix:328631 a systemmap:PrivateOrganization ;
     schema:name "Fenaco Genossenschaft"@de,
@@ -4973,6 +4848,7 @@ zefix:446080 a systemmap:PrivateOrganization ;
 
 zefix:448334 a systemmap:PrivateOrganization ;
     schema:name "swissgenetics"@de ;
+    schema:description "Swissgentics ist ein Schweizer Unternehmen, das Dienstleistungen und Produkte im Bereich Rinderzucht und -reproduktion anbietet. Swissgenetics betreibt Genetikprogramme,  in Partnerschaft mit Züchtern und Zuchtorganisationen Prüfprogramme und Stationen für die Produktion von Stiersamen. Besamungstechniker setzen die Samendosen in Beständen ein. Weiterhin werden Samendosen ins Ausland verkauft, Sperma gesext und Wissen vermittelt. Zusätzlich werden ergänzende Produkte für die Tier- und Stallhygiene oder SmartFarmin-Lösungen angeboten."@de ;
     dcat:landingPage <https://www.swissgenetics.ch/> .
 
 zefix:449781 a systemmap:PrivateOrganization ;

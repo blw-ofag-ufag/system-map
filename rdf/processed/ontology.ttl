@@ -36,7 +36,6 @@ systemmap:SAAAX37V802JgbLEb a dcmitype:Collection ;
         systemmap:SX1qchbxSZKWI6Up,
         systemmap:SYOd1TkacTh6cr0xP,
         systemmap:SZ5quKnfPEEV1CVmE,
-        systemmap:SZ9LRAuSt2EOvBpqY,
         systemmap:SaBrXH2dHae5TTGXD,
         systemmap:SaVyVVsIDkiDMtQq4,
         systemmap:SakCt52w8AKrsSXi,
@@ -295,7 +294,6 @@ systemmap:Si8UnIQkj02jgbLEb a dcmitype:Collection ;
         systemmap:SPWOFHR512FuAc25b,
         systemmap:SWrEh3riVEhEddyRr,
         systemmap:SYYaTBjwIUU2yNIUN,
-        systemmap:SZ9LRAuSt2EOvBpqY,
         systemmap:SZBHsREMx369FArg,
         systemmap:SakCt52w8AKrsSXi,
         systemmap:SeUFazO70bpqCYJ5,
@@ -398,7 +396,6 @@ systemmap:SyDlq7oQ0czCgyv61 a service:Service ;
 systemmap:SyYykF7sxZpwuQdLO a service:Service ;
     service:consumedBy systemmap:SMjqlEoVCR9wpTyN1,
         systemmap:SPWOFHR512FuAc25b,
-        systemmap:SZ9LRAuSt2EOvBpqY,
         systemmap:SmWEQ8lVlDS9ZwPkY,
         systemmap:SpR2aDraNmiUXz55J,
         systemmap:SvDlxaJ5YMkuZGH6k ;
@@ -1237,15 +1234,15 @@ systemmap:S6v6k2SMlwAVdLFmI a schema:SoftwareApplication ;
 
 systemmap:S7DUZFs3emPOPYErT a schema:SoftwareApplication ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    schema:alternateName "Neues interkanonales Agrarinformationssystem"@de,
+        "NikA"@de ;
     schema:description """
         Gemeinsame IT-Plattform von 12 Schweizer Kantonen für den Vollzug der Landwirtschaftspolitik. 
-        NikA dient der Verwaltung von Strukturdaten, Direktzahlungen und ökologischen Massnahmen. 
-        Technisch basiert das System auf der Plattform "LAWIS"
-        und löst die Altsysteme "Agricola" und "agriPortal" ab.
+        LAWIS plus dient der Verwaltung von Strukturdaten, Direktzahlungen und ökologischen Massnahmen. 
+        Technisch basiert das System auf der Plattform "LAWIS" und löst die Altsysteme "Agricola" und "agriPortal" ab.
         Die Geschäftsstelle liegt bei eOperations Schweiz.
         """@de ;
-    schema:name "Neues interkantonales Agrarsystem"@de ;
-    systemmap:abbreviation "NikA"@de ;
+    schema:name "LAWIS plus"@de ;
     systemmap:developedBy zefix:180673 ;
     systemmap:operatedBy systemmap:SAz4vX5eiySS4vwuk,
         systemmap:SDMGFgrGMHxc0eoLM,
@@ -1253,8 +1250,10 @@ systemmap:S7DUZFs3emPOPYErT a schema:SoftwareApplication ;
         systemmap:SEoV4sz2peVmH5wY0,
         systemmap:SJJVVNtVPxf8nt8VM,
         systemmap:SNWHuNKVk7ijs7Cbc,
+        systemmap:STqW9eQHHZNwyCH8i,
         systemmap:SU0OUwGdItzXRya4Q,
         systemmap:SU6T65pDC37fWWSHG,
+        systemmap:SUqub30lwOqlTtDN2,
         systemmap:SVpDMEiTfIVQsNzT8,
         systemmap:SoVAiCrMPYG2LJxsA .
 
@@ -2263,39 +2262,6 @@ systemmap:SYqYq3UTUnZHmyFRD a schema:SoftwareApplication ;
         "Data Warehouse (DWH)"@en,
         "Data Warehouse (DWH)"@fr,
         "Data Warehouse (DWH)"@it .
-
-systemmap:SZ9LRAuSt2EOvBpqY a schema:SoftwareApplication ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
-    schema:description """
-        AGRICOLA kommt in 12 Kantonen zum Einsatz, darunter Aargau, Zürich, St. Gallen und Graubünden.
-        Es besteht aus verschiedenen Softwareprodukten für Datenverwaltung, Dateneingabe, mobile Kontrollen und GIS.
-        Neben Direktzahlungen unterstützt es auch Bereiche wie Strukturverbesserung, Boden- und Pachtrecht sowie Naturschutz.
-        Über 21'000 Landwirte und 1000 Verwaltungsmitarbeiter nutzen das System, das Finanzflüsse von über 1 Milliarde Franken jährlich verwaltet.
-        """@de,
-        """
-        AGRICOLA is used in 12 cantons, including Aargau, Zurich, St. Gallen, and Graubünden.
-        It consists of various software products for data management, data entry, mobile inspections, and GIS.
-        In addition to direct payments, it also supports areas such as structural improvements, land and lease law, and nature conservation.
-        More than 21,000 farmers and 1,000 administrative employees use the system, which manages financial flows of over 1 billion Swiss francs annually.
-        """@en,
-        """
-        AGRICOLA est utilisé dans 12 cantons, dont Argovie, Zurich, Saint-Gall et les Grisons.
-        Il se compose de divers logiciels pour la gestion des données, la saisie des données, les contrôles mobiles et le SIG.
-        En plus des paiements directs, il prend également en charge des domaines tels que les améliorations structurelles, le droit foncier et locatif ainsi que la protection de la nature.
-        Plus de 21 000 agriculteurs et 1 000 employés administratifs utilisent le système, qui gère des flux financiers de plus d'un milliard de francs suisses par an.
-        """@fr,
-        """
-        AGRICOLA è utilizzato in 12 cantoni, tra cui Argovia, Zurigo, San Gallo e Grigioni.
-        È composto da diversi software per la gestione dei dati, l'inserimento dei dati, i controlli mobili e i sistemi GIS.
-        Oltre ai pagamenti diretti, supporta anche settori come i miglioramenti strutturali, il diritto fondiario e degli affitti, nonché la protezione della natura.
-        Più di 21.000 agricoltori e 1.000 dipendenti amministrativi utilizzano il sistema, che gestisce flussi finanziari di oltre 1 miliardo di franchi svizzeri all'anno.
-        """@it ;
-    schema:name "AGRICOLA"@de,
-        "AGRICOLA"@en,
-        "AGRICOLA"@fr,
-        "AGRICOLA"@it ;
-    systemmap:operatedBy systemmap:STqW9eQHHZNwyCH8i,
-        systemmap:SUqub30lwOqlTtDN2 .
 
 systemmap:SaOtqyAB5qm1luNuX a schema:SoftwareApplication ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -3766,10 +3732,10 @@ termdat:52453 a owl:Class ;
         "Dati personali degni di particolare protezione"@it ;
     rdfs:subClassOf termdat:52451 .
 
-_:n3e141743626b489baa51acb66dcef617b12 a owl:Class ;
+_:n36d0debc74f94f6c9fd09417b85e8f8ab12 a owl:Class ;
     owl:unionOf ( dcat:Dataset service:Service schema:SoftwareApplication ) .
 
-_:n3e141743626b489baa51acb66dcef617b8 a owl:Class ;
+_:n36d0debc74f94f6c9fd09417b85e8f8ab8 a owl:Class ;
     owl:unionOf ( dcat:Dataset service:Service schema:SoftwareApplication ) .
 
 systemmap:abbreviation a owl:DatatypeProperty ;
@@ -4101,7 +4067,7 @@ systemmap:containsNodes a owl:ObjectProperty ;
 systemmap:developedBy a owl:ObjectProperty ;
     schema:name "entwickelt von"@de,
         "developed by"@en ;
-    rdfs:domain _:n3e141743626b489baa51acb66dcef617b8 ;
+    rdfs:domain _:n36d0debc74f94f6c9fd09417b85e8f8ab8 ;
     rdfs:range schema:Organization ;
     owl:inverseOf systemmap:develops .
 
@@ -4115,7 +4081,7 @@ systemmap:develops a owl:ObjectProperty ;
     schema:name "entwickelt"@de,
         "develops"@en ;
     rdfs:domain schema:Organization ;
-    rdfs:range _:n3e141743626b489baa51acb66dcef617b12 ;
+    rdfs:range _:n36d0debc74f94f6c9fd09417b85e8f8ab12 ;
     owl:inverseOf systemmap:developedBy .
 
 systemmap:hasLegalBasis a owl:ObjectProperty ;
@@ -7026,7 +6992,6 @@ systemmap:SakCt52w8AKrsSXi a termdat:52451 ;
     systemmap:containedIn systemmap:S7DUZFs3emPOPYErT,
         systemmap:SMjqlEoVCR9wpTyN1,
         systemmap:SPWOFHR512FuAc25b,
-        systemmap:SZ9LRAuSt2EOvBpqY,
         systemmap:SmWEQ8lVlDS9ZwPkY,
         systemmap:SpR2aDraNmiUXz55J ;
     systemmap:informs systemmap:SzuDlnYUQMk3HaCb ;

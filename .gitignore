@@ -9,3 +9,4 @@ rdf/graph.ttl
 deprecated/
 venv/
 test.sparqlbook
+__pycache__

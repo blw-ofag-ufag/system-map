@@ -17,7 +17,7 @@ SELECT
   (COUNT(DISTINCT ?system) AS ?systems)
 WHERE {
   ?organization a systemmap:PrivateOrganization .
-  ?organization rdfs:label ?name .
+  ?organization schema:name ?name .
   FILTER(LANG(?name)="de")
   
   # Relationship to systems (for counting)

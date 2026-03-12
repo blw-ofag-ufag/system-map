@@ -118,8 +118,18 @@ WHERE {
 
     OPTIONAL { ?predicate schema:name ?label . BIND(LANG(?label) as ?labelLang) }
     OPTIONAL { ?predicate schema:description ?comment . BIND(LANG(?comment) as ?commentLang) }
-    OPTIONAL { ?predicate rdfs:domain/rdfs:subClassOf* ?domain . FILTER NOT EXISTS { ?domain rdfs:subClassOf ?domainParent } }
-    OPTIONAL { ?predicate rdfs:range/rdfs:subClassOf* ?range . FILTER NOT EXISTS { ?range rdfs:subClassOf ?rangeParent } }
+    
+    # Constrain the domain traversal to the known classes in the application
+    OPTIONAL { 
+      ?predicate rdfs:domain/rdfs:subClassOf* ?domain . 
+      VALUES ?domain { schema:Organization schema:SoftwareApplication dcat:Dataset service:Service }
+    }
+    
+    # Constrain the range traversal to the known classes in the application
+    OPTIONAL { 
+      ?predicate rdfs:range/rdfs:subClassOf* ?range . 
+      VALUES ?range { schema:Organization schema:SoftwareApplication dcat:Dataset service:Service }
+    }
   }
 }
 ORDER BY ?domain

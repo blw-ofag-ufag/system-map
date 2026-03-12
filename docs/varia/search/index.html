@@ -187,9 +187,9 @@
         PREFIX : <https://agriculture.ld.admin.ch/system-map/>
         SELECT * WHERE {
           GRAPH <https://lindas.admin.ch/foag/system-map> {
-            ?subject rdfs:label ?label .
+            ?subject schema:name ?label .
             FILTER(LANG(?label) = "${language}")
-            OPTIONAL { ?subject rdfs:comment ?comment . FILTER(LANG(?comment) = "${language}") }
+            OPTIONAL { ?subject schema:description ?comment . FILTER(LANG(?comment) = "${language}") }
             OPTIONAL { ?subject :abbreviation ?abbr . FILTER(LANG(?abbr) = "${language}") }
             FILTER(${termFilter})
           }

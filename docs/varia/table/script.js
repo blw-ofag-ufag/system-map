@@ -33,10 +33,10 @@ async function loadSystemTable() {
         ?system systemmap:operatedBy ?operator .
         ?operator schema:parentOrganization* ?parent .
         FILTER (NOT EXISTS { ?parent schema:parentOrganization ?grandparent . } )
-        ?parent rdfs:label ?parentName .
+        ?parent schema:name ?parentName .
         FILTER(LANG(?parentName) = "de")
         
-        ?system rdfs:label ?systemName .
+        ?system schema:name ?systemName .
         FILTER(LANG(?systemName) = "de")
         
         OPTIONAL {

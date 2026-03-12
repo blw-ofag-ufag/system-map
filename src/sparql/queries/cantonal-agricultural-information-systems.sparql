@@ -16,7 +16,7 @@ WHERE {
   GRAPH <https://lindas.admin.ch/foag/system-map> {
     # Get all top-level cantons
     ?canton a systemmap:CantonalOrganization .
-    ?canton rdfs:label ?cantonName .
+    ?canton schema:name ?cantonName .
     ?canton systemmap:abbreviation ?cantonAbbreviation .
     FILTER NOT EXISTS { ?canton schema:parentOrganization ?x . }
     
@@ -29,11 +29,11 @@ WHERE {
     { 
       ?canton schema:subOrganization ?subOrg .
       ?subOrg systemmap:operates ?system .
-      ?subOrg rdfs:label ?subOrgName .
+      ?subOrg schema:name ?subOrgName .
     }
     
     ?system a schema:SoftwareApplication .
-    ?system rdfs:label ?systemName .
+    ?system schema:name ?systemName .
     OPTIONAL { ?system systemmap:abbreviation ?systemAbbreviation . }
     
     FILTER(LANG(?cantonName)="de"&&LANG(?systemName)="de")

@@ -22,38 +22,38 @@ WHERE {
     ?x a ?class .
     
     OPTIONAL {
-      ?x rdfs:label ?labelDE .
+      ?x schema:name ?labelDE .
       FILTER(LANG(?labelDE) = "de")
     }
     OPTIONAL {
-      ?x rdfs:comment ?commentDE .
+      ?x schema:description ?commentDE .
       FILTER(LANG(?commentDE) = "de")
     }
     
     OPTIONAL {
-      ?x rdfs:label ?labelFR .
+      ?x schema:name ?labelFR .
       FILTER(LANG(?labelFR) = "fr")
     }
     OPTIONAL {
-      ?x rdfs:comment ?commentFR .
+      ?x schema:description ?commentFR .
       FILTER(LANG(?commentFR) = "fr")
     }
     
     OPTIONAL {
-      ?x rdfs:label ?labelIT .
+      ?x schema:name ?labelIT .
       FILTER(LANG(?labelIT) = "it")
     }
     OPTIONAL {
-      ?x rdfs:comment ?commentIT .
+      ?x schema:description ?commentIT .
       FILTER(LANG(?commentIT) = "it")
     }
     
     OPTIONAL {
-      ?x rdfs:label ?labelEN .
+      ?x schema:name ?labelEN .
       FILTER(LANG(?labelEN) = "en")
     }
     OPTIONAL {
-      ?x rdfs:comment ?commentEN .
+      ?x schema:description ?commentEN .
       FILTER(LANG(?commentEN) = "en")
     }
 

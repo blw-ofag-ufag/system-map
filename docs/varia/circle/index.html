@@ -90,8 +90,8 @@
 <body>
 
   <div id="textContainer">
-    <h1>DigiAgriFoodCH<br>Systemlandkarte</h1>
-    <p>Eine neue Art, <i>Daten</i> zu visualisieren.</p>
+    <h1>Daten und Systeme im<br>Schweizer Nutztiersektor</h1>
+    <p>Daten zusammengetragen von NTGS.</p>
   </div>
 
   <!-- Load D3.js v4 -->
@@ -137,9 +137,10 @@
       SELECT ?id ?group ?label ?comment ?abbreviation
       WHERE {
         GRAPH <https://lindas.admin.ch/foag/system-map> {
+          systemmap:SH7U7SUsgqWmNqXA5 systemmap:containsNodes ?id .
           ?id a ?group .
           VALUES ?group { schema:Organization schema:SoftwareApplication dcat:Dataset }
-          ?id rdfs:label ?label .
+          ?id schema:name ?label .
           FILTER(LANG(?label)="de")
         }
       }

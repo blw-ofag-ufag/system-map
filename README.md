@@ -55,7 +55,7 @@ To run the data processing and upload to LINDAS, follow these steps:
 
 1. Add variables to `.env`
 
-  ``` sh
+  ``` bash
   USER=lindas-foag
   PASSWORD=********
   GRAPH=https://lindas.admin.ch/foag/crops
@@ -64,7 +64,7 @@ To run the data processing and upload to LINDAS, follow these steps:
 
 2. Start a virtual environment and install libraries:
 
-  ``` sh
+  ``` bash
   python -m venv venv
   source venv/bin/activate  # On Windows use: venv\Scripts\activate
   pip install -r requirements.txt
@@ -72,8 +72,14 @@ To run the data processing and upload to LINDAS, follow these steps:
 
 3. Execute `upload.bash`
 
-  ``` sh
+  ``` bash
   bash upload.bash
+  ```
+
+4. Run all tests
+
+  ``` bash
+  pytest
   ```
 
 You can find the rest of the technical documentation [on the Wiki of this repository](https://github.com/blw-ofag-ufag/system-map/wiki). There, the ontology, the data processing pipeline and the visualization tool are explained in much more detail.

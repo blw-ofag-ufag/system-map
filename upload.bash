@@ -33,4 +33,7 @@ curl \
   --data-binary @rdf/processed/graph.ttl \
   "$ENDPOINT?graph=$GRAPH"
 
+echo Test all queries on LINDAS PROD
+pytest tests/test_queries.py
+
 echo All commands executed

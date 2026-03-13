@@ -717,7 +717,7 @@ systemmap:S80e7173e5ad86e9 a dcat:Dataset ;
 systemmap:S59098ed667cb3bd a dcat:Dataset ;
     schema:name "Labordaten"@de ;
     schema:description "Enthält Daten aus der praxisinternen Diagnostik bei Tieren."@de ;
-    dcat:keyword keyword:animalhealth .
+    dcat:keyword keyword:animalhealth, keyword:diagnostics .
 
 systemmap:S7ddb5605c1326b4 a dcat:Dataset ;
     schema:name "Elektronisches Behandlungsjournal SuisSano"@de ;
@@ -787,17 +787,17 @@ systemmap:S44511ce1ce85d04 a dcat:Dataset ;
 systemmap:S08be1fdcd1d8675 a dcat:Dataset ;
     schema:name "BrunNet Tiergesundheit"@de ;
     schema:description "MLP BrunaNet heisst das Online-Herdebuch von Braunvieh Schweiz. Alle Daten eines Braunviehbestandes sind jederzeit und immer aktuell abrufbar. Sei es ein Einzeltier oder die ganze Herde: BrunaNet bietet alle detaillierten Angaben und übersichtlichen Zusammenfassungen, die ein Braunviehzüchter braucht. Dank dem BrunaNet-Abo können fast alle Informationen online abgerufen werden: Betriebsdaten  Dokumentablage (Laborprüfbericht, Faktura, Abstammungsausweise, etc.) Tierliste Betriebslisten (Fruchtbarkeit, Zuchtwerte, LBE, Zellzahl, Laktationen, Lebensleistungen, Melkbarkeit, Genetische Marker) Betriebsstatistiken (Milchleistungsdaten, Lebensleistung, Fruchtbarkeit, Lineare Beschreibung, Zuchtwerte) Labordaten (MLP, Trächtigkeit, MID) Anmeldung zur LBE Anmeldung und Verwaltung von Schauen SNP-Info (Auftragserstellung und Resultate der Typisierung) Behandlungsjournal (Gesundheitsportal) Downloads (im Format der Datenschnittstelle Rindvieh Schweiz und ADIS)"@de ;
-    dcat:keyword keyword:animalhealth .
+    dcat:keyword keyword:animalhealth , keyword:animalbreeding .
 
 systemmap:S6abacb381c3b305 a dcat:Dataset ;
     schema:name "Redonline Tiergesundheit"@de ;
     schema:description "MLP. redonline steht für ein professionelles Herdenmanagement und aktuelle Zucht- und Leistungsdaten. Züchterinnen/Züchter haben jederzeit Zugriff auf die aktuellen Daten aller Tiere des Betriebes, sowie auf ihre Dokumente (Laborbericht, ALA, Belegausweise, Rechnungen etc.)"@de ;
-    dcat:keyword keyword:animalhealth .
+    dcat:keyword keyword:animalhealth , keyword:animalbreeding .
 
 systemmap:S0f4b28b02fcdb51 a dcat:Dataset ;
     schema:name "Holsteinvision Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Daten zu Befunden und Leistungen der Kühe. Diese sind Teil der Basis für das Herdenmanagement, aber auch unter anderem Grundlage für die Weitergabe der Zuchtbeiträge des BLW an die Tierhaltenden und die Entschädigung für alle erfassten Daten zur Mastitis und zu Stoffwechselkrankheiten."@de ;
-    dcat:keyword keyword:animalhealth, keyword:antibiotics .
+    dcat:keyword keyword:animalhealth, keyword:antibiotics , keyword:animalbreeding .
 
 systemmap:Scdb0a211b8eef1c a dcat:Dataset ;
     schema:name "Smart Cow"@de ;

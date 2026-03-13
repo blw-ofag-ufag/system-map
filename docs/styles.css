@@ -110,7 +110,7 @@ html, body {
     max-height: 85vh;
     display: flex;
     flex-direction: column;
-    overflow-y: visible; /* Prevent clipping of Choices dropdown */
+    overflow-y: visible; 
     font-family: "Poppins", sans-serif;
 }
 #settings-panel h2 {
@@ -129,11 +129,11 @@ html, body {
     display: flex;
     flex-grow: 1;
     gap: 1.5rem;
-    overflow-y: visible; /* Changed to visible for dropdown overflow */
+    overflow-y: visible; 
     padding: 0 5px;
 }
 .settings-column {
-    overflow-y: visible; /* Changed to visible for dropdown overflow */
+    overflow-y: visible; 
     padding-right: 15px;
     flex: 1;
 }
@@ -172,11 +172,10 @@ html, body {
     background-color: var(--color-grey-light) !important;
 }
 
-/* Scroll Box container without borders (for Predicates) */
 .settings-scroll-box {
     max-height: 450px;
     overflow-y: auto;
-    padding-right: 10px; /* Leave space for native scrollbar */
+    padding-right: 10px; 
 }
 
 .settings-list-item {

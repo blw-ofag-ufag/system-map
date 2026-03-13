@@ -265,7 +265,7 @@ async function init() {
             }
         });
 
-        // 5. Fold and Build Edges (Strictly limited to ACTIVE UI properties)
+        // 5. Fold and Transmit Valid Configured Edges
         expandedGraph.forEach(node => {
             const fromId = node['@id'];
             const rootFrom = findRoot(fromId);
@@ -287,10 +287,8 @@ async function init() {
             });
         });
 
-        // 6. ENFORCE LOCAL TOPOLOGICAL TRAVERSAL
-        // Execute BFS from Datasets outwards across ONLY the visible graph edges.
+        // 6. ENFORCE LOCAL TOPOLOGICAL BFS TRAVERSAL
         if (activeKeywords.length > 0) {
-            
             const visAdjacency = {};
             Object.values(allEdgesData).forEach(edge => {
                 if (!visAdjacency[edge.from]) visAdjacency[edge.from] = new Set();
@@ -328,7 +326,6 @@ async function init() {
                     }
                 }
 
-                // Topologically prune isolated subgraphs that have no visual path back to a dataset
                 Object.keys(allNodesData).forEach(id => {
                     if (!connectedNodes.has(id)) delete allNodesData[id];
                 });
@@ -779,24 +776,24 @@ async function init() {
             }
         });
 
-        // Hydrate Keywords Select Dropdown
         const keywordSelect = document.getElementById('keyword-select');
-        keywordSelect.innerHTML = ''; 
-
-        const sortedKeywords = Object.entries(allKeywordsMap).map(([uri, langMap]) => {
-            return { shortId: getKwId(uri), label: getLocalizedText(langMap, currentLang).text || TEXT.noLabel };
+        const choicesData = Object.entries(allKeywordsMap).map(([uri, langMap]) => {
+            const shortId = getKwId(uri);
+            return { 
+                value: shortId, 
+                label: getLocalizedText(langMap, currentLang).text || TEXT.noLabel,
+                selected: activeKeywords.includes(shortId)
+            };
         }).sort((a, b) => a.label.localeCompare(b.label));
 
-        sortedKeywords.forEach(kw => {
-            const option = document.createElement('option');
-            option.value = kw.shortId;
-            option.textContent = kw.label;
-            if (activeKeywords.includes(kw.shortId)) option.selected = true;
-            keywordSelect.appendChild(option);
-        });
+        if (window.kwChoicesInstance) { 
+            window.kwChoicesInstance.destroy(); 
+        }
+        
+        keywordSelect.innerHTML = ''; 
 
-        if (window.kwChoicesInstance) { window.kwChoicesInstance.destroy(); }
         window.kwChoicesInstance = new Choices(keywordSelect, {
+            choices: choicesData,
             removeItemButton: true,
             searchResultLimit: 5,
             renderChoiceLimit: -1,

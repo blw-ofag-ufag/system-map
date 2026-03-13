@@ -132,6 +132,11 @@ async function init() {
         }
     });
 
+    // Derive active UI Predicates strictly
+    const rawPredParam = getParam("predicates");
+    const currentPreds = rawPredParam === null ? Object.keys(APP_CONFIG.PREDICATE_MAP) : (rawPredParam ? rawPredParam.split(/[;,+\s]+/) : []);
+    const activePredicateIris = currentPreds.map(k => expandIri(APP_CONFIG.PREDICATE_MAP[k])).filter(Boolean);
+
     let pinnedNodeId = null, pinnedEdgeId = null;
     let allNodesData = {}, allEdgesData = {}, allEdgeMetadata = {}, allClassesData = {}, allTitles = {};
     let allKeywordsMap = {};
@@ -234,6 +239,7 @@ async function init() {
             }
 
             const state = groupStates[group] || "full";
+            if (state === 'off') return null; // Node class is completely disabled
             if (state === 'full') return id;
             
             if (parentMap[id]) return findRoot(parentMap[id], visited);
@@ -243,6 +249,8 @@ async function init() {
         // 4. Construct Folded Nodes & Consolidate Keywords
         Object.values(rawNodes).forEach(n => {
             const rootId = findRoot(n.id);
+            if (rootId === null) return; // Drop if explicitly disabled
+
             if (!allNodesData[rootId]) {
                 allNodesData[rootId] = JSON.parse(JSON.stringify(rawNodes[rootId] || n)); 
                 allNodesData[rootId].id = rootId;
@@ -257,18 +265,18 @@ async function init() {
             }
         });
 
-        // 5. Fold and Build Edges (Strictly filtered by active UI checkboxes)
+        // 5. Fold and Build Edges (Strictly limited to ACTIVE UI properties)
         expandedGraph.forEach(node => {
             const fromId = node['@id'];
             const rootFrom = findRoot(fromId);
             
-            if (!allNodesData[rootFrom]) return;
+            if (!rootFrom || !allNodesData[rootFrom]) return;
 
-            fullPredicateIris.forEach(predFullIri => {
+            activePredicateIris.forEach(predFullIri => {
                 getRefs(node, predFullIri).forEach(toId => {
                     const rootTo = findRoot(toId);
                     
-                    if (!allNodesData[rootTo]) return; 
+                    if (!rootTo || !allNodesData[rootTo]) return; 
                     if (rootFrom === rootTo) return; 
                     
                     const edgeId = `${rootFrom}-${predFullIri}-${rootTo}`;
@@ -279,9 +287,10 @@ async function init() {
             });
         });
 
-        // 6. ENFORCE TOPOLOGICAL KEYWORD TRAVERSAL ON THE VISUAL GRAPH
+        // 6. ENFORCE LOCAL TOPOLOGICAL TRAVERSAL
+        // Execute BFS from Datasets outwards across ONLY the visible graph edges.
         if (activeKeywords.length > 0) {
-            // Build an adjacency list strictly derived from edges the user actually allowed to be visualized
+            
             const visAdjacency = {};
             Object.values(allEdgesData).forEach(edge => {
                 if (!visAdjacency[edge.from]) visAdjacency[edge.from] = new Set();
@@ -290,7 +299,7 @@ async function init() {
                 visAdjacency[edge.to].add(edge.from);
             });
 
-            // Find seeds strictly from surviving Information nodes
+            // Find seeds strictly from surviving datasets
             const visSeeds = [];
             Object.values(allNodesData).forEach(n => {
                 if (n.group === 'Information') {
@@ -299,11 +308,11 @@ async function init() {
             });
 
             if (visSeeds.length === 0) {
-                // If there are no valid datasets, prune everything
+                // Total exclusion if no datasets align with the filter
                 allNodesData = {};
                 allEdgesData = {};
             } else {
-                // Execute Breadth-First Search out from the seeds
+                // BFS Traversal
                 const connectedNodes = new Set(visSeeds);
                 const queue = [...visSeeds];
 
@@ -319,7 +328,7 @@ async function init() {
                     }
                 }
 
-                // Topologically prune isolated subgraphs that have no path back to a dataset
+                // Topologically prune isolated subgraphs that have no visual path back to a dataset
                 Object.keys(allNodesData).forEach(id => {
                     if (!connectedNodes.has(id)) delete allNodesData[id];
                 });
@@ -545,7 +554,6 @@ async function init() {
         }
     };
 
-    // Min Degree Slider operates on visually confirmed network nodes
     const nodeDegrees = {};
     Object.values(allEdgesData).forEach(edge => {
         nodeDegrees[edge.from] = (nodeDegrees[edge.from] || 0) + 1;
@@ -771,6 +779,7 @@ async function init() {
             }
         });
 
+        // Hydrate Keywords Select Dropdown
         const keywordSelect = document.getElementById('keyword-select');
         keywordSelect.innerHTML = ''; 
 

@@ -105,12 +105,12 @@ html, body {
     background: var(--color-background);
     padding: 20px 30px;
     border-radius: 8px;
-    width: 1200px;
+    width: 1100px;
     max-width: 90vw;
     max-height: 85vh;
     display: flex;
     flex-direction: column;
-    overflow-y: hidden;
+    overflow-y: visible; /* Prevent clipping of Choices dropdown */
     font-family: "Poppins", sans-serif;
 }
 #settings-panel h2 {
@@ -129,11 +129,11 @@ html, body {
     display: flex;
     flex-grow: 1;
     gap: 1.5rem;
-    overflow-y: hidden;
+    overflow-y: visible; /* Changed to visible for dropdown overflow */
     padding: 0 5px;
 }
 .settings-column {
-    overflow-y: auto;
+    overflow-y: visible; /* Changed to visible for dropdown overflow */
     padding-right: 15px;
     flex: 1;
 }
@@ -141,8 +141,10 @@ html, body {
     margin-bottom: 15px;
 }
 
+/* Choices.js Native UI Integration Overrides */
 .choices {
     margin-bottom: 0;
+    overflow: visible;
 }
 .choices__inner {
     border-radius: 6px !important;
@@ -170,13 +172,11 @@ html, body {
     background-color: var(--color-grey-light) !important;
 }
 
+/* Scroll Box container without borders (for Predicates) */
 .settings-scroll-box {
     max-height: 450px;
     overflow-y: auto;
-    border: 1px solid var(--color-grey);
-    border-radius: 6px;
-    padding: 10px 10px 0 10px;
-    background: var(--color-background);
+    padding-right: 10px; /* Leave space for native scrollbar */
 }
 
 .settings-list-item {

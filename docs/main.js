@@ -111,12 +111,20 @@ const getRefs = (node, fullUri) => {
     return vals.map(v => v['@id']).filter(Boolean);
 };
 
+const getKwId = (uri) => {
+    const parts = uri.split(/[\/#]/);
+    return parts[parts.length - 1];
+};
+
 async function init() {
     APP_CONFIG.initializeStylesFromCSS();
 
     let currentLang = getParam("lang") || "de";
     let minDegree = parseInt(getParam("minDegree") || "0", 10);
     
+    const kwParam = getParam("keywords");
+    const activeKeywords = kwParam ? kwParam.split(',') : [];
+
     const groupStates = {};
     Object.entries(APP_CONFIG.GROUP_MAP).forEach(([iri, group]) => {
         if (group !== 'Other') {
@@ -126,6 +134,7 @@ async function init() {
 
     let pinnedNodeId = null, pinnedEdgeId = null;
     let allNodesData = {}, allEdgesData = {}, allEdgeMetadata = {}, allClassesData = {}, allTitles = {};
+    let allKeywordsMap = {};
     let network, nodesDataset, edgesDataset;
 
     try {
@@ -138,6 +147,7 @@ async function init() {
         const baseClasses = Object.keys(APP_CONFIG.GROUP_MAP);
         const fullPredicateIris = Object.values(APP_CONFIG.PREDICATE_MAP).map(expandIri);
         
+        // 1. Parse Metadata, Ontologies, and Keywords
         expandedGraph.forEach(node => {
             const types = node['@type'] || [];
             
@@ -160,8 +170,12 @@ async function init() {
             if (types.includes('https://agriculture.ld.admin.ch/system-map/SystemMap')) {
                 allTitles = getLangMap(node, 'http://schema.org/name');
             }
+            if (types.includes('http://schema.org/DefinedTerm')) {
+                allKeywordsMap[node['@id']] = getLangMap(node, 'http://schema.org/name');
+            }
         });
 
+        // 2. Pre-extract raw nodes and immediately purge non-matching datasets
         const rawNodes = {};
         expandedGraph.forEach(node => {
             const types = node['@type'] || [];
@@ -177,23 +191,33 @@ async function init() {
                 abbreviation: getLangMap(node, 'https://agriculture.ld.admin.ch/system-map/abbreviation'),
                 keywords: getRefs(node, 'http://www.w3.org/ns/dcat#keyword').map(kwUri => {
                     const kwNode = entityMap[kwUri];
+                    if(kwNode && !allKeywordsMap[kwUri]) allKeywordsMap[kwUri] = getLangMap(kwNode, 'http://schema.org/name');
                     return { id: kwUri, labels: kwNode ? getLangMap(kwNode, 'http://schema.org/name') : {} };
                 })
             };
         });
 
+        if (activeKeywords.length > 0) {
+            Object.keys(rawNodes).forEach(id => {
+                const n = rawNodes[id];
+                if (n.group === 'Information') {
+                    const nodeKwIds = n.keywords.map(k => getKwId(k.id));
+                    const hasMatch = activeKeywords.some(kw => nodeKwIds.includes(kw));
+                    // Dataset Exclusion: Exclude dataset universally if it fails the filter
+                    if (!hasMatch) delete rawNodes[id];
+                }
+            });
+        }
+
+        // 3. Client-Side Hierarchical Folding Evaluation
         const parentMap = {};
         const PARENT_PROPS = ["http://schema.org/parentOrganization", "http://purl.org/dc/terms/isPartOf"];
         const CHILD_PROPS = ["http://schema.org/subOrganization", "http://purl.org/dc/terms/hasPart"];
         
         expandedGraph.forEach(node => {
             const id = node['@id'];
-            PARENT_PROPS.forEach(prop => {
-                getRefs(node, prop).forEach(pId => { parentMap[id] = pId; });
-            });
-            CHILD_PROPS.forEach(prop => {
-                getRefs(node, prop).forEach(cId => { parentMap[cId] = id; });
-            });
+            PARENT_PROPS.forEach(prop => { getRefs(node, prop).forEach(pId => { parentMap[id] = pId; }); });
+            CHILD_PROPS.forEach(prop => { getRefs(node, prop).forEach(cId => { parentMap[cId] = id; }); });
         });
 
         const findRoot = (id, visited = new Set()) => {
@@ -216,6 +240,7 @@ async function init() {
             return id;
         };
 
+        // 4. Construct Folded Nodes & Consolidate Keywords
         Object.values(rawNodes).forEach(n => {
             const rootId = findRoot(n.id);
             if (!allNodesData[rootId]) {
@@ -232,13 +257,18 @@ async function init() {
             }
         });
 
+        // 5. Fold and Build Edges (Strictly filtered by active UI checkboxes)
         expandedGraph.forEach(node => {
             const fromId = node['@id'];
             const rootFrom = findRoot(fromId);
+            
+            if (!allNodesData[rootFrom]) return;
 
             fullPredicateIris.forEach(predFullIri => {
                 getRefs(node, predFullIri).forEach(toId => {
                     const rootTo = findRoot(toId);
+                    
+                    if (!allNodesData[rootTo]) return; 
                     if (rootFrom === rootTo) return; 
                     
                     const edgeId = `${rootFrom}-${predFullIri}-${rootTo}`;
@@ -248,6 +278,60 @@ async function init() {
                 });
             });
         });
+
+        // 6. ENFORCE TOPOLOGICAL KEYWORD TRAVERSAL ON THE VISUAL GRAPH
+        if (activeKeywords.length > 0) {
+            // Build an adjacency list strictly derived from edges the user actually allowed to be visualized
+            const visAdjacency = {};
+            Object.values(allEdgesData).forEach(edge => {
+                if (!visAdjacency[edge.from]) visAdjacency[edge.from] = new Set();
+                if (!visAdjacency[edge.to]) visAdjacency[edge.to] = new Set();
+                visAdjacency[edge.from].add(edge.to);
+                visAdjacency[edge.to].add(edge.from);
+            });
+
+            // Find seeds strictly from surviving Information nodes
+            const visSeeds = [];
+            Object.values(allNodesData).forEach(n => {
+                if (n.group === 'Information') {
+                    visSeeds.push(n.id);
+                }
+            });
+
+            if (visSeeds.length === 0) {
+                // If there are no valid datasets, prune everything
+                allNodesData = {};
+                allEdgesData = {};
+            } else {
+                // Execute Breadth-First Search out from the seeds
+                const connectedNodes = new Set(visSeeds);
+                const queue = [...visSeeds];
+
+                while (queue.length > 0) {
+                    const curr = queue.shift();
+                    if (visAdjacency[curr]) {
+                        visAdjacency[curr].forEach(nbr => {
+                            if (!connectedNodes.has(nbr)) {
+                                connectedNodes.add(nbr);
+                                queue.push(nbr);
+                            }
+                        });
+                    }
+                }
+
+                // Topologically prune isolated subgraphs that have no path back to a dataset
+                Object.keys(allNodesData).forEach(id => {
+                    if (!connectedNodes.has(id)) delete allNodesData[id];
+                });
+
+                Object.keys(allEdgesData).forEach(id => {
+                    const edge = allEdgesData[id];
+                    if (!connectedNodes.has(edge.from) || !connectedNodes.has(edge.to)) {
+                        delete allEdgesData[id];
+                    }
+                });
+            }
+        }
 
     } catch (error) {
         console.error("Fatal parsing exception:", error);
@@ -461,6 +545,7 @@ async function init() {
         }
     };
 
+    // Min Degree Slider operates on visually confirmed network nodes
     const nodeDegrees = {};
     Object.values(allEdgesData).forEach(edge => {
         nodeDegrees[edge.from] = (nodeDegrees[edge.from] || 0) + 1;
@@ -523,6 +608,9 @@ async function init() {
         const allPredicateKeys = Object.keys(APP_CONFIG.PREDICATE_MAP);
         const selectedPreds = Array.from(document.querySelectorAll('#settings-predicates input[type="checkbox"]')).filter(cb => cb.checked).map(cb => cb.dataset.key);
         params.predicates = selectedPreds.length === allPredicateKeys.length ? null : selectedPreds.join(';');
+
+        const selectedKws = window.kwChoicesInstance ? window.kwChoicesInstance.getValue(true) : [];
+        params.keywords = selectedKws.length > 0 ? selectedKws.join(',') : null;
         
         setParamsAndReload(params);
     });
@@ -570,6 +658,7 @@ async function init() {
         document.getElementById('settings-min-degree-title').textContent = TEXT.minDegree;
         document.getElementById('settings-node-classes-title').textContent = TEXT.visibleNodeClasses;
         document.getElementById('settings-relationship-types-title').textContent = TEXT.visibleRelationshipTypes;
+        document.getElementById('settings-keywords-title').textContent = TEXT.filterKeywords;
         document.getElementById('settingsCancel').textContent = TEXT.cancel;
         document.getElementById('settingsSave').textContent = TEXT.saveAndReload;
 
@@ -680,6 +769,30 @@ async function init() {
                     visualHtml: createEdgeDiagramHtml(predData.id)
                 });
             }
+        });
+
+        const keywordSelect = document.getElementById('keyword-select');
+        keywordSelect.innerHTML = ''; 
+
+        const sortedKeywords = Object.entries(allKeywordsMap).map(([uri, langMap]) => {
+            return { shortId: getKwId(uri), label: getLocalizedText(langMap, currentLang).text || TEXT.noLabel };
+        }).sort((a, b) => a.label.localeCompare(b.label));
+
+        sortedKeywords.forEach(kw => {
+            const option = document.createElement('option');
+            option.value = kw.shortId;
+            option.textContent = kw.label;
+            if (activeKeywords.includes(kw.shortId)) option.selected = true;
+            keywordSelect.appendChild(option);
+        });
+
+        if (window.kwChoicesInstance) { window.kwChoicesInstance.destroy(); }
+        window.kwChoicesInstance = new Choices(keywordSelect, {
+            removeItemButton: true,
+            searchResultLimit: 5,
+            renderChoiceLimit: -1,
+            placeholderValue: TEXT.searchPlaceholder,
+            itemSelectText: ''
         });
     }
 }

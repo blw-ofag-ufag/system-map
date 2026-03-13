@@ -51,7 +51,9 @@ CONSTRUCT {
         schema:description ?comment ;
         systemmap:abbreviation ?abbreviation ;
         dcat:keyword ?keyword .
-  ?keyword schema:name ?keywordLabel .
+        
+  ?keyword a schema:DefinedTerm ;
+           schema:name ?keywordLabel .
 
   ?node schema:subOrganization ?subOrg ;
         schema:parentOrganization ?parentOrg ;
@@ -84,7 +86,7 @@ WHERE {
        OPTIONAL { ?node systemmap:abbreviation ?abbreviation }
        OPTIONAL {
          ?node dcat:keyword ?keyword .
-         ?keyword schema:name ?keywordLabel .
+         OPTIONAL { ?keyword schema:name ?keywordLabel . }
        }
     } UNION {
        ?node ?hierarchyProp ?targetNode .

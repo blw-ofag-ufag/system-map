@@ -5,7 +5,7 @@ function getQueryParam(name, defaultValue) {
 
 window.subgraph = getQueryParam("subgraph", "");
 
-const getGroupState = (name) => getQueryParam(name, "collapsed");
+const getGroupState = (name) => getQueryParam(name, "full");
 
 window.groupStates = {
     Organization: getGroupState("organization"),

@@ -105,7 +105,7 @@ html, body {
     background: var(--color-background);
     padding: 20px 30px;
     border-radius: 8px;
-    width: 1100px;
+    width: 1200px;
     max-width: 90vw;
     max-height: 85vh;
     display: flex;
@@ -135,12 +135,8 @@ html, body {
 .settings-column {
     overflow-y: auto;
     padding-right: 15px;
-}
-.settings-column:first-child {
-    flex: 2;
-}
-.settings-column:last-child {
-    flex: 3;
+    /* Rebalance layout to 50/50 since the left column takes up more space horizontally now */
+    flex: 1;
 }
 .settings-section {
     margin-bottom: 15px;
@@ -378,13 +374,78 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 11px;
 }
 
-/* NEW: Settings Select Input */
-.settings-select {
-    padding: 4px 8px;
-    border-radius: 4px;
-    border: 1px solid var(--color-grey);
-    font-family: "Poppins", sans-serif;
-    font-size: 12px;
-    background: var(--color-background);
+/* Toggle row restructuring */
+.class-toggle-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.class-toggle-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.class-toggle-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.class-toggle-header strong {
+    margin: 0;
+}
+
+/* NEW: Narrow Three-way Segmented Toggle with Icons */
+.tri-toggle {
+    display: flex;
+    position: relative;
+    background-color: var(--color-grey-light);
+    border-radius: 20px;
+    width: 105px; /* Extremely narrow, allowing 35px per icon */
+    height: 26px; /* Fixed height to anchor the icons vertically */
+    padding: 3px;
+    flex-shrink: 0;
+    margin-top: -2px; /* Aligns visually with the baseline of the text header */
+}
+.tri-toggle input[type="radio"] {
+    display: none;
+}
+.tri-toggle label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centered icons */
+    padding: 0;
+    font-size: 13px;
+    cursor: pointer;
+    z-index: 2;
     color: var(--color-font-normal);
+    transition: color 0.3s ease;
+    margin: 0 !important;
+}
+.tri-toggle input[type="radio"]:checked + label {
+    color: var(--color-background);
+}
+.tri-toggle-slider {
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    width: calc(33.333% - 2px);
+    background-color: var(--color-foreground);
+    border-radius: 18px;
+    z-index: 1;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tri-toggle input[value="full"]:checked ~ .tri-toggle-slider {
+    transform: translateX(0);
+}
+.tri-toggle input[value="collapsed"]:checked ~ .tri-toggle-slider {
+    transform: translateX(100%);
+}
+.tri-toggle input[value="off"]:checked ~ .tri-toggle-slider {
+    transform: translateX(200%);
 }

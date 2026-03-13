@@ -117,11 +117,10 @@ async function init() {
     let currentLang = getParam("lang") || "de";
     let minDegree = parseInt(getParam("minDegree") || "0", 10);
     
-    // Extrapolate states to object map for the folding algorithm
     const groupStates = {};
     Object.entries(APP_CONFIG.GROUP_MAP).forEach(([iri, group]) => {
         if (group !== 'Other') {
-            groupStates[group] = getParam(group.toLowerCase()) || 'collapsed';
+            groupStates[group] = getParam(group.toLowerCase()) || 'full';
         }
     });
 
@@ -139,7 +138,6 @@ async function init() {
         const baseClasses = Object.keys(APP_CONFIG.GROUP_MAP);
         const fullPredicateIris = Object.values(APP_CONFIG.PREDICATE_MAP).map(expandIri);
         
-        // 1. Parse Ontology Metadata & Application Title
         expandedGraph.forEach(node => {
             const types = node['@type'] || [];
             
@@ -164,7 +162,6 @@ async function init() {
             }
         });
 
-        // 2. Pre-extract raw nodes and determine groups
         const rawNodes = {};
         expandedGraph.forEach(node => {
             const types = node['@type'] || [];
@@ -185,7 +182,6 @@ async function init() {
             };
         });
 
-        // 3. Client-Side Hierarchical Folding Evaluation
         const parentMap = {};
         const PARENT_PROPS = ["http://schema.org/parentOrganization", "http://purl.org/dc/terms/isPartOf"];
         const CHILD_PROPS = ["http://schema.org/subOrganization", "http://purl.org/dc/terms/hasPart"];
@@ -201,7 +197,7 @@ async function init() {
         });
 
         const findRoot = (id, visited = new Set()) => {
-            if (visited.has(id)) return id; // Acyclic enforcement
+            if (visited.has(id)) return id; 
             visited.add(id);
 
             let group = "Other";
@@ -213,14 +209,13 @@ async function init() {
                 if (groupIri) group = mapClassIriToGroup(groupIri);
             }
 
-            const state = groupStates[group] || "collapsed";
+            const state = groupStates[group] || "full";
             if (state === 'full') return id;
             
             if (parentMap[id]) return findRoot(parentMap[id], visited);
             return id;
         };
 
-        // 4. Construct Folded Nodes & Map Keywords
         Object.values(rawNodes).forEach(n => {
             const rootId = findRoot(n.id);
             if (!allNodesData[rootId]) {
@@ -237,7 +232,6 @@ async function init() {
             }
         });
 
-        // 5. Fold and Transmit Edges
         expandedGraph.forEach(node => {
             const fromId = node['@id'];
             const rootFrom = findRoot(fromId);
@@ -245,7 +239,7 @@ async function init() {
             fullPredicateIris.forEach(predFullIri => {
                 getRefs(node, predFullIri).forEach(toId => {
                     const rootTo = findRoot(toId);
-                    if (rootFrom === rootTo) return; // Discard synthetic self-loops
+                    if (rootFrom === rootTo) return; 
                     
                     const edgeId = `${rootFrom}-${predFullIri}-${rootTo}`;
                     if (!allEdgesData[edgeId]) {
@@ -517,16 +511,17 @@ async function init() {
         const minDegreeValue = parseInt(document.getElementById('min-degree-slider').value, 10);
         params.minDegree = minDegreeValue > 0 ? minDegreeValue : null;
 
-        document.querySelectorAll('#settings-classes select').forEach(sel => {
-            if(sel.dataset.group) {
-                const groupLower = sel.dataset.group.toLowerCase();
-                const val = sel.value;
-                params[groupLower] = val === 'collapsed' ? null : val;
+        document.querySelectorAll('.tri-toggle').forEach(toggle => {
+            const checkedRadio = toggle.querySelector('input[type="radio"]:checked');
+            if(checkedRadio && checkedRadio.dataset.group) {
+                const groupLower = checkedRadio.dataset.group.toLowerCase();
+                const val = checkedRadio.value;
+                params[groupLower] = val === 'full' ? null : val;
             }
         });
 
         const allPredicateKeys = Object.keys(APP_CONFIG.PREDICATE_MAP);
-        const selectedPreds = Array.from(document.querySelectorAll('#settings-predicates input')).filter(cb => cb.checked).map(cb => cb.dataset.key);
+        const selectedPreds = Array.from(document.querySelectorAll('#settings-predicates input[type="checkbox"]')).filter(cb => cb.checked).map(cb => cb.dataset.key);
         params.predicates = selectedPreds.length === allPredicateKeys.length ? null : selectedPreds.join(';');
         
         setParamsAndReload(params);
@@ -589,23 +584,29 @@ async function init() {
         const sliderValueDisplay = document.getElementById('min-degree-value');
         slider.addEventListener('input', (e) => { sliderValueDisplay.textContent = e.target.value; });
 
-        const createSelectBoxItem = (container, { id, dataKey, dataValue, currentValue, label, comment, uri, curie, visualHtml }) => {
-            let html = `<div class="settings-list-item">
-                <div class="settings-list-item-content">
-                    <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 15px; margin-bottom: 4px;">
-                        <label style="flex-grow: 1; display: flex; align-items: center; gap: 0.3rem;">
-                            <strong>${label}</strong>
-                            ${uri ? `<span>(<a href="${uri}" target="_blank">${curie}</a>)&nbsp;&nbsp;</span>` : ''}
-                            ${visualHtml || ''}
-                        </label>
-                        <select id="${id}" data-${dataKey}="${dataValue}" class="settings-select">
-                            <option value="full" ${currentValue === 'full' ? 'selected' : ''}>${TEXT.stateFull}</option>
-                            <option value="collapsed" ${currentValue === 'collapsed' ? 'selected' : ''}>${TEXT.stateCollapsed}</option>
-                            <option value="off" ${currentValue === 'off' ? 'selected' : ''}>${TEXT.stateOff}</option>
-                        </select>
+        const createToggleItem = (container, { id, dataKey, dataValue, currentValue, label, comment, uri, curie, visualHtml }) => {
+            let html = `<div class="class-toggle-row">
+                <div class="tri-toggle" title="Toggle State">
+                    <input type="radio" id="${id}_full" name="${id}" value="full" data-${dataKey}="${dataValue}" ${currentValue === 'full' ? 'checked' : ''}>
+                    <label for="${id}_full" title="${TEXT.stateFull}"><i class="fas fa-sitemap"></i></label>
+
+                    <input type="radio" id="${id}_collapsed" name="${id}" value="collapsed" data-${dataKey}="${dataValue}" ${currentValue === 'collapsed' ? 'checked' : ''}>
+                    <label for="${id}_collapsed" title="${TEXT.stateCollapsed}"><i class="fas fa-layer-group"></i></label>
+
+                    <input type="radio" id="${id}_off" name="${id}" value="off" data-${dataKey}="${dataValue}" ${currentValue === 'off' ? 'checked' : ''}>
+                    <label for="${id}_off" title="${TEXT.stateOff}"><i class="fas fa-eye-slash"></i></label>
+
+                    <div class="tri-toggle-slider"></div>
+                </div>
+                <div class="class-toggle-info">
+                    <div class="class-toggle-header">
+                        <strong>${label}</strong>
+                        ${uri ? `<span class="settings-curie">(<a href="${uri}" target="_blank">${curie}</a>)</span>` : ''}
+                        ${visualHtml || ''}
                     </div>
-                    ${comment ? `<span class="settings-list-item-comment">${comment}</span>`:``}
-                </div></div>`;
+                    ${comment ? `<div class="settings-list-item-comment">${comment}</div>`:``}
+                </div>
+            </div>`;
             container.insertAdjacentHTML('beforeend', html);
         };
 
@@ -618,8 +619,8 @@ async function init() {
         sortedClasses.forEach(classData => {
             const groupName = mapClassIriToGroup(classData.id);
             if(groupName === "Other") return;
-            const paramVal = getParam(groupName.toLowerCase()) || 'collapsed';
-            createSelectBoxItem(classesContainer, {
+            const paramVal = getParam(groupName.toLowerCase()) || 'full';
+            createToggleItem(classesContainer, {
                 id: `setting-class-${groupName}`,
                 dataKey: 'group',
                 dataValue: groupName,

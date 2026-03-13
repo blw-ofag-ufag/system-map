@@ -11,7 +11,7 @@ const APP_CONFIG = {
             appTitle: "FOAG System Map",
             settings: "Settings",
             minDegree: "Minimum Node Connections",
-            visibleNodeClasses: "Visible Node Classes",
+            visibleNodeClasses: "Class visibility",
             stateFull: "Full",
             stateCollapsed: "Collapsed",
             stateOff: "Off",
@@ -23,14 +23,14 @@ const APP_CONFIG = {
             githubTooltip: "GitHub",
             emailTooltip: "Email",
             errorLoading: "Error loading data",
-            fallbackSystemMapTitle: "System Map",
+            fallbackSystemMapTitle: "DigiAgriFoodCH System Map",
             noLabel: "No label"
         },
         de: {
             appTitle: "Systemkarte BLW",
             settings: "Einstellungen",
             minDegree: "Minimale Anzahl Verbindungen",
-            visibleNodeClasses: "Sichtbare Knotentypen",
+            visibleNodeClasses: "Sichtbarkeit der Klassen",
             stateFull: "Vollständig",
             stateCollapsed: "Gruppiert",
             stateOff: "Aus",
@@ -42,14 +42,14 @@ const APP_CONFIG = {
             githubTooltip: "GitHub",
             emailTooltip: "E-Mail",
             errorLoading: "Fehler beim Laden der Daten",
-            fallbackSystemMapTitle: "Systemkarte",
+            fallbackSystemMapTitle: "DigiAgriFoodCH Systemlandkarte",
             noLabel: "Ohne Bezeichnung"
         },
         fr: {
             appTitle: "Carte des systèmes OFAG",
             settings: "Paramètres",
             minDegree: "Nombre de connexions de nœuds minimum",
-            visibleNodeClasses: "Classes de nœuds visibles",
+            visibleNodeClasses: "Visibilité des classes",
             stateFull: "Complet",
             stateCollapsed: "Regroupé",
             stateOff: "Désactivé",
@@ -61,14 +61,14 @@ const APP_CONFIG = {
             githubTooltip: "GitHub",
             emailTooltip: "E-mail",
             errorLoading: "Erreur de chargement des données",
-            fallbackSystemMapTitle: "Carte du système",
+            fallbackSystemMapTitle: "DigiAgriFoodCH Carte du Système",
             noLabel: "Sans étiquette"
         },
         it: {
             appTitle: "Mappa dei sistemi UFAG",
             settings: "Impostazioni",
             minDegree: "Numero minimo di connessioni dei nodi",
-            visibleNodeClasses: "Classi di nodi visibili",
+            visibleNodeClasses: "Visibilità delle classi",
             stateFull: "Completo",
             stateCollapsed: "Raggruppato",
             stateOff: "Spento",
@@ -80,7 +80,7 @@ const APP_CONFIG = {
             githubTooltip: "GitHub",
             emailTooltip: "E-mail",
             errorLoading: "Errore nel caricamento dei dati",
-            fallbackSystemMapTitle: "Mappa del sistema",
+            fallbackSystemMapTitle: "DigiAgriFoodCH Mappa del Sistema",
             noLabel: "Senza etichetta"
         }
     },

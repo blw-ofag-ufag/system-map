@@ -1,0 +1,15 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+DELETE {
+  ?subject ?predicate ?object .
+}
+WHERE {
+  ?subject ?predicate ?object .
+  
+  # Ensure the object is a literal and has a language tag
+  FILTER(ISLITERAL(?object) && LANG(?object) != "")
+  
+  # Filter out English tags (case-insensitive check)
+  # This removes tags like 'de', 'fr', 'it', etc.
+  FILTER(!STRSTARTS(LCASE(LANG(?object)), "en"))
+}

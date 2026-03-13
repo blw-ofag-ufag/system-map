@@ -4,7 +4,8 @@
 notes.md
 prompt.*
 rdf/test.ttl
-rdf/graph.ttl
+rdf/processed/
+!rdf/processed/ontology.ttl
 .env
 deprecated/
 venv/

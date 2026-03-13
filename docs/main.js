@@ -95,7 +95,6 @@ function getLocalizedText(langMap, currentLang) {
     return { text: langMap[firstKey], lang: firstKey, isFallback: true };
 }
 
-// Strict Full-URI extractors over Expanded JSON-LD
 const getLangMap = (node, fullUri) => {
     const vals = node[fullUri];
     if (!vals) return {};
@@ -117,7 +116,14 @@ async function init() {
 
     let currentLang = getParam("lang") || "de";
     let minDegree = parseInt(getParam("minDegree") || "0", 10);
-    let isFoldingEnabled = getParam("fold") !== "false";
+    
+    // Extrapolate states to object map for the folding algorithm
+    const groupStates = {};
+    Object.entries(APP_CONFIG.GROUP_MAP).forEach(([iri, group]) => {
+        if (group !== 'Other') {
+            groupStates[group] = getParam(group.toLowerCase()) || 'collapsed';
+        }
+    });
 
     let pinnedNodeId = null, pinnedEdgeId = null;
     let allNodesData = {}, allEdgesData = {}, allEdgeMetadata = {}, allClassesData = {}, allTitles = {};
@@ -125,8 +131,6 @@ async function init() {
 
     try {
         const rawJsonLd = await getSparqlData(MAIN_CONSTRUCT_QUERY);
-        
-        // 1. Formal JSON-LD Expansion resolves all compaction/context irregularities
         const expandedGraph = await jsonld.expand(rawJsonLd);
         
         const entityMap = {};
@@ -135,7 +139,7 @@ async function init() {
         const baseClasses = Object.keys(APP_CONFIG.GROUP_MAP);
         const fullPredicateIris = Object.values(APP_CONFIG.PREDICATE_MAP).map(expandIri);
         
-        // 2. Parse Ontology Metadata & Application Title
+        // 1. Parse Ontology Metadata & Application Title
         expandedGraph.forEach(node => {
             const types = node['@type'] || [];
             
@@ -160,30 +164,7 @@ async function init() {
             }
         });
 
-        // 3. Client-Side Hierarchical Folding Evaluation
-        const parentMap = {};
-        const PARENT_PROPS = ["http://schema.org/parentOrganization", "http://purl.org/dc/terms/isPartOf"];
-        const CHILD_PROPS = ["http://schema.org/subOrganization", "http://purl.org/dc/terms/hasPart"];
-        
-        expandedGraph.forEach(node => {
-            const id = node['@id'];
-            PARENT_PROPS.forEach(prop => {
-                getRefs(node, prop).forEach(pId => { parentMap[id] = pId; });
-            });
-            CHILD_PROPS.forEach(prop => {
-                getRefs(node, prop).forEach(cId => { parentMap[cId] = id; });
-            });
-        });
-
-        const findRoot = (id, visited = new Set()) => {
-            if (!isFoldingEnabled) return id;
-            if (visited.has(id)) return id; // Acyclic enforcement
-            visited.add(id);
-            if (parentMap[id]) return findRoot(parentMap[id], visited);
-            return id;
-        };
-
-        // 4. Construct Nodes & Map Keywords
+        // 2. Pre-extract raw nodes and determine groups
         const rawNodes = {};
         expandedGraph.forEach(node => {
             const types = node['@type'] || [];
@@ -204,6 +185,42 @@ async function init() {
             };
         });
 
+        // 3. Client-Side Hierarchical Folding Evaluation
+        const parentMap = {};
+        const PARENT_PROPS = ["http://schema.org/parentOrganization", "http://purl.org/dc/terms/isPartOf"];
+        const CHILD_PROPS = ["http://schema.org/subOrganization", "http://purl.org/dc/terms/hasPart"];
+        
+        expandedGraph.forEach(node => {
+            const id = node['@id'];
+            PARENT_PROPS.forEach(prop => {
+                getRefs(node, prop).forEach(pId => { parentMap[id] = pId; });
+            });
+            CHILD_PROPS.forEach(prop => {
+                getRefs(node, prop).forEach(cId => { parentMap[cId] = id; });
+            });
+        });
+
+        const findRoot = (id, visited = new Set()) => {
+            if (visited.has(id)) return id; // Acyclic enforcement
+            visited.add(id);
+
+            let group = "Other";
+            if (rawNodes[id]) {
+                group = rawNodes[id].group;
+            } else if (entityMap[id]) {
+                const types = [].concat(entityMap[id]['@type'] || []);
+                const groupIri = types.find(t => baseClasses.includes(t));
+                if (groupIri) group = mapClassIriToGroup(groupIri);
+            }
+
+            const state = groupStates[group] || "collapsed";
+            if (state === 'full') return id;
+            
+            if (parentMap[id]) return findRoot(parentMap[id], visited);
+            return id;
+        };
+
+        // 4. Construct Folded Nodes & Map Keywords
         Object.values(rawNodes).forEach(n => {
             const rootId = findRoot(n.id);
             if (!allNodesData[rootId]) {
@@ -500,11 +517,12 @@ async function init() {
         const minDegreeValue = parseInt(document.getElementById('min-degree-slider').value, 10);
         params.minDegree = minDegreeValue > 0 ? minDegreeValue : null;
 
-        const foldCheck = document.getElementById('settingsFoldHierarchies').checked;
-        params.fold = foldCheck ? null : 'false';
-
-        document.querySelectorAll('#settings-classes input[type="checkbox"]').forEach(cb => {
-            if(cb.dataset.group) params[cb.dataset.group.toLowerCase()] = cb.checked ? null : 'false';
+        document.querySelectorAll('#settings-classes select').forEach(sel => {
+            if(sel.dataset.group) {
+                const groupLower = sel.dataset.group.toLowerCase();
+                const val = sel.value;
+                params[groupLower] = val === 'collapsed' ? null : val;
+            }
         });
 
         const allPredicateKeys = Object.keys(APP_CONFIG.PREDICATE_MAP);
@@ -559,10 +577,6 @@ async function init() {
         document.getElementById('settings-relationship-types-title').textContent = TEXT.visibleRelationshipTypes;
         document.getElementById('settingsCancel').textContent = TEXT.cancel;
         document.getElementById('settingsSave').textContent = TEXT.saveAndReload;
-        document.getElementById('settings-fold-title').textContent = TEXT.foldHierarchiesTitle;
-        document.getElementById('settingsFoldLabel').textContent = TEXT.foldHierarchies;
-
-        document.getElementById('settingsFoldHierarchies').checked = isFoldingEnabled;
 
         const minDegreeContainer = document.getElementById('settings-min-degree-container');
         minDegreeContainer.innerHTML = `
@@ -575,15 +589,21 @@ async function init() {
         const sliderValueDisplay = document.getElementById('min-degree-value');
         slider.addEventListener('input', (e) => { sliderValueDisplay.textContent = e.target.value; });
 
-        const createCheckboxItem = (container, { id, dataKey, dataValue, isChecked, label, comment, uri, curie, visualHtml }) => {
+        const createSelectBoxItem = (container, { id, dataKey, dataValue, currentValue, label, comment, uri, curie, visualHtml }) => {
             let html = `<div class="settings-list-item">
                 <div class="settings-list-item-content">
-                    <label>
-                        <input type="checkbox" id="${id}" data-${dataKey}="${dataValue}" ${isChecked ? 'checked' : ''}>
-                        <strong>${label}</strong>
-                        ${uri ? `<span>(<a href="${uri}" target="_blank">${curie}</a>)&nbsp;&nbsp;</span>` : ''}
-                        ${visualHtml || ''}
-                    </label>
+                    <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 15px; margin-bottom: 4px;">
+                        <label style="flex-grow: 1; display: flex; align-items: center; gap: 0.3rem;">
+                            <strong>${label}</strong>
+                            ${uri ? `<span>(<a href="${uri}" target="_blank">${curie}</a>)&nbsp;&nbsp;</span>` : ''}
+                            ${visualHtml || ''}
+                        </label>
+                        <select id="${id}" data-${dataKey}="${dataValue}" class="settings-select">
+                            <option value="full" ${currentValue === 'full' ? 'selected' : ''}>${TEXT.stateFull}</option>
+                            <option value="collapsed" ${currentValue === 'collapsed' ? 'selected' : ''}>${TEXT.stateCollapsed}</option>
+                            <option value="off" ${currentValue === 'off' ? 'selected' : ''}>${TEXT.stateOff}</option>
+                        </select>
+                    </div>
                     ${comment ? `<span class="settings-list-item-comment">${comment}</span>`:``}
                 </div></div>`;
             container.insertAdjacentHTML('beforeend', html);
@@ -598,11 +618,12 @@ async function init() {
         sortedClasses.forEach(classData => {
             const groupName = mapClassIriToGroup(classData.id);
             if(groupName === "Other") return;
-            createCheckboxItem(classesContainer, {
+            const paramVal = getParam(groupName.toLowerCase()) || 'collapsed';
+            createSelectBoxItem(classesContainer, {
                 id: `setting-class-${groupName}`,
                 dataKey: 'group',
                 dataValue: groupName,
-                isChecked: getParam(groupName.toLowerCase()) !== "false",
+                currentValue: paramVal,
                 label: getLocalizedText(classData.label, currentLang).text || TEXT.noLabel,
                 comment: getLocalizedText(classData.comment, currentLang).text || '',
                 uri: classData.id,
@@ -610,6 +631,20 @@ async function init() {
                 visualHtml: createNodeIconHtml(groupName)
             });
         });
+
+        const createCheckboxItem = (container, { id, dataKey, dataValue, isChecked, label, comment, uri, curie, visualHtml }) => {
+            let html = `<div class="settings-list-item">
+                <div class="settings-list-item-content">
+                    <label>
+                        <input type="checkbox" id="${id}" data-${dataKey}="${dataValue}" ${isChecked ? 'checked' : ''}>
+                        <strong>${label}</strong>
+                        ${uri ? `<span>(<a href="${uri}" target="_blank">${curie}</a>)&nbsp;&nbsp;</span>` : ''}
+                        ${visualHtml || ''}
+                    </label>
+                    ${comment ? `<span class="settings-list-item-comment">${comment}</span>`:``}
+                </div></div>`;
+            container.insertAdjacentHTML('beforeend', html);
+        };
 
         const predicatesContainer = document.getElementById('settings-predicates');
         predicatesContainer.innerHTML = '';

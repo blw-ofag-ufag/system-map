@@ -5,13 +5,22 @@ function getQueryParam(name, defaultValue) {
 
 window.subgraph = getQueryParam("subgraph", "");
 
-window.organization = getQueryParam("organization", "true") === "true" ? "schema:Organization" : "";
-window.system = getQueryParam("system", "true") === "true" ? "schema:SoftwareApplication" : "";
-window.service = getQueryParam("service", "true") === "true" ? "service:Service" : "";
-window.information = getQueryParam("information", "true") === "true" ? "dcat:Dataset" : "";
+const getGroupState = (name) => getQueryParam(name, "collapsed");
 
-const activeGroups = [window.organization, window.system, window.information, window.service].filter(Boolean);
-window.groupValues = activeGroups.length > 0 ? activeGroups.join(' ') : "<http://example.org/None>";
+window.groupStates = {
+    Organization: getGroupState("organization"),
+    System: getGroupState("system"),
+    Information: getGroupState("information"),
+    Service: getGroupState("service")
+};
+
+const activeGroupIris = [];
+if (window.groupStates.Organization !== "off") activeGroupIris.push("schema:Organization");
+if (window.groupStates.System !== "off") activeGroupIris.push("schema:SoftwareApplication");
+if (window.groupStates.Information !== "off") activeGroupIris.push("dcat:Dataset");
+if (window.groupStates.Service !== "off") activeGroupIris.push("service:Service");
+
+window.groupValues = activeGroupIris.length > 0 ? activeGroupIris.join(' ') : "<http://example.org/None>";
 
 const rawPredParam = getQueryParam("predicates", "").trim();
 const selectedKeys = rawPredParam ? rawPredParam.split(/[;,+\s]+/).filter(Boolean) : [];
@@ -35,7 +44,7 @@ PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 CONSTRUCT {
-  ?mapId schema:name ?mapTitle .
+  ?mapId a systemmap:SystemMap ; schema:name ?mapTitle .
 
   ?node a ?group ;
         schema:name ?name ;

@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonld/8.3.2/jsonld.min.js"></script>
   <script src="https://unpkg.com/vis-network@9.1.2/standalone/umd/vis-network.min.js"></script>
   <script src="config.js"></script>
   <script src="query.js"></script>
@@ -15,51 +16,47 @@
 <body>
   <h1 id="systemmapTitle" class="systemmap-title"></h1>
 
-  <!-- The network graph will be rendered here -->
   <div id="network"></div>
 
-  <!-- The info panel remains as it is -->
   <div id="infoPanel" class="info-panel hidden"></div>
 
-  <!-- Settings pop-up structure -->
   <div id="settings-overlay" class="hidden">
     <div id="settings-panel">
       <h2 id="settings-title"></h2>
 
-      <!-- Two-column layout container -->
       <div class="settings-columns">
         
-        <!-- Column 1: Degree Slider and Classes -->
         <div class="settings-column">
-          <!-- New: Minimum Degree Slider -->
           <div class="settings-section">
             <h3 id="settings-min-degree-title"></h3>
-            <div id="settings-min-degree-container">
-              <!-- Slider will be dynamically populated by main.js -->
-            </div>
+            <div id="settings-min-degree-container"></div>
           </div>
           
           <div class="settings-section">
-            <h3 id="settings-node-classes-title"></h3>
-            <div id="settings-classes">
-              <!-- This will be dynamically populated by main.js -->
+            <h3 id="settings-fold-title"></h3>
+            <div class="settings-list-item">
+               <label>
+                 <input type="checkbox" id="settingsFoldHierarchies">
+                 <strong id="settingsFoldLabel"></strong>
+               </label>
             </div>
+          </div>
+
+          <div class="settings-section">
+            <h3 id="settings-node-classes-title"></h3>
+            <div id="settings-classes"></div>
           </div>
         </div>
 
-        <!-- Column 2: Predicates -->
         <div class="settings-column">
           <div class="settings-section">
             <h3 id="settings-relationship-types-title"></h3>
-            <div id="settings-predicates">
-              <!-- This will be dynamically populated by main.js -->
-            </div>
+            <div id="settings-predicates"></div>
           </div>
         </div>
 
       </div>
 
-      <!-- Action buttons remain at the bottom -->
       <div class="settings-actions">
         <button id="settingsCancel"></button>
         <button id="settingsSave"></button>
@@ -67,7 +64,6 @@
     </div>
   </div>
 
-  <!-- New language selector container -->
   <div class="language-selector-container">
     <select id="languageSelector">
       <option value="de">Deutsch</option>
@@ -77,7 +73,6 @@
     </select>
   </div>
 
-  <!-- Icons container with new search box -->
   <div class="social-icons">
     <div class="search-container">
       <i class="fas fa-search"></i>

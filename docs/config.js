@@ -1,27 +1,18 @@
-/**
- * Reads a CSS custom property (variable) from the :root element.
- * @param {string} name - The name of the CSS variable (e.g., '--color-highlight-bg').
- * @returns {string} The value of the variable.
- */
 function getCssVar(name) {
     return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 }
 
-/**
- * This object holds all application-wide configurations.
- * Style-related values are dynamically populated from the CSS variables in styles.css.
- */
 const APP_CONFIG = {
 
-    // SPARQL Endpoint for fetching data
     ENDPOINT: "https://lindas.admin.ch/query",
 
-    // User-facing text for translation
     UI_TEXT: {
         en: {
             appTitle: "FOAG System Map",
             settings: "Settings",
             minDegree: "Minimum Node Connections",
+            foldHierarchiesTitle: "Hierarchy Structure",
+            foldHierarchies: "Fold sub-elements into parent structures",
             visibleNodeClasses: "Visible Node Classes",
             visibleRelationshipTypes: "Visible Relationship Types",
             cancel: "Cancel",
@@ -31,13 +22,15 @@ const APP_CONFIG = {
             githubTooltip: "GitHub",
             emailTooltip: "Email",
             errorLoading: "Error loading data",
-            fallbackSystemMapTitle: "System Map",
+            fallbackSystemMapTitle: "DigiAgriFoodCH system map",
             noLabel: "No label"
         },
         de: {
-            appTitle: "Systemkarte BLW",
+            appTitle: "Systemlandkarte BLW",
             settings: "Einstellungen",
             minDegree: "Minimale Anzahl Verbindungen",
+            foldHierarchiesTitle: "Hierarchiestruktur",
+            foldHierarchies: "Unterelemente in übergeordnete Strukturen integrieren",
             visibleNodeClasses: "Sichtbare Knotentypen",
             visibleRelationshipTypes: "Sichtbare Beziehungstypen",
             cancel: "Abbrechen",
@@ -47,13 +40,15 @@ const APP_CONFIG = {
             githubTooltip: "GitHub",
             emailTooltip: "E-Mail",
             errorLoading: "Fehler beim Laden der Daten",
-            fallbackSystemMapTitle: "Systemkarte",
+            fallbackSystemMapTitle: "DigiAgriFoodCH Systemlandkarte",
             noLabel: "Ohne Bezeichnung"
         },
         fr: {
             appTitle: "Carte des systèmes OFAG",
             settings: "Paramètres",
             minDegree: "Nombre de connexions de nœuds minimum",
+            foldHierarchiesTitle: "Structure hiérarchique",
+            foldHierarchies: "Replier les sous-éléments dans les structures parentes",
             visibleNodeClasses: "Classes de nœuds visibles",
             visibleRelationshipTypes: "Types de relations visibles",
             cancel: "Annuler",
@@ -63,13 +58,15 @@ const APP_CONFIG = {
             githubTooltip: "GitHub",
             emailTooltip: "E-mail",
             errorLoading: "Erreur de chargement des données",
-            fallbackSystemMapTitle: "Carte du système",
+            fallbackSystemMapTitle: "DigiAgriFoodCH carte du système",
             noLabel: "Sans étiquette"
         },
         it: {
             appTitle: "Mappa dei sistemi UFAG",
             settings: "Impostazioni",
             minDegree: "Numero minimo di connessioni dei nodi",
+            foldHierarchiesTitle: "Struttura gerarchica",
+            foldHierarchies: "Raggruppa i sotto-elementi nelle strutture padre",
             visibleNodeClasses: "Classi di nodi visibili",
             visibleRelationshipTypes: "Tipi di relazioni visibili",
             cancel: "Annulla",
@@ -79,12 +76,11 @@ const APP_CONFIG = {
             githubTooltip: "GitHub",
             emailTooltip: "E-mail",
             errorLoading: "Errore nel caricamento dei dati",
-            fallbackSystemMapTitle: "Mappa del sistema",
+            fallbackSystemMapTitle: "DigiAgriFoodCH mappa del sistema",
             noLabel: "Senza etichetta"
         }
     },
 
-    // Prefixes for shortening IRIs into CURIEs
     PREFIXES: {
         "https://www.fedlex.admin.ch/eli/cc/1998/3033_3033_3033#": "LwG",
         "http://www.w3.org/ns/dcat#": "dcat",
@@ -102,9 +98,8 @@ const APP_CONFIG = {
         "http://www.w3.org/2004/02/skos/core#": "skos",
         "http://www.w3.org/2001/XMLSchema#": "xsd",
         "https://register.ld.admin.ch/zefix/company/": "zefix"
-    },    
+    },  
 
-    // Maps keys used in URL parameters to their corresponding predicate IRIs
     PREDICATE_MAP: {
         isPartOf: "dcterms:isPartOf",
         wasDerivedFrom: "prov:wasDerivedFrom",
@@ -121,7 +116,6 @@ const APP_CONFIG = {
         develops: "systemmap:develops"
     },
 
-    // A list of predicates that should be rendered as dashed lines in the graph
     DASHED_PREDICATES: [
         "http://www.w3.org/ns/prov#wasDerivedFrom",
         "http://purl.org/ontology/service#consumes",
@@ -133,7 +127,6 @@ const APP_CONFIG = {
         "https://agriculture.ld.admin.ch/system-map/develops"
     ],
 
-    // Maps RDF class IRIs to the group names used for styling and filtering
     GROUP_MAP: {
         "http://schema.org/Organization": "Organization",
         "http://schema.org/SoftwareApplication": "System",
@@ -141,12 +134,7 @@ const APP_CONFIG = {
         "http://purl.org/ontology/service#Service": "Service"
     },
 
-    /**
-     * Initializes style-related constants by reading them from the CSS root variables.
-     * This should be called once the DOM is ready.
-     */
     initializeStylesFromCSS: function() {
-        // Create a reverse map from group name to IRI for easy lookup
         this.GROUP_IRI_MAP = Object.fromEntries(
             Object.entries(this.GROUP_MAP).map(([iri, group]) => [group, iri])
         );
@@ -155,46 +143,34 @@ const APP_CONFIG = {
             System: {
                 background: getCssVar('--color-group-system-bg'),
                 border: getCssVar('--color-group-system-border'),
-                font: {
-                    color: getCssVar('--color-group-system-font')
-                }
+                font: { color: getCssVar('--color-group-system-font') }
             },
             Information: {
                 background: getCssVar('--color-group-information-bg'),
                 border: getCssVar('--color-group-information-border'),
-                font: {
-                    color: getCssVar('--color-group-information-font')
-                }
+                font: { color: getCssVar('--color-group-information-font') }
             },
             Organization: {
                 background: getCssVar('--color-group-organization-bg'),
                 border: getCssVar('--color-group-organization-border'),
-                font: {
-                    color: getCssVar('--color-group-organization-font')
-                }
+                font: { color: getCssVar('--color-group-organization-font') }
             },
             Service: {
                 background: getCssVar('--color-group-service-bg'),
                 border: getCssVar('--color-group-service-border'),
-                font: {
-                    color: getCssVar('--color-group-service-font')
-                }
+                font: { color: getCssVar('--color-group-service-font') }
             },
             Other: {
                 background: getCssVar('--color-group-other-bg'),
                 border: getCssVar('--color-group-other-border'),
-                font: {
-                    color: getCssVar('--color-group-other-font')
-                }
+                font: { color: getCssVar('--color-group-other-font') }
             }
         };
 
         this.SEARCH_HIGHLIGHT_COLOR = {
             background: getCssVar('--color-highlight-bg'),
             border: getCssVar('--color-highlight-border'),
-            font: {
-                color: getCssVar('--color-highlight-font')
-            }
+            font: { color: getCssVar('--color-highlight-font') }
         };
     }
 };

@@ -1,22 +1,12 @@
-/**
- * Optional: shorten label if it's too long
- */
 function shortenLabel(label, abbreviation) {
-    if (label.length + (abbreviation || '').length <= 40) {
-        return abbreviation ? `${label} (${abbreviation})` : label;
-    }
+    if (label.length + (abbreviation || '').length <= 40) return abbreviation ? `${label} (${abbreviation})` : label;
     if (label.length <= 40) return label;
     if (abbreviation) return abbreviation;
     return label.substring(0, 40) + "...";
 }
 
-/**
- * BFS up to 2 hops. Returns { nodeId: distance }.
- */
 function getDistancesUpToTwoHops(network, startId) {
-    const distMap = {
-        [startId]: 0
-    };
+    const distMap = { [startId]: 0 };
     const queue = [startId];
     while (queue.length > 0) {
         const current = queue.shift();
@@ -33,9 +23,6 @@ function getDistancesUpToTwoHops(network, startId) {
     return distMap;
 }
 
-/**
- * Blend two hex colors by a ratio in [0..1].
- */
 function blendHexColors(c1, c2, ratio) {
     const hexToRgb = (hex) => hex.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, (m, r, g, b) => '#' + r + r + g + g + b + b).substring(1).match(/.{2}/g).map(x => parseInt(x, 16));
     const rgbToHex = (r, g, b) => "#" + [r, g, b].map(x => Math.round(x).toString(16).padStart(2, '0')).join('');
@@ -44,44 +31,25 @@ function blendHexColors(c1, c2, ratio) {
     return rgbToHex(r1 + ratio * (r2 - r1), g1 + ratio * (g2 - g1), b1 + ratio * (b2 - b1));
 }
 
-/**
- * Helper func to get value of an URL param
- */
-function getParam(name) {
-    return new URLSearchParams(window.location.search).get(name);
-}
+function getParam(name) { return new URLSearchParams(window.location.search).get(name); }
 
-/**
- * Helper func to set URL params and trigger a page reload.
- */
 function setParamsAndReload(paramsObj) {
     const params = new URLSearchParams(window.location.search);
     for (const [key, value] of Object.entries(paramsObj)) {
         (value === null || value === undefined || value === true) ? params.delete(key): params.set(key, value);
     }
-    
     window.location.href = `${window.location.pathname}?${params.toString()}`;
 }
 
-/**
- * Helper func to set URL params without reloading the page.
- */
 function setParamsWithoutReload(paramsObj) {
     const params = new URLSearchParams(window.location.search);
     for (const [key, value] of Object.entries(paramsObj)) {
-        if (value === null || value === undefined || value === '') {
-            params.delete(key);
-        } else {
-            params.set(key, value);
-        }
+        if (value === null || value === undefined || value === '') params.delete(key);
+        else params.set(key, value);
     }
-    const newUrl = `${window.location.pathname}?${params.toString()}`;
-    history.pushState(null, '', newUrl);
+    history.pushState(null, '', `${window.location.pathname}?${params.toString()}`);
 }
 
-/**
- * Convert a full IRI to a compact CURIE using the central configuration.
- */
 function shortenIri(iri) {
     for (const [baseIRI, prefix] of Object.entries(APP_CONFIG.PREFIXES)) {
         if (iri.startsWith(baseIRI)) return `${prefix}:${iri.substring(baseIRI.length)}`;
@@ -89,191 +57,308 @@ function shortenIri(iri) {
     return iri;
 }
 
-/**
- * Configures the search box and its event listeners.
- */
+function expandIri(iri) {
+    if (!iri || typeof iri !== 'string') return iri;
+    if (iri.startsWith('http://') || iri.startsWith('https://')) return iri;
+    const idx = iri.indexOf(':');
+    if (idx > 0) {
+        const prefix = iri.substring(0, idx);
+        const suffix = iri.substring(idx + 1);
+        for (const [baseIRI, pref] of Object.entries(APP_CONFIG.PREFIXES)) {
+            if (pref === prefix) return baseIRI + suffix;
+        }
+    }
+    return iri;
+}
+
 function setupSearchBox(onSearchChange) {
     const searchBox = document.getElementById('search-box');
     if (!searchBox) return;
-
     searchBox.value = getParam('search') || '';
-
     let searchTimeout;
     searchBox.addEventListener('keyup', (e) => {
         clearTimeout(searchTimeout);
         searchTimeout = setTimeout(() => {
-            const searchTerm = e.target.value.trim();
-            setParamsWithoutReload({
-                search: searchTerm || null
-            });
+            setParamsWithoutReload({ search: e.target.value.trim() || null });
             onSearchChange();
-        }, 300); // Update after 300ms of inactivity
+        }, 300);
     });
 }
 
-/**
- * Selects the best localized text based on language preferences.
- * @param {object} langMap - An object mapping lang codes to text (e.g., { de: 'Hallo', en: 'Hello' }).
- * @param {string} currentLang - The desired language code.
- * @returns {{text: string, lang: string, isFallback: boolean}}
- */
 function getLocalizedText(langMap, currentLang) {
-    if (!langMap) return { text: '', lang: '', isFallback: true };
-    const langPrefs = [currentLang, 'en', 'de', 'fr', 'it', '']; // Added empty string for untagged literals
+    if (!langMap || Object.keys(langMap).length === 0) return { text: '', lang: '', isFallback: true };
+    const langPrefs = [currentLang, 'en', 'de', 'fr', 'it', ''];
     for (const lang of langPrefs) {
-        if (langMap[lang]) {
-            return {
-                text: langMap[lang],
-                lang: lang,
-                isFallback: lang !== currentLang
-            };
-        }
+        if (langMap[lang]) return { text: langMap[lang], lang: lang, isFallback: lang !== currentLang };
     }
-    // Fallback to the first available language if none of the preferred ones match
     const firstKey = Object.keys(langMap)[0];
-    if (firstKey) {
-        return { text: langMap[firstKey], lang: firstKey, isFallback: true };
-    }
-    return { text: '', lang: '', isFallback: true };
+    return { text: langMap[firstKey], lang: firstKey, isFallback: true };
 }
 
-
-/**
- * Processes raw SPARQL results into a structured map with all languages.
- */
-function processSparqlResults(bindings, keyField, fields) {
-    const dataMap = {};
-    bindings.forEach(row => {
-        const key = row[keyField]?.value;
-        if (!key) return;
-
-        if (!dataMap[key]) {
-            dataMap[key] = {
-                id: key,
-                // Add other non-language-tagged fields
-                ...(row.group && {group: mapClassIriToGroup(row.group.value)}),
-                ...(row.domain && {domain: row.domain.value}),
-                ...(row.range && {range: row.range.value})
-            };
-            fields.forEach(f => dataMap[key][f] = {});
-        }
-
-        fields.forEach(f => {
-            if (row[f]) {
-                const lang = row[`${f}Lang`]?.value || '';
-                dataMap[key][f][lang] = row[f].value;
-            }
-        });
+const getLangMap = (node, fullUri) => {
+    const vals = node[fullUri];
+    if (!vals) return {};
+    const res = {};
+    vals.forEach(v => {
+        if (v['@value'] !== undefined) res[v['@language'] || ''] = v['@value'];
     });
-    return dataMap;
-}
+    return res;
+};
 
-/**
- * Main application initialization.
- */
+const getRefs = (node, fullUri) => {
+    const vals = node[fullUri];
+    if (!vals) return [];
+    return vals.map(v => v['@id']).filter(Boolean);
+};
+
+const getFirstValue = (node, fullUri) => {
+    const vals = node[fullUri];
+    if (!vals || vals.length === 0) return null;
+    return vals[0]['@value'] !== undefined ? vals[0]['@value'] : (vals[0]['@id'] || null);
+};
+
+const getKwId = (uri) => {
+    const parts = uri.split(/[\/#]/);
+    return parts[parts.length - 1];
+};
+
 async function init() {
-    // Initialize style constants by reading them from the CSS variables
     APP_CONFIG.initializeStylesFromCSS();
 
-    // --- STATE ---
     let currentLang = getParam("lang") || "de";
     let minDegree = parseInt(getParam("minDegree") || "0", 10);
-    let pinnedNodeId = null,
-        pinnedEdgeId = null;
-    let allNodesData = {},
-        allEdgesData = {},
-        allEdgeMetadata = {},
-        allClassesData = {},
-        allTitles = {};
+    
+    const kwParam = getParam("keywords");
+    const activeKeywords = kwParam ? kwParam.split(',') : [];
+
+    const groupStates = {};
+    Object.entries(APP_CONFIG.GROUP_MAP).forEach(([iri, group]) => {
+        if (group !== 'Other') {
+            groupStates[group] = getParam(group.toLowerCase()) || 'full';
+        }
+    });
+
+    const rawPredParam = getParam("predicates");
+    const currentPreds = rawPredParam === null ? Object.keys(APP_CONFIG.PREDICATE_MAP) : (rawPredParam ? rawPredParam.split(/[;,+\s]+/) : []);
+    const activePredicateIris = currentPreds.map(k => expandIri(APP_CONFIG.PREDICATE_MAP[k])).filter(Boolean);
+
+    let pinnedNodeId = null, pinnedEdgeId = null;
+    let allNodesData = {}, allEdgesData = {}, allEdgeMetadata = {}, allClassesData = {}, allTitles = {};
+    let allKeywordsMap = {};
     let network, nodesDataset, edgesDataset;
-    // --- END STATE ---
 
-    // --- DATA FETCHING & PROCESSING ---
     try {
-        const [titleJson, classesJson, edgeMetadataJson, nodesJson, edgesJson, keywordsJson] = await Promise.all([
-            getSparqlData(TITLE_QUERY), 
-            getSparqlData(CLASS_QUERY), 
-            getSparqlData(EDGE_METADATA_QUERY),
-            getSparqlData(NODE_QUERY), 
-            getSparqlData(EDGE_QUERY),
-            getSparqlData(KEYWORD_QUERY)
-        ]);
+        const rawJsonLd = await getSparqlData(MAIN_CONSTRUCT_QUERY);
+        const expandedGraph = await jsonld.expand(rawJsonLd);
+        
+        const entityMap = {};
+        expandedGraph.forEach(node => { entityMap[node['@id']] = node; });
 
-        allNodesData = processSparqlResults(nodesJson.results.bindings, 'id', ['name', 'comment', 'abbreviation']);
+        const baseClasses = Object.keys(APP_CONFIG.GROUP_MAP);
+        const fullPredicateIris = Object.values(APP_CONFIG.PREDICATE_MAP).map(expandIri);
         
-        // Process keywords separately as it's a one-to-many relation
-        const nodeKeywords = {};
-        keywordsJson.results.bindings.forEach(row => {
-            const nodeId = row.node.value;
-            const kwUri = row.keyword.value;
-            const label = row.label.value;
-            const lang = row.lang.value;
+        expandedGraph.forEach(node => {
+            const types = node['@type'] || [];
             
-            if (!nodeKeywords[nodeId]) nodeKeywords[nodeId] = {};
-            if (!nodeKeywords[nodeId][kwUri]) nodeKeywords[nodeId][kwUri] = { id: kwUri, labels: {} };
-            
-            nodeKeywords[nodeId][kwUri].labels[lang] = label;
+            if (types.includes('http://www.w3.org/2002/07/owl#Class') || baseClasses.includes(node['@id'])) {
+                allClassesData[node['@id']] = {
+                    id: node['@id'],
+                    label: getLangMap(node, 'http://schema.org/name'),
+                    comment: getLangMap(node, 'http://schema.org/description')
+                };
+            }
+            if (types.includes('http://www.w3.org/2002/07/owl#ObjectProperty') || fullPredicateIris.includes(node['@id'])) {
+                allEdgeMetadata[node['@id']] = {
+                    id: node['@id'],
+                    label: getLangMap(node, 'http://schema.org/name'),
+                    comment: getLangMap(node, 'http://schema.org/description'),
+                    domain: getRefs(node, 'http://www.w3.org/2000/01/rdf-schema#domain')[0],
+                    range: getRefs(node, 'http://www.w3.org/2000/01/rdf-schema#range')[0]
+                };
+            }
+            if (types.includes('https://agriculture.ld.admin.ch/system-map/SystemMap')) {
+                allTitles = getLangMap(node, 'http://schema.org/name');
+            }
+            if (types.includes('http://schema.org/DefinedTerm')) {
+                allKeywordsMap[node['@id']] = getLangMap(node, 'http://schema.org/name');
+            }
         });
+
+        const rawNodes = {};
+        expandedGraph.forEach(node => {
+            const types = node['@type'] || [];
+            const groupIri = types.find(t => baseClasses.includes(t));
+            if (!groupIri) return;
+
+            const id = node['@id'];
+            rawNodes[id] = {
+                id: id,
+                group: mapClassIriToGroup(groupIri),
+                name: getLangMap(node, 'http://schema.org/name'),
+                comment: getLangMap(node, 'http://schema.org/description'),
+                abbreviation: getLangMap(node, 'https://agriculture.ld.admin.ch/system-map/abbreviation'),
+                keywords: getRefs(node, 'http://www.w3.org/ns/dcat#keyword').map(kwUri => {
+                    const kwNode = entityMap[kwUri];
+                    if(kwNode && !allKeywordsMap[kwUri]) allKeywordsMap[kwUri] = getLangMap(kwNode, 'http://schema.org/name');
+                    return { id: kwUri, labels: kwNode ? getLangMap(kwNode, 'http://schema.org/name') : {} };
+                })
+            };
+        });
+
+        if (activeKeywords.length > 0) {
+            Object.keys(rawNodes).forEach(id => {
+                const n = rawNodes[id];
+                if (n.group === 'Information') {
+                    const nodeKwIds = n.keywords.map(k => getKwId(k.id));
+                    const hasMatch = activeKeywords.some(kw => nodeKwIds.includes(kw));
+                    if (!hasMatch) delete rawNodes[id];
+                }
+            });
+        }
+
+        const parentMap = {};
+        const PARENT_PROPS = ["http://schema.org/parentOrganization", "http://purl.org/dc/terms/isPartOf"];
+        const CHILD_PROPS = ["http://schema.org/subOrganization", "http://purl.org/dc/terms/hasPart"];
         
-        // Merge keywords into allNodesData
-        Object.keys(allNodesData).forEach(nodeId => {
-            if (nodeKeywords[nodeId]) {
-                allNodesData[nodeId].keywords = Object.values(nodeKeywords[nodeId]).sort((a, b) => {
-                    const labelA = (a.labels[currentLang] || Object.values(a.labels)[0] || "").toLowerCase();
-                    const labelB = (b.labels[currentLang] || Object.values(b.labels)[0] || "").toLowerCase();
-                    return labelA.localeCompare(labelB);
+        expandedGraph.forEach(node => {
+            const id = node['@id'];
+            PARENT_PROPS.forEach(prop => { getRefs(node, prop).forEach(pId => { parentMap[id] = pId; }); });
+            CHILD_PROPS.forEach(prop => { getRefs(node, prop).forEach(cId => { parentMap[cId] = id; }); });
+        });
+
+        const findRoot = (id, visited = new Set()) => {
+            if (visited.has(id)) return id; 
+            visited.add(id);
+
+            let group = "Other";
+            if (rawNodes[id]) {
+                group = rawNodes[id].group;
+            } else if (entityMap[id]) {
+                const types = [].concat(entityMap[id]['@type'] || []);
+                const groupIri = types.find(t => baseClasses.includes(t));
+                if (groupIri) group = mapClassIriToGroup(groupIri);
+            }
+
+            const state = groupStates[group] || "full";
+            if (state === 'off') return null;
+            if (state === 'full') return id;
+            
+            if (parentMap[id]) return findRoot(parentMap[id], visited);
+            return id;
+        };
+
+        Object.values(rawNodes).forEach(n => {
+            const rootId = findRoot(n.id);
+            if (rootId === null) return;
+
+            if (!allNodesData[rootId]) {
+                allNodesData[rootId] = JSON.parse(JSON.stringify(rawNodes[rootId] || n)); 
+                allNodesData[rootId].id = rootId;
+            } else if (n.id !== rootId) {
+                const existingKws = new Set(allNodesData[rootId].keywords.map(k => k.id));
+                n.keywords.forEach(kw => {
+                    if (!existingKws.has(kw.id)) {
+                        allNodesData[rootId].keywords.push(kw);
+                        existingKws.add(kw.id);
+                    }
                 });
             }
         });
 
-        allClassesData = processSparqlResults(classesJson.results.bindings, 'iri', ['label', 'comment']);
-        allEdgeMetadata = processSparqlResults(edgeMetadataJson.results.bindings, 'predicate', ['label', 'comment']);
-        titleJson.results.bindings.forEach(row => {
-            if (row.title) allTitles[row.lang.value || ''] = row.title.value;
-        });
-        
-        edgesJson.results.bindings.forEach(row => {
-            const from = row.from.value;
-            const to = row.to.value;
-            const property = row.property.value;
-            const edgeId = `${from}-${property}-${to}`;
-            allEdgesData[edgeId] = { id: edgeId, iri: property, from: from, to: to };
+        expandedGraph.forEach(node => {
+            const fromId = node['@id'];
+            const rootFrom = findRoot(fromId);
+            
+            if (!rootFrom || !allNodesData[rootFrom]) return;
+
+            activePredicateIris.forEach(predFullIri => {
+                getRefs(node, predFullIri).forEach(toId => {
+                    const rootTo = findRoot(toId);
+                    
+                    if (!rootTo || !allNodesData[rootTo]) return; 
+                    if (rootFrom === rootTo) return; 
+                    
+                    const edgeId = `${rootFrom}-${predFullIri}-${rootTo}`;
+                    if (!allEdgesData[edgeId]) {
+                        allEdgesData[edgeId] = { id: edgeId, iri: predFullIri, from: rootFrom, to: rootTo };
+                    }
+                });
+            });
         });
 
+        if (activeKeywords.length > 0) {
+            const visAdjacency = {};
+            Object.values(allEdgesData).forEach(edge => {
+                if (!visAdjacency[edge.from]) visAdjacency[edge.from] = new Set();
+                if (!visAdjacency[edge.to]) visAdjacency[edge.to] = new Set();
+                visAdjacency[edge.from].add(edge.to);
+                visAdjacency[edge.to].add(edge.from);
+            });
+
+            const visSeeds = [];
+            Object.values(allNodesData).forEach(n => {
+                if (n.group === 'Information') {
+                    visSeeds.push(n.id);
+                }
+            });
+
+            if (visSeeds.length === 0) {
+                allNodesData = {};
+                allEdgesData = {};
+            } else {
+                const connectedNodes = new Set(visSeeds);
+                const queue = [...visSeeds];
+
+                while (queue.length > 0) {
+                    const curr = queue.shift();
+                    if (visAdjacency[curr]) {
+                        visAdjacency[curr].forEach(nbr => {
+                            if (!connectedNodes.has(nbr)) {
+                                connectedNodes.add(nbr);
+                                queue.push(nbr);
+                            }
+                        });
+                    }
+                }
+
+                Object.keys(allNodesData).forEach(id => {
+                    if (!connectedNodes.has(id)) delete allNodesData[id];
+                });
+
+                Object.keys(allEdgesData).forEach(id => {
+                    const edge = allEdgesData[id];
+                    if (!connectedNodes.has(edge.from) || !connectedNodes.has(edge.to)) {
+                        delete allEdgesData[id];
+                    }
+                });
+            }
+        }
+
     } catch (error) {
-        console.error("Fatal error fetching or processing data:", error);
+        console.error("Fatal parsing exception:", error);
         document.getElementById("systemmapTitle").textContent = APP_CONFIG.UI_TEXT[currentLang].errorLoading;
         return;
     }
 
     const infoPanel = document.getElementById("infoPanel");
 
-     const applyAllStyles = () => {
+    const applyAllStyles = () => {
         const searchTerm = (getParam("search") || "").toLowerCase();
         const distMap = pinnedNodeId ? getDistancesUpToTwoHops(network, pinnedNodeId) : null;
         
         const originalStyles = Object.fromEntries(nodesDataset.map(n => {
             const style = APP_CONFIG.GROUP_STYLES[n.group] || APP_CONFIG.GROUP_STYLES.Other;
-            return [n.id, {
-                background: style.background,
-                border: style.border,
-                fontColor: style.font.color
-            }];
+            return [n.id, { background: style.background, border: style.border, fontColor: style.font.color }];
         }));
 
-        // Node styling
         const nodeUpdates = nodesDataset.map(n => {
             const originalStyle = originalStyles[n.id];
-            let newColor = originalStyle.background;
-            let newBorder = originalStyle.border;
-            let newFont = originalStyle.fontColor;
+            let newColor = originalStyle.background, newBorder = originalStyle.border, newFont = originalStyle.fontColor;
 
             if (distMap) {
                 const dist = distMap[n.id];
                 if (dist === undefined || dist > 2) {
-                    newColor = '#00000000';
-                    newBorder = '#00000000';
-                    newFont = '#00000000';
+                    newColor = '#00000000'; newBorder = '#00000000'; newFont = '#00000000';
                 } else {
                     const ratio = (dist === 2) ? 0.5 : 0;
                     newColor = blendHexColors(originalStyle.background, "#ffffff", ratio);
@@ -300,38 +385,19 @@ async function init() {
 
             return {
                 id: n.id,
-                color: {
-                    background: newColor,
-                    border: newBorder
-                },
-                font: {
-                    color: newFont,
-                    multi: 'html',
-                    face: 'Poppins'
-                }
+                color: { background: newColor, border: newBorder },
+                font: { color: newFont, multi: 'html', face: 'Poppins' }
             };
         });
         nodesDataset.update(nodeUpdates);
 
-        // Edge styling logic
         const edgeUpdates = edgesDataset.map(edge => {
-            let newColor = '#000000',
-                newWidth = 2,
-                fontUpdate = {
-                    color: '#000000',
-                    strokeWidth: 2
-                };
+            let newColor = '#000000', newWidth = 2, fontUpdate = { color: '#000000', strokeWidth: 2 };
 
             if (distMap) {
-                const distFrom = distMap[edge.from];
-                const distTo = distMap[edge.to];
-                const isOutOfScope = distFrom === undefined || distFrom > 2 || distTo === undefined || distTo > 2;
-
-                if (isOutOfScope) {
-                    newColor = '#00000000';
-                    newWidth = 1;
-                    fontUpdate.color = '#00000000';
-                    fontUpdate.strokeWidth = 0;
+                const distFrom = distMap[edge.from], distTo = distMap[edge.to];
+                if (distFrom === undefined || distFrom > 2 || distTo === undefined || distTo > 2) {
+                    newColor = '#00000000'; newWidth = 1; fontUpdate.color = '#00000000'; fontUpdate.strokeWidth = 0;
                 } else {
                     const maxDist = Math.max(distFrom ?? 0, distTo ?? 0);
                     if (maxDist === 2) {
@@ -342,14 +408,7 @@ async function init() {
                     }
                 }
             }
-            return {
-                id: edge.id,
-                color: {
-                    color: newColor
-                },
-                width: newWidth,
-                font: fontUpdate
-            };
+            return { id: edge.id, color: { color: newColor }, width: newWidth, font: fontUpdate };
         });
         edgesDataset.update(edgeUpdates);
     };
@@ -358,14 +417,16 @@ async function init() {
         infoPanel.innerHTML = html;
         infoPanel.classList.remove("hidden");
     };
+    
     const hideInfo = () => {
         infoPanel.classList.add("hidden");
         infoPanel.innerHTML = "";
         infoPanel.classList.remove("fixed");
     };
 
-    const getNodeInfoHtml = (nodeId) => {
+    const getNodeInfoHtml = (nodeId, additionalData = null) => {
         const nodeData = allNodesData[nodeId];
+        if(!nodeData) return '';
         const { text: fullLabel, lang: labelLang, isFallback } = getLocalizedText(nodeData.name, currentLang);
         const { text: abbreviation } = getLocalizedText(nodeData.abbreviation, currentLang);
         const { text: comment } = getLocalizedText(nodeData.comment, currentLang);
@@ -385,9 +446,33 @@ async function init() {
             <div class="info-panel-header">
                 <h4>${titleHtml} ${classChipHtml}</h4>
             </div>`;
+            
         if (comment) html += `<p class="info-panel-comment"><small>${comment}</small></p>`;
 
-        // Render Keywords
+        if (additionalData) {
+            if (additionalData.legalStatusName && Object.keys(additionalData.legalStatusName).length > 0) {
+                const { text: legalStatusText } = getLocalizedText(additionalData.legalStatusName, currentLang);
+                if (legalStatusText) {
+                    html += `<p class="info-panel-meta"><strong>${APP_CONFIG.UI_TEXT[currentLang].legalStatus}:</strong> ${legalStatusText}</p>`;
+                }
+            }
+            if (additionalData.uid) {
+                html += `<p class="info-panel-meta"><strong>${APP_CONFIG.UI_TEXT[currentLang].uid}:</strong> ${additionalData.uid}</p>`;
+            }
+            if (additionalData.streetAddress || additionalData.postalCode || additionalData.addressLocality) {
+                const addressParts = [
+                    additionalData.streetAddress,
+                    `${additionalData.postalCode || ''} ${additionalData.addressLocality || ''}`.trim()
+                ].filter(Boolean);
+                if (addressParts.length > 0) {
+                    html += `<p class="info-panel-meta"><strong>${APP_CONFIG.UI_TEXT[currentLang].address}:</strong> ${addressParts.join(', ')}</p>`;
+                }
+            }
+            if (additionalData.landingPage) {
+                html += `<p class="info-panel-meta"><strong>${APP_CONFIG.UI_TEXT[currentLang].website}:</strong> <a href="${additionalData.landingPage}" target="_blank">${additionalData.landingPage}</a></p>`;
+            }
+        }
+
         if (nodeData.keywords && nodeData.keywords.length > 0) {
             const keywordHtmls = nodeData.keywords.map(kw => {
                 const { text } = getLocalizedText(kw.labels, currentLang);
@@ -395,13 +480,9 @@ async function init() {
             }).join("");
             html += `<div class="keyword-container">${keywordHtmls}</div>`;
         }
-
         return html;
     };
 
-    /**
-     * Creates the HTML for the domain -> range visual diagram using SVG.
-     */
     const createEdgeDiagramHtml = (predicateIri) => {
         const metadata = allEdgeMetadata[predicateIri];
         if (!metadata) return '';
@@ -413,13 +494,11 @@ async function init() {
             const groupName = mapClassIriToGroup(classIri);
             const style = APP_CONFIG.GROUP_STYLES[groupName] || APP_CONFIG.GROUP_STYLES.Other;
             const { text: label } = getLocalizedText(allClassesData[classIri]?.label, currentLang);
-            
             return `<span class="edge-diagram-icon" style="background-color: ${style.background}; border-color: ${style.border}; color: ${style.font.color};">${label || groupName}</span>`;
         };
 
         const domainIcon = getIconHtml(metadata.domain);
         const rangeIcon = getIconHtml(metadata.range);
-
         const isDashed = APP_CONFIG.DASHED_PREDICATES.includes(predicateIri);
         const arrowDashStyle = isDashed ? `stroke-dasharray="3 4"` : '';
 
@@ -435,19 +514,15 @@ async function init() {
     const getEdgeInfoHtml = (edgeId) => {
         const edgeData = allEdgesData[edgeId];
         const predicateMeta = allEdgeMetadata[edgeData.iri];
-
         const { text: label } = getLocalizedText(predicateMeta?.label, currentLang);
         const { text: comment } = getLocalizedText(predicateMeta?.comment, currentLang);
 
         let html = edgeData.iri ? `<a href="${edgeData.iri}" target="_blank"><small><code>${shortenIri(edgeData.iri)}</code></small></a><br/>` : '';
-        
         html += `
             <div class="edge-title-container">
                 <h4>${label}</h4>
                 ${createEdgeDiagramHtml(edgeData.iri)}
-            </div>
-        `;
-        
+            </div>`;
         if (comment) html += `<p class="info-panel-comment"><small>${comment}</small></p>`;
         return html;
     };
@@ -487,11 +562,8 @@ async function init() {
         }
 
         if (!infoPanel.classList.contains("hidden")) {
-            if (pinnedNodeId) {
-                showInfo(getNodeInfoHtml(pinnedNodeId));
-            } else if (pinnedEdgeId) {
-                showInfo(getEdgeInfoHtml(pinnedEdgeId));
-            }
+            if (pinnedNodeId) showInfo(getNodeInfoHtml(pinnedNodeId, allNodesData[pinnedNodeId]?.details));
+            else if (pinnedEdgeId) showInfo(getEdgeInfoHtml(pinnedEdgeId));
         }
         
         if(!document.getElementById('settings-overlay').classList.contains('hidden')) {
@@ -499,28 +571,19 @@ async function init() {
         }
     };
 
-    // --- INITIALIZE GRAPH & UI ---
-    
-    // 1. Calculate degrees based on currently active edges from the query
     const nodeDegrees = {};
     Object.values(allEdgesData).forEach(edge => {
         nodeDegrees[edge.from] = (nodeDegrees[edge.from] || 0) + 1;
         nodeDegrees[edge.to] = (nodeDegrees[edge.to] || 0) + 1;
     });
 
-    // 2. Filter nodes based on the minDegree parameter
     const filteredNodeIds = new Set(
         Object.keys(allNodesData).filter(nodeId => (nodeDegrees[nodeId] || 0) >= minDegree)
     );
 
-    // 3. Create initial node and edge arrays for vis.js using the filtered sets
     const initialNodes = Object.values(allNodesData)
         .filter(nodeData => filteredNodeIds.has(nodeData.id))
-        .map(nodeData => ({
-            id: nodeData.id,
-            group: nodeData.group,
-            label: " "
-        }));
+        .map(nodeData => ({ id: nodeData.id, group: nodeData.group, label: " " }));
 
     const initialEdges = Object.values(allEdgesData)
         .filter(edgeData => filteredNodeIds.has(edgeData.from) && filteredNodeIds.has(edgeData.to))
@@ -537,7 +600,7 @@ async function init() {
     
     const container = document.getElementById("network");
     const data = { nodes: nodesDataset, edges: edgesDataset };
-    const options = { /* ... */ 
+    const options = { 
         nodes: { shape: "box", widthConstraint: 150, heightConstraint: 40, chosen: { node: (values, id, selected, hovering) => { if (hovering) { let isDimmed = false; if (pinnedNodeId) { const distMap = getDistancesUpToTwoHops(network, pinnedNodeId); if (distMap[id] === undefined || distMap[id] > 2) { isDimmed = true; } } if (!isDimmed) { values.borderWidth = 3; values.borderColor = "#000"; } } } } },
         edges: { width: 2, selectionWidth: 1, font: { face: "Poppins", color: "#000000" }, chosen: false, arrows: { to: { enabled: true, scaleFactor: 0.8 } }, color: { color: '#000000', highlight: '#000000', inherit: false } },
         groups: APP_CONFIG.GROUP_STYLES,
@@ -547,7 +610,6 @@ async function init() {
 
     network = new vis.Network(container, data, options);
 
-    // --- EVENT LISTENERS ---
     setupSearchBox(applyAllStyles);
     
     setupSettingsPanel(
@@ -556,44 +618,74 @@ async function init() {
         const params = {};
         params.lang = currentLang;
         
-        // Handle minDegree slider
         const minDegreeValue = parseInt(document.getElementById('min-degree-slider').value, 10);
         params.minDegree = minDegreeValue > 0 ? minDegreeValue : null;
 
-        // Handle class checkboxes
-        document.querySelectorAll('#settings-classes input').forEach(cb => {
-            params[cb.dataset.group.toLowerCase()] = cb.checked ? null : 'false';
+        document.querySelectorAll('.tri-toggle').forEach(toggle => {
+            const checkedRadio = toggle.querySelector('input[type="radio"]:checked');
+            if(checkedRadio && checkedRadio.dataset.group) {
+                const groupLower = checkedRadio.dataset.group.toLowerCase();
+                const val = checkedRadio.value;
+                params[groupLower] = val === 'full' ? null : val;
+            }
         });
 
-        // Handle predicate checkboxes
         const allPredicateKeys = Object.keys(APP_CONFIG.PREDICATE_MAP);
-        const selectedPreds = Array.from(document.querySelectorAll('#settings-predicates input')).filter(cb => cb.checked).map(cb => cb.dataset.key);
+        const selectedPreds = Array.from(document.querySelectorAll('#settings-predicates input[type="checkbox"]')).filter(cb => cb.checked).map(cb => cb.dataset.key);
         params.predicates = selectedPreds.length === allPredicateKeys.length ? null : selectedPreds.join(';');
+
+        const selectedKws = window.kwChoicesInstance ? window.kwChoicesInstance.getValue(true) : [];
+        params.keywords = selectedKws.length > 0 ? selectedKws.join(',') : null;
         
         setParamsAndReload(params);
     });
 
-    network.on("click", params => {
+    network.on("click", async params => {
         let clickedNodeId = params.nodes[0] || null;
-
         if (clickedNodeId && pinnedNodeId) {
             const distMap = getDistancesUpToTwoHops(network, pinnedNodeId);
-            if (distMap[clickedNodeId] === undefined || distMap[clickedNodeId] > 2) {
-                clickedNodeId = null; 
-            }
+            if (distMap[clickedNodeId] === undefined || distMap[clickedNodeId] > 2) clickedNodeId = null; 
         }
-
         pinnedNodeId = clickedNodeId;
         pinnedEdgeId = clickedNodeId ? null : params.edges[0] || null;
 
         if (pinnedNodeId) {
-            showInfo(getNodeInfoHtml(pinnedNodeId));
+            showInfo(getNodeInfoHtml(pinnedNodeId, allNodesData[pinnedNodeId].details));
+            
+            if (!allNodesData[pinnedNodeId].detailsFetched) {
+                allNodesData[pinnedNodeId].detailsFetched = true;
+                try {
+                    const query = window.getNodeDetailsQuery(pinnedNodeId);
+                    const rawJsonLd = await window.getSparqlData(query);
+                    const expandedGraph = await jsonld.expand(rawJsonLd);
+                    
+                    if (expandedGraph && expandedGraph.length > 0) {
+                        const nodeData = expandedGraph.find(n => n['@id'] === pinnedNodeId) || expandedGraph[0];
+                        
+                        allNodesData[pinnedNodeId].details = {
+                            landingPage: getFirstValue(nodeData, 'http://www.w3.org/ns/dcat#landingPage'),
+                            uid: getFirstValue(nodeData, 'https://agriculture.ld.admin.ch/system-map/uid'),
+                            streetAddress: getFirstValue(nodeData, 'https://agriculture.ld.admin.ch/system-map/streetAddress'),
+                            postalCode: getFirstValue(nodeData, 'https://agriculture.ld.admin.ch/system-map/postalCode'),
+                            addressLocality: getFirstValue(nodeData, 'https://agriculture.ld.admin.ch/system-map/addressLocality'),
+                            legalStatusName: getLangMap(nodeData, 'https://agriculture.ld.admin.ch/system-map/legalStatusName')
+                        };
+                        
+                        if (pinnedNodeId === clickedNodeId) {
+                            showInfo(getNodeInfoHtml(pinnedNodeId, allNodesData[pinnedNodeId].details));
+                        }
+                    }
+                } catch (e) {
+                    console.error("Failed to fetch node details:", e);
+                }
+            }
         } else if (pinnedEdgeId) {
             showInfo(getEdgeInfoHtml(pinnedEdgeId));
-        } else {
-            network.unselectAll();
-            hideInfo();
+        } else { 
+            network.unselectAll(); 
+            hideInfo(); 
         }
+        
         applyAllStyles();
         infoPanel.classList.toggle("fixed", !!(pinnedNodeId || pinnedEdgeId));
     });
@@ -606,13 +698,9 @@ async function init() {
         updateUIForLanguage();
     });
 
-    // --- FINAL UI POPULATION ---
     updateUIForLanguage();
     applyAllStyles();
 
-    /**
-     * Creates the HTML for a node-like icon for the settings panel.
-     */
     const createNodeIconHtml = (groupName) => {
         const style = APP_CONFIG.GROUP_STYLES[groupName] || APP_CONFIG.GROUP_STYLES.Other;
         const classIri = APP_CONFIG.GROUP_IRI_MAP[groupName];
@@ -621,21 +709,17 @@ async function init() {
         return `<div class="settings-node-icon" style="${inlineStyle}">${label || groupName}</div>`;
     };
 
-    /**
-     * Populates the settings form with values from URL params and data.
-     */
     function populateSettings() {
         const TEXT = APP_CONFIG.UI_TEXT[currentLang];
         
-        // Populate static text
         document.getElementById('settings-title').textContent = TEXT.settings;
         document.getElementById('settings-min-degree-title').textContent = TEXT.minDegree;
         document.getElementById('settings-node-classes-title').textContent = TEXT.visibleNodeClasses;
         document.getElementById('settings-relationship-types-title').textContent = TEXT.visibleRelationshipTypes;
+        document.getElementById('settings-keywords-title').textContent = TEXT.filterKeywords;
         document.getElementById('settingsCancel').textContent = TEXT.cancel;
         document.getElementById('settingsSave').textContent = TEXT.saveAndReload;
 
-        // Populate min degree slider
         const minDegreeContainer = document.getElementById('settings-min-degree-container');
         minDegreeContainer.innerHTML = `
             <div class="settings-slider-wrapper">
@@ -645,8 +729,55 @@ async function init() {
         `;
         const slider = document.getElementById('min-degree-slider');
         const sliderValueDisplay = document.getElementById('min-degree-value');
-        slider.addEventListener('input', (e) => {
-            sliderValueDisplay.textContent = e.target.value;
+        slider.addEventListener('input', (e) => { sliderValueDisplay.textContent = e.target.value; });
+
+        const createToggleItem = (container, { id, dataKey, dataValue, currentValue, label, comment, uri, curie, visualHtml }) => {
+            let html = `<div class="class-toggle-row">
+                <div class="tri-toggle" title="Toggle State">
+                    <input type="radio" id="${id}_full" name="${id}" value="full" data-${dataKey}="${dataValue}" ${currentValue === 'full' ? 'checked' : ''}>
+                    <label for="${id}_full" title="${TEXT.stateFull}"><i class="fas fa-sitemap"></i></label>
+
+                    <input type="radio" id="${id}_collapsed" name="${id}" value="collapsed" data-${dataKey}="${dataValue}" ${currentValue === 'collapsed' ? 'checked' : ''}>
+                    <label for="${id}_collapsed" title="${TEXT.stateCollapsed}"><i class="fas fa-layer-group"></i></label>
+
+                    <input type="radio" id="${id}_off" name="${id}" value="off" data-${dataKey}="${dataValue}" ${currentValue === 'off' ? 'checked' : ''}>
+                    <label for="${id}_off" title="${TEXT.stateOff}"><i class="fas fa-eye-slash"></i></label>
+
+                    <div class="tri-toggle-slider"></div>
+                </div>
+                <div class="class-toggle-info">
+                    <div class="class-toggle-header">
+                        <strong>${label}</strong>
+                        ${uri ? `<span class="settings-curie">(<a href="${uri}" target="_blank">${curie}</a>)</span>` : ''}
+                        ${visualHtml || ''}
+                    </div>
+                    ${comment ? `<div class="settings-list-item-comment">${comment}</div>`:``}
+                </div>
+            </div>`;
+            container.insertAdjacentHTML('beforeend', html);
+        };
+
+        const classesContainer = document.getElementById('settings-classes');
+        classesContainer.innerHTML = '';
+        const sortedClasses = Object.values(allClassesData).sort((a,b) => 
+            (getLocalizedText(a.label, currentLang).text || '').localeCompare(getLocalizedText(b.label, currentLang).text || '')
+        );
+
+        sortedClasses.forEach(classData => {
+            const groupName = mapClassIriToGroup(classData.id);
+            if(groupName === "Other") return;
+            const paramVal = getParam(groupName.toLowerCase()) || 'full';
+            createToggleItem(classesContainer, {
+                id: `setting-class-${groupName}`,
+                dataKey: 'group',
+                dataValue: groupName,
+                currentValue: paramVal,
+                label: getLocalizedText(classData.label, currentLang).text || TEXT.noLabel,
+                comment: getLocalizedText(classData.comment, currentLang).text || '',
+                uri: classData.id,
+                curie: shortenIri(classData.id),
+                visualHtml: createNodeIconHtml(groupName)
+            });
         });
 
         const createCheckboxItem = (container, { id, dataKey, dataValue, isChecked, label, comment, uri, curie, visualHtml }) => {
@@ -663,27 +794,6 @@ async function init() {
             container.insertAdjacentHTML('beforeend', html);
         };
 
-        const classesContainer = document.getElementById('settings-classes');
-        classesContainer.innerHTML = '';
-        const sortedClasses = Object.values(allClassesData).sort((a,b) => 
-            (getLocalizedText(a.label, currentLang).text || '').localeCompare(getLocalizedText(b.label, currentLang).text || '')
-        );
-
-        sortedClasses.forEach(classData => {
-            const groupName = mapClassIriToGroup(classData.id);
-            createCheckboxItem(classesContainer, {
-                id: `setting-class-${groupName}`,
-                dataKey: 'group',
-                dataValue: groupName,
-                isChecked: getParam(groupName.toLowerCase()) !== "false",
-                label: getLocalizedText(classData.label, currentLang).text || TEXT.noLabel,
-                comment: getLocalizedText(classData.comment, currentLang).text || '',
-                uri: classData.id,
-                curie: shortenIri(classData.id),
-                visualHtml: createNodeIconHtml(groupName)
-            });
-        });
-
         const predicatesContainer = document.getElementById('settings-predicates');
         predicatesContainer.innerHTML = '';
         const rawPredParam = getParam("predicates");
@@ -694,8 +804,7 @@ async function init() {
         for (const [key, curie] of Object.entries(APP_CONFIG.PREDICATE_MAP)) {
             const [prefix, suffix] = curie.split(':');
             if (invertedPrefixes[prefix]) {
-                const iri = invertedPrefixes[prefix] + suffix;
-                iriToKeyMap[iri] = key;
+                iriToKeyMap[invertedPrefixes[prefix] + suffix] = key;
             }
         }
         
@@ -719,28 +828,44 @@ async function init() {
                 });
             }
         });
+
+        const keywordSelect = document.getElementById('keyword-select');
+        const choicesData = Object.entries(allKeywordsMap).map(([uri, langMap]) => {
+            const shortId = getKwId(uri);
+            return { 
+                value: shortId, 
+                label: getLocalizedText(langMap, currentLang).text || TEXT.noLabel,
+                selected: activeKeywords.includes(shortId)
+            };
+        }).sort((a, b) => a.label.localeCompare(b.label));
+
+        if (window.kwChoicesInstance) { 
+            window.kwChoicesInstance.destroy(); 
+        }
+        
+        keywordSelect.innerHTML = ''; 
+
+        window.kwChoicesInstance = new Choices(keywordSelect, {
+            choices: choicesData,
+            removeItemButton: true,
+            searchResultLimit: 5,
+            renderChoiceLimit: -1,
+            placeholderValue: TEXT.searchPlaceholder,
+            itemSelectText: ''
+        });
     }
 }
-
 
 function setupSettingsPanel(onOpen, onSave) {
     const overlay = document.getElementById('settings-overlay');
     const trigger = document.getElementById('settings-trigger');
 
-    const openSettings = () => {
-        onOpen();
-        overlay.classList.remove('hidden');
-    };
+    const openSettings = () => { onOpen(); overlay.classList.remove('hidden'); };
     const closeSettings = () => overlay.classList.add('hidden');
 
-    trigger.addEventListener('click', (e) => {
-        e.preventDefault();
-        openSettings();
-    });
+    trigger.addEventListener('click', (e) => { e.preventDefault(); openSettings(); });
     document.getElementById('settingsCancel').addEventListener('click', closeSettings);
-    overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) closeSettings();
-    });
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeSettings(); });
     document.getElementById('settingsSave').addEventListener('click', onSave);
 }
 

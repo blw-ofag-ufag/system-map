@@ -58,7 +58,7 @@ dcat:Dataset a rdfs:Class,
     ] ;
     rdfs:subClassOf [
         a owl:Restriction ;
-        owl:onProperty dcat:keyword ;
+        owl:onProperty schema:keywords ;
         owl:allValuesFrom skos:Concept
     ] .
 
@@ -94,42 +94,29 @@ service:Service a owl:Class ;
         owl:allValuesFrom service:Service
     ] .
 
-schema:DefinedTermSet a owl:Class ;
+schema:DefinedTermSet
+    a owl:Class ;
     schema:name "Reference data"@en ;
-    schema:description """
-        Codelists are a specific form of reference data, where reference data is structured as a list consisting codes and their associated meanings.
-        In the FOAG context, the terms codelist and reference data are often used interchangeably, as the concept of codelist is more readily understood.
-        """@en ;
+    schema:description  "Codelists are a specific form of reference data, where reference data is structured as a list consisting codes and their associated meanings. In the FOAG context, the terms codelist and reference data are often used interchangeably, as the concept of codelist is more readily understood."@en ;
     rdfs:subClassOf dcat:Dataset ;
-    skos:altLabel "Defined term set",
+    skos:altLabel
+        "Defined term set"@en,
         "Code list"@en,
-        "Enumerated type list"@en .
+        "Enumerated type list"@en,
+        "Enumeration"@en .
 
-schema:GovernmentOrganization a owl:Class ;
-    schema:name "Öffentlich-rechtliche Organisation"@de,
+schema:GovernmentOrganization
+    a owl:Class ;
+    schema:name
+        "Öffentlich-rechtliche Organisation"@de,
         "Public-sector organization"@en,
         "Organisation de droit public"@fr,
         "Organizzazione di diritto pubblico"@it ;
-    schema:description """
-        Eine öffentlich-rechtliche Organisation ist eine juristische Person oder eine Untereinheit einer solchen des öffentlichen Rechts, die durch einen Hoheitsakt gegründet wurde.
-        Sie erfüllt öffentliche Aufgaben und ist dabei an gesetzliche Vorgaben gebunden.
-        Beispiele sind Gebietskörperschaften wie Gemeinden oder Körperschaften des öffentlichen Rechts wie Universitäten.
-        """@de,
-        """
-        A public-sector organization is a legal entity or a subunit of such an entity under public law, established by an act of authority.
-        It fulfills public tasks and is bound by legal regulations.
-        Examples include territorial authorities such as municipalities or public law corporations like universities.
-        """@en,
-        """
-        Une organisation de droit public est une entité juridique ou une sous-unité d'une telle entité de droit public, créée par un acte d'autorité.
-        Elle accomplit des missions publiques et est soumise aux dispositions légales.
-        Des exemples incluent les collectivités territoriales comme les communes ou les corporations de droit public telles que les universités.
-        """@fr,
-        """
-        Un'organizzazione di diritto pubblico è un'entità giuridica o una sua sotto-unità di diritto pubblico, istituita tramite un atto di autorità.
-        Svolge compiti pubblici ed è vincolata da disposizioni legali.
-        Esempi includono enti territoriali come i comuni o corporazioni di diritto pubblico come le università.
-        """@it ;
+    schema:description
+        "Eine öffentlich-rechtliche Organisation ist eine juristische Person oder eine Untereinheit einer solchen des öffentlichen Rechts, die durch einen Hoheitsakt gegründet wurde. Sie erfüllt öffentliche Aufgaben und ist dabei an gesetzliche Vorgaben gebunden. Beispiele sind Gebietskörperschaften wie Gemeinden oder Körperschaften des öffentlichen Rechts wie Universitäten."@de,
+        "A public-sector organization is a legal entity or a subunit of such an entity under public law, established by an act of authority. It fulfills public tasks and is bound by legal regulations. Examples include territorial authorities such as municipalities or public law corporations like universities."@en,
+        "Une organisation de droit public est une entité juridique ou une sous-unité d'une telle entité de droit public, créée par un acte d'autorité. Elle accomplit des missions publiques et est soumise aux dispositions légales. Des exemples incluent les collectivités territoriales comme les communes ou les corporations de droit public telles que les universités."@fr,
+        "Un'organizzazione di diritto pubblico è un'entità giuridica o una sua sotto-unità di diritto pubblico, istituita tramite un atto di autorità. Svolge compiti pubblici ed è vincolata da disposizioni legali. Esempi includono enti territoriali come i comuni o corporazioni di diritto pubblico come le università."@it ;
     rdfs:subClassOf schema:Organization .
 
 schema:Legislation a owl:Class ;
@@ -137,21 +124,15 @@ schema:Legislation a owl:Class ;
         "Legislation"@en,
         "Législation"@fr,
         "Legislazione"@it ;
-    schema:description """
-        Ein Rechtsdokument wie ein Gesetz, Dekret, Entwurf etc. (vollstreckbar oder nicht) oder ein Bestandteil eines Rechtsakts (wie ein Artikel).
-        """@de,
-        """
-        A legal document such as an act, decree, bill, etc. (enforceable or not) or a component of a legal act (like an article).
-        """@en,
-        """
-        Un document juridique tel qu'une loi, un décret, un projet de loi, etc. (exécutoire ou non) ou un élément d'un acte juridique (comme un article).
-        """@fr,
-        """
-        Un documento giuridico come una legge, un decreto, un disegno di legge, ecc. (esecutivo o meno) o una parte di un atto giuridico (come un articolo).
-        """@it .
+    schema:description
+        "Ein Rechtsdokument wie ein Gesetz, Dekret, Entwurf etc. (vollstreckbar oder nicht) oder ein Bestandteil eines Rechtsakts (wie ein Artikel)."@de,
+        "A legal document such as an act, decree, bill, etc. (enforceable or not) or a component of a legal act (like an article)."@en,
+        "Un document juridique tel qu'une loi, un décret, un projet de loi, etc. (exécutoire ou non) ou un élément d'un acte juridique (comme un article)."@fr,
+        "Un documento giuridico come una legge, un decreto, un disegno di legge, ecc. (esecutivo o meno) o una parte di un atto giuridico (come un articolo)."@it .
 
 schema:Organization a owl:Class ;
-    schema:name "Organisation"@de,
+    schema:name
+        "Organisation"@de,
         "Organization"@en,
         "Organisation"@fr,
         "Organizzazione"@it ;
@@ -647,7 +628,7 @@ schema:subOrganization a owl:ObjectProperty,
     rdfs:range schema:Organization ;
     owl:inverseOf schema:parentOrganization .
 
-dcat:landingPage a owl:ObjectProperty ;
+schema:url a owl:ObjectProperty ;
     schema:name "hat Landingpage"@de,
         "has landing page"@en,
         "a page d'accueil"@fr,

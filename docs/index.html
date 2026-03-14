@@ -4,9 +4,15 @@
   <meta charset="UTF-8" />
   <title>FOAG System Map</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='20' cy='80' r='12' fill='%23ffa551'/%3E%3Ccircle cx='50' cy='20' r='12' fill='%23ffa551'/%3E%3Ccircle cx='80' cy='70' r='12' fill='%23ffa551'/%3E%3Cline x1='20' y1='80' x2='50' y2='20' stroke='%23ffa551' stroke-width='8' stroke-linecap='round'/%3E%3Cline x1='50' y1='20' x2='80' y2='70' stroke='%23ffa551' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E" />
+  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonld/8.3.2/jsonld.min.js"></script>
   <script src="https://unpkg.com/vis-network@9.1.2/standalone/umd/vis-network.min.js"></script>
   <script src="config.js"></script>
   <script src="query.js"></script>
@@ -15,51 +21,42 @@
 <body>
   <h1 id="systemmapTitle" class="systemmap-title"></h1>
 
-  <!-- The network graph will be rendered here -->
   <div id="network"></div>
 
-  <!-- The info panel remains as it is -->
   <div id="infoPanel" class="info-panel hidden"></div>
 
-  <!-- Settings pop-up structure -->
   <div id="settings-overlay" class="hidden">
     <div id="settings-panel">
       <h2 id="settings-title"></h2>
 
-      <!-- Two-column layout container -->
       <div class="settings-columns">
         
-        <!-- Column 1: Degree Slider and Classes -->
         <div class="settings-column">
-          <!-- New: Minimum Degree Slider -->
-          <div class="settings-section">
-            <h3 id="settings-min-degree-title"></h3>
-            <div id="settings-min-degree-container">
-              <!-- Slider will be dynamically populated by main.js -->
-            </div>
-          </div>
-          
           <div class="settings-section">
             <h3 id="settings-node-classes-title"></h3>
-            <div id="settings-classes">
-              <!-- This will be dynamically populated by main.js -->
-            </div>
+            <div id="settings-classes"></div>
+          </div>
+
+          <div class="settings-section">
+            <h3 id="settings-keywords-title"></h3>
+            <select id="keyword-select" multiple></select>
           </div>
         </div>
 
-        <!-- Column 2: Predicates -->
         <div class="settings-column">
           <div class="settings-section">
             <h3 id="settings-relationship-types-title"></h3>
-            <div id="settings-predicates">
-              <!-- This will be dynamically populated by main.js -->
-            </div>
+            <div id="settings-predicates" class="settings-scroll-box"></div>
+          </div>
+          
+          <div class="settings-section" style="margin-top: 20px;">
+            <h3 id="settings-min-degree-title"></h3>
+            <div id="settings-min-degree-container"></div>
           </div>
         </div>
 
       </div>
 
-      <!-- Action buttons remain at the bottom -->
       <div class="settings-actions">
         <button id="settingsCancel"></button>
         <button id="settingsSave"></button>
@@ -67,7 +64,6 @@
     </div>
   </div>
 
-  <!-- New language selector container -->
   <div class="language-selector-container">
     <select id="languageSelector">
       <option value="de">Deutsch</option>
@@ -77,7 +73,6 @@
     </select>
   </div>
 
-  <!-- Icons container with new search box -->
   <div class="social-icons">
     <div class="search-container">
       <i class="fas fa-search"></i>

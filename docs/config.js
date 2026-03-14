@@ -25,7 +25,11 @@ const APP_CONFIG = {
             emailTooltip: "Email",
             errorLoading: "Error loading data",
             fallbackSystemMapTitle: "DigiAgriFoodCH System Map",
-            noLabel: "No label"
+            noLabel: "No label",
+            uid: "UID",
+            address: "Address",
+            website: "Website",
+            legalStatus: "Legal Status"
         },
         de: {
             appTitle: "Systemkarte BLW",
@@ -45,7 +49,11 @@ const APP_CONFIG = {
             emailTooltip: "E-Mail",
             errorLoading: "Fehler beim Laden der Daten",
             fallbackSystemMapTitle: "DigiAgriFoodCH Systemlandkarte",
-            noLabel: "Ohne Bezeichnung"
+            noLabel: "Ohne Bezeichnung",
+            uid: "UID",
+            address: "Adresse",
+            website: "Website",
+            legalStatus: "Rechtsform"
         },
         fr: {
             appTitle: "Carte des systèmes OFAG",
@@ -65,7 +73,11 @@ const APP_CONFIG = {
             emailTooltip: "E-mail",
             errorLoading: "Erreur de chargement des données",
             fallbackSystemMapTitle: "DigiAgriFoodCH Carte du Système",
-            noLabel: "Sans étiquette"
+            noLabel: "Sans étiquette",
+            uid: "UID",
+            address: "Adresse",
+            website: "Site web",
+            legalStatus: "Forme juridique"
         },
         it: {
             appTitle: "Mappa dei sistemi UFAG",
@@ -85,7 +97,11 @@ const APP_CONFIG = {
             emailTooltip: "E-mail",
             errorLoading: "Errore nel caricamento dei dati",
             fallbackSystemMapTitle: "DigiAgriFoodCH Mappa del Sistema",
-            noLabel: "Senza etichetta"
+            noLabel: "Senza etichetta",
+            uid: "UID",
+            address: "Indirizzo",
+            website: "Sito web",
+            legalStatus: "Forma giuridica"
         }
     },
 

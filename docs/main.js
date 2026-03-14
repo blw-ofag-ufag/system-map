@@ -111,6 +111,12 @@ const getRefs = (node, fullUri) => {
     return vals.map(v => v['@id']).filter(Boolean);
 };
 
+const getFirstValue = (node, fullUri) => {
+    const vals = node[fullUri];
+    if (!vals || vals.length === 0) return null;
+    return vals[0]['@value'] !== undefined ? vals[0]['@value'] : (vals[0]['@id'] || null);
+};
+
 const getKwId = (uri) => {
     const parts = uri.split(/[\/#]/);
     return parts[parts.length - 1];
@@ -132,7 +138,6 @@ async function init() {
         }
     });
 
-    // Derive active UI Predicates strictly
     const rawPredParam = getParam("predicates");
     const currentPreds = rawPredParam === null ? Object.keys(APP_CONFIG.PREDICATE_MAP) : (rawPredParam ? rawPredParam.split(/[;,+\s]+/) : []);
     const activePredicateIris = currentPreds.map(k => expandIri(APP_CONFIG.PREDICATE_MAP[k])).filter(Boolean);
@@ -152,7 +157,6 @@ async function init() {
         const baseClasses = Object.keys(APP_CONFIG.GROUP_MAP);
         const fullPredicateIris = Object.values(APP_CONFIG.PREDICATE_MAP).map(expandIri);
         
-        // 1. Parse Metadata, Ontologies, and Keywords
         expandedGraph.forEach(node => {
             const types = node['@type'] || [];
             
@@ -180,7 +184,6 @@ async function init() {
             }
         });
 
-        // 2. Pre-extract raw nodes and immediately purge non-matching datasets
         const rawNodes = {};
         expandedGraph.forEach(node => {
             const types = node['@type'] || [];
@@ -208,13 +211,11 @@ async function init() {
                 if (n.group === 'Information') {
                     const nodeKwIds = n.keywords.map(k => getKwId(k.id));
                     const hasMatch = activeKeywords.some(kw => nodeKwIds.includes(kw));
-                    // Dataset Exclusion: Exclude dataset universally if it fails the filter
                     if (!hasMatch) delete rawNodes[id];
                 }
             });
         }
 
-        // 3. Client-Side Hierarchical Folding Evaluation
         const parentMap = {};
         const PARENT_PROPS = ["http://schema.org/parentOrganization", "http://purl.org/dc/terms/isPartOf"];
         const CHILD_PROPS = ["http://schema.org/subOrganization", "http://purl.org/dc/terms/hasPart"];
@@ -239,17 +240,16 @@ async function init() {
             }
 
             const state = groupStates[group] || "full";
-            if (state === 'off') return null; // Node class is completely disabled
+            if (state === 'off') return null;
             if (state === 'full') return id;
             
             if (parentMap[id]) return findRoot(parentMap[id], visited);
             return id;
         };
 
-        // 4. Construct Folded Nodes & Consolidate Keywords
         Object.values(rawNodes).forEach(n => {
             const rootId = findRoot(n.id);
-            if (rootId === null) return; // Drop if explicitly disabled
+            if (rootId === null) return;
 
             if (!allNodesData[rootId]) {
                 allNodesData[rootId] = JSON.parse(JSON.stringify(rawNodes[rootId] || n)); 
@@ -265,7 +265,6 @@ async function init() {
             }
         });
 
-        // 5. Fold and Transmit Valid Configured Edges
         expandedGraph.forEach(node => {
             const fromId = node['@id'];
             const rootFrom = findRoot(fromId);
@@ -287,7 +286,6 @@ async function init() {
             });
         });
 
-        // 6. ENFORCE LOCAL TOPOLOGICAL BFS TRAVERSAL
         if (activeKeywords.length > 0) {
             const visAdjacency = {};
             Object.values(allEdgesData).forEach(edge => {
@@ -297,7 +295,6 @@ async function init() {
                 visAdjacency[edge.to].add(edge.from);
             });
 
-            // Find seeds strictly from surviving datasets
             const visSeeds = [];
             Object.values(allNodesData).forEach(n => {
                 if (n.group === 'Information') {
@@ -306,11 +303,9 @@ async function init() {
             });
 
             if (visSeeds.length === 0) {
-                // Total exclusion if no datasets align with the filter
                 allNodesData = {};
                 allEdgesData = {};
             } else {
-                // BFS Traversal
                 const connectedNodes = new Set(visSeeds);
                 const queue = [...visSeeds];
 
@@ -429,7 +424,7 @@ async function init() {
         infoPanel.classList.remove("fixed");
     };
 
-    const getNodeInfoHtml = (nodeId) => {
+    const getNodeInfoHtml = (nodeId, additionalData = null) => {
         const nodeData = allNodesData[nodeId];
         if(!nodeData) return '';
         const { text: fullLabel, lang: labelLang, isFallback } = getLocalizedText(nodeData.name, currentLang);
@@ -451,7 +446,32 @@ async function init() {
             <div class="info-panel-header">
                 <h4>${titleHtml} ${classChipHtml}</h4>
             </div>`;
+            
         if (comment) html += `<p class="info-panel-comment"><small>${comment}</small></p>`;
+
+        if (additionalData) {
+            if (additionalData.legalStatusName && Object.keys(additionalData.legalStatusName).length > 0) {
+                const { text: legalStatusText } = getLocalizedText(additionalData.legalStatusName, currentLang);
+                if (legalStatusText) {
+                    html += `<p class="info-panel-meta"><strong>${APP_CONFIG.UI_TEXT[currentLang].legalStatus}:</strong> ${legalStatusText}</p>`;
+                }
+            }
+            if (additionalData.uid) {
+                html += `<p class="info-panel-meta"><strong>${APP_CONFIG.UI_TEXT[currentLang].uid}:</strong> ${additionalData.uid}</p>`;
+            }
+            if (additionalData.streetAddress || additionalData.postalCode || additionalData.addressLocality) {
+                const addressParts = [
+                    additionalData.streetAddress,
+                    `${additionalData.postalCode || ''} ${additionalData.addressLocality || ''}`.trim()
+                ].filter(Boolean);
+                if (addressParts.length > 0) {
+                    html += `<p class="info-panel-meta"><strong>${APP_CONFIG.UI_TEXT[currentLang].address}:</strong> ${addressParts.join(', ')}</p>`;
+                }
+            }
+            if (additionalData.landingPage) {
+                html += `<p class="info-panel-meta"><strong>${APP_CONFIG.UI_TEXT[currentLang].website}:</strong> <a href="${additionalData.landingPage}" target="_blank">${additionalData.landingPage}</a></p>`;
+            }
+        }
 
         if (nodeData.keywords && nodeData.keywords.length > 0) {
             const keywordHtmls = nodeData.keywords.map(kw => {
@@ -542,7 +562,7 @@ async function init() {
         }
 
         if (!infoPanel.classList.contains("hidden")) {
-            if (pinnedNodeId) showInfo(getNodeInfoHtml(pinnedNodeId));
+            if (pinnedNodeId) showInfo(getNodeInfoHtml(pinnedNodeId, allNodesData[pinnedNodeId]?.details));
             else if (pinnedEdgeId) showInfo(getEdgeInfoHtml(pinnedEdgeId));
         }
         
@@ -620,7 +640,7 @@ async function init() {
         setParamsAndReload(params);
     });
 
-    network.on("click", params => {
+    network.on("click", async params => {
         let clickedNodeId = params.nodes[0] || null;
         if (clickedNodeId && pinnedNodeId) {
             const distMap = getDistancesUpToTwoHops(network, pinnedNodeId);
@@ -629,9 +649,42 @@ async function init() {
         pinnedNodeId = clickedNodeId;
         pinnedEdgeId = clickedNodeId ? null : params.edges[0] || null;
 
-        if (pinnedNodeId) showInfo(getNodeInfoHtml(pinnedNodeId));
-        else if (pinnedEdgeId) showInfo(getEdgeInfoHtml(pinnedEdgeId));
-        else { network.unselectAll(); hideInfo(); }
+        if (pinnedNodeId) {
+            showInfo(getNodeInfoHtml(pinnedNodeId, allNodesData[pinnedNodeId].details));
+            
+            if (!allNodesData[pinnedNodeId].detailsFetched) {
+                allNodesData[pinnedNodeId].detailsFetched = true;
+                try {
+                    const query = window.getNodeDetailsQuery(pinnedNodeId);
+                    const rawJsonLd = await window.getSparqlData(query);
+                    const expandedGraph = await jsonld.expand(rawJsonLd);
+                    
+                    if (expandedGraph && expandedGraph.length > 0) {
+                        const nodeData = expandedGraph.find(n => n['@id'] === pinnedNodeId) || expandedGraph[0];
+                        
+                        allNodesData[pinnedNodeId].details = {
+                            landingPage: getFirstValue(nodeData, 'http://www.w3.org/ns/dcat#landingPage'),
+                            uid: getFirstValue(nodeData, 'https://agriculture.ld.admin.ch/system-map/uid'),
+                            streetAddress: getFirstValue(nodeData, 'https://agriculture.ld.admin.ch/system-map/streetAddress'),
+                            postalCode: getFirstValue(nodeData, 'https://agriculture.ld.admin.ch/system-map/postalCode'),
+                            addressLocality: getFirstValue(nodeData, 'https://agriculture.ld.admin.ch/system-map/addressLocality'),
+                            legalStatusName: getLangMap(nodeData, 'https://agriculture.ld.admin.ch/system-map/legalStatusName')
+                        };
+                        
+                        if (pinnedNodeId === clickedNodeId) {
+                            showInfo(getNodeInfoHtml(pinnedNodeId, allNodesData[pinnedNodeId].details));
+                        }
+                    }
+                } catch (e) {
+                    console.error("Failed to fetch node details:", e);
+                }
+            }
+        } else if (pinnedEdgeId) {
+            showInfo(getEdgeInfoHtml(pinnedEdgeId));
+        } else { 
+            network.unselectAll(); 
+            hideInfo(); 
+        }
         
         applyAllStyles();
         infoPanel.classList.toggle("fixed", !!(pinnedNodeId || pinnedEdgeId));

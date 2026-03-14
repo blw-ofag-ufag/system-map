@@ -141,7 +141,6 @@ html, body {
     margin-bottom: 15px;
 }
 
-/* Choices.js Native UI Integration Overrides */
 .choices {
     margin-bottom: 0;
     overflow: visible;
@@ -313,6 +312,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 .info-panel-comment {
     margin-top: 10px;
+    margin-bottom: 15px;
+}
+.info-panel-meta {
+    margin: 8px 0;
+    font-size: 13px;
+    color: var(--color-font-normal);
+}
+.info-panel-meta strong {
+    font-weight: 600;
+}
+.info-panel-meta a {
+    color: var(--color-group-system-bg);
+    text-decoration: none;
+}
+.info-panel-meta a:hover {
+    text-decoration: underline;
 }
 #infoPanel {
     word-wrap: break-word;
@@ -397,7 +412,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 .keyword-container {
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;

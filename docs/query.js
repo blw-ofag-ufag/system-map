@@ -112,6 +112,68 @@ WHERE {
 }
 `;
 
+window.getNodeDetailsQuery = function(nodeId) {
+    return `
+PREFIX schema: <http://schema.org/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
+
+CONSTRUCT {
+    ?node dcat:landingPage ?landingPage ;
+          systemmap:uid ?uid ;
+          systemmap:streetAddress ?addressName ;
+          systemmap:postalCode ?postalCode ;
+          systemmap:addressLocality ?addressLocality ;
+          systemmap:legalStatusName ?legalStatusName .
+}
+WHERE {
+    BIND( <${nodeId}> AS ?node )
+    
+    OPTIONAL {
+        {
+            SELECT ?landingPage WHERE {
+                GRAPH <https://lindas.admin.ch/foag/system-map> {
+                    <${nodeId}> dcat:landingPage ?landingPage .
+                }
+            } LIMIT 1
+        }
+    }
+    
+    OPTIONAL {
+        GRAPH <https://lindas.admin.ch/foj/zefix> {
+            OPTIONAL {
+                {
+                    SELECT ?uid WHERE {
+                        <${nodeId}> schema:identifier [
+                            schema:name "CompanyUID" ;
+                            schema:value ?uid
+                        ] .
+                    } LIMIT 1
+                }
+            }
+            OPTIONAL {
+                {
+                    SELECT ?addressName ?postalCode ?addressLocality WHERE {
+                        <${nodeId}> schema:address [
+                            schema:streetAddress ?addressName ;
+                            schema:postalCode ?postalCode ;
+                            schema:addressLocality ?addressLocality
+                        ] .
+                    } LIMIT 1
+                }
+            }
+            OPTIONAL {
+                <${nodeId}> schema:additionalType ?legalStatus .
+                GRAPH <https://lindas.admin.ch/lindas-ech> {
+                    ?legalStatus schema:name ?legalStatusName .
+                }
+            }
+        }
+    }
+}
+`;
+};
+
 window.getSparqlData = async function(query) {
     const url = `${ENDPOINT}?query=${encodeURIComponent(query)}`;
     const response = await fetch(url, { headers: { Accept: "application/ld+json" } });

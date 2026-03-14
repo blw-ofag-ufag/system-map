@@ -167,7 +167,13 @@ systemmap:Si8UnIQkj02jgbLEb a dcmitype:Collection ;
         systemmap:SwlgSr7ukziL6iHsP,
         systemmap:Sy4WeMDNoah4TkAYX,
         systemmap:SyfZhzeyT1CqJU0BP,
-        systemmap:SyhthSmTCgM19Wysy .
+        systemmap:SyhthSmTCgM19Wysy,
+        systemmap:SsJ9OfSkUgPD8dkz3,
+        systemmap:SqeNr0H0FGL6Uv5Rr,
+        systemmap:S2tIdqNmt3uS5Ny6D,
+        systemmap:SE8y4MuFWW5BKqK92,
+        systemmap:SaVyVVsIDkiDMtQq4,
+        systemmap:S1JvEmah9Tl0698au .
 
 systemmap:S0hwJxy2kXNPFbl4C a service:Service ;
     schema:name "Lineare Korrektur (LK)-Service"@de ;

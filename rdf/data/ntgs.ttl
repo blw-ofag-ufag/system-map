@@ -177,14 +177,16 @@ systemmap:SH7U7SUsgqWmNqXA5 a dcmitype:Collection ;
 zefix:1457969 a schema:Organization ;
     schema:name "Nutztiergesundheit Schweiz"@de ;
     systemmap:abbreviation "NTGS"@de ;
-    schema:description "Der Verein Nutztiergesundheit Schweiz (NTGS) setzt sich für eine gesunde und zukunftsfähige Nutztierhaltung in der Schweiz ein. Gegründet im Juni 2020, vereint NTGS nationale Organisationen aus Landwirtschaft, Tierärzteschaft, Forschung, sowie Tierhalter-, Züchter- und Viehhändlerverbände. Gemeinsam arbeiten wir daran, die Tiergesundheit nachhaltig zu fördern. Der Sitz von NTGS ist in Zollikofen."@de .
+    schema:description "Der Verein Nutztiergesundheit Schweiz (NTGS) setzt sich für eine gesunde und zukunftsfähige Nutztierhaltung in der Schweiz ein. Gegründet im Juni 2020, vereint NTGS nationale Organisationen aus Landwirtschaft, Tierärzteschaft, Forschung, sowie Tierhalter-, Züchter- und Viehhändlerverbände. Gemeinsam arbeiten wir daran, die Tiergesundheit nachhaltig zu fördern. Der Sitz von NTGS ist in Zollikofen."@de ;
+    dcat:landingPage <https://www.nutztiergesundheit-schweiz.ch/> .
 
 zefix:804864 a schema:Organization ;
     schema:name "Qualitas AG"@de ;
-    schema:description "Die Qualitas AG entwickelt IT-Lösungen für die Schweizer Nutztierbranche und bietet diese und Dienstleistungen für die Tierzucht an."@de .
+    schema:description "Die Qualitas AG entwickelt IT-Lösungen für die Schweizer Nutztierbranche und bietet diese und Dienstleistungen für die Tierzucht an."@de ;
+    dcat:landingPage <https://qualitasag.ch/> .
 
 zefix:984853 a schema:Organization ;
-    schema:name "OblonAG, Amacker & Partner Informatik AG"@de .
+    schema:name "Amacker&Partner Informatik AG"@de .
 
 zefix:430315 a schema:Organization ;
     schema:name "Diana Software AG"@de ;
@@ -192,7 +194,8 @@ zefix:430315 a schema:Organization ;
 
 systemmap:SCN2FR1ecbZOlXssf a schema:Organization ;
     schema:name "Vetera GmbH"@de ;
-    schema:description "Vetera GmbH ist ein Softwareanbieter für die Tiermedizin in der DACH-Region mit Hauptsitz in Deutschland."@de .
+    schema:description "Vetera GmbH ist ein Softwareanbieter für die Tiermedizin in der DACH-Region mit Hauptsitz in Deutschland."@de ;
+    dcat:landingPage <https://www.vetera.net/> .
 
 zefix:278206 a schema:Organization ;
     schema:name "IDEXX"@de ;
@@ -204,7 +207,8 @@ systemmap:S713c8cc22340cd0 a schema:Organization ;
 
 systemmap:SqbzqGjI3ws0stDBH a schema:Organization ;
     schema:name "Universität Zürich"@de ;
-    systemmap:abbreviation "UZH"@de .
+    systemmap:abbreviation "UZH"@de ;
+    dcat:landingPage <https://www.uzh.ch/> .
 
 systemmap:S9oFBawOIYUs3mJqf a schema:Organization ;
     schema:name "Vetsuisse-Fakultät"@de ;
@@ -221,11 +225,13 @@ systemmap:Sd9cbfdc59776e2b a schema:Organization ;
 
 zefix:414877 a schema:Organization ;
     schema:name "SUISAG"@de ;
-    schema:description "Die SUISAG ist ein Unternehmen für die Schweizer Schweineproduzenten und internationalen Genetik-Kunden. Sie bietet im Bereich Schweineproduktion Schweizer Genetik, Gesundheitsprogramme und weitere Dienstleistungen an."@de .
+    schema:description "Die SUISAG ist ein Unternehmen für die Schweizer Schweineproduzenten und internationalen Genetik-Kunden. Sie bietet im Bereich Schweineproduktion Schweizer Genetik, Gesundheitsprogramme und weitere Dienstleistungen an."@de ;
+    dcat:landingPage <https://www.suisag.com/> .
 
 zefix:1441172 a schema:Organization ;
     schema:name "qualiporc Genossenschaft"@de ;
-    schema:description "Der Gesundheitsservice der qualiporc Genossenschaft (QGS) ist ein schweizweit tätiger Gesundheitsdienst für die Schweineproduktion."@de .
+    schema:description "Der Gesundheitsservice der qualiporc Genossenschaft (QGS) ist ein schweizweit tätiger Gesundheitsdienst für die Schweineproduktion."@de ;
+    dcat:landingPage <https://qualiporc.ch/> .
 
 systemmap:S9ef677e7b565bf9 a schema:Organization ;
     schema:name "Fachstelle Animal Health Info System"@de ;

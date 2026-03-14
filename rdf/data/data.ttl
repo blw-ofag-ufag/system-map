@@ -2053,7 +2053,8 @@ systemmap:SlTSOXsBC2LN7Qkp a schema:SoftwareApplication ;
         Integra diverse funzioni agronomiche e amministrative e offre agli agricoltori una soluzione centrale per la gestione della loro azienda.
         Barto è gestita da Barto AG e collabora con partner del settore agricolo per fornire soluzioni digitali innovative.
         """@it ;
-    systemmap:operatedBy systemmap:SDetpcQhSMo4IAeAb .
+    systemmap:operatedBy zefix:1293128 ;
+    dcat:landingPage <https://www.barto.ch/> .
 
 systemmap:SlfheulBjlQDwuaIM a schema:SoftwareApplication ;
     schema:name "HODUFLU"@de,
@@ -4511,7 +4512,7 @@ systemmap:Sl5KyePu7JtGiE3V a systemmap:MasterData ;
         """@it ;
     systemmap:containedIn systemmap:SjhTrVt8CB9QFq0Yn .
 
-systemmap:SDetpcQhSMo4IAeAb a systemmap:PrivateOrganization ;
+zefix:1293128 a systemmap:PrivateOrganization ;
     schema:name "Barto AG"@de,
         "Barto AG"@en,
         "Barto AG"@fr,
@@ -4540,7 +4541,8 @@ systemmap:SDetpcQhSMo4IAeAb a systemmap:PrivateOrganization ;
         La piattaforma integra varie funzioni agronomiche e amministrative e consente una gestione efficiente delle risorse.
         Barto AG collabora con partner del settore agricolo per fornire soluzioni digitali innovative.
         """@it ;
-    systemmap:ownedBy zefix:328631 .
+    systemmap:ownedBy zefix:328631 ;
+    dcat:landingPage <https://www.barto.ch/> .
 
 systemmap:SGWW0nzBJjBsx2QTr a systemmap:PrivateOrganization ;
     schema:name "Farmable"@de .

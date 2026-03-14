@@ -289,7 +289,7 @@ systemmap:metadata a void:Dataset ;
         Una raccolta di organizzazioni, applicazioni software e set di dati nel settore agricolo e alimentare svizzero.
         """@it ;
     rdfs:seeAlso <https://github.com/blw-ofag-ufag/metadata/blob/main/data/raw/datasets/83f93ff4-ef3f-43f1-af2c-83f18952283e.json> ;
-    dcat:landingPage <https://github.com/blw-ofag-ufag/system-map> .
+    schema:url <https://github.com/blw-ofag-ufag/system-map> .
 
 <https://www.fedlex.admin.ch/eli/cc/1986/926_926_926> a schema:Legislation ;
     schema:name "Bundesgesetz über die landwirtschaftliche Pacht"@de .
@@ -546,7 +546,7 @@ zefix:429308 a schema:Organization ;
 zefix:455252 a schema:Organization,
         systemmap:PrivateOrganization ;
     schema:name "Bell Schweiz AG"@de ;
-    dcat:landingPage <https://www.bell.ch/> ;
+    schema:url <https://www.bell.ch/> ;
     systemmap:ownedBy zefix:38909 .
 
 zefix:459488 a schema:Organization ;
@@ -578,7 +578,7 @@ zefix:469727 a schema:Organization,
         zefix:459488,
         zefix:7011,
         zefix:793667 ;
-    dcat:landingPage <https://www.proviande.ch/> .
+    schema:url <https://www.proviande.ch/> .
 
 zefix:540574 a schema:Organization ;
     schema:name "Zürcher Bauernverband"@de ;
@@ -597,7 +597,7 @@ systemmap:S00fVJvGUmwXh0cOz a schema:SoftwareApplication ;
         agridata.ch bildet die Grundlage für den Datenraum des Schweizer Agrar- und Ernährungssektors.
         Der Datenübertragungsdienst ermöglicht den sicheren, effizienten und vertrauenswürdigen Austausch von Daten, die Umsetzung der Interoperabilität sowie das Once-Only Prinzip.
         """@de ;
-    dcat:landingPage <https://agridata.ch/> ;
+    schema:url <https://agridata.ch/> ;
     systemmap:operatedBy systemmap:SFAwQAwxBcNnaURgO .
 
 systemmap:S0hwJxyshSNPXbP34 a schema:SoftwareApplication,
@@ -616,7 +616,7 @@ systemmap:S0qIaLPaYFa3mHse4 a schema:SoftwareApplication,
     schema:description """
         IoT-gestützte Betriebsführung, Wetter, Anbauplanung, Analytik.
         """@de ;
-    dcat:landingPage <https://xfarm.ag/> ;
+    schema:url <https://xfarm.ag/> ;
     systemmap:operatedBy systemmap:SmGaThSxn7eIC3JvM .
 
 systemmap:S0tkRCUIU88Xtc2HK a schema:SoftwareApplication ;
@@ -637,7 +637,7 @@ systemmap:S0tkRCUIU88Xtc2HK a schema:SoftwareApplication ;
         """
         SheepOnline è il libro genealogico online della Federazione svizzera di allevamento ovino. Permette una gestione semplice del bestiame, calcoli di consanguineità, la creazione di documenti e l'iscrizione a mostre. Offre anche un mercato online gratuito per la compravendita di animali.
         """@it ;
-    dcat:landingPage <https://www.sheeponline.ch/> ;
+    schema:url <https://www.sheeponline.ch/> ;
     systemmap:operatedBy zefix:166248 .
 
 systemmap:S1nS1Ehy2BJj22GCX a schema:SoftwareApplication ;
@@ -678,7 +678,7 @@ systemmap:S1pGaLPaZXa3iFwe4 a schema:SoftwareApplication,
         Die modular aufgebaute Software bietet Funktionen wie Parzellen- und Kulturenverzeichnis, Inventar- und Düngebuch sowie diverse Auswertungs- und Druckmöglichkeiten und ist geräteübergreifend jederzeit online verfügbar.
         Mit verschlüsselter Datenübertragung und Schweizer Hosting gewährleistet der Dienst Datenschutz und Unabhängigkeit, bei jährlicher Lizenzierung ab CHF 125.
         """@de ;
-    dcat:landingPage <https://feldkalender.ch/> ;
+    schema:url <https://feldkalender.ch/> ;
     systemmap:operatedBy zefix:1419651 .
 
 systemmap:S2Q2s27pTp6oRYHmf a schema:SoftwareApplication ;
@@ -708,7 +708,7 @@ systemmap:S2gC2BTVjYNH05BNf a schema:SoftwareApplication ;
         """
         Un software ERP per le aziende di trasformazione della carne, che offre funzioni per acquisti, produzione, vendite e tracciabilità. È utilizzato da aziende come Marmy Viandes en Gros SA e SBZ Schlachtbetrieb Zürich AG.
         """@it ;
-    dcat:landingPage <https://datapass.ch/software/> ;
+    schema:url <https://datapass.ch/software/> ;
     systemmap:operatedBy zefix:1013423 .
 
 systemmap:S3TSqZWni4DBTqkAV a schema:SoftwareApplication ;
@@ -733,7 +733,7 @@ systemmap:S3TSqZWni4DBTqkAV a schema:SoftwareApplication ;
         SmartCow è un'app digitale per la gestione della mandria di swissgenetics che fornisce agli agricoltori strumenti per suggerimenti di accoppiamento, gestione della fertilità e accesso ai dati degli animali.
         L'app consente una gestione efficiente della mandria direttamente dallo smartphone.
         """@it ;
-    dcat:landingPage <https://www.swissgenetics.ch/de/smartcow-managen-sie-ihre-herde-digital> ;
+    schema:url <https://www.swissgenetics.ch/de/smartcow-managen-sie-ihre-herde-digital> ;
     systemmap:operatedBy zefix:448334 .
 
 systemmap:S4wIBXSXQwmbyHy9i a schema:SoftwareApplication ;
@@ -815,7 +815,7 @@ systemmap:S844y5UCUBrKfEXoA a schema:SoftwareApplication ;
         """
         Il portale clienti Bio Suisse (Supply Chain Monitor, SCM) è la piattaforma online centrale per licenziatari, trasformatori e commercianti per gestire le catene di fornitura, i certificati e i dati rilevanti di Bio Suisse. Gli utenti possono registrare fornitori, gestire le catene di fornitura e inviare digitalmente la documentazione necessaria per la certificazione Bio Suisse. Il portale supporta la conformità alle linee guida Bio Suisse e semplifica la comunicazione con la sede centrale.
         """@it ;
-    dcat:landingPage <https://scm.biosuisse.ch> ;
+    schema:url <https://scm.biosuisse.ch> ;
     systemmap:operatedBy zefix:427343 .
 
 systemmap:S8RVf2XMzkPzK32ZX a schema:SoftwareApplication ;
@@ -852,7 +852,7 @@ systemmap:S8wfrZtWOCmMSB6sv a schema:SoftwareApplication ;
         """
         HolsteinVision è uno strumento elettronico di gestione delle mandrie della cooperativa Holstein Switzerland, che offre versioni sincronizzate per PC e dispositivi mobili per la gestione dei dati degli animali, il monitoraggio della fertilità e l'accesso ai documenti di allevamento. L'app mobile gratuita consente agli agricoltori di accedere in qualsiasi momento ai dati aggiornati della mandria e di utilizzare funzioni come la registrazione dei dati sanitari o la pianificazione degli accoppiamenti.
         """@it ;
-    dcat:landingPage <https://www.holsteinvision.ch/> ;
+    schema:url <https://www.holsteinvision.ch/> ;
     systemmap:operatedBy zefix:278958 .
 
 systemmap:S9GvpUNuj5fGyPhGf a schema:SoftwareApplication ;
@@ -916,7 +916,7 @@ systemmap:S9VcxLSoIIwQjlZQ2 a schema:SoftwareApplication ;
     schema:description """
         FarmX ist eine Schweizer Online-Plattform zur Vermietung und Vermittlung landwirtschaftlicher Maschinen und Dienstleistungen, die es Landwirten, Maschinenringen und Lohnunternehmern ermöglicht, ihre Maschinen unkompliziert online anzubieten oder zu mieten.
         """@de ;
-    dcat:landingPage <https://farmx.ch/home> ;
+    schema:url <https://farmx.ch/home> ;
     systemmap:operatedBy zefix:1373020 .
 
 systemmap:S9VcxLSoIIwQjoexY a schema:SoftwareApplication ;
@@ -968,7 +968,7 @@ systemmap:SAPDp3o8XAHPuZnhB a schema:SoftwareApplication ;
         """
         Piattaforma online per la gestione professionale della mandria con dati aggiornati di allevamento e di produzione, gratuita per i soci swissherdbook.
         """@it ;
-    dcat:landingPage <https://www.swissherdbook.ch/de/dienstleistungen/online/redonline> ;
+    schema:url <https://www.swissherdbook.ch/de/dienstleistungen/online/redonline> ;
     systemmap:operatedBy zefix:165954 .
 
 systemmap:SAwz5t3SyxjgPiHhX a schema:SoftwareApplication ;
@@ -984,7 +984,7 @@ systemmap:SBx5yiPz9Nxy2Wnue a schema:SoftwareApplication ;
     schema:description """
         Intranet-Seite der Mooh Genossenschaft.
         """@de ;
-    dcat:landingPage <https://intranet.mooh.swiss/> ;
+    schema:url <https://intranet.mooh.swiss/> ;
     systemmap:operatedBy zefix:1256441 .
 
 systemmap:SCporGQs4VQT7lJVs a schema:SoftwareApplication ;
@@ -1005,7 +1005,7 @@ systemmap:SCporGQs4VQT7lJVs a schema:SoftwareApplication ;
         """
         Un sistema di gestione della salute per aziende lattiero-casearie che misura continuamente i dati sanitari direttamente dalla mucca tramite una tecnologia a bolo per rilevare precocemente le malattie e consentire misure preventive.
         """@it ;
-    dcat:landingPage <https://www.smaxtec.com/> ;
+    schema:url <https://www.smaxtec.com/> ;
     systemmap:operatedBy zefix:1566606 .
 
 systemmap:SDoGAjF1AJCdFZQQl a schema:SoftwareApplication ;
@@ -1026,7 +1026,7 @@ systemmap:SDoGAjF1AJCdFZQQl a schema:SoftwareApplication ;
         """
         App mobile che consente agli agricoltori di registrare direttamente gli animali da macello. Facilita la programmazione, il coordinamento del trasporto e la documentazione automatizzata.
         """@it ;
-    dcat:landingPage <https://www.micarna.ch/de/services/e-direct> ;
+    schema:url <https://www.micarna.ch/de/services/e-direct> ;
     systemmap:operatedBy zefix:130459 .
 
 systemmap:SDwz5T4SyxjgPiHbH a schema:SoftwareApplication,
@@ -1035,7 +1035,7 @@ systemmap:SDwz5T4SyxjgPiHbH a schema:SoftwareApplication,
     schema:description """
         Betriebsführung Pflanzenbau, Zucht- und Tierdatenverwaltung.
         """@de ;
-    dcat:landingPage <https://agroplus.ch/> ;
+    schema:url <https://agroplus.ch/> ;
     systemmap:operatedBy zefix:505628 .
 
 systemmap:SDwz5T4SyxjgPiHbX a schema:SoftwareApplication,
@@ -1047,7 +1047,7 @@ systemmap:SDwz5T4SyxjgPiHbX a schema:SoftwareApplication,
         Nach Wunsch können Sie die im Feldkalender eingetragenen Düngemittel automatisch in Ihre Suisse-Bilanz Berechnung einfliessen lassen.
         Damit ist der Feldkalender von AGROPLUS ein wichtiger Begleiter für jeden Landwirt.
         """@de ;
-    dcat:landingPage <https://www.agrarsoftware.ch/agroplus.html> ;
+    schema:url <https://www.agrarsoftware.ch/agroplus.html> ;
     systemmap:operatedBy zefix:505628 .
 
 systemmap:SE5DY78J7vgfoiDLj a schema:SoftwareApplication ;
@@ -1126,7 +1126,7 @@ systemmap:SGHEvT8M3jGEd8KdJ a schema:SoftwareApplication ;
         """
         Programma di analisi basato sul web per ingrassatori di bovini, che funge da strumento per la pianificazione e il controllo della produzione e supporta la registrazione e l'archiviazione di dati importanti nell'ingrasso di bovini.
         """@it ;
-    dcat:landingPage <https://www.melior.ch/dienstleistung/smartbeef> ;
+    schema:url <https://www.melior.ch/dienstleistung/smartbeef> ;
     systemmap:operatedBy zefix:76051 .
 
 systemmap:SGRIDS_LmnPqR5tYvCxDG a schema:SoftwareApplication ;
@@ -1147,7 +1147,7 @@ systemmap:SGRIDS_LmnPqR5tYvCxDG a schema:SoftwareApplication ;
         """
         GRIDS è un sistema informativo e di documentazione sui grandi predatori, gestito dall'UFAM in collaborazione con i cantoni. Viene utilizzato per la gestione dei danni al bestiame, le misure di regolazione, la creazione di statistiche ed è collegato ad AGIS, AMICUS e alla BDTA.
         """@it ;
-    dcat:landingPage <https://www.bafu.admin.ch/bafu/de/home/themen/biodiversitaet/tiere-und-pflanzen/tiere--pilze--mikroorganismen/grossraubtiere.html> ;
+    schema:url <https://www.bafu.admin.ch/bafu/de/home/themen/biodiversitaet/tiere-und-pflanzen/tiere--pilze--mikroorganismen/grossraubtiere.html> ;
     systemmap:operatedBy systemmap:SwlgSr7ukziL6iHsP .
 
 systemmap:SGdyOoksCnRRZwi2Q a schema:SoftwareApplication ;
@@ -1280,7 +1280,7 @@ systemmap:SJ15CI0vn3S1JgcOd a schema:SoftwareApplication ;
         Vetera è un software gestionale completo per veterinari che offre funzioni come la gestione dei pazienti, la pianificazione degli appuntamenti, la fatturazione delle prestazioni e la gestione dei farmaci.
         È sviluppato e gestito da Vetera.net GmbH, con swissVets AG come partner e utente chiave in Svizzera.
         """@it ;
-    dcat:landingPage <https://vetera.net/> ;
+    schema:url <https://vetera.net/> ;
     systemmap:operatedBy systemmap:SrG5yvnwax87iuQw8 .
 
 systemmap:SLxeXHOfmC6DkBGl a schema:SoftwareApplication ;
@@ -1289,7 +1289,7 @@ systemmap:SLxeXHOfmC6DkBGl a schema:SoftwareApplication ;
         Die 'ZA-AUI: Betriebsrückmeldung' ermöglicht den Teilnehmenden am Projekt ZA-AUI die berechneten Agrarumweltindikatoren (AUI) ihres Betriebs online abzurufen, für welche sie jährlich Daten an Agroscope liefern.
         Die eigenen Betriebsergebnisse können mit den AUI-Ergebnissen desselben Betriebstyps aus dem ZA-AUI-Betriebsnetz verglichen werden.
         """@de ;
-    dcat:landingPage <https://apps.agroscope.info/sp/za-aui/2/app/datenreihe>,
+    schema:url <https://apps.agroscope.info/sp/za-aui/2/app/datenreihe>,
         <https://www.agrarumweltindikatoren.ch>,
         <https://www.za-aui.ch> ;
     systemmap:abbreviation "ZA-AUI"@de ;
@@ -1313,7 +1313,7 @@ systemmap:SMHngOxi88zm9ya9N a schema:SoftwareApplication ;
         """
         Piattaforma ERP per aziende di trasformazione carne con gestione macellazione, tracciabilità dei lotti e contabilità integrata, utilizzata da aziende come Bigler AG.
         """@it ;
-    dcat:landingPage <https://www.mybica.ch/produkt.html> ;
+    schema:url <https://www.mybica.ch/produkt.html> ;
     systemmap:operatedBy zefix:1226256 .
 
 systemmap:SMjqlEoVCR9wpTyN1 a schema:SoftwareApplication ;
@@ -1408,7 +1408,7 @@ systemmap:SPe8M0urgsNbKw4ut a schema:SoftwareApplication,
         Die 365FarmNet Plattform ist herstellerunabhängig, betriebszweigübergreifend und deckt über die Einbindung von Partneranwendungen alle für die Betriebsführung notwendigen Funktionen ab:
         Von der Anbauplanung bis zur Ernte, vom Schlag bis zum Stall, von der Dokumentation bis zur Betriebsanalyse.
         """@de ;
-    dcat:landingPage <https://www.365farmnet.com/> ;
+    schema:url <https://www.365farmnet.com/> ;
     systemmap:operatedBy systemmap:Sng7djgBb3dkdoxbU .
 
 systemmap:SQfl1MHnNpsAj3WP a schema:SoftwareApplication ;
@@ -1420,7 +1420,7 @@ systemmap:SQfl1MHnNpsAj3WP a schema:SoftwareApplication ;
         "A visualization tool for information about IT systems, the data those contain and their operating organizations in the Swiss agri-food sector."@en,
         "Un outil de visualisation des informations sur les systèmes informatiques, les données qu'ils contiennent et les organisations qui les exploitent dans le secteur agroalimentaire suisse."@fr,
         "Uno strumento di visualizzazione delle informazioni sui sistemi IT, i dati in essi contenuti e le organizzazioni che li gestiscono nel settore agroalimentare svizzero."@it ;
-    dcat:landingPage <https://blw-ofag-ufag.github.io/system-map/> ;
+    schema:url <https://blw-ofag-ufag.github.io/system-map/> ;
     systemmap:operatedBy systemmap:SFAwQAwxBcNnaURgO .
 
 systemmap:SQkEfw7VYTz3ceOrg a schema:SoftwareApplication ;
@@ -1441,7 +1441,7 @@ systemmap:SQkEfw7VYTz3ceOrg a schema:SoftwareApplication ;
         """
         Un modulo online per la richiesta di permessi speciali per l'uso di prodotti fitosanitari (PFF) in colture speciali, fornito dallo Strickhof in collaborazione con il Dipartimento dei lavori pubblici del Cantone di Zurigo.
         """@it ;
-    dcat:landingPage <https://www.strickhof.ch/publikationen/elektronische-sonderbewilligung/> ;
+    schema:url <https://www.strickhof.ch/publikationen/elektronische-sonderbewilligung/> ;
     systemmap:operatedBy systemmap:S0ummGTITezxHMtA3,
         systemmap:SWRHHjM4WnPdLkEVr .
 
@@ -1467,7 +1467,7 @@ systemmap:SSALCAfutureLmnPqR1tYvCxD8 a schema:SoftwareApplication ;
         SALCAfuture è un sistema esperto per la creazione di valutazioni del ciclo di vita (LCA) per prodotti agricoli, alimenti e aziende agricole nell'ambito di progetti di ricerca.
         Facilita l'inserimento dei dati, consente calcoli precisi degli impatti ambientali secondo il metodo SALCA e fornisce un accesso tramite interfaccia web per i partner di progetto.
         """@it ;
-    dcat:landingPage <https://www.agroscope.admin.ch/agroscope/en/home/topics/environment-resources/life-cycle-assessment/databases-software-lca/lca-software.html> ;
+    schema:url <https://www.agroscope.admin.ch/agroscope/en/home/topics/environment-resources/life-cycle-assessment/databases-software-lca/lca-software.html> ;
     systemmap:operatedBy systemmap:SIo1a8l3IT4lBqBJE .
 
 systemmap:SSpO8T6drwrwFgLXG a schema:SoftwareApplication ;
@@ -1560,7 +1560,7 @@ systemmap:SVlngVUmE9joYkIg7 a schema:SoftwareApplication ;
         """
         Sistema di tracciabilità basato sul DNA che verifica la provenienza della carne lungo le filiere.
         """@it ;
-    dcat:landingPage <https://www.identigen.com/dna-traceback> ;
+    schema:url <https://www.identigen.com/dna-traceback> ;
     systemmap:operatedBy zefix:201495 .
 
 systemmap:SWPaPOSDJI3Kdv83m a schema:SoftwareApplication ;
@@ -1581,7 +1581,7 @@ systemmap:SWPaPOSDJI3Kdv83m a schema:SoftwareApplication ;
         """
         Visionherens è il libro genealogico online della Federazione Svizzera di allevamento della razza d'Hérens. Permette agli allevatori di accedere a dati aggiornati sugli animali come i valori genetici e le genealogie e offre funzioni di autogestione come la registrazione delle monte o la stampa di documenti ufficiali.
         """@it ;
-    dcat:landingPage <https://www.raceherens.ch/de/visionherens-online-herdebuch> ;
+    schema:url <https://www.raceherens.ch/de/visionherens-online-herdebuch> ;
     systemmap:operatedBy systemmap:SJqSPxOD2hdgsgJDI .
 
 systemmap:SXcby9KwakDGhBdP a schema:SoftwareApplication ;
@@ -1657,7 +1657,7 @@ systemmap:SYQt9hzLel1dEtlOn a schema:SoftwareApplication ;
         """
         Piattaforma digitale per la gestione dell'allevamento con dati aggiornati su riproduzione, prestazioni e salute, inclusa una piazza virtuale per il commercio di bestiame.
         """@it ;
-    dcat:landingPage <https://brunanet.ch/BrunaNet/> ;
+    schema:url <https://brunanet.ch/BrunaNet/> ;
     systemmap:operatedBy zefix:226184 .
 
 systemmap:SYqYq3UTUnZHmyFRD a schema:SoftwareApplication ;
@@ -1703,7 +1703,7 @@ systemmap:SbQMDyJD8k62AfApL a schema:SoftwareApplication ;
         """
         SAIMo è il sistema di raccolta dati per il campione di gestione aziendale di Agroscope. Viene utilizzato dai fiduciari per acquisire e fornire i dati contabili delle aziende agricole ad Agroscope.
         """@it ;
-    dcat:landingPage <https://www.agate.ch/saimo/datenerhebung/> ;
+    schema:url <https://www.agate.ch/saimo/datenerhebung/> ;
     systemmap:operatedBy systemmap:SIo1a8l3IT4lBqBJE .
 
 systemmap:SbbbXta7RwMcmH9aB a schema:SoftwareApplication ;
@@ -1769,7 +1769,7 @@ systemmap:Sd3egXVVG1pgbzgcA a schema:SoftwareApplication ;
         """
         Un software ERP basato su Microsoft Navision, utilizzato da ASF Tiervermarktung AG.
         """@it ;
-    dcat:landingPage <https://dynamics.microsoft.com/de-de/business-central/overview/> ;
+    schema:url <https://dynamics.microsoft.com/de-de/business-central/overview/> ;
     systemmap:abbreviation "Navision"@de ;
     systemmap:operatedBy zefix:2595 .
 
@@ -1814,7 +1814,7 @@ systemmap:Sflqf2ls29PzK3049 a schema:SoftwareApplication ;
     schema:description """
         Der SuisDataManager ist ein webbasiertes Online-Datenauswertungsprogramm von SUISAG für Zuchtbetriebe und Mastferkelproduzenten, das die digitale Erfassung, Auswertung und Verwaltung von Zucht- und Leistungsdaten Ihrer Sauenherde ermöglicht.
         """@de ;
-    dcat:landingPage <https://www.suisag.com/ch-de/softwares/suisdata-manager/> ;
+    schema:url <https://www.suisag.com/ch-de/softwares/suisdata-manager/> ;
     systemmap:operatedBy zefix:414877 .
 
 systemmap:Sfv81BPRW0TSnKhGg a schema:SoftwareApplication ;
@@ -1824,7 +1824,7 @@ systemmap:Sfv81BPRW0TSnKhGg a schema:SoftwareApplication ;
         Die dazugehörige Smartphone-App ermöglicht es, Ereignisse wie Reproduktion, Behandlungen und Tierbewegungen in Echtzeit zu dokumentieren und funktioniert auch ohne Netzwerkabdeckung.
         Dank RFID-Kompatibilität und einer intuitiven Benutzeroberfläche erleichtert Troup'O das Herdenmanagement und steigert die Betriebseffizienz.
         """@de ;
-    dcat:landingPage <https://agrarsoftware.ch/troupo.html> ;
+    schema:url <https://agrarsoftware.ch/troupo.html> ;
     systemmap:operatedBy zefix:505628 .
 
 systemmap:Sfwx1dZMcl5OXtzb a schema:SoftwareApplication ;
@@ -1832,7 +1832,7 @@ systemmap:Sfwx1dZMcl5OXtzb a schema:SoftwareApplication ;
     schema:description """
         Software insbesondere für die Früherkennungsprogramm des kleiner Beutenkäfer bei Bienen.
         """@de ;
-    dcat:landingPage <https://www.apinella.ch/> ;
+    schema:url <https://www.apinella.ch/> ;
     systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN .
 
 systemmap:SgjZ0efLbuCR2HvN a schema:SoftwareApplication ;
@@ -1856,7 +1856,7 @@ systemmap:SgsDa3rQzhEAqAUOZ a schema:SoftwareApplication,
     schema:description """
         Feldbegehungen, Pflanzenschutzplanung, GPS-Dokumentation.
         """@de ;
-    dcat:landingPage <https://farmable.tech/de/> ;
+    schema:url <https://farmable.tech/de/> ;
     systemmap:operatedBy systemmap:SGWW0nzBJjBsx2QTr .
 
 systemmap:ShWzrtCjaSa8nRJ4N a schema:SoftwareApplication ;
@@ -1885,7 +1885,7 @@ systemmap:ShWzrtCjaSa8nRJ4N a schema:SoftwareApplication ;
         Il software, utilizzabile offline, si adatta in modo flessibile a vari settori – dall'artigianato all'agricoltura fino ai trasporti – e memorizza i dati in modo sicuro in Svizzera.
         Inoltre, offre funzioni pratiche come la documentazione fotografica o la preparazione automatica delle fatture.
         """@it ;
-    dcat:landingPage <https://amacos.ch/> ;
+    schema:url <https://amacos.ch/> ;
     systemmap:operatedBy zefix:367883 .
 
 systemmap:ShZO092di7cBnOm7F a schema:SoftwareApplication ;
@@ -1924,7 +1924,7 @@ systemmap:Shhoiq8azX3SHGL3W a schema:SoftwareApplication ;
         I prodotti fitosanitari autorizzati sono elencati nell'elenco dei prodotti fitosanitari.
         L'elenco contiene informazioni sull'uso previsto, sulle restrizioni di applicazione, sulle dosi, sull'etichettatura dei pericoli e sulle condizioni d'uso.
         """@it ;
-    dcat:landingPage <https://www.psm.admin.ch/> ;
+    schema:url <https://www.psm.admin.ch/> ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2010/340> ;
     systemmap:operatedBy systemmap:SoqmfoevPVgr3d0AA .
 
@@ -1958,7 +1958,7 @@ systemmap:Shu8wJsNr6s2DSkrI a schema:SoftwareApplication ;
         """
         Agrosoft Farmsolution è un software modulare di gestione aziendale per l'agricoltura svizzera. Copre settori come la coltivazione, l'allevamento e la contabilità ed è una soluzione sviluppata al 100% in Svizzera.
         """@it ;
-    dcat:landingPage <https://www.farmsolution.ch/> ;
+    schema:url <https://www.farmsolution.ch/> ;
     systemmap:operatedBy systemmap:SLu8IMm0TUxYimTwO .
 
 systemmap:SjCVTMrYaOTygNcqF a schema:SoftwareApplication ;
@@ -2021,7 +2021,7 @@ systemmap:SkGYudMy9po7MUq2x a schema:SoftwareApplication ;
         Equi-FM è una soluzione software della Federazione svizzera degli allevatori del cavallo di razza Franches-Montagnes (SFV) per la gestione, la commercializzazione e la selezione dei cavalli Franches-Montagnes.
         Supporta allevatori e acquirenti nella ricerca di cavalli adatti in base a criteri come personalità, livello di addestramento e bisogni individuali.
         """@it ;
-    dcat:landingPage <https://www.agroscope.admin.ch/agroscope/de/home/themen/nutztiere/pferde/haras-forschung-sng/haras-forschung-e-fm.html> ;
+    schema:url <https://www.agroscope.admin.ch/agroscope/de/home/themen/nutztiere/pferde/haras-forschung-sng/haras-forschung-e-fm.html> ;
     systemmap:operatedBy systemmap:ScS6Ziy08AYukFjjh .
 
 systemmap:SlTSOXsBC2LN7Qkp a schema:SoftwareApplication ;
@@ -2051,7 +2051,7 @@ systemmap:SlTSOXsBC2LN7Qkp a schema:SoftwareApplication ;
         Barto è gestita da Barto AG e collabora con partner del settore agricolo per fornire soluzioni digitali innovative.
         """@it ;
     systemmap:operatedBy zefix:1293128 ;
-    dcat:landingPage <https://www.barto.ch/> .
+    schema:url <https://www.barto.ch/> .
 
 systemmap:SlfheulBjlQDwuaIM a schema:SoftwareApplication ;
     schema:name "HODUFLU"@de,
@@ -2185,7 +2185,7 @@ systemmap:Snfl97lvHuIqb7cTZ a schema:SoftwareApplication ;
         """
         Soluzione ERP SAP specifica per l'industria della carne, che integra i processi dalla macellazione alla consegna, inclusi il tracciamento dei lotti e la gestione della qualità. Utilizzata da aziende come Bell Schweiz AG, Schlachtbetrieb St. Gallen AG ed Ernst Sutter AG.
         """@it ;
-    dcat:landingPage <https://www.softproviding.com/meat/> ;
+    schema:url <https://www.softproviding.com/meat/> ;
     systemmap:operatedBy zefix:531454 .
 
 systemmap:SoBSi8PwUf9xFjdrM a schema:SoftwareApplication ;
@@ -2206,7 +2206,7 @@ systemmap:SoBSi8PwUf9xFjdrM a schema:SoftwareApplication ;
         """
         Piattaforma basata su cloud per la gestione dei dati di certificazione, degli elenchi di prodotti e dello stato delle etichette per le aziende agricole e le imprese.
         """@it ;
-    dcat:landingPage <https://www.easy-cert.com> ;
+    schema:url <https://www.easy-cert.com> ;
     systemmap:operatedBy zefix:1202686 .
 
 systemmap:SpLZd1ojPxF0CvH28 a schema:SoftwareApplication ;
@@ -2265,7 +2265,7 @@ systemmap:Sq8pW7vv7FNraUfaT a schema:SoftwareApplication ;
         """
         Piattaforma per ordinare certificati e gestire dati riproduttivi.
         """@it ;
-    dcat:landingPage <https://www.mutterkuh.ch/produzenten-service/fachinfos/beefnet-und-smartcow.html> ;
+    schema:url <https://www.mutterkuh.ch/produzenten-service/fachinfos/beefnet-und-smartcow.html> ;
     systemmap:operatedBy zefix:769392 .
 
 systemmap:SrkebxtFWRCtftbJV a schema:SoftwareApplication ;
@@ -2286,7 +2286,7 @@ systemmap:SrkebxtFWRCtftbJV a schema:SoftwareApplication ;
         """
         AGRO-TECH è un software di gestione aziendale completo che funge da strumento per la prova delle prestazioni ecologiche (PER). Consente la gestione dei registri delle parcelle e degli animali (con collegamento alla BDTA), la creazione di piani di concimazione, il calcolo del Bilancio della fertilizzazione e la registrazione mobile delle attività in campo.
         """@it ;
-    dcat:landingPage <https://www.agridea.ch/de/unser-angebot/unsere-produkte/software/agro-tech/> ;
+    schema:url <https://www.agridea.ch/de/unser-angebot/unsere-produkte/software/agro-tech/> ;
     systemmap:operatedBy zefix:885059 .
 
 systemmap:Ss7QOCDSxfbstJlpp a schema:SoftwareApplication ;
@@ -2307,7 +2307,7 @@ systemmap:Ss7QOCDSxfbstJlpp a schema:SoftwareApplication ;
         """
         Un software ERP specifico del settore per le aziende alimentari, che copre l'intera elaborazione degli ordini, inclusi acquisti, magazzino e tracciabilità. Offre anche funzioni come la contabilità della macellazione, la gestione delle ricette e le interfacce EDI con i partner commerciali.
         """@it ;
-    dcat:landingPage <https://csn.ch/software/> ;
+    schema:url <https://csn.ch/software/> ;
     systemmap:operatedBy zefix:336983 .
 
 systemmap:SsUV3nTDKTJ3nQ5L9 a schema:SoftwareApplication ;
@@ -2328,7 +2328,7 @@ systemmap:SsUV3nTDKTJ3nQ5L9 a schema:SoftwareApplication ;
         """
         Piattaforma per le valutazioni del valore genetico e la gestione del libro genealogico delle pecore da latte in Svizzera.
         """@it ;
-    dcat:landingPage <https://www.smg-milchschafe.ch> ;
+    schema:url <https://www.smg-milchschafe.ch> ;
     systemmap:operatedBy zefix:1110982 .
 
 systemmap:StGKp6nS3OwEm4I0 a schema:SoftwareApplication ;
@@ -2359,7 +2359,7 @@ systemmap:StiztlHPN24VK1k8G a schema:SoftwareApplication ;
         """
         Agateway è un'applicazione di Identitas AG per la segnalazione semplificata degli ovini alla banca dati sui movimenti degli animali (TVD), che consente la registrazione offline dei marchi auricolari con lettori Allflex e offre l'esportazione dei dati in formato CSV per il software di gestione delle mandrie. La soluzione supporta gli agricoltori nella registrazione di nascite, acquisizioni, trattamenti e altre operazioni, con i dati raccolti che possono essere successivamente trasmessi via internet o condivisi tramite e-mail/cloud.
         """@it ;
-    dcat:landingPage <https://www.identitas.ch/produkte/agateway> ;
+    schema:url <https://www.identitas.ch/produkte/agateway> ;
     systemmap:operatedBy zefix:449781 .
 
 systemmap:Su9RTb49BcaqL4EcQ a schema:SoftwareApplication ;
@@ -2462,7 +2462,7 @@ systemmap:SveDUGZvttVw7ga7l a schema:SoftwareApplication,
     schema:description """
         Feldkalender, ÖLN-Dokumentation, Stickstoffbilanz, IP-Suisse-kompatibel.
         """@de ;
-    dcat:landingPage <https://www.smartfarm.ch/> ;
+    schema:url <https://www.smartfarm.ch/> ;
     systemmap:operatedBy zefix:848149 .
 
 systemmap:SwsptnNDhjz0vIZNu a schema:SoftwareApplication ;
@@ -2483,7 +2483,7 @@ systemmap:SwsptnNDhjz0vIZNu a schema:SoftwareApplication ;
         """
         Isalait è un software di gestione della mandria per produttori di latte, che copre aree come la riproduzione, la gestione sanitaria e dell'alimentazione, il controllo delle prestazioni lattifere e lo scambio di dati amministrativi.
         """@it ;
-    dcat:landingPage <https://client.isagri.ch/centre-aide/isalait> ;
+    schema:url <https://client.isagri.ch/centre-aide/isalait> ;
     systemmap:operatedBy zefix:505628 .
 
 systemmap:Sxi0p2NlmE7ff8oEC a schema:SoftwareApplication ;
@@ -2556,7 +2556,7 @@ systemmap:SyQyLq1TqV3MYovtW a schema:SoftwareApplication ;
         Software ERP specifico del settore per macelli e trasformatori alimentari, incentrato sull'ottimizzazione dei processi, la tracciabilità e la conformità.
         Viene utilizzato da aziende come FF Frischfleisch AG e Zentralschlachthof Hinwil AG.
         """@it ;
-    dcat:landingPage <https://www.csb.com/de/branchen/fleisch/fleischwarenproduktion> ;
+    schema:url <https://www.csb.com/de/branchen/fleisch/fleischwarenproduktion> ;
     systemmap:operatedBy systemmap:SzqZmzij2bxSZEIL9 .
 
 systemmap:SywklUB91myTH0cvS a schema:SoftwareApplication ;
@@ -2665,7 +2665,7 @@ systemmap:S4ZuIO9s81WMS2bKB a dcat:Dataset ;
         "Données de marché Aliments pour animaux"@fr,
         "Dati di mercato Mangimi"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/futtermittel> .
+    schema:url <https://www.agrarmarktdaten.ch/markt/futtermittel> .
 
 systemmap:S7mhWQjPZiSFc8dU a dcat:Dataset ;
     schema:name "Tierereignisdaten"@de,
@@ -2888,7 +2888,7 @@ systemmap:SLJMFAZ6GNdFvfb2L a dcat:Dataset ;
         "Données de marché Fruits et légumes"@fr,
         "Dati di mercato Frutta e verdura"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/fruchte-gemuese> .
+    schema:url <https://www.agrarmarktdaten.ch/markt/fruchte-gemuese> .
 
 systemmap:SLXw4VofhYbzXVNKC a dcat:Dataset ;
     schema:name "Daten zur Milchverwertung"@de,
@@ -2951,7 +2951,7 @@ systemmap:SSyCUWt1u4bzJ4liA a dcat:Dataset ;
         "Données de marché Pommes de terre et produits à base de pommes de terre"@fr,
         "Dati di mercato Patate e prodotti a base di patate"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/kartoffeln> .
+    schema:url <https://www.agrarmarktdaten.ch/markt/kartoffeln> .
 
 systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
     schema:name "Zubereitungen"@de,
@@ -3094,7 +3094,7 @@ systemmap:SisV9d3pviAFO8vTK a dcat:Dataset ;
         "Données de marché Oléagineux et protéagineux"@fr,
         "Dati di mercato Semi oleosi e piante proteiche"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/olsaaten> .
+    schema:url <https://www.agrarmarktdaten.ch/markt/olsaaten> .
 
 systemmap:SkcU0PDb6fucIKa9k a dcat:Dataset ;
     schema:name "Marktdaten Brotgetreide, Mehl und Backwaren"@de,
@@ -3102,7 +3102,7 @@ systemmap:SkcU0PDb6fucIKa9k a dcat:Dataset ;
         "Données de marché Céréales panifiables, farine et produits de boulangerie"@fr,
         "Dati di mercato Cereali panificabili, farina e prodotti da forno"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/getreide> .
+    schema:url <https://www.agrarmarktdaten.ch/markt/getreide> .
 
 systemmap:SoBRgq7STLbZfEze a dcat:Dataset ;
     schema:name "Meldepflichtdaten (Schafe & Ziegen)"@de,
@@ -3133,7 +3133,7 @@ systemmap:SpT5dE2PIEfeWKafV a dcat:Dataset ;
         "Données de marché Viande, produits carnés et charcuterie"@fr,
         "Dati di mercato Carne, prodotti a base di carne e insaccati"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/fleisch> .
+    schema:url <https://www.agrarmarktdaten.ch/markt/fleisch> .
 
 systemmap:Spqrv6Ul05KJySTs a dcat:Dataset ;
     schema:name "Nationaler Sortenkatalog"@de,
@@ -3153,7 +3153,7 @@ systemmap:SvAr93iMz2fj4HZBK a dcat:Dataset ;
         "Données de marché Œufs"@fr,
         "Dati di mercato Uova"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/eier> .
+    schema:url <https://www.agrarmarktdaten.ch/markt/eier> .
 
 systemmap:SyhthSmTCgM19Wysy a dcat:Dataset ;
     schema:name "Pflanzenschutzmittel"@de,
@@ -3169,7 +3169,7 @@ systemmap:SzJ7aOICsI2KD9iOt a dcat:Dataset ;
         "Données de marché Lait et produits laitiers"@fr,
         "Dati di mercato Latte e prodotti lattiero-caseari"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
-    dcat:landingPage <https://www.agrarmarktdaten.ch/markt/milch-und-milchprodukte> .
+    schema:url <https://www.agrarmarktdaten.ch/markt/milch-und-milchprodukte> .
 
 systemmap:SzcK9O3XZFxVW1IS a dcat:Dataset ;
     schema:name "Daten zur Milchsegmentierung"@de,
@@ -3216,7 +3216,7 @@ systemmap:SWRHHjM4WnPdLkEVr a systemmap:CantonalAgriculturalAdvisor ;
         "Strickhof"@fr,
         "Strickhof"@it ;
     schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i ;
-    dcat:landingPage <https://www.strickhof.ch> .
+    schema:url <https://www.strickhof.ch> .
 
 systemmap:S0ummGTITezxHMtA3 a systemmap:CantonalOrganization ;
     schema:name "Baudirektion des Kantons Zürich"@de,
@@ -3224,7 +3224,7 @@ systemmap:S0ummGTITezxHMtA3 a systemmap:CantonalOrganization ;
         "Direction des travaux publics du canton de Zurich"@fr,
         "Dipartimento dei lavori pubblici del Cantone di Zurigo"@it ;
     schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i ;
-    dcat:landingPage <https://www.zh.ch/de/baudirektion.html> .
+    schema:url <https://www.zh.ch/de/baudirektion.html> .
 
 systemmap:S1KtKkrBMoK25AKVA a systemmap:CantonalOrganization ;
     schema:name "Direktzahlungen und Beiträge"@de ;
@@ -3561,7 +3561,7 @@ systemmap:SqbzqGjI3ws0stDBH a systemmap:CantonalOrganization ;
         "Université de Zurich"@fr,
         "Università di Zurigo"@it ;
     schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i ;
-    dcat:landingPage <https://www.uzh.ch> ;
+    schema:url <https://www.uzh.ch> ;
     systemmap:abbreviation "UZH"@de,
         "UZH"@en,
         "UZH"@fr,
@@ -3614,14 +3614,14 @@ systemmap:SNYgqSYzzANvzanVS a systemmap:CantonalVeterinaryService ;
         "Service de la sécurité alimentaire et des affaires vétérinaires"@fr,
         "Servizio della sicurezza alimentare e degli affari veterinari"@it ;
     schema:parentOrganization systemmap:Sp5pkmAETRpXrudck ;
-    dcat:landingPage <https://www.fr.ch/de/diaf/saav> ;
+    schema:url <https://www.fr.ch/de/diaf/saav> ;
     systemmap:abbreviation "LSVW"@de,
         "SAAV"@fr .
 
 systemmap:SY0h92GbLVkapqnQt a systemmap:CantonalVeterinaryService ;
     schema:name "Kantonaler Veterinärdienst Aargau"@de ;
     schema:parentOrganization systemmap:Slsq3Et7cyDrThfMW ;
-    dcat:landingPage <https://www.ag.ch/de/verwaltung/dgs/verbraucherschutz/veterinaerdienst> .
+    schema:url <https://www.ag.ch/de/verwaltung/dgs/verbraucherschutz/veterinaerdienst> .
 
 systemmap:SswJdLNKXUjfnD84b a systemmap:CantonalVeterinaryService ;
     schema:name "Kantonales Veterinäramt Zürich"@de,
@@ -3629,7 +3629,7 @@ systemmap:SswJdLNKXUjfnD84b a systemmap:CantonalVeterinaryService ;
         "Office vétérinaire cantonal de Zurich"@fr,
         "Ufficio veterinario cantonale di Zurigo"@it ;
     schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i ;
-    dcat:landingPage <https://www.zh.ch/de/gesundheitsdirektion/veterinaeramt.html> .
+    schema:url <https://www.zh.ch/de/gesundheitsdirektion/veterinaeramt.html> .
 
 systemmap:S1JvEmah9Tl0698au a systemmap:FederalOrganization ;
     schema:name "Direktionsbereich für Digitalisierung und Datenmanagement"@de,
@@ -3874,7 +3874,7 @@ systemmap:SKrd0rj3P7vHUQ7h7 a systemmap:FederalOrganization ;
         "Swiss Federal Institute of Technology Zurich"@en,
         "École polytechnique fédérale de Zurich"@fr,
         "Politecnico federale di Zurigo"@it ;
-    dcat:landingPage <https://ethz.ch> ;
+    schema:url <https://ethz.ch> ;
     systemmap:abbreviation "ETH Zürich"@de,
         "ETH Zurich"@en,
         "EPF Zurich"@fr,
@@ -4539,7 +4539,7 @@ zefix:1293128 a systemmap:PrivateOrganization ;
         Barto AG collabora con partner del settore agricolo per fornire soluzioni digitali innovative.
         """@it ;
     systemmap:ownedBy zefix:328631 ;
-    dcat:landingPage <https://www.barto.ch/> .
+    schema:url <https://www.barto.ch/> .
 
 systemmap:SGWW0nzBJjBsx2QTr a systemmap:PrivateOrganization ;
     schema:name "Farmable"@de .
@@ -4549,11 +4549,11 @@ systemmap:SJqSPxOD2hdgsgJDI a systemmap:PrivateOrganization ;
         "Swiss Hérens Cattle Breeders' Federation"@en,
         "Fédération Suisse d'élevage de la Race d'Hérens"@fr,
         "Federazione Svizzera di allevamento della razza d'Hérens"@it ;
-    dcat:landingPage <https://www.raceherens.ch/de/> .
+    schema:url <https://www.raceherens.ch/de/> .
 
 systemmap:SLu8IMm0TUxYimTwO a systemmap:PrivateOrganization ;
     schema:name "Agrosoft, Bosshart Bernhard"@de ;
-    dcat:landingPage <https://www.agrosoft.ch> .
+    schema:url <https://www.agrosoft.ch> .
 
 systemmap:SQ3N7dTc23t2wzXr2 a systemmap:PrivateOrganization ;
     schema:name "TSM Treuhand GmbH"@de,
@@ -4592,14 +4592,14 @@ systemmap:SWdllcNbPnjdcm7om a systemmap:PrivateOrganization ;
 
 systemmap:SYfFBbBlmgKk9vmPg a systemmap:PrivateOrganization ;
     schema:name "NielsenIQ"@de ;
-    dcat:landingPage <https://nielseniq.com/global/de> .
+    schema:url <https://nielseniq.com/global/de> .
 
 systemmap:ScS6Ziy08AYukFjjh a systemmap:PrivateOrganization ;
     schema:name "Schweizerischer Freibergerverband (SFV)"@de,
         "Swiss Federation of Franches-Montagnes Horse Breeders (SFV)"@en,
         "Fédération suisse d'élevage du cheval de la race Franches-Montagnes (SFV)"@fr,
         "Federazione svizzera degli allevatori del cavallo di razza Franches-Montagnes (SFV)"@it ;
-    dcat:landingPage <https://www.fm-ch.ch/de/> .
+    schema:url <https://www.fm-ch.ch/de/> .
 
 systemmap:SdKC8g9DSflgxKlh4 a systemmap:PrivateOrganization ;
     schema:name "AgroVet-Strickhof"@de,
@@ -4621,7 +4621,7 @@ systemmap:SdKC8g9DSflgxKlh4 a systemmap:PrivateOrganization ;
         """
         Un centro di competenza per la formazione e la ricerca, gestito in cooperazione tra Strickhof, il Politecnico federale di Zurigo e l'Università di Zurigo. La gestione agricola è affidata all'azienda formativa e sperimentale dello Strickhof.
         """@it ;
-    dcat:landingPage <https://www.agrovet-strickhof.ch> .
+    schema:url <https://www.agrovet-strickhof.ch> .
 
 systemmap:SmGaThSxn7eIC3JvM a systemmap:PrivateOrganization ;
     schema:name "xFarm Technologies"@de .
@@ -4631,46 +4631,46 @@ systemmap:Sng7djgBb3dkdoxbU a systemmap:PrivateOrganization ;
 
 systemmap:SrG5yvnwax87iuQw8 a systemmap:PrivateOrganization ;
     schema:name "Vetera GmbH"@de ;
-    dcat:landingPage <https://vetera.net/> .
+    schema:url <https://vetera.net/> .
 
 systemmap:SzqZmzij2bxSZEIL9 a systemmap:PrivateOrganization ;
     schema:name "CSB-System SE"@de ;
-    dcat:landingPage <https://www.csb.com/> .
+    schema:url <https://www.csb.com/> .
 
 zefix:1013423 a systemmap:PrivateOrganization ;
     schema:name "Datapass.ch AG"@de ;
-    dcat:landingPage <https://datapass.ch> .
+    schema:url <https://datapass.ch> .
 
 zefix:1099793 a systemmap:PrivateOrganization ;
     schema:name "bluebat GmbH"@de,
         "bluebat Ltd liab. Co"@en,
         "bluebat Sàrl"@fr,
         "bluebat Sagl"@it ;
-    dcat:landingPage <https://bluebat.ch> .
+    schema:url <https://bluebat.ch> .
 
 zefix:1110982 a systemmap:PrivateOrganization ;
     schema:name "SMG Schweizerische Milchschafzucht Genossenschaft"@de ;
-    dcat:landingPage <https://www.smg-milchschafe.ch> .
+    schema:url <https://www.smg-milchschafe.ch> .
 
 zefix:1112092 a systemmap:PrivateOrganization ;
     schema:name "swissVets AG"@de ;
-    dcat:landingPage <https://www.swissvets.ch/> .
+    schema:url <https://www.swissvets.ch/> .
 
 zefix:113323 a systemmap:PrivateOrganization ;
     schema:name "Marmy Viandes en Gros SA"@de ;
-    dcat:landingPage <https://marmy.ch> .
+    schema:url <https://marmy.ch> .
 
 zefix:1202686 a systemmap:PrivateOrganization ;
     schema:name "EASY-CERT AG"@de ;
-    dcat:landingPage <https://www.easy-cert.com> .
+    schema:url <https://www.easy-cert.com> .
 
 zefix:1226256 a systemmap:PrivateOrganization ;
     schema:name "myBica AG"@de ;
-    dcat:landingPage <https://www.mybica.ch> .
+    schema:url <https://www.mybica.ch> .
 
 zefix:1249135 a systemmap:PrivateOrganization ;
     schema:name "Verein Kometian"@de ;
-    dcat:landingPage <https://www.kometian.ch> .
+    schema:url <https://www.kometian.ch> .
 
 zefix:126288 a systemmap:PrivateOrganization ;
     schema:name "Nestlé AG"@de,
@@ -4678,58 +4678,58 @@ zefix:126288 a systemmap:PrivateOrganization ;
 
 zefix:130459 a systemmap:PrivateOrganization ;
     schema:name "Micarna SA"@de ;
-    dcat:landingPage <https://www.micarna.ch> .
+    schema:url <https://www.micarna.ch> .
 
 zefix:1354082 a systemmap:PrivateOrganization ;
     schema:name "eOperations Schweiz AG"@de,
         "eOperations Switzerland AG"@en,
         "eOperations Suisse SA"@fr,
         "eOperations Svizzera SA"@it ;
-    dcat:landingPage <https://www.eoperations.ch> .
+    schema:url <https://www.eoperations.ch> .
 
 zefix:1373020 a systemmap:PrivateOrganization ;
     schema:name "FarmX GmbH"@de ;
-    dcat:landingPage <https://farmx.ch/home> .
+    schema:url <https://farmx.ch/home> .
 
 zefix:1393629 a systemmap:PrivateOrganization ;
     schema:name "FarmConsult GmbH"@de,
         "FarmConsult Sàrl"@fr ;
-    dcat:landingPage <https://www.farmconsult.ch/> .
+    schema:url <https://www.farmconsult.ch/> .
 
 zefix:1397589 a systemmap:PrivateOrganization ;
     schema:name "bio.inspecta AG"@de ;
-    dcat:landingPage <https://www.bio-inspecta.ch/> .
+    schema:url <https://www.bio-inspecta.ch/> .
 
 zefix:1419651 a systemmap:PrivateOrganization ;
     schema:name "eFeldkalender GmbH"@de .
 
 zefix:1566606 a systemmap:PrivateOrganization ;
     schema:name "smaXtec AG"@de ;
-    dcat:landingPage <https://www.smaxtec.com/> .
+    schema:url <https://www.smaxtec.com/> .
 
 zefix:160746 a systemmap:PrivateOrganization ;
     schema:name "SBZ Schlachtbetrieb Zürich AG"@de ;
-    dcat:landingPage <https://www.sbzzuerich.ch/> .
+    schema:url <https://www.sbzzuerich.ch/> .
 
 zefix:162591 a systemmap:PrivateOrganization ;
     schema:name "Schlachtbetrieb St. Gallen AG"@de ;
-    dcat:landingPage <https://www.sbag-sg.ch> .
+    schema:url <https://www.sbag-sg.ch> .
 
 zefix:165954 a systemmap:PrivateOrganization ;
     schema:name "Genossenschaft swissherdbook Zollikofen"@de ;
     schema:description "Die Genossenschaft swissherdbook ist ein Rindviehzuchtverband in der Schweiz und vertritt die Interessen von rund 8'000 aktiven Viehzüchtern. swissherdbook bezweckt die Förderung der wirtschaftlichen Interessen der Mitglieder und bietet diesen Dienstleistungen wie Herdebuchführung, Zucht, Leistungsprüfung und Datenverarbeitung an. Insbesondere der Rassen Red Holstein und Holstein, Swiss Fleckvieh, Simmental, Montbéliarde, Normande, Wasserbüffel, Evolèner und Pinzgauer werden betreut. Entstanden im Jahr 1890, ist swissherdbook heute ein Zusammenschluss von Genossenschaften und Vereinen."@de ;
-    dcat:landingPage <https://www.swissherdbook.ch> .
+    schema:url <https://www.swissherdbook.ch> .
 
 zefix:166248 a systemmap:PrivateOrganization ;
     schema:name "Schweizerischer Schafzuchtverband Genossenschaft"@de ;
-    dcat:landingPage <https://www.sszv.ch/> .
+    schema:url <https://www.sszv.ch/> .
 
 zefix:1663457 a systemmap:PrivateOrganization ;
     schema:name "Averio AG"@de .
 
 zefix:177634 a systemmap:PrivateOrganization ;
     schema:name "Silvestri AG"@de ;
-    dcat:landingPage <https://www.silvestri.ch/> .
+    schema:url <https://www.silvestri.ch/> .
 
 zefix:180673 a systemmap:PrivateOrganization ;
     schema:name "Softec AG"@de .
@@ -4739,11 +4739,11 @@ zefix:201495 a systemmap:PrivateOrganization ;
         "MSD Animal Health LLC"@en,
         "MSD Animal Health S.à r.l."@fr,
         "MSD Animal Health Sagl"@it ;
-    dcat:landingPage <https://www.msd-animal-health.ch/> .
+    schema:url <https://www.msd-animal-health.ch/> .
 
 zefix:212388 a systemmap:PrivateOrganization ;
     schema:name "Zentralschlachthof Hinwil AG"@de ;
-    dcat:landingPage <https://zshag.ch> .
+    schema:url <https://zshag.ch> .
 
 zefix:231059 a systemmap:PrivateOrganization ;
     schema:name "Bedag Informatik AG"@de,
@@ -4753,7 +4753,7 @@ zefix:248029 a systemmap:PrivateOrganization ;
     schema:name "Schweizerischer Ziegenzuchtverband (SZZV) Genossenschaft"@de,
         "Fédération suisse d'élevage caprin (FSEC) coopérative"@fr,
         "Federazione svizzera allevamento caprino (FSAC) cooperativa"@it ;
-    dcat:landingPage <https://szzv.ch/> .
+    schema:url <https://szzv.ch/> .
 
 zefix:249959 a systemmap:PrivateOrganization ;
     schema:name "ELCA Informatik AG"@de,
@@ -4763,12 +4763,12 @@ zefix:249959 a systemmap:PrivateOrganization ;
 
 zefix:2595 a systemmap:PrivateOrganization ;
     schema:name "ASF Tiervermarktung AG"@de ;
-    dcat:landingPage <https://www.asf-sursee.ch> .
+    schema:url <https://www.asf-sursee.ch> .
 
 zefix:278958 a systemmap:PrivateOrganization ;
     schema:name "Holstein Switzerland Genossenschaft"@de,
         "Coopérative Holstein Switzerland"@fr ;
-    dcat:landingPage <https://www.holstein.ch/> .
+    schema:url <https://www.holstein.ch/> .
 
 zefix:328631 a systemmap:PrivateOrganization ;
     schema:name "Fenaco Genossenschaft"@de,
@@ -4807,27 +4807,27 @@ zefix:330180 a systemmap:PrivateOrganization ;
 
 zefix:336983 a systemmap:PrivateOrganization ;
     schema:name "CSN AG"@de ;
-    dcat:landingPage <https://csn.ch> .
+    schema:url <https://csn.ch> .
 
 zefix:367883 a systemmap:PrivateOrganization ;
     schema:name "Martha-Software GmbH"@de ;
-    dcat:landingPage <https://masoft.ch/> .
+    schema:url <https://masoft.ch/> .
 
 zefix:371013 a systemmap:PrivateOrganization ;
     schema:name "Ernst Sutter AG"@de ;
-    dcat:landingPage <https://www.ernstsutter.ch> ;
+    schema:url <https://www.ernstsutter.ch> ;
     systemmap:ownedBy zefix:328631 .
 
 zefix:417741 a systemmap:PrivateOrganization ;
     schema:name "GRANOVIT AG"@de ;
-    dcat:landingPage <https://www.granovit.ch> .
+    schema:url <https://www.granovit.ch> .
 
 zefix:427343 a systemmap:PrivateOrganization ;
     schema:name "Bio Suisse, Vereinigung Schweizer Biolandbau-Organisationen"@de,
         "Bio Suisse, Federation of Swiss Organic Agriculture Organisations"@en,
         "Bio Suisse, Fédération des organisations suisses d’agriculture biologique"@fr,
         "Bio Suisse, Federazione delle organizzazioni svizzere dell’agricoltura biologica"@it ;
-    dcat:landingPage <https://www.bio-suisse.ch> .
+    schema:url <https://www.bio-suisse.ch> .
 
 zefix:432768 a systemmap:PrivateOrganization ;
     schema:name "TRAVECO Transporte AG"@de ;
@@ -4835,11 +4835,11 @@ zefix:432768 a systemmap:PrivateOrganization ;
 
 zefix:443420 a systemmap:PrivateOrganization ;
     schema:name "Reichmuth Fleischwaren AG"@de ;
-    dcat:landingPage <http://www.reichmuth-groupe.ch/fleischwaren/> .
+    schema:url <http://www.reichmuth-groupe.ch/fleischwaren/> .
 
 zefix:445706 a systemmap:PrivateOrganization ;
     schema:name "Bigler AG Fleischwaren"@de ;
-    dcat:landingPage <https://www.bigler.ch> .
+    schema:url <https://www.bigler.ch> .
 
 zefix:446080 a systemmap:PrivateOrganization ;
     schema:name "frigemo ag"@de ;
@@ -4848,7 +4848,7 @@ zefix:446080 a systemmap:PrivateOrganization ;
 zefix:448334 a systemmap:PrivateOrganization ;
     schema:name "swissgenetics"@de ;
     schema:description "Swissgentics ist ein Schweizer Unternehmen, das Dienstleistungen und Produkte im Bereich Rinderzucht und -reproduktion anbietet. Swissgenetics betreibt Genetikprogramme,  in Partnerschaft mit Züchtern und Zuchtorganisationen Prüfprogramme und Stationen für die Produktion von Stiersamen. Besamungstechniker setzen die Samendosen in Beständen ein. Weiterhin werden Samendosen ins Ausland verkauft, Sperma gesext und Wissen vermittelt. Zusätzlich werden ergänzende Produkte für die Tier- und Stallhygiene oder SmartFarmin-Lösungen angeboten."@de ;
-    dcat:landingPage <https://www.swissgenetics.ch/> .
+    schema:url <https://www.swissgenetics.ch/> .
 
 zefix:449781 a systemmap:PrivateOrganization ;
     schema:name "Identitas AG"@de,
@@ -4884,25 +4884,25 @@ zefix:505628 a systemmap:PrivateOrganization ;
 
 zefix:531454 a systemmap:PrivateOrganization ;
     schema:name "Softproviding AG"@de ;
-    dcat:landingPage <https://www.softproviding.com/> .
+    schema:url <https://www.softproviding.com/> .
 
 zefix:57642 a systemmap:PrivateOrganization ;
     schema:name "FF Frischfleisch AG"@de ;
-    dcat:landingPage <https://frischfleisch.ch/> .
+    schema:url <https://frischfleisch.ch/> .
 
 zefix:625989 a systemmap:PrivateOrganization ;
     schema:name "Pinus AG"@de .
 
 zefix:7011 a systemmap:PrivateOrganization ;
     schema:name "Anicom AG"@de ;
-    dcat:landingPage <https://www.anicom.ch> ;
+    schema:url <https://www.anicom.ch> ;
     systemmap:ownedBy zefix:328631 .
 
 zefix:76051 a systemmap:PrivateOrganization ;
     schema:name "Meliofeed AG"@de,
         "Meliofeed Ltd"@en,
         "Meliofeed SA"@it ;
-    dcat:landingPage <https://www.melior.ch> .
+    schema:url <https://www.melior.ch> .
 
 zefix:76693 a systemmap:PrivateOrganization ;
     schema:name "Halag Chemie AG"@de ;
@@ -4913,7 +4913,7 @@ zefix:769392 a systemmap:PrivateOrganization ;
         "Mutterkuh Schweiz"@en,
         "Vache mère Suisse"@fr,
         "Vacca madre Svizzera"@it ;
-    dcat:landingPage <https://www.mutterkuh.ch> .
+    schema:url <https://www.mutterkuh.ch> .
 
 zefix:787227 a systemmap:PrivateOrganization ;
     schema:name "RAMSEIER Suisse AG"@de ;
@@ -4927,7 +4927,7 @@ zefix:885059 a systemmap:PrivateOrganization ;
         "AGRIDEA Swiss association for developing agriculture and rural areas"@en,
         "AGRIDEA Association suisse pour le développement de l'agriculture et de l'espace rural"@fr,
         "AGRIDEA Associazione svizzera per lo sviluppo dell'agricoltura e delle aree rurali"@it ;
-    dcat:landingPage <https://www.agridea.ch> .
+    schema:url <https://www.agridea.ch> .
 
 systemmap:S6ILF4g1j5sNf9aG a termdat:52451 ;
     schema:name "Informationen zur Einfuhr von PSM"@de,

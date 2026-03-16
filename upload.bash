@@ -8,7 +8,13 @@ echo Create a dedicated ontology file for subsequent WebVOWL visualization
 python3 src/python/rdf-processing.py \
   -i rdf/ontology/*.ttl rdf/data/*.ttl \
   -o rdf/processed/ontology.ttl \
-  -r src/sparql/inference-rules/*.rq src/sparql/processing-rules/*.rq
+  -r src/sparql/inference-rules/*.sparql src/sparql/processing-rules/*.sparql
+
+echo Create a lightweight ontology file
+python3 src/python/rdf-processing.py \
+  -i rdf/ontology/*.ttl \
+  -o rdf/processed/ontology-light.ttl \
+  -r src/sparql/inference-rules/*.sparql src/sparql/processing-rules/*.sparql
 
 echo Merge all data into one graph for subsequent LINDAS upload
 python3 src/python/rdf-processing.py \
@@ -34,6 +40,6 @@ curl \
   "$ENDPOINT?graph=$GRAPH"
 
 echo Test all queries on LINDAS PROD
-pytest tests/test_queries.py
+pytest tests
 
 echo All commands executed

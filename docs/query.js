@@ -1,181 +1,189 @@
-// Function to get query parameters from URL
 function getQueryParam(name, defaultValue) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(name) || defaultValue;
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name) || defaultValue;
 }
 
-// Should there be any focus on a subset of a graph, a so-called subgraph?
-// Note that the subgraphs themselves are encoded in the RDF data!
-window.subgraph = getQueryParam("subgraph", "")
+window.subgraph = getQueryParam("subgraph", "");
 
-// should schema:Organization, schema:SoftwareApplication, service:Service and dcat:Dataset be displayed
-window.organization = getQueryParam("organization", "true") === "true" ? "schema:Organization" : "";
-window.system = getQueryParam("system", "true") === "true" ? "schema:SoftwareApplication" : "";
-window.service = getQueryParam("service", "true") === "true" ? "service:Service" : "";
-window.information = getQueryParam("information", "true") === "true" ? "dcat:Dataset" : "";
+const getGroupState = (name) => getQueryParam(name, "full");
 
-/* -------------------------------------------------------------
-Toggle which edge predicates are fetched.
-----------------------------------------------------------------*/
+window.groupStates = {
+    Organization: getGroupState("organization"),
+    System: getGroupState("system"),
+    Information: getGroupState("information"),
+    Service: getGroupState("service")
+};
+
+const activeGroupIris = [];
+if (window.groupStates.Organization !== "off") activeGroupIris.push("schema:Organization");
+if (window.groupStates.System !== "off") activeGroupIris.push("schema:SoftwareApplication");
+if (window.groupStates.Information !== "off") activeGroupIris.push("dcat:Dataset");
+if (window.groupStates.Service !== "off") activeGroupIris.push("service:Service");
+
+window.groupValues = activeGroupIris.length > 0 ? activeGroupIris.join(' ') : "<http://example.org/None>";
+
 const rawPredParam = getQueryParam("predicates", "").trim();
-const selectedKeys = rawPredParam
-  ? rawPredParam.split(/[;,+\s]+/).filter(Boolean)
-  : [];
+const selectedKeys = rawPredParam ? rawPredParam.split(/[;,+\s]+/).filter(Boolean) : [];
 
-let predicateIris = selectedKeys
-  .map(k => APP_CONFIG.PREDICATE_MAP[k])
-  .filter(Boolean);
-
-if (predicateIris.length === 0) {
-  predicateIris = Object.values(APP_CONFIG.PREDICATE_MAP);
+let activePredicateIris = selectedKeys.map(k => APP_CONFIG.PREDICATE_MAP[k]).filter(Boolean);
+if (activePredicateIris.length === 0) {
+    activePredicateIris = Object.values(APP_CONFIG.PREDICATE_MAP);
 }
+window.predicateValues = activePredicateIris.map(iri => `      ${iri}`).join("\n");
 
-window.predicateValues = predicateIris
-  .map(iri => `      ${iri}`)
-  .join("\n");
+// We fetch metadata for ALL possible predicates to ensure the UI can display them even if disabled
+const allPredicateIris = Object.values(APP_CONFIG.PREDICATE_MAP);
+window.allPredicateValues = allPredicateIris.map(iri => `      ${iri}`).join("\n");
 
 window.ENDPOINT = APP_CONFIG.ENDPOINT;
 
-// query nodes - fetches all language data at once
-window.NODE_QUERY = `
+window.MAIN_CONSTRUCT_QUERY = `
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
 PREFIX schema: <http://schema.org/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX service: <http://purl.org/ontology/service#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT ?id ?group ?name ?nameLang ?comment ?commentLang ?abbreviation ?abbreviationLang
+CONSTRUCT {
+  ?mapId a systemmap:SystemMap ; schema:name ?mapTitle .
+
+  ?node a ?group ;
+        schema:name ?name ;
+        schema:description ?comment ;
+        systemmap:abbreviation ?abbreviation ;
+        schema:keywords ?keyword .
+        
+  ?keyword a schema:DefinedTerm ;
+           schema:name ?keywordLabel .
+
+  ?node schema:subOrganization ?subOrg ;
+        schema:parentOrganization ?parentOrg ;
+        dcterms:hasPart ?hasPart ;
+        dcterms:isPartOf ?isPartOf .
+
+  ?node ?property ?targetNode .
+
+  ?classIri a owl:Class ;
+            schema:name ?classLabel ;
+            schema:description ?classComment .
+
+  ?property a owl:ObjectProperty ;
+            schema:name ?propLabel ;
+            schema:description ?propComment ;
+            rdfs:domain ?domain ;
+            rdfs:range ?range .
+}
 WHERE {
   GRAPH <https://lindas.admin.ch/foag/system-map> {
-    ${ subgraph ? `systemmap:${subgraph} systemmap:containsNodes ?id .` : "" }
-    ?id a ?group .
-    VALUES ?group { ${organization} ${system} ${information} ${service} }
-    OPTIONAL { ?id schema:name ?name . BIND(LANG(?name) AS ?nameLang) }
-    OPTIONAL { ?id schema:description ?comment . BIND(LANG(?comment) AS ?commentLang) }
-    OPTIONAL { ?id systemmap:abbreviation ?abbreviation . BIND(LANG(?abbreviation) AS ?abbreviationLang) }
+    {
+       BIND(${ subgraph ? "systemmap:" + subgraph : "systemmap:metadata" } as ?mapId)
+       OPTIONAL { ?mapId schema:name ?mapTitle }
+    } UNION {
+       ${ subgraph ? `systemmap:${subgraph} systemmap:containsNodes ?node .` : "" }
+       ?node a ?group .
+       VALUES ?group { ${groupValues} }
+       OPTIONAL { ?node schema:name ?name }
+       OPTIONAL { ?node schema:description ?comment }
+       OPTIONAL { ?node systemmap:abbreviation ?abbreviation }
+       OPTIONAL {
+         ?node schema:keywords ?keyword .
+         OPTIONAL { ?keyword schema:name ?keywordLabel . }
+       }
+    } UNION {
+       ?node ?hierarchyProp ?targetNode .
+       VALUES ?hierarchyProp {
+         schema:subOrganization schema:parentOrganization
+         dcterms:hasPart dcterms:isPartOf
+       }
+    } UNION {
+       ?node ?property ?targetNode .
+       VALUES ?property { ${predicateValues} }
+    } UNION {
+       VALUES ?classIri { schema:Organization schema:SoftwareApplication dcat:Dataset service:Service }
+       OPTIONAL { ?classIri schema:name ?classLabel }
+       OPTIONAL { ?classIri schema:description ?classComment }
+    } UNION {
+       VALUES ?property { ${allPredicateValues} }
+       OPTIONAL { ?property schema:name ?propLabel }
+       OPTIONAL { ?property schema:description ?propComment }
+       OPTIONAL { ?property rdfs:domain/rdfs:subClassOf* ?domain . VALUES ?domain { schema:Organization schema:SoftwareApplication dcat:Dataset service:Service } }
+       OPTIONAL { ?property rdfs:range/rdfs:subClassOf* ?range . VALUES ?range { schema:Organization schema:SoftwareApplication dcat:Dataset service:Service } }
+    }
   }
 }
 `;
 
-// NEW: Query for keywords associated with nodes
-window.KEYWORD_QUERY = `
+window.getNodeDetailsQuery = function(nodeId) {
+    return `
 PREFIX schema: <http://schema.org/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
 
-SELECT ?node ?keyword ?label ?lang
-WHERE {
-  GRAPH <https://lindas.admin.ch/foag/system-map> {
-    ${ subgraph ? `systemmap:${subgraph} systemmap:containsNodes ?node .` : "" }
-    ?node dcat:keyword ?keyword .
-    ?keyword schema:name ?label .
-    BIND(LANG(?label) AS ?lang)
-  }
+CONSTRUCT {
+    ?node schema:url ?landingPage ;
+          systemmap:uid ?uid ;
+          systemmap:streetAddress ?addressName ;
+          systemmap:postalCode ?postalCode ;
+          systemmap:addressLocality ?addressLocality ;
+          systemmap:legalStatusName ?legalStatusName .
 }
-`;
-
-// Simplified query for edge instances
-window.EDGE_QUERY = `
-PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
-PREFIX schema: <http://schema.org/>
-PREFIX dcat:   <http://www.w3.org/ns/dcat#>
-PREFIX prov:   <http://www.w3.org/ns/prov#>
-PREFIX service:<http://purl.org/ontology/service#>
-PREFIX dcterms:<http://purl.org/dc/terms/>
-
-SELECT ?from ?property ?to
 WHERE {
-  GRAPH <https://lindas.admin.ch/foag/system-map> {
-    ?from ?property ?to .
-    VALUES ?property {
-      ${predicateValues}
-    }
-  }
-}
-`;
-
-// NEW: Query for predicate metadata (labels, domain, range)
-window.EDGE_METADATA_QUERY = `
-PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
-PREFIX schema: <http://schema.org/>
-PREFIX dcat:   <http://www.w3.org/ns/dcat#>
-PREFIX prov:   <http://www.w3.org/ns/prov#>
-PREFIX service:<http://purl.org/ontology/service#>
-PREFIX dcterms:<http://purl.org/dc/terms/>
-
-SELECT DISTINCT ?predicate ?label ?labelLang ?comment ?commentLang ?domain ?range
-WHERE {
-  GRAPH <https://lindas.admin.ch/foag/system-map> {
-    VALUES ?predicate {
-      ${predicateValues}
+    BIND( <${nodeId}> AS ?node )
+    
+    OPTIONAL {
+        {
+            SELECT ?landingPage WHERE {
+                GRAPH <https://lindas.admin.ch/foag/system-map> {
+                    <${nodeId}> schema:url ?landingPage .
+                }
+            } LIMIT 1
+        }
     }
     
-    # This ensures we only get metadata for predicates that are actually in use
-    ?from ?predicate ?to .
-
-    OPTIONAL { ?predicate schema:name ?label . BIND(LANG(?label) as ?labelLang) }
-    OPTIONAL { ?predicate schema:description ?comment . BIND(LANG(?comment) as ?commentLang) }
-    
-    # Constrain the domain traversal to the known classes in the application
-    OPTIONAL { 
-      ?predicate rdfs:domain/rdfs:subClassOf* ?domain . 
-      VALUES ?domain { schema:Organization schema:SoftwareApplication dcat:Dataset service:Service }
+    OPTIONAL {
+        GRAPH <https://lindas.admin.ch/foj/zefix> {
+            OPTIONAL {
+                {
+                    SELECT ?uid WHERE {
+                        <${nodeId}> schema:identifier [
+                            schema:name "CompanyUID" ;
+                            schema:value ?uid
+                        ] .
+                    } LIMIT 1
+                }
+            }
+            OPTIONAL {
+                {
+                    SELECT ?addressName ?postalCode ?addressLocality WHERE {
+                        <${nodeId}> schema:address [
+                            schema:streetAddress ?addressName ;
+                            schema:postalCode ?postalCode ;
+                            schema:addressLocality ?addressLocality
+                        ] .
+                    } LIMIT 1
+                }
+            }
+            OPTIONAL {
+                <${nodeId}> schema:additionalType ?legalStatus .
+                GRAPH <https://lindas.admin.ch/lindas-ech> {
+                    ?legalStatus schema:name ?legalStatusName .
+                }
+            }
+        }
     }
-    
-    # Constrain the range traversal to the known classes in the application
-    OPTIONAL { 
-      ?predicate rdfs:range/rdfs:subClassOf* ?range . 
-      VALUES ?range { schema:Organization schema:SoftwareApplication dcat:Dataset service:Service }
-    }
-  }
-}
-ORDER BY ?domain
-`;
-
-
-// query top class names and comments - fetches all language data at once
-window.CLASS_QUERY = `
-  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-  PREFIX schema: <http://schema.org/>
-  PREFIX dcat: <http://www.w3.org/ns/dcat#>
-  PREFIX service: <http://purl.org/ontology/service#>
-  SELECT ?iri ?label ?labelLang ?comment ?commentLang
-  WHERE {
-    GRAPH <https://lindas.admin.ch/foag/system-map> {
-      VALUES ?iri { schema:Organization schema:SoftwareApplication dcat:Dataset service:Service }
-      
-      OPTIONAL { ?iri schema:name ?label . BIND(LANG(?label) AS ?labelLang) }
-      OPTIONAL { ?iri schema:description ?comment . BIND(LANG(?comment) AS ?commentLang) }
-    }
-  }
-`;
-
-// query the ontology title - fetches all language data at once
-window.TITLE_QUERY = `
-PREFIX schema: <http://schema.org/>
-PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
-SELECT ?title ?lang
-WHERE {
-  GRAPH <https://lindas.admin.ch/foag/system-map> {
-    BIND(${ subgraph ? "systemmap:" + subgraph : "systemmap:metadata" } as ?id)
-    OPTIONAL { ?id schema:name ?title . BIND(LANG(?title) AS ?lang) }
-  }
 }
 `;
-
-// fetch SPARQL data from the LINDAS endpoint
-window.getSparqlData = async function(query) {
-  const url = `${ENDPOINT}?query=${encodeURIComponent(query)}`;
-  const response = await fetch(url, {
-    headers: { Accept: "application/sparql-results+json" },
-  });
-  return response.json();
 };
 
-// Map the IRIs for classes onto simpler group names using the central config
+window.getSparqlData = async function(query) {
+    const url = `${ENDPOINT}?query=${encodeURIComponent(query)}`;
+    const response = await fetch(url, { headers: { Accept: "application/ld+json" } });
+    return response.json();
+};
+
 window.mapClassIriToGroup = function(iri) {
-  return APP_CONFIG.GROUP_MAP[iri] || "Other";
+    return APP_CONFIG.GROUP_MAP[iri] || "Other";
 };

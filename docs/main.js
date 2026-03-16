@@ -126,7 +126,6 @@ async function init() {
     APP_CONFIG.initializeStylesFromCSS();
 
     let currentLang = getParam("lang") || "de";
-    let minDegree = parseInt(getParam("minDegree") || "0", 10);
     
     const kwParam = getParam("keywords");
     const activeKeywords = kwParam ? kwParam.split(',') : [];
@@ -442,7 +441,6 @@ async function init() {
         if (abbreviation) titleHtml += ` (${abbreviation})`;
 
         let html = `
-            <a href="${nodeData.id}" target="_blank"><small><code>${shortenIri(nodeData.id)}</code></small></a>
             <div class="info-panel-header">
                 <h4>${titleHtml} ${classChipHtml}</h4>
             </div>`;
@@ -517,8 +515,7 @@ async function init() {
         const { text: label } = getLocalizedText(predicateMeta?.label, currentLang);
         const { text: comment } = getLocalizedText(predicateMeta?.comment, currentLang);
 
-        let html = edgeData.iri ? `<a href="${edgeData.iri}" target="_blank"><small><code>${shortenIri(edgeData.iri)}</code></small></a><br/>` : '';
-        html += `
+        let html = `
             <div class="edge-title-container">
                 <h4>${label}</h4>
                 ${createEdgeDiagramHtml(edgeData.iri)}
@@ -571,29 +568,14 @@ async function init() {
         }
     };
 
-    const nodeDegrees = {};
-    Object.values(allEdgesData).forEach(edge => {
-        nodeDegrees[edge.from] = (nodeDegrees[edge.from] || 0) + 1;
-        nodeDegrees[edge.to] = (nodeDegrees[edge.to] || 0) + 1;
+    const initialNodes = Object.values(allNodesData).map(nodeData => ({ id: nodeData.id, group: nodeData.group, label: " " }));
+    const initialEdges = Object.values(allEdgesData).map(edgeData => {
+        const edge = { id: edgeData.id, from: edgeData.from, to: edgeData.to, label: " " };
+        if (APP_CONFIG.DASHED_PREDICATES.includes(edgeData.iri)) {
+            edge.dashes = [3, 4]; edge.length = 500; edge.springConstant = 0.001;
+        }
+        return edge;
     });
-
-    const filteredNodeIds = new Set(
-        Object.keys(allNodesData).filter(nodeId => (nodeDegrees[nodeId] || 0) >= minDegree)
-    );
-
-    const initialNodes = Object.values(allNodesData)
-        .filter(nodeData => filteredNodeIds.has(nodeData.id))
-        .map(nodeData => ({ id: nodeData.id, group: nodeData.group, label: " " }));
-
-    const initialEdges = Object.values(allEdgesData)
-        .filter(edgeData => filteredNodeIds.has(edgeData.from) && filteredNodeIds.has(edgeData.to))
-        .map(edgeData => {
-            const edge = { id: edgeData.id, from: edgeData.from, to: edgeData.to, label: " " };
-            if (APP_CONFIG.DASHED_PREDICATES.includes(edgeData.iri)) {
-                edge.dashes = [3, 4]; edge.length = 500; edge.springConstant = 0.001;
-            }
-            return edge;
-        });
         
     nodesDataset = new vis.DataSet(initialNodes);
     edgesDataset = new vis.DataSet(initialEdges);
@@ -617,9 +599,6 @@ async function init() {
       () => {
         const params = {};
         params.lang = currentLang;
-        
-        const minDegreeValue = parseInt(document.getElementById('min-degree-slider').value, 10);
-        params.minDegree = minDegreeValue > 0 ? minDegreeValue : null;
 
         document.querySelectorAll('.tri-toggle').forEach(toggle => {
             const checkedRadio = toggle.querySelector('input[type="radio"]:checked');
@@ -631,7 +610,12 @@ async function init() {
         });
 
         const allPredicateKeys = Object.keys(APP_CONFIG.PREDICATE_MAP);
-        const selectedPreds = Array.from(document.querySelectorAll('#settings-predicates input[type="checkbox"]')).filter(cb => cb.checked).map(cb => cb.dataset.key);
+        
+        // Use a Set to extract unique active predicates since they can appear in multiple columns
+        const selectedPredsSet = new Set();
+        document.querySelectorAll('.pred-checkbox:checked').forEach(cb => selectedPredsSet.add(cb.dataset.key));
+        const selectedPreds = Array.from(selectedPredsSet);
+
         params.predicates = selectedPreds.length === allPredicateKeys.length ? null : selectedPreds.join(';');
 
         const selectedKws = window.kwChoicesInstance ? window.kwChoicesInstance.getValue(true) : [];
@@ -713,89 +697,14 @@ async function init() {
         const TEXT = APP_CONFIG.UI_TEXT[currentLang];
         
         document.getElementById('settings-title').textContent = TEXT.settings;
-        document.getElementById('settings-min-degree-title').textContent = TEXT.minDegree;
-        document.getElementById('settings-node-classes-title').textContent = TEXT.visibleNodeClasses;
-        document.getElementById('settings-relationship-types-title').textContent = TEXT.visibleRelationshipTypes;
-        document.getElementById('settings-keywords-title').textContent = TEXT.filterKeywords;
         document.getElementById('settingsCancel').textContent = TEXT.cancel;
         document.getElementById('settingsSave').textContent = TEXT.saveAndReload;
 
-        const minDegreeContainer = document.getElementById('settings-min-degree-container');
-        minDegreeContainer.innerHTML = `
-            <div class="settings-slider-wrapper">
-                <input type="range" min="0" max="5" value="${minDegree}" class="settings-slider" id="min-degree-slider">
-                <span id="min-degree-value">${minDegree}</span>
-            </div>
-        `;
-        const slider = document.getElementById('min-degree-slider');
-        const sliderValueDisplay = document.getElementById('min-degree-value');
-        slider.addEventListener('input', (e) => { sliderValueDisplay.textContent = e.target.value; });
+        const gridContainer = document.getElementById('settings-classes-grid');
+        gridContainer.innerHTML = '';
 
-        const createToggleItem = (container, { id, dataKey, dataValue, currentValue, label, comment, uri, curie, visualHtml }) => {
-            let html = `<div class="class-toggle-row">
-                <div class="tri-toggle" title="Toggle State">
-                    <input type="radio" id="${id}_full" name="${id}" value="full" data-${dataKey}="${dataValue}" ${currentValue === 'full' ? 'checked' : ''}>
-                    <label for="${id}_full" title="${TEXT.stateFull}"><i class="fas fa-sitemap"></i></label>
-
-                    <input type="radio" id="${id}_collapsed" name="${id}" value="collapsed" data-${dataKey}="${dataValue}" ${currentValue === 'collapsed' ? 'checked' : ''}>
-                    <label for="${id}_collapsed" title="${TEXT.stateCollapsed}"><i class="fas fa-compress"></i></label>
-
-                    <input type="radio" id="${id}_off" name="${id}" value="off" data-${dataKey}="${dataValue}" ${currentValue === 'off' ? 'checked' : ''}>
-                    <label for="${id}_off" title="${TEXT.stateOff}"><i class="fas fa-eye-slash"></i></label>
-
-                    <div class="tri-toggle-slider"></div>
-                </div>
-                <div class="class-toggle-info">
-                    <div class="class-toggle-header">
-                        <strong>${label}</strong>
-                        ${uri ? `<span class="settings-curie">(<a href="${uri}" target="_blank">${curie}</a>)</span>` : ''}
-                        ${visualHtml || ''}
-                    </div>
-                    ${comment ? `<div class="settings-list-item-comment">${comment}</div>`:``}
-                </div>
-            </div>`;
-            container.insertAdjacentHTML('beforeend', html);
-        };
-
-        const classesContainer = document.getElementById('settings-classes');
-        classesContainer.innerHTML = '';
-        const sortedClasses = Object.values(allClassesData).sort((a,b) => 
-            (getLocalizedText(a.label, currentLang).text || '').localeCompare(getLocalizedText(b.label, currentLang).text || '')
-        );
-
-        sortedClasses.forEach(classData => {
-            const groupName = mapClassIriToGroup(classData.id);
-            if(groupName === "Other") return;
-            const paramVal = getParam(groupName.toLowerCase()) || 'full';
-            createToggleItem(classesContainer, {
-                id: `setting-class-${groupName}`,
-                dataKey: 'group',
-                dataValue: groupName,
-                currentValue: paramVal,
-                label: getLocalizedText(classData.label, currentLang).text || TEXT.noLabel,
-                comment: getLocalizedText(classData.comment, currentLang).text || '',
-                uri: classData.id,
-                curie: shortenIri(classData.id),
-                visualHtml: createNodeIconHtml(groupName)
-            });
-        });
-
-        const createCheckboxItem = (container, { id, dataKey, dataValue, isChecked, label, comment, uri, curie, visualHtml }) => {
-            let html = `<div class="settings-list-item">
-                <div class="settings-list-item-content">
-                    <label>
-                        <input type="checkbox" id="${id}" data-${dataKey}="${dataValue}" ${isChecked ? 'checked' : ''}>
-                        <strong>${label}</strong>
-                        ${uri ? `<span>(<a href="${uri}" target="_blank">${curie}</a>)&nbsp;&nbsp;</span>` : ''}
-                        ${visualHtml || ''}
-                    </label>
-                    ${comment ? `<span class="settings-list-item-comment">${comment}</span>`:``}
-                </div></div>`;
-            container.insertAdjacentHTML('beforeend', html);
-        };
-
-        const predicatesContainer = document.getElementById('settings-predicates');
-        predicatesContainer.innerHTML = '';
+        const groups = ["Organization", "System", "Information", "Service"];
+        
         const rawPredParam = getParam("predicates");
         const currentPreds = rawPredParam === null ? Object.keys(APP_CONFIG.PREDICATE_MAP) : (rawPredParam ? rawPredParam.split(/[;,+\s]+/) : []);
 
@@ -812,47 +721,119 @@ async function init() {
             (getLocalizedText(a.label, currentLang).text || '').localeCompare(getLocalizedText(b.label, currentLang).text || '')
         );
 
-        sortedPredicates.forEach(predData => {
-            const key = iriToKeyMap[predData.id];
-            if (key) {
-                createCheckboxItem(predicatesContainer, {
-                    id: `setting-pred-${key}`,
-                    dataKey: 'key',
-                    dataValue: key,
-                    isChecked: currentPreds.includes(key),
-                    label: getLocalizedText(predData.label, currentLang).text || TEXT.noLabel,
-                    comment: null, 
-                    uri: predData.id,
-                    curie: shortenIri(predData.id),
-                    visualHtml: createEdgeDiagramHtml(predData.id)
-                });
+        groups.forEach(groupName => {
+            const classIri = APP_CONFIG.GROUP_IRI_MAP[groupName];
+            const classData = allClassesData[classIri];
+
+            const col = document.createElement('div');
+            col.className = 'settings-class-column';
+
+            const paramVal = getParam(groupName.toLowerCase()) || 'full';
+            const labelText = classData ? (getLocalizedText(classData.label, currentLang).text || TEXT.noLabel) : groupName;
+            const visualHtml = createNodeIconHtml(groupName);
+
+            let colHtml = `
+                <div class="settings-class-header">
+                    <div class="class-toggle-row">
+                        <div class="tri-toggle" title="Toggle State">
+                            <input type="radio" id="setting-class-${groupName}_full" name="setting-class-${groupName}" value="full" data-group="${groupName}" ${paramVal === 'full' ? 'checked' : ''}>
+                            <label for="setting-class-${groupName}_full" title="${TEXT.stateFull}"><i class="fas fa-sitemap"></i></label>
+                            
+                            <input type="radio" id="setting-class-${groupName}_collapsed" name="setting-class-${groupName}" value="collapsed" data-group="${groupName}" ${paramVal === 'collapsed' ? 'checked' : ''}>
+                            <label for="setting-class-${groupName}_collapsed" title="${TEXT.stateCollapsed}"><i class="fas fa-compress"></i></label>
+                            
+                            <input type="radio" id="setting-class-${groupName}_off" name="setting-class-${groupName}" value="off" data-group="${groupName}" ${paramVal === 'off' ? 'checked' : ''}>
+                            <label for="setting-class-${groupName}_off" title="${TEXT.stateOff}"><i class="fas fa-eye-slash"></i></label>
+                            <div class="tri-toggle-slider"></div>
+                        </div>
+                        <div class="class-toggle-info">
+                            <div class="class-toggle-header">
+                                <strong>${labelText}</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h3 class="settings-subheading">${TEXT.visibleRelationshipTypes || 'Properties'}</h3>
+                    <div class="settings-predicates-list">
+            `;
+
+            sortedPredicates.forEach(predData => {
+                const key = iriToKeyMap[predData.id];
+                if (!key) return;
+
+                const isAgnostic = !predData.domain ||
+                                   predData.domain === 'http://www.w3.org/2002/07/owl#Thing' ||
+                                   !APP_CONFIG.GROUP_MAP[predData.domain];
+
+                if (isAgnostic || predData.domain === classIri) {
+                    const isChecked = currentPreds.includes(key);
+                    const predLabel = getLocalizedText(predData.label, currentLang).text || TEXT.noLabel;
+                    const edgeHtml = createEdgeDiagramHtml(predData.id);
+
+                    colHtml += `
+                        <div class="settings-list-item">
+                            <div class="settings-list-item-content">
+                                <label>
+                                    <input type="checkbox" class="pred-checkbox" id="setting-pred-${groupName}-${key}" data-key="${key}" ${isChecked ? 'checked' : ''}>
+                                    <strong>${predLabel}</strong>
+                                    ${edgeHtml}
+                                </label>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+
+            colHtml += `</div></div>`;
+
+            if (groupName === 'Information') {
+                colHtml += `
+                    <div class="settings-section">
+                        <h3 class="settings-subheading">${TEXT.filterKeywords || 'Keywords'}</h3>
+                        <select id="keyword-select" multiple></select>
+                    </div>
+                `;
             }
+
+            col.innerHTML = colHtml;
+            gridContainer.appendChild(col);
+        });
+
+        // Event listeners to sync same predicates across columns
+        document.querySelectorAll('.pred-checkbox').forEach(cb => {
+            cb.addEventListener('change', (e) => {
+                const key = e.target.dataset.key;
+                document.querySelectorAll(`.pred-checkbox[data-key="${key}"]`).forEach(other => {
+                    other.checked = e.target.checked;
+                });
+            });
         });
 
         const keywordSelect = document.getElementById('keyword-select');
-        const choicesData = Object.entries(allKeywordsMap).map(([uri, langMap]) => {
-            const shortId = getKwId(uri);
-            return { 
-                value: shortId, 
-                label: getLocalizedText(langMap, currentLang).text || TEXT.noLabel,
-                selected: activeKeywords.includes(shortId)
-            };
-        }).sort((a, b) => a.label.localeCompare(b.label));
+        if (keywordSelect) {
+            const choicesData = Object.entries(allKeywordsMap).map(([uri, langMap]) => {
+                const shortId = getKwId(uri);
+                return { 
+                    value: shortId, 
+                    label: getLocalizedText(langMap, currentLang).text || TEXT.noLabel,
+                    selected: activeKeywords.includes(shortId)
+                };
+            }).sort((a, b) => a.label.localeCompare(b.label));
 
-        if (window.kwChoicesInstance) { 
-            window.kwChoicesInstance.destroy(); 
+            if (window.kwChoicesInstance) { 
+                window.kwChoicesInstance.destroy(); 
+            }
+            
+            window.kwChoicesInstance = new Choices(keywordSelect, {
+                choices: choicesData,
+                removeItemButton: true,
+                searchResultLimit: 5,
+                renderChoiceLimit: -1,
+                placeholderValue: TEXT.searchPlaceholder,
+                itemSelectText: ''
+            });
         }
-        
-        keywordSelect.innerHTML = ''; 
-
-        window.kwChoicesInstance = new Choices(keywordSelect, {
-            choices: choicesData,
-            removeItemButton: true,
-            searchResultLimit: 5,
-            renderChoiceLimit: -1,
-            placeholderValue: TEXT.searchPlaceholder,
-            itemSelectText: ''
-        });
     }
 }
 

@@ -25,11 +25,15 @@ window.groupValues = activeGroupIris.length > 0 ? activeGroupIris.join(' ') : "<
 const rawPredParam = getQueryParam("predicates", "").trim();
 const selectedKeys = rawPredParam ? rawPredParam.split(/[;,+\s]+/).filter(Boolean) : [];
 
-let predicateIris = selectedKeys.map(k => APP_CONFIG.PREDICATE_MAP[k]).filter(Boolean);
-if (predicateIris.length === 0) {
-    predicateIris = Object.values(APP_CONFIG.PREDICATE_MAP);
+let activePredicateIris = selectedKeys.map(k => APP_CONFIG.PREDICATE_MAP[k]).filter(Boolean);
+if (activePredicateIris.length === 0) {
+    activePredicateIris = Object.values(APP_CONFIG.PREDICATE_MAP);
 }
-window.predicateValues = predicateIris.map(iri => `      ${iri}`).join("\n");
+window.predicateValues = activePredicateIris.map(iri => `      ${iri}`).join("\n");
+
+// We fetch metadata for ALL possible predicates to ensure the UI can display them even if disabled
+const allPredicateIris = Object.values(APP_CONFIG.PREDICATE_MAP);
+window.allPredicateValues = allPredicateIris.map(iri => `      ${iri}`).join("\n");
 
 window.ENDPOINT = APP_CONFIG.ENDPOINT;
 
@@ -50,7 +54,7 @@ CONSTRUCT {
         schema:name ?name ;
         schema:description ?comment ;
         systemmap:abbreviation ?abbreviation ;
-        schema:keywords ?keyword .
+        dcat:keyword ?keyword .
         
   ?keyword a schema:DefinedTerm ;
            schema:name ?keywordLabel .
@@ -85,7 +89,7 @@ WHERE {
        OPTIONAL { ?node schema:description ?comment }
        OPTIONAL { ?node systemmap:abbreviation ?abbreviation }
        OPTIONAL {
-         ?node schema:keywords ?keyword .
+         ?node dcat:keyword ?keyword .
          OPTIONAL { ?keyword schema:name ?keywordLabel . }
        }
     } UNION {
@@ -102,7 +106,7 @@ WHERE {
        OPTIONAL { ?classIri schema:name ?classLabel }
        OPTIONAL { ?classIri schema:description ?classComment }
     } UNION {
-       VALUES ?property { ${predicateValues} }
+       VALUES ?property { ${allPredicateValues} }
        OPTIONAL { ?property schema:name ?propLabel }
        OPTIONAL { ?property schema:description ?propComment }
        OPTIONAL { ?property rdfs:domain/rdfs:subClassOf* ?domain . VALUES ?domain { schema:Organization schema:SoftwareApplication dcat:Dataset service:Service } }
@@ -119,7 +123,7 @@ PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
 
 CONSTRUCT {
-    ?node schema:url ?landingPage ;
+    ?node dcat:landingPage ?landingPage ;
           systemmap:uid ?uid ;
           systemmap:streetAddress ?addressName ;
           systemmap:postalCode ?postalCode ;
@@ -133,7 +137,7 @@ WHERE {
         {
             SELECT ?landingPage WHERE {
                 GRAPH <https://lindas.admin.ch/foag/system-map> {
-                    <${nodeId}> schema:url ?landingPage .
+                    <${nodeId}> dcat:landingPage ?landingPage .
                 }
             } LIMIT 1
         }

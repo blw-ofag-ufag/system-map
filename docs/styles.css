@@ -105,12 +105,12 @@ html, body {
     background: var(--color-background);
     padding: 20px 30px;
     border-radius: 8px;
-    width: 1100px;
-    max-width: 90vw;
-    max-height: 85vh;
+    width: 95vw;
+    height: 80vh;
+    max-width: 1600px;
     display: flex;
     flex-direction: column;
-    overflow-y: visible; 
+    overflow: hidden; 
     font-family: "Poppins", sans-serif;
 }
 #settings-panel h2 {
@@ -119,26 +119,39 @@ html, body {
     padding-bottom: 10px;
     flex-shrink: 0;
 }
-#settings-panel h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    padding-bottom: 5px;
-}
-.settings-columns {
-    display: flex;
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     flex-grow: 1;
-    gap: 1.5rem;
-    overflow-y: visible; 
-    padding: 0 5px;
+    overflow-y: hidden;
+    margin-top: 20px;
 }
-.settings-column {
-    overflow-y: visible; 
+.settings-class-column {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    border-right: 1px solid var(--color-grey-light);
     padding-right: 15px;
-    flex: 1;
+}
+.settings-class-column:last-child {
+    border-right: none;
+}
+.settings-class-header {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-grey-light);
+}
+.settings-subheading {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: var(--color-font-dimmed);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 .settings-section {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .choices {
@@ -171,12 +184,6 @@ html, body {
     background-color: var(--color-grey-light) !important;
 }
 
-.settings-scroll-box {
-    max-height: 450px;
-    overflow-y: auto;
-    padding-right: 10px; 
-}
-
 .settings-list-item {
     display: flex;
     align-items: flex-start;
@@ -204,22 +211,11 @@ html, body {
     margin-right: 0;
     white-space: nowrap;
 }
-.settings-list-item-comment {
-    font-size: 9pt;
-    color: var(--color-font-dimmed);
-}
-.settings-curie {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 12px;
-    color: var(--color-font-dimmed);
-    padding: 2px 4px;
-    border-radius: 3px;
-    flex-shrink: 0;
-}
 .settings-actions {
     display: flex;
     justify-content: flex-end;
     padding-top: 20px;
+    border-top: 1px solid var(--color-grey-light);
     flex-shrink: 0;
 }
 .settings-actions button {
@@ -356,61 +352,6 @@ h1, h2, h3, h4, h5, h6 {
     border-style: solid;
     white-space: nowrap;
 }
-.settings-node-icon {
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: 600;
-    border-width: 1px;
-    border-style: solid;
-    white-space: nowrap;
-    line-height: 1.5;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-}
-.settings-slider-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 5px 0;
-}
-.settings-slider {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 60%;
-    height: 3px;
-    background: var(--color-grey);
-    border-radius: 5px;
-    outline: none;
-    opacity: 0.9;
-    transition: opacity .2s;
-}
-.settings-slider:hover {
-    opacity: 1;
-}
-.settings-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: var(--color-font-dimmed);
-    cursor: pointer;
-    border-radius: 50%;
-    border: 2px solid var(--color-background);
-}
-.settings-slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: var(--color-font-normal);
-    cursor: pointer;
-    border-radius: 50%;
-    border: 2px solid var(--color-background);
-}
-#min-degree-value {
-    font-weight: 600;
-    font-size: 16px;
-    min-width: 20px;
-    text-align: center;
-}
 .keyword-container {
     margin-top: 15px;
     display: flex;
@@ -430,13 +371,13 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: flex-start;
     gap: 15px;
-    margin-bottom: 20px;
     font-size: 14px;
 }
 .class-toggle-info {
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 6px;
 }
 .class-toggle-header {
@@ -447,6 +388,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .class-toggle-header strong {
     margin: 0;
+    font-size: 16px;
 }
 
 .tri-toggle {

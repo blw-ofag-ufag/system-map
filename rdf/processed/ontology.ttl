@@ -17,33 +17,33 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zefix: <https://register.ld.admin.ch/zefix/company/> .
 
-systemmap:S08be1fdcd1d8675 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S08be1fdcd1d8675 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalbreeding,
         keyword:animalhealth ;
     systemmap:containedIn systemmap:Sb51c844b32eb867 .
 
-systemmap:S0f4b28b02fcdb51 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S0f4b28b02fcdb51 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalbreeding,
         keyword:animalhealth,
         keyword:antibiotics ;
     systemmap:containedIn systemmap:Sbc5a844a4f0c51a .
 
-systemmap:S16f05ee9c9c6de2 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S16f05ee9c9c6de2 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:S8a865ea5590dbdb .
 
-systemmap:S1AkhvKmzBiJFCTc a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S1AkhvKmzBiJFCTc a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     dcterms:hasPart systemmap:S4ZuIO9s81WMS2bKB,
         systemmap:SLJMFAZ6GNdFvfb2L,
@@ -57,56 +57,56 @@ systemmap:S1AkhvKmzBiJFCTc a _:nb8c8565bbcd149b7873f63646a71db6db1,
     prov:wasDerivedFrom systemmap:SKoClBiquflDf7yi6 ;
     systemmap:usesMasterData systemmap:SbKCxLGicJtMGTQiD .
 
-systemmap:S1df451f0356426f a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S1df451f0356426f a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth,
         keyword:antibiotics ;
     systemmap:containedIn systemmap:S5aa8657dd97155b .
 
-systemmap:S1u8DDdB8YZ67H5l5 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S1u8DDdB8YZ67H5l5 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     dcterms:hasPart systemmap:S1u8FFdB8YZ67H5X6,
         systemmap:SY9n2yTOBWXtZ6se ;
     systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_6> .
 
-systemmap:S1u8FFdB8YZ67H5X6 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S1u8FFdB8YZ67H5X6 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     dcterms:isPartOf systemmap:S1u8DDdB8YZ67H5l5 .
 
-systemmap:S27626110a39e3ed a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S27626110a39e3ed a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:Se5bcee032bfbd65 .
 
-systemmap:S2XkdeKmzCiJFCTb a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S2XkdeKmzCiJFCTb a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     dcterms:hasPart systemmap:S1AkhvKmzBiJFCTc,
         systemmap:SbKCxLGicJtMGTQiD ;
     systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
     systemmap:informs systemmap:S2XkdeKmzFiJFXWc .
 
-systemmap:S2XkdeKmzFiJFXWc a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S2XkdeKmzFiJFXWc a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     prov:wasDerivedFrom systemmap:S2XkdeKmzCiJFCTb ;
     systemmap:containedIn systemmap:SxvsanBKE0ZN315DU ;
     systemmap:informs systemmap:SRT6X0n1ML8vX3uV .
 
-systemmap:S3jZwzvmFKsXRWiI a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S3jZwzvmFKsXRWiI a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         systemmap:MasterData ;
     rdfs:label "BUR Number"@en ;
@@ -117,16 +117,16 @@ systemmap:S3jZwzvmFKsXRWiI a _:nb8c8565bbcd149b7873f63646a71db6db1,
         """@en ;
     systemmap:abbreviation "BURNR"@en .
 
-systemmap:S44511ce1ce85d04 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S44511ce1ce85d04 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:S8c40c23705714a0 .
 
-systemmap:S4BoMPavXD5gIObm a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S4BoMPavXD5gIObm a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Animal identification data"@en ;
     rdfs:comment """
@@ -135,39 +135,39 @@ systemmap:S4BoMPavXD5gIObm a _:nb8c8565bbcd149b7873f63646a71db6db1,
         """@en ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
-systemmap:S4ZuIO9s81WMS2bKB a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S4ZuIO9s81WMS2bKB a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Market Data Animal Feed"@en ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
     schema:url <https://www.agrarmarktdaten.ch/markt/futtermittel> .
 
-systemmap:S4x04ackmG5yne5By a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S4x04ackmG5yne5By a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:SPDsRNDwfr6fKFrRc .
 
-systemmap:S59098ed667cb3bd a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S59098ed667cb3bd a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth,
         keyword:diagnostics ;
     systemmap:containedIn systemmap:S49a6caf92b3058d .
 
-systemmap:S6320a5a3f8829b8 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S6320a5a3f8829b8 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:S3371e59cf6a7c46 .
 
-systemmap:S6ILF4g1j5sNf9aG a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S6ILF4g1j5sNf9aG a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Information on the import of PPP"@en ;
@@ -177,71 +177,71 @@ systemmap:S6ILF4g1j5sNf9aG a _:nb8c8565bbcd149b7873f63646a71db6db1,
     prov:wasDerivedFrom systemmap:SfQ6BN8rDjKhTWL4 ;
     systemmap:containedIn systemmap:SywklUB91myTH0cvS .
 
-systemmap:S6abacb381c3b305 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S6abacb381c3b305 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalbreeding,
         keyword:animalhealth ;
     systemmap:containedIn systemmap:Sacf3b075f9fa6a3 .
 
-systemmap:S6e777b275a43632 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S6e777b275a43632 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:Saeb98b8b20b87dc .
 
-systemmap:S6lhRFiEflanK2rcl a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S6lhRFiEflanK2rcl a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     systemmap:containedIn systemmap:SjhTrVt8CB9QFq0Yn ;
     systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
-systemmap:S70ed53aa68083c7 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S70ed53aa68083c7 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth,
         keyword:antibiotics ;
     systemmap:containedIn systemmap:Sb35n3iHP8gdx3MXZ .
 
-systemmap:S70ed53aa68083c8 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S70ed53aa68083c8 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth,
         keyword:antibiotics ;
     systemmap:containedIn systemmap:Sce5n6iUiSgdU3Mvv .
 
-systemmap:S70ed53aa68083c9 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S70ed53aa68083c9 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth,
         keyword:antibiotics ;
     systemmap:containedIn systemmap:S8awijRdrkgdpXxgz .
 
-systemmap:S77a8bd0c2e5fb0f a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S77a8bd0c2e5fb0f a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:Sbc93f958f0b123f .
 
-systemmap:S7ddb5605c1326b4 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S7ddb5605c1326b4 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth,
         keyword:antibiotics ;
     systemmap:containedIn systemmap:SzrnfKnzjo2egouKl .
 
-systemmap:S7mhWQjPZiSFc8dU a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S7mhWQjPZiSFc8dU a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Animal event data"@en ;
     rdfs:comment """
@@ -250,32 +250,32 @@ systemmap:S7mhWQjPZiSFc8dU a _:nb8c8565bbcd149b7873f63646a71db6db1,
         """@en ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
-systemmap:S80e7173e5ad86e9 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S80e7173e5ad86e9 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth,
         keyword:antibiotics ;
     systemmap:containedIn systemmap:S6v6k2SMlwAVdLFmI .
 
-systemmap:S8944f12a7ca83e4 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S8944f12a7ca83e4 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth,
         keyword:antibiotics ;
     systemmap:containedIn systemmap:SXekzo74vRcL6VkjL .
 
-systemmap:S89f091bfc2a8ee0 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S89f091bfc2a8ee0 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:S0d3ffb3e2b288fa .
 
-systemmap:S8JpqvyO4LQwEM5s a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S8JpqvyO4LQwEM5s a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Global variety catalog"@en ;
     rdfs:comment """
@@ -285,9 +285,9 @@ systemmap:S8JpqvyO4LQwEM5s a _:nb8c8565bbcd149b7873f63646a71db6db1,
     prov:wasDerivedFrom systemmap:Spqrv6Ul05KJySTs ;
     systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN .
 
-systemmap:S8cKNg0hfPy97TUB a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S8cKNg0hfPy97TUB a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Company details"@en ;
     rdfs:comment """
@@ -295,23 +295,23 @@ systemmap:S8cKNg0hfPy97TUB a _:nb8c8565bbcd149b7873f63646a71db6db1,
         """@en ;
     systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
-systemmap:S92c678287d7c7c3 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S92c678287d7c7c3 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:Sbf2a33246ce235f .
 
-systemmap:S98fbf4f4b3f4d13 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S98fbf4f4b3f4d13 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:S844d3e2975f1f13 .
 
-systemmap:S9J1HTMKIxnCgmYc a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S9J1HTMKIxnCgmYc a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Plant Protection Products"@en ;
     rdfs:comment """
@@ -320,23 +320,23 @@ systemmap:S9J1HTMKIxnCgmYc a _:nb8c8565bbcd149b7873f63646a71db6db1,
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W ;
     systemmap:informs systemmap:SyhthSmTCgM19Wysy .
 
-systemmap:S9dITYOuP43UB4TW a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:S9dITYOuP43UB4TW a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         systemmap:MasterData ;
     dcterms:isPartOf systemmap:SldiTYOuXQmoC3SV .
 
-systemmap:SAGHyCcjQ9LRiSsV0 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SAGHyCcjQ9LRiSsV0 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se .
 
-systemmap:SAUWzyCpeGZ6vVil a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SAUWzyCpeGZ6vVil a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Data on animal owners"@en ;
     dcterms:hasPart systemmap:SEI0Jp1SabxWUiGh0 ;
@@ -349,16 +349,16 @@ systemmap:SAUWzyCpeGZ6vVil a _:nb8c8565bbcd149b7873f63646a71db6db1,
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ ;
     systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
-systemmap:SBba3t3SyxjgPiHhX a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SBba3t3SyxjgPiHhX a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     prov:wasDerivedFrom systemmap:SVXa3t3SyxjgPiLBx ;
     systemmap:containedIn systemmap:SAwz5t3SyxjgPiHhX .
 
-systemmap:SCkzllAJGWHIEermB a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SCkzllAJGWHIEermB a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     dcterms:hasPart systemmap:SkvXyKniPPKwKNRqo,
@@ -366,9 +366,9 @@ systemmap:SCkzllAJGWHIEermB a _:nb8c8565bbcd149b7873f63646a71db6db1,
     systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf ;
     systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
-systemmap:SDLEUPczkJ9AWZeC a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SDLEUPczkJ9AWZeC a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         systemmap:MasterData ;
     rdfs:label "UID"@en ;
@@ -378,9 +378,9 @@ systemmap:SDLEUPczkJ9AWZeC a _:nb8c8565bbcd149b7873f63646a71db6db1,
         """@en ;
     systemmap:containedIn systemmap:SuEtT7joC8HXVSfF .
 
-systemmap:SDmJeWK7EOnMqRLs a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SDmJeWK7EOnMqRLs a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Conditions for the Use of Plant Protection Products"@en ;
     rdfs:comment """
@@ -388,9 +388,9 @@ systemmap:SDmJeWK7EOnMqRLs a _:nb8c8565bbcd149b7873f63646a71db6db1,
         """@en ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
-systemmap:SDqb9NPoB6n3MZf2 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SDqb9NPoB6n3MZf2 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451,
         termdat:52453 ;
@@ -401,9 +401,9 @@ systemmap:SDqb9NPoB6n3MZf2 a _:nb8c8565bbcd149b7873f63646a71db6db1,
         The data includes criteria, calculation bases, affected periods, and administrative processes that may lead to such reductions.  
         """@en .
 
-systemmap:SEI0Jp1SabxWUiGh0 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SEI0Jp1SabxWUiGh0 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         systemmap:MasterData ;
     rdfs:label "ATDB Number"@en ;
@@ -414,16 +414,16 @@ systemmap:SEI0Jp1SabxWUiGh0 a _:nb8c8565bbcd149b7873f63646a71db6db1,
         The ATDB Number is permanently linked to the cantonal farm number (KT_ID_B) and is therefore location-specific.
         """@en .
 
-systemmap:SENtOaRGg22EqHWXq a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SENtOaRGg22EqHWXq a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     systemmap:containedIn systemmap:SlfheulBjlQDwuaIM ;
     systemmap:informs systemmap:SOqI5Nd7eaHDXIhDG .
 
-systemmap:SFZjIqVSzjv6ua4Mz a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SFZjIqVSzjv6ua4Mz a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se ;
@@ -431,9 +431,9 @@ systemmap:SFZjIqVSzjv6ua4Mz a _:nb8c8565bbcd149b7873f63646a71db6db1,
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2013/733/de#annex_2/lvl_u1/lvl_1> ;
     systemmap:usesMasterData systemmap:S9dITYOuP43UB4TW .
 
-systemmap:SFyGV7l0kN4qgA8u a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SFyGV7l0kN4qgA8u a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Crops and Pests"@en ;
     rdfs:comment """
@@ -441,30 +441,30 @@ systemmap:SFyGV7l0kN4qgA8u a _:nb8c8565bbcd149b7873f63646a71db6db1,
         """@en ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
-systemmap:SGXgfZIB9hCBv4fIa a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SGXgfZIB9hCBv4fIa a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:Sqv5Vh286L7iinjmy .
 
-systemmap:SHcRaVohogZJifUH4 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SHcRaVohogZJifUH4 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V .
 
-systemmap:SIK56WC1if6riKNpM a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SIK56WC1if6riKNpM a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
     systemmap:usesMasterData systemmap:SMBGW7qHXQfR1VB9W,
         systemmap:SyhthSmTCgM19Wysy .
 
-systemmap:SIsQ6LSUJc3xbG9B a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SIsQ6LSUJc3xbG9B a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Biocides"@en ;
     rdfs:comment """
@@ -472,24 +472,24 @@ systemmap:SIsQ6LSUJc3xbG9B a _:nb8c8565bbcd149b7873f63646a71db6db1,
         """@en ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
-systemmap:SJuklUVKfEwj2Xpc a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SJuklUVKfEwj2Xpc a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Contact details of breeders"@en ;
     rdfs:comment "Contact details of breeders who provide information about the varieties to ProVar."@en ;
     systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj .
 
-systemmap:SKH5iXBfDQX2meMGo a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SKH5iXBfDQX2meMGo a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     dcterms:isPartOf systemmap:SaBrXH2dHae5TTGXD .
 
-systemmap:SKoClBiquflDf7yi6 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SKoClBiquflDf7yi6 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Raw data from data suppliers"@en ;
     rdfs:comment "Heterogeneous raw data (e.g., XLSX) from approx. 400 data suppliers."@en ;
@@ -497,25 +497,25 @@ systemmap:SKoClBiquflDf7yi6 a _:nb8c8565bbcd149b7873f63646a71db6db1,
     systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
     systemmap:informs systemmap:S1AkhvKmzBiJFCTc .
 
-systemmap:SLJMFAZ6GNdFvfb2L a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SLJMFAZ6GNdFvfb2L a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Market Data Fruits and Vegetables"@en ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
     schema:url <https://www.agrarmarktdaten.ch/markt/fruchte-gemuese> .
 
-systemmap:SLXw4VofhYbzXVNKC a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SLXw4VofhYbzXVNKC a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Data on milk utilization"@en ;
     rdfs:comment "These data are essential for the calculation and payment of subsidies for cheesed milk as well as for feeding without silage by the Federal Office for Agriculture (BLW)."@en ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:SLvuxq7SeZ6X0GYA a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SLvuxq7SeZ6X0GYA a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451,
         termdat:52453 ;
@@ -527,16 +527,16 @@ systemmap:SLvuxq7SeZ6X0GYA a _:nb8c8565bbcd149b7873f63646a71db6db1,
         """@en ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:SMBGW7qHXQfR1VB9W a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SMBGW7qHXQfR1VB9W a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
     prov:wasDerivedFrom systemmap:SZBHsREMx369FArg .
 
-systemmap:SOl0OAWrb7M910fp8 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SOl0OAWrb7M910fp8 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Movement of production products"@en ;
@@ -544,31 +544,31 @@ systemmap:SOl0OAWrb7M910fp8 a _:nb8c8565bbcd149b7873f63646a71db6db1,
     systemmap:usesMasterData systemmap:SCkzllAJGWHIEermB,
         systemmap:Sl5KyePu7JtGiE3V .
 
-systemmap:SOnojYdZDj18fW8Ko a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SOnojYdZDj18fW8Ko a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     prov:wasDerivedFrom systemmap:Se6Nt3cqogxz2d10g ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
-systemmap:SOqI5Nd7eaHDXIhDG a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SOqI5Nd7eaHDXIhDG a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
     prov:wasDerivedFrom systemmap:SENtOaRGg22EqHWXq .
 
-systemmap:SPCig1xdekUHDV4r a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SPCig1xdekUHDV4r a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Milk statistics"@en ;
     rdfs:comment "Monthly statistics and multi-year comparisons containing information on the milk produced and its processing into different product groups."@en ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:SQ2MIhpz1CvdqK6f a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SQ2MIhpz1CvdqK6f a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Contribution data"@en ;
@@ -579,40 +579,40 @@ systemmap:SQ2MIhpz1CvdqK6f a _:nb8c8565bbcd149b7873f63646a71db6db1,
         """@en ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
-systemmap:SRT6X0n1ML8vX3uV a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SRT6X0n1ML8vX3uV a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Open market data"@en ;
     dcterms:isPartOf systemmap:SRT6X0n1ML8vwHUW ;
     prov:wasDerivedFrom systemmap:S2XkdeKmzFiJFXWc .
 
-systemmap:SRT6X0n1ML8vwHUW a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SRT6X0n1ML8vwHUW a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Linked Open Data"@en ;
     dcterms:hasPart systemmap:SRT6X0n1ML8vX3uV ;
     systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd .
 
-systemmap:SSBg29n8Wei8fxx1a a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SSBg29n8Wei8fxx1a a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:SPASZffcsCMdIFEsZ .
 
-systemmap:SSyCUWt1u4bzJ4liA a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SSyCUWt1u4bzJ4liA a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Market Data Potatoes and Potato Products"@en ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
     schema:url <https://www.agrarmarktdaten.ch/markt/kartoffeln> .
 
-systemmap:SUZP05KJlIyCX9A8 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SUZP05KJlIyCX9A8 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Preparations"@en ;
     rdfs:comment """
@@ -620,16 +620,16 @@ systemmap:SUZP05KJlIyCX9A8 a _:nb8c8565bbcd149b7873f63646a71db6db1,
         """@en ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
-systemmap:SVXa3t3SyxjgPiLBx a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SVXa3t3SyxjgPiLBx a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ ;
     systemmap:informs systemmap:SBba3t3SyxjgPiHhX .
 
-systemmap:SX1qchbxSZKWI6Up a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SX1qchbxSZKWI6Up a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Information about agricultural enterprises"@en ;
@@ -638,32 +638,32 @@ systemmap:SX1qchbxSZKWI6Up a _:nb8c8565bbcd149b7873f63646a71db6db1,
         systemmap:SzuDlnYUQMk3HaCb ;
     systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
-systemmap:SXDe1c5blay5pm1f7 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SXDe1c5blay5pm1f7 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:Sqv5Vh286L7iinjmy .
 
-systemmap:SXIIUKFjUBDaaTzh6 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SXIIUKFjUBDaaTzh6 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Retail Data (Nielsen)"@en ;
     rdfs:comment "Data on the retail sector purchased from the market research company Nielsen."@en ;
     systemmap:containedIn systemmap:Su9RTb49BcaqL4EcQ ;
     systemmap:informs systemmap:SKoClBiquflDf7yi6 .
 
-systemmap:SXIwI6eU6lZZOFVR4 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SXIwI6eU6lZZOFVR4 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:ShjUfLjdanc83Dr0d .
 
-systemmap:SY3MaMtlZPlOgUn4j a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SY3MaMtlZPlOgUn4j a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     prov:wasDerivedFrom systemmap:SldiTYOuXQmoC3SV,
         systemmap:SvNriWslaOR5xkdw,
@@ -671,9 +671,9 @@ systemmap:SY3MaMtlZPlOgUn4j a _:nb8c8565bbcd149b7873f63646a71db6db1,
     systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe ;
     systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
-systemmap:SY9n2yTOBWXtZ6se a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SY9n2yTOBWXtZ6se a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Data on inspections and inspection results"@en ;
@@ -683,27 +683,27 @@ systemmap:SY9n2yTOBWXtZ6se a _:nb8c8565bbcd149b7873f63646a71db6db1,
     dcterms:isPartOf systemmap:S1u8DDdB8YZ67H5l5 ;
     systemmap:usesMasterData systemmap:S1u8FFdB8YZ67H5X6 .
 
-systemmap:SYYaTBjwIUU2yNIUN a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SYYaTBjwIUU2yNIUN a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     systemmap:containedIn systemmap:S2Q2s27pTp6oRYHmf ;
     systemmap:usesMasterData systemmap:SCkzllAJGWHIEermB,
         systemmap:SyhthSmTCgM19Wysy .
 
-systemmap:SYlOxcohgWiXr61M a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SYlOxcohgWiXr61M a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Information about forestry enterprises"@en ;
     rdfs:comment "Number of employed persons by gender and working time."@en ;
     systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
-systemmap:SZ5quKnfPEEV1CVmE a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SZ5quKnfPEEV1CVmE a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Person"@en ;
@@ -715,31 +715,31 @@ systemmap:SZ5quKnfPEEV1CVmE a _:nb8c8565bbcd149b7873f63646a71db6db1,
         """@en ;
     systemmap:usesMasterData systemmap:SDLEUPczkJ9AWZeC .
 
-systemmap:SZBHsREMx369FArg a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SZBHsREMx369FArg a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:seeAlso <https://backend.blw.admin.ch/fileservice/sdweb-docs-prod-blwch-files/files/2024/11/14/0bddf556-3864-4fa4-ada6-a3120e26d6dc.pdf>,
         <https://www.blw.admin.ch/de/duenger> ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo ;
     systemmap:informs systemmap:SMBGW7qHXQfR1VB9W .
 
-systemmap:SaBrXH2dHae5TTGXD a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SaBrXH2dHae5TTGXD a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     dcterms:hasPart systemmap:SKH5iXBfDQX2meMGo ;
     dcterms:isPartOf systemmap:SzuDlnYUQMk3HaCb .
 
-systemmap:SaDr294dHxD5TTDxT a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SaDr294dHxD5TTDxT a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     dcterms:isPartOf systemmap:SzuDlnYUQMk3HaCb .
 
-systemmap:SakCt52w8AKrsSXi a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SakCt52w8AKrsSXi a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Information from the structural data survey"@en ;
@@ -751,9 +751,9 @@ systemmap:SakCt52w8AKrsSXi a _:nb8c8565bbcd149b7873f63646a71db6db1,
     systemmap:informs systemmap:SzuDlnYUQMk3HaCb ;
     systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
-systemmap:Sb2FM7pKN60PrRwU a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Sb2FM7pKN60PrRwU a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Global plant list"@en ;
     rdfs:comment """
@@ -765,83 +765,83 @@ systemmap:Sb2FM7pKN60PrRwU a _:nb8c8565bbcd149b7873f63646a71db6db1,
     systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN ;
     systemmap:informs systemmap:Spqrv6Ul05KJySTs .
 
-systemmap:SbKCxLGicJtMGTQiD a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SbKCxLGicJtMGTQiD a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         systemmap:MasterData ;
     rdfs:label "Master Data Market Analysis"@en ;
     dcterms:isPartOf systemmap:S2XkdeKmzCiJFCTb ;
     rdfs:comment "Contains the core dimensions for market analysis, such as product lists, regions, production systems, etc."@en .
 
-systemmap:ScCrXM2dHaelTTGLf a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:ScCrXM2dHaelTTGLf a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     dcterms:isPartOf systemmap:SzuDlnYUQMk3HaCb .
 
-systemmap:Scdb0a211b8eef1c a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Scdb0a211b8eef1c a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:S94be3e9cc38c5b7 .
 
-systemmap:Sd07915cb6d4b0d2 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Sd07915cb6d4b0d2 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:S092d445cc8b3960 .
 
-systemmap:Sd30080af44facc4 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Sd30080af44facc4 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth,
         keyword:antibiotics ;
     systemmap:containedIn systemmap:Sdb697580a17102a .
 
-systemmap:Sd6e0fe2eee8f943 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Sd6e0fe2eee8f943 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:SOK9kQP8T3M2qPNEL .
 
-systemmap:Sd8ce041d235ac8a a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Sd8ce041d235ac8a a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth,
         keyword:antibiotics ;
     systemmap:containedIn systemmap:SAIg9IaUyZYcHjEZ4 .
 
-systemmap:Se11c26403a91b7f a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Se11c26403a91b7f a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:Sacff15d7f07af30 .
 
-systemmap:Se28f3bb2be7ce5e a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Se28f3bb2be7ce5e a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth,
         keyword:antibiotics ;
     systemmap:containedIn systemmap:Sb9170e5822932c9 .
 
-systemmap:Se35WpC7gmVkMSoME a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Se35WpC7gmVkMSoME a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:Sqv5Vh286L7iinjmy .
 
-systemmap:Se6Nt3cqogxz2d10g a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Se6Nt3cqogxz2d10g a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Data on milk production"@en ;
     rdfs:comment """
@@ -851,9 +851,9 @@ systemmap:Se6Nt3cqogxz2d10g a _:nb8c8565bbcd149b7873f63646a71db6db1,
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP ;
     systemmap:informs systemmap:SOnojYdZDj18fW8Ko .
 
-systemmap:SeUFazO70bpqCYJ5 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SeUFazO70bpqCYJ5 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Master data and identifiers"@en ;
@@ -861,16 +861,16 @@ systemmap:SeUFazO70bpqCYJ5 a _:nb8c8565bbcd149b7873f63646a71db6db1,
     rdfs:comment "Name and address of the company or business, municipality numbers, BUR number (non-speaking 8-digit identification number), company identification number (UID), type of economic activity (NOGA), legal form of the company."@en ;
     systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
-systemmap:Sf39e4cc5a9b4324 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Sf39e4cc5a9b4324 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:Sc355c0e0b1d5ec2 .
 
-systemmap:SfQ6BN8rDjKhTWL4 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SfQ6BN8rDjKhTWL4 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Pesticide imports"@en ;
@@ -880,38 +880,38 @@ systemmap:SfQ6BN8rDjKhTWL4 a _:nb8c8565bbcd149b7873f63646a71db6db1,
     systemmap:containedIn systemmap:S7u1Bh6qfXUbSDkv ;
     systemmap:informs systemmap:S6ILF4g1j5sNf9aG .
 
-systemmap:SfXioR1gkj8eDuTF a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SfXioR1gkj8eDuTF a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Data on administrative measures and criminal sanctions"@en ;
     dcterms:isPartOf systemmap:SY9n2yTOBWXtZ6se .
 
-systemmap:Sfae06196dfd6ef4 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Sfae06196dfd6ef4 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:S2S8th7MLY4xUNjh5 .
 
-systemmap:Sfcb669880d3a0c8 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Sfcb669880d3a0c8 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:Se1bff29f5b7c68c .
 
-systemmap:Sfffaefb08722c2d a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Sfffaefb08722c2d a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:Scec2e0aa684d0b6 .
 
-systemmap:SfkMzUrMhERjP9vhy a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SfkMzUrMhERjP9vhy a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Operating and community form"@en ;
@@ -924,33 +924,33 @@ systemmap:SfkMzUrMhERjP9vhy a _:nb8c8565bbcd149b7873f63646a71db6db1,
     systemmap:usesMasterData systemmap:S3jZwzvmFKsXRWiI,
         systemmap:SEI0Jp1SabxWUiGh0 .
 
-systemmap:SisV9d3pviAFO8vTK a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SisV9d3pviAFO8vTK a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Market Data Oilseeds and Protein Crops"@en ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
     schema:url <https://www.agrarmarktdaten.ch/markt/olsaaten> .
 
-systemmap:SkcU0PDb6fucIKa9k a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SkcU0PDb6fucIKa9k a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Market Data Bread Cereals, Flour and Baked Goods"@en ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
     schema:url <https://www.agrarmarktdaten.ch/markt/getreide> .
 
-systemmap:SkvXyKniPPKwKNRqo a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SkvXyKniPPKwKNRqo a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     dcterms:isPartOf systemmap:SCkzllAJGWHIEermB ;
     systemmap:usesMasterData systemmap:SakCt52w8AKrsSXi .
 
-systemmap:Sl5KyePu7JtGiE3V a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Sl5KyePu7JtGiE3V a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         systemmap:MasterData ;
     rdfs:label "Product catalog"@en ;
@@ -965,18 +965,18 @@ systemmap:Sl5KyePu7JtGiE3V a _:nb8c8565bbcd149b7873f63646a71db6db1,
         """@en ;
     systemmap:containedIn systemmap:SjhTrVt8CB9QFq0Yn .
 
-systemmap:SldiTYOuXQmoC3SV a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SldiTYOuXQmoC3SV a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     dcterms:hasPart systemmap:S9dITYOuP43UB4TW ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
     systemmap:informs systemmap:SY3MaMtlZPlOgUn4j .
 
-systemmap:SoBRgq7STLbZfEze a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SoBRgq7STLbZfEze a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Mandatory reporting data (sheep & goats)"@en ;
     rdfs:comment """
@@ -985,9 +985,9 @@ systemmap:SoBRgq7STLbZfEze a _:nb8c8565bbcd149b7873f63646a71db6db1,
         """@en ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
-systemmap:SoY82Q0qEk9k0s3w3 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SoY82Q0qEk9k0s3w3 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Contact details of milk producers"@en ;
@@ -996,17 +996,17 @@ systemmap:SoY82Q0qEk9k0s3w3 a _:nb8c8565bbcd149b7873f63646a71db6db1,
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP ;
     systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
-systemmap:SpT5dE2PIEfeWKafV a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SpT5dE2PIEfeWKafV a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Market Data Meat, Meat and Sausage Products"@en ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
     schema:url <https://www.agrarmarktdaten.ch/markt/fleisch> .
 
-systemmap:Spqrv6Ul05KJySTs a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Spqrv6Ul05KJySTs a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "National variety catalog"@en ;
     rdfs:comment "Catalog of recognized agricultural plant varieties used in Switzerland. The information is recorded by breeders."@en ;
@@ -1014,41 +1014,41 @@ systemmap:Spqrv6Ul05KJySTs a _:nb8c8565bbcd149b7873f63646a71db6db1,
     systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj ;
     systemmap:informs systemmap:S8JpqvyO4LQwEM5s .
 
-systemmap:SqGp9THVAsRw71ZCg a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SqGp9THVAsRw71ZCg a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     dcterms:isPartOf systemmap:SCkzllAJGWHIEermB ;
     systemmap:usesMasterData systemmap:SldiTYOuXQmoC3SV .
 
-systemmap:SuZ6UFD05DBvC5E09 a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SuZ6UFD05DBvC5E09 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:SP86YzKhzJHZDD9Dj .
 
-systemmap:Sutd0KIj3Rf8GlSwq a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:Sutd0KIj3Rf8GlSwq a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Contact details of milk processors"@en ;
     rdfs:comment "Contact details of milk processors, such as addresses or identification numbers."@en ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:SvAr93iMz2fj4HZBK a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SvAr93iMz2fj4HZBK a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Market Data Eggs"@en ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
     schema:url <https://www.agrarmarktdaten.ch/markt/eier> .
 
-systemmap:SvNriWslaOR5xkdw a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SvNriWslaOR5xkdw a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset,
         termdat:52451 ;
     rdfs:label "Register data"@en ;
@@ -1060,40 +1060,40 @@ systemmap:SvNriWslaOR5xkdw a _:nb8c8565bbcd149b7873f63646a71db6db1,
         systemmap:SY3MaMtlZPlOgUn4j,
         systemmap:SoY82Q0qEk9k0s3w3 .
 
-systemmap:SvmW0FRiWcALdXgAa a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SvmW0FRiWcALdXgAa a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     schema:keywords keyword:animalhealth ;
     systemmap:containedIn systemmap:SWSDKVAr9pdy3T38R .
 
-systemmap:SyhthSmTCgM19Wysy a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SyhthSmTCgM19Wysy a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Plant Protection Products"@en ;
     dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
     prov:wasDerivedFrom systemmap:S9J1HTMKIxnCgmYc .
 
-systemmap:SzJ7aOICsI2KD9iOt a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SzJ7aOICsI2KD9iOt a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Market Data Milk and Milk Products"@en ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
     schema:url <https://www.agrarmarktdaten.ch/markt/milch-und-milchprodukte> .
 
-systemmap:SzcK9O3XZFxVW1IS a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SzcK9O3XZFxVW1IS a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Data on milk segmentation"@en ;
     rdfs:comment "Data on the segmentation of milk utilization according to the BOM1 regulation."@en ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
-systemmap:SzuDlnYUQMk3HaCb a _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3,
+systemmap:SzuDlnYUQMk3HaCb a _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3,
         dcat:Dataset ;
     rdfs:label "Structural data"@en ;
     dcterms:hasPart systemmap:SaBrXH2dHae5TTGXD,
@@ -1109,28 +1109,28 @@ systemmap:SzuDlnYUQMk3HaCb a _:nb8c8565bbcd149b7873f63646a71db6db1,
     systemmap:informs systemmap:SX1qchbxSZKWI6Up,
         systemmap:SY3MaMtlZPlOgUn4j .
 
-systemmap:S0hwJxy2kXNPFbl4C a _:nb8c8565bbcd149b7873f63646a71db6db4,
-        _:nb8c8565bbcd149b7873f63646a71db6db5,
+systemmap:S0hwJxy2kXNPFbl4C a _:n6b9d44207da14bd6a53ca0daf46d3d6ab4,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab5,
         service:Service ;
     dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr .
 
-systemmap:SAGHyCxJM29RiSsV8 a _:nb8c8565bbcd149b7873f63646a71db6db4,
-        _:nb8c8565bbcd149b7873f63646a71db6db5,
+systemmap:SAGHyCxJM29RiSsV8 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab4,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab5,
         service:Service ;
     service:providedBy systemmap:SzB95Xoyj1a1EJNBe .
 
-systemmap:SAgmZXUKqNKTf35Fv a _:nb8c8565bbcd149b7873f63646a71db6db4,
-        _:nb8c8565bbcd149b7873f63646a71db6db5,
+systemmap:SAgmZXUKqNKTf35Fv a _:n6b9d44207da14bd6a53ca0daf46d3d6ab4,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab5,
         service:Service ;
     dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr .
 
-systemmap:SFMUSGNRQVqCKBNHQ a _:nb8c8565bbcd149b7873f63646a71db6db4,
-        _:nb8c8565bbcd149b7873f63646a71db6db5,
+systemmap:SFMUSGNRQVqCKBNHQ a _:n6b9d44207da14bd6a53ca0daf46d3d6ab4,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab5,
         service:Service ;
     dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr .
 
-systemmap:SK6JOIUV1UjrOYD7f a _:nb8c8565bbcd149b7873f63646a71db6db4,
-        _:nb8c8565bbcd149b7873f63646a71db6db5,
+systemmap:SK6JOIUV1UjrOYD7f a _:n6b9d44207da14bd6a53ca0daf46d3d6ab4,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab5,
         service:Service ;
     rdfs:label "Authentication and Role Management Service"@en ;
     service:providedBy systemmap:SGdyOoksCnRRZwi2Q ;
@@ -1139,8 +1139,8 @@ systemmap:SK6JOIUV1UjrOYD7f a _:nb8c8565bbcd149b7873f63646a71db6db4,
         It enables a single login for multiple applications in the agricultural sector and ensures that only authorised users with the correct roles are granted access.
         """@en .
 
-systemmap:SWrEh3riVEhEddyRr a _:nb8c8565bbcd149b7873f63646a71db6db4,
-        _:nb8c8565bbcd149b7873f63646a71db6db5,
+systemmap:SWrEh3riVEhEddyRr a _:n6b9d44207da14bd6a53ca0daf46d3d6ab4,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab5,
         service:Service ;
     dcterms:hasPart systemmap:S0hwJxy2kXNPFbl4C,
         systemmap:SAgmZXUKqNKTf35Fv,
@@ -1148,23 +1148,23 @@ systemmap:SWrEh3riVEhEddyRr a _:nb8c8565bbcd149b7873f63646a71db6db4,
         systemmap:SmWBzvRi0YEZiWMOd ;
     service:providedBy systemmap:Sy4WeMDNoah4TkAYX .
 
-systemmap:SmWBzvRi0YEZiWMOd a _:nb8c8565bbcd149b7873f63646a71db6db4,
-        _:nb8c8565bbcd149b7873f63646a71db6db5,
+systemmap:SmWBzvRi0YEZiWMOd a _:n6b9d44207da14bd6a53ca0daf46d3d6ab4,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab5,
         service:Service ;
     dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr .
 
-systemmap:StBV0qWzKXosN98bB a _:nb8c8565bbcd149b7873f63646a71db6db4,
-        _:nb8c8565bbcd149b7873f63646a71db6db5,
+systemmap:StBV0qWzKXosN98bB a _:n6b9d44207da14bd6a53ca0daf46d3d6ab4,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab5,
         service:Service ;
     service:providedBy systemmap:SjhTrVt8CB9QFq0Yn .
 
-systemmap:SyDlq7oQ0czCgyv61 a _:nb8c8565bbcd149b7873f63646a71db6db4,
-        _:nb8c8565bbcd149b7873f63646a71db6db5,
+systemmap:SyDlq7oQ0czCgyv61 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab4,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab5,
         service:Service ;
     service:providedBy systemmap:SaOtqyAB5qm1luNuX .
 
-systemmap:SyYykF7sxZpwuQdLO a _:nb8c8565bbcd149b7873f63646a71db6db4,
-        _:nb8c8565bbcd149b7873f63646a71db6db5,
+systemmap:SyYykF7sxZpwuQdLO a _:n6b9d44207da14bd6a53ca0daf46d3d6ab4,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab5,
         service:Service ;
     service:consumedBy systemmap:SMjqlEoVCR9wpTyN1,
         systemmap:SPWOFHR512FuAc25b,
@@ -1173,39 +1173,39 @@ systemmap:SyYykF7sxZpwuQdLO a _:nb8c8565bbcd149b7873f63646a71db6db4,
         systemmap:SvDlxaJ5YMkuZGH6k ;
     service:providedBy systemmap:SF3QXRhtAuQ7fcc0V .
 
-systemmap:S00fVJvGUmwXh0cOz a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S00fVJvGUmwXh0cOz a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     schema:url <https://agridata.ch/> ;
     systemmap:operatedBy systemmap:SFAwQAwxBcNnaURgO .
 
-systemmap:S092d445cc8b3960 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S092d445cc8b3960 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:Sd07915cb6d4b0d2 ;
     systemmap:operatedBy systemmap:Se8a0552eb8cf7fe .
 
-systemmap:S0d3ffb3e2b288fa a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S0d3ffb3e2b288fa a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:S89f091bfc2a8ee0 ;
     systemmap:operatedBy zefix:463295 .
 
-systemmap:S0hwJxyshSNPXbP34 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S0hwJxyshSNPXbP34 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication,
         systemmap:FMIS ;
     systemmap:operatedBy zefix:625989 .
 
-systemmap:S0qIaLPaYFa3mHse4 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S0qIaLPaYFa3mHse4 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication,
         systemmap:FMIS ;
     schema:url <https://xfarm.ag/> ;
     systemmap:operatedBy systemmap:SmGaThSxn7eIC3JvM .
 
-systemmap:S0tkRCUIU88Xtc2HK a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S0tkRCUIU88Xtc2HK a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "SheepOnline"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1215,31 +1215,31 @@ systemmap:S0tkRCUIU88Xtc2HK a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:166248 .
 
-systemmap:S1nS1Ehy2BJj22GCX a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S1nS1Ehy2BJj22GCX a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:operatedBy zefix:505628 .
 
-systemmap:S1nS1Ehy2BJj22GCY a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S1nS1Ehy2BJj22GCY a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication,
         systemmap:FMIS ;
     systemmap:operatedBy zefix:505628 .
 
-systemmap:S1nS1Ehy2BJj22GCZ a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S1nS1Ehy2BJj22GCZ a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:operatedBy zefix:505628 .
 
-systemmap:S1pGaLPaZXa3iFwe4 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S1pGaLPaZXa3iFwe4 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication,
         systemmap:FMIS ;
     schema:url <https://feldkalender.ch/> ;
     systemmap:operatedBy zefix:1419651 .
 
-systemmap:S2Q2s27pTp6oRYHmf a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S2Q2s27pTp6oRYHmf a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "digiFLUX Core"@en ;
     dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF ;
@@ -1248,8 +1248,8 @@ systemmap:S2Q2s27pTp6oRYHmf a _:nb8c8565bbcd149b7873f63646a71db6db6,
         systemmap:SYYaTBjwIUU2yNIUN ;
     systemmap:developedBy zefix:249959 .
 
-systemmap:S2S8th7MLY4xUNjh5 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S2S8th7MLY4xUNjh5 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "CapraNet"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1258,8 +1258,8 @@ systemmap:S2S8th7MLY4xUNjh5 a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:contains systemmap:Sfae06196dfd6ef4 ;
     systemmap:operatedBy zefix:248029 .
 
-systemmap:S2gC2BTVjYNH05BNf a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S2gC2BTVjYNH05BNf a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Datapass"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1269,20 +1269,20 @@ systemmap:S2gC2BTVjYNH05BNf a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:1013423 .
 
-systemmap:S2lqf2px29PzK3059 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S2lqf2px29PzK3059 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     schema:url <https://www.suisag.com/ch-de/softwares/asp-risikoampel/> ;
     systemmap:operatedBy zefix:414877 .
 
-systemmap:S3371e59cf6a7c46 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S3371e59cf6a7c46 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:S6320a5a3f8829b8 ;
     systemmap:operatedBy zefix:278206 .
 
-systemmap:S3TSqZWni4DBTqkAV a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S3TSqZWni4DBTqkAV a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "SmartCow"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1293,41 +1293,41 @@ systemmap:S3TSqZWni4DBTqkAV a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:448334 .
 
-systemmap:S49a6caf92b3058d a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S49a6caf92b3058d a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:S59098ed667cb3bd ;
     systemmap:operatedBy zefix:278206 .
 
-systemmap:S4wIBXSXQwmbyHy9i a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S4wIBXSXQwmbyHy9i a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "I14Y"@en ;
     systemmap:operatedBy systemmap:SNbhMvt3Btta1U1d6 .
 
-systemmap:S5aa8657dd97155b a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S5aa8657dd97155b a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     dcterms:isPartOf systemmap:SlTSOXsBC2LN7Qkp ;
     systemmap:contains systemmap:S1df451f0356426f ;
     systemmap:operatedBy zefix:321790 .
 
-systemmap:S6J4iyI6nMI2RCXSY a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S6J4iyI6nMI2RCXSY a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "CePa"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment "CePa is an IT application for the digital management of procedures and correspondence within the framework of the plant passport system and the official certification of propagation material. It optimizes certification processes and ensures compliance with plant health regulations. In this way, it supports traceability and quality control of plant material."@en ;
     systemmap:operatedBy systemmap:SFL2DYxeNnVaFsv64 .
 
-systemmap:S6v6k2SMlwAVdLFmI a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S6v6k2SMlwAVdLFmI a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:S80e7173e5ad86e9 ;
     systemmap:operatedBy systemmap:SsFdxnjM8hgUdzVT5 .
 
-systemmap:S7DUZFs3emPOPYErT a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S7DUZFs3emPOPYErT a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     systemmap:contains systemmap:SakCt52w8AKrsSXi ;
@@ -1345,8 +1345,8 @@ systemmap:S7DUZFs3emPOPYErT a _:nb8c8565bbcd149b7873f63646a71db6db6,
         systemmap:SVpDMEiTfIVQsNzT8,
         systemmap:SoVAiCrMPYG2LJxsA .
 
-systemmap:S7aG1r5IoOvAalIFb a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S7aG1r5IoOvAalIFb a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "KGS"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1354,8 +1354,8 @@ systemmap:S7aG1r5IoOvAalIFb a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:operatedBy systemmap:Sc4ba6ce6ae8d41c,
         zefix:804864 .
 
-systemmap:S7u1Bh6qfXUbSDkv a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S7u1Bh6qfXUbSDkv a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "e-declaration"@en ;
     rdfs:comment "e-dec is Switzerland's electronic customs declaration system that enables companies to declare goods for import, export, and transit electronically. Designed with a modular structure, it streamlines customs processes, leading to cost savings and increased efficiency. Notably, e-dec supports multiple communication standards and allows each customs declaration to include up to 99'999 tariff headings."@en ;
@@ -1363,14 +1363,14 @@ systemmap:S7u1Bh6qfXUbSDkv a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:contains systemmap:SfQ6BN8rDjKhTWL4 ;
     systemmap:operatedBy systemmap:SFKPRpdGa5UISiJlx .
 
-systemmap:S844d3e2975f1f13 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S844d3e2975f1f13 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     dcterms:isPartOf systemmap:Se430137f74ad0c1 ;
     systemmap:contains systemmap:S98fbf4f4b3f4d13 .
 
-systemmap:S844y5UCUBrKfEXoA a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S844y5UCUBrKfEXoA a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Bio Suisse Customer Portal"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1380,24 +1380,24 @@ systemmap:S844y5UCUBrKfEXoA a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:427343 .
 
-systemmap:S8RVf2XMzkPzK32ZX a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S8RVf2XMzkPzK32ZX a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:operatedBy zefix:1663457 .
 
-systemmap:S8RVk8dQzkXzXYSZX a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S8RVk8dQzkXzXYSZX a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:operatedBy zefix:1663457 .
 
-systemmap:S8a865ea5590dbdb a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S8a865ea5590dbdb a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     dcterms:isPartOf systemmap:Se430137f74ad0c1 ;
     systemmap:contains systemmap:S16f05ee9c9c6de2 .
 
-systemmap:S8awijRdrkgdpXxgz a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S8awijRdrkgdpXxgz a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Oblon"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1406,14 +1406,14 @@ systemmap:S8awijRdrkgdpXxgz a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:contains systemmap:S70ed53aa68083c9 ;
     systemmap:operatedBy zefix:984853 .
 
-systemmap:S8c40c23705714a0 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S8c40c23705714a0 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:S44511ce1ce85d04 ;
     systemmap:operatedBy systemmap:S7c2f7f8f6ca9c70 .
 
-systemmap:S8wfrZtWOCmMSB6sv a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S8wfrZtWOCmMSB6sv a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Holstein Vision"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1423,8 +1423,8 @@ systemmap:S8wfrZtWOCmMSB6sv a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:278958 .
 
-systemmap:S94be3e9cc38c5b7 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S94be3e9cc38c5b7 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:Scdb0a211b8eef1c ;
     systemmap:operatedBy zefix:165954,
@@ -1432,8 +1432,8 @@ systemmap:S94be3e9cc38c5b7 a _:nb8c8565bbcd149b7873f63646a71db6db6,
         zefix:448334,
         zefix:769392 .
 
-systemmap:S9GvpUNuj5fGyPhGf a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S9GvpUNuj5fGyPhGf a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Anicom App"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1442,8 +1442,8 @@ systemmap:S9GvpUNuj5fGyPhGf a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:7011 .
 
-systemmap:S9SbhGAwWjtvcRIZ a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S9SbhGAwWjtvcRIZ a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Geographic Information System"@en ;
     rdfs:comment """
@@ -1456,14 +1456,14 @@ systemmap:S9SbhGAwWjtvcRIZ a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:hasLegalBasis LwG:art_165_e ;
     systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
 
-systemmap:S9VcxLSoIIwQjlZQ2 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S9VcxLSoIIwQjlZQ2 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     schema:url <https://farmx.ch/home> ;
     systemmap:operatedBy zefix:1373020 .
 
-systemmap:S9VcxLSoIIwQjoexY a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:S9VcxLSoIIwQjoexY a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Acontrol"@en ;
     service:consumes systemmap:SAGHyCxJM29RiSsV8,
@@ -1477,8 +1477,8 @@ systemmap:S9VcxLSoIIwQjoexY a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:hasLegalBasis LwG:art_165_d ;
     systemmap:operatedBy systemmap:ScoeXHl4TgJbke1Yf .
 
-systemmap:SAIg9IaUyZYcHjEZ4 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SAIg9IaUyZYcHjEZ4 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     schema:url <https://farmconsult.ch/logiciel-de/> ;
@@ -1486,8 +1486,8 @@ systemmap:SAIg9IaUyZYcHjEZ4 a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:developedBy systemmap:Sa0c51880ac95ed6 ;
     systemmap:operatedBy zefix:1393629 .
 
-systemmap:SAPDp3o8XAHPuZnhB a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SAPDp3o8XAHPuZnhB a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "redonline"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1497,21 +1497,21 @@ systemmap:SAPDp3o8XAHPuZnhB a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:165954 .
 
-systemmap:SAwz5t3SyxjgPiHhX a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SAwz5t3SyxjgPiHhX a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:SBba3t3SyxjgPiHhX ;
     systemmap:operatedBy zefix:165954 .
 
-systemmap:SBx5yiPz9Nxy2Wnue a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SBx5yiPz9Nxy2Wnue a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     schema:url <https://intranet.mooh.swiss/> ;
     systemmap:operatedBy zefix:1256441 .
 
-systemmap:SCporGQs4VQT7lJVs a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SCporGQs4VQT7lJVs a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "smaXtec animal care"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1521,8 +1521,8 @@ systemmap:SCporGQs4VQT7lJVs a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:1566606 .
 
-systemmap:SDoGAjF1AJCdFZQQl a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SDoGAjF1AJCdFZQQl a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "E-Direct"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1532,22 +1532,22 @@ systemmap:SDoGAjF1AJCdFZQQl a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:130459 .
 
-systemmap:SDwz5T4SyxjgPiHbH a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SDwz5T4SyxjgPiHbH a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication,
         systemmap:FMIS ;
     schema:url <https://agroplus.ch/> ;
     systemmap:operatedBy zefix:505628 .
 
-systemmap:SDwz5T4SyxjgPiHbX a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SDwz5T4SyxjgPiHbX a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication,
         systemmap:FMIS ;
     schema:url <https://www.agrarsoftware.ch/agroplus.html> ;
     systemmap:operatedBy zefix:505628 .
 
-systemmap:SE5DY78J7vgfoiDLj a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SE5DY78J7vgfoiDLj a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Protection Variété"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1560,8 +1560,8 @@ systemmap:SE5DY78J7vgfoiDLj a _:nb8c8565bbcd149b7873f63646a71db6db6,
         systemmap:Spqrv6Ul05KJySTs ;
     systemmap:operatedBy systemmap:SfX7h09MplFWwb4LK .
 
-systemmap:SEcvzMJMYkUtSnTSB a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SEcvzMJMYkUtSnTSB a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Moblin"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1570,14 +1570,14 @@ systemmap:SEcvzMJMYkUtSnTSB a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:1099793 .
 
-systemmap:SF3QXRhtAuQ7fcc0V a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SF3QXRhtAuQ7fcc0V a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     service:provides systemmap:SyYykF7sxZpwuQdLO ;
     systemmap:operatedBy systemmap:ScoeXHl4TgJbke1Yf .
 
-systemmap:SGHEvT8M3jGEd8KdJ a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SGHEvT8M3jGEd8KdJ a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "SmartBeef®"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1587,8 +1587,8 @@ systemmap:SGHEvT8M3jGEd8KdJ a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:76051 .
 
-systemmap:SGRIDS_LmnPqR5tYvCxDG a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SGRIDS_LmnPqR5tYvCxDG a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "GRIDS"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1598,16 +1598,16 @@ systemmap:SGRIDS_LmnPqR5tYvCxDG a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy systemmap:SwlgSr7ukziL6iHsP .
 
-systemmap:SGdyOoksCnRRZwi2Q a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SGdyOoksCnRRZwi2Q a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Agate"@en ;
     service:provides systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment "Agate is an online portal that allows access to various agricultural applications with just one login. It facilitates data exchange in the agricultural and food sector, thereby increasing user convenience. This centralized access point simplifies administrative processes for all stakeholders."@en ;
     systemmap:operatedBy systemmap:SQbNLiw8h9MnSXuyo .
 
-systemmap:SHEaRYIgvZ3xrDLo a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SHEaRYIgvZ3xrDLo a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Chemical Products Register"@en ;
     rdfs:comment """
@@ -1621,16 +1621,16 @@ systemmap:SHEaRYIgvZ3xrDLo a _:nb8c8565bbcd149b7873f63646a71db6db6,
         systemmap:SZBHsREMx369FArg ;
     systemmap:operatedBy systemmap:SGayLcAMcywbigd3M .
 
-systemmap:SHFSc6xgsHF70IlUd a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SHFSc6xgsHF70IlUd a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "LINDAS"@en ;
     rdfs:comment "Linked Data Services LINDAS allow public administrations to publish their data in the form of Knowledge Graphs and make them accessible via https://lindas.admin.ch"@en ;
     systemmap:contains systemmap:SRT6X0n1ML8vwHUW ;
     systemmap:operatedBy systemmap:S6VSaFePQaMGqU8vD .
 
-systemmap:SHyBeGX0LsQwjJ6Z a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SHyBeGX0LsQwjJ6Z a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Register of Enterprises and Establishments"@en ;
     rdfs:comment """
@@ -1646,8 +1646,8 @@ systemmap:SHyBeGX0LsQwjJ6Z a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/1993/2253_2253_2253> ;
     systemmap:operatedBy systemmap:SNbhMvt3Btta1U1d6 .
 
-systemmap:SI3XHtHkv1ePAqhQg a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SI3XHtHkv1ePAqhQg a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "DGWeb Vet"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1657,8 +1657,8 @@ systemmap:SI3XHtHkv1ePAqhQg a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy systemmap:SNYgqSYzzANvzanVS .
 
-systemmap:SJ15CI0vn3S1JgcOd a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SJ15CI0vn3S1JgcOd a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Vetera"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1669,16 +1669,16 @@ systemmap:SJ15CI0vn3S1JgcOd a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy systemmap:SrG5yvnwax87iuQw8 .
 
-systemmap:SLxeXHOfmC6DkBGl a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SLxeXHOfmC6DkBGl a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     schema:url <https://apps.agroscope.info/sp/za-aui/2/app/datenreihe>,
         <https://www.agrarumweltindikatoren.ch>,
         <https://www.za-aui.ch> ;
     systemmap:operatedBy staatskalender:20050530 .
 
-systemmap:SMHngOxi88zm9ya9N a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SMHngOxi88zm9ya9N a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "myBica"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1688,8 +1688,8 @@ systemmap:SMHngOxi88zm9ya9N a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:1226256 .
 
-systemmap:SMjqlEoVCR9wpTyN1 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SMjqlEoVCR9wpTyN1 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Acorda"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f,
@@ -1705,24 +1705,24 @@ systemmap:SMjqlEoVCR9wpTyN1 a _:nb8c8565bbcd149b7873f63646a71db6db6,
         systemmap:STg0zUHrhEWXotIau,
         systemmap:Sqo5ZJtzXw1gg3RYC .
 
-systemmap:SNQSYR7J0IEZpyFT a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SNQSYR7J0IEZpyFT a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:SsFdxnjM8hgUdzVT5 .
 
-systemmap:SOK9kQP8T3M2qPNEL a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SOK9kQP8T3M2qPNEL a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:Sd6e0fe2eee8f943 ;
     systemmap:operatedBy systemmap:S9ef677e7b565bf9 .
 
-systemmap:SOL6kHAvPFNIuM9E a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SOL6kHAvPFNIuM9E a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:ShM5kJNFhO8vOAEdK .
 
-systemmap:SP86YzKhzJHZDD9Dj a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SP86YzKhzJHZDD9Dj a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     schema:url <https://www.dashboard.blv.admin.ch/> ;
     rdfs:seeAlso <https://github.com/digital-sustainability/blv-infosm> ;
@@ -1730,8 +1730,8 @@ systemmap:SP86YzKhzJHZDD9Dj a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:contains systemmap:SuZ6UFD05DBvC5E09 ;
     systemmap:operatedBy systemmap:SsFdxnjM8hgUdzVT5 .
 
-systemmap:SPASZffcsCMdIFEsZ a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SPASZffcsCMdIFEsZ a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Fleko"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1740,16 +1740,16 @@ systemmap:SPASZffcsCMdIFEsZ a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:contains systemmap:SSBg29n8Wei8fxx1a ;
     systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN .
 
-systemmap:SPDsRNDwfr6fKFrRc a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SPDsRNDwfr6fKFrRc a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Pig Health Info System"@en ;
     systemmap:abbreviation "PHIS"@en ;
     systemmap:contains systemmap:S4x04ackmG5yne5By ;
     systemmap:operatedBy systemmap:S9ef677e7b565bf9 .
 
-systemmap:SPWOFHR512FuAc25b a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SPWOFHR512FuAc25b a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Comprehensive IT Solution for Agriculture & Nature"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f,
@@ -1765,23 +1765,23 @@ systemmap:SPWOFHR512FuAc25b a _:nb8c8565bbcd149b7873f63646a71db6db6,
         systemmap:Sp5pkmAETRpXrudck,
         systemmap:SyTRdNaA9EH12lhiE .
 
-systemmap:SPe8M0urgsNbKw4ut a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SPe8M0urgsNbKw4ut a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication,
         systemmap:FMIS ;
     schema:url <https://www.365farmnet.com/> ;
     systemmap:operatedBy systemmap:Sng7djgBb3dkdoxbU .
 
-systemmap:SQfl1MHnNpsAj3WP a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SQfl1MHnNpsAj3WP a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "DigiAgriFoodCH System Map"@en ;
     schema:url <https://blw-ofag-ufag.github.io/system-map/> ;
     rdfs:comment "A visualization tool for information about IT systems, the data those contain and their operating organizations in the Swiss agri-food sector."@en ;
     systemmap:operatedBy systemmap:SFAwQAwxBcNnaURgO .
 
-systemmap:SQkEfw7VYTz3ceOrg a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SQkEfw7VYTz3ceOrg a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "electronic special permit PPP"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1792,8 +1792,8 @@ systemmap:SQkEfw7VYTz3ceOrg a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:operatedBy systemmap:S0ummGTITezxHMtA3,
         systemmap:SWRHHjM4WnPdLkEVr .
 
-systemmap:SSALCAfutureLmnPqR1tYvCxD8 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SSALCAfutureLmnPqR1tYvCxD8 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "SALCAfuture"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1804,8 +1804,8 @@ systemmap:SSALCAfutureLmnPqR1tYvCxD8 a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy systemmap:SIo1a8l3IT4lBqBJE .
 
-systemmap:SSpO8T6drwrwFgLXG a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SSpO8T6drwrwFgLXG a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "LSQueryAnimalTracing"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1814,8 +1814,8 @@ systemmap:SSpO8T6drwrwFgLXG a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:177634 .
 
-systemmap:SU88cJmqj8nBRl2KZ a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SU88cJmqj8nBRl2KZ a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Animal Traffic Database"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1832,8 +1832,8 @@ systemmap:SU88cJmqj8nBRl2KZ a _:nb8c8565bbcd149b7873f63646a71db6db6,
         systemmap:SoBRgq7STLbZfEze ;
     systemmap:operatedBy zefix:449781 .
 
-systemmap:SVetDbLmnPqR2tYvCxDE a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SVetDbLmnPqR2tYvCxDE a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "VET-DB"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1842,8 +1842,8 @@ systemmap:SVetDbLmnPqR2tYvCxDE a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy systemmap:SswJdLNKXUjfnD84b .
 
-systemmap:SVlngVUmE9joYkIg7 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SVlngVUmE9joYkIg7 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "DNA TraceBack®"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1853,8 +1853,8 @@ systemmap:SVlngVUmE9joYkIg7 a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:201495 .
 
-systemmap:SWPaPOSDJI3Kdv83m a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SWPaPOSDJI3Kdv83m a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Visionherens"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1864,14 +1864,14 @@ systemmap:SWPaPOSDJI3Kdv83m a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy systemmap:SJqSPxOD2hdgsgJDI .
 
-systemmap:SWSDKVAr9pdy3T38R a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SWSDKVAr9pdy3T38R a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:SvmW0FRiWcALdXgAa ;
     systemmap:operatedBy zefix:414877 .
 
-systemmap:SXcby9KwakDGhBdP a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SXcby9KwakDGhBdP a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "ACmobile"@en ;
     service:consumes systemmap:SAGHyCxJM29RiSsV8,
@@ -1882,14 +1882,14 @@ systemmap:SXcby9KwakDGhBdP a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:developedBy zefix:231059 ;
     systemmap:operatedBy systemmap:SmI5VgF2mECWT74i2 .
 
-systemmap:SXekzo74vRcL6VkjL a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SXekzo74vRcL6VkjL a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:S8944f12a7ca83e4 ;
     systemmap:operatedBy zefix:1441172 .
 
-systemmap:SYOd1TkacTh6cr0xP a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SYOd1TkacTh6cr0xP a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Milk Database"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1909,8 +1909,8 @@ systemmap:SYOd1TkacTh6cr0xP a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:developedBy zefix:231059 ;
     systemmap:operatedBy systemmap:SQ3N7dTc23t2wzXr2 .
 
-systemmap:SYQt9hzLel1dEtlOn a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SYQt9hzLel1dEtlOn a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "BrunaNet"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1920,76 +1920,76 @@ systemmap:SYQt9hzLel1dEtlOn a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:226184 .
 
-systemmap:SYqYq3UTUnZHmyFRD a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SYqYq3UTUnZHmyFRD a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Data Warehouse (DWH)"@en ;
     dcterms:isPartOf systemmap:Sc6kZqxTyS0gFGCY,
         systemmap:ShZO092di7cBnOm7F ;
     rdfs:comment "DWH is responsible for the storage and processing of all data."@en .
 
-systemmap:SaOtqyAB5qm1luNuX a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SaOtqyAB5qm1luNuX a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     service:provides systemmap:SyDlq7oQ0czCgyv61 ;
     systemmap:operatedBy zefix:449781 .
 
-systemmap:Sacf3b075f9fa6a3 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sacf3b075f9fa6a3 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     schema:url <https://redonline.ch/redonline/> ;
     systemmap:contains systemmap:S6abacb381c3b305 ;
     systemmap:operatedBy zefix:165954 .
 
-systemmap:Sacff15d7f07af30 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sacff15d7f07af30 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication,
         systemmap:FMIS ;
     systemmap:contains systemmap:Se11c26403a91b7f ;
     systemmap:operatedBy zefix:304729 .
 
-systemmap:Sacff15d7f07af31 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sacff15d7f07af31 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:operatedBy zefix:304729 .
 
-systemmap:Sacff15d7f07af32 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sacff15d7f07af32 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:operatedBy zefix:304729 .
 
-systemmap:Sacff15d7f07af33 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sacff15d7f07af33 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:operatedBy zefix:304729 .
 
-systemmap:Saeb98b8b20b87dc a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Saeb98b8b20b87dc a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:S6e777b275a43632 ;
     systemmap:operatedBy systemmap:S0a38b15f2f7d62f .
 
-systemmap:Sb35n3iHP8gdx3MXZ a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sb35n3iHP8gdx3MXZ a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:S70ed53aa68083c7 ;
     systemmap:operatedBy systemmap:SCN2FR1ecbZOlXssf .
 
-systemmap:Sb51c844b32eb867 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sb51c844b32eb867 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:S08be1fdcd1d8675 ;
     systemmap:operatedBy zefix:226184 .
 
-systemmap:Sb9170e5822932c9 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sb9170e5822932c9 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:Se28f3bb2be7ce5e ;
     systemmap:operatedBy zefix:616032 .
 
-systemmap:SbQMDyJD8k62AfApL a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SbQMDyJD8k62AfApL a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "SAIMo"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -1999,8 +1999,8 @@ systemmap:SbQMDyJD8k62AfApL a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy systemmap:SIo1a8l3IT4lBqBJE .
 
-systemmap:SbbbXta7RwMcmH9aB a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SbbbXta7RwMcmH9aB a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Slaughter Cattle Invoicing System"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2009,32 +2009,32 @@ systemmap:SbbbXta7RwMcmH9aB a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:469727 .
 
-systemmap:Sbc5a844a4f0c51a a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sbc5a844a4f0c51a a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:S0f4b28b02fcdb51 ;
     systemmap:operatedBy zefix:278958 .
 
-systemmap:Sbc93f958f0b123f a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sbc93f958f0b123f a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:S77a8bd0c2e5fb0f ;
     systemmap:operatedBy systemmap:S0a38b15f2f7d62f .
 
-systemmap:Sbf2a33246ce235f a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sbf2a33246ce235f a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:S92c678287d7c7c3 ;
     systemmap:operatedBy systemmap:Saf2a33246ce133f .
 
-systemmap:Sc355c0e0b1d5ec2 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sc355c0e0b1d5ec2 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:Sf39e4cc5a9b4324 ;
     systemmap:operatedBy zefix:1566606 .
 
-systemmap:Sc6kZqxTyS0gFGCY a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sc6kZqxTyS0gFGCY a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Market Data Analysis and Reporting System"@en ;
     dcterms:hasPart systemmap:SYqYq3UTUnZHmyFRD ;
@@ -2047,20 +2047,20 @@ systemmap:Sc6kZqxTyS0gFGCY a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:isPartOf systemmap:ShZO092di7cBnOm7F ;
     systemmap:operatedBy systemmap:SaVyVVsIDkiDMtQq4 .
 
-systemmap:Sce5n6iUiSgdU3Mvv a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sce5n6iUiSgdU3Mvv a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:S70ed53aa68083c8 ;
     systemmap:operatedBy zefix:430315 .
 
-systemmap:Scec2e0aa684d0b6 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Scec2e0aa684d0b6 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:Sfffaefb08722c2d ;
     systemmap:operatedBy zefix:1537663 .
 
-systemmap:Sd3egXVVG1pgbzgcA a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sd3egXVVG1pgbzgcA a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "ERP System"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2070,8 +2070,8 @@ systemmap:Sd3egXVVG1pgbzgcA a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:2595 .
 
-systemmap:SdUi9po2l0PgjsATP a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SdUi9po2l0PgjsATP a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Elvasem"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2080,33 +2080,33 @@ systemmap:SdUi9po2l0PgjsATP a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:448334 .
 
-systemmap:Sdb697580a17102a a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sdb697580a17102a a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:Sd30080af44facc4 ;
     systemmap:operatedBy systemmap:Se8a0552eb8cf7fe .
 
-systemmap:Se1bff29f5b7c68c a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Se1bff29f5b7c68c a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:Sfcb669880d3a0c8 ;
     systemmap:operatedBy zefix:106474 .
 
-systemmap:Se430137f74ad0c1 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Se430137f74ad0c1 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     dcterms:hasPart systemmap:S844d3e2975f1f13,
         systemmap:S8a865ea5590dbdb ;
     systemmap:operatedBy systemmap:S250c89579908e54 .
 
-systemmap:Se5bcee032bfbd65 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Se5bcee032bfbd65 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:S27626110a39e3ed ;
     systemmap:operatedBy systemmap:Sc4ba6ce6ae8d41c .
 
-systemmap:SeJ36zAhO3AJJix8t a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SeJ36zAhO3AJJix8t a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "National Information System for Plant Genetic Resources for Food and Agriculture"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2114,26 +2114,26 @@ systemmap:SeJ36zAhO3AJJix8t a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:abbreviation "NIS-PGRFA"@en ;
     systemmap:operatedBy systemmap:SMnIieexlpOQHsGvN .
 
-systemmap:Sflqf2ls29PzK3049 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sflqf2ls29PzK3049 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     schema:url <https://www.suisag.com/ch-de/softwares/suisdata-manager/> ;
     systemmap:operatedBy zefix:414877 .
 
-systemmap:Sfv81BPRW0TSnKhGg a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sfv81BPRW0TSnKhGg a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     schema:url <https://agrarsoftware.ch/troupo.html> ;
     systemmap:operatedBy zefix:505628 .
 
-systemmap:Sfwx1dZMcl5OXtzb a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sfwx1dZMcl5OXtzb a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     schema:url <https://www.apinella.ch/> ;
     systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN .
 
-systemmap:SgjZ0efLbuCR2HvN a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SgjZ0efLbuCR2HvN a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Plant Variety Database"@en ;
     rdfs:comment "The PLUTO database contains information on plant species and varieties from UPOV members as well as the Organisation for Economic Co-operation and Development (OECD). The PLUTO database provides a search tool for variety denominations to ensure the distinctness of new varieties."@en ;
@@ -2142,15 +2142,15 @@ systemmap:SgjZ0efLbuCR2HvN a _:nb8c8565bbcd149b7873f63646a71db6db6,
         systemmap:Sb2FM7pKN60PrRwU ;
     systemmap:operatedBy systemmap:SBLH2G6TSKaqhqk4n .
 
-systemmap:SgsDa3rQzhEAqAUOZ a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SgsDa3rQzhEAqAUOZ a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication,
         systemmap:FMIS ;
     schema:url <https://farmable.tech/de/> ;
     systemmap:operatedBy systemmap:SGWW0nzBJjBsx2QTr .
 
-systemmap:ShWzrtCjaSa8nRJ4N a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:ShWzrtCjaSa8nRJ4N a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "amacos"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2162,8 +2162,8 @@ systemmap:ShWzrtCjaSa8nRJ4N a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:367883 .
 
-systemmap:ShZO092di7cBnOm7F a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:ShZO092di7cBnOm7F a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Business Intelligence System"@en ;
     dcterms:hasPart systemmap:SYqYq3UTUnZHmyFRD,
@@ -2172,8 +2172,8 @@ systemmap:ShZO092di7cBnOm7F a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:abbreviation "ASTAT"@en ;
     systemmap:operatedBy systemmap:SieZtzwlMAxzFY1op .
 
-systemmap:Shhoiq8azX3SHGL3W a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Shhoiq8azX3SHGL3W a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Plant Protection Products Directory"@en ;
     schema:url <https://www.psm.admin.ch/> ;
@@ -2187,20 +2187,20 @@ systemmap:Shhoiq8azX3SHGL3W a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2010/340> ;
     systemmap:operatedBy systemmap:SoqmfoevPVgr3d0AA .
 
-systemmap:ShjUfLjdanc83Dr0d a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:ShjUfLjdanc83Dr0d a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:SXIwI6eU6lZZOFVR4 ;
     systemmap:operatedBy zefix:414877 .
 
-systemmap:Shk82ubUQrICbOXZh a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Shk82ubUQrICbOXZh a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     service:consumes systemmap:SAGHyCxJM29RiSsV8 ;
     systemmap:operatedBy systemmap:SLekJnxsXE7F1IQyK .
 
-systemmap:Shu8wJsNr6s2DSkrI a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Shu8wJsNr6s2DSkrI a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Agrosoft Farmsolution"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2210,8 +2210,8 @@ systemmap:Shu8wJsNr6s2DSkrI a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy systemmap:SLu8IMm0TUxYimTwO .
 
-systemmap:SjCVTMrYaOTygNcqF a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SjCVTMrYaOTygNcqF a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "digiFLUX"@en ;
     dcterms:hasPart systemmap:S2Q2s27pTp6oRYHmf,
@@ -2226,8 +2226,8 @@ systemmap:SjCVTMrYaOTygNcqF a _:nb8c8565bbcd149b7873f63646a71db6db6,
         LwG:art_165_f_bis ;
     systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP .
 
-systemmap:SjhTrVt8CB9QFq0Yn a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SjhTrVt8CB9QFq0Yn a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Product catalog"@en ;
     dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF ;
@@ -2235,8 +2235,8 @@ systemmap:SjhTrVt8CB9QFq0Yn a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:contains systemmap:S6lhRFiEflanK2rcl,
         systemmap:Sl5KyePu7JtGiE3V .
 
-systemmap:SkGYudMy9po7MUq2x a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SkGYudMy9po7MUq2x a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Equi-FM"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2247,8 +2247,8 @@ systemmap:SkGYudMy9po7MUq2x a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy systemmap:ScS6Ziy08AYukFjjh .
 
-systemmap:SlTSOXsBC2LN7Qkp a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SlTSOXsBC2LN7Qkp a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Barto"@en ;
     dcterms:hasPart systemmap:S5aa8657dd97155b ;
@@ -2261,8 +2261,8 @@ systemmap:SlTSOXsBC2LN7Qkp a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:1293128 .
 
-systemmap:SlfheulBjlQDwuaIM a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SlfheulBjlQDwuaIM a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "HODUFLU"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2273,8 +2273,8 @@ systemmap:SlfheulBjlQDwuaIM a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:contains systemmap:SENtOaRGg22EqHWXq ;
     systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP .
 
-systemmap:SlmCGKfiLZcQ0MsvC a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SlmCGKfiLZcQ0MsvC a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     rdfs:comment """
@@ -2282,8 +2282,8 @@ systemmap:SlmCGKfiLZcQ0MsvC a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:130459 .
 
-systemmap:SmWEQ8lVlDS9ZwPkY a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SmWEQ8lVlDS9ZwPkY a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "LAWIS"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f,
@@ -2304,8 +2304,8 @@ systemmap:SmWEQ8lVlDS9ZwPkY a _:nb8c8565bbcd149b7873f63646a71db6db6,
         systemmap:SXdYExDt1RcJOS7AY,
         systemmap:SkaW2ahXWYw9ueeOp .
 
-systemmap:SnM0KdtMBmniYOY8f a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SnM0KdtMBmniYOY8f a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "My Agricultural Data Release"@en ;
     rdfs:comment """
@@ -2316,8 +2316,8 @@ systemmap:SnM0KdtMBmniYOY8f a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:abbreviation "MADR"@en ;
     systemmap:operatedBy systemmap:SFAwQAwxBcNnaURgO .
 
-systemmap:Snfl97lvHuIqb7cTZ a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Snfl97lvHuIqb7cTZ a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Softproviding Meat"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2327,8 +2327,8 @@ systemmap:Snfl97lvHuIqb7cTZ a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:531454 .
 
-systemmap:SoBSi8PwUf9xFjdrM a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SoBSi8PwUf9xFjdrM a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "EASY-CERT Cloud"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2338,15 +2338,15 @@ systemmap:SoBSi8PwUf9xFjdrM a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:1202686 .
 
-systemmap:SpLZd1ojPxF0CvH28 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SpLZd1ojPxF0CvH28 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Visualize"@en ;
     rdfs:comment "Create and embed visualizations from any dataset provided by the LINDAS Linked Data Service."@en ;
     systemmap:operatedBy systemmap:SwlgSr7ukziL6iHsP .
 
-systemmap:SpR2aDraNmiUXz55J a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SpR2aDraNmiUXz55J a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "SAP Valais"@en ;
     service:consumes systemmap:SyYykF7sxZpwuQdLO ;
@@ -2358,8 +2358,8 @@ systemmap:SpR2aDraNmiUXz55J a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:contains systemmap:SakCt52w8AKrsSXi ;
     systemmap:operatedBy systemmap:SG5yBV3kE5E5NMM7j .
 
-systemmap:Sq8pW7vv7FNraUfaT a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sq8pW7vv7FNraUfaT a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "BeefNet"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2369,16 +2369,16 @@ systemmap:Sq8pW7vv7FNraUfaT a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:769392 .
 
-systemmap:Sqv5Vh286L7iinjmy a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sqv5Vh286L7iinjmy a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     systemmap:contains systemmap:SGXgfZIB9hCBv4fIa,
         systemmap:SXDe1c5blay5pm1f7,
         systemmap:Se35WpC7gmVkMSoME ;
     systemmap:operatedBy zefix:321790 .
 
-systemmap:SrkebxtFWRCtftbJV a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SrkebxtFWRCtftbJV a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "AGRO-TECH"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2388,8 +2388,8 @@ systemmap:SrkebxtFWRCtftbJV a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:885059 .
 
-systemmap:Ss7QOCDSxfbstJlpp a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Ss7QOCDSxfbstJlpp a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "STATUS"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2399,8 +2399,8 @@ systemmap:Ss7QOCDSxfbstJlpp a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:336983 .
 
-systemmap:SsUV3nTDKTJ3nQ5L9 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SsUV3nTDKTJ3nQ5L9 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "SMG-Net"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2410,14 +2410,14 @@ systemmap:SsUV3nTDKTJ3nQ5L9 a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:1110982 .
 
-systemmap:StGKp6nS3OwEm4I0 a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:StGKp6nS3OwEm4I0 a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     systemmap:operatedBy systemmap:SG8fSveeGZNcYzoUN .
 
-systemmap:StiztlHPN24VK1k8G a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:StiztlHPN24VK1k8G a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Agateway"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2427,16 +2427,16 @@ systemmap:StiztlHPN24VK1k8G a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:449781 .
 
-systemmap:Su9RTb49BcaqL4EcQ a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Su9RTb49BcaqL4EcQ a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "NielsenIQ Database"@en ;
     rdfs:comment "For market analysis, the FOAG acquires retail data contained in the NielsenIQ database."@en ;
     systemmap:contains systemmap:SXIIUKFjUBDaaTzh6 ;
     systemmap:operatedBy systemmap:SYfFBbBlmgKk9vmPg .
 
-systemmap:SuEtT7joC8HXVSfF a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SuEtT7joC8HXVSfF a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "UID Register"@en ;
     rdfs:comment """
@@ -2449,8 +2449,8 @@ systemmap:SuEtT7joC8HXVSfF a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:contains systemmap:SDLEUPczkJ9AWZeC ;
     systemmap:operatedBy systemmap:SNbhMvt3Btta1U1d6 .
 
-systemmap:SvDlxaJ5YMkuZGH6k a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SvDlxaJ5YMkuZGH6k a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Agricultural Policy Information System"@en ;
     service:consumes systemmap:SyYykF7sxZpwuQdLO ;
@@ -2468,8 +2468,8 @@ systemmap:SvDlxaJ5YMkuZGH6k a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:hasLegalBasis LwG:art_165_c ;
     systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
 
-systemmap:Svbcr8GEkZLb3HmRI a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Svbcr8GEkZLb3HmRI a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "LAWIS plus"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2478,15 +2478,15 @@ systemmap:Svbcr8GEkZLb3HmRI a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:1354082 .
 
-systemmap:SveDUGZvttVw7ga7l a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SveDUGZvttVw7ga7l a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication,
         systemmap:FMIS ;
     schema:url <https://www.smartfarm.ch/> ;
     systemmap:operatedBy zefix:848149 .
 
-systemmap:SwsptnNDhjz0vIZNu a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SwsptnNDhjz0vIZNu a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Isalait"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2496,8 +2496,8 @@ systemmap:SwsptnNDhjz0vIZNu a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:505628 .
 
-systemmap:Sxi0p2NlmE7ff8oEC a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sxi0p2NlmE7ff8oEC a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Granovit Portal"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2506,8 +2506,8 @@ systemmap:Sxi0p2NlmE7ff8oEC a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy zefix:417741 .
 
-systemmap:SxvsanBKE0ZN315DU a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SxvsanBKE0ZN315DU a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "Public Data Warehouse"@en ;
     dcterms:isPartOf systemmap:ShZO092di7cBnOm7F ;
@@ -2516,14 +2516,14 @@ systemmap:SxvsanBKE0ZN315DU a _:nb8c8565bbcd149b7873f63646a71db6db6,
     systemmap:contains systemmap:S2XkdeKmzFiJFXWc ;
     systemmap:operatedBy systemmap:SieZtzwlMAxzFY1op .
 
-systemmap:Sy4WeMDNoah4TkAYX a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:Sy4WeMDNoah4TkAYX a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     service:provides systemmap:SWrEh3riVEhEddyRr ;
     systemmap:operatedBy systemmap:SyfZhzeyT1CqJU0BP .
 
-systemmap:SyQyLq1TqV3MYovtW a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SyQyLq1TqV3MYovtW a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "CSB-System"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2534,8 +2534,8 @@ systemmap:SyQyLq1TqV3MYovtW a _:nb8c8565bbcd149b7873f63646a71db6db6,
         """@en ;
     systemmap:operatedBy systemmap:SzqZmzij2bxSZEIL9 .
 
-systemmap:SywklUB91myTH0cvS a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SywklUB91myTH0cvS a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     rdfs:label "eQuotas"@en ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
@@ -2551,16 +2551,16 @@ systemmap:SywklUB91myTH0cvS a _:nb8c8565bbcd149b7873f63646a71db6db6,
         <https://www.fedlex.admin.ch/eli/cc/2016/565> ;
     systemmap:operatedBy systemmap:SRu4rav1Rlm2mUMWr .
 
-systemmap:SzB95Xoyj1a1EJNBe a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SzB95Xoyj1a1EJNBe a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     service:provides systemmap:SAGHyCxJM29RiSsV8 ;
     systemmap:contains systemmap:S1u8DDdB8YZ67H5l5,
         systemmap:SY3MaMtlZPlOgUn4j ;
     systemmap:operatedBy systemmap:SLekJnxsXE7F1IQyK .
 
-systemmap:SzrnfKnzjo2egouKl a _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7,
+systemmap:SzrnfKnzjo2egouKl a _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7,
         schema:SoftwareApplication ;
     schema:url <https://www.suisag.com/ch-de/softwares/ebj/> ;
     systemmap:contains systemmap:S7ddb5605c1326b4 ;
@@ -4440,9 +4440,9 @@ dcat:Dataset a rdfs:Class,
         A collection of data, published or curated by a single source, and available for access or download in one or more representations.
         """@en ;
     rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
-    rdfs:subClassOf _:nb8c8565bbcd149b7873f63646a71db6db1,
-        _:nb8c8565bbcd149b7873f63646a71db6db2,
-        _:nb8c8565bbcd149b7873f63646a71db6db3 ;
+    rdfs:subClassOf _:n6b9d44207da14bd6a53ca0daf46d3d6ab1,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab2,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab3 ;
     skos:scopeNote """
         The notion of dataset in DCAT is broad and inclusive, with the intention of accommodating resource types arising from all communities.
         Data comes in many forms including numbers, text, pixels, imagery, sound and other multi-media, and potentially other types, any of which might be collected into a dataset.
@@ -4457,8 +4457,8 @@ service:Service a owl:Class ;
     rdfs:comment """
         A technical software component that provides functionalities via clearly defined interfaces for external use or integration.
         """@en ;
-    rdfs:subClassOf _:nb8c8565bbcd149b7873f63646a71db6db4,
-        _:nb8c8565bbcd149b7873f63646a71db6db5 .
+    rdfs:subClassOf _:n6b9d44207da14bd6a53ca0daf46d3d6ab4,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab5 .
 
 schema:DefinedTermSet a owl:Class ;
     rdfs:label "Reference data"@en ;
@@ -4489,8 +4489,8 @@ schema:SoftwareApplication a owl:Class ;
     rdfs:comment """
         Any IT system (in an abstract sense), often with one or more associated databases.
         """@en ;
-    rdfs:subClassOf _:nb8c8565bbcd149b7873f63646a71db6db6,
-        _:nb8c8565bbcd149b7873f63646a71db6db7 .
+    rdfs:subClassOf _:n6b9d44207da14bd6a53ca0daf46d3d6ab6,
+        _:n6b9d44207da14bd6a53ca0daf46d3d6ab7 .
 
 systemmap:CantonalAgriculturalAdvisor a owl:Class ;
     rdfs:label "Cantonal advice center"@en ;
@@ -4586,10 +4586,10 @@ termdat:52453 a owl:Class ;
         """@en ;
     rdfs:subClassOf termdat:52451 .
 
-_:nb8c8565bbcd149b7873f63646a71db6db12 a owl:Class ;
+_:n6b9d44207da14bd6a53ca0daf46d3d6ab12 a owl:Class ;
     owl:unionOf ( dcat:Dataset service:Service schema:SoftwareApplication ) .
 
-_:nb8c8565bbcd149b7873f63646a71db6db8 a owl:Class ;
+_:n6b9d44207da14bd6a53ca0daf46d3d6ab8 a owl:Class ;
     owl:unionOf ( dcat:Dataset service:Service schema:SoftwareApplication ) .
 
 systemmap:abbreviation a owl:DatatypeProperty ;
@@ -4727,7 +4727,7 @@ systemmap:containsNodes a owl:ObjectProperty ;
 
 systemmap:developedBy a owl:ObjectProperty ;
     rdfs:label "developed by"@en ;
-    rdfs:domain _:nb8c8565bbcd149b7873f63646a71db6db8 ;
+    rdfs:domain _:n6b9d44207da14bd6a53ca0daf46d3d6ab8 ;
     rdfs:range schema:Organization ;
     owl:inverseOf systemmap:develops .
 
@@ -4737,7 +4737,7 @@ systemmap:develops a owl:ObjectProperty ;
         Shows, what organization developed a system, a database or a service.
         """@en ;
     rdfs:domain schema:Organization ;
-    rdfs:range _:nb8c8565bbcd149b7873f63646a71db6db12 ;
+    rdfs:range _:n6b9d44207da14bd6a53ca0daf46d3d6ab12 ;
     owl:inverseOf systemmap:developedBy .
 
 systemmap:hasLegalBasis a owl:ObjectProperty ;
@@ -4815,31 +4815,31 @@ systemmap: a owl:Ontology ;
     dcterms:title "DigiAgriFoodCH System Map Ontology"@en ;
     owl:versionInfo "0.4.0" .
 
-_:nb8c8565bbcd149b7873f63646a71db6db1 a owl:Restriction ;
+_:n6b9d44207da14bd6a53ca0daf46d3d6ab1 a owl:Restriction ;
     owl:allValuesFrom dcat:Dataset ;
     owl:onProperty dcterms:hasPart .
 
-_:nb8c8565bbcd149b7873f63646a71db6db2 a owl:Restriction ;
+_:n6b9d44207da14bd6a53ca0daf46d3d6ab2 a owl:Restriction ;
     owl:allValuesFrom dcat:Dataset ;
     owl:onProperty dcterms:isPartOf .
 
-_:nb8c8565bbcd149b7873f63646a71db6db3 a owl:Restriction ;
+_:n6b9d44207da14bd6a53ca0daf46d3d6ab3 a owl:Restriction ;
     owl:allValuesFrom skos:Concept ;
     owl:onProperty schema:keywords .
 
-_:nb8c8565bbcd149b7873f63646a71db6db4 a owl:Restriction ;
+_:n6b9d44207da14bd6a53ca0daf46d3d6ab4 a owl:Restriction ;
     owl:allValuesFrom service:Service ;
     owl:onProperty dcterms:hasPart .
 
-_:nb8c8565bbcd149b7873f63646a71db6db5 a owl:Restriction ;
+_:n6b9d44207da14bd6a53ca0daf46d3d6ab5 a owl:Restriction ;
     owl:allValuesFrom service:Service ;
     owl:onProperty dcterms:isPartOf .
 
-_:nb8c8565bbcd149b7873f63646a71db6db6 a owl:Restriction ;
+_:n6b9d44207da14bd6a53ca0daf46d3d6ab6 a owl:Restriction ;
     owl:allValuesFrom schema:SoftwareApplication ;
     owl:onProperty dcterms:hasPart .
 
-_:nb8c8565bbcd149b7873f63646a71db6db7 a owl:Restriction ;
+_:n6b9d44207da14bd6a53ca0daf46d3d6ab7 a owl:Restriction ;
     owl:allValuesFrom schema:SoftwareApplication ;
     owl:onProperty dcterms:isPartOf .
 

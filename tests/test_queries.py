@@ -3,7 +3,7 @@ import pytest
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 QUERY_DIR = "src/sparql/queries/"
-ENDPOINT_URL = "https://agriculture.ld.admin.ch/query"
+ENDPOINT_URL = "https://lindas.admin.ch/query"
 
 def discover_queries():
     """Reads all SPARQL files from the target directory."""

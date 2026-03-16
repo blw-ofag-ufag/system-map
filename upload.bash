@@ -40,6 +40,6 @@ curl \
   "$ENDPOINT?graph=$GRAPH"
 
 echo Test all queries on LINDAS PROD
-pytest tests/test_queries.py
+pytest tests
 
 echo All commands executed

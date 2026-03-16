@@ -162,13 +162,6 @@ html, body {
 .class-title-section {
     margin-bottom: 10px;
 }
-.class-description {
-    font-size: 12px;
-    font-weight: 300;
-    color: var(--color-font-dimmed);
-    margin-top: 4px;
-    line-height: 1.4;
-}
 .settings-subheading {
     margin-top: 10px;
     margin-bottom: 15px;

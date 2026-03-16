@@ -737,7 +737,7 @@ async function init() {
                 <div class="settings-class-header">
                     <div class="class-title-section">
                         <div class="settings-node-icon large-node-icon" style="${inlineStyle}">${labelText}</div>
-                        ${classComment ? `<div class="class-description">${classComment}</div>` : ''}
+                        ${classComment ? `<div><small>${classComment}</small></div>` : ''}
                     </div>
                     <div class="class-toggle-row">
                         <div class="tri-toggle" title="Toggle State">

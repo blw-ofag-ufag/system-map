@@ -611,9 +611,14 @@ async function init() {
         });
 
         const allPredicateKeys = Object.keys(APP_CONFIG.PREDICATE_MAP);
+        const hierarchyKeys = ["isPartOf", "parentOrg"];
         
         const selectedPredsSet = new Set();
         document.querySelectorAll('.pred-checkbox:checked').forEach(cb => selectedPredsSet.add(cb.dataset.key));
+        
+        // Ensure hierarchy keys are always considered "selected" in the background
+        hierarchyKeys.forEach(k => selectedPredsSet.add(k));
+        
         const selectedPreds = Array.from(selectedPredsSet);
 
         params.predicates = selectedPreds.length === allPredicateKeys.length ? null : selectedPreds.join(';');
@@ -755,6 +760,9 @@ async function init() {
             sortedPredicates.forEach(predData => {
                 const key = iriToKeyMap[predData.id];
                 if (!key) return;
+
+                // Hierarchy predicates are hidden from the UI list
+                if (key === "isPartOf" || key === "parentOrg") return;
 
                 const isAgnostic = !predData.domain ||
                                    predData.domain === 'http://www.w3.org/2002/07/owl#Thing' ||

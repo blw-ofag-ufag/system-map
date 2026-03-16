@@ -89,7 +89,9 @@ systemmap:Sa9PcqsvnAMuiYCjx a dcmitype:Collection ;
         systemmap:SvNriWslaOR5xkdw,
         systemmap:SzB95Xoyj1a1EJNBe,
         systemmap:SzuDlnYUQMk3HaCb,
-        zefix:231059 .
+        zefix:231059,
+        systemmap:SYOd1TkacTh6cr0xP,
+        systemmap:SmI5VgF2mECWT74i2 .
 
 systemmap:SaAA0IQkj02jgbLEb a dcmitype:Collection ;
     schema:name "MARS III Systemarchitektur"@de ;
@@ -3522,7 +3524,8 @@ systemmap:SmI5VgF2mECWT74i2 a systemmap:CantonalOrganization ;
         "The cantonal administration of Bern."@en,
         "L'administration cantonale de Berne."@fr,
         "L'amministrazione cantonale di Berna."@it ;
-    systemmap:abbreviation "BE" .
+    systemmap:abbreviation "BE" ;
+    schema:url <https://www.be.ch/> .
 
 systemmap:SnUxOsahtIQHfvRH9 a systemmap:CantonalOrganization ;
     schema:name "Amt für Landwirtschaft und Natur"@de ;
@@ -4747,7 +4750,10 @@ zefix:212388 a systemmap:PrivateOrganization ;
 
 zefix:231059 a systemmap:PrivateOrganization ;
     schema:name "Bedag Informatik AG"@de,
-        "Bedag Informatique SA"@fr .
+        "Bedag Informatique SA"@fr ;
+    schema:description "Die Bedag ist ein schweizerisches IT-Dienstleistungsunternehmen. Mit rund 490 Mitarbeiterinnen und Mitarbeitern verfügt sie über ein breites und fundiertes Informatik-Know-how. Ihr Kerngeschäft ist die Entwicklung, die Wartung und der Betrieb von geschäftskritischen Informatiklösungen mit der Datenhaltung in eigenen Rechenzentren in der Schweiz. Ihre Kunden sind hauptsächlich öffentliche Verwaltungen und Betriebe. Die Bedag wurde 1990 gegründet und befindet sich im Eigentum des Kantons Bern."@de ;
+    schema:url <https://www.bedag.ch/> ;
+    systemmap:ownedBy systemmap:SmI5VgF2mECWT74i2 .
 
 zefix:248029 a systemmap:PrivateOrganization ;
     schema:name "Schweizerischer Ziegenzuchtverband (SZZV) Genossenschaft"@de,

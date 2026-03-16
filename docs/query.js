@@ -54,7 +54,7 @@ CONSTRUCT {
         schema:name ?name ;
         schema:description ?comment ;
         systemmap:abbreviation ?abbreviation ;
-        dcat:keyword ?keyword .
+        schema:keywords ?keyword .
         
   ?keyword a schema:DefinedTerm ;
            schema:name ?keywordLabel .
@@ -89,7 +89,7 @@ WHERE {
        OPTIONAL { ?node schema:description ?comment }
        OPTIONAL { ?node systemmap:abbreviation ?abbreviation }
        OPTIONAL {
-         ?node dcat:keyword ?keyword .
+         ?node schema:keywords ?keyword .
          OPTIONAL { ?keyword schema:name ?keywordLabel . }
        }
     } UNION {
@@ -123,7 +123,7 @@ PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
 
 CONSTRUCT {
-    ?node dcat:landingPage ?landingPage ;
+    ?node schema:url ?landingPage ;
           systemmap:uid ?uid ;
           systemmap:streetAddress ?addressName ;
           systemmap:postalCode ?postalCode ;
@@ -137,7 +137,7 @@ WHERE {
         {
             SELECT ?landingPage WHERE {
                 GRAPH <https://lindas.admin.ch/foag/system-map> {
-                    <${nodeId}> dcat:landingPage ?landingPage .
+                    <${nodeId}> schema:url ?landingPage .
                 }
             } LIMIT 1
         }

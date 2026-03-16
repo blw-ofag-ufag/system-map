@@ -144,6 +144,7 @@ async function init() {
     let pinnedNodeId = null, pinnedEdgeId = null;
     let allNodesData = {}, allEdgesData = {}, allEdgeMetadata = {}, allClassesData = {}, allTitles = {};
     let allKeywordsMap = {};
+    let allKeywordCounts = {};
     let network, nodesDataset, edgesDataset;
 
     try {
@@ -196,12 +197,20 @@ async function init() {
                 name: getLangMap(node, 'http://schema.org/name'),
                 comment: getLangMap(node, 'http://schema.org/description'),
                 abbreviation: getLangMap(node, 'https://agriculture.ld.admin.ch/system-map/abbreviation'),
-                keywords: getRefs(node, 'http://www.w3.org/ns/dcat#keyword').map(kwUri => {
+                keywords: getRefs(node, 'http://schema.org/keywords').map(kwUri => {
                     const kwNode = entityMap[kwUri];
                     if(kwNode && !allKeywordsMap[kwUri]) allKeywordsMap[kwUri] = getLangMap(kwNode, 'http://schema.org/name');
                     return { id: kwUri, labels: kwNode ? getLangMap(kwNode, 'http://schema.org/name') : {} };
                 })
             };
+        });
+
+        // Calculate occurrence frequencies globally prior to filtering
+        Object.values(rawNodes).forEach(n => {
+            n.keywords.forEach(kw => {
+                const shortId = getKwId(kw.id);
+                allKeywordCounts[shortId] = (allKeywordCounts[shortId] || 0) + 1;
+            });
         });
 
         if (activeKeywords.length > 0) {
@@ -611,7 +620,6 @@ async function init() {
 
         const allPredicateKeys = Object.keys(APP_CONFIG.PREDICATE_MAP);
         
-        // Use a Set to extract unique active predicates since they can appear in multiple columns
         const selectedPredsSet = new Set();
         document.querySelectorAll('.pred-checkbox:checked').forEach(cb => selectedPredsSet.add(cb.dataset.key));
         const selectedPreds = Array.from(selectedPredsSet);
@@ -647,7 +655,7 @@ async function init() {
                         const nodeData = expandedGraph.find(n => n['@id'] === pinnedNodeId) || expandedGraph[0];
                         
                         allNodesData[pinnedNodeId].details = {
-                            landingPage: getFirstValue(nodeData, 'http://www.w3.org/ns/dcat#landingPage'),
+                            landingPage: getFirstValue(nodeData, 'http://schema.org/url'),
                             uid: getFirstValue(nodeData, 'https://agriculture.ld.admin.ch/system-map/uid'),
                             streetAddress: getFirstValue(nodeData, 'https://agriculture.ld.admin.ch/system-map/streetAddress'),
                             postalCode: getFirstValue(nodeData, 'https://agriculture.ld.admin.ch/system-map/postalCode'),
@@ -685,14 +693,6 @@ async function init() {
     updateUIForLanguage();
     applyAllStyles();
 
-    const createNodeIconHtml = (groupName) => {
-        const style = APP_CONFIG.GROUP_STYLES[groupName] || APP_CONFIG.GROUP_STYLES.Other;
-        const classIri = APP_CONFIG.GROUP_IRI_MAP[groupName];
-        const { text: label } = getLocalizedText(allClassesData[classIri]?.label, currentLang);
-        const inlineStyle = `background-color: ${style.background}; border-color: ${style.border}; color: ${style.font.color};`;
-        return `<div class="settings-node-icon" style="${inlineStyle}">${label || groupName}</div>`;
-    };
-
     function populateSettings() {
         const TEXT = APP_CONFIG.UI_TEXT[currentLang];
         
@@ -726,14 +726,19 @@ async function init() {
             const classData = allClassesData[classIri];
 
             const col = document.createElement('div');
-            col.className = 'settings-class-column';
-
             const paramVal = getParam(groupName.toLowerCase()) || 'full';
+            col.className = `settings-class-column ${paramVal === 'off' ? 'dimmed' : ''}`;
+            col.id = `col-${groupName}`;
+
             const labelText = classData ? (getLocalizedText(classData.label, currentLang).text || TEXT.noLabel) : groupName;
-            const visualHtml = createNodeIconHtml(groupName);
+            const classComment = classData ? (getLocalizedText(classData.comment, currentLang).text || '') : '';
 
             let colHtml = `
                 <div class="settings-class-header">
+                    <div class="class-title-section">
+                        <strong>${labelText}</strong>
+                        ${classComment ? `<div class="class-description">${classComment}</div>` : ''}
+                    </div>
                     <div class="class-toggle-row">
                         <div class="tri-toggle" title="Toggle State">
                             <input type="radio" id="setting-class-${groupName}_full" name="setting-class-${groupName}" value="full" data-group="${groupName}" ${paramVal === 'full' ? 'checked' : ''}>
@@ -745,11 +750,6 @@ async function init() {
                             <input type="radio" id="setting-class-${groupName}_off" name="setting-class-${groupName}" value="off" data-group="${groupName}" ${paramVal === 'off' ? 'checked' : ''}>
                             <label for="setting-class-${groupName}_off" title="${TEXT.stateOff}"><i class="fas fa-eye-slash"></i></label>
                             <div class="tri-toggle-slider"></div>
-                        </div>
-                        <div class="class-toggle-info">
-                            <div class="class-toggle-header">
-                                <strong>${labelText}</strong>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -772,10 +772,11 @@ async function init() {
                     const edgeHtml = createEdgeDiagramHtml(predData.id);
 
                     colHtml += `
-                        <div class="settings-list-item">
+                        <div class="settings-list-item ${isChecked ? '' : 'dimmed'}">
                             <div class="settings-list-item-content">
-                                <label>
-                                    <input type="checkbox" class="pred-checkbox" id="setting-pred-${groupName}-${key}" data-key="${key}" ${isChecked ? 'checked' : ''}>
+                                <label class="prop-label">
+                                    <input type="checkbox" class="pred-checkbox hidden" id="setting-pred-${groupName}-${key}" data-key="${key}" ${isChecked ? 'checked' : ''}>
+                                    <i class="fas ${isChecked ? 'fa-eye' : 'fa-eye-slash'} prop-eye-icon"></i>
                                     <strong>${predLabel}</strong>
                                     ${edgeHtml}
                                 </label>
@@ -800,12 +801,32 @@ async function init() {
             gridContainer.appendChild(col);
         });
 
-        // Event listeners to sync same predicates across columns
+        // Hierarchische Verblassung via Toggle
+        document.querySelectorAll('.tri-toggle input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                const groupName = e.target.dataset.group;
+                const col = document.getElementById(`col-${groupName}`);
+                if (col) {
+                    col.classList.toggle('dimmed', e.target.value === 'off');
+                }
+            });
+        });
+
+        // Event listener für Property Sichtbarkeits-Toggle (Icon Switch)
         document.querySelectorAll('.pred-checkbox').forEach(cb => {
             cb.addEventListener('change', (e) => {
                 const key = e.target.dataset.key;
+                const isChecked = e.target.checked;
                 document.querySelectorAll(`.pred-checkbox[data-key="${key}"]`).forEach(other => {
-                    other.checked = e.target.checked;
+                    other.checked = isChecked;
+                    const icon = other.nextElementSibling;
+                    if (icon && icon.classList.contains('prop-eye-icon')) {
+                        icon.className = `fas ${isChecked ? 'fa-eye' : 'fa-eye-slash'} prop-eye-icon`;
+                    }
+                    const listItem = other.closest('.settings-list-item');
+                    if (listItem) {
+                        listItem.classList.toggle('dimmed', !isChecked);
+                    }
                 });
             });
         });
@@ -819,7 +840,12 @@ async function init() {
                     label: getLocalizedText(langMap, currentLang).text || TEXT.noLabel,
                     selected: activeKeywords.includes(shortId)
                 };
-            }).sort((a, b) => a.label.localeCompare(b.label));
+            }).sort((a, b) => {
+                // Absteigend nach berechneter Frequenz (Occurrence) sortieren
+                const diff = (allKeywordCounts[b.value] || 0) - (allKeywordCounts[a.value] || 0);
+                if (diff !== 0) return diff;
+                return a.label.localeCompare(b.label);
+            });
 
             if (window.kwChoicesInstance) { 
                 window.kwChoicesInstance.destroy(); 
@@ -829,7 +855,7 @@ async function init() {
                 choices: choicesData,
                 removeItemButton: true,
                 searchResultLimit: 5,
-                renderChoiceLimit: -1,
+                renderChoiceLimit: 3,
                 placeholderValue: TEXT.searchPlaceholder,
                 itemSelectText: ''
             });

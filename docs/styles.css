@@ -38,6 +38,13 @@ html, body {
     height: 100%;
     box-sizing: border-box;
 }
+.hidden {
+    display: none !important;
+}
+.dimmed {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
 .info-panel {
     position: absolute;
     top: 10px;
@@ -53,14 +60,8 @@ html, body {
     pointer-events: none;
     z-index: 100;
 }
-.info-panel.hidden {
-    display: none;
-}
 .info-panel.fixed {
     pointer-events: auto;
-}
-#infoPanel.param-hidden {
-    display: none !important;
 }
 .systemmap-title {
     position: absolute;
@@ -98,15 +99,12 @@ html, body {
     justify-content: center;
     align-items: center;
 }
-#settings-overlay.hidden {
-    display: none;
-}
 #settings-panel {
     background: var(--color-background);
     padding: 20px 30px;
     border-radius: 8px;
     width: 95vw;
-    height: 80vh;
+    height: 95vh;
     max-width: 1600px;
     display: flex;
     flex-direction: column;
@@ -133,6 +131,7 @@ html, body {
     overflow-y: auto;
     border-right: 1px solid var(--color-grey-light);
     padding-right: 15px;
+    transition: opacity 0.3s ease;
 }
 .settings-class-column:last-child {
     border-right: none;
@@ -141,6 +140,20 @@ html, body {
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 1px solid var(--color-grey-light);
+}
+.class-title-section {
+    margin-bottom: 10px;
+}
+.class-title-section strong {
+    font-size: 16px;
+    display: block;
+}
+.class-description {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--color-font-dimmed);
+    margin-top: 4px;
+    line-height: 1.4;
 }
 .settings-subheading {
     margin-top: 10px;
@@ -153,7 +166,6 @@ html, body {
 .settings-section {
     margin-bottom: 25px;
 }
-
 .choices {
     margin-bottom: 0;
     overflow: visible;
@@ -183,17 +195,17 @@ html, body {
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
     background-color: var(--color-grey-light) !important;
 }
-
 .settings-list-item {
     display: flex;
     align-items: flex-start;
     margin-bottom: 12px;
     font-size: 14px;
+    transition: opacity 0.3s ease;
 }
 .settings-list-item-content {
     flex-grow: 1;
 }
-.settings-list-item-content label {
+.prop-label {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -202,9 +214,14 @@ html, body {
     margin-bottom: 4px;
     cursor: pointer;
 }
-.settings-list-item-content input {
-    margin-right: 0;
-    margin-left: 0;
+.pred-checkbox {
+    display: none;
+}
+.prop-eye-icon {
+    margin-right: 8px;
+    font-size: 14px;
+    color: var(--color-font-dimmed);
+    cursor: pointer;
     flex-shrink: 0;
 }
 .settings-list-item-content strong {
@@ -366,31 +383,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2px 8px;
     font-size: 11px;
 }
-
 .class-toggle-row {
     display: flex;
     align-items: flex-start;
     gap: 15px;
     font-size: 14px;
 }
-.class-toggle-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 6px;
-}
-.class-toggle-header {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-.class-toggle-header strong {
-    margin: 0;
-    font-size: 16px;
-}
-
 .tri-toggle {
     display: flex;
     position: relative;

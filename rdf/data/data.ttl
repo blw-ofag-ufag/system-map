@@ -226,7 +226,8 @@ systemmap:SK6JOIUV1UjrOYD7f a service:Service ;
         """
         Un servizio tecnico di SSO (Identity Provider) che fornisce la registrazione centralizzata degli utenti, l'autenticazione e il controllo degli accessi basato sui ruoli per Agate e i sistemi IT agricoli collegati.
         Consente un unico login per più applicazioni nel settore agricolo e garantisce che solo gli utenti autorizzati con i ruoli corretti possano accedere.
-        """@it .
+        """@it ;
+    schema:url <https://www.agate.ch/> .
 
 systemmap:SWrEh3riVEhEddyRr a service:Service ;
     schema:name "Nährstoffbilanzrechner"@de ;
@@ -1162,7 +1163,8 @@ systemmap:SGdyOoksCnRRZwi2Q a schema:SoftwareApplication ;
         "Agate is an online portal that allows access to various agricultural applications with just one login. It facilitates data exchange in the agricultural and food sector, thereby increasing user convenience. This centralized access point simplifies administrative processes for all stakeholders."@en,
         "Agate est un portail en ligne qui permet d'accéder à diverses applications agricoles avec un seul identifiant. Il facilite l'échange de données dans le secteur agricole et alimentaire, augmentant ainsi le confort des utilisateurs. Ce point d'accès centralisé simplifie les processus administratifs pour toutes les parties prenantes."@fr,
         "Agate è un portale online che consente l'accesso a diverse applicazioni agricole con un solo login. Facilita lo scambio di dati nel settore agricolo e alimentare, aumentando così la comodità per gli utenti. Questo punto di accesso centralizzato semplifica i processi amministrativi per tutte le parti interessate."@it ;
-    systemmap:operatedBy systemmap:SQbNLiw8h9MnSXuyo .
+    systemmap:operatedBy systemmap:SQbNLiw8h9MnSXuyo ;
+    schema:url <https://www.agate.ch/> .
 
 systemmap:SHEaRYIgvZ3xrDLo a schema:SoftwareApplication ;
     schema:name "Produkteregister Chemikalien"@de,
@@ -1605,6 +1607,7 @@ systemmap:SXcby9KwakDGhBdP a schema:SoftwareApplication ;
         """
         ACmobile è una soluzione mobile indipendente dalla piattaforma per la registrazione elettronica dei risultati delle ispezioni e delle misure.
         """@it ;
+    schema:url <https://www.acmobile.ch/> ;
     systemmap:developedBy zefix:231059 ;
     systemmap:operatedBy systemmap:SmI5VgF2mECWT74i2 .
 
@@ -2901,7 +2904,8 @@ systemmap:SLXw4VofhYbzXVNKC a dcat:Dataset ;
         "These data are essential for the calculation and payment of subsidies for cheesed milk as well as for feeding without silage by the Federal Office for Agriculture (BLW)."@en,
         "Ces données sont essentielles pour le calcul et le paiement des subventions pour le lait transformé en fromage ainsi que pour l'alimentation sans ensilage par l'Office fédéral de l'agriculture (OFAG)."@fr,
         "Questi dati sono essenziali per il calcolo e il pagamento dei sussidi per il latte trasformato in formaggio e per l'alimentazione senza insilato da parte dell'Ufficio federale dell'agricoltura (UFAG)."@it ;
-    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
+    systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP ;
+    schema:url <https://www.blw.admin.ch/> .
 
 systemmap:SMBGW7qHXQfR1VB9W a dcat:Dataset ;
     schema:name "Mineraldünger"@de ;
@@ -3948,7 +3952,8 @@ systemmap:SNbhMvt3Btta1U1d6 a systemmap:FederalOrganization ;
     systemmap:abbreviation "BFS"@de,
         "FSO"@en,
         "OFS"@fr,
-        "UST"@it .
+        "UST"@it ;
+    schema:url <https://www.bfs.admin.ch/> .
 
 systemmap:SQbNLiw8h9MnSXuyo a systemmap:FederalOrganization ;
     schema:name "Fachbereich Informatik und Digitalisierung"@de,

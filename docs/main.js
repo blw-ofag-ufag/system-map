@@ -738,7 +738,7 @@ async function init() {
                     <label for="${id}_full" title="${TEXT.stateFull}"><i class="fas fa-sitemap"></i></label>
 
                     <input type="radio" id="${id}_collapsed" name="${id}" value="collapsed" data-${dataKey}="${dataValue}" ${currentValue === 'collapsed' ? 'checked' : ''}>
-                    <label for="${id}_collapsed" title="${TEXT.stateCollapsed}"><i class="fas fa-layer-group"></i></label>
+                    <label for="${id}_collapsed" title="${TEXT.stateCollapsed}"><i class="fas fa-compress"></i></label>
 
                     <input type="radio" id="${id}_off" name="${id}" value="off" data-${dataKey}="${dataValue}" ${currentValue === 'off' ? 'checked' : ''}>
                     <label for="${id}_off" title="${TEXT.stateOff}"><i class="fas fa-eye-slash"></i></label>

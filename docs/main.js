@@ -205,7 +205,6 @@ async function init() {
             };
         });
 
-        // Calculate occurrence frequencies globally prior to filtering
         Object.values(rawNodes).forEach(n => {
             n.keywords.forEach(kw => {
                 const shortId = getKwId(kw.id);
@@ -450,8 +449,12 @@ async function init() {
         if (abbreviation) titleHtml += ` (${abbreviation})`;
 
         let html = `
+            <div class="info-panel-top-row">
+                <a href="${nodeData.id}" target="_blank" class="info-panel-uri"><code>${shortenIri(nodeData.id)}</code></a>
+                ${classChipHtml}
+            </div>
             <div class="info-panel-header">
-                <h4>${titleHtml} ${classChipHtml}</h4>
+                <h4>${titleHtml}</h4>
             </div>`;
             
         if (comment) html += `<p class="info-panel-comment"><small>${comment}</small></p>`;
@@ -490,7 +493,7 @@ async function init() {
         return html;
     };
 
-    const createEdgeDiagramHtml = (predicateIri) => {
+    const createRangeBadgeHtml = (predicateIri) => {
         const metadata = allEdgeMetadata[predicateIri];
         if (!metadata) return '';
 
@@ -504,18 +507,7 @@ async function init() {
             return `<span class="edge-diagram-icon" style="background-color: ${style.background}; border-color: ${style.border}; color: ${style.font.color};">${label || groupName}</span>`;
         };
 
-        const domainIcon = getIconHtml(metadata.domain);
-        const rangeIcon = getIconHtml(metadata.range);
-        const isDashed = APP_CONFIG.DASHED_PREDICATES.includes(predicateIri);
-        const arrowDashStyle = isDashed ? `stroke-dasharray="3 4"` : '';
-
-        const arrow = `
-            <svg width="30" height="14" viewBox="0 0 30 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
-                <path d="M4 7 L26 7" stroke="#333" stroke-width="1.5" ${arrowDashStyle}></path>
-                <path d="M21 3 L26 7 L21 11" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>`;
-
-        return `<div class="edge-diagram">${domainIcon} ${arrow} ${rangeIcon}</div>`;
+        return getIconHtml(metadata.range);
     };
 
     const getEdgeInfoHtml = (edgeId) => {
@@ -527,7 +519,7 @@ async function init() {
         let html = `
             <div class="edge-title-container">
                 <h4>${label}</h4>
-                ${createEdgeDiagramHtml(edgeData.iri)}
+                ${createRangeBadgeHtml(edgeData.iri)}
             </div>`;
         if (comment) html += `<p class="info-panel-comment"><small>${comment}</small></p>`;
         return html;
@@ -733,10 +725,13 @@ async function init() {
             const labelText = classData ? (getLocalizedText(classData.label, currentLang).text || TEXT.noLabel) : groupName;
             const classComment = classData ? (getLocalizedText(classData.comment, currentLang).text || '') : '';
 
+            const chipStyle = APP_CONFIG.GROUP_STYLES[groupName] || APP_CONFIG.GROUP_STYLES.Other;
+            const inlineStyle = `background-color: ${chipStyle.background}; border-color: ${chipStyle.border}; color: ${chipStyle.font.color};`;
+
             let colHtml = `
                 <div class="settings-class-header">
                     <div class="class-title-section">
-                        <strong>${labelText}</strong>
+                        <div class="settings-node-icon large-node-icon" style="${inlineStyle}">${labelText}</div>
                         ${classComment ? `<div class="class-description">${classComment}</div>` : ''}
                     </div>
                     <div class="class-toggle-row">
@@ -754,8 +749,7 @@ async function init() {
                     </div>
                 </div>
                 <div class="settings-section">
-                    <h3 class="settings-subheading">${TEXT.visibleRelationshipTypes || 'Properties'}</h3>
-                    <div class="settings-predicates-list">
+                <div class="settings-predicates-list">
             `;
 
             sortedPredicates.forEach(predData => {
@@ -769,14 +763,14 @@ async function init() {
                 if (isAgnostic || predData.domain === classIri) {
                     const isChecked = currentPreds.includes(key);
                     const predLabel = getLocalizedText(predData.label, currentLang).text || TEXT.noLabel;
-                    const edgeHtml = createEdgeDiagramHtml(predData.id);
+                    const edgeHtml = createRangeBadgeHtml(predData.id);
 
                     colHtml += `
                         <div class="settings-list-item ${isChecked ? '' : 'dimmed'}">
                             <div class="settings-list-item-content">
                                 <label class="prop-label">
                                     <input type="checkbox" class="pred-checkbox hidden" id="setting-pred-${groupName}-${key}" data-key="${key}" ${isChecked ? 'checked' : ''}>
-                                    <i class="fas ${isChecked ? 'fa-eye' : 'fa-eye-slash'} prop-eye-icon"></i>
+                                    <i class="fas fa-fw ${isChecked ? 'fa-eye' : 'fa-eye-slash'} prop-eye-icon"></i>
                                     <strong>${predLabel}</strong>
                                     ${edgeHtml}
                                 </label>
@@ -801,7 +795,6 @@ async function init() {
             gridContainer.appendChild(col);
         });
 
-        // Hierarchische Verblassung via Toggle
         document.querySelectorAll('.tri-toggle input[type="radio"]').forEach(radio => {
             radio.addEventListener('change', (e) => {
                 const groupName = e.target.dataset.group;
@@ -812,7 +805,6 @@ async function init() {
             });
         });
 
-        // Event listener für Property Sichtbarkeits-Toggle (Icon Switch)
         document.querySelectorAll('.pred-checkbox').forEach(cb => {
             cb.addEventListener('change', (e) => {
                 const key = e.target.dataset.key;
@@ -821,7 +813,7 @@ async function init() {
                     other.checked = isChecked;
                     const icon = other.nextElementSibling;
                     if (icon && icon.classList.contains('prop-eye-icon')) {
-                        icon.className = `fas ${isChecked ? 'fa-eye' : 'fa-eye-slash'} prop-eye-icon`;
+                        icon.className = `fas fa-fw ${isChecked ? 'fa-eye' : 'fa-eye-slash'} prop-eye-icon`;
                     }
                     const listItem = other.closest('.settings-list-item');
                     if (listItem) {
@@ -841,7 +833,6 @@ async function init() {
                     selected: activeKeywords.includes(shortId)
                 };
             }).sort((a, b) => {
-                // Absteigend nach berechneter Frequenz (Occurrence) sortieren
                 const diff = (allKeywordCounts[b.value] || 0) - (allKeywordCounts[a.value] || 0);
                 if (diff !== 0) return diff;
                 return a.label.localeCompare(b.label);

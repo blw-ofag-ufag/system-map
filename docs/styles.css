@@ -45,6 +45,9 @@ html, body {
     opacity: 0.4;
     transition: opacity 0.3s ease;
 }
+.dimmed .dimmed {
+    opacity: 1; /* Verhindert additives Verblassen von verschachtelten Elementen */
+}
 .info-panel {
     position: absolute;
     top: 10px;
@@ -62,6 +65,21 @@ html, body {
 }
 .info-panel.fixed {
     pointer-events: auto;
+}
+.info-panel-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2px;
+}
+.info-panel-uri {
+    color: var(--color-font-dimmed);
+    text-decoration: none;
+    font-size: 12px;
+}
+.info-panel-uri:hover {
+    text-decoration: underline;
+    color: var(--color-foreground);
 }
 .systemmap-title {
     position: absolute;
@@ -104,7 +122,7 @@ html, body {
     padding: 20px 30px;
     border-radius: 8px;
     width: 95vw;
-    height: 95vh;
+    height: 90vh;
     max-width: 1600px;
     display: flex;
     flex-direction: column;
@@ -144,10 +162,6 @@ html, body {
 .class-title-section {
     margin-bottom: 10px;
 }
-.class-title-section strong {
-    font-size: 16px;
-    display: block;
-}
 .class-description {
     font-size: 12px;
     font-weight: 300;
@@ -184,10 +198,10 @@ html, body {
     margin-left: 4px !important;
 }
 .choices__list--multiple .choices__item {
-    background-color: var(--color-highlight) !important;
-    border: 1px solid var(--color-highlight-border) !important;
+    background-color: var(--color-foreground) !important;
+    border: 1px solid var(--color-foreground) !important;
     border-radius: 4px !important;
-    color: var(--color-highlight-font) !important;
+    color: var(--color-background) !important;
     font-family: "Poppins", sans-serif;
     font-size: 12px;
     font-weight: 600;
@@ -220,12 +234,12 @@ html, body {
 .prop-eye-icon {
     margin-right: 8px;
     font-size: 14px;
-    color: var(--color-font-dimmed);
+    color: var(--color-font-normal);
     cursor: pointer;
     flex-shrink: 0;
 }
 .settings-list-item-content strong {
-    margin-right: 0;
+    margin-right: 6px;
     white-space: nowrap;
 }
 .settings-actions {
@@ -244,9 +258,13 @@ html, body {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 14px;
+    background-color: var(--color-grey-light);
+    color: var(--color-foreground);
+    transition: background-color 0.2s, color 0.2s;
 }
 .settings-actions button:hover {
-    background-color: var(--color-highlight);
+    background-color: var(--color-foreground);
+    color: var(--color-background);
 }
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0.8em;
@@ -307,21 +325,20 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 .info-panel-chip {
-    padding: 1px 5px;
-    border-radius: 3px;
-    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
     font-weight: 600;
     white-space: nowrap;
     flex-shrink: 0;
     border-width: 1px;
     border-style: solid;
-    margin-top: 10px;
-    margin-left: 5px;
 }
 #infoPanel h4 {
     font-size: 1.1em;
     font-weight: 600;
-    margin-top: 10px;
+    margin-top: 2px;
+    margin-bottom: 4px;
 }
 .info-panel-comment {
     margin-top: 10px;
@@ -368,6 +385,20 @@ h1, h2, h3, h4, h5, h6 {
     border-width: 1px;
     border-style: solid;
     white-space: nowrap;
+    margin-left: 6px;
+}
+.settings-node-icon {
+    border-width: 1px;
+    border-style: solid;
+    font-weight: 600;
+    white-space: nowrap;
+    border-radius: 4px;
+}
+.large-node-icon {
+    font-size: 14px;
+    padding: 4px 10px;
+    display: inline-block;
+    margin-bottom: 8px;
 }
 .keyword-container {
     margin-top: 15px;

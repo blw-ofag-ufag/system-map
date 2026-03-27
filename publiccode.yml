@@ -1,0 +1,47 @@
+publiccodeYmlVersion: 0.5.0
+name: DigiAgriFoodCH System Map
+url: https://github.com/blw-ofag-ufag/system-map
+landingURL: https://blw-ofag-ufag.github.io/system-map/
+softwareVersion: 1.0.0
+platforms:
+  - web
+categories:
+  - data-visualization
+  - knowledge-management
+fundedBy:
+  - name: Federal Office for Agriculture (FOAG)
+    uri: https://ld.admin.ch/office/VI.1.5
+usedBy:
+  - Federal Office for Agriculture (FOAG)
+developmentStatus: concept
+softwareType: standalone/other
+organisation:
+  uri: https://ld.admin.ch/office/VI.1.5
+  name: Federal Office for Agriculture (FOAG)
+description:
+  en:
+    localisedName: DigiAgriFoodCH System Map
+    shortDescription: A graph visualization of IT systems, their data and
+      organizations of the Swiss agri-food sector
+    longDescription: The DigiAgriFoodCH System Map is a small knowledge graph
+      designed to catalog and visualize the interconnected IT systems, data
+      assets, and operational organizations within the Swiss agri-food sector.
+      The software leverages semantic web technologies, specifically Resource
+      Description Framework (RDF) serialized in Turtle, to construct a formal
+      ontology as well as a data layer. It also includes a graphical user
+      interface which renders the small knowledge graph using the vis.js
+      library.
+    features:
+      - data-science
+      - remote-sensing
+legal:
+  license: CC-BY-4.0
+maintenance:
+  type: none
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - de
+    - fr
+    - it
+    - en

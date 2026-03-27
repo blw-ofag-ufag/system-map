@@ -7,7 +7,6 @@ platforms:
   - web
 categories:
   - data-visualization
-  - interactivity
   - knowledge-management
 fundedBy:
   - name: Federal Office for Agriculture (FOAG)
@@ -22,17 +21,23 @@ organisation:
 description:
   en:
     localisedName: DigiAgriFoodCH System Map
-    shortDescription: A graph visualization of IT systems, their data and organizations of the Swiss agri-food sector
-    longDescription: The DigiAgriFoodCH System Map is a small knowledge graph designed to catalog and visualize the interconnected IT systems, data assets, and operational organizations within the Swiss agri-food sector.
-      The software leverages semantic web technologies, specifically Resource Description Framework (RDF) serialized in Turtle, to construct a formal ontology as well as a data layer.
-      It also includes a graphical user interface which renders the small knowledge graph using the vis.js library.
+    shortDescription: A graph visualization of IT systems, their data and
+      organizations of the Swiss agri-food sector
+    longDescription: The DigiAgriFoodCH System Map is a small knowledge graph
+      designed to catalog and visualize the interconnected IT systems, data
+      assets, and operational organizations within the Swiss agri-food sector.
+      The software leverages semantic web technologies, specifically Resource
+      Description Framework (RDF) serialized in Turtle, to construct a formal
+      ontology as well as a data layer. It also includes a graphical user
+      interface which renders the small knowledge graph using the vis.js
+      library.
     features:
       - data-science
       - remote-sensing
 legal:
   license: CC-BY-4.0
 maintenance:
-  type: internal
+  type: none
 localisation:
   localisationReady: true
   availableLanguages:

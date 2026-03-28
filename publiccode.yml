@@ -32,8 +32,10 @@ description:
       interface which renders the small knowledge graph using the vis.js
       library.
     features:
-      - data-science
-      - remote-sensing
+      - interactivity
+      - data-visualization
+      - knowledge-graph
+      - ontology
 legal:
   license: CC-BY-4.0
 maintenance:

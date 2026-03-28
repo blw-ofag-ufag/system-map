@@ -39,8 +39,17 @@ description:
       - Linked Data
   de:
     localisedName: DigiAgriFoodCH Systemlandkarte
-    shortDescription: Eine Graphen-Visualisierung von IT-Systemen, deren Daten und Organisationen des Schweizer Agrar- und Ernährungssektors
-    longDescription: Die DigiAgriFoodCH System Map ist ein kleiner Wissensgraph, der entworfen wurde, um die vernetzten IT-Systeme, Datenbestände und operativen Organisationen innerhalb des Schweizer Agrar- und Ernährungssektors zu katalogisieren und zu visualisieren. Die Software nutzt Semantic-Web-Technologien, insbesondere das in Turtle serialisierte Resource Description Framework (RDF), um eine formale Ontologie sowie eine Datenschicht aufzubauen. Sie enthält ausserdem eine grafische Benutzeroberfläche, die den kleinen Wissensgraphen mithilfe der vis.js-Bibliothek rendert.
+    shortDescription: Eine Graphen-Visualisierung von IT-Systemen, deren Daten und
+      Organisationen des Schweizer Agrar- und Ernährungssektors
+    longDescription: Die DigiAgriFoodCH System Map ist ein kleiner Wissensgraph, der
+      entworfen wurde, um die vernetzten IT-Systeme, Datenbestände und
+      operativen Organisationen innerhalb des Schweizer Agrar- und
+      Ernährungssektors zu katalogisieren und zu visualisieren. Die Software
+      nutzt Semantic-Web-Technologien, insbesondere das in Turtle serialisierte
+      Resource Description Framework (RDF), um eine formale Ontologie sowie eine
+      Datenschicht aufzubauen. Sie enthält ausserdem eine grafische
+      Benutzeroberfläche, die den kleinen Wissensgraphen mithilfe der
+      vis.js-Bibliothek rendert.
     features:
       - Interaktivität
       - Wissensgraph
@@ -49,8 +58,18 @@ description:
       - Linked Data
   fr:
     localisedName: Carte du système DigiAgriFoodCH
-    shortDescription: Une visualisation sous forme de graphe des systèmes informatiques, de leurs données et des organisations du secteur agroalimentaire suisse
-    longDescription: La DigiAgriFoodCH System Map est un petit graphe de connaissances conçu pour cataloguer et visualiser les systèmes informatiques, les actifs de données et les organisations opérationnelles interconnectés au sein du secteur agroalimentare suisse. Le logiciel s'appuie sur les technologies du web sémantique, plus précisément le Resource Description Framework (RDF) sérialisé en Turtle, pour construire une ontologie formelle ainsi qu'une couche de données. Il comprend également une interface utilisateur graphique qui génère le rendu de ce petit graphe de connaissances à l'aide de la bibliothèque vis.js.
+    shortDescription: Une visualisation sous forme de graphe des systèmes
+      informatiques, de leurs données et des organisations du secteur
+      agroalimentaire suisse
+    longDescription: La DigiAgriFoodCH System Map est un petit graphe de
+      connaissances conçu pour cataloguer et visualiser les systèmes
+      informatiques, les actifs de données et les organisations opérationnelles
+      interconnectés au sein du secteur agroalimentare suisse. Le logiciel
+      s'appuie sur les technologies du web sémantique, plus précisément le
+      Resource Description Framework (RDF) sérialisé en Turtle, pour construire
+      une ontologie formelle ainsi qu'une couche de données. Il comprend
+      également une interface utilisateur graphique qui génère le rendu de ce
+      petit graphe de connaissances à l'aide de la bibliothèque vis.js.
     features:
       - Interactivité
       - Graphe de connaissances
@@ -59,8 +78,16 @@ description:
       - Données liées
   it:
     localisedName: Mappa del sistema DigiAgriFoodCH
-    shortDescription: Una visualizzazione a grafo dei sistemi informatici, dei loro dati e delle organizzazioni del settore agroalimentare svizzero
-    longDescription: La DigiAgriFoodCH System Map è un piccolo knowledge graph progettato per catalogare e visualizzare i sistemi informatici interconnessi, gli asset di dati e le organizzazioni operative all'interno del settore agroalimentare svizzero. Il software sfrutta le tecnologie del web semantico, in particolare il Resource Description Framework (RDF) serializzato in Turtle, per costruire un'ontologia formale e un livello di dati. Include inoltre un'interfaccia utente grafica che esegue il rendering del piccolo knowledge graph utilizzando la libreria vis.js.
+    shortDescription: Una visualizzazione a grafo dei sistemi informatici, dei loro
+      dati e delle organizzazioni del settore agroalimentare svizzero
+    longDescription: La DigiAgriFoodCH System Map è un piccolo knowledge graph
+      progettato per catalogare e visualizzare i sistemi informatici
+      interconnessi, gli asset di dati e le organizzazioni operative all'interno
+      del settore agroalimentare svizzero. Il software sfrutta le tecnologie del
+      web semantico, in particolare il Resource Description Framework (RDF)
+      serializzato in Turtle, per costruire un'ontologia formale e un livello di
+      dati. Include inoltre un'interfaccia utente grafica che esegue il
+      rendering del piccolo knowledge graph utilizzando la libreria vis.js.
     features:
       - Interattività
       - Knowledge graph

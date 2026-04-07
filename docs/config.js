@@ -8,7 +8,7 @@ const APP_CONFIG = {
 
     UI_TEXT: {
         en: {
-            appTitle: "FOAG System Map",
+            appTitle: "DigiAgriFoodCH System Map",
             settings: "Settings",
             minDegree: "Minimum Node Connections",
             visibleNodeClasses: "Class visibility",
@@ -32,7 +32,7 @@ const APP_CONFIG = {
             legalStatus: "Legal Status"
         },
         de: {
-            appTitle: "Systemkarte BLW",
+            appTitle: "DigiAgriFoodCH Systemlandkarte",
             settings: "Einstellungen",
             minDegree: "Minimale Anzahl Verbindungen",
             visibleNodeClasses: "Sichtbarkeit der Klassen",
@@ -56,7 +56,7 @@ const APP_CONFIG = {
             legalStatus: "Rechtsform"
         },
         fr: {
-            appTitle: "Carte des systèmes OFAG",
+            appTitle: "DigiAgriFoodCH Carte du Système",
             settings: "Paramètres",
             minDegree: "Nombre de connexions de nœuds minimum",
             visibleNodeClasses: "Visibilité des classes",
@@ -80,7 +80,7 @@ const APP_CONFIG = {
             legalStatus: "Forme juridique"
         },
         it: {
-            appTitle: "Mappa dei sistemi UFAG",
+            appTitle: "DigiAgriFoodCH Mappa del Sistema",
             settings: "Impostazioni",
             minDegree: "Numero minimo di connessioni dei nodi",
             visibleNodeClasses: "Visibilità delle classi",

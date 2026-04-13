@@ -1,0 +1,45 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
+@prefix termdat: <https://register.ld.admin.ch/termdat/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://agriculture.ld.admin.ch/system-map/shapes/> .
+
+shape:SoftwareApplications
+    a sh:NodeShape ;
+
+    sh:targetClass schema:SoftwareApplication ;
+    # software name
+    sh:property [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:message "An IT System must have at least one name"
+    ] ;
+
+    # mandatory relationships
+    sh:property [
+        sh:path systemmap:operatedBy ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class schema:Organisation ;
+        sh:message "An IT System must be at least operated by one organisation"
+    ] ;
+
+    # optional relationships
+    sh:property [
+        sh:path systemmap:contains ;
+        sh:nodeKind sh:IRI ;
+        sh:class dcat:Dataset ;
+    ];
+    sh:property [
+        sh:path schema:url ;
+        sh:nodeKind sh:IRI ; 
+        sh:message "If provided, the URL must be a properly formatted web link (IRI)." ;
+    ] ;

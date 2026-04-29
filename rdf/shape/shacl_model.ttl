@@ -105,4 +105,21 @@ shape:Organization a sh:NodeShape ;
         sh:minCount 1 ;
         sh:datatype rdf:langString ;
         sh:message "An organization must have at least one name (language-tagged)"
-    ] .
+    ] 
+    
+    sh:property [
+        sh:path schema:description ;
+        sh:datatype rdf:langString ;
+    ] ;
+    
+    sh:property [
+        sh:path systemmap:abbreviation ;
+        sh:datatype rdf:langString ;
+    ] ;
+
+    sh:property [
+        sh:path schema:url ;
+        sh:nodeKind sh:IRI ; 
+        sh:message "If provided, the URL must be a valid IRI." 
+    ] 
+    .

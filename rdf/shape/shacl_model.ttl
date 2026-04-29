@@ -83,4 +83,16 @@ shape:SoftwareApplication a sh:NodeShape ;
         sh:path systemmap:hasLegalBasis ;
         sh:nodeKind sh:IRI ;
         sh:class schema:Legislation ;
+    ] ;
+    
+    sh:property [
+        sh:path systemmap:developedBy ;
+        sh:nodeKind sh:IRI ;
+        sh:class schema:Organization ;
+    ] ;
+    
+    sh:property [
+        sh:path service:provides ;
+        sh:nodeKind sh:IRI ;
+        sh:class service:Service ;
     ] .

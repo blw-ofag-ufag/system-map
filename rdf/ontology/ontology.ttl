@@ -438,7 +438,7 @@ systemmap:abbreviation a owl:DatatypeProperty ;
         Un'abbreviazione viene specificata solo se non è già il nome preferito.
         Esempio: La cooperativa Fenaco (fédération nationale des coopératives agricoles) è comunemente chiamata "Fenaco", rendendo superflua un'ulteriore abbreviazione.
         """@it ;
-    rdfs:range xsd:string .
+    rdfs:range rdf:langString .
 
 service:consumedBy a owl:ObjectProperty ;
     schema:name "wird verwendet von"@de,

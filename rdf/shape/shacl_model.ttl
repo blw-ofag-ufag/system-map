@@ -96,3 +96,13 @@ shape:SoftwareApplication a sh:NodeShape ;
         sh:nodeKind sh:IRI ;
         sh:class service:Service ;
     ] .
+
+shape:Organization a sh:NodeShape ;
+    sh:targetClass schema:Organisation ;
+
+    sh:property [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:message "An organization must have at least one name (language-tagged)"
+    ] .

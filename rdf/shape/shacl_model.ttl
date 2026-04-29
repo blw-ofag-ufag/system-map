@@ -5,16 +5,17 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix schema: <http://schema.org/> .
+@prefix shape: <https://agriculture.ld.admin.ch/system-map/shape/> .
+@prefix service: <http://purl.org/ontology/service#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix systemmap: <https://agriculture.ld.admin.ch/system-map/> .
 @prefix termdat: <https://register.ld.admin.ch/termdat/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <https://agriculture.ld.admin.ch/system-map/shapes/> .
 
-shape:SoftwareApplications
-    a sh:NodeShape ;
+shape:SoftwareApplication a sh:NodeShape ;
 
-    sh:targetClass schema:SoftwareApplication ;
+    sh:targetClass schema:SoftwareApplication, systemmap:FMIS ;
     # software name
     sh:property [
         sh:path schema:name ;
@@ -23,23 +24,56 @@ shape:SoftwareApplications
         sh:message "An IT System must have at least one name"
     ] ;
 
+    # software description
+
     # mandatory relationships
-    sh:property [
-        sh:path systemmap:operatedBy ;
-        sh:minCount 1 ;
-        sh:nodeKind sh:IRI ;
-        sh:class schema:Organisation ;
-        sh:message "An IT System must be at least operated by one organisation"
-    ] ;
+    sh:or (
+        # SoftwareApplication has an operator
+        [
+            sh:property [
+                sh:path systemmap:operatedBy ;
+                sh:minCount 1 ;
+                sh:nodeKind sh:IRI ;
+                sh:or (
+                    [ sh:class schema:Organization ]
+                    [ sh:class systemmap:FederalOrganization ]
+                    [ sh:class systemmap:CantonalOrganization ]
+                    [ sh:class systemmap:PrivateOrganization ]
+                    [ sh:class systemmap:CantonalAgriculturalOffice ]
+                    [ sh:class systemmap:CantonalVeterinaryService ]
+                    [ sh:class systemmap:CantonalAgriculturalAdvisor ]
+                ) ;
+            ]
+        ]
+        # SoftwareApplication is part of another system
+        [
+            sh:property [
+                sh:path dcterms:isPartOf ;
+                sh:minCount 1 ;
+                sh:nodeKind sh:IRI ;
+                sh:class schema:SoftwareApplication ;
+            ]
+        ]
+    ) ;
+    sh:message "An IT System must EITHER be operated by an organization OR be part of another system, but not both." ;
 
     # optional relationships
     sh:property [
         sh:path systemmap:contains ;
         sh:nodeKind sh:IRI ;
         sh:class dcat:Dataset ;
+        sh:message "If provided, an IT system must link to a valid dcat:Dataset entity."
     ];
     sh:property [
         sh:path schema:url ;
         sh:nodeKind sh:IRI ; 
         sh:message "If provided, the URL must be a properly formatted web link (IRI)." ;
     ] ;
+
+    sh:property [
+        sh:path service:consumes ;
+        sh:nodeKind sh:IRI ;
+        sh:class service:Service ;
+        sh:message "If an IT system consumes a service, it must link to a valid service:Service entity."
+
+    ] .

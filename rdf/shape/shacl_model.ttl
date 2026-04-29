@@ -25,6 +25,11 @@ shape:SoftwareApplication a sh:NodeShape ;
     ] ;
 
     # software description
+    sh:property [
+        sh:path schema:description ;
+        sh:datatype rdf:langString ;
+        sh:message "If provided, the description must be a language-tagged string."
+    ]
 
     # mandatory relationships
     sh:or (

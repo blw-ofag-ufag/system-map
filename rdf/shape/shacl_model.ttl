@@ -55,7 +55,7 @@ shape:SoftwareApplication a sh:NodeShape ;
             ]
         ]
     ) ;
-    sh:message "An IT System must EITHER be operated by an organization OR be part of another system, but not both." ;
+    sh:message "An IT System must EITHER be operated by an organization OR be part of another system" ;
 
     # optional relationships
     sh:property [

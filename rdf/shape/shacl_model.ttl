@@ -24,13 +24,6 @@ shape:SoftwareApplication a sh:NodeShape ;
         sh:message "An IT System must have at least one name"
     ] ;
 
-    # software description
-    sh:property [
-        sh:path schema:description ;
-        sh:datatype rdf:langString ;
-        sh:message "If provided, the description must be a language-tagged string." 
-    ] ;
-
     # mandatory relationships
     sh:or (
         # SoftwareApplication has an operator
@@ -73,4 +66,21 @@ shape:SoftwareApplication a sh:NodeShape ;
         sh:class service:Service ;
         sh:message "If an IT system consumes a service, it must link to a valid service:Service entity."
 
+    ] ;
+
+    sh:property [
+        sh:path schema:description ;
+        sh:datatype rdf:langString ;
+        sh:message "If provided, the description must be a language-tagged string." 
+    ] ;
+    
+    sh:property [
+        sh:path systemmap:abbreviation ;
+        sh:datatype rdf:langString ;
+        sh:message "If provided, the abbreviation must be a language-tagged string." 
+    ] ;
+    sh:property [
+        sh:path systemmap:hasLegalBasis ;
+        sh:nodeKind sh:IRI ;
+        sh:class schema:Legislation ;
     ] .

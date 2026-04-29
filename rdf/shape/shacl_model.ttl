@@ -28,8 +28,8 @@ shape:SoftwareApplication a sh:NodeShape ;
     sh:property [
         sh:path schema:description ;
         sh:datatype rdf:langString ;
-        sh:message "If provided, the description must be a language-tagged string."
-    ]
+        sh:message "If provided, the description must be a language-tagged string." 
+    ] ;
 
     # mandatory relationships
     sh:or (
@@ -39,15 +39,7 @@ shape:SoftwareApplication a sh:NodeShape ;
                 sh:path systemmap:operatedBy ;
                 sh:minCount 1 ;
                 sh:nodeKind sh:IRI ;
-                sh:or (
-                    [ sh:class schema:Organization ]
-                    [ sh:class systemmap:FederalOrganization ]
-                    [ sh:class systemmap:CantonalOrganization ]
-                    [ sh:class systemmap:PrivateOrganization ]
-                    [ sh:class systemmap:CantonalAgriculturalOffice ]
-                    [ sh:class systemmap:CantonalVeterinaryService ]
-                    [ sh:class systemmap:CantonalAgriculturalAdvisor ]
-                ) ;
+                sh:class schema:Organization ;
             ]
         ]
         # SoftwareApplication is part of another system

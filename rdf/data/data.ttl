@@ -981,7 +981,7 @@ systemmap:S9SbhGAwWjtvcRIZ a schema:SoftwareApplication ;
         "GIS-BLW"@en,
         "GIS-BLW"@fr,
         "GIS-BLW"@it ;
-    systemmap:hasLegalBasis LwG:art_165_e, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_10>, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_11>, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_12>, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_13> ;
+    systemmap:hasLegalBasis LwG:art_165_e ;
     systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
 
 systemmap:S9VcxLSoIIwQjlZQ2 a schema:SoftwareApplication ;
@@ -2669,7 +2669,7 @@ systemmap:S1u8DDdB8YZ67H5l5 a dcat:Dataset ;
         """@de ;
     schema:keywords keyword:agriculturalcontrol ;
     systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe ;
-    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_6>, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_7>, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_8>, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_9> .
+    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_6> .
 
 systemmap:S1u8FFdB8YZ67H5X6 a dcat:Dataset ;
     schema:name "Kontrollinhalte"@de ;

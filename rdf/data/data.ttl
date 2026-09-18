@@ -1097,6 +1097,7 @@ systemmap:S9SbhGAwWjtvcRIZ a schema:SoftwareApplication ;
         "GIS-BLW"@en,
         "GIS-BLW"@fr,
         "GIS-BLW"@it ;
+    systemmap:contains systemmap:S6yMKG5iKUVwIobcj ;
     systemmap:hasLegalBasis LwG:art_165_e ;
     systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
 
@@ -2923,7 +2924,6 @@ systemmap:S6yMKG5iKUVwIobcj a dcat:Dataset ;
         <https://www.blw.admin.ch/dam/de/sd-web/D2Gml463K0Pw/Leitfaden_Geodatenaustausch_Landwirtschaft_v2.0_DE.pdf>,
         <https://www.blw.admin.ch/dam/de/sd-web/iXtOlVQkhfsJ/Modell_Landwirtschaftliche_Kulturfl%C3%A4chen_ID153_Bezugsjahr_2026.pdf>,
         <https://www.geodienste.ch/> ;
-    systemmap:containedIn systemmap:S9SbhGAwWjtvcRIZ ;
     systemmap:hasLegalBasis LwG:art_165_e,
         LwG:art_178,
         <https://www.fedlex.admin.ch/eli/cc/1999/13>,

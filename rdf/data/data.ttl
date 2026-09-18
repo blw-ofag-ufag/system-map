@@ -379,6 +379,27 @@ LwG:art_27 a schema:Legislation ;
 <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_6> a schema:Legislation ;
     schema:name "Art. 6 ISLV"@de .
 
+<https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_7> a schema:Legislation ;
+    schema:name "Art. 7 ISLV"@de .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_8> a schema:Legislation ;
+    schema:name "Art. 8 ISLV"@de .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_9> a schema:Legislation ;
+    schema:name "Art. 9 ISLV"@de .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_10> a schema:Legislation ;
+    schema:name "Art. 10 ISLV"@de .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_11> a schema:Legislation ;
+    schema:name "Art. 11 ISLV"@de .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_12> a schema:Legislation ;
+    schema:name "Art. 12 ISLV"@de .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_13> a schema:Legislation ;
+    schema:name "Art. 13 ISLV"@de .
+
 <https://www.fedlex.admin.ch/eli/cc/2016/565> a schema:Legislation ;
     schema:name "Verordnung des BLW über die Festlegung von Perioden und Fristen sowie die Freigabe von Zollkontingentsteilmengen für die Einfuhr von frischem Gemüse und frischem Obst (VEAGOG-Freigabeverordnung)"@de .
 

@@ -186,11 +186,13 @@ zefix:804864 a schema:Organization ;
     schema:url <https://qualitasag.ch/> .
 
 zefix:984853 a schema:Organization ;
-    schema:name "Amacker&Partner Informatik AG"@de .
+    schema:name "Amacker&Partner Informatik AG"@de ;
+    schema:url <https://www.amacker.ch/> .
 
 zefix:430315 a schema:Organization ;
     schema:name "Diana Software AG"@de ;
-    schema:description "Das Team der Diana Software AG setzt sich unter anderem aus ehemaligen tiermedizinischen Praxisassistentinnen sowie erfahrenen Top-Entwicklern zusammen. Diana Software AG wurde 1998 gegründet und bietet Software für die Tiermedizin an."@de .
+    schema:description "Das Team der Diana Software AG setzt sich unter anderem aus ehemaligen tiermedizinischen Praxisassistentinnen sowie erfahrenen Top-Entwicklern zusammen. Diana Software AG wurde 1998 gegründet und bietet Software für die Tiermedizin an."@de ;
+    schema:url <https://www.diana.ch/> .
 
 systemmap:SCN2FR1ecbZOlXssf a schema:Organization ;
     schema:name "Vetera GmbH"@de ;
@@ -199,11 +201,13 @@ systemmap:SCN2FR1ecbZOlXssf a schema:Organization ;
 
 zefix:278206 a schema:Organization ;
     schema:name "IDEXX"@de ;
-    schema:description "IDEXX ist ein weltweit tätiges Unternehmen und bietet Produkte und Dienstleistungen im Bereich Diagnostik und Software für Nutz- und Heimtiere. IDEXX Diavet AG ist die Schweizer Vertretung mit Sitz in Bäch und bietet Dienstleistungen für Tierärzt:innnen, zum Beispiel Diagnostik an klinischen Proben."@de .
+    schema:description "IDEXX ist ein weltweit tätiges Unternehmen und bietet Produkte und Dienstleistungen im Bereich Diagnostik und Software für Nutz- und Heimtiere. IDEXX Diavet AG ist die Schweizer Vertretung mit Sitz in Bäch und bietet Dienstleistungen für Tierärzt:innnen, zum Beispiel Diagnostik an klinischen Proben."@de ;
+    schema:url <https://www.idexx.ch/> .
 
 systemmap:S713c8cc22340cd0 a schema:Organization ;
     schema:name "Vetsuisse Bern"@de ;
-    schema:parentOrganization systemmap:S9oFBawOIYUs3mJqf .
+    schema:parentOrganization systemmap:S9oFBawOIYUs3mJqf ;
+    schema:url <https://www.vetsuisse.unibe.ch/> .
 
 systemmap:SqbzqGjI3ws0stDBH a schema:Organization ;
     schema:name "Universität Zürich"@de ;
@@ -213,15 +217,18 @@ systemmap:SqbzqGjI3ws0stDBH a schema:Organization ;
 systemmap:S9oFBawOIYUs3mJqf a schema:Organization ;
     schema:name "Vetsuisse-Fakultät"@de ;
     schema:description "Die Vetsuisse-Fakultät ist mit ihren beiden Standorten Bern und Zürich die akkreditierte Ausbildungsstelle für Veterinärmedizin in der gesamten Schweiz"@de ;
-    schema:parentOrganization systemmap:SqbzqGjI3ws0stDBH, systemmap:S6VoEiipMp2iFhpvi .
+    schema:parentOrganization systemmap:SqbzqGjI3ws0stDBH, systemmap:S6VoEiipMp2iFhpvi ;
+    schema:url <https://vetsuisse.ch/> .
 
 systemmap:S6VoEiipMp2iFhpvi a schema:Organization ;
     schema:name "Universität Bern"@de ;
-    systemmap:abbreviation "UniBE"@de .
+    systemmap:abbreviation "UniBE"@de ;
+    schema:url <https://www.unibe.ch/> .
 
 systemmap:Sd9cbfdc59776e2b a schema:Organization ;
     schema:name "Vetsuisse Zürich"@de ;
-    schema:parentOrganization systemmap:S9oFBawOIYUs3mJqf .
+    schema:parentOrganization systemmap:S9oFBawOIYUs3mJqf ;
+    schema:url <https://www.vet.uzh.ch/> .
 
 zefix:414877 a schema:Organization ;
     schema:name "SUISAG"@de ;
@@ -237,16 +244,19 @@ systemmap:S9ef677e7b565bf9 a schema:Organization ;
     schema:name "Fachstelle Animal Health Info System"@de ;
     schema:description "Die Fachstelle AHIS ist primär für den Betrieb von \"Pig Health Info System\" und \"Catle Health Info System\" zuständig. Dies beinhaltet idie Betreuung  und  Unterstützung der Nutzer:innen, aber auch das Testen der Neuentwicklungen und die Planung derer Veröffentlichung . Ausserdem ist die Fachstelle für die Betreuung und Administration der Programme PathoPig und ZoE-BTA zuständig. Organisatorisch ist die Fachstelle Nutztiergesundheit Schweiz mit Sitz in Zollikofen angegliedert."@de ;
     systemmap:abbreviation "AHIS"@en ;
-    schema:parentOrganization zefix:1457969 .
+    schema:parentOrganization zefix:1457969 ;
+    schema:url <https://www.nutztiergesundheit-schweiz.ch/ahis/> .
 
 zefix:321790 a schema:Organization ;
     schema:name "UFA AG"@de ;
     schema:description "Die UFA AG ist ein Schweizer Unternehmen für Tierernährung. Sie bietet neben Futtermitteln,  Mineralsalzen und Spezialitäten auch Dienstleistungen in  Fütterungs- und Managementfragen an. Die UFA AG hat regionale Beratungsdienste in Puidoux, Lyssach, Sursee und Oberbüren sowie  dezentrale Mischfutterwerke und ist damit schweizweit vertreten."@de ;
-    systemmap:ownedBy zefix:328631 .
+    systemmap:ownedBy zefix:328631 ;
+    schema:url <https://www.ufa.ch/> .
 
 zefix:616032 a schema:Organization ;
     schema:name "Lely"@de ;
-    schema:description "Lely Schweiz bietet automatische Melk-, Fütterungs- und Entmistungslösungen im Nutztierbereich an. Von verschiedenen Schweizer Standorten aus werden alle LELY-Lösungen – inklusive Beratung, Planung, Montage, Service und Managementbetreuung - anbeboten.  Lely ist ein internationales Familienunternehmen im Agrarsektor mit Hauptsitz in den Niederlanden und besteht seit 1948."@de .
+    schema:description "Lely Schweiz bietet automatische Melk-, Fütterungs- und Entmistungslösungen im Nutztierbereich an. Von verschiedenen Schweizer Standorten aus werden alle LELY-Lösungen – inklusive Beratung, Planung, Montage, Service und Managementbetreuung - anbeboten.  Lely ist ein internationales Familienunternehmen im Agrarsektor mit Hauptsitz in den Niederlanden und besteht seit 1948."@de ;
+    schema:url <https://www.lely.com/> .
 
 zefix:304729 a systemmap:PrivateOrganization ;
     schema:name "DeLaval"@de ;
@@ -254,11 +264,13 @@ zefix:304729 a systemmap:PrivateOrganization ;
 
 zefix:106474 a schema:Organization ;
     schema:name "Fullwood"@de ;
-    schema:description "Fullwood JOZ bietet flexible, intelligente Melklösungen für Kühe an. Das Unternehmen enstand 2022 aus der Übernahme des britischen Melkmaschinenherstellers Fullwood Ltd durch die niederländische Firma JOZ ,spezialisert auf Stallreinigung, und hat seinen Hauptsitz in Middenmeer, Niederlande."@de .
+    schema:description "Fullwood JOZ bietet flexible, intelligente Melklösungen für Kühe an. Das Unternehmen enstand 2022 aus der Übernahme des britischen Melkmaschinenherstellers Fullwood Ltd durch die niederländische Firma JOZ ,spezialisert auf Stallreinigung, und hat seinen Hauptsitz in Middenmeer, Niederlande."@de ;
+    schema:url <https://fullwood.com/> .
 
 systemmap:S7c2f7f8f6ca9c70 a schema:Organization ;
     schema:name "BouMatic Company, U.S."@de ;
-    schema:description "BouMatic ist ein US-amrikanisches Unternehmen im Beeich der Melktechnologie. Es wurde 1938 in Wisconsin gegründet, international tätig und hat sein Portfolio unter anderem um Fütterungs- und Reinigungssysteme erweitert. Der Hauptsitz ist in Madison, Wisconsin."@de .
+    schema:description "BouMatic ist ein US-amrikanisches Unternehmen im Beeich der Melktechnologie. Es wurde 1938 in Wisconsin gegründet, international tätig und hat sein Portfolio unter anderem um Fütterungs- und Reinigungssysteme erweitert. Der Hauptsitz ist in Madison, Wisconsin."@de ;
+    schema:url <https://www.boumatic.com/> .
 
 zefix:226184 a systemmap:PrivateOrganization ;
     schema:name "Braunvieh Schweiz"@de ;
@@ -271,49 +283,60 @@ zefix:165954 schema:memberOf zefix:417008 .
 zefix:769392 a schema:Organization ;
     schema:name "Mutterkuh Schweiz"@de ;
     schema:memberOf zefix:417008 ;
-    schema:description "Mutterkuh Schweiz ist der Verein der Mutterkuh­haltenden und Fleisch­rinder­züchtenden der Schweiz. Er steht allen Mutterkuhhaltenden und interessierten Personen offen."@de .
+    schema:description "Mutterkuh Schweiz ist der Verein der Mutterkuh­haltenden und Fleisch­rinder­züchtenden der Schweiz. Er steht allen Mutterkuhhaltenden und interessierten Personen offen."@de ;
+    schema:url <https://www.mutterkuh.ch/> .
 
 zefix:1393629 a schema:Organization ;
     schema:name "FarmConsult GmbH"@de ;
-    schema:description "FarmConsult bietet tierärztlichen Service mit Schwerpunkt umfassender Bestandsbetreuung und -beratung primär für Rindviehbestände an. FarmConsult hat seinen Sitz in Delémont."@de .
+    schema:description "FarmConsult bietet tierärztlichen Service mit Schwerpunkt umfassender Bestandsbetreuung und -beratung primär für Rindviehbestände an. FarmConsult hat seinen Sitz in Delémont."@de ;
+    schema:url <https://farmconsult.ch/> .
 
 systemmap:Sa0c51880ac95ed6 a schema:Organization ;
     schema:name "DSAHR"@de ;
-    schema:description "Das DSAHR Team umfasst Tierärzt:innen, IT Entwickler:innen und ein Customer Support Team und entwickelt und vertreibt IT-Lösungen für das Tiergesundheitsmanagement und Bestandsbetreuung mit Scherpunkt Rindvieh. DSAHR hat sich aus einem von der Association des médecins vétérinaires du Québec (AMVPQ) und der Université de Montréal’s Faculty of Veterinary Medicine inititierten Forschungsprojekt entwickelt (ASTLQ) und besteht seit 1994. Der Hauptsitz ist in Kanada."@de .
+    schema:description "Das DSAHR Team umfasst Tierärzt:innen, IT Entwickler:innen und ein Customer Support Team und entwickelt und vertreibt IT-Lösungen für das Tiergesundheitsmanagement und Bestandsbetreuung mit Scherpunkt Rindvieh. DSAHR hat sich aus einem von der Association des médecins vétérinaires du Québec (AMVPQ) und der Université de Montréal’s Faculty of Veterinary Medicine inititierten Forschungsprojekt entwickelt (ASTLQ) und besteht seit 1994. Der Hauptsitz ist in Kanada."@de ;
+    schema:url <https://www.dsahr.ca/> .
 
 systemmap:Se8a0552eb8cf7fe a schema:Organization ;
     schema:name "GEA Group Aktiengesellschaft"@de ;
-    schema:description "GEA bietet Lösungen für die Lebensmittel-, Getränke-, Chemie-, Pharma-, Milchverarbeitungs-/Milchproduktions- und die Marineindustrie an. Zum Portfolio gehören Maschinen und Anlagen ebenso wie  Prozesstechnik, Komponenten und Servicedienstleistungen. Im Bereich Farm Technologies werden integrierte Lösungen für die Milchproduktion und Nutztierhaltung wie automatische Melk- und Fütterungssysteme, konventionelle Melkanlagen, digitale Herdenmanagement-Tools sowie Güllemanagement-Lösungen angeboten."@de .
+    schema:description "GEA bietet Lösungen für die Lebensmittel-, Getränke-, Chemie-, Pharma-, Milchverarbeitungs-/Milchproduktions- und die Marineindustrie an. Zum Portfolio gehören Maschinen und Anlagen ebenso wie  Prozesstechnik, Komponenten und Servicedienstleistungen. Im Bereich Farm Technologies werden integrierte Lösungen für die Milchproduktion und Nutztierhaltung wie automatische Melk- und Fütterungssysteme, konventionelle Melkanlagen, digitale Herdenmanagement-Tools sowie Güllemanagement-Lösungen angeboten."@de ;
+    schema:url <https://www.gea.com/> .
 
 zefix:1566606 a schema:Organization ;
     schema:name "smaXtec AG"@de ;
-    schema:description "smaXtec ist ein Unternehmen mit Hauptsitz in Österreich, das sich auf Technologien für Milchviehbetriebe entwickelt und anbietet. smaXtec setzt sich aus den Worten \"smart\" und \"technology\" zusammen."@de .
+    schema:description "smaXtec ist ein Unternehmen mit Hauptsitz in Österreich, das sich auf Technologien für Milchviehbetriebe entwickelt und anbietet. smaXtec setzt sich aus den Worten \"smart\" und \"technology\" zusammen."@de ;
+    schema:url <https://www.smaxtec.com/> .
 
 systemmap:S250c89579908e54 a schema:Organization ;
     schema:name "Intervet Deutschland GmbH, Ein Unternehmen der MSD Tiergesundheit und: Swissgenetics"@de ;
-    schema:description "MSD Tiergesundheit ist ein weltweit tätiger forschenden Anbieter für Gesundheitslösungen für Haus- und Nutztiere."@de .
+    schema:description "MSD Tiergesundheit ist ein weltweit tätiger forschenden Anbieter für Gesundheitslösungen für Haus- und Nutztiere."@de ;
+    schema:url <https://www.msd-tiergesundheit.de/> .
 
 systemmap:S0a38b15f2f7d62f a schema:Organization ;
     schema:name "Nedap"@de ;
-    schema:description "Nedap ist ein niederländisches Unternehmen in der Milchwirtschaft, das Technologien und sensorbasierten Lösungen anbietet. Nedap ist seit 1977 tätig."@de .
+    schema:description "Nedap ist ein niederländisches Unternehmen in der Milchwirtschaft, das Technologien und sensorbasierten Lösungen anbietet. Nedap ist seit 1977 tätig."@de ;
+    schema:url <https://nedap-livestockmanagement.com/> .
 
 systemmap:Saf2a33246ce133f a schema:Organization ;
     schema:name "CowManager"@de ;
-    schema:description "CowManager ist ein international tätiges Unternehmen, das Sensorsysteme und zugehörige Auswertungsprogramme für Milchviehbestände anbietet. Hauptsitz ist in den Niederlanden."@de .
+    schema:description "CowManager ist ein international tätiges Unternehmen, das Sensorsysteme und zugehörige Auswertungsprogramme für Milchviehbestände anbietet. Hauptsitz ist in den Niederlanden."@de ;
+    schema:url <https://www.cowmanager.com/> .
 
 zefix:417008 a schema:Organization ;
     schema:name "Arbeitsgemeinschaft Schweizerischer Rinderzüchter"@de ;
     systemmap:abbreviation "ASR"@de ;
-    schema:description "Die Arbeitsgemeinschaft Schweizerischer Rinderzüchter (ASR) ist die Dachorgansiation der (Stand 2026: sieben) Schweizer Rinderzuchtorganisationen."@de .
+    schema:description "Die Arbeitsgemeinschaft Schweizerischer Rinderzüchter (ASR) ist die Dachorgansiation der (Stand 2026: sieben) Schweizer Rinderzuchtorganisationen."@de ;
+    schema:url <https://asr-ch.ch/> .
 
 zefix:278958 a schema:Organization ;
     schema:name "Holstein Switzerland Genossenschaft"@de, "Coopérative Holstein Switzerland"@fr ;
-    schema:memberOf zefix:417008 .
+    schema:memberOf zefix:417008 ;
+    schema:url <https://www.holstein.ch/> .
 
 systemmap:S459e99499065540 a schema:Organization ;
     schema:name "Schweizer Eringerzuchtverband"@de ;
     schema:memberOf zefix:417008 ;
-    schema:description "Der Schweizerische Eringerviehzuchtverband wurde 1920 gegründet und vereinigt heute 63 Genossenschaften und 2 Sektionen (deutschsprachig/ französischsprachig). Der Verband erarbeitet ein Zuchtprogramm, das hauptsächlich auf die Vereinheitlichung des Zuchttyps, die Förderung der wirtschaftlichen Produktivität (insbesondere Milch-und Fleischproduktion) und die Erhaltung der Gesundheit, Fruchtbarkeit und Kampflust der Eringer abzielt."@de .
+    schema:description "Der Schweizerische Eringerviehzuchtverband wurde 1920 gegründet und vereinigt heute 63 Genossenschaften und 2 Sektionen (deutschsprachig/ französischsprachig). Der Verband erarbeitet ein Zuchtprogramm, das hauptsächlich auf die Vereinheitlichung des Zuchttyps, die Förderung der wirtschaftlichen Produktivität (insbesondere Milch-und Fleischproduktion) und die Erhaltung der Gesundheit, Fruchtbarkeit und Kampflust der Eringer abzielt."@de ;
+    schema:url <https://www.raceherens.ch/> .
 
 systemmap:S1979cece7ba6873 a schema:Organization ;
     schema:name "Verband swissherbook Ost"@de ;
@@ -326,7 +349,8 @@ zefix:249299 a schema:Organization ;
     schema:name "Verbandsgenossenschaft für Simmentaler Alpfleckviehzucht und Alpwirtschaft"@de ;
     schema:description "Der Verbandsgenossenschaft für Simmentaler Alpfleckviehzucht und Alpwirtschaft gehören 128 Viehzuchtgenossenschaften und -vereine mit rund 30`000 Herdebuchtieren des Berner Oberlandes an. Sie bezweckt die Erhaltung und Förderung der Qualitätszucht der Simmentaler Fleckviehrasse, der Förderung des Viehabsatzes, der Vertretung in verschiedenen Organisationen und Verbänden und der Verbesserung der wirtschaftlichen Grundlage der Alpwirtschaft."@de ;
     systemmap:abbreviation "VSA"@de ;
-    schema:memberOf zefix:417008 .
+    schema:memberOf zefix:417008 ;
+    schema:url <https://vsa-bo.ch/> .
 
 systemmap:Sa21b4bf6b691ef6 a schema:Organization ;
     schema:name "SwissBeef"@de ;
@@ -337,18 +361,21 @@ systemmap:Sa21b4bf6b691ef6 a schema:Organization ;
 systemmap:S38b682bd68968a4 a schema:Organization ;
     schema:name "Schweizer Kälbermäster-Verband (SKMV)"@de ;
     schema:memberOf zefix:1457969 ;
-    schema:description "Zu den wichtigsten Aufgaben des Schweizer Kälbermäster-Verbandes gehören die Wissensvermittlung, die Qualitätsförderung sowie die Interessensvertretung seiner Mitglieder in der Politik, bei den beteiligten Wirtschaftszweigen und der übrigen Landwirtschaft. Der Sitz des Verbands ist in Brugg. Zum SKMV gehören die regionalen Sektionen Appenzell , Bern, Graubünden, Luzern, Obwalden/Nidwalden/Uri, St. Gallen und der IG Kalbfleisch (ganze Schweiz)."@de .
+    schema:description "Zu den wichtigsten Aufgaben des Schweizer Kälbermäster-Verbandes gehören die Wissensvermittlung, die Qualitätsförderung sowie die Interessensvertretung seiner Mitglieder in der Politik, bei den beteiligten Wirtschaftszweigen und der übrigen Landwirtschaft. Der Sitz des Verbands ist in Brugg. Zum SKMV gehören die regionalen Sektionen Appenzell , Bern, Graubünden, Luzern, Obwalden/Nidwalden/Uri, St. Gallen und der IG Kalbfleisch (ganze Schweiz)."@de ;
+    schema:url <https://www.kaelbermaester.ch/> .
 
 systemmap:Sc4ba6ce6ae8d41c a schema:Organization ;
     schema:name "Rindergesundheit Schweiz"@de ;
     schema:parentOrganization zefix:1457969 ;
     schema:description "Rindergesundheit Schweiz (RGS) bietet Dienstleistungen und Gesundheitsprogramme für Rinderbestände an. RGS unterstützt Betriebsleitende und Bestandestierärzte/-tierärztinnen durch Beratung, Bestandesdiagnostikbesuche, Bildungsveranstaltungen, Fachvorträge und Fachinformationen. Als Organisation ist RGS dem Verein Nutztiergesundheit Schweiz (NTGS) angegliedert und ist am 01.10.2021 aus dem ehemaligen Rindergesundheitsdienst, vereint mit dem Schweizer Kälbergesundheitsdienst (KGD), entstanden. Seit dem 01.07.2023 hat RGS die operativen Tätigkeiten des KGD vollständig übernommen.  Die zwei Standorte befinden sich in  Zollikofen und in Zürich."@de ;
-    systemmap:access systemmap:SOK9kQP8T3M2qPNEL .
+    systemmap:access systemmap:SOK9kQP8T3M2qPNEL ;
+    schema:url <https://www.rgs-ntgs.ch/> .
 
 zefix:1695977 a schema:Organization ;
     schema:name "Gallosuisse"@de ;
     schema:memberOf zefix:1457969 ;
-    schema:description "GalloSuisse mit Sitz in Zollikofen ist die Genossenschaft der Schweizer Eierproduzenten und umfasst Betriebe mit Lege- und Aufzuchthennen. Gemeinsam mit seinen Sektionen setzt sich GalloSuisse ein für faire Rahmenbedingungen im Eiermarkt ein, vertritt die Interessen der Produzenten in Politik und Gesellschaft und plant und realisiert das Marketing für «Das Schweizer Ei»."@de .
+    schema:description "GalloSuisse mit Sitz in Zollikofen ist die Genossenschaft der Schweizer Eierproduzenten und umfasst Betriebe mit Lege- und Aufzuchthennen. Gemeinsam mit seinen Sektionen setzt sich GalloSuisse ein für faire Rahmenbedingungen im Eiermarkt ein, vertritt die Interessen der Produzenten in Politik und Gesellschaft und plant und realisiert das Marketing für «Das Schweizer Ei»."@de ;
+    schema:url <https://www.gallosuisse.ch/> .
 
 systemmap:Sc138712066f7ff2 a schema:Organization ;
     schema:name "Schweizer Geflügelproduzenten"@de ;
@@ -358,18 +385,22 @@ systemmap:Sc138712066f7ff2 a schema:Organization ;
 
 zefix:1537663 a schema:Organization ;
     schema:name "dsm-firmenich"@de ;
-    schema:description "dsm-firmenich ist ein Unternehmen für Ernährung, Gesundheit und nachhaltiges Leben. Im Bereich Tierernährung und -gesundheit bietet es Lösungen für die Präzisionsernährung an."@de .
+    schema:description "dsm-firmenich ist ein Unternehmen für Ernährung, Gesundheit und nachhaltiges Leben. Im Bereich Tierernährung und -gesundheit bietet es Lösungen für die Präzisionsernährung an."@de ;
+    schema:url <https://www.dsm-firmenich.com/> .
 
 zefix:463295 a schema:Organization ;
     schema:name "Beratungs- und Gesundheitsdienst für Kleinwiederkäuer BGK"@de ;
-    schema:description "Der BGK unterstützt die Halter und Züchter von Schafen, Ziegen, Hirschen und Neuweltkameliden  in der Schweiz und im Fürstentum Liechtenstein. Er ist ein wichtiges Bindeglied zwischen Züchtern und Haltern, Tierärzten und -spitälern, landwirtschaftlichen Beratungsdiensten, Forschungsanstalten, Zuchtorganisationen sowie Bund und den Kantonen."@de .
+    schema:description "Der BGK unterstützt die Halter und Züchter von Schafen, Ziegen, Hirschen und Neuweltkameliden  in der Schweiz und im Fürstentum Liechtenstein. Er ist ein wichtiges Bindeglied zwischen Züchtern und Haltern, Tierärzten und -spitälern, landwirtschaftlichen Beratungsdiensten, Forschungsanstalten, Zuchtorganisationen sowie Bund und den Kantonen."@de ;
+    schema:url <https://www.kleinwiederkaeuer.ch/> .
 
 zefix:166248 a schema:Organization ;
-    schema:name "Schweizerischer Schafzuchtverband Genossenschaft"@de .
+    schema:name "Schweizerischer Schafzuchtverband Genossenschaft"@de ;
+    schema:url <https://www.sszv.ch/> .
 
 zefix:248029 a schema:Organization ;
     schema:name "Schweizerischer Ziegenzuchtverband (SZZV) Genossenschaft"@de ;
-    schema:description "Der Schweizerische Ziegenzuchtverband wurde 1906 gegründet. Mitglieder des Verbandes sind kantonale und überkantonale Ziegenzucht- oder Kleinviehzuchtverbände/-vereine, Ziegenzuchtgenossenschaften und -vereine sowie Ziegenzüchterinnen und Ziegenzüchter von Rassen, für welche der SZZV das Herdebuch führt.  Der SZZV ist verantwortlich für die schweizerische Ziegenzucht und fördert deren Wirtschaftlichkeit."@de .
+    schema:description "Der Schweizerische Ziegenzuchtverband wurde 1906 gegründet. Mitglieder des Verbandes sind kantonale und überkantonale Ziegenzucht- oder Kleinviehzuchtverbände/-vereine, Ziegenzuchtgenossenschaften und -vereine sowie Ziegenzüchterinnen und Ziegenzüchter von Rassen, für welche der SZZV das Herdebuch führt.  Der SZZV ist verantwortlich für die schweizerische Ziegenzucht und fördert deren Wirtschaftlichkeit."@de ;
+    schema:url <https://www.szzv.ch/> .
 
 
 # ==============================================================================

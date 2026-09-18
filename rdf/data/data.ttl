@@ -959,7 +959,7 @@ systemmap:S9SbhGAwWjtvcRIZ a schema:SoftwareApplication ;
         "GIS-BLW"@en,
         "GIS-BLW"@fr,
         "GIS-BLW"@it ;
-    systemmap:hasLegalBasis LwG:art_165_e ;
+    systemmap:hasLegalBasis LwG:art_165_e, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_10>, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_11>, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_12>, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_13> ;
     systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
 
 systemmap:S9VcxLSoIIwQjlZQ2 a schema:SoftwareApplication ;

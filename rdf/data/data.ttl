@@ -2645,7 +2645,7 @@ systemmap:S1u8DDdB8YZ67H5l5 a dcat:Dataset ;
         Dies umfasst die Dokumentation der Kontrollaktivitäten auf Betriebsebene einschliesslich Akteurszuweisung, zeitlicher Einordnung, Prüfergebnissen sowie abgeleiteter Massnahmen oder Sanktionen.
         """@de ;
     systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe ;
-    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_6> .
+    systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_6>, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_7>, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_8>, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_9> .
 
 systemmap:S1u8FFdB8YZ67H5X6 a dcat:Dataset ;
     schema:name "Kontrollinhalte"@de ;

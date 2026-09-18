@@ -765,162 +765,210 @@ systemmap:S7ddb5605c1326b4 a dcat:Dataset ;
     schema:name "Elektronisches Behandlungsjournal SuisSano"@de ;
     schema:description "Enthält unter anderem Befunde und Diagnosen im Zusammenhang mit Behandlungen von Schweinen. Die Angaben zur medikamentellen Behandlungen von Schweinen umfassen beispielsweise Präparat, Dosierung, Behandlungsdauer und Anzahl behandelter Schweine."@de ;
     schema:keywords keyword:animalhealth,
-        keyword:antibiotics .
+        keyword:antibiotics,
+        keyword:herdmanagement .
 
 systemmap:S8944f12a7ca83e4 a dcat:Dataset ;
     schema:name "Elektronisches Behandlungsjournal QGS"@de ;
     schema:description "Enthält unter anderem Befunde und Diagnosen im Zusammenhang mit Behandlungen von Schweinen. Die Angaben zur medikamentellen Behandlungen von Schweinen umfassen beispielsweise Präparat, Dosierung, Behandlungsdauer und Anzahl behandelter Schweine."@de ;
     schema:keywords keyword:animalhealth,
-        keyword:antibiotics .
+        keyword:antibiotics,
+        keyword:herdmanagement .
 
 systemmap:S4x04ackmG5yne5By a dcat:Dataset ;
     schema:name "PHIS Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Schwein aus Routineuntersuchen, TAM-Besuchen oder den Programmen ZoE-BTA und PathoPig"@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement .
 
 systemmap:SvmW0FRiWcALdXgAa a dcat:Dataset ;
     schema:name "SuisData Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Schwein aus Routine-oder Spezialuntersuchen."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement .
 
 systemmap:SXIwI6eU6lZZOFVR4 a dcat:Dataset ;
     schema:name "ReproJournal Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Angaben zu Fruchtbarkeitsleitsungen von Schweinen."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement .
 
 systemmap:SXDe1c5blay5pm1f7 a dcat:Dataset ;
     schema:name "UFA2000 Deckregister"@de ;
     schema:description "Enthält unter anderem Angaben zu Belegungen von Schweinen."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement .
 
 systemmap:SGXgfZIB9hCBv4fIa a dcat:Dataset ;
     schema:name "UFA2000 Sauenblatt"@de ;
     schema:description "Enthält unter anderem Angaben zu Trächtigkeitsdaten von Sauen"@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement .
 
 systemmap:Se35WpC7gmVkMSoME a dcat:Dataset ;
     schema:name "UFA2000 Wurferfassung"@de ;
     schema:description "Enthält unter anderem Angaben zu Wurfdaten von Sauen"@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement .
 
 systemmap:Sd6e0fe2eee8f943 a dcat:Dataset ;
     schema:name "Cattle-Health-Info-System-Daten"@de ;
     schema:description "Enthält unter anderem Angaben zu Befunden und Diagnosen beim Rind aus Routineuntersuchen oder Tierarzneimittel-Besuchen."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement .
 
 systemmap:Se28f3bb2be7ce5e a dcat:Dataset ;
     schema:name "Lely Horizon"@de ;
     schema:description "Aktuelle Daten aus verschiedenen Quellen werden konsolidiert und analysiert, um Prognosen und Ratschläge zu erstellen, die helfen, Gesundheitsprobleme früher zu erkennen. Weiterhin kann Horizon eine 24/7-Überwachung der Brunst bieten."@de ;
     schema:keywords keyword:animalhealth,
-        keyword:antibiotics .
+        keyword:antibiotics,
+        keyword:herdmanagement,
+        keyword:dairyfarming .
 
 systemmap:Se11c26403a91b7f a dcat:Dataset ;
     schema:name "DeLaval Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Angaben zu Milchleistungen oder dem Reproduktionsstand."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement,
+        keyword:dairyfarming .
 
 systemmap:Sfcb669880d3a0c8 a dcat:Dataset ;
     schema:name "Fullwood Merlin Tiergesundheit"@de ;
     schema:description "Die Datensammlung umfasst Daten zu Milchmenge, Produktionsraten, Kurvenverlauf, Zellzahl, Vitalität, Leitfähigkeit, Ruhezeiten, Fett, Eiweiss und Laktose von jeder Kuh bei jeder Melkung."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement,
+        keyword:dairyfarming .
 
 systemmap:S44511ce1ce85d04 a dcat:Dataset ;
     schema:name "BouMatic Tiergesundheit"@de ;
     schema:description "Die Datensammlung umfasst unter anderem Daten zu Fress- und Wiederkäverhalten und zu Tierbewegungen."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement,
+        keyword:dairyfarming .
 
 systemmap:S08be1fdcd1d8675 a dcat:Dataset ;
     schema:name "BrunNet Tiergesundheit"@de ;
     schema:description "MLP BrunaNet heisst das Online-Herdebuch von Braunvieh Schweiz. Alle Daten eines Braunviehbestandes sind jederzeit und immer aktuell abrufbar. Sei es ein Einzeltier oder die ganze Herde: BrunaNet bietet alle detaillierten Angaben und übersichtlichen Zusammenfassungen, die ein Braunviehzüchter braucht. Dank dem BrunaNet-Abo können fast alle Informationen online abgerufen werden: Betriebsdaten  Dokumentablage (Laborprüfbericht, Faktura, Abstammungsausweise, etc.) Tierliste Betriebslisten (Fruchtbarkeit, Zuchtwerte, LBE, Zellzahl, Laktationen, Lebensleistungen, Melkbarkeit, Genetische Marker) Betriebsstatistiken (Milchleistungsdaten, Lebensleistung, Fruchtbarkeit, Lineare Beschreibung, Zuchtwerte) Labordaten (MLP, Trächtigkeit, MID) Anmeldung zur LBE Anmeldung und Verwaltung von Schauen SNP-Info (Auftragserstellung und Resultate der Typisierung) Behandlungsjournal (Gesundheitsportal) Downloads (im Format der Datenschnittstelle Rindvieh Schweiz und ADIS)"@de ;
     schema:keywords keyword:animalhealth,
-        keyword:animalbreeding .
+        keyword:animalbreeding,
+        keyword:herdmanagement,
+        keyword:dairyfarming .
 
 systemmap:S6abacb381c3b305 a dcat:Dataset ;
     schema:name "Redonline Tiergesundheit"@de ;
     schema:description "MLP. redonline steht für ein professionelles Herdenmanagement und aktuelle Zucht- und Leistungsdaten. Züchterinnen/Züchter haben jederzeit Zugriff auf die aktuellen Daten aller Tiere des Betriebes, sowie auf ihre Dokumente (Laborbericht, ALA, Belegausweise, Rechnungen etc.)"@de ;
     schema:keywords keyword:animalhealth,
-        keyword:animalbreeding .
+        keyword:animalbreeding,
+        keyword:herdmanagement,
+        keyword:dairyfarming .
 
 systemmap:S0f4b28b02fcdb51 a dcat:Dataset ;
     schema:name "Holsteinvision Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Daten zu Befunden und Leistungen der Kühe. Diese sind Teil der Basis für das Herdenmanagement, aber auch unter anderem Grundlage für die Weitergabe der Zuchtbeiträge des BLW an die Tierhaltenden und die Entschädigung für alle erfassten Daten zur Mastitis und zu Stoffwechselkrankheiten."@de ;
     schema:keywords keyword:animalhealth,
         keyword:antibiotics,
-        keyword:animalbreeding .
+        keyword:animalbreeding,
+        keyword:herdmanagement,
+        keyword:dairyfarming .
 
 systemmap:Scdb0a211b8eef1c a dcat:Dataset ;
     schema:name "Smart Cow"@de ;
     schema:description "Enthält unter anderem Tierdaten, zum Beispiel in Form des  Brunstkalenders, Behandlungsjournals (Tierbehandlungen und Befunde) oder Leistungsblatts dargestellt werden können, sowie Laborberichte oder Daten zu Besamungen und Belegungen."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement,
+        keyword:dairyfarming .
 
 systemmap:Sd8ce041d235ac8a a dcat:Dataset ;
     schema:name "DAS Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Daten zu Befunden und Leistungen der Milchkühe. Es ist möglich, Tierbehandlungsdaten abzulegen."@de ;
-    schema:keywords keyword:animalhealth, keyword:antibiotics .
+    schema:keywords keyword:animalhealth,
+        keyword:antibiotics,
+        keyword:herdmanagement,
+        keyword:dairyfarming .
 
 systemmap:Sd30080af44facc4 a dcat:Dataset ;
     schema:name "GEA DairyNet Tiergesundheit"@de ;
     schema:description "Enthält zum Beispiel Angaben zu Tiergesundheit, Reproduktion und Klauenerkrankungen. Es ist möglich, Medikamente und Diagnosen für die Tiere und die Herde zu erfassen."@de ;
     schema:keywords keyword:animalhealth,
-        keyword:antibiotics .
+        keyword:antibiotics,
+        keyword:herdmanagement,
+        keyword:dairyfarming .
 
 systemmap:Sd07915cb6d4b0d2 a dcat:Dataset ;
     schema:name "GEA CowScout Tiergesundheit"@de ;
     schema:description "Enthält Daten zu Tierbewegungen und -aktivitäten."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement .
 
 systemmap:Sf39e4cc5a9b4324 a dcat:Dataset ;
     schema:name "smaXtec Tiergesundheit"@de ;
     schema:description "Enthält Daten zur inneren Körpertemperatur, Trinkzyklen und aufgenommener Wassermenge, Wiederkäuertätigkeit (über Netz­magen­kontraktionen) und Aktivität von individuellen Kühen."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement .
 
 systemmap:S16f05ee9c9c6de2 a dcat:Dataset ;
     schema:name "SenseHub® Cow Calf Tiergesundheit"@de ;
     schema:description "Enthält Daten von Mutterkuhherden, wie zum Beispiel Daten zur  Fruchtbarkeit und dem Gesundheitszustand."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement .
 
 systemmap:S98fbf4f4b3f4d13 a dcat:Dataset ;
     schema:name "SenseHub® Dairy Tiergesundheit"@de ;
     schema:description "Enthält Daten von Milchkuhbeständen, wie zum Beispiel Daten zur Fruchtbarkeit, Gesundheit und Fütterung."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement,
+        keyword:dairyfarming,
+        keyword:animalfeed .
 
 systemmap:S6e777b275a43632 a dcat:Dataset ;
     schema:name "Nedap CowControl Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Daten zu Tierbewegungen, Brunst und Reproduktion von Kühen."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement .
 
 systemmap:S77a8bd0c2e5fb0f a dcat:Dataset ;
     schema:name "MilkingControl Tiergesundheit"@de ;
     schema:description "Enthält Meldkdaten wie Milchfluss und Melkverhalten."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement,
+        keyword:dairyfarming .
 
 systemmap:S92c678287d7c7c3 a dcat:Dataset ;
     schema:name "CowManager Tiergesundheit"@de ;
     schema:description "Enthält sensor-basierte Tierdaten von Kühen, die Indikator für die Tiergesundheit sein können."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement .
 
 systemmap:S27626110a39e3ed a dcat:Dataset ;
     schema:name "Basisgesundheitsprogramm Milchvieh"@de ;
     schema:description "Enthält unter anderem Daten zu im Basis-Gesundheitsprogramm Milchvieh untersuchten Parametern wie Haltung, Euter- und Klauengesundheit, Fruchtbarkeit, Kälber und Biosicherheit."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement,
+        keyword:dairyfarming .
 
 systemmap:S1df451f0356426f a dcat:Dataset ;
     schema:name "Gallo Support Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Daten zu Einstallung des Geflügels, Tierbewegungen, Fütterung, Wasser- und Futterverbrauch, Gewicht, Legeleistung und Abgängen wie auch Behandlungen und Impfungen."@de ;
     schema:keywords keyword:animalhealth,
-        keyword:antibiotics .
+        keyword:antibiotics,
+        keyword:herdmanagement,
+        keyword:animalfeed .
 
 systemmap:Sfffaefb08722c2d a dcat:Dataset ;
     schema:name "Verax™ Tiergesundheit"@de ;
     schema:description "Enthält unter anderem Daten zur Geflügelherde und Analysedaten aus Blutuntersuchungen."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement .
 
 systemmap:S89f091bfc2a8ee0 a dcat:Dataset ;
     schema:name "Tiergesundheitsdaten Kleine Wiederkäuer"@de ;
     schema:description "Enthält unter anderem Daten zu den Betrieben, wie zum Beispiel Betriebsprobleme oder Resistenzlage zu Entwurmungsmitteln."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement .
 
 systemmap:Sfae06196dfd6ef4 a dcat:Dataset ;
     schema:name "Daten Ziegen"@de ;
     schema:description "Enthält unter anderem Resultate der Milchkontrolle und der Exterieurbeurteilungen, Zuchtwerte und Abstammungsausweise. Weiterhin sind Daten zu Sprüngen, Würfen und Abgängen enthalten. Dies dient der digitalen und online Darstellung des Herdebuchsystem des Schweizerische Ziegenzuchtverband (SZZV)."@de ;
-    schema:keywords keyword:animalhealth .
+    schema:keywords keyword:animalhealth,
+        keyword:herdmanagement,
+        keyword:dairyfarming .

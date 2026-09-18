@@ -9,17 +9,35 @@
 # KEYWORD DEFINITIONS
 # ==============================================================================
 
+keyword:agriculturalcontrol a schema:DefinedTerm ;
+    schema:name "Landwirtschaftliche Kontrolle"@de ,
+        "Agricultural control"@en ,
+        "Contrôle agricole"@fr ,
+        "Controllo agricolo"@it .
+
 keyword:animalbreeding a schema:DefinedTerm ;
     schema:name "Tierzucht"@de ,
         "Animal breeding"@en ,
         "Élevage"@fr ,
         "Zootecnia"@it .
 
+keyword:animalfeed a schema:DefinedTerm ;
+    schema:name "Futtermittel"@de ,
+        "Animal feed"@en ,
+        "Aliments pour animaux"@fr ,
+        "Mangimi"@it .
+
 keyword:animalhealth a schema:DefinedTerm ;
     schema:name "Tiergesundheit"@de ,
         "Animal health"@en ,
         "Santé animale"@fr ,
         "Salute degli animali"@it .
+
+keyword:animaltraceability a schema:DefinedTerm ;
+    schema:name "Rückverfolgbarkeit von Tieren"@de ,
+        "Animal traceability"@en ,
+        "Traçabilité des animaux"@fr ,
+        "Tracciabilità degli animali"@it .
 
 keyword:animalwelfare a schema:DefinedTerm ;
     schema:name "Tierschutz"@de ,
@@ -33,6 +51,18 @@ keyword:antibiotics a schema:DefinedTerm ;
         "Antibiotiques"@fr ,
         "Antibiotici"@it .
 
+keyword:cropproduction a schema:DefinedTerm ;
+    schema:name "Pflanzenbau"@de ,
+        "Crop production"@en ,
+        "Production végétale"@fr ,
+        "Produzione vegetale"@it .
+
+keyword:dairyfarming a schema:DefinedTerm ;
+    schema:name "Milchwirtschaft"@de ,
+        "Dairy farming"@en ,
+        "Économie laitière"@fr ,
+        "Economia lattiera"@it .
+
 keyword:diagnostics a schema:DefinedTerm ;
     schema:name "Diagnostik"@de ,
         "Diagnostics"@en ,
@@ -45,11 +75,41 @@ keyword:epizooticdiseases a schema:DefinedTerm ;
         "Épizooties"@fr ,
         "Epizoozie"@it .
 
+keyword:farmstructure a schema:DefinedTerm ;
+    schema:name "Betriebsstruktur"@de ,
+        "Farm structure"@en ,
+        "Structure des exploitations"@fr ,
+        "Struttura aziendale"@it .
+
+keyword:fertilizers a schema:DefinedTerm ;
+    schema:name "Dünger"@de ,
+        "Fertilisers"@en ,
+        "Engrais"@fr ,
+        "Concimi"@it .
+
+keyword:herdmanagement a schema:DefinedTerm ;
+    schema:name "Herdenmanagement"@de ,
+        "Herd management"@en ,
+        "Gestion du troupeau"@fr ,
+        "Gestione della mandria"@it .
+
 keyword:livestock a schema:DefinedTerm ;
     schema:name "Nutztiere"@de ,
         "Livestock"@en ,
         "Animaux de rente"@fr ,
         "Animali da reddito"@it .
+
+keyword:marketdata a schema:DefinedTerm ;
+    schema:name "Marktdaten"@de ,
+        "Market data"@en ,
+        "Données de marché"@fr ,
+        "Dati di mercato"@it .
+
+keyword:plantprotection a schema:DefinedTerm ;
+    schema:name "Pflanzenschutz"@de ,
+        "Plant protection"@en ,
+        "Protection des végétaux"@fr ,
+        "Protezione dei vegetali"@it .
 
 keyword:reproduction a schema:DefinedTerm ;
     schema:name "Reproduktion"@de ,

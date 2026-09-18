@@ -2,6 +2,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix keyword: <https://agriculture.ld.admin.ch/system-map/keyword/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -2635,6 +2636,7 @@ systemmap:S1AkhvKmzBiJFCTc a dcat:Dataset ;
     schema:description """
         Beinhaltet Preise und Mengen für verschiedene Produkte, Wertschöpfungsstufen, Regionen, Produktionssysteme etc.
         """@de ;
+    schema:keywords keyword:marketdata ;
     systemmap:usesMasterData systemmap:SbKCxLGicJtMGTQiD .
 
 systemmap:S1u8DDdB8YZ67H5l5 a dcat:Dataset ;
@@ -2644,6 +2646,7 @@ systemmap:S1u8DDdB8YZ67H5l5 a dcat:Dataset ;
         Die Datenstruktur bildet den gesamten Kontrollzyklus ab, differenziert nach Vorgaben (Soll) und effektiver Durchführung (Ist).
         Dies umfasst die Dokumentation der Kontrollaktivitäten auf Betriebsebene einschliesslich Akteurszuweisung, zeitlicher Einordnung, Prüfergebnissen sowie abgeleiteter Massnahmen oder Sanktionen.
         """@de ;
+    schema:keywords keyword:agriculturalcontrol ;
     systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe ;
     systemmap:hasLegalBasis <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_6>, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_7>, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_8>, <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_9> .
 
@@ -2654,10 +2657,12 @@ systemmap:S1u8FFdB8YZ67H5X6 a dcat:Dataset ;
         Umfassender Merkmalskatalog der landwirtschaftlichen Kontrollinhalte, welcher die normativen Vorgaben (bspw. gemäss DZV) in eine systematische Prüfstruktur übersetzt.
         Der Datensatz gliedert die Kontrollmaterie hierarchisch in Kontrollbereiche, Rubriken, Punktegruppen und einzelne Kontrollpunkte und stellt die entsprechenden Bezeichnungen sowie Beschreibungen als verbindliche Referenz für den Vollzug und die Erfassung der Kontrollresultate bereit.
         Sämtliche Beschreibungen sind auf Deutsch, Französisch sowie Italienisch vorhanden.
-        """@de .
+        """@de ;
+    schema:keywords keyword:agriculturalcontrol .
 
 systemmap:S2XkdeKmzCiJFCTb a dcat:Dataset ;
     schema:name "BLW-interne Agrarmarktdaten"@de ;
+    schema:keywords keyword:marketdata ;
     systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY .
 
 systemmap:S2XkdeKmzFiJFXWc a dcat:Dataset ;
@@ -2666,6 +2671,7 @@ systemmap:S2XkdeKmzFiJFXWc a dcat:Dataset ;
         Beinhaltet Preise und Mengen für verschiedene Produkte, Wertschöpfungsstufen, Regionen, Produktionssysteme etc.,
         aber keine Informationen zu einzelnen Produzenten, sondern nur nach jeweiligen Gruppen aggregierte Zahlen.
         """@de ;
+    schema:keywords keyword:marketdata ;
     prov:wasDerivedFrom systemmap:S2XkdeKmzCiJFCTb ;
     systemmap:containedIn systemmap:SxvsanBKE0ZN315DU .
 
@@ -2690,6 +2696,7 @@ systemmap:S4BoMPavXD5gIObm a dcat:Dataset ;
         Contiene i dati di identificazione di base degli animali, come i numeri univoci delle marche auricolari, la specie, il sesso e la data di nascita.
         Questi dati principali costituiscono la base per la tracciabilità senza interruzioni nel TVD.
         """@it ;
+    schema:keywords keyword:animaltraceability ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
 systemmap:S4ZuIO9s81WMS2bKB a dcat:Dataset ;
@@ -2698,6 +2705,8 @@ systemmap:S4ZuIO9s81WMS2bKB a dcat:Dataset ;
         "Données de marché Aliments pour animaux"@fr,
         "Dati di mercato Mangimi"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    schema:keywords keyword:animalfeed,
+        keyword:marketdata ;
     schema:url <https://www.agrarmarktdaten.ch/markt/futtermittel> .
 
 systemmap:S7mhWQjPZiSFc8dU a dcat:Dataset ;
@@ -2721,6 +2730,7 @@ systemmap:S7mhWQjPZiSFc8dU a dcat:Dataset ;
         Registra tutti gli eventi dinamici nel ciclo di vita degli animali, inclusi i dati di nascita, movimento e macellazione, nonché i cambi di detentore.
         Queste informazioni sono essenziali per tracciare i cambi di posizione, le fasi di trasporto e i processi di lavorazione.
         """@it ;
+    schema:keywords keyword:animaltraceability ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
 systemmap:S8JpqvyO4LQwEM5s a dcat:Dataset ;
@@ -2743,6 +2753,7 @@ systemmap:S8JpqvyO4LQwEM5s a dcat:Dataset ;
         Informazioni sulle varietà vegetali provenienti dai paesi membri dell'UPOV e dall'Organizzazione per la cooperazione e lo sviluppo economico (OCSE).
         Questo elenco di varietà funge da registro centrale per le denominazioni varietali e supporta la verifica della distinzione delle nuove varietà.
         """@it ;
+    schema:keywords keyword:cropproduction ;
     prov:wasDerivedFrom systemmap:Spqrv6Ul05KJySTs ;
     systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN .
 
@@ -2763,6 +2774,7 @@ systemmap:S8cKNg0hfPy97TUB a dcat:Dataset ;
         """
         Numero di dipendenti per genere e orario di lavoro, capitale sociale delle società per azioni, dati di fatturato, data di registrazione o cancellazione nel registro commerciale, data di annuncio della fondazione o chiusura di un'azienda o impresa.
         """@it ;
+    schema:keywords keyword:farmstructure ;
     systemmap:containedIn systemmap:SHyBeGX0LsQwjJ6Z .
 
 systemmap:S9J1HTMKIxnCgmYc a dcat:Dataset ;
@@ -2782,6 +2794,7 @@ systemmap:S9J1HTMKIxnCgmYc a dcat:Dataset ;
         """
         Elenco dei prodotti fitosanitari autorizzati in Svizzera, inclusa la loro composizione chimica, i numeri W e i titolari dell'autorizzazione.
         """@it ;
+    schema:keywords keyword:plantprotection ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
 systemmap:SAUWzyCpeGZ6vVil a dcat:Dataset ;
@@ -2809,12 +2822,15 @@ systemmap:SAUWzyCpeGZ6vVil a dcat:Dataset ;
         Ciò include i dati di identificazione necessari per l'assegnazione univoca, come il numero TVD o il numero dell'azienda agricola, nonché i dati di base sull'identità e l'indirizzo di contatto della persona.
         Questi dati garantiscono che tutti i movimenti e gli eventi degli animali possano essere correttamente attribuiti a un detentore, essenziale per la tracciabilità e il rispetto dei requisiti legali.
         """@it ;
+    schema:keywords keyword:animaltraceability,
+        keyword:farmstructure ;
     prov:wasDerivedFrom systemmap:SvNriWslaOR5xkdw ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ ;
     systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
 systemmap:SBba3t3SyxjgPiHhX a dcat:Dataset ;
     schema:name "Daten der Geburtsmeldungen"@de ;
+    schema:keywords keyword:animaltraceability ;
     prov:wasDerivedFrom systemmap:SVXa3t3SyxjgPiLBx ;
     systemmap:containedIn systemmap:SAwz5t3SyxjgPiHhX .
 
@@ -2835,10 +2851,12 @@ systemmap:SDmJeWK7EOnMqRLs a dcat:Dataset ;
         """
         Regolamenti e restrizioni da osservare nell'uso dei prodotti fitosanitari, inclusi dosaggio, tempistica dell'applicazione e misure protettive.
         """@it ;
+    schema:keywords keyword:plantprotection ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
 systemmap:SENtOaRGg22EqHWXq a dcat:Dataset ;
     schema:name "Produkteliste Hof- und Recycling-Dünger"@de ;
+    schema:keywords keyword:fertilizers ;
     systemmap:containedIn systemmap:SlfheulBjlQDwuaIM .
 
 systemmap:SFyGV7l0kN4qgA8u a dcat:Dataset ;
@@ -2858,11 +2876,14 @@ systemmap:SFyGV7l0kN4qgA8u a dcat:Dataset ;
         """
         Elenco delle colture e degli organismi nocivi per i quali è già stata concessa un'autorizzazione per un prodotto fitosanitario in Svizzera.
         """@it ;
+    schema:keywords keyword:cropproduction,
+        keyword:plantprotection ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
 
 systemmap:SHcRaVohogZJifUH4 a dcat:Dataset ;
     schema:name "Kraft- und Raufutter"@de ;
-    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V .
+    dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
+    schema:keywords keyword:animalfeed .
 
 systemmap:SIK56WC1if6riKNpM a dcat:Dataset ;
     schema:name "Handelsprodukte"@de ;
@@ -2872,6 +2893,8 @@ systemmap:SIK56WC1if6riKNpM a dcat:Dataset ;
         Beispiele hierfür wären PSM-Mischungen mehrerer Produkte, abgefüllt in Flaschen.
         Wird dafür ein Handelsprodukt erstellt, kann dieses auf digiFLUX gemeldet und verarbeitet werden.
         """@de ;
+    schema:keywords keyword:fertilizers,
+        keyword:plantprotection ;
     systemmap:usesMasterData systemmap:SMBGW7qHXQfR1VB9W,
         systemmap:SyhthSmTCgM19Wysy .
 
@@ -2892,6 +2915,7 @@ systemmap:SIsQ6LSUJc3xbG9B a dcat:Dataset ;
         """
         Prodotti utilizzati per combattere gli organismi nocivi. Sono inclusi anche i prodotti fitosanitari importati parallelamente da altri paesi.
         """@it ;
+    schema:keywords keyword:plantprotection ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
 systemmap:SKH5iXBfDQX2meMGo a dcat:Dataset ;
@@ -2900,7 +2924,9 @@ systemmap:SKH5iXBfDQX2meMGo a dcat:Dataset ;
     schema:description """
         Spezifischer Teil der Strukturdaten, der Flächen und Details zu Obstanlagen erfasst.
         Die Datenstruktur unterscheidet nach Kulturcodes und Dichtepflanzungen gemäss den Vorgaben des Fachbereichs Pflanzliche Produkte.
-        """@de .
+        """@de ;
+    schema:keywords keyword:cropproduction,
+        keyword:farmstructure .
 
 systemmap:SKoClBiquflDf7yi6 a dcat:Dataset ;
     schema:name "Rohdaten der Datenlieferanten"@de,
@@ -2911,6 +2937,7 @@ systemmap:SKoClBiquflDf7yi6 a dcat:Dataset ;
         "Heterogeneous raw data (e.g., XLSX) from approx. 400 data suppliers."@en,
         "Données brutes hétérogènes (p. ex. XLSX) d'environ 400 fournisseurs de données."@fr,
         "Dati grezzi eterogenei (ad es. XLSX) da circa 400 fornitori di dati."@it ;
+    schema:keywords keyword:marketdata ;
     prov:wasDerivedFrom systemmap:SXIIUKFjUBDaaTzh6 ;
     systemmap:containedIn systemmap:Sc6kZqxTyS0gFGCY ;
     systemmap:informs systemmap:S1AkhvKmzBiJFCTc .
@@ -2921,6 +2948,8 @@ systemmap:SLJMFAZ6GNdFvfb2L a dcat:Dataset ;
         "Données de marché Fruits et légumes"@fr,
         "Dati di mercato Frutta e verdura"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    schema:keywords keyword:cropproduction,
+        keyword:marketdata ;
     schema:url <https://www.agrarmarktdaten.ch/markt/fruchte-gemuese> .
 
 systemmap:SLXw4VofhYbzXVNKC a dcat:Dataset ;
@@ -2932,12 +2961,14 @@ systemmap:SLXw4VofhYbzXVNKC a dcat:Dataset ;
         "These data are essential for the calculation and payment of subsidies for cheesed milk as well as for feeding without silage by the Federal Office for Agriculture (BLW)."@en,
         "Ces données sont essentielles pour le calcul et le paiement des subventions pour le lait transformé en fromage ainsi que pour l'alimentation sans ensilage par l'Office fédéral de l'agriculture (OFAG)."@fr,
         "Questi dati sono essenziali per il calcolo e il pagamento dei sussidi per il latte trasformato in formaggio e per l'alimentazione senza insilato da parte dell'Ufficio federale dell'agricoltura (UFAG)."@it ;
+    schema:keywords keyword:dairyfarming ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP ;
     schema:url <https://www.blw.admin.ch/> .
 
 systemmap:SMBGW7qHXQfR1VB9W a dcat:Dataset ;
     schema:name "Mineraldünger"@de ;
     dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
+    schema:keywords keyword:fertilizers ;
     prov:wasDerivedFrom systemmap:SZBHsREMx369FArg .
 
 systemmap:SOnojYdZDj18fW8Ko a dcat:Dataset ;
@@ -2946,12 +2977,15 @@ systemmap:SOnojYdZDj18fW8Ko a dcat:Dataset ;
         Datensatz der aggregierten Milchproduktionsdaten (kg Milch) pro Betriebseinheit.
         Die Daten werden über eine Schnittstelle der TSM Treuhand GmbH (DB Milch) in AGIS integriert und dienen der Überwachung der Milchproduktion sowie statistischen Auswertungen.
         """@de ;
+    schema:keywords keyword:dairyfarming,
+        keyword:farmstructure ;
     prov:wasDerivedFrom systemmap:Se6Nt3cqogxz2d10g ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k .
 
 systemmap:SOqI5Nd7eaHDXIhDG a dcat:Dataset ;
     schema:name "Hof- und Recycling-Dünger"@de ;
     dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
+    schema:keywords keyword:fertilizers ;
     prov:wasDerivedFrom systemmap:SENtOaRGg22EqHWXq .
 
 systemmap:SPCig1xdekUHDV4r a dcat:Dataset ;
@@ -2963,6 +2997,8 @@ systemmap:SPCig1xdekUHDV4r a dcat:Dataset ;
         "Monthly statistics and multi-year comparisons containing information on the milk produced and its processing into different product groups."@en,
         "Statistiques mensuelles et comparaisons pluriannuelles contenant des informations sur le lait produit et sa transformation en différentes catégories de produits."@fr,
         "Statistiche mensili e confronti pluriennali contenenti informazioni sul latte prodotto e sulla sua trasformazione in diverse categorie di prodotti."@it ;
+    schema:keywords keyword:dairyfarming,
+        keyword:marketdata ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
 systemmap:SRT6X0n1ML8vX3uV a dcat:Dataset ;
@@ -2973,10 +3009,12 @@ systemmap:SRT6X0n1ML8vX3uV a dcat:Dataset ;
         Marktdaten wie Preise und Mengen zu verschiedenen Produkten im Agrar- und Ernährungssektor, welche in RDF-Form öffentlich zugänglich und herunterladbar sind.
         Die Marktdaten, welche aus der NielsenIQ Datenbank bezogen wurden, sind hier aus vertraglichen Gründen nicht mit enthalten.
         """@de ;
+    schema:keywords keyword:marketdata ;
     prov:wasDerivedFrom systemmap:S2XkdeKmzFiJFXWc .
 
 systemmap:SRT6X0n1ML8vwHUW a dcat:Dataset ;
     schema:name "Linked Open Data"@en ;
+    schema:keywords keyword:marketdata ;
     systemmap:containedIn systemmap:SHFSc6xgsHF70IlUd .
 
 systemmap:SSyCUWt1u4bzJ4liA a dcat:Dataset ;
@@ -2985,6 +3023,8 @@ systemmap:SSyCUWt1u4bzJ4liA a dcat:Dataset ;
         "Données de marché Pommes de terre et produits à base de pommes de terre"@fr,
         "Dati di mercato Patate e prodotti a base di patate"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    schema:keywords keyword:cropproduction,
+        keyword:marketdata ;
     schema:url <https://www.agrarmarktdaten.ch/markt/kartoffeln> .
 
 systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
@@ -3004,10 +3044,13 @@ systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
         """
         Miscele o soluzioni composte da due o più sostanze.
         """@it ;
+    schema:keywords keyword:fertilizers,
+        keyword:plantprotection ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
 systemmap:SVXa3t3SyxjgPiLBx a dcat:Dataset ;
     schema:name "Daten der Geburtsmeldungen"@de ;
+    schema:keywords keyword:animaltraceability ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
 systemmap:SXIIUKFjUBDaaTzh6 a dcat:Dataset ;
@@ -3018,7 +3061,8 @@ systemmap:SXIIUKFjUBDaaTzh6 a dcat:Dataset ;
     schema:description "Vom Marktforschungsunternehmen Nielsen zugekaufte Daten über den Einzelhandel."@de,
         "Data on the retail sector purchased from the market research company Nielsen."@en,
         "Données sur le secteur du commerce de détail achetées à l'entreprise d'études de marché Nielsen."@fr,
-        "Dati sul settore del commercio al dettaglio acquistati dalla società di ricerche di mercato Nielsen."@it .
+        "Dati sul settore del commercio al dettaglio acquistati dalla società di ricerche di mercato Nielsen."@it ;
+    schema:keywords keyword:marketdata .
 
 systemmap:SY3MaMtlZPlOgUn4j a dcat:Dataset ;
     schema:name "Betriebsdaten"@de ;
@@ -3027,6 +3071,7 @@ systemmap:SY3MaMtlZPlOgUn4j a dcat:Dataset ;
         Der Datensatz aggregiert die administrativen Registerdaten (u. a. Anmeldungs-, Tier- und Pflanzenbaudaten), die zur Erstellung des Betriebsblattes erforderlich sind.
         Dabei bildet er die Verknüpfungen zwischen Betrieb und Bewirtschafter (Eigentümer) sowie die referenziellen Identifikatoren (BUR-Nummer, UID, AGIS-ID, TVD-Nr., sowie die kantonale Betriebs-ID) ab.
         """@de ;
+    schema:keywords keyword:farmstructure ;
     prov:wasDerivedFrom systemmap:SldiTYOuXQmoC3SV,
         systemmap:SvNriWslaOR5xkdw,
         systemmap:SzuDlnYUQMk3HaCb ;
@@ -3040,6 +3085,7 @@ systemmap:SZBHsREMx369FArg a dcat:Dataset ;
         Dokumentiert detaillierte Angaben zu Zusammensetzung (Ausgangsmaterialien, Komponentenmaterialkategorien, Nährstoffgehalte), GHS-Einstufung/-Kennzeichnung und Verwendungszwecken.
         Ermöglicht die Nachverfolgung von Zulassungs-, Änderungs- und Erneuerungsverfahren sowie den Zugriff auf zugehörige Dokumente im Rahmen der Schweizer Düngerregulierung.
         """@de ;
+    schema:keywords keyword:fertilizers ;
     rdfs:seeAlso <https://backend.blw.admin.ch/fileservice/sdweb-docs-prod-blwch-files/files/2024/11/14/0bddf556-3864-4fa4-ada6-a3120e26d6dc.pdf>,
         <https://www.blw.admin.ch/de/duenger> ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
@@ -3050,14 +3096,18 @@ systemmap:SaBrXH2dHae5TTGXD a dcat:Dataset ;
     schema:description """
         Kernbestandteil der Strukturdaten, der sämtliche landwirtschaftlichen Nutzflächen nach Kulturart (Hauptkulturen, Zwischenkulturen) und Nutzungstyp (z. B. Biodiversitätsförderflächen) klassifiziert.
         Beinhaltet auch spezifische Attribute für Hanglagen und Vernetzungsprojekte.
-        """@de .
+        """@de ;
+    schema:keywords keyword:cropproduction,
+        keyword:farmstructure .
 
 systemmap:SaDr294dHxD5TTDxT a dcat:Dataset ;
     schema:name "Daten zum Nährstoffmanagement"@de ;
     dcterms:isPartOf systemmap:SzuDlnYUQMk3HaCb ;
     schema:description """
         Daten über das Nährstoffmanagement von Betrieben, welche im Rahmen eines Pilotprojektes von den GELAN-Kantonen an AGIS übermittelt wurden bzw. werden.
-        """@de .
+        """@de ;
+    schema:keywords keyword:farmstructure,
+        keyword:fertilizers .
 
 systemmap:Sb2FM7pKN60PrRwU a dcat:Dataset ;
     schema:name "Globale Pflanzenliste"@de,
@@ -3088,6 +3138,7 @@ systemmap:Sb2FM7pKN60PrRwU a dcat:Dataset ;
         Questi cosiddetti codici UPOV sono generalmente composti da cinque lettere per il genere e tre lettere per la specie. Ad esempio, <tt>PRUNU_ARM</tt> rappresenta <i>Prunus armeniaca</i> (albicocco).
         Questo sistema facilita la classificazione e lo scambio di informazioni sulle varietà vegetali.
         """@it ;
+    schema:keywords keyword:cropproduction ;
     systemmap:containedIn systemmap:SgjZ0efLbuCR2HvN .
 
 systemmap:ScCrXM2dHaelTTGLf a dcat:Dataset ;
@@ -3097,7 +3148,8 @@ systemmap:ScCrXM2dHaelTTGLf a dcat:Dataset ;
         Umfasst die detaillierten Tierbestände pro Tierkategorie am Stichtag.
         Für Rinder und Equiden erfolgt der Abgleich über die TVD-Nummer, während andere Kategorien direkt über kantonale Erhebungen gemeldet werden.
         Die Daten sind Teil der Strukturdatenerhebung.
-        """@de .
+        """@de ;
+    schema:keywords keyword:farmstructure .
 
 systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
     schema:name "Daten zur Milchproduktion"@de,
@@ -3120,6 +3172,7 @@ systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
         Quantità di produzione mensili (in kg) del latte di mucca e bufala consegnato nel mese precedente da tutti i produttori di latte.
         L'UFAG necessita di queste informazioni per l'assegnazione del sussidio per il latte di consumo.
         """@it ;
+    schema:keywords keyword:dairyfarming ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
 systemmap:SisV9d3pviAFO8vTK a dcat:Dataset ;
@@ -3128,6 +3181,8 @@ systemmap:SisV9d3pviAFO8vTK a dcat:Dataset ;
         "Données de marché Oléagineux et protéagineux"@fr,
         "Dati di mercato Semi oleosi e piante proteiche"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    schema:keywords keyword:cropproduction,
+        keyword:marketdata ;
     schema:url <https://www.agrarmarktdaten.ch/markt/olsaaten> .
 
 systemmap:SkcU0PDb6fucIKa9k a dcat:Dataset ;
@@ -3136,6 +3191,8 @@ systemmap:SkcU0PDb6fucIKa9k a dcat:Dataset ;
         "Données de marché Céréales panifiables, farine et produits de boulangerie"@fr,
         "Dati di mercato Cereali panificabili, farina e prodotti da forno"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    schema:keywords keyword:cropproduction,
+        keyword:marketdata ;
     schema:url <https://www.agrarmarktdaten.ch/markt/getreide> .
 
 systemmap:SoBRgq7STLbZfEze a dcat:Dataset ;
@@ -3159,6 +3216,7 @@ systemmap:SoBRgq7STLbZfEze a dcat:Dataset ;
         Contiene dati specifici che devono essere registrati a causa di obblighi di notifica estesi per pecore e capre.
         Ciò include le segnalazioni di nascite (entro 30 giorni), nonché decessi, arrivi e partenze e macellazioni (entro 3 giorni).
         """@it ;
+    schema:keywords keyword:animaltraceability ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
 systemmap:SpT5dE2PIEfeWKafV a dcat:Dataset ;
@@ -3167,6 +3225,7 @@ systemmap:SpT5dE2PIEfeWKafV a dcat:Dataset ;
         "Données de marché Viande, produits carnés et charcuterie"@fr,
         "Dati di mercato Carne, prodotti a base di carne e insaccati"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    schema:keywords keyword:marketdata ;
     schema:url <https://www.agrarmarktdaten.ch/markt/fleisch> .
 
 systemmap:Spqrv6Ul05KJySTs a dcat:Dataset ;
@@ -3178,6 +3237,7 @@ systemmap:Spqrv6Ul05KJySTs a dcat:Dataset ;
         "Catalog of recognized agricultural plant varieties used in Switzerland. The information is recorded by breeders."@en,
         "Catalogue des variétés de plantes agricoles reconnues utilisées en Suisse. Les informations sont enregistrées par les sélectionneurs."@fr,
         "Catalogo delle varietà di piante agricole riconosciute utilizzate in Svizzera. Le informazioni sono registrate dai selezionatori."@it ;
+    schema:keywords keyword:cropproduction ;
     prov:wasDerivedFrom systemmap:Sb2FM7pKN60PrRwU ;
     systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj .
 
@@ -3187,6 +3247,7 @@ systemmap:SvAr93iMz2fj4HZBK a dcat:Dataset ;
         "Données de marché Œufs"@fr,
         "Dati di mercato Uova"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    schema:keywords keyword:marketdata ;
     schema:url <https://www.agrarmarktdaten.ch/markt/eier> .
 
 systemmap:SyhthSmTCgM19Wysy a dcat:Dataset ;
@@ -3195,6 +3256,7 @@ systemmap:SyhthSmTCgM19Wysy a dcat:Dataset ;
         "Produits phytosanitaires"@fr,
         "Prodotti fitosanitari"@it ;
     dcterms:isPartOf systemmap:Sl5KyePu7JtGiE3V ;
+    schema:keywords keyword:plantprotection ;
     prov:wasDerivedFrom systemmap:S9J1HTMKIxnCgmYc .
 
 systemmap:SzJ7aOICsI2KD9iOt a dcat:Dataset ;
@@ -3203,6 +3265,8 @@ systemmap:SzJ7aOICsI2KD9iOt a dcat:Dataset ;
         "Données de marché Lait et produits laitiers"@fr,
         "Dati di mercato Latte e prodotti lattiero-caseari"@it ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
+    schema:keywords keyword:dairyfarming,
+        keyword:marketdata ;
     schema:url <https://www.agrarmarktdaten.ch/markt/milch-und-milchprodukte> .
 
 systemmap:SzcK9O3XZFxVW1IS a dcat:Dataset ;
@@ -3214,6 +3278,8 @@ systemmap:SzcK9O3XZFxVW1IS a dcat:Dataset ;
         "Data on the segmentation of milk utilization according to the BOM1 regulation."@en,
         "Données sur la segmentation de la valorisation du lait selon le règlement BOM1."@fr,
         "Dati sulla segmentazione dell'utilizzo del latte secondo il regolamento BOM1."@it ;
+    schema:keywords keyword:dairyfarming,
+        keyword:marketdata ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
 systemmap:SzuDlnYUQMk3HaCb a dcat:Dataset ;
@@ -3241,6 +3307,7 @@ systemmap:SzuDlnYUQMk3HaCb a dcat:Dataset ;
         Copre quasi il 100% delle aziende e raccoglie variabili come le dimensioni aziendali, le superfici coltivate, il numero di animali da allevamento e gli occupati.
         L'indagine serve per l'analisi statistica dell'agricoltura, l'aggiornamento del registro delle aziende e le decisioni di politica agricola.
         """@it ;
+    schema:keywords keyword:farmstructure ;
     systemmap:containedIn systemmap:SvDlxaJ5YMkuZGH6k ;
     systemmap:informs systemmap:SX1qchbxSZKWI6Up .
 

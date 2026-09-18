@@ -762,15 +762,36 @@ systemmap:S6J4iyI6nMI2RCXSY a schema:SoftwareApplication ;
     systemmap:operatedBy systemmap:SFL2DYxeNnVaFsv64 .
 
 systemmap:S7DUZFs3emPOPYErT a schema:SoftwareApplication ;
-    schema:name "LAWIS plus"@de ;
-    schema:alternateName "Neues interkanonales Agrarinformationssystem"@de, "NikA"@de ;
+    schema:name "LAWIS plus"@de,
+        "LAWIS plus"@en,
+        "LAWIS plus"@fr,
+        "LAWIS plus"@it ;
+    schema:alternateName "Neues interkantonales Agrarinformationssystem"@de, "NikA"@de ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     schema:description """
-        Gemeinsame IT-Plattform von 12 Schweizer Kantonen für den Vollzug der Landwirtschaftspolitik. 
-        LAWIS plus dient der Verwaltung von Strukturdaten, Direktzahlungen und ökologischen Massnahmen. 
+        Gemeinsame IT-Plattform von 12 Schweizer Kantonen für den Vollzug der Landwirtschaftspolitik.
+        LAWIS plus dient der Erfassung von Strukturdaten und landwirtschaftlichen Flächen (GIS-basiert), der Programmanmeldung sowie der Verwaltung von Direktzahlungen und ökologischen Massnahmen.
         Technisch basiert das System auf der Plattform "LAWIS" und löst die Altsysteme "Agricola" und "agriPortal" ab.
         Die Geschäftsstelle liegt bei eOperations Schweiz.
-        """@de ;
+        """@de,
+        """
+        Joint IT platform of 12 Swiss cantons for the implementation of agricultural policy.
+        LAWIS plus is used for recording structural data and agricultural land (GIS-based), program registration and the management of direct payments and ecological measures.
+        Technically, the system is based on the "LAWIS" platform and replaces the legacy systems "Agricola" and "agriPortal".
+        The management office is run by eOperations Schweiz.
+        """@en,
+        """
+        Plateforme informatique commune de 12 cantons suisses pour l'exécution de la politique agricole.
+        LAWIS plus sert à la saisie des données structurelles et des surfaces agricoles (basée sur un SIG), à l'inscription aux programmes ainsi qu'à la gestion des paiements directs et des mesures écologiques.
+        Sur le plan technique, le système repose sur la plateforme « LAWIS » et remplace les anciens systèmes « Agricola » et « agriPortal ».
+        Le secrétariat est assuré par eOperations Suisse.
+        """@fr,
+        """
+        Piattaforma informatica comune di 12 Cantoni svizzeri per l'esecuzione della politica agricola.
+        LAWIS plus serve al rilevamento dei dati strutturali e delle superfici agricole (basato su GIS), all'iscrizione ai programmi e alla gestione dei pagamenti diretti e delle misure ecologiche.
+        Dal punto di vista tecnico, il sistema si basa sulla piattaforma "LAWIS" e sostituisce i sistemi precedenti "Agricola" e "agriPortal".
+        La segreteria è gestita da eOperations Svizzera.
+        """@it ;
     systemmap:developedBy zefix:180673 ;
     systemmap:operatedBy systemmap:SAz4vX5eiySS4vwuk,
         systemmap:SDMGFgrGMHxc0eoLM,
@@ -783,7 +804,8 @@ systemmap:S7DUZFs3emPOPYErT a schema:SoftwareApplication ;
         systemmap:SVpDMEiTfIVQsNzT8,
         systemmap:SoVAiCrMPYG2LJxsA,
         systemmap:STqW9eQHHZNwyCH8i,
-        systemmap:SUqub30lwOqlTtDN2 .
+        systemmap:SUqub30lwOqlTtDN2,
+        zefix:1354082 .
 
 systemmap:S7u1Bh6qfXUbSDkv a schema:SoftwareApplication ;
     schema:name "e-Deklaration"@de,
@@ -2440,26 +2462,6 @@ systemmap:SvDlxaJ5YMkuZGH6k a schema:SoftwareApplication ;
         "AGIS"@it ;
     systemmap:hasLegalBasis LwG:art_165_c ;
     systemmap:operatedBy systemmap:SE8y4MuFWW5BKqK92 .
-
-systemmap:Svbcr8GEkZLb3HmRI a schema:SoftwareApplication ;
-    schema:name "LAWIS plus"@de,
-        "LAWIS plus"@en,
-        "LAWIS plus"@fr,
-        "LAWIS plus"@it ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
-    schema:description """
-        LAWIS plus ist ein digitales System zur Erfassung landwirtschaftlicher Flächen, Programmanmeldungen und Direktzahlungen für die Trägerkantone. Es umfasst GIS-basierte Flächenerfassung, Datenmutationsfunktionen und Antragsverwaltung für Agrarsubventionen.
-        """@de,
-        """
-        LAWIS plus is a digital system for agricultural land recording, program registration, and direct payments for the supporting cantons. It features GIS-based area mapping, data mutation tools, and subsidy application management.
-        """@en,
-        """
-        LAWIS plus est un système numérique pour l'enregistrement des surfaces agricoles, l'inscription aux programmes et les paiements directs pour les cantons responsables. Il inclut la cartographie géospatiale, les outils de gestion des données et la gestion des subventions agricoles.
-        """@fr,
-        """
-        LAWIS plus è un sistema digitale per la registrazione di terreni agricoli, l'iscrizione ai programmi e i pagamenti diretti per i cantoni responsabili. Include mappatura geospaziale, strumenti di gestione dati e amministrazione di sovvenzioni agrarie.
-        """@it ;
-    systemmap:operatedBy zefix:1354082 .
 
 systemmap:SveDUGZvttVw7ga7l a schema:SoftwareApplication,
         systemmap:FMIS ;

@@ -348,10 +348,51 @@ LwG:art_27 a schema:Legislation ;
         "Art. 27 LAgr"@fr,
         "Art. 27 LAgr"@it .
 
+LwG:art_178 a schema:Legislation ;
+    schema:name "Art. 178 LwG"@de,
+        "Art. 178 AgricA"@en,
+        "Art. 178 LAgr"@fr,
+        "Art. 178 LAgr"@it .
+
 <https://www.fedlex.admin.ch/eli/cc/1998/3244_3244_3244> a schema:Legislation ;
     schema:name "Ordinanza concernente l'importazione e l'esportazione di verdura, frutta e prodotti della floricoltura",
         "Verordnung über die Ein- und Ausfuhr von Gemüse, Obst und Gartenbauerzeugnissen (VEAGOG)"@de,
         "Ordonnance sur l'importation et l'exportation de légumes, de fruits et de plantes horticoles"@fr .
+
+<https://www.fedlex.admin.ch/eli/cc/1999/13> a schema:Legislation ;
+    schema:name "Verordnung über landwirtschaftliche Begriffe und die Anerkennung von Betriebsformen (Landwirtschaftliche Begriffsverordnung, LBV)"@de,
+        "Ordonnance sur la terminologie agricole et la reconnaissance des formes d'exploitation (Ordonnance sur la terminologie agricole, OTerm)"@fr,
+        "Ordinanza sulla terminologia agricola e sul riconoscimento delle forme di azienda (Ordinanza sulla terminologia agricola, OTerm)"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_6> a schema:Legislation ;
+    schema:name "Art. 6 LBV"@de,
+        "Art. 6 OTerm"@fr,
+        "Art. 6 OTerm"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_9> a schema:Legislation ;
+    schema:name "Art. 9 LBV"@de,
+        "Art. 9 OTerm"@fr,
+        "Art. 9 OTerm"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_13> a schema:Legislation ;
+    schema:name "Art. 13 LBV"@de,
+        "Art. 13 OTerm"@fr,
+        "Art. 13 OTerm"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_14> a schema:Legislation ;
+    schema:name "Art. 14 LBV"@de,
+        "Art. 14 OTerm"@fr,
+        "Art. 14 OTerm"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_16> a schema:Legislation ;
+    schema:name "Art. 16 LBV"@de,
+        "Art. 16 OTerm"@fr,
+        "Art. 16 OTerm"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_24> a schema:Legislation ;
+    schema:name "Art. 24 LBV"@de,
+        "Art. 24 OTerm"@fr,
+        "Art. 24 OTerm"@it .
 
 <https://www.fedlex.admin.ch/eli/cc/1999/71> a schema:Legislation ;
     schema:name "Verordnung über die Marktbeobachtung im Landwirtschaftsbereich"@de,
@@ -361,6 +402,11 @@ LwG:art_27 a schema:Legislation ;
 
 <https://www.fedlex.admin.ch/eli/cc/2003/791> a schema:Legislation ;
     schema:name "Verordnung über den Schlachtvieh- und Fleischmarkt (Schlachtviehverordnung, SV)"@de .
+
+<https://www.fedlex.admin.ch/eli/cc/2008/389> a schema:Legislation ;
+    schema:name "Verordnung über Geoinformation (Geoinformationsverordnung, GeoIV)"@de,
+        "Ordonnance sur la géoinformation (OGéo)"@fr,
+        "Ordinanza sulla geoinformazione (OGI)"@it .
 
 <https://www.fedlex.admin.ch/eli/cc/2010/340> a schema:Legislation ;
     schema:name "Verordnung über das Inverkehrbringen von Pflanzenschutzmitteln (Pflanzenschutzmittelverordnung, PSMV)"@de,
@@ -372,6 +418,11 @@ LwG:art_27 a schema:Legislation ;
     schema:name "Verordnung über die Einfuhr von landwirtschaftlichen Erzeugnissen (Agrareinfuhrverordnung, AEV)"@de,
         "Ordonnance sur l’importation de produits agricoles"@fr,
         "Ordinanza concernente l’importazione di prodotti agricoli"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/733> a schema:Legislation ;
+    schema:name "Verordnung über Informationssysteme im Bereich der Landwirtschaft (ISLV)"@de,
+        "Ordonnance sur les systèmes d'information dans le domaine de l'agriculture (OSIAgr)"@fr,
+        "Ordinanza sui sistemi d'informazione nel campo dell'agricoltura (OSIAgr)"@it .
 
 <https://www.fedlex.admin.ch/eli/cc/2013/733/de#annex_2/lvl_u1/lvl_1> a schema:Legislation ;
     schema:name "Anh. 2 Ziff. 1 ISLV"@de .
@@ -399,6 +450,71 @@ LwG:art_27 a schema:Legislation ;
 
 <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_13> a schema:Legislation ;
     schema:name "Art. 13 ISLV"@de .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/765> a schema:Legislation ;
+    schema:name "Verordnung über die Direktzahlungen an die Landwirtschaft (Direktzahlungsverordnung, DZV)"@de,
+        "Ordonnance sur les paiements directs versés dans l'agriculture (Ordonnance sur les paiements directs, OPD)"@fr,
+        "Ordinanza concernente i pagamenti diretti all'agricoltura (Ordinanza sui pagamenti diretti, OPD)"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/765/de#annex_1> a schema:Legislation ;
+    schema:name "Anh. 1 DZV"@de,
+        "Annexe 1 OPD"@fr,
+        "All. 1 OPD"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/765/de#annex_2> a schema:Legislation ;
+    schema:name "Anh. 2 DZV"@de,
+        "Annexe 2 OPD"@fr,
+        "All. 2 OPD"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/765/de#annex_3> a schema:Legislation ;
+    schema:name "Anh. 3 DZV"@de,
+        "Annexe 3 OPD"@fr,
+        "All. 3 OPD"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/765/de#annex_4> a schema:Legislation ;
+    schema:name "Anh. 4 DZV"@de,
+        "Annexe 4 OPD"@fr,
+        "All. 4 OPD"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/765/de#annex_7/lvl_u1/lvl_3> a schema:Legislation ;
+    schema:name "Anh. 7 Ziff. 3 DZV"@de,
+        "Annexe 7, ch. 3 OPD"@fr,
+        "All. 7 n. 3 OPD"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_38> a schema:Legislation ;
+    schema:name "Art. 38 DZV"@de,
+        "Art. 38 OPD"@fr,
+        "Art. 38 OPD"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_45> a schema:Legislation ;
+    schema:name "Art. 45 DZV"@de,
+        "Art. 45 OPD"@fr,
+        "Art. 45 OPD"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_55> a schema:Legislation ;
+    schema:name "Art. 55 DZV"@de,
+        "Art. 55 OPD"@fr,
+        "Art. 55 OPD"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_56> a schema:Legislation ;
+    schema:name "Art. 56 DZV"@de,
+        "Art. 56 OPD"@fr,
+        "Art. 56 OPD"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_58> a schema:Legislation ;
+    schema:name "Art. 58 DZV"@de,
+        "Art. 58 OPD"@fr,
+        "Art. 58 OPD"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_59> a schema:Legislation ;
+    schema:name "Art. 59 DZV"@de,
+        "Art. 59 OPD"@fr,
+        "Art. 59 OPD"@it .
+
+<https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_113> a schema:Legislation ;
+    schema:name "Art. 113 DZV"@de,
+        "Art. 113 OPD"@fr,
+        "Art. 113 OPD"@it .
 
 <https://www.fedlex.admin.ch/eli/cc/2016/565> a schema:Legislation ;
     schema:name "Verordnung des BLW über die Festlegung von Perioden und Fristen sowie die Freigabe von Zollkontingentsteilmengen für die Einfuhr von frischem Gemüse und frischem Obst (VEAGOG-Freigabeverordnung)"@de .
@@ -2730,6 +2846,93 @@ systemmap:S4ZuIO9s81WMS2bKB a dcat:Dataset ;
         keyword:marketdata ;
     schema:url <https://www.agrarmarktdaten.ch/markt/futtermittel> .
 
+systemmap:S6bwWorDTpggcf9qY a dcat:Dataset ;
+    schema:name "Perimeter Terrassenreben"@de,
+        "Terraced vineyard perimeter"@en,
+        "Périmètre Vignobles en terrasses"@fr,
+        "Perimetro vigneti in zone terrazzate"@it ;
+    dcterms:isPartOf systemmap:S6yMKG5iKUVwIobcj ;
+    schema:description """
+        Geobasisdatensatz mit dem Identifikator 153.2, der alle vom Kanton zu Terrassenbeiträgen anerkannten Perimeter der Schweiz umfasst.
+        Als Terrassenlagen gelten Rebflächen ab 30 Prozent natürlicher Hangneigung, welche mit Stützmauern regelmässig abgestuft sind; die Hangneigung innerhalb der Terrassenlagen spielt dabei keine Rolle.
+        Durch Überlagern mit der Ebene Nutzungsflächen lassen sich die Reben in Terrassen ermitteln.
+        Der Datensatz wird vom Standortkanton erstellt und verwaltet.
+        """@de,
+        """
+        Geobasedata set with identifier 153.2, comprising all perimeters in Switzerland recognised by the canton as eligible for terrace contributions.
+        Terraces are vineyard areas with a natural gradient of at least 30 per cent that are regularly stepped with retaining walls; the gradient within the terraces is irrelevant.
+        Overlaying the perimeter with the utilisation areas layer identifies the vines grown on terraces.
+        The data set is created and maintained by the canton in which the area is located.
+        """@en,
+        """
+        Géodonnées de base portant l'identifiant 153.2, qui englobent tous les périmètres de la Suisse reconnus par le canton comme donnant droit aux contributions aux terrasses.
+        Sont réputés vignobles en terrasses les surfaces viticoles composées de paliers réguliers, épaulés par des murs de soutènement et présentant une déclivité naturelle de 30 % et plus; la déclivité des terrains en terrasses n'a aucune importance en l'occurrence.
+        La superposition avec le niveau des surfaces d'utilisation permet de déterminer les vignes en terrasses.
+        Le jeu de données est établi et géré par le canton où se situe la surface.
+        """@fr,
+        """
+        Geodati di base con l'identificatore 153.2, costituiti da tutti i perimetri della Svizzera a cui i Cantoni hanno accordato contributi per le zone terrazzate.
+        Per zone terrazzate s'intendono i vigneti, con almeno 30 per cento di declività naturale, che sono terrazzati con regolarità mediante muri di sostegno; la declività all'interno delle stesse è irrilevante.
+        Sovrapponendo il perimetro al livello delle superfici d'utilizzazione si possono individuare le viti in zone terrazzate.
+        Il set di dati è allestito e gestito dal Cantone di ubicazione.
+        """@it ;
+    schema:keywords keyword:cropproduction ;
+    schema:url <https://www.geodienste.ch/services/lwb_perimeter_terrassenreben> ;
+    systemmap:hasLegalBasis LwG:art_178,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#annex_3>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_45>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_113> .
+
+systemmap:S6yMKG5iKUVwIobcj a dcat:Dataset ;
+    schema:name "Landwirtschaftliche Kulturflächen"@de,
+        "Agricultural cultivated areas"@en,
+        "Surfaces agricoles cultivées"@fr,
+        "Superfici agricole"@it ;
+    schema:description """
+        Geobasisdatensatz mit dem Identifikator 153 nach Anhang 1 der Geoinformationsverordnung (GeoIV), unter dem die landwirtschaftlichen Betriebs- und Flächendaten mit Raumbezug gesamtschweizerisch erfasst und ausgetauscht werden.
+        Er dient dem Vollzug des Landwirtschaftsgesetzes – insbesondere als Grundlage zur Berechnung der Direktzahlungen – sowie dem Vollzug des Bundesstatistikgesetzes.
+        Zuständig für die Erfassung sind die Kantone; das BLW ist die Fachstelle des Bundes und gibt die minimalen Geodatenmodelle vor.
+        Die Kantone stellen die Daten über das interkantonale Portal geodienste.ch zur Verfügung und übermitteln sie jährlich bis zum 31. Dezember des Beitragsjahres an das BLW.
+        Der Eintrag umfasst die fünf Geodatensätze Nutzungsflächen (153.1), Perimeter Terrassenreben (153.2), Biodiversitätsförderflächen Qualitätsstufe II und Vernetzung (153.3), Perimeter Landwirtschaftliche Nutzfläche und Sömmerungsflächen (153.5) und Bewirtschaftungseinheiten (153.6).
+        """@de,
+        """
+        Geobasedata set with identifier 153 according to Annex 1 of the Geoinformation Ordinance (GeoIV), under which spatial data on agricultural holdings and areas are recorded and exchanged nationwide.
+        It serves the implementation of the Agriculture Act – in particular as the basis for calculating direct payments – as well as the implementation of the Federal Statistics Act.
+        The cantons are responsible for recording the data; the FOAG is the competent federal agency and defines the minimal geodata models.
+        The cantons publish the data via the intercantonal portal geodienste.ch and transmit it to the FOAG annually by 31 December of the contribution year.
+        The entry comprises the five geodata sets utilisation areas (153.1), terraced vineyard perimeter (153.2), biodiversity promotion areas quality level II and networking (153.3), perimeter of the utilised agricultural area and summer pasture areas (153.5) and management units (153.6).
+        """@en,
+        """
+        Géodonnées de base portant l'identifiant 153 selon l'annexe 1 de l'ordonnance sur la géoinformation (OGéo), sous lequel les données spatiales sur les exploitations et les surfaces agricoles sont relevées et échangées à l'échelon suisse.
+        Elles servent à l'exécution de la loi sur l'agriculture – notamment en tant que données de base pour le calcul des paiements directs – ainsi qu'à celle de la loi sur la statistique fédérale.
+        Les cantons sont chargés de la saisie; l'OFAG est le service spécialisé de la Confédération et fixe les modèles de géodonnées minimaux.
+        Les cantons mettent les données à disposition via le portail intercantonal geodienste.ch et les transmettent à l'OFAG chaque année au plus tard le 31 décembre de l'année de contributions.
+        L'entrée comprend les cinq jeux de géodonnées surfaces d'utilisation (153.1), périmètre vignobles en terrasses (153.2), surfaces de promotion de la biodiversité niveau de qualité II et mises en réseau (153.3), périmètre surface agricole utile et surfaces d'estivage (153.5) et unités d'exploitation (153.6).
+        """@fr,
+        """
+        Geodati di base con l'identificatore 153 secondo l'allegato 1 dell'ordinanza sulla geoinformazione (OGI), sotto il quale i dati sulle aziende e le superfici agricole sono rilevati e scambiati a livello nazionale.
+        Servono all'esecuzione della legge sull'agricoltura – in particolare quale base per il calcolo dei pagamenti diretti – nonché all'esecuzione della legge federale sulla statistica.
+        La registrazione compete ai Cantoni; l'UFAG è il servizio specializzato della Confederazione e stabilisce i modelli minimi di geodati.
+        I Cantoni mettono i dati a disposizione attraverso il portale intercantonale geodienste.ch e li trasmettono all'UFAG annualmente entro il 31 dicembre dell'anno di contribuzione.
+        L'entrata comprende i cinque set di geodati superfici d'utilizzazione (153.1), perimetro vigneti in zone terrazzate (153.2), superfici per la promozione della biodiversità livello qualitativo II e interconnessione (153.3), perimetro superficie agricola utile e superfici d'estivazione (153.5) e unità di gestione (153.6).
+        """@it ;
+    schema:keywords keyword:cropproduction,
+        keyword:farmstructure ;
+    schema:url <https://www.blw.admin.ch/de/landwirtschaftliche-kulturflaechen> ;
+    rdfs:seeAlso <http://models.geo.admin.ch/BLW/>,
+        <https://www.blw.admin.ch/dam/de/sd-web/D2Gml463K0Pw/Leitfaden_Geodatenaustausch_Landwirtschaft_v2.0_DE.pdf>,
+        <https://www.blw.admin.ch/dam/de/sd-web/iXtOlVQkhfsJ/Modell_Landwirtschaftliche_Kulturfl%C3%A4chen_ID153_Bezugsjahr_2026.pdf>,
+        <https://www.geodienste.ch/> ;
+    systemmap:containedIn systemmap:S9SbhGAwWjtvcRIZ ;
+    systemmap:hasLegalBasis LwG:art_165_e,
+        LwG:art_178,
+        <https://www.fedlex.admin.ch/eli/cc/1999/13>,
+        <https://www.fedlex.admin.ch/eli/cc/2008/389>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/733>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/733/de#art_12>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_113> .
+
 systemmap:S7mhWQjPZiSFc8dU a dcat:Dataset ;
     schema:name "Tierereignisdaten"@de,
         "Animal event data"@en,
@@ -3022,6 +3225,48 @@ systemmap:SPCig1xdekUHDV4r a dcat:Dataset ;
         keyword:marketdata ;
     systemmap:containedIn systemmap:SYOd1TkacTh6cr0xP .
 
+systemmap:SQIzaCUP7T14g3zVz a dcat:Dataset ;
+    schema:name "Nutzungsflächen"@de,
+        "Utilisation areas"@en,
+        "Surfaces d'utilisation"@fr,
+        "Superfici d'utilizzazione"@it ;
+    dcterms:isPartOf systemmap:S6yMKG5iKUVwIobcj ;
+    schema:description """
+        Geobasisdatensatz mit dem Identifikator 153.1, der die landwirtschaftlich genutzten Flächen (inklusive Biodiversitätsförderflächen der Qualitätsstufe I) gemäss der landwirtschaftlichen Begriffsverordnung (LBV), der Direktzahlungsverordnung (DZV) und der daraus abgeleiteten Definitionen und Codierungen der Nutzungen durch Bund und Kantone enthält.
+        Die zu erfassenden Nutzungsflächen müssen innerhalb der dem Bewirtschafter zugeteilten Bewirtschaftungseinheiten liegen; auch der Perimeter Landwirtschaftliche Nutzfläche und Sömmerungsflächen dient ihrer Erfassung.
+        Der Datensatz wird vom Wohnsitzkanton erstellt und verwaltet.
+        """@de,
+        """
+        Geobasedata set with identifier 153.1, containing the areas used for agriculture (including biodiversity promotion areas of quality level I) according to the Agricultural Terminology Ordinance (LBV), the Direct Payments Ordinance (DZV) and the definitions and codes for land use derived from them by the Confederation and the cantons.
+        The utilisation areas to be recorded must lie within the management units allocated to the farm manager; the perimeter of the utilised agricultural area and summer pasture areas also serves to record them.
+        The data set is created and maintained by the canton of residence.
+        """@en,
+        """
+        Géodonnées de base portant l'identifiant 153.1, qui comprennent les surfaces agricoles (y compris les surfaces de promotion de la biodiversité du niveau de qualité I) selon l'ordonnance sur la terminologie agricole (OTerm), l'ordonnance sur les paiements directs et la définition des utilisations qui en découle (y compris codification) et dont se servent la Confédération et les cantons.
+        Les surfaces d'utilisation à saisir doivent se trouver à l'intérieur des unités d'exploitation attribuées à l'exploitant; le périmètre surface agricole utile et surfaces d'estivage sert lui aussi à leur saisie.
+        Le jeu de données est établi et géré par le canton de domicile.
+        """@fr,
+        """
+        Geodati di base con l'identificatore 153.1, che comprendono le superfici utilizzate a scopo agricolo (incluse le superfici per la promozione della biodiversità del livello qualitativo I) di cui all'ordinanza sulla terminologia agricola (OTerm), all'ordinanza sui pagamenti diretti e alle rispettive definizioni (codici incl.) delle utilizzazioni date dalla Confederazione e dai Cantoni.
+        Le superfici d'utilizzazione da registrare devono trovarsi all'interno delle unità di gestione attribuite al gestore; per la loro registrazione si usa anche il perimetro superficie agricola utile e superfici d'estivazione.
+        Il set di dati è allestito e gestito dal Cantone di domicilio.
+        """@it ;
+    schema:keywords keyword:cropproduction,
+        keyword:farmstructure ;
+    schema:url <https://www.geodienste.ch/services/lwb_nutzungsflaechen> ;
+    systemmap:hasLegalBasis LwG:art_178,
+        <https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_13>,
+        <https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_14>,
+        <https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_16>,
+        <https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_24>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#annex_1>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#annex_4>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_38>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_55>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_56>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_58>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_113> .
+
 systemmap:SRT6X0n1ML8vX3uV a dcat:Dataset ;
     schema:name "Offene Marktdaten"@de,
         "Open market data"@en ;
@@ -3068,6 +3313,47 @@ systemmap:SUZP05KJlIyCX9A8 a dcat:Dataset ;
     schema:keywords keyword:fertilizers,
         keyword:plantprotection ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
+
+systemmap:SVOUqKzYw5URmgQEe a dcat:Dataset ;
+    schema:name "Biodiversitätsförderflächen Qualitätsstufe II und Vernetzung"@de,
+        "Biodiversity promotion areas quality level II and networking"@en,
+        "Surfaces de promotion de la biodiversité, niveau de qualité II et mises en réseau"@fr,
+        "Superfici per la promozione della biodiversità, livello qualitativo II e interconnessione"@it ;
+    dcterms:isPartOf systemmap:S6yMKG5iKUVwIobcj ;
+    schema:description """
+        Geobasisdatensatz mit dem Identifikator 153.3, der die Elemente beschreibt, für die ein Bewirtschafter Bundesbeiträge für biologische Qualität sowie für Vernetzung erhält.
+        Die Flächen überlagern die Nutzungsflächen und sind – mit Ausnahme der artenreichen Grün- und Streueflächen im Sömmerungsgebiet – eine Untermenge der Biodiversitätsförderflächen der Qualitätsstufe I.
+        Qualitätsstufe II und Vernetzung werden in zwei separaten Ebenen geführt und können sich überlagern.
+        Der Datensatz wird vom Wohnsitzkanton erstellt und verwaltet.
+        """@de,
+        """
+        Geobasedata set with identifier 153.3, describing the elements for which a farm manager receives federal contributions for biological quality and for networking.
+        The areas overlay the utilisation areas and are – with the exception of species-rich grassland and litter areas in the summer pasture region – a subset of the biodiversity promotion areas of quality level I.
+        Quality level II and networking are kept in two separate layers and may overlap.
+        The data set is created and maintained by the canton of residence.
+        """@en,
+        """
+        Géodonnées de base portant l'identifiant 153.3, qui décrivent les éléments du niveau de qualité II et de la mise en réseau donnant droit aux contributions fédérales.
+        Les surfaces se superposent aux surfaces d'utilisation et constituent, à l'exception des surfaces herbagères et surfaces à litière riches en espèces dans la région d'estivage, un sous-ensemble des surfaces de promotion de la biodiversité du niveau de qualité I.
+        Le niveau de qualité II et la mise en réseau constituent deux couches séparées qui peuvent être superposées.
+        Le jeu de données est établi et géré par le canton de domicile.
+        """@fr,
+        """
+        Geodati di base con l'identificatore 153.3, che descrivono gli elementi per il livello qualitativo II e per l'interconnessione che ricevono contributi federali.
+        Le superfici si sovrappongono alle superfici d'utilizzazione e, fatta eccezione per le superfici inerbite e i terreni da strame ricchi di specie nella regione d'estivazione, sono un sottoinsieme delle superfici per la promozione della biodiversità del livello qualitativo I.
+        Livello qualitativo II e interconnessione sono gestiti in due livelli separati e possono sovrapporsi.
+        Il set di dati è allestito e gestito dal Cantone di domicilio.
+        """@it ;
+    schema:keywords keyword:cropproduction,
+        keyword:farmstructure ;
+    schema:url <https://www.geodienste.ch/services/lwb_biodiversitaetsfoerderflaechen> ;
+    systemmap:hasLegalBasis LwG:art_178,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#annex_4>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#annex_7/lvl_u1/lvl_3>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_55>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_56>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_59>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_113> .
 
 systemmap:SVXa3t3SyxjgPiLBx a dcat:Dataset ;
     schema:name "Daten der Geburtsmeldungen"@de ;
@@ -3172,6 +3458,44 @@ systemmap:ScCrXM2dHaelTTGLf a dcat:Dataset ;
         """@de ;
     schema:keywords keyword:farmstructure .
 
+systemmap:ScW9Xs9od9BdpVJs7 a dcat:Dataset ;
+    schema:name "Bewirtschaftungseinheiten"@de,
+        "Management units"@en,
+        "Unités d'exploitation"@fr,
+        "Unità di gestione"@it ;
+    dcterms:isPartOf systemmap:S6yMKG5iKUVwIobcj ;
+    schema:description """
+        Geobasisdatensatz mit dem Identifikator 153.6, der beschreibt, welche Bewirtschaftungseinheiten von welchem Betrieb – Ganzjahres- oder Sömmerungsbetrieb – und allenfalls von welchen Produktionsstätten aus bewirtschaftet werden.
+        Die Summe aller Bewirtschaftungseinheiten eines Betriebes ergibt die Betriebsfläche beziehungsweise den Alpperimeter im Sömmerungsgebiet.
+        Die Bewirtschaftungseinheiten sind nutzungsunabhängig, werden in der Regel aus den Parzellen der amtlichen Vermessung erstellt und bilden die Grundlage für die Erfassung der Nutzungsflächen sowie der Flächen ausserhalb von LN und SF.
+        Der Datensatz wird vom Wohnsitzkanton erstellt und verwaltet.
+        """@de,
+        """
+        Geobasedata set with identifier 153.6, describing which management units are farmed by which holding – year-round or summer pasture holding – and, where applicable, from which production sites.
+        The sum of all management units of a holding yields the farm area, or the alpine perimeter in the summer pasture region.
+        The management units are independent of land use, are generally derived from the parcels of the official cadastral survey and form the basis for recording the utilisation areas as well as areas outside the utilised agricultural area and the summer pasture areas.
+        The data set is created and maintained by the canton of residence.
+        """@en,
+        """
+        Géodonnées de base portant l'identifiant 153.6, qui indiquent quelles unités d'exploitation sont exploitées, par quelle exploitation – à l'année ou d'estivage – et le cas échéant depuis quelles unités de production.
+        La somme de toutes les unités d'exploitation représente la surface d'exploitation, ou le périmètre d'alpages dans la région d'estivage.
+        Les unités d'exploitation sont indépendantes de l'utilisation, sont en règle générale établies sur la base des parcelles de la mensuration officielle et forment la base de la saisie des surfaces d'utilisation ainsi que des surfaces situées en dehors de la SAU et de la SEst.
+        Le jeu de données est établi et géré par le canton de domicile.
+        """@fr,
+        """
+        Geodati di base con l'identificatore 153.6, che indicano quali unità di gestione sono gestite da quale azienda – gestita tutto l'anno o d'estivazione – e, eventualmente, a partire da quali unità di produzione.
+        La somma di tutte le unità di gestione di un'azienda determina la superficie aziendale o, nel caso della regione d'estivazione, il comprensorio dell'alpe.
+        Le unità di gestione sono indipendenti dall'utilizzazione, vengono in genere ricavate dalle particelle della misurazione ufficiale e costituiscono la base per la registrazione delle superfici d'utilizzazione nonché delle superfici fuori della SAU e SE.
+        Il set di dati è allestito e gestito dal Cantone di domicilio.
+        """@it ;
+    schema:keywords keyword:farmstructure ;
+    schema:url <https://www.geodienste.ch/services/lwb_bewirtschaftungseinheit> ;
+    systemmap:hasLegalBasis LwG:art_178,
+        <https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_6>,
+        <https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_9>,
+        <https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_13>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_113> .
+
 systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
     schema:name "Daten zur Milchproduktion"@de,
         "Data on milk production"@en,
@@ -3270,6 +3594,47 @@ systemmap:SvAr93iMz2fj4HZBK a dcat:Dataset ;
     dcterms:isPartOf systemmap:S1AkhvKmzBiJFCTc ;
     schema:keywords keyword:marketdata ;
     schema:url <https://www.agrarmarktdaten.ch/markt/eier> .
+
+systemmap:SvEkMZM1UOAXN4dtz a dcat:Dataset ;
+    schema:name "Perimeter Landwirtschaftliche Nutzfläche und Sömmerungsflächen"@de,
+        "Perimeter of the utilised agricultural area and summer pasture areas"@en,
+        "Périmètre Surface agricole utile et surfaces d'estivage"@fr,
+        "Perimetro Superficie agricola utile e superfici d'estivazione"@it ;
+    dcterms:isPartOf systemmap:S6yMKG5iKUVwIobcj ;
+    schema:description """
+        Geobasisdatensatz mit dem Identifikator 153.5, ein aggregierter topologischer Layer, der die potenziell zu bewirtschaftende Landwirtschaftsfläche ohne die landwirtschaftlich unproduktiven Flächen darstellt.
+        Es sind dies die Flächen innerhalb der landwirtschaftlichen Nutzfläche (LN) und der Sömmerungsflächen (SF).
+        Er dient, wie die Bewirtschaftungseinheiten, als Erfassungshilfe der Nutzungsflächen; als Grundlage dient primär die Bodenbedeckung der amtlichen Vermessung.
+        Der Datensatz wird vom Standortkanton erstellt und verwaltet.
+        """@de,
+        """
+        Geobasedata set with identifier 153.5, an aggregated topological layer representing the agricultural area potentially available for farming, excluding unproductive areas.
+        These are the areas within the utilised agricultural area (UAA) and the summer pasture areas.
+        Like the management units, it serves as an aid for recording the utilisation areas; its primary basis is the land cover of the official cadastral survey.
+        The data set is created and maintained by the canton in which the area is located.
+        """@en,
+        """
+        Géodonnées de base portant l'identifiant 153.5, une couche topologique agrégée représentant la surface agricole potentiellement exploitable, sauf les surfaces improductives.
+        Ce sont les surfaces comprises dans la surface agricole utile (SAU) et la surface d'estivage (SEst).
+        Comme les unités d'exploitation, elle aide à saisir les surfaces d'utilisation; elle repose principalement sur la couverture du sol de la mensuration officielle.
+        Le jeu de données est établi et géré par le canton où se situe la surface.
+        """@fr,
+        """
+        Geodati di base con l'identificatore 153.5, un livello topologico aggregato che rappresenta la potenziale superficie agricola da gestire, senza le superfici agricole improduttive.
+        Si tratta delle superfici all'interno della superficie agricola utile (SAU) e delle superfici d'estivazione (SE).
+        Come le unità di gestione, funge da ausilio per la registrazione delle superfici d'utilizzazione; la base è costituita principalmente dalla copertura del suolo della misurazione ufficiale.
+        Il set di dati è allestito e gestito dal Cantone di ubicazione.
+        """@it ;
+    schema:keywords keyword:cropproduction,
+        keyword:farmstructure ;
+    schema:url <https://www.geodienste.ch/services/lwb_perimeter_ln_sf> ;
+    systemmap:hasLegalBasis LwG:art_178,
+        <https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_14>,
+        <https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_16>,
+        <https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_24>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#annex_2>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_38>,
+        <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_113> .
 
 systemmap:SyhthSmTCgM19Wysy a dcat:Dataset ;
     schema:name "Pflanzenschutzmittel"@de,

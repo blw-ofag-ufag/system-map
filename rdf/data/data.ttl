@@ -398,7 +398,8 @@ systemmap:S6VSaFePQaMGqU8vD a schema:Organization ;
     systemmap:abbreviation "BAR"@de,
         "SFA"@en,
         "AFS"@fr,
-        "AFS"@it .
+        "AFS"@it ;
+    schema:url <https://www.bar.admin.ch/> .
 
 systemmap:SBLH2G6TSKaqhqk4n a schema:Organization ;
     schema:name "Internationale Union zum Schutz von Pflanzenzüchtungen"@de,
@@ -412,7 +413,8 @@ systemmap:SBLH2G6TSKaqhqk4n a schema:Organization ;
     systemmap:abbreviation "UPOV"@de,
         "UPOV"@en,
         "UPOV"@fr,
-        "UPOV"@it .
+        "UPOV"@it ;
+    schema:url <https://www.upov.int/> .
 
 systemmap:SGayLcAMcywbigd3M a schema:Organization ;
     schema:name "Gemeinsame Anmeldestelle Chemikalien"@de,
@@ -437,11 +439,13 @@ systemmap:SGayLcAMcywbigd3M a schema:Organization ;
         """
         L'Autorità comune di notifica delle sostanze chimiche è il punto di contatto centrale per le sostanze chimiche in Svizzera,
         gestito dall'Ufficio federale dell'ambiente (UFAM), dall'Ufficio federale della sanità pubblica (UFSP) e dalla Segreteria di Stato dell'economia (SECO).
-        """@it .
+        """@it ;
+    schema:url <https://www.anmeldestelle.admin.ch/> .
 
 systemmap:ShM5kJNFhO8vOAEdK a schema:Organization ;
     schema:name "Europäische Kommission"@de,
-        "European Commission"@en .
+        "European Commission"@en ;
+    schema:url <https://commission.europa.eu/> .
 
 zefix:1124097 a schema:Organization ;
     schema:name "Branchenorganisation Milch (BO Milch)"@de,
@@ -456,27 +460,33 @@ zefix:1124097 a schema:Organization ;
         zefix:459488,
         zefix:871039 ;
     systemmap:abbreviation "BO Milch"@de,
-        "IP lait"@fr .
+        "IP lait"@fr ;
+    schema:url <https://www.ip-lait.ch/> .
 
 zefix:1138887 a schema:Organization ;
-    schema:name "Coop Genossenschaft"@de .
+    schema:name "Coop Genossenschaft"@de ;
+    schema:url <https://www.coop.ch/> .
 
 zefix:1149573 a schema:Organization ;
     schema:name "Migros Industrie AG"@de ;
-    systemmap:owns zefix:130459 .
+    systemmap:owns zefix:130459 ;
+    schema:url <https://www.migrosindustrie.ch/> .
 
 zefix:119283 a schema:Organization ;
     schema:name "Migros-Genossenschafts-Bund"@de,
         "Fédération des coopératives Migros"@fr ;
     systemmap:abbreviation "MGB"@de ;
-    systemmap:owns zefix:1149573 .
+    systemmap:owns zefix:1149573 ;
+    schema:url <https://www.migros.ch/> .
 
 zefix:121 a schema:Organization ;
-    schema:name "Genossenschaft Milchproduzenten Mittelland"@de .
+    schema:name "Genossenschaft Milchproduzenten Mittelland"@de ;
+    schema:url <https://mpm-suhr.ch/> .
 
 zefix:1256441 a schema:Organization,
         systemmap:PrivateOrganization ;
-    schema:name "mooh Genossenschaft"@de .
+    schema:name "mooh Genossenschaft"@de ;
+    schema:url <https://www.mooh.swiss/> .
 
 zefix:1292811 a schema:Organization ;
     schema:name "Naturparkkäserei Diemtigtal AG"@de .
@@ -486,47 +496,58 @@ zefix:1469700 a schema:Organization ;
         "digitalswitzerland"@en ;
     schema:member zefix:1138887,
         zefix:119283,
-        zefix:328631 .
+        zefix:328631 ;
+    schema:url <https://digitalswitzerland.com/> .
 
 zefix:230936 a schema:Organization ;
     schema:name "Fédération des sociétés fribourgeoises de laiterie"@de ;
-    systemmap:abbreviation "FSFL"@fr .
+    systemmap:abbreviation "FSFL"@fr ;
+    schema:url <https://fsfl.ch/> .
 
 zefix:239872 a schema:Organization ;
     schema:name "Federazione Ticinese Produttori di Latte - Società Cooperativa"@it .
 
 zefix:240631 a schema:Organization ;
-    schema:name "Laiteries Réunies Société coopérative"@fr .
+    schema:name "Laiteries Réunies Société coopérative"@fr ;
+    schema:url <https://lrgg.ch/> .
 
 zefix:254421 a schema:Organization ;
-    schema:name "Centravo Holding AG"@en .
+    schema:name "Centravo Holding AG"@en ;
+    schema:url <https://centravo.ch/> .
 
 zefix:290876 a schema:Organization ;
     schema:name "GVFI AG"@de,
         "GVFI Ltd"@en,
-        "GVFI SA"@fr .
+        "GVFI SA"@fr ;
+    schema:url <https://gvfi.ch/> .
 
 zefix:312944 a schema:Organization ;
     schema:name "Walliser Milchverband Genossenschaft"@de ;
-    systemmap:abbreviation "WMV"@de .
+    systemmap:abbreviation "WMV"@de ;
+    schema:url <http://www.flv.ch/> .
 
 zefix:319555 a schema:Organization ;
-    schema:name "MIBA Genossenschaft"@de .
+    schema:name "MIBA Genossenschaft"@de ;
+    schema:url <https://miba.ch/> .
 
 zefix:324994 a schema:Organization ;
-    schema:name "Genossenschaft Vereinigte Milchbauern Mitte-Ost"@de .
+    schema:name "Genossenschaft Vereinigte Milchbauern Mitte-Ost"@de ;
+    schema:url <https://milchbauern.ch/> .
 
 zefix:350762 a schema:Organization ;
-    schema:name "Arnold Produkte AG"@de .
+    schema:name "Arnold Produkte AG"@de ;
+    schema:url <https://walterarnold.ch/> .
 
 zefix:358851 a schema:Organization ;
-    schema:name "Schweizer Agrarmedien AG"@de .
+    schema:name "Schweizer Agrarmedien AG"@de ;
+    schema:url <https://www.agrarmedien.ch/> .
 
 zefix:38909 a schema:Organization ;
     schema:name "Coop-Gruppe Genossenschaft"@de .
 
 zefix:404097 a schema:Organization ;
-    schema:name "Berner Bauern Verband"@de .
+    schema:name "Berner Bauern Verband"@de ;
+    schema:url <https://www.bernerbauern.ch/> .
 
 zefix:429308 a schema:Organization ;
     schema:name "Schweizer Bauernverband"@de,
@@ -544,7 +565,8 @@ zefix:429308 a schema:Organization ;
         zefix:427343,
         zefix:448334,
         zefix:540574,
-        zefix:793667 .
+        zefix:793667 ;
+    schema:url <https://www.sbv-usp.ch/> .
 
 zefix:455252 a schema:Organization,
         systemmap:PrivateOrganization ;
@@ -563,7 +585,8 @@ zefix:459488 a schema:Organization ;
         zefix:319555,
         zefix:324994 ;
     systemmap:abbreviation "SMP"@de ;
-    systemmap:owns zefix:358851 .
+    systemmap:owns zefix:358851 ;
+    schema:url <https://www.swissmilk.ch/> .
 
 zefix:469727 a schema:Organization,
         systemmap:PrivateOrganization ;
@@ -585,14 +608,17 @@ zefix:469727 a schema:Organization,
 
 zefix:540574 a schema:Organization ;
     schema:name "Zürcher Bauernverband"@de ;
-    systemmap:abbreviation "ZBV"@de .
+    systemmap:abbreviation "ZBV"@de ;
+    schema:url <https://www.zbv.ch/> .
 
 zefix:793667 a schema:Organization ;
     schema:name "Schweizerischer Schweinezucht- und Schweineproduzentenverband Suisseporcs"@de ;
-    systemmap:abbreviation "Suisseporcs"@de .
+    systemmap:abbreviation "Suisseporcs"@de ;
+    schema:url <https://www.suisseporcs.ch/> .
 
 zefix:871039 a schema:Organization ;
-    schema:name "aaremilch AG"@de .
+    schema:name "aaremilch AG"@de ;
+    schema:url <https://www.aaremilch.ch/> .
 
 systemmap:S00fVJvGUmwXh0cOz a schema:SoftwareApplication ;
     schema:name "agridata.ch"@de ;

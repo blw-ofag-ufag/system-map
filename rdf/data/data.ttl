@@ -4176,10 +4176,10 @@ systemmap:SieZtzwlMAxzFY1op a systemmap:FederalOrganization ;
         I suoi compiti includono la visualizzazione dei dati, il reporting, la consulenza e la formazione degli specialisti BI, oltre all'analisi, alla modellazione e all'integrazione dei dati.  
         Inoltre, il team BI coordina il funzionamento di ASTAT con ISCeco e le attività BI con l'USAV.  
         """@it ;
-    systemmap:abbreviation "GRBI"@de,
-        "GRBI"@en,
-        "GRBI"@fr,
-        "GRBI"@it .
+    systemmap:abbreviation "BICC"@de,
+        "BICC"@en,
+        "BICC"@fr,
+        "BICC"@it .
 
 systemmap:SntetIp00hrUGsnj5 a systemmap:FederalOrganization ;
     schema:name "Direktionsbereich Recht, Ressourcen und Integrale Sicherheit"@de,

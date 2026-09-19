@@ -4049,7 +4049,7 @@ systemmap:SqbzqGjI3ws0stDBH a systemmap:CantonalOrganization ;
         "Université de Zurich"@fr,
         "Università di Zurigo"@it ;
     schema:parentOrganization systemmap:STqW9eQHHZNwyCH8i ;
-    schema:url <https://www.uzh.ch> ;
+    schema:url <https://www.uzh.ch/> ;
     systemmap:abbreviation "UZH"@de,
         "UZH"@en,
         "UZH"@fr,

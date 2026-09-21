@@ -177,7 +177,9 @@ systemmap:Si8UnIQkj02jgbLEb a dcmitype:Collection ;
         systemmap:S2tIdqNmt3uS5Ny6D,
         systemmap:SE8y4MuFWW5BKqK92,
         systemmap:SaVyVVsIDkiDMtQq4,
-        systemmap:S1JvEmah9Tl0698au .
+        systemmap:S1JvEmah9Tl0698au,
+        systemmap:SVZJz682iwRjVx5wp,
+        zefix:249959 .
 
 systemmap:S0hwJxy2kXNPFbl4C a service:Service ;
     schema:name "Lineare Korrektur (LK)-Service"@de ;
@@ -2190,7 +2192,8 @@ systemmap:SjhTrVt8CB9QFq0Yn a schema:SoftwareApplication ;
     dcterms:isPartOf systemmap:SjCVTMrYaOTygNcqF ;
     schema:description """
         Die Softwareanwendung 'Produktekatalog' erlaubt es, die in digiFLUX abgebildeten Produkte einzusehen, zu erstellen, oder anzupassen.
-        """@de .
+        """@de ;
+    systemmap:developedBy systemmap:SVZJz682iwRjVx5wp .
 
 systemmap:SkGYudMy9po7MUq2x a schema:SoftwareApplication ;
     schema:name "Equi-FM"@de,
@@ -4136,11 +4139,20 @@ systemmap:S1JvEmah9Tl0698au a systemmap:FederalOrganization ;
         "DBDD"@fr,
         "DBDD"@it .
 
+systemmap:S29aVziwo4wUgF79o a systemmap:FederalOrganization ;
+    schema:name "Fachanwendungsbetrieb"@de,
+        "Business Application Operations"@en,
+        "Exploitation des applications spécialisées"@fr,
+        "Esercizio delle applicazioni specialistiche"@it ;
+    schema:parentOrganization systemmap:S6ybKol71qEEkISAr ;
+    owl:sameAs staatskalender:20039413 .
+
 systemmap:S2QF8BOhJczC0PGhe a systemmap:FederalOrganization ;
     schema:name "Staatssekretariat für Wirtschaft"@de,
         "State Secretariat for Economic Affairs"@en,
         "Secrétariat d'État à l'économie"@fr,
         "Segretariato di Stato dell'economia"@it ;
+    schema:parentOrganization systemmap:SgcQvG4DiaNnZmA2z ;
     schema:description """
         Das Staatssekretariat für Wirtschaft (SECO) ist das Kompetenzzentrum des Bundes für alle Kernfragen der Wirtschaftspolitik.
         Es fördert nachhaltiges Wirtschaftswachstum und schafft die notwendigen ordnungs- und wirtschaftspolitischen Rahmenbedingungen.
@@ -4172,6 +4184,7 @@ systemmap:S2tIdqNmt3uS5Ny6D a systemmap:FederalOrganization ;
         "Federal Office for Agriculture"@en,
         "Office fédéral de l'agriculture"@fr,
         "Ufficio federale dell'agricoltura"@it ;
+    schema:parentOrganization systemmap:SgcQvG4DiaNnZmA2z ;
     schema:description "Das Bundesamt für Landwirtschaft (BLW) ist das Kompetenzzentrum des Bundes für alle Kernfragen im Zusammenhang mit dem Agrarsektor."@de,
         "The Federal Office for Agriculture (FOAG) is the Confederation's competence centre for all core issues relating to the agricultural sector."@en,
         "L'Office fédéral de l'agriculture (OFAG) est le centre de compétence de la Confédération pour toutes les questions essentielles liées au secteur agricole."@fr,
@@ -4209,6 +4222,30 @@ systemmap:S3Rf79NI3Pm1rfOlN a systemmap:FederalOrganization ;
         "FSVO"@en,
         "OSAV"@fr,
         "USAV"@it .
+
+systemmap:S6ybKol71qEEkISAr a systemmap:FederalOrganization ;
+    schema:name "Fachanwendungen"@de,
+        "Business Applications"@en,
+        "Applications spécialisées"@fr,
+        "Applicazioni specialistiche"@it ;
+    schema:parentOrganization systemmap:SVZJz682iwRjVx5wp ;
+    schema:description """
+        Der Geschäftsbereich Fachanwendungen des ISCeco entwickelt, wartet und betreibt die Fachanwendungen der Ämter des WBF.
+        Er umfasst die Teams Fachanwendungsmanagement, Software-Entwicklung, Fachanwendungsbetrieb und OCC ISCeco.
+        """@de,
+        """
+        The Business Applications division of ISCeco develops, maintains and operates the specialist applications of the EAER offices.
+        It comprises the teams Business Application Management, Software Development, Business Application Operations and OCC ISCeco.
+        """@en,
+        """
+        Le domaine d'activité Applications spécialisées de l'ISCeco développe, maintient et exploite les applications spécialisées des offices du DEFR.
+        Il comprend les équipes Gestion des applications spécialisées, Développement de logiciels, Exploitation des applications spécialisées et OCC ISCeco.
+        """@fr,
+        """
+        Il settore Applicazioni specialistiche dell'ISCeco sviluppa, mantiene e gestisce le applicazioni specialistiche degli uffici del DEFR.
+        Comprende i team Gestione delle applicazioni specialistiche, Sviluppo del software, Esercizio delle applicazioni specialistiche e OCC ISCeco.
+        """@it ;
+    owl:sameAs staatskalender:10003238 .
 
 systemmap:S8WjMkerPw98ZkWA7 a systemmap:FederalOrganization ;
     schema:name "Bundesamt für Gesundheit"@de,
@@ -4326,6 +4363,26 @@ systemmap:SG8fSveeGZNcYzoUN a systemmap:FederalOrganization ;
         Weitere Themen sind Management natürlicher Ressourcen, Klimawandel mit Blick auf Boden/Wasserhaushalt.
         """@de .
 
+systemmap:SGDvpIuyJO7p6JdrU a systemmap:FederalOrganization ;
+    schema:name "GEVER Anwendungen"@de,
+        "GEVER Applications"@en,
+        "Applications GEVER"@fr,
+        "Applicazioni GEVER"@it ;
+    schema:parentOrganization systemmap:SVZJz682iwRjVx5wp ;
+    schema:description """
+        Der Geschäftsbereich GEVER Anwendungen des ISCeco entwickelt und betreibt die bundesweite Geschäftsverwaltungslösung GEVER, den Standarddienst des Bundes für die elektronische Geschäftsverwaltung.
+        """@de,
+        """
+        The GEVER Applications division of ISCeco develops and operates GEVER, the federal standard service for electronic business administration used across the federal administration.
+        """@en,
+        """
+        Le domaine d'activité Applications GEVER de l'ISCeco développe et exploite GEVER, le service standard de la Confédération pour la gestion électronique des affaires.
+        """@fr,
+        """
+        Il settore Applicazioni GEVER dell'ISCeco sviluppa e gestisce GEVER, il servizio standard della Confederazione per la gestione elettronica degli affari.
+        """@it ;
+    owl:sameAs staatskalender:10002475 .
+
 systemmap:SIo1a8l3IT4lBqBJE a systemmap:FederalOrganization ;
     schema:name "Agroscope"@de,
         "Agroscope"@en,
@@ -4372,6 +4429,14 @@ systemmap:SKrd0rj3P7vHUQ7h7 a systemmap:FederalOrganization ;
 systemmap:SLekJnxsXE7F1IQyK a systemmap:FederalOrganization ;
     schema:name "Fachbereich Fachanwendungen"@de ;
     schema:parentOrganization systemmap:SATtn9FhKGDNXjBLM .
+
+systemmap:SMEuPWk5l3mWZtRgT a systemmap:FederalOrganization ;
+    schema:name "Software-Entwicklung"@de,
+        "Software Development"@en,
+        "Développement de logiciels"@fr,
+        "Sviluppo del software"@it ;
+    schema:parentOrganization systemmap:S6ybKol71qEEkISAr ;
+    owl:sameAs staatskalender:20039412 .
 
 systemmap:SMnIieexlpOQHsGvN a systemmap:FederalOrganization ;
     schema:name "Genetische Ressourcen, Produktionssicherheit und Futtermittel"@de,
@@ -4471,6 +4536,39 @@ systemmap:SRu4rav1Rlm2mUMWr a systemmap:FederalOrganization ;
     systemmap:abbreviation "FBEA"@de,
         "SIE"@fr .
 
+systemmap:SVZJz682iwRjVx5wp a systemmap:FederalOrganization ;
+    schema:name "Information Service Center WBF ISCeco"@de,
+        "Information Service Center EAER ISCeco"@en,
+        "Centre de services informatiques DEFR ISCeco"@fr,
+        "Information Service Center DEFR ISCeco"@it ;
+    schema:parentOrganization systemmap:SkDLABe9Tq3eDUHWC ;
+    schema:description """
+        Das Information Service Center WBF ISCeco ist der zentrale Informatik-Leistungserbringer des Eidgenössischen Departements für Wirtschaft, Bildung und Forschung (WBF).
+        Es entwickelt und betreibt Fachanwendungen für die Ämter des WBF, begleitet diese als Partner bei der digitalen Transformation und betreibt die bundesweite Geschäftsverwaltungslösung GEVER.
+        Das ISCeco betreibt rund 70 Fachanwendungen, darunter Agate und EasyGov, und hat seinen Sitz auf dem Campus Meielen in Zollikofen.
+        """@de,
+        """
+        The Information Service Center EAER ISCeco is the central IT service provider of the Federal Department of Economic Affairs, Education and Research (EAER).
+        It develops and operates specialist applications for the EAER offices, supports them as a partner in their digital transformation and operates GEVER, the federal standard service for electronic business administration.
+        ISCeco operates around 70 specialist applications, including Agate and EasyGov, and is based on the Meielen campus in Zollikofen.
+        """@en,
+        """
+        Le Centre de services informatiques DEFR ISCeco est le prestataire informatique central du Département fédéral de l'économie, de la formation et de la recherche (DEFR).
+        Il développe et exploite des applications spécialisées pour les offices du DEFR, les accompagne en tant que partenaire dans leur transformation numérique et exploite GEVER, la solution de gestion des affaires de l'ensemble de l'administration fédérale.
+        L'ISCeco exploite environ 70 applications spécialisées, dont Agate et EasyGov, et a son siège sur le campus Meielen à Zollikofen.
+        """@fr,
+        """
+        L'Information Service Center DEFR ISCeco è il fornitore centrale di prestazioni informatiche del Dipartimento federale dell'economia, della formazione e della ricerca (DEFR).
+        Sviluppa e gestisce applicazioni specialistiche per gli uffici del DEFR, li accompagna come partner nella trasformazione digitale e gestisce GEVER, la soluzione di gestione degli affari dell'intera Amministrazione federale.
+        L'ISCeco gestisce circa 70 applicazioni specialistiche, tra cui Agate ed EasyGov, e ha sede nel campus Meielen a Zollikofen.
+        """@it ;
+    schema:url <https://www.isceco.admin.ch/> ;
+    owl:sameAs staatskalender:10009853 ;
+    systemmap:abbreviation "ISCeco"@de,
+        "ISCeco"@en,
+        "ISCeco"@fr,
+        "ISCeco"@it .
+
 systemmap:SW5qcGjvfz5WXYTVl a systemmap:FederalOrganization ;
     schema:name "Abteilung Lebensmittel und Ernährung"@de,
         "Food and Nutrition Division"@en,
@@ -4507,6 +4605,14 @@ systemmap:SaVyVVsIDkiDMtQq4 a systemmap:FederalOrganization ;
     systemmap:abbreviation "FBAM"@de ;
     systemmap:hasLegalBasis LwG:art_27,
         <https://www.fedlex.admin.ch/eli/cc/1999/71> .
+
+systemmap:SbuROz7XWr5iX3cMd a systemmap:FederalOrganization ;
+    schema:name "Human Resources"@de,
+        "Human Resources"@en,
+        "Ressources humaines"@fr,
+        "Risorse umane"@it ;
+    schema:parentOrganization systemmap:SVZJz682iwRjVx5wp ;
+    owl:sameAs staatskalender:20048302 .
 
 systemmap:ScVJ3tNOuwZ1juXuE a systemmap:FederalOrganization ;
     schema:name "Fachbereich Tierische Produkte und Tierzucht"@de,
@@ -4618,6 +4724,38 @@ systemmap:Sg6T9dU4npL98bHrb a systemmap:FederalOrganization ;
         """@it ;
     owl:sameAs staatskalender:20035164 .
 
+systemmap:SgcQvG4DiaNnZmA2z a systemmap:FederalOrganization ;
+    schema:name "Eidgenössisches Departement für Wirtschaft, Bildung und Forschung"@de,
+        "Federal Department of Economic Affairs, Education and Research"@en,
+        "Département fédéral de l'économie, de la formation et de la recherche"@fr,
+        "Dipartimento federale dell'economia, della formazione e della ricerca"@it ;
+    schema:description """
+        Das Eidgenössische Departement für Wirtschaft, Bildung und Forschung (WBF) ist eines der sieben Departemente der schweizerischen Bundesverwaltung.
+        Es ist zuständig für die Wirtschafts-, Arbeitsmarkt-, Bildungs-, Forschungs-, Innovations- und Agrarpolitik des Bundes.
+        Zum WBF gehören unter anderem das Staatssekretariat für Wirtschaft (SECO), das Staatssekretariat für Bildung, Forschung und Innovation (SBFI) und das Bundesamt für Landwirtschaft (BLW).
+        """@de,
+        """
+        The Federal Department of Economic Affairs, Education and Research (EAER) is one of the seven departments of the Swiss federal administration.
+        It is responsible for federal policy on the economy, the labour market, education, research, innovation and agriculture.
+        The EAER comprises, among others, the State Secretariat for Economic Affairs (SECO), the State Secretariat for Education, Research and Innovation (SERI) and the Federal Office for Agriculture (FOAG).
+        """@en,
+        """
+        Le Département fédéral de l'économie, de la formation et de la recherche (DEFR) est l'un des sept départements de l'administration fédérale suisse.
+        Il est responsable de la politique fédérale en matière d'économie, de marché du travail, de formation, de recherche, d'innovation et d'agriculture.
+        Le DEFR comprend notamment le Secrétariat d'État à l'économie (SECO), le Secrétariat d'État à la formation, à la recherche et à l'innovation (SEFRI) et l'Office fédéral de l'agriculture (OFAG).
+        """@fr,
+        """
+        Il Dipartimento federale dell'economia, della formazione e della ricerca (DEFR) è uno dei sette dipartimenti dell'Amministrazione federale svizzera.
+        È responsabile della politica federale in materia di economia, mercato del lavoro, formazione, ricerca, innovazione e agricoltura.
+        Del DEFR fanno parte, tra gli altri, la Segreteria di Stato dell'economia (SECO), la Segreteria di Stato per la formazione, la ricerca e l'innovazione (SEFRI) e l'Ufficio federale dell'agricoltura (UFAG).
+        """@it ;
+    schema:url <https://www.wbf.admin.ch/> ;
+    owl:sameAs staatskalender:10000032 ;
+    systemmap:abbreviation "WBF"@de,
+        "EAER"@en,
+        "DEFR"@fr,
+        "DEFR"@it .
+
 systemmap:ShkERubSSrICbOshu a systemmap:FederalOrganization ;
     schema:name "Direktionsbereich Märkte und Internationales"@de,
         "Directorate for Markets and International Affairs"@en,
@@ -4660,6 +4798,46 @@ systemmap:SieZtzwlMAxzFY1op a systemmap:FederalOrganization ;
         "BICC"@en,
         "BICC"@fr,
         "BICC"@it .
+
+systemmap:SkDLABe9Tq3eDUHWC a systemmap:FederalOrganization ;
+    schema:name "Generalsekretariat WBF"@de,
+        "General Secretariat EAER"@en,
+        "Secrétariat général du DEFR"@fr,
+        "Segreteria generale del DEFR"@it ;
+    schema:parentOrganization systemmap:SgcQvG4DiaNnZmA2z ;
+    schema:description """
+        Das Generalsekretariat WBF (GS-WBF) ist die Stabsstelle der Departementsvorsteherin bzw. des Departementsvorstehers.
+        Es plant, koordiniert und kontrolliert die Geschäfte des Departements und stellt departementsweite Querschnittsleistungen wie Recht, Kommunikation, Finanzen, Personal und Informatik sicher.
+        Das Information Service Center WBF ISCeco ist dem GS-WBF angegliedert.
+        """@de,
+        """
+        The General Secretariat EAER (GS-EAER) is the staff unit of the head of the department.
+        It plans, coordinates and monitors the department's business and provides department-wide cross-sectional services such as legal affairs, communication, finance, human resources and IT.
+        The Information Service Center EAER ISCeco is attached to the GS-EAER.
+        """@en,
+        """
+        Le Secrétariat général du DEFR (SG-DEFR) est l'état-major de la cheffe ou du chef du département.
+        Il planifie, coordonne et contrôle les affaires du département et assure des prestations transversales à l'échelle du département, telles que le droit, la communication, les finances, le personnel et l'informatique.
+        Le Centre de services informatiques DEFR ISCeco est rattaché au SG-DEFR.
+        """@fr,
+        """
+        La Segreteria generale del DEFR (SG-DEFR) è lo stato maggiore della o del capodipartimento.
+        Pianifica, coordina e controlla gli affari del dipartimento e fornisce prestazioni trasversali a livello dipartimentale quali diritto, comunicazione, finanze, personale e informatica.
+        L'Information Service Center DEFR ISCeco è aggregato alla SG-DEFR.
+        """@it ;
+    owl:sameAs staatskalender:10002651 ;
+    systemmap:abbreviation "GS-WBF"@de,
+        "GS-EAER"@en,
+        "SG-DEFR"@fr,
+        "SG-DEFR"@it .
+
+systemmap:SkFlBVxIrsy1VUsM0 a systemmap:FederalOrganization ;
+    schema:name "OCC ISCeco"@de,
+        "OCC ISCeco"@en,
+        "OCC ISCeco"@fr,
+        "OCC ISCeco"@it ;
+    schema:parentOrganization systemmap:S6ybKol71qEEkISAr ;
+    owl:sameAs staatskalender:20046666 .
 
 systemmap:SntetIp00hrUGsnj5 a systemmap:FederalOrganization ;
     schema:name "Direktionsbereich Recht, Ressourcen und Integrale Sicherheit"@de,
@@ -4759,6 +4937,26 @@ systemmap:SsJ9OfSkUgPD8dkz3 a systemmap:FederalOrganization ;
         "Gli agricoltori forniscono vari servizi alla collettività e sono quindi sostenuti con contributi finanziari. La Direzione dei pagamenti diretti e dello sviluppo rurale è responsabile di questo. Inoltre, si impegna per la vitalità delle aree rurali."@it ;
     systemmap:abbreviation "DBDLE"@de .
 
+systemmap:SsUrshR7syK9mF89z a systemmap:FederalOrganization ;
+    schema:name "Consulting und Governance"@de,
+        "Consulting & Governance"@en,
+        "Consulting et Governance"@fr,
+        "Consulting e Governance"@it ;
+    schema:parentOrganization systemmap:SVZJz682iwRjVx5wp ;
+    schema:description """
+        Der Geschäftsbereich Consulting und Governance des ISCeco berät die Ämter des WBF in Fragen der Digitalisierung und der Informatik-Governance.
+        """@de,
+        """
+        The Consulting & Governance division of ISCeco advises the EAER offices on digitalisation and IT governance.
+        """@en,
+        """
+        Le domaine d'activité Consulting et Governance de l'ISCeco conseille les offices du DEFR en matière de numérisation et de gouvernance informatique.
+        """@fr,
+        """
+        Il settore Consulting e Governance dell'ISCeco fornisce consulenza agli uffici del DEFR in materia di digitalizzazione e governance informatica.
+        """@it ;
+    owl:sameAs staatskalender:10011160 .
+
 systemmap:StL8MElzDJHAjtyXL a systemmap:FederalOrganization ;
     schema:name "Gruppe GEVER Services"@de,
         "GEVER Services Group"@en,
@@ -4787,6 +4985,14 @@ systemmap:StL8MElzDJHAjtyXL a systemmap:FederalOrganization ;
         "GSG"@fr,
         "GSG"@it .
 
+systemmap:SuEmcrbjilkHk6j26 a systemmap:FederalOrganization ;
+    schema:name "Ressourcen"@de,
+        "Resources"@en,
+        "Ressources"@fr,
+        "Risorse"@it ;
+    schema:parentOrganization systemmap:SVZJz682iwRjVx5wp ;
+    owl:sameAs staatskalender:10011152 .
+
 systemmap:SuodJifeNVNW8c4Tj a systemmap:FederalOrganization ;
     schema:name "Bildung & Forschung"@de ;
     schema:parentOrganization systemmap:Sou0GnQeSqCPHGhze ;
@@ -4796,6 +5002,14 @@ systemmap:SvCD295luQEx4jnuB a systemmap:FederalOrganization ;
     schema:name "Toxikologie Pflanzenschutzmittel"@de ;
     schema:parentOrganization systemmap:Sou0GnQeSqCPHGhze ;
     owl:sameAs staatskalender:20035173 .
+
+systemmap:SvbHJV9ra3Pmy339v a systemmap:FederalOrganization ;
+    schema:name "Fachanwendungsmanagement"@de,
+        "Business Application Management"@en,
+        "Gestion des applications spécialisées"@fr,
+        "Gestione delle applicazioni specialistiche"@it ;
+    schema:parentOrganization systemmap:S6ybKol71qEEkISAr ;
+    owl:sameAs staatskalender:20039362 .
 
 systemmap:SwlgSr7ukziL6iHsP a systemmap:FederalOrganization ;
     schema:name "Bundesamt für Umwelt"@de,

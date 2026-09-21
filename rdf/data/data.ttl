@@ -4152,7 +4152,6 @@ systemmap:S2QF8BOhJczC0PGhe a systemmap:FederalOrganization ;
         "State Secretariat for Economic Affairs"@en,
         "Secrétariat d'État à l'économie"@fr,
         "Segretariato di Stato dell'economia"@it ;
-    schema:parentOrganization systemmap:SgcQvG4DiaNnZmA2z ;
     schema:description """
         Das Staatssekretariat für Wirtschaft (SECO) ist das Kompetenzzentrum des Bundes für alle Kernfragen der Wirtschaftspolitik.
         Es fördert nachhaltiges Wirtschaftswachstum und schafft die notwendigen ordnungs- und wirtschaftspolitischen Rahmenbedingungen.
@@ -4184,7 +4183,6 @@ systemmap:S2tIdqNmt3uS5Ny6D a systemmap:FederalOrganization ;
         "Federal Office for Agriculture"@en,
         "Office fédéral de l'agriculture"@fr,
         "Ufficio federale dell'agricoltura"@it ;
-    schema:parentOrganization systemmap:SgcQvG4DiaNnZmA2z ;
     schema:description "Das Bundesamt für Landwirtschaft (BLW) ist das Kompetenzzentrum des Bundes für alle Kernfragen im Zusammenhang mit dem Agrarsektor."@de,
         "The Federal Office for Agriculture (FOAG) is the Confederation's competence centre for all core issues relating to the agricultural sector."@en,
         "L'Office fédéral de l'agriculture (OFAG) est le centre de compétence de la Confédération pour toutes les questions essentielles liées au secteur agricole."@fr,

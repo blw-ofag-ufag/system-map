@@ -56,7 +56,7 @@ To run the data processing and upload to LINDAS, follow these steps:
 1. Add variables to `.env`
 
   ``` bash
-  USER=lindas-foag
+  USER=lindas-foag-system-map
   PASSWORD=********
   GRAPH=https://lindas.admin.ch/foag/crops
   ENDPOINT=https://stardog.cluster.ldbar.ch/lindas

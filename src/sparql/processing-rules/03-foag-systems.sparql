@@ -1,0 +1,63 @@
+# FOAG SUBGRAPH
+# Automatically defines a subgraph (dcmitype:Collection) that contains everything
+# the Federal Office for Agriculture (FOAG) is responsible for:
+#
+#   1. the FOAG itself and all of its (transitive) sub-organizations,
+#   2. all IT systems operated by one of these organizations,
+#   3. all datasets contained in one of these systems, including their (transitive) parts,
+#   4. all IT services provided by one of these systems.
+#
+# Only nodes are listed (systemmap:containsNodes). The visualization renders every
+# edge whose two endpoints are both members of the subgraph, so all links *within*
+# the FOAG landscape appear automatically, while links to outside nodes are dropped.
+#
+# The property paths cover both directions of each relationship, so the rule works
+# regardless of whether the inverse properties have already been materialized.
+#
+# NOTE: This rule must be applied when building graph.ttl (see upload.bash and the
+# GitHub workflows). The other processing rules are only meant for the WebVOWL files.
+#
+# Open the result at: index.html?subgraph=foag
+
+PREFIX schema: <http://schema.org/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+PREFIX service: <http://purl.org/ontology/service#>
+PREFIX systemmap: <https://agriculture.ld.admin.ch/system-map/>
+
+INSERT {
+  systemmap:foag a dcmitype:Collection ;
+    schema:name "Systemlandschaft des BLW"@de,
+      "FOAG system landscape"@en,
+      "Paysage des systèmes de l'OFAG"@fr,
+      "Panorama dei sistemi dell'UFAG"@it ;
+    systemmap:containsNodes ?node .
+}
+WHERE {
+  # The Federal Office for Agriculture (FOAG / BLW / OFAG / UFAG).
+  # The type check makes sure nothing is generated when the data is not loaded
+  # (e.g. when only the ontology files are processed).
+  BIND(systemmap:S2tIdqNmt3uS5Ny6D AS ?foag)
+  ?foag a schema:Organization .
+
+  {
+    # 1. FOAG and all of its sub-organizations (any depth)
+    ?node (schema:parentOrganization|^schema:subOrganization)* ?foag .
+  }
+  UNION
+  {
+    ?org (schema:parentOrganization|^schema:subOrganization)* ?foag .
+
+    # 2. Systems operated by a FOAG organization
+    ?system (systemmap:operatedBy|^systemmap:operates) ?org .
+
+    # Starting from such a system, the node is either
+    #   - the system itself (zero-length path),
+    #   - 3. a dataset contained in the system, or a (transitive) part of such a dataset,
+    #   - 4. a service provided by the system.
+    ?node (
+        (dcterms:isPartOf|^dcterms:hasPart)* / (systemmap:containedIn|^systemmap:contains)
+      | (service:providedBy|^service:provides)
+    )? ?system .
+  }
+}

@@ -48,7 +48,8 @@ systemmap:SAAAX37V802JgbLEb a dcmitype:Collection ;
         systemmap:SuEtT7joC8HXVSfF,
         systemmap:SvDlxaJ5YMkuZGH6k,
         systemmap:SvNriWslaOR5xkdw,
-        systemmap:SzuDlnYUQMk3HaCb .
+        systemmap:SzuDlnYUQMk3HaCb,
+        zefix:249959 .
 
 systemmap:Sa9PcqsvnAMuiYCjx a dcmitype:Collection ;
     schema:name "Acontrol Systemarchitektur"@de,

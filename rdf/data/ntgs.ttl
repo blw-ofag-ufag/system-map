@@ -528,9 +528,29 @@ systemmap:S2lqf2px29PzK3059 a schema:SoftwareApplication ;
     schema:url <https://www.suisag.com/ch-de/softwares/asp-risikoampel/> ;
     systemmap:operatedBy zefix:414877 .
 
-systemmap:Sqv5Vh286L7iinjmy a schema:SoftwareApplication ;
-    schema:name "UFA2000-Planer"@de ;
-    schema:description "Der UFA2000-Planer ist ein Auswertungsprogramm für  Leistungen und Produktionszahlen in der Schweineproduktion. So kann zum Beispiel das Deckregister oder das SAuenblatt hier geführt werden. Mit einem überbetrieblichen Vergleich können Stärken und Schwächen auf dem eigenen Betrieb erkannt werden."@de ;
+systemmap:Sqv5Vh286L7iinjmy a schema:SoftwareApplication,
+        systemmap:FMIS ;
+    schema:name "UFA2000-Planer"@de,
+        "UFA2000 Planner"@en,
+        "Planificateur UFA2000"@fr,
+        "Pianificatore UFA2000"@it ;
+    schema:url <https://www.ufa.ch/> ;
+    schema:description """
+        The UFA2000 Planner is the sow management software of the UFA2000 pig production programme run by UFA AG and Anicom AG.
+        Piglet producers use it to record all data of their sows' reproduction cycle and receive analyses as well as an annual inter-farm comparison.
+        The SOLO Mobil app allows data to be entered directly in the barn.
+        """@en,
+        """
+        Le planificateur UFA2000 est le logiciel de gestion des truies du programme de production porcine UFA2000 d'UFA SA et d'Anicom SA.
+        Les producteurs de porcelets y saisissent toutes les données du cycle de reproduction de leurs truies et reçoivent des analyses ainsi qu'une comparaison annuelle entre exploitations.
+        L'application SOLO Mobil permet de saisir les données directement à l'étable.
+        """@fr,
+        """
+        Il pianificatore UFA2000 è il software di gestione delle scrofe del programma di produzione suinicola UFA2000 di UFA SA e Anicom SA.
+        I produttori di suinetti vi registrano tutti i dati del ciclo riproduttivo delle scrofe e ricevono analisi e un confronto annuale tra aziende.
+        L'app SOLO Mobil consente di inserire i dati direttamente in stalla.
+        """@it,
+        "Der UFA2000-Planer ist ein Auswertungsprogramm für  Leistungen und Produktionszahlen in der Schweineproduktion. So kann zum Beispiel das Deckregister oder das SAuenblatt hier geführt werden. Mit einem überbetrieblichen Vergleich können Stärken und Schwächen auf dem eigenen Betrieb erkannt werden."@de ;
     systemmap:operatedBy zefix:321790 ;
     systemmap:contains systemmap:Se35WpC7gmVkMSoME,
         systemmap:SGXgfZIB9hCBv4fIa,

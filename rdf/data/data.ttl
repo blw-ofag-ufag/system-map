@@ -4221,6 +4221,14 @@ systemmap:S3Rf79NI3Pm1rfOlN a systemmap:FederalOrganization ;
         "OSAV"@fr,
         "USAV"@it .
 
+systemmap:S5bXMn9v3OzOo48f a systemmap:FederalOrganization ;
+    schema:name "Fachbereich Agrarpolitik und Strategieentwicklung"@de,
+        "Agricultural Policy and Strategy Development Division"@en,
+        "Secteur Politique agricole et développement de stratégies"@fr,
+        "Settore Politica agricola e sviluppo di strategie"@it ;
+    schema:parentOrganization systemmap:SqeNr0H0FGL6Uv5Rr ;
+    owl:sameAs staatskalender:10010636 .
+
 systemmap:S6ybKol71qEEkISAr a systemmap:FederalOrganization ;
     schema:name "Fachanwendungen"@de,
         "Business Applications"@en,
@@ -4280,14 +4288,31 @@ systemmap:SATtn9FhKGDNXjBLM a systemmap:FederalOrganization ;
     schema:name "Abteilung Ressourcen"@de ;
     schema:parentOrganization systemmap:SJFcc0xsgJmHYGgDv .
 
+systemmap:SAz9l8Ty8MnLTPN5 a systemmap:FederalOrganization ;
+    schema:name "Gruppe Integrale Sicherheit"@de,
+        "Integral Security Group"@en,
+        "Groupe Sécurité intégrale"@fr,
+        "Gruppo Sicurezza integrale"@it ;
+    schema:parentOrganization systemmap:SntetIp00hrUGsnj5 ;
+    owl:sameAs staatskalender:20050956 .
+
 systemmap:SE8y4MuFWW5BKqK92 a systemmap:FederalOrganization ;
     schema:name "Gruppe Agrarinformationssystem AGIS"@de ;
-    schema:parentOrganization systemmap:SaVyVVsIDkiDMtQq4 .
+    schema:parentOrganization systemmap:SaVyVVsIDkiDMtQq4 ;
+    owl:sameAs staatskalender:21000496 .
+
+systemmap:SEdKz3w2AGJD0Xxh a systemmap:FederalOrganization ;
+    schema:name "Agroscope-Rat"@de,
+        "Agroscope Council"@en,
+        "Conseil Agroscope"@fr,
+        "Consiglio Agroscope"@it ;
+    schema:parentOrganization systemmap:SqeNr0H0FGL6Uv5Rr .
 
 systemmap:SFAwQAwxBcNnaURgO a systemmap:FederalOrganization ;
     schema:name "Fachbereich Datenraum und Datenmanagement"@de ;
     schema:parentOrganization systemmap:S1JvEmah9Tl0698au ;
-    systemmap:abbreviation "FBDD"@de .
+    systemmap:abbreviation "FBDD"@de ;
+    owl:sameAs staatskalender:21000494 .
 
 systemmap:SFKPRpdGa5UISiJlx a systemmap:FederalOrganization ;
     schema:name "Bundesamt für Zoll und Grenzsicherheit"@de,
@@ -4349,7 +4374,8 @@ systemmap:SFL2DYxeNnVaFsv64 a systemmap:FederalOrganization ;
     systemmap:abbreviation "FBPG"@de,
         "FBPG"@en,
         "FBPG"@fr,
-        "FBPG"@it .
+        "FBPG"@it ;
+    owl:sameAs staatskalender:10003240 .
 
 systemmap:SG8fSveeGZNcYzoUN a systemmap:FederalOrganization ;
     schema:name "Fachbereich Meliorationen"@de ;
@@ -4500,6 +4526,22 @@ systemmap:SNbhMvt3Btta1U1d6 a systemmap:FederalOrganization ;
         "UST"@it ;
     schema:url <https://www.bfs.admin.ch/> .
 
+systemmap:SNywnS0Z1yfhpYlp a systemmap:FederalOrganization ;
+    schema:name "Fachbereich Recht und Verfahren"@de,
+        "Law and Procedures Division"@en,
+        "Secteur Droit et procédures"@fr,
+        "Settore Diritto e procedure"@it ;
+    schema:parentOrganization systemmap:SntetIp00hrUGsnj5 ;
+    owl:sameAs staatskalender:10003207 .
+
+systemmap:SPRJAmR2zrnkDULS a systemmap:FederalOrganization ;
+    schema:name "Fachbereich Landmanagement und Infrastrukturen"@de,
+        "Land Management and Infrastructure Division"@en,
+        "Secteur Gestion du territoire et infrastructures"@fr,
+        "Settore Gestione del territorio e infrastrutture"@it ;
+    schema:parentOrganization systemmap:SsJ9OfSkUgPD8dkz3 ;
+    owl:sameAs staatskalender:10003231 .
+
 systemmap:SQbNLiw8h9MnSXuyo a systemmap:FederalOrganization ;
     schema:name "Fachbereich Informatik und Digitalisierung"@de,
         "Secteur Informatique et numérisation"@fr,
@@ -4595,6 +4637,22 @@ systemmap:SW5qcGjvfz5WXYTVl a systemmap:FederalOrganization ;
         """@it ;
     owl:sameAs staatskalender:20035162 .
 
+systemmap:SYjW88WfrLk7M8Cy a systemmap:FederalOrganization ;
+    schema:name "Fachbereich Qualitäts- und Absatzförderung"@de,
+        "Quality and Sales Promotion Division"@en,
+        "Secteur Promotion de la qualité et des ventes"@fr,
+        "Settore Promozione della qualità e delle vendite"@it ;
+    schema:parentOrganization systemmap:ShkERubSSrICbOshu ;
+    owl:sameAs staatskalender:10003222 .
+
+systemmap:SZ48VGp6B0Q0XXEc a systemmap:FederalOrganization ;
+    schema:name "Fachbereich Kommunikation und Sprachdienste"@de,
+        "Communication and Language Services Division"@en,
+        "Secteur Communication et services linguistiques"@fr,
+        "Settore Comunicazione e servizi linguistici"@it ;
+    schema:parentOrganization systemmap:SqeNr0H0FGL6Uv5Rr ;
+    owl:sameAs staatskalender:10003197 .
+
 systemmap:SaVyVVsIDkiDMtQq4 a systemmap:FederalOrganization ;
     schema:name "Fachbereich Agrardaten und Marktanalysen"@de,
         "Secteur Données agricoles et analyses du marché"@fr,
@@ -4602,7 +4660,8 @@ systemmap:SaVyVVsIDkiDMtQq4 a systemmap:FederalOrganization ;
     schema:parentOrganization systemmap:S1JvEmah9Tl0698au ;
     systemmap:abbreviation "FBAM"@de ;
     systemmap:hasLegalBasis LwG:art_27,
-        <https://www.fedlex.admin.ch/eli/cc/1999/71> .
+        <https://www.fedlex.admin.ch/eli/cc/1999/71> ;
+    owl:sameAs staatskalender:10003210 .
 
 systemmap:SbuROz7XWr5iX3cMd a systemmap:FederalOrganization ;
     schema:name "Human Resources"@de,
@@ -4663,6 +4722,14 @@ systemmap:ScoeXHl4TgJbke1Yf a systemmap:FederalOrganization ;
         "FBDG"@fr,
         "FBDG"@it .
 
+systemmap:Sd3CQWsy3YrWpTCF a systemmap:FederalOrganization ;
+    schema:name "Fachbereich Agrarökonomie, Soziales und Regionalentwicklung"@de,
+        "Agricultural Economics, Social Affairs and Regional Development Division"@en,
+        "Secteur Économie agraire, aspects sociaux et développement régional"@fr,
+        "Settore Economia agricola, aspetti sociali e sviluppo regionale"@it ;
+    schema:parentOrganization systemmap:SsJ9OfSkUgPD8dkz3 ;
+    owl:sameAs staatskalender:10003233 .
+
 systemmap:SfX7h09MplFWwb4LK a systemmap:FederalOrganization ;
     schema:name "Fachbereich nachhaltiger Pflanzenschutz und Sorten"@de,
         "Sustainable Plant Protection and Varieties Division"@en,
@@ -4692,7 +4759,16 @@ systemmap:SfX7h09MplFWwb4LK a systemmap:FederalOrganization ;
     systemmap:abbreviation "FBNPS"@de,
         "FBNPS"@en,
         "FBNPS"@fr,
-        "FBNPS"@it .
+        "FBNPS"@it ;
+    owl:sameAs staatskalender:10003242 .
+
+systemmap:SfboATOJndLpbzUm a systemmap:FederalOrganization ;
+    schema:name "Fachbereich Betriebsentwicklung und Bodenrecht"@de,
+        "Farm Development and Land Law Division"@en,
+        "Secteur Développement des exploitations et droit foncier"@fr,
+        "Settore Sviluppo delle aziende e diritto fondiario"@it ;
+    schema:parentOrganization systemmap:SsJ9OfSkUgPD8dkz3 ;
+    owl:sameAs staatskalender:10003232 .
 
 systemmap:Sg6T9dU4npL98bHrb a systemmap:FederalOrganization ;
     schema:name "Abteilung Tiergesundheit und Tierschutz"@de,
@@ -4764,7 +4840,8 @@ systemmap:ShkERubSSrICbOshu a systemmap:FederalOrganization ;
         "The Directorate for Markets and International Affairs works to ensure that agriculture achieves the highest possible added value from the sale of its products. It supports self-help measures, innovation, and the marketing of various sectors. Additionally, this directorate is involved in international organizations such as the UN Food and Agriculture Organization (FAO) and the World Trade Organization (WTO)."@en,
         "La Direction des marchés et des affaires internationales s'efforce de garantir que l'agriculture tire la plus grande valeur ajoutée possible de la vente de ses produits. Elle soutient les mesures d'auto-assistance, l'innovation et la commercialisation des différentes filières. De plus, cette direction est impliquée dans des organisations internationales telles que l'Organisation des Nations unies pour l'alimentation et l'agriculture (FAO) et l'Organisation mondiale du commerce (OMC)."@fr,
         "La Direzione dei mercati e degli affari internazionali si adopera affinché l'agricoltura ottenga il massimo valore aggiunto possibile dalla vendita dei suoi prodotti. Sostiene misure di auto-aiuto, innovazione e commercializzazione nei vari settori. Inoltre, questa direzione è coinvolta in organizzazioni internazionali come l'Organizzazione delle Nazioni Unite per l'alimentazione e l'agricoltura (FAO) e l'Organizzazione mondiale del commercio (OMC)."@it ;
-    systemmap:abbreviation "DBMI"@de .
+    systemmap:abbreviation "DBMI"@de ;
+    owl:sameAs staatskalender:10003213 .
 
 systemmap:SieZtzwlMAxzFY1op a systemmap:FederalOrganization ;
     schema:name "Business Intelligence Competence Center"@de,
@@ -4797,6 +4874,37 @@ systemmap:SieZtzwlMAxzFY1op a systemmap:FederalOrganization ;
         "BICC"@fr,
         "BICC"@it .
 
+systemmap:SkXNnz5XU1uiiA6u a systemmap:FederalOrganization ;
+    schema:name "Fachbereich Personal"@de,
+        "Human Resources Division"@en,
+        "Secteur Personnel"@fr,
+        "Settore Personale"@it ;
+    schema:parentOrganization systemmap:SntetIp00hrUGsnj5 ;
+    owl:sameAs staatskalender:10003199 .
+
+systemmap:SlGI80HwqsEiDIEK a systemmap:FederalOrganization ;
+    schema:name "Fachbereich Finanzen und Beschaffung"@de,
+        "Finance and Procurement Division"@en,
+        "Secteur Finances et acquisitions"@fr,
+        "Settore Finanze e acquisti"@it ;
+    schema:parentOrganization systemmap:SntetIp00hrUGsnj5 ;
+    owl:sameAs staatskalender:10003209 .
+
+systemmap:Sm8b6HX6P2QM8BGb a systemmap:FederalOrganization ;
+    schema:name "Fachbereich Revisionen und Inspektionen"@de,
+        "Audits and Inspections Division"@en,
+        "Secteur Révisions et inspections"@fr,
+        "Settore Revisioni e ispezioni"@it ;
+    schema:parentOrganization systemmap:SqeNr0H0FGL6Uv5Rr ;
+    owl:sameAs staatskalender:10009826 .
+
+systemmap:SnRV57gqFPkFrOFa a systemmap:FederalOrganization ;
+    schema:name "Fachbereich Pflanzliche Produkte"@de,
+        "Plant Products Division"@en,
+        "Secteur Produits végétaux"@fr,
+        "Settore Prodotti vegetali"@it ;
+    schema:parentOrganization systemmap:ShkERubSSrICbOshu ;
+    owl:sameAs staatskalender:10003219 .
 systemmap:SkDLABe9Tq3eDUHWC a systemmap:FederalOrganization ;
     schema:name "Generalsekretariat WBF"@de,
         "General Secretariat EAER"@en,
@@ -4850,7 +4958,8 @@ systemmap:SntetIp00hrUGsnj5 a systemmap:FederalOrganization ;
     systemmap:abbreviation "DBRRIS"@de,
         "DBRRIS"@en,
         "DBRRIS"@fr,
-        "DBRRIS"@it .
+        "DBRRIS"@it ;
+    owl:sameAs staatskalender:20012618 .
 
 systemmap:SoqmfoevPVgr3d0AA a systemmap:FederalOrganization ;
     schema:name "Zulassungsstelle Pflanzenschutzmittel"@de,
@@ -4913,8 +5022,17 @@ systemmap:SqeNr0H0FGL6Uv5Rr a systemmap:FederalOrganization ;
         "Directorate FOAG"@en,
         "Direction OFAG"@fr,
         "Direzione UFAG"@it ;
+    schema:description "Die Direktion verantwortet die strategische Führung und Koordination der Schweizer Agrarpolitik. Zudem ist die Direktion für die Kommunikation und Öffentlichkeitsarbeit in den drei Amtssprachen zuständig."@de ;
     schema:parentOrganization systemmap:S2tIdqNmt3uS5Ny6D ;
     owl:sameAs staatskalender:10003196 .
+
+systemmap:SqgdLrfZrpZz2bs4 a systemmap:FederalOrganization ;
+    schema:name "Fachbereich Internationale Angelegenheiten"@de,
+        "International Affairs Division"@en,
+        "Secteur Affaires internationales"@fr,
+        "Settore Affari internazionali"@it ;
+    schema:parentOrganization systemmap:ShkERubSSrICbOshu ;
+    owl:sameAs staatskalender:20015678 .
 
 systemmap:SsFdxnjM8hgUdzVT5 a systemmap:FederalOrganization ;
     schema:name "Kompetenzzentrum Daten"@de,
@@ -4933,7 +5051,8 @@ systemmap:SsJ9OfSkUgPD8dkz3 a systemmap:FederalOrganization ;
         "Farmers provide various services for the general public and are therefore supported with financial contributions. The Directorate for Direct Payments and Rural Development is responsible for this. It also works to ensure the vitality of rural areas."@en,
         "Les agriculteurs fournissent divers services à la collectivité et sont donc soutenus par des contributions financières. La Direction des paiements directs et du développement rural en est responsable. Elle s'engage également pour la vitalité des zones rurales."@fr,
         "Gli agricoltori forniscono vari servizi alla collettività e sono quindi sostenuti con contributi finanziari. La Direzione dei pagamenti diretti e dello sviluppo rurale è responsabile di questo. Inoltre, si impegna per la vitalità delle aree rurali."@it ;
-    systemmap:abbreviation "DBDLE"@de .
+    systemmap:abbreviation "DBDLE"@de ;
+    owl:sameAs staatskalender:10003224 .
 
 systemmap:SsUrshR7syK9mF89z a systemmap:FederalOrganization ;
     schema:name "Consulting und Governance"@de,
@@ -4983,6 +5102,14 @@ systemmap:StL8MElzDJHAjtyXL a systemmap:FederalOrganization ;
         "GSG"@fr,
         "GSG"@it .
 
+systemmap:SulrC05vIKcFXygx a systemmap:FederalOrganization ;
+    schema:name "Fachbereich Forschung, Beratung und Innovation"@de,
+        "Research, Extension and Innovation Division"@en,
+        "Secteur Recherche, vulgarisation et innovation"@fr,
+        "Settore Ricerca, consulenza e innovazione"@it ;
+    schema:parentOrganization systemmap:SzXI1C2DYjDriK2F8 ;
+    owl:sameAs staatskalender:10003236 .
+
 systemmap:SuEmcrbjilkHk6j26 a systemmap:FederalOrganization ;
     schema:name "Ressourcen"@de,
         "Resources"@en,
@@ -5000,6 +5127,13 @@ systemmap:SvCD295luQEx4jnuB a systemmap:FederalOrganization ;
     schema:name "Toxikologie Pflanzenschutzmittel"@de ;
     schema:parentOrganization systemmap:Sou0GnQeSqCPHGhze ;
     owl:sameAs staatskalender:20035173 .
+
+systemmap:SwWLwS6etEGNQl9N a systemmap:FederalOrganization ;
+    schema:name "Gruppe Logistik"@de,
+        "Logistics Group"@en,
+        "Groupe Logistique"@fr,
+        "Gruppo Logistica"@it ;
+    schema:parentOrganization systemmap:SntetIp00hrUGsnj5 .
 
 systemmap:SvbHJV9ra3Pmy339v a systemmap:FederalOrganization ;
     schema:name "Fachanwendungsmanagement"@de,
@@ -5077,6 +5211,14 @@ systemmap:Sym1u44hA9FMZOdyT a systemmap:FederalOrganization ;
     schema:parentOrganization systemmap:Sou0GnQeSqCPHGhze ;
     owl:sameAs staatskalender:20050577 .
 
+systemmap:SzUTdovwcGsmlBKx a systemmap:FederalOrganization ;
+    schema:name "Fachbereich Agrarumweltsysteme und Nährstoffe"@de,
+        "Agri-Environmental Systems and Nutrients Division"@en,
+        "Secteur Systèmes agroenvironnementaux et éléments fertilisants"@fr,
+        "Settore Sistemi agroambientali e sostanze nutritive"@it ;
+    schema:parentOrganization systemmap:SzXI1C2DYjDriK2F8 ;
+    owl:sameAs staatskalender:10010634 .
+
 systemmap:SzXI1C2DYjDriK2F8 a systemmap:FederalOrganization ;
     schema:name "Direktionsbereich Produktionsgrundlagen, natürliche Ressourcen und Forschung"@de,
         "Directorate for Production Resources, Natural Resources and Research"@en,
@@ -5090,7 +5232,8 @@ systemmap:SzXI1C2DYjDriK2F8 a systemmap:FederalOrganization ;
     systemmap:abbreviation "DBPRF"@de,
         "DBPRF"@en,
         "DBPRF"@fr,
-        "DBPRF"@it .
+        "DBPRF"@it ;
+    owl:sameAs staatskalender:10003239 .
 
 staatskalender:20050530 a systemmap:FederalOrganization ;
     schema:name "Monitoring des Agrarumweltsystems Schweiz MAUS"@de .

@@ -583,6 +583,23 @@ systemmap:SGayLcAMcywbigd3M a schema:Organization ;
         """@it ;
     schema:url <https://www.anmeldestelle.admin.ch/> .
 
+systemmap:SK2UxTXGj0qcpU13J a schema:Organization ;
+    schema:name "Swiss Future Farm"@de,
+        "Swiss Future Farm"@en,
+        "Swiss Future Farm"@fr,
+        "Swiss Future Farm"@it ;
+    schema:description """
+        Die Swiss Future Farm in Tänikon (TG) ist ein Test- und Demonstrationsbetrieb für Smart Farming.
+        Träger sind die fenaco Genossenschaft, die GVS Agrar AG und der Landtechnikkonzern AGCO, in Zusammenarbeit mit dem Kanton Thurgau.
+        """@de,
+        """
+        The Swiss Future Farm in Tänikon (TG) is a test and demonstration farm for smart farming.
+        It is run by the fenaco cooperative, GVS Agrar AG and the machinery group AGCO, in cooperation with the canton of Thurgau.
+        """@en ;
+    schema:member zefix:328631,
+        zefix:380687 ;
+    schema:url <https://www.swissfuturefarm.ch/> .
+
 systemmap:ShM5kJNFhO8vOAEdK a schema:Organization ;
     schema:name "Europäische Kommission"@de,
         "European Commission"@en ;
@@ -709,6 +726,189 @@ zefix:429308 a schema:Organization ;
         zefix:793667 ;
     schema:url <https://www.sbv-usp.ch/> .
 
+zefix:141099 a systemmap:PrivateOrganization ;
+    schema:name "PROVINS AG"@de,
+        "PROVINS Ltd"@en,
+        "PROVINS SA"@fr,
+        "PROVINS SA"@it ;
+    schema:description """
+        Provins ist die grösste Weinkellerei der Schweiz mit Sitz in Sion und verarbeitet die Trauben von rund 2500 Walliser Winzerinnen und Winzern.
+        Die fenaco Genossenschaft hält seit 2020 eine Mehrheitsbeteiligung von rund 70 Prozent.
+        """@de,
+        """
+        Provins is Switzerland's largest winery, based in Sion, and processes the grapes of some 2,500 Valais wine growers.
+        The fenaco cooperative has held a majority stake of about 70 percent since 2020.
+        """@en ;
+    schema:url <https://www.provins.ch/> ;
+    systemmap:ownedBy zefix:328631 .
+
+zefix:181379 a systemmap:PrivateOrganization ;
+    schema:name "Bio Partner Schweiz AG"@de,
+        "Bio Partner Schweiz Ltd"@en,
+        "Bio Partner Suisse SA"@fr,
+        "Bio Partner Svizzera SA"@it ;
+    schema:description """
+        Die Bio Partner Schweiz AG in Seon ist die führende Grosshändlerin für Bio-Lebensmittel und Naturkosmetik im Schweizer Fachhandel.
+        Sie gehört seit 2021 vollständig zur fenaco Genossenschaft.
+        """@de,
+        """
+        Bio Partner Schweiz AG in Seon is the leading wholesaler of organic food and natural cosmetics for the Swiss specialist trade.
+        It has been fully owned by the fenaco cooperative since 2021.
+        """@en ;
+    schema:url <https://www.biopartner.ch/> ;
+    systemmap:ownedBy zefix:328631 .
+
+zefix:197974 a systemmap:PrivateOrganization ;
+    schema:name "ufamed AG"@de,
+        "ufamed Ltd"@en,
+        "ufamed SA"@fr,
+        "ufamed SA"@it ;
+    schema:description """
+        Die ufamed AG in Sursee ist eine Tochtergesellschaft der fenaco Genossenschaft und vertreibt Tierarzneimittel und Ergänzungsfuttermittel für Nutz- und Heimtiere.
+        """@de,
+        """
+        ufamed AG in Sursee is a subsidiary of the fenaco cooperative and distributes veterinary medicinal products and complementary feed for livestock and pets.
+        """@en ;
+    schema:url <https://www.ufamed.ch/> ;
+    systemmap:ownedBy zefix:328631 .
+
+zefix:203365 a systemmap:PrivateOrganization ;
+    schema:name "Volg Konsumwaren AG"@de,
+        "Volg Konsumwaren Ltd"@en,
+        "Volg Konsumwaren SA"@fr,
+        "Volg Konsumwaren SA"@it ;
+    schema:description """
+        Die Volg Konsumwaren AG mit Sitz in Winterthur betreibt die Volg-Dorfläden und beliefert freie Detaillisten sowie TopShop-Tankstellenshops.
+        Sie ist eine Tochtergesellschaft der fenaco Genossenschaft im Geschäftsfeld Detailhandel.
+        """@de,
+        """
+        Volg Konsumwaren AG, based in Winterthur, runs the Volg village stores and supplies independent retailers as well as TopShop petrol station shops.
+        It is a subsidiary of the fenaco cooperative in the retail segment.
+        """@en ;
+    schema:url <https://www.volg.ch/> ;
+    systemmap:ownedBy zefix:328631 .
+
+zefix:286219 a systemmap:PrivateOrganization ;
+    schema:name "Serco Landtechnik AG"@de,
+        "Serco Landtechnik Ltd"@en,
+        "Serco Landtechnik SA"@fr,
+        "Serco Landtechnik SA"@it ;
+    schema:description """
+        Die Serco Landtechnik AG in Oberbipp ist die Landtechnikgesellschaft der fenaco Genossenschaft und exklusive Importeurin von CLAAS-Landmaschinen in der Schweiz.
+        """@de,
+        """
+        Serco Landtechnik AG in Oberbipp is the agricultural machinery company of the fenaco cooperative and the exclusive importer of CLAAS farm machinery in Switzerland.
+        """@en ;
+    schema:url <https://www.sercolandtechnik.ch/> ;
+    systemmap:ownedBy zefix:328631 .
+
+zefix:2935 a systemmap:PrivateOrganization ;
+    schema:name "AGROLA AG"@de,
+        "AGROLA Ltd"@en,
+        "AGROLA SA"@fr,
+        "AGROLA SA"@it ;
+    schema:description """
+        Die AGROLA AG ist das Energieunternehmen der fenaco Genossenschaft.
+        Sie handelt mit Brenn- und Treibstoffen, betreibt über 400 Tankstellen und ist im Bereich Solarenergie und Elektromobilität tätig.
+        """@de,
+        """
+        AGROLA AG is the energy company of the fenaco cooperative.
+        It trades in heating fuels and motor fuels, runs more than 400 filling stations and is active in solar energy and electric mobility.
+        """@en ;
+    schema:url <https://www.agrola.ch/> ;
+    systemmap:ownedBy zefix:328631 .
+
+zefix:321790 a systemmap:PrivateOrganization ;
+    schema:name "UFA AG"@de,
+        "UFA Ltd"@en,
+        "UFA SA"@fr,
+        "UFA SA"@it ;
+    schema:description """
+        UFA AG is the largest compound feed manufacturer in Switzerland and a subsidiary of the fenaco cooperative.
+        It produces feed for livestock and offers advisory services such as UFA Herd Support and the UFA2000 pig production programme.
+        """@en ;
+    schema:url <https://www.ufa.ch/> ;
+    systemmap:ownedBy zefix:328631 .
+
+zefix:370465 a systemmap:PrivateOrganization ;
+    schema:name "LANDI Schweiz AG"@de,
+        "LANDI Schweiz Ltd"@en,
+        "LANDI Suisse SA"@fr,
+        "LANDI Svizzera SA"@it ;
+    schema:description """
+        Die LANDI Schweiz AG mit Sitz in Dotzigen ist die nationale Einkaufs-, Logistik- und Marketingorganisation für die rund 270 LANDI-Läden.
+        Sie gehört mehrheitlich der fenaco Genossenschaft; weitere Anteile halten die LAVEBA Genossenschaft und der Genossenschaftsverband Schaffhausen (GVS).
+        """@de,
+        """
+        LANDI Schweiz AG, based in Dotzigen, is the national purchasing, logistics and marketing organisation for the roughly 270 LANDI stores.
+        It is majority-owned by the fenaco cooperative; further shares are held by the LAVEBA cooperative and the Schaffhausen cooperative association (GVS).
+        """@en ;
+    schema:url <https://www.landischweiz.ch/> ;
+    systemmap:ownedBy zefix:328631,
+        zefix:371580 .
+
+zefix:371580 a systemmap:PrivateOrganization ;
+    schema:name "LAVEBA Genossenschaft"@de,
+        "LAVEBA Cooperative"@en,
+        "Coopérative LAVEBA"@fr,
+        "Cooperativa LAVEBA"@it ;
+    schema:description """
+        Die LAVEBA Genossenschaft mit Sitz in St. Gallen ist eine regionale Agrargenossenschaft der Ostschweiz.
+        Sie ist Mitglied der fenaco Genossenschaft und Mitaktionärin der LANDI Schweiz AG.
+        """@de,
+        """
+        The LAVEBA cooperative, based in St. Gallen, is a regional agricultural cooperative of eastern Switzerland.
+        It is a member of the fenaco cooperative and a co-shareholder of LANDI Schweiz AG.
+        """@en ;
+    schema:url <https://www.laveba.ch/> .
+
+zefix:377456 a systemmap:PrivateOrganization ;
+    schema:name "SEMAG, Saat- und Pflanzgut AG"@de,
+        "SEMAG, Saat- und Pflanzgut Ltd"@en,
+        "SEMAG, Saat- und Pflanzgut SA"@fr,
+        "SEMAG, Saat- und Pflanzgut SA"@it ;
+    schema:description """
+        Die SEMAG in Lyssach ist das Saatgutunternehmen der fenaco Genossenschaft.
+        Sie vermehrt, aufbereitet und vertreibt Saat- und Pflanzgut für den Ackerbau.
+        """@de,
+        """
+        SEMAG in Lyssach is the seed company of the fenaco cooperative.
+        It multiplies, processes and distributes seed and planting material for arable farming.
+        """@en ;
+    schema:url <https://www.semag.ch/> ;
+    systemmap:ownedBy zefix:328631 .
+
+zefix:380687 a systemmap:PrivateOrganization ;
+    schema:name "GVS Agrar AG"@de,
+        "GVS Agrar Ltd"@en,
+        "GVS Agrar SA"@fr,
+        "GVS Agrar SA"@it ;
+    schema:description """
+        Die GVS Agrar AG in Schaffhausen ist ein Landtechnikunternehmen und Importeurin von Landmaschinenmarken wie Fendt und Massey Ferguson.
+        Sie ist zusammen mit der fenaco Genossenschaft und AGCO Trägerin der Swiss Future Farm.
+        """@de,
+        """
+        GVS Agrar AG in Schaffhausen is an agricultural machinery company and importer of brands such as Fendt and Massey Ferguson.
+        Together with the fenaco cooperative and AGCO it runs the Swiss Future Farm.
+        """@en ;
+    schema:url <https://www.gvs-agrar.ch/> .
+
+zefix:417159 a systemmap:PrivateOrganization ;
+    schema:name "UFAG Laboratorien AG"@de,
+        "UFAG Laboratories Ltd"@en,
+        "UFAG Laboratoires SA"@fr,
+        "UFAG Laboratori SA"@it ;
+    schema:description """
+        Die UFAG Laboratorien AG in Sursee ist ein akkreditiertes Prüflabor für Lebensmittel-, Futtermittel-, Umwelt- und Pharmaanalytik.
+        Sie ist eine Tochtergesellschaft der fenaco Genossenschaft.
+        """@de,
+        """
+        UFAG Laboratorien AG in Sursee is an accredited testing laboratory for food, feed, environmental and pharmaceutical analysis.
+        It is a subsidiary of the fenaco cooperative.
+        """@en ;
+    schema:url <https://www.ufag-laboratorien.ch/> ;
+    systemmap:ownedBy zefix:328631 .
+
 zefix:455252 a schema:Organization,
         systemmap:PrivateOrganization ;
     schema:name "Bell Schweiz AG"@de ;
@@ -728,6 +928,21 @@ zefix:459488 a schema:Organization ;
     systemmap:abbreviation "SMP"@de ;
     systemmap:owns zefix:358851 ;
     schema:url <https://www.swissmilk.ch/> .
+
+zefix:458045 a systemmap:PrivateOrganization ;
+    schema:name "Rutishauser-DiVino AG"@de,
+        "Rutishauser-DiVino Ltd"@en,
+        "Rutishauser-DiVino SA"@fr,
+        "Rutishauser-DiVino SA"@it ;
+    schema:description """
+        Die Rutishauser-DiVino AG entstand 2021 aus der Fusion der Rutishauser Weinkellerei mit der DiVino AG der fenaco Genossenschaft.
+        Sie bündelt die Weinkellereien und den Weinhandel der fenaco in der Deutschschweiz.
+        """@de,
+        """
+        Rutishauser-DiVino AG was formed in 2021 from the merger of the Rutishauser winery with the fenaco cooperative's DiVino AG.
+        It brings together fenaco's wineries and wine trade in German-speaking Switzerland.
+        """@en ;
+    systemmap:ownedBy zefix:328631 .
 
 zefix:469727 a schema:Organization,
         systemmap:PrivateOrganization ;
@@ -1221,6 +1436,31 @@ systemmap:SDoGAjF1AJCdFZQQl a schema:SoftwareApplication ;
         """@it ;
     schema:url <https://www.micarna.ch/de/services/e-direct> ;
     systemmap:operatedBy zefix:130459 .
+
+systemmap:SDvh4idCujsv7051C a schema:SoftwareApplication ;
+    schema:name "Bison Process"@de,
+        "Bison Process"@en,
+        "Bison Process"@fr,
+        "Bison Process"@it ;
+    schema:description """
+        Bison Process ist die ERP-Software der Bison Schweiz AG für Handel, Agrar, Energie und Lebensmittelproduktion.
+        Sie wurde für die fenaco-LANDI Gruppe entwickelt und wird von der fenaco Genossenschaft, der LANDI Schweiz AG, der AGROLA AG sowie rund 200 LANDI-Genossenschaften im Agrarhandel und Detailhandel eingesetzt.
+        """@de,
+        """
+        Bison Process is the ERP software of Bison Schweiz AG for trade, agriculture, energy and food production.
+        It was developed for the fenaco-LANDI group and is used by the fenaco cooperative, LANDI Schweiz AG, AGROLA AG and around 200 LANDI cooperatives in agricultural trade and retail.
+        """@en,
+        """
+        Bison Process est le logiciel ERP de Bison Schweiz AG pour le commerce, l'agriculture, l'énergie et la production alimentaire.
+        Il a été développé pour le groupe fenaco-LANDI et est utilisé par la coopérative fenaco, LANDI Suisse SA, AGROLA SA et quelque 200 coopératives LANDI dans le commerce agricole et le commerce de détail.
+        """@fr,
+        """
+        Bison Process è il software ERP di Bison Schweiz AG per il commercio, l'agricoltura, l'energia e la produzione alimentare.
+        È stato sviluppato per il gruppo fenaco-LANDI ed è utilizzato dalla cooperativa fenaco, da LANDI Svizzera SA, da AGROLA SA e da circa 200 cooperative LANDI nel commercio agricolo e al dettaglio.
+        """@it ;
+    schema:url <https://www.bison-group.com/> ;
+    systemmap:developedBy zefix:330180 ;
+    systemmap:operatedBy zefix:330180 .
 
 systemmap:SDwz5T4SyxjgPiHbH a schema:SoftwareApplication,
         systemmap:FMIS ;
@@ -2054,6 +2294,29 @@ systemmap:SgsDa3rQzhEAqAUOZ a schema:SoftwareApplication,
     schema:url <https://farmable.tech/de/> ;
     systemmap:operatedBy systemmap:SGWW0nzBJjBsx2QTr .
 
+systemmap:ShFWg1rA8OvddKt3S a schema:SoftwareApplication ;
+    schema:name "fenaco Login"@de,
+        "fenaco Login"@en,
+        "fenaco Login"@fr,
+        "fenaco Login"@it ;
+    schema:description """
+        Das fenaco Login ist der zentrale Identitäts- und Zugangsdienst der fenaco-LANDI Gruppe.
+        Kundinnen und Kunden melden sich damit mit einem einzigen Konto bei den digitalen Angeboten der Gruppe an, etwa beim LANDI Online-Shop oder der AGROLA App.
+        """@de,
+        """
+        fenaco Login is the central identity and access service of the fenaco-LANDI group.
+        Customers use a single account to sign in to the group's digital services, such as the LANDI online shop or the AGROLA app.
+        """@en,
+        """
+        Le fenaco Login est le service central d'identité et d'accès du groupe fenaco-LANDI.
+        Les clients se connectent avec un seul compte aux offres numériques du groupe, par exemple la boutique en ligne LANDI ou l'application AGROLA.
+        """@fr,
+        """
+        Il fenaco Login è il servizio centrale di identità e accesso del gruppo fenaco-LANDI.
+        I clienti accedono con un unico account alle offerte digitali del gruppo, come lo shop online LANDI o l'app AGROLA.
+        """@it ;
+    systemmap:operatedBy zefix:328631 .
+
 systemmap:ShWzrtCjaSa8nRJ4N a schema:SoftwareApplication ;
     schema:name "amacos"@de,
         "amacos"@en,
@@ -2289,6 +2552,30 @@ systemmap:SlmCGKfiLZcQ0MsvC a schema:SoftwareApplication ;
         Un sistema ERP basato su SAP, utilizzato da Micarna per la gestione dei processi di lavorazione della carne.
         """@it ;
     systemmap:operatedBy zefix:130459 .
+
+systemmap:Sm8sdEEkkrjveON68 a schema:SoftwareApplication ;
+    schema:name "LANDI Online-Shop"@de,
+        "LANDI Online Shop"@en,
+        "Boutique en ligne LANDI"@fr,
+        "Shop online LANDI"@it ;
+    schema:description """
+        Der nationale Online-Shop landi.ch wird seit 2017 von der LANDI Schweiz AG betrieben.
+        Er bietet das Sortiment der LANDI-Läden inklusive Agrarartikel zur Lieferung oder Abholung im LANDI-Laden an.
+        """@de,
+        """
+        The national online shop landi.ch has been operated by LANDI Schweiz AG since 2017.
+        It offers the range of the LANDI stores, including agricultural supplies, for delivery or pick-up at a LANDI store.
+        """@en,
+        """
+        La boutique en ligne nationale landi.ch est exploitée depuis 2017 par LANDI Suisse SA.
+        Elle propose l'assortiment des magasins LANDI, y compris les articles agricoles, en livraison ou en retrait dans un magasin LANDI.
+        """@fr,
+        """
+        Lo shop online nazionale landi.ch è gestito dal 2017 da LANDI Svizzera SA.
+        Offre l'assortimento dei negozi LANDI, compresi gli articoli agricoli, con consegna o ritiro in un negozio LANDI.
+        """@it ;
+    schema:url <https://www.landi.ch/> ;
+    systemmap:operatedBy zefix:370465 .
 
 systemmap:SmWEQ8lVlDS9ZwPkY a schema:SoftwareApplication ;
     schema:name "LAWIS"@de,
@@ -2661,6 +2948,30 @@ systemmap:SwsptnNDhjz0vIZNu a schema:SoftwareApplication ;
         """@it ;
     schema:url <https://client.isagri.ch/centre-aide/isalait> ;
     systemmap:operatedBy zefix:505628 .
+
+systemmap:SxQUy8cnImkl0SaAh a schema:SoftwareApplication ;
+    schema:name "AGROLA App"@de,
+        "AGROLA App"@en,
+        "AGROLA App"@fr,
+        "AGROLA App"@it ;
+    schema:description """
+        Die AGROLA App bündelt Tankstellensuche, Heizölbestellung, die AGROLA energy card zum bargeldlosen Tanken und das Bonusprogramm energy club.
+        Die Anmeldung erfolgt über das zentrale fenaco Login.
+        """@de,
+        """
+        The AGROLA app combines filling station search, heating oil ordering, the AGROLA energy card for cashless refuelling and the energy club loyalty programme.
+        Users sign in via the central fenaco Login.
+        """@en,
+        """
+        L'application AGROLA regroupe la recherche de stations-service, la commande de mazout, l'AGROLA energy card pour faire le plein sans argent liquide et le programme de fidélité energy club.
+        La connexion s'effectue via le fenaco Login central.
+        """@fr,
+        """
+        L'app AGROLA riunisce la ricerca di stazioni di servizio, l'ordinazione di olio da riscaldamento, la AGROLA energy card per il rifornimento senza contanti e il programma fedeltà energy club.
+        L'accesso avviene tramite il fenaco Login centrale.
+        """@it ;
+    schema:url <https://agrola.ch/de/agrola/agrola-app> ;
+    systemmap:operatedBy zefix:2935 .
 
 systemmap:Sxi0p2NlmE7ff8oEC a schema:SoftwareApplication ;
     schema:name "Granovit Portal"@de,
@@ -5400,6 +5711,22 @@ systemmap:SLu8IMm0TUxYimTwO a systemmap:PrivateOrganization ;
     schema:name "Agrosoft, Bosshart Bernhard"@de ;
     schema:url <https://www.agrosoft.ch> .
 
+systemmap:SNWLG5I5tg8zRRg2H a systemmap:PrivateOrganization ;
+    schema:name "Inoverde"@de,
+        "Inoverde"@en,
+        "Inoverde"@fr,
+        "Inoverde"@it ;
+    schema:description """
+        Inoverde (vormals fenaco Landesprodukte) ist die Geschäftseinheit der fenaco Genossenschaft für Früchte, Gemüse und Kartoffeln.
+        Sie umfasst die Marken Steffen-Ris und Union-Fruits und übernimmt Lagerung, Aufbereitung und Vermarktung von Landesprodukten.
+        """@de,
+        """
+        Inoverde (formerly fenaco Landesprodukte) is the business unit of the fenaco cooperative for fruit, vegetables and potatoes.
+        It comprises the Steffen-Ris and Union-Fruits brands and handles storage, processing and marketing of domestic produce.
+        """@en ;
+    schema:parentOrganization zefix:328631 ;
+    schema:url <https://www.inoverde.ch/> .
+
 systemmap:SQ3N7dTc23t2wzXr2 a systemmap:PrivateOrganization ;
     schema:name "TSM Treuhand GmbH"@de,
         "TSM Treuhand LLC"@en,
@@ -5434,6 +5761,22 @@ systemmap:SQ3N7dTc23t2wzXr2 a systemmap:PrivateOrganization ;
 systemmap:SWdllcNbPnjdcm7om a systemmap:PrivateOrganization ;
     schema:name "Agroline"@de ;
     systemmap:ownedBy zefix:328631 .
+
+systemmap:SWgC3issyhw1UO4Zn a systemmap:PrivateOrganization ;
+    schema:name "LANDOR"@de,
+        "LANDOR"@en,
+        "LANDOR"@fr,
+        "LANDOR"@it ;
+    schema:description """
+        LANDOR ist der Geschäftsbereich Pflanzenernährung der fenaco Genossenschaft.
+        Er importiert, produziert und vertreibt Dünger und bietet Beratung zur Düngungsplanung an.
+        """@de,
+        """
+        LANDOR is the plant nutrition business unit of the fenaco cooperative.
+        It imports, produces and distributes fertilisers and offers fertilisation planning advice.
+        """@en ;
+    schema:parentOrganization zefix:328631 ;
+    schema:url <https://www.landor.ch/> .
 
 systemmap:SYfFBbBlmgKk9vmPg a systemmap:PrivateOrganization ;
     schema:name "NielsenIQ"@de ;
@@ -5750,7 +6093,8 @@ zefix:76051 a systemmap:PrivateOrganization ;
     schema:name "Meliofeed AG"@de,
         "Meliofeed Ltd"@en,
         "Meliofeed SA"@it ;
-    schema:url <https://www.melior.ch> .
+    schema:url <https://www.melior.ch> ;
+    systemmap:ownedBy zefix:328631 .
 
 zefix:76693 a systemmap:PrivateOrganization ;
     schema:name "Halag Chemie AG"@de ;

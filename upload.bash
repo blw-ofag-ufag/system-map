@@ -20,7 +20,7 @@ echo Merge all data into one graph for subsequent LINDAS upload
 python3 src/python/rdf-processing.py \
   -i rdf/ontology/*.ttl rdf/data/*.ttl rdf/shape/*.ttl \
   -o rdf/processed/graph.ttl \
-  -r src/sparql/inference-rules/*.sparql
+  -r src/sparql/inference-rules/*.sparql src/sparql/processing-rules/03-foag-systems.sparql
 
 echo Apply SHACL rules to check for constraint violations
 pyshacl -s rdf/shape/shape.ttl -f human rdf/processed/graph.ttl

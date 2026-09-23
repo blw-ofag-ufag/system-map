@@ -1781,6 +1781,33 @@ systemmap:SMjqlEoVCR9wpTyN1 a schema:SoftwareApplication ;
         systemmap:STg0zUHrhEWXotIau,
         systemmap:Sqo5ZJtzXw1gg3RYC .
 
+systemmap:SN3ZnW9gb1SaNe6IX a schema:SoftwareApplication ;
+    schema:name "Herdy"@de,
+        "Herdy"@en,
+        "Herdy"@fr,
+        "Herdy"@it ;
+    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
+    schema:description """
+        Herdy ist eine Schweizer Herdenverwaltungs-App für Rinder-, Schaf- und Ziegenbetriebe sowie Betriebe mit mehreren Tierarten. Sie vereint Tierverwaltung, Behandlungsjournal sowie Zucht- und Geburtsdaten in einer Anwendung und ermöglicht über eine direkte Anbindung an die Tierverkehrsdatenbank (TVD) das Melden von Geburten, Zu- und Abgängen sowie Abgängen durch Tod; die Rückmeldung der TVD ist in der Anwendung nachvollziehbar.
+        Die Bedienung ist auf das Smartphone ausgerichtet, dieselben Daten stehen im Büro auch am Computer zur Verfügung. Herdy wird von der Inoo GmbH in Altstätten SG entwickelt und betrieben.
+        """@de,
+        """
+        Herdy is a Swiss herd management app for cattle, sheep and goat farms as well as farms keeping several species. It combines animal management, a treatment journal and breeding and birth records in one application and, via a direct connection to the Animal Traffic Database (TVD), allows births, arrivals, departures and deaths to be reported; the TVD's response can be traced in the application.
+        The app is designed for use on a smartphone, with the same data also available on a computer in the office. Herdy is developed and operated by Inoo GmbH in Altstätten SG.
+        """@en,
+        """
+        Herdy est une application suisse de gestion de troupeau pour les exploitations bovines, ovines et caprines ainsi que pour les exploitations détenant plusieurs espèces. Elle réunit la gestion des animaux, le journal des traitements ainsi que les données d'élevage et de naissance dans une seule application et permet, grâce à une connexion directe à la banque de données sur le trafic des animaux (BDTA), de notifier les naissances, les entrées, les sorties et les décès ; la réponse de la BDTA est consultable dans l'application.
+        L'utilisation est conçue pour le smartphone, les mêmes données étant également disponibles sur ordinateur au bureau. Herdy est développée et exploitée par Inoo GmbH à Altstätten SG.
+        """@fr,
+        """
+        Herdy è un'app svizzera per la gestione della mandria destinata alle aziende con bovini, ovini e caprini nonché alle aziende con più specie animali. Riunisce la gestione degli animali, il registro dei trattamenti e i dati di allevamento e di nascita in un'unica applicazione e, grazie al collegamento diretto alla banca dati sul traffico di animali (BDTA), consente di notificare nascite, entrate, uscite e decessi; il riscontro della BDTA è consultabile nell'applicazione.
+        L'utilizzo è pensato per lo smartphone, gli stessi dati sono disponibili anche al computer in ufficio. Herdy è sviluppata e gestita da Inoo GmbH ad Altstätten SG.
+        """@it ;
+    schema:keywords keyword:animaltraceability ;
+    schema:url <https://herdy.ch/> ;
+    systemmap:developedBy zefix:1669884 ;
+    systemmap:operatedBy zefix:1669884 .
+
 systemmap:SNQSYR7J0IEZpyFT a schema:SoftwareApplication ;
     schema:name "Auswertung/Analyse, Lebensmittelsicherheit, Veterinärwesen, Public Health"@de ;
     schema:description """
@@ -5914,6 +5941,25 @@ zefix:166248 a systemmap:PrivateOrganization ;
 
 zefix:1663457 a systemmap:PrivateOrganization ;
     schema:name "Averio AG"@de .
+
+zefix:1669884 a systemmap:PrivateOrganization ;
+    schema:name "Inoo GmbH"@de,
+        "Inoo GmbH"@en,
+        "Inoo GmbH"@fr,
+        "Inoo GmbH"@it ;
+    schema:description """
+        Die Inoo GmbH ist eine Digitalagentur mit Sitz in Altstätten SG, die Websites, Individualsoftware und KI-Integrationen für KMU entwickelt. Sie entwickelt und betreibt die Herdenverwaltungs-App Herdy mit direkter Anbindung an die Tierverkehrsdatenbank (TVD).
+        """@de,
+        """
+        Inoo GmbH is a digital agency based in Altstätten SG that develops websites, custom software and AI integrations for SMEs. It develops and operates the herd management app Herdy with a direct connection to the Animal Traffic Database (TVD).
+        """@en,
+        """
+        Inoo GmbH est une agence numérique établie à Altstätten SG qui développe des sites web, des logiciels sur mesure et des intégrations d'IA pour les PME. Elle développe et exploite l'application de gestion de troupeau Herdy, reliée directement à la banque de données sur le trafic des animaux (BDTA).
+        """@fr,
+        """
+        Inoo GmbH è un'agenzia digitale con sede ad Altstätten SG che sviluppa siti web, software su misura e integrazioni di IA per le PMI. Sviluppa e gestisce l'app per la gestione della mandria Herdy, collegata direttamente alla banca dati sul traffico di animali (BDTA).
+        """@it ;
+    schema:url <https://www.inoo.ch/> .
 
 zefix:177634 a systemmap:PrivateOrganization ;
     schema:name "Silvestri AG"@de ;

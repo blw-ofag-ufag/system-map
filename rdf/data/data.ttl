@@ -1786,7 +1786,6 @@ systemmap:SN3ZnW9gb1SaNe6IX a schema:SoftwareApplication ;
         "Herdy"@en,
         "Herdy"@fr,
         "Herdy"@it ;
-    service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     schema:description """
         Herdy ist eine Schweizer Herdenverwaltungs-App für Rinder-, Schaf- und Ziegenbetriebe sowie Betriebe mit mehreren Tierarten. Sie vereint Tierverwaltung, Behandlungsjournal sowie Zucht- und Geburtsdaten in einer Anwendung und ermöglicht über eine direkte Anbindung an die Tierverkehrsdatenbank (TVD) das Melden von Geburten, Zu- und Abgängen sowie Abgängen durch Tod; die Rückmeldung der TVD ist in der Anwendung nachvollziehbar.
         Die Bedienung ist auf das Smartphone ausgerichtet, dieselben Daten stehen im Büro auch am Computer zur Verfügung. Herdy wird von der Inoo GmbH in Altstätten SG entwickelt und betrieben.

@@ -202,7 +202,6 @@ systemmap:StJxbOvze4sBEcRnP a dcmitype:Collection ;
         systemmap:SGdyOoksCnRRZwi2Q,
         systemmap:SJieGEHDWcCIlHrag,
         systemmap:SK6JOIUV1UjrOYD7f,
-        systemmap:SL5ifpgBTX8tKSRRy,
         systemmap:SLekJnxsXE7F1IQyK,
         systemmap:SNQSYR7J0IEZpyFT,
         systemmap:SPASZffcsCMdIFEsZ,
@@ -215,7 +214,6 @@ systemmap:StJxbOvze4sBEcRnP a dcmitype:Collection ;
         systemmap:SaAFsBrqZsU4IN9py,
         systemmap:SaOtqyAB5qm1luNuX,
         systemmap:Scl0iGvcUSNeHN0ag,
-        systemmap:SeEO5oGgQwyNHTBhh,
         systemmap:SoBRgq7STLbZfEze,
         systemmap:SsFdxnjM8hgUdzVT5,
         systemmap:SuRRYaBVLQ4cvFouW,
@@ -323,45 +321,6 @@ systemmap:SWrEh3riVEhEddyRr a service:Service ;
         Backend-Service, der die schweizweit standardisierte Berechnung der Nährstoffbilanz nach der Methode Suisse-Bilanz ermöglicht und damit die Erfüllung des ÖLN sowie den Bezug von Direktzahlungen unterstützt.
         """@de .
 
-systemmap:SeEO5oGgQwyNHTBhh a service:Service ;
-    schema:name "Melde- und Abfrageschnittstelle der TVD"@de,
-        "Reporting and query interface of the TVD"@en,
-        "Interface de notification et de consultation de la BDTA"@fr,
-        "Interfaccia di notifica e di consultazione della BDTA"@it ;
-    service:providedBy systemmap:SJieGEHDWcCIlHrag ;
-    schema:description """
-        Schnittstelle von Animal Tracing, über die Meldungen auf der TVD sowie Abfragen auf der TVD gemacht werden können.
-        """@de,
-        """
-        Interface of Animal Tracing through which reports can be submitted to the TVD and queries can be made on the TVD.
-        """@en,
-        """
-        Interface d'Animal Tracing permettant de transmettre des notifications à la BDTA et d'effectuer des consultations dans la BDTA.
-        """@fr,
-        """
-        Interfaccia di Animal Tracing tramite la quale è possibile trasmettere notifiche alla BDTA ed effettuare consultazioni nella BDTA.
-        """@it .
-
-systemmap:SL5ifpgBTX8tKSRRy a service:Service ;
-    schema:name "Weiterleitung von Anfragen"@de,
-        "Forwarding of requests"@en,
-        "Transmission de requêtes"@fr,
-        "Inoltro di richieste"@it ;
-    service:consumedBy systemmap:SE3m83KovBQ0twdyd,
-        systemmap:SU88cJmqj8nBRl2KZ ;
-    service:providedBy systemmap:SZGxBgE7K8mCyneq9 ;
-    schema:description """
-        Dienst des ASA2011-ESB, über den Anfragen an andere Systeme weitergeleitet werden. Die TVD richtet darüber Abfragen zu Personen an die ASA2011-BZV und Abfragen zu Betrieben und Personen an AGIS. RiBeS bezieht darüber die benötigten Daten von Schlachtungen über Animal Tracing.
-        """@de,
-        """
-        Service of the ASA2011-ESB through which requests are forwarded to other systems. The TVD uses it to send queries about persons to the ASA2011-BZV and queries about holdings and persons to AGIS. RiBeS uses it to obtain the slaughter data it requires via Animal Tracing.
-        """@en,
-        """
-        Service de l'ASA2011-ESB par lequel des requêtes sont transmises à d'autres systèmes. La BDTA l'utilise pour adresser des requêtes concernant des personnes à l'ASA2011-BZV et des requêtes concernant des exploitations et des personnes à AGIS. RiBeS l'utilise pour obtenir, via Animal Tracing, les données d'abattage dont il a besoin.
-        """@fr,
-        """
-        Servizio dell'ASA2011-ESB tramite il quale le richieste vengono inoltrate ad altri sistemi. La BDTA lo utilizza per inviare richieste relative a persone all'ASA2011-BZV e richieste relative ad aziende e persone ad AGIS. RiBeS lo utilizza per ottenere, tramite Animal Tracing, i dati di macellazione di cui ha bisogno.
-        """@it .
 
 systemmap:SmWBzvRi0YEZiWMOd a service:Service ;
     schema:name "SuisseBilanz-Berechnungsservice"@de ;
@@ -1875,12 +1834,12 @@ systemmap:SJ15CI0vn3S1JgcOd a schema:SoftwareApplication ;
     schema:url <https://vetera.net/> ;
     systemmap:operatedBy systemmap:SrG5yvnwax87iuQw8 .
 
-systemmap:SJieGEHDWcCIlHrag a schema:SoftwareApplication ;
+systemmap:SJieGEHDWcCIlHrag a service:Service ;
     schema:name "Animal Tracing"@de,
         "Animal Tracing"@en,
         "Animal Tracing"@fr,
         "Animal Tracing"@it ;
-    dcterms:isPartOf systemmap:SU88cJmqj8nBRl2KZ ;
+    service:providedBy systemmap:SU88cJmqj8nBRl2KZ ;
     schema:description """
         Über die Schnittstelle von Animal Tracing können Meldungen auf der TVD sowie Abfragen auf der TVD gemacht werden. Animal Tracing empfängt vom ASA2011-ESB XML-Anfragen an die TVD und schickt die Antworten an den ASA2011-ESB zurück.
         """@de,
@@ -1893,8 +1852,7 @@ systemmap:SJieGEHDWcCIlHrag a schema:SoftwareApplication ;
         """
         Tramite l'interfaccia di Animal Tracing è possibile trasmettere notifiche alla BDTA ed effettuare consultazioni nella BDTA. Animal Tracing riceve dall'ASA2011-ESB richieste XML rivolte alla BDTA e rinvia le risposte all'ASA2011-ESB.
         """@it ;
-    schema:keywords keyword:animaltraceability ;
-    systemmap:operatedBy zefix:449781 .
+    schema:keywords keyword:animaltraceability .
 
 systemmap:SLxeXHOfmC6DkBGl a schema:SoftwareApplication ;
     schema:name "Zentrale Auswertung von Agrarumweltindikatoren"@de ;
@@ -2313,14 +2271,16 @@ systemmap:SYqYq3UTUnZHmyFRD a schema:SoftwareApplication ;
         "Le DWH est responsable du stockage et du traitement de toutes les données."@fr,
         "Il DWH è responsabile dell'archiviazione e dell'elaborazione di tutti i dati."@it .
 
-systemmap:SZGxBgE7K8mCyneq9 a schema:SoftwareApplication ;
+systemmap:SZGxBgE7K8mCyneq9 a service:Service ;
     schema:name "ASA2011-ESB"@de,
         "ASA2011-ESB"@en,
         "ASA2011-ESB"@fr,
         "ASA2011-ESB"@it ;
+    service:consumedBy systemmap:SE3m83KovBQ0twdyd,
+        systemmap:SU88cJmqj8nBRl2KZ ;
     service:consumes systemmap:S0Lmke4SLG60txfuI,
-        systemmap:SK6JOIUV1UjrOYD7f,
-        systemmap:SeEO5oGgQwyNHTBhh ;
+        systemmap:SJieGEHDWcCIlHrag,
+        systemmap:SK6JOIUV1UjrOYD7f ;
     schema:description """
         Über den ASA2011-ESB werden Abfragen der TVD zu Personen an die ASA2011-BZV sowie Abfragen zu Betrieben und Personen an AGIS weitergeleitet. Zudem leitet er XML-Anfragen an die TVD an Animal Tracing weiter.
         """@de,
@@ -2332,8 +2292,7 @@ systemmap:SZGxBgE7K8mCyneq9 a schema:SoftwareApplication ;
         """@fr,
         """
         Tramite l'ASA2011-ESB, le richieste della BDTA relative a persone vengono inoltrate all'ASA2011-BZV e quelle relative ad aziende e persone ad AGIS. Inoltra inoltre ad Animal Tracing le richieste XML rivolte alla BDTA.
-        """@it ;
-    systemmap:operatedBy systemmap:SQbNLiw8h9MnSXuyo .
+        """@it .
 
 systemmap:SaOtqyAB5qm1luNuX a schema:SoftwareApplication ;
     schema:name "GVE-Rechner"@de,

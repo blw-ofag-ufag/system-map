@@ -181,6 +181,68 @@ systemmap:Si8UnIQkj02jgbLEb a dcmitype:Collection ;
         systemmap:SVZJz682iwRjVx5wp,
         zefix:249959 .
 
+systemmap:StJxbOvze4sBEcRnP a dcmitype:Collection ;
+    schema:name "TVD Systemarchitektur"@de,
+        "TVD System Architecture"@en,
+        "Architecture du système BDTA"@fr,
+        "Architettura del sistema BDTA"@it ;
+    systemmap:containsNodes systemmap:S0Lmke4SLG60txfuI,
+        systemmap:S3Rf79NI3Pm1rfOlN,
+        systemmap:S4BoMPavXD5gIObm,
+        systemmap:S4QbmDXkJblSMvorw,
+        systemmap:S7mhWQjPZiSFc8dU,
+        systemmap:S9lxDqxihNEyxJ8kV,
+        systemmap:SAUWzyCpeGZ6vVil,
+        systemmap:SAwz5t3SyxjgPiHhX,
+        systemmap:SBba3t3SyxjgPiHhX,
+        systemmap:SCVRz1a3ho6i01dn6,
+        systemmap:SE3m83KovBQ0twdyd,
+        systemmap:SE8y4MuFWW5BKqK92,
+        systemmap:SEI0Jp1SabxWUiGh0,
+        systemmap:SGdyOoksCnRRZwi2Q,
+        systemmap:SJieGEHDWcCIlHrag,
+        systemmap:SK6JOIUV1UjrOYD7f,
+        systemmap:SLekJnxsXE7F1IQyK,
+        systemmap:SNQSYR7J0IEZpyFT,
+        systemmap:SPASZffcsCMdIFEsZ,
+        systemmap:SQbNLiw8h9MnSXuyo,
+        systemmap:SSBg29n8Wei8fxx1a,
+        systemmap:SU88cJmqj8nBRl2KZ,
+        systemmap:SVXa3t3SyxjgPiLBx,
+        systemmap:SY3m9KyCPTfoY1uzP,
+        systemmap:SZGxBgE7K8mCyneq9,
+        systemmap:SaAFsBrqZsU4IN9py,
+        systemmap:SaOtqyAB5qm1luNuX,
+        systemmap:Scl0iGvcUSNeHN0ag,
+        systemmap:SoBRgq7STLbZfEze,
+        systemmap:SsFdxnjM8hgUdzVT5,
+        systemmap:SuRRYaBVLQ4cvFouW,
+        systemmap:SvDlxaJ5YMkuZGH6k,
+        systemmap:SvNriWslaOR5xkdw,
+        systemmap:SyDlq7oQ0czCgyv61,
+        systemmap:SzB95Xoyj1a1EJNBe,
+        zefix:165954,
+        zefix:449781 .
+
+systemmap:S0Lmke4SLG60txfuI a service:Service ;
+    schema:name "Abfrage von Betriebs- und Personendaten"@de,
+        "Query of holding and person data"@en,
+        "Consultation des données sur les exploitations et les personnes"@fr,
+        "Consultazione dei dati su aziende e persone"@it ;
+    service:providedBy systemmap:SvDlxaJ5YMkuZGH6k ;
+    schema:description """
+        Dienst von AGIS, über den Abfragen zu Betrieben und Personen beantwortet werden. Abfragen der TVD werden über den ASA2011-ESB an AGIS weitergeleitet.
+        """@de,
+        """
+        AGIS service that answers queries about holdings and persons. TVD queries are forwarded to AGIS via the ASA2011-ESB.
+        """@en,
+        """
+        Service d'AGIS qui répond aux requêtes concernant des exploitations et des personnes. Les requêtes de la BDTA sont transmises à AGIS via l'ASA2011-ESB.
+        """@fr,
+        """
+        Servizio di AGIS che risponde alle richieste relative ad aziende e persone. Le richieste della BDTA sono inoltrate ad AGIS tramite l'ASA2011-ESB.
+        """@it .
+
 systemmap:S0hwJxy2kXNPFbl4C a service:Service ;
     schema:name "Lineare Korrektur (LK)-Service"@de ;
     dcterms:isPartOf systemmap:SWrEh3riVEhEddyRr ;
@@ -202,6 +264,25 @@ systemmap:SAgmZXUKqNKTf35Fv a service:Service ;
     schema:description """
         Modul-Service zur detaillierten Erfassung und Bilanzierung von Nährstoffflüssen aus Zu- und Verkäufen von Futtermitteln sowie Tieren (Import/Export).
         """@de .
+
+systemmap:SCVRz1a3ho6i01dn6 a service:Service ;
+    schema:name "RiBeS-Webservice"@de,
+        "RiBeS web service"@en,
+        "Service web RiBeS"@fr,
+        "Servizio web RiBeS"@it ;
+    service:providedBy systemmap:SE3m83KovBQ0twdyd ;
+    schema:description """
+        Webservice von RiBeS, über den Funktionen von RiBeS aus Systemen der Schlachtbetriebe verwendet werden können.
+        """@de,
+        """
+        RiBeS web service through which functions of RiBeS can be used from the systems of slaughterhouses.
+        """@en,
+        """
+        Service web de RiBeS permettant d'utiliser des fonctions de RiBeS depuis les systèmes des abattoirs.
+        """@fr,
+        """
+        Servizio web di RiBeS tramite il quale le funzioni di RiBeS possono essere utilizzate dai sistemi dei macelli.
+        """@it .
 
 systemmap:SFMUSGNRQVqCKBNHQ a service:Service ;
     schema:name "GMF-Berechnungsservice"@de ;
@@ -239,6 +320,7 @@ systemmap:SWrEh3riVEhEddyRr a service:Service ;
     schema:description """
         Backend-Service, der die schweizweit standardisierte Berechnung der Nährstoffbilanz nach der Methode Suisse-Bilanz ermöglicht und damit die Erfüllung des ÖLN sowie den Bezug von Direktzahlungen unterstützt.
         """@de .
+
 
 systemmap:SmWBzvRi0YEZiWMOd a service:Service ;
     schema:name "SuisseBilanz-Berechnungsservice"@de ;
@@ -1483,6 +1565,41 @@ systemmap:SDwz5T4SyxjgPiHbX a schema:SoftwareApplication,
     schema:url <https://www.agrarsoftware.ch/agroplus.html> ;
     systemmap:operatedBy zefix:505628 .
 
+systemmap:SE3m83KovBQ0twdyd a schema:SoftwareApplication ;
+    schema:name "Rindvieh-Beprobung im Schlachthof"@de,
+        "Cattle Sampling at the Slaughterhouse"@en,
+        "Échantillonnage des bovins à l'abattoir"@fr,
+        "Campionamento dei bovini al macello"@it ;
+    schema:description """
+        RiBeS ist das Informationssystem für die Beprobung von Rindvieh im Schlachthof.
+        Es zeigt den amtlichen Tierärztinnen und Tierärzten im Schlachtbetrieb an, ob ein Rind für die Stichprobenuntersuchungen der nationalen Tierseuchenüberwachung beprobt werden soll, und kontrolliert die Anzahl Proben pro Betrieb.
+        Die Identitas AG hat RiBeS im Auftrag des BLV entwickelt und stellt die Infrastruktur dafür bereit; das BLV ist Eigentümer der Software.
+        """@de,
+        """
+        RiBeS is the information system for sampling cattle at the slaughterhouse.
+        It shows official veterinarians at the slaughterhouse whether a bovine animal is to be sampled for the random-sample testing of national animal disease surveillance, and it checks the number of samples per holding.
+        Identitas AG developed RiBeS on behalf of the FSVO and provides the infrastructure for it; the FSVO owns the software.
+        """@en,
+        """
+        RiBeS est le système d'information pour l'échantillonnage des bovins à l'abattoir.
+        Il indique aux vétérinaires officiels de l'abattoir si un bovin doit faire l'objet d'un prélèvement pour les examens par sondage de la surveillance nationale des épizooties et contrôle le nombre d'échantillons par exploitation.
+        Identitas AG a développé RiBeS sur mandat de l'OSAV et en fournit l'infrastructure ; l'OSAV est propriétaire du logiciel.
+        """@fr,
+        """
+        RiBeS è il sistema d'informazione per il campionamento dei bovini al macello.
+        Indica ai veterinari ufficiali del macello se un bovino deve essere campionato per gli esami a campione della sorveglianza nazionale delle epizoozie e controlla il numero di campioni per azienda.
+        Identitas AG ha sviluppato RiBeS su incarico dell'USAV e ne mette a disposizione l'infrastruttura; l'USAV è proprietario del software.
+        """@it ;
+    schema:keywords keyword:animalhealth,
+        keyword:epizooticdiseases ;
+    schema:url <https://www.identitas.ch/produkte/ribes> ;
+    systemmap:abbreviation "RiBeS"@de,
+        "RiBeS"@en,
+        "RiBeS"@fr,
+        "RiBeS"@it ;
+    systemmap:developedBy zefix:449781 ;
+    systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN .
+
 systemmap:SE5DY78J7vgfoiDLj a schema:SoftwareApplication ;
     schema:name "Protection Variété"@de,
         "Protection Variété"@en,
@@ -1716,6 +1833,26 @@ systemmap:SJ15CI0vn3S1JgcOd a schema:SoftwareApplication ;
         """@it ;
     schema:url <https://vetera.net/> ;
     systemmap:operatedBy systemmap:SrG5yvnwax87iuQw8 .
+
+systemmap:SJieGEHDWcCIlHrag a service:Service ;
+    schema:name "Animal Tracing"@de,
+        "Animal Tracing"@en,
+        "Animal Tracing"@fr,
+        "Animal Tracing"@it ;
+    service:providedBy systemmap:SU88cJmqj8nBRl2KZ ;
+    schema:description """
+        Über die Schnittstelle von Animal Tracing können Meldungen auf der TVD sowie Abfragen auf der TVD gemacht werden. Animal Tracing empfängt vom ASA2011-ESB XML-Anfragen an die TVD und schickt die Antworten an den ASA2011-ESB zurück.
+        """@de,
+        """
+        Through the Animal Tracing interface, reports can be submitted to the TVD and queries can be made on the TVD. Animal Tracing receives XML requests to the TVD from the ASA2011-ESB and sends the responses back to the ASA2011-ESB.
+        """@en,
+        """
+        L'interface d'Animal Tracing permet de transmettre des notifications à la BDTA et d'effectuer des consultations dans la BDTA. Animal Tracing reçoit de l'ASA2011-ESB des requêtes XML adressées à la BDTA et renvoie les réponses à l'ASA2011-ESB.
+        """@fr,
+        """
+        Tramite l'interfaccia di Animal Tracing è possibile trasmettere notifiche alla BDTA ed effettuare consultazioni nella BDTA. Animal Tracing riceve dall'ASA2011-ESB richieste XML rivolte alla BDTA e rinvia le risposte all'ASA2011-ESB.
+        """@it ;
+    schema:keywords keyword:animaltraceability .
 
 systemmap:SLxeXHOfmC6DkBGl a schema:SoftwareApplication ;
     schema:name "Zentrale Auswertung von Agrarumweltindikatoren"@de ;
@@ -2134,10 +2271,34 @@ systemmap:SYqYq3UTUnZHmyFRD a schema:SoftwareApplication ;
         "Le DWH est responsable du stockage et du traitement de toutes les données."@fr,
         "Il DWH è responsabile dell'archiviazione e dell'elaborazione di tutti i dati."@it .
 
+systemmap:SZGxBgE7K8mCyneq9 a service:Service ;
+    schema:name "ASA2011-ESB"@de,
+        "ASA2011-ESB"@en,
+        "ASA2011-ESB"@fr,
+        "ASA2011-ESB"@it ;
+    service:consumedBy systemmap:SE3m83KovBQ0twdyd,
+        systemmap:SU88cJmqj8nBRl2KZ ;
+    service:consumes systemmap:S0Lmke4SLG60txfuI,
+        systemmap:SJieGEHDWcCIlHrag,
+        systemmap:SK6JOIUV1UjrOYD7f ;
+    schema:description """
+        Über den ASA2011-ESB werden Abfragen der TVD zu Personen an die ASA2011-BZV sowie Abfragen zu Betrieben und Personen an AGIS weitergeleitet. Zudem leitet er XML-Anfragen an die TVD an Animal Tracing weiter.
+        """@de,
+        """
+        Via the ASA2011-ESB, TVD queries about persons are forwarded to the ASA2011-BZV and queries about holdings and persons are forwarded to AGIS. It also forwards XML requests to the TVD to Animal Tracing.
+        """@en,
+        """
+        L'ASA2011-ESB transmet les requêtes de la BDTA concernant des personnes à l'ASA2011-BZV et celles concernant des exploitations et des personnes à AGIS. Il transmet en outre à Animal Tracing les requêtes XML adressées à la BDTA.
+        """@fr,
+        """
+        Tramite l'ASA2011-ESB, le richieste della BDTA relative a persone vengono inoltrate all'ASA2011-BZV e quelle relative ad aziende e persone ad AGIS. Inoltra inoltre ad Animal Tracing le richieste XML rivolte alla BDTA.
+        """@it .
+
 systemmap:SaOtqyAB5qm1luNuX a schema:SoftwareApplication ;
     schema:name "GVE-Rechner"@de,
         "Calculateur UGB"@fr,
         "Calcolatore UBG"@it ;
+    schema:alternateName "AniCalc"@de ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
     schema:description """
         Der GVE-Rechner berechnet die GVE pro Betrieb, welche den kantonalen Landwirtschaftsämtern als Grundlage zur Berechnung verschiedener Beitragszahlungen dient.
@@ -3179,6 +3340,27 @@ systemmap:S4BoMPavXD5gIObm a dcat:Dataset ;
     schema:keywords keyword:animaltraceability ;
     systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
+systemmap:S4QbmDXkJblSMvorw a dcat:Dataset ;
+    schema:name "Aufbereitete tierverkehrsrelevante Daten aus der TVD"@de,
+        "Processed animal traffic data from the TVD"@en,
+        "Données préparées relatives au trafic des animaux issues de la BDTA"@fr,
+        "Dati elaborati sul traffico di animali provenienti dalla BDTA"@it ;
+    schema:description """
+        Die aus der TVD aufbereiteten tierverkehrsrelevanten Daten, die in das Datawarehouse des BLV importiert werden. Die Daten werden täglich aufbereitet und auf einem SFTP-Server bereitgestellt.
+        """@de,
+        """
+        The animal traffic data processed from the TVD that are imported into the FSVO data warehouse. The data are prepared daily and provided on an SFTP server.
+        """@en,
+        """
+        Les données relatives au trafic des animaux préparées à partir de la BDTA et importées dans l'entrepôt de données de l'OSAV. Les données sont préparées quotidiennement et mises à disposition sur un serveur SFTP.
+        """@fr,
+        """
+        I dati sul traffico di animali elaborati a partire dalla BDTA e importati nel data warehouse dell'USAV. I dati sono elaborati quotidianamente e messi a disposizione su un server SFTP.
+        """@it ;
+    schema:keywords keyword:animaltraceability ;
+    prov:wasDerivedFrom systemmap:S7mhWQjPZiSFc8dU ;
+    systemmap:containedIn systemmap:SNQSYR7J0IEZpyFT .
+
 systemmap:S4ZuIO9s81WMS2bKB a dcat:Dataset ;
     schema:name "Marktdaten Futtermittel"@de,
         "Market Data Animal Feed"@en,
@@ -3362,6 +3544,27 @@ systemmap:S9J1HTMKIxnCgmYc a dcat:Dataset ;
         """@it ;
     schema:keywords keyword:plantprotection ;
     systemmap:containedIn systemmap:Shhoiq8azX3SHGL3W .
+
+systemmap:S9lxDqxihNEyxJ8kV a dcat:Dataset ;
+    schema:name "Informationen zum VTNP-Datum"@de,
+        "Information on the VTNP date"@en,
+        "Informations sur la date VTNP"@fr,
+        "Informazioni sulla data VTNP"@it ;
+    schema:description """
+        Informationen zum VTNP-Datum, welche die Fleko der TVD zur Verfügung stellt.
+        """@de,
+        """
+        Information on the VTNP date that Fleko makes available to the TVD.
+        """@en,
+        """
+        Informations sur la date VTNP que Fleko met à la disposition de la BDTA.
+        """@fr,
+        """
+        Informazioni sulla data VTNP che Fleko mette a disposizione della BDTA.
+        """@it ;
+    schema:keywords keyword:animaltraceability ;
+    prov:wasDerivedFrom systemmap:SSBg29n8Wei8fxx1a ;
+    systemmap:containedIn systemmap:SU88cJmqj8nBRl2KZ .
 
 systemmap:SAUWzyCpeGZ6vVil a dcat:Dataset ;
     schema:name "Daten zu Tierhaltern"@de,
@@ -3727,6 +3930,29 @@ systemmap:SY3MaMtlZPlOgUn4j a dcat:Dataset ;
     systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe ;
     systemmap:usesMasterData systemmap:SeUFazO70bpqCYJ5 .
 
+systemmap:SY3m9KyCPTfoY1uzP a dcat:Dataset ;
+    schema:name "Meldungen zu Rindern, Equiden und Betrieben"@de,
+        "Reports on cattle, equids and holdings"@en,
+        "Notifications concernant les bovins, les équidés et les exploitations"@fr,
+        "Notifiche relative a bovini, equidi e aziende"@it ;
+    schema:description """
+        Die vom GVE-Rechner benötigten Meldungen zu Rindern, Equiden und Betrieben, welche die TVD dem GVE-Rechner zur Verfügung stellt.
+        """@de,
+        """
+        The reports on cattle, equids and holdings required by the LU calculator, which the TVD makes available to the LU calculator.
+        """@en,
+        """
+        Les notifications concernant les bovins, les équidés et les exploitations nécessaires au calculateur UGB, que la BDTA met à la disposition du calculateur UGB.
+        """@fr,
+        """
+        Le notifiche relative a bovini, equidi e aziende necessarie al calcolatore UBG, che la BDTA mette a disposizione del calcolatore UBG.
+        """@it ;
+    schema:keywords keyword:animaltraceability ;
+    prov:wasDerivedFrom systemmap:S4BoMPavXD5gIObm,
+        systemmap:S7mhWQjPZiSFc8dU,
+        systemmap:SAUWzyCpeGZ6vVil ;
+    systemmap:containedIn systemmap:SaOtqyAB5qm1luNuX .
+
 systemmap:SZBHsREMx369FArg a dcat:Dataset ;
     schema:name "Dünger"@de ;
     schema:description """
@@ -3738,6 +3964,27 @@ systemmap:SZBHsREMx369FArg a dcat:Dataset ;
     rdfs:seeAlso <https://backend.blw.admin.ch/fileservice/sdweb-docs-prod-blwch-files/files/2024/11/14/0bddf556-3864-4fa4-ada6-a3120e26d6dc.pdf>,
         <https://www.blw.admin.ch/de/duenger> ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
+
+systemmap:SaAFsBrqZsU4IN9py a dcat:Dataset ;
+    schema:name "Tierverkehrsrelevante Daten für isVet"@de,
+        "Animal traffic data for isVet"@en,
+        "Données relatives au trafic des animaux pour isVet"@fr,
+        "Dati sul traffico di animali per isVet"@it ;
+    schema:description """
+        Tierverkehrsrelevante Daten, welche die TVD für die Verwendung im isVet zur Verfügung stellt.
+        """@de,
+        """
+        Animal traffic data that the TVD makes available for use in isVet.
+        """@en,
+        """
+        Données relatives au trafic des animaux que la BDTA met à disposition pour être utilisées dans isVet.
+        """@fr,
+        """
+        Dati sul traffico di animali che la BDTA mette a disposizione per l'utilizzo in isVet.
+        """@it ;
+    schema:keywords keyword:animaltraceability ;
+    prov:wasDerivedFrom systemmap:S7mhWQjPZiSFc8dU ;
+    systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe .
 
 systemmap:SaBrXH2dHae5TTGXD a dcat:Dataset ;
     schema:name "Flächen- und Kulturdaten"@de ;
@@ -3838,6 +4085,27 @@ systemmap:ScW9Xs9od9BdpVJs7 a dcat:Dataset ;
         <https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_13>,
         <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_113> .
 
+systemmap:Scl0iGvcUSNeHN0ag a dcat:Dataset ;
+    schema:name "Daten von Schlachtungen"@de,
+        "Slaughter data"@en,
+        "Données d'abattage"@fr,
+        "Dati di macellazione"@it ;
+    schema:description """
+        Die von RiBeS benötigten Daten von Schlachtungen, die über den ASA2011-ESB an Animal Tracing weitergeleitet werden.
+        """@de,
+        """
+        The slaughter data required by RiBeS, which are forwarded to Animal Tracing via the ASA2011-ESB.
+        """@en,
+        """
+        Les données d'abattage nécessaires à RiBeS, qui sont transmises à Animal Tracing via l'ASA2011-ESB.
+        """@fr,
+        """
+        I dati di macellazione necessari a RiBeS, che vengono inoltrati ad Animal Tracing tramite l'ASA2011-ESB.
+        """@it ;
+    schema:keywords keyword:animaltraceability ;
+    prov:wasDerivedFrom systemmap:S7mhWQjPZiSFc8dU ;
+    systemmap:containedIn systemmap:SE3m83KovBQ0twdyd .
+
 systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
     schema:name "Daten zur Milchproduktion"@de,
         "Data on milk production"@en,
@@ -3927,6 +4195,27 @@ systemmap:Spqrv6Ul05KJySTs a dcat:Dataset ;
     schema:keywords keyword:cropproduction ;
     prov:wasDerivedFrom systemmap:Sb2FM7pKN60PrRwU ;
     systemmap:containedIn systemmap:SE5DY78J7vgfoiDLj .
+
+systemmap:SuRRYaBVLQ4cvFouW a dcat:Dataset ;
+    schema:name "Daten zu Schlachtbetrieben"@de,
+        "Data on slaughterhouses"@en,
+        "Données sur les abattoirs"@fr,
+        "Dati sui macelli"@it ;
+    schema:description """
+        Informationen zu Schlachtbetrieben, welche die TVD der Fleischkontrolldatenbank Fleko zur Verfügung stellt.
+        """@de,
+        """
+        Information on slaughterhouses that the TVD makes available to the meat inspection database Fleko.
+        """@en,
+        """
+        Informations sur les abattoirs que la BDTA met à la disposition de la banque de données sur le contrôle des viandes Fleko.
+        """@fr,
+        """
+        Informazioni sui macelli che la BDTA mette a disposizione della banca dati sul controllo delle carni Fleko.
+        """@it ;
+    schema:keywords keyword:animaltraceability ;
+    prov:wasDerivedFrom systemmap:SAUWzyCpeGZ6vVil ;
+    systemmap:containedIn systemmap:SPASZffcsCMdIFEsZ .
 
 systemmap:SvAr93iMz2fj4HZBK a dcat:Dataset ;
     schema:name "Marktdaten Eier"@de,

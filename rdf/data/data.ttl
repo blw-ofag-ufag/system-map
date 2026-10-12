@@ -195,8 +195,6 @@ systemmap:StJxbOvze4sBEcRnP a dcmitype:Collection ;
         systemmap:SAUWzyCpeGZ6vVil,
         systemmap:SAwz5t3SyxjgPiHhX,
         systemmap:SBba3t3SyxjgPiHhX,
-        systemmap:SCVRz1a3ho6i01dn6,
-        systemmap:SE3m83KovBQ0twdyd,
         systemmap:SE8y4MuFWW5BKqK92,
         systemmap:SEI0Jp1SabxWUiGh0,
         systemmap:SGdyOoksCnRRZwi2Q,
@@ -211,9 +209,7 @@ systemmap:StJxbOvze4sBEcRnP a dcmitype:Collection ;
         systemmap:SVXa3t3SyxjgPiLBx,
         systemmap:SY3m9KyCPTfoY1uzP,
         systemmap:SZGxBgE7K8mCyneq9,
-        systemmap:SaAFsBrqZsU4IN9py,
         systemmap:SaOtqyAB5qm1luNuX,
-        systemmap:Scl0iGvcUSNeHN0ag,
         systemmap:SoBRgq7STLbZfEze,
         systemmap:SsFdxnjM8hgUdzVT5,
         systemmap:SuRRYaBVLQ4cvFouW,
@@ -264,25 +260,6 @@ systemmap:SAgmZXUKqNKTf35Fv a service:Service ;
     schema:description """
         Modul-Service zur detaillierten Erfassung und Bilanzierung von Nährstoffflüssen aus Zu- und Verkäufen von Futtermitteln sowie Tieren (Import/Export).
         """@de .
-
-systemmap:SCVRz1a3ho6i01dn6 a service:Service ;
-    schema:name "RiBeS-Webservice"@de,
-        "RiBeS web service"@en,
-        "Service web RiBeS"@fr,
-        "Servizio web RiBeS"@it ;
-    service:providedBy systemmap:SE3m83KovBQ0twdyd ;
-    schema:description """
-        Webservice von RiBeS, über den Funktionen von RiBeS aus Systemen der Schlachtbetriebe verwendet werden können.
-        """@de,
-        """
-        RiBeS web service through which functions of RiBeS can be used from the systems of slaughterhouses.
-        """@en,
-        """
-        Service web de RiBeS permettant d'utiliser des fonctions de RiBeS depuis les systèmes des abattoirs.
-        """@fr,
-        """
-        Servizio web di RiBeS tramite il quale le funzioni di RiBeS possono essere utilizzate dai sistemi dei macelli.
-        """@it .
 
 systemmap:SFMUSGNRQVqCKBNHQ a service:Service ;
     schema:name "GMF-Berechnungsservice"@de ;
@@ -1565,41 +1542,6 @@ systemmap:SDwz5T4SyxjgPiHbX a schema:SoftwareApplication,
     schema:url <https://www.agrarsoftware.ch/agroplus.html> ;
     systemmap:operatedBy zefix:505628 .
 
-systemmap:SE3m83KovBQ0twdyd a schema:SoftwareApplication ;
-    schema:name "Rindvieh-Beprobung im Schlachthof"@de,
-        "Cattle Sampling at the Slaughterhouse"@en,
-        "Échantillonnage des bovins à l'abattoir"@fr,
-        "Campionamento dei bovini al macello"@it ;
-    schema:description """
-        RiBeS ist das Informationssystem für die Beprobung von Rindvieh im Schlachthof.
-        Es zeigt den amtlichen Tierärztinnen und Tierärzten im Schlachtbetrieb an, ob ein Rind für die Stichprobenuntersuchungen der nationalen Tierseuchenüberwachung beprobt werden soll, und kontrolliert die Anzahl Proben pro Betrieb.
-        Die Identitas AG hat RiBeS im Auftrag des BLV entwickelt und stellt die Infrastruktur dafür bereit; das BLV ist Eigentümer der Software.
-        """@de,
-        """
-        RiBeS is the information system for sampling cattle at the slaughterhouse.
-        It shows official veterinarians at the slaughterhouse whether a bovine animal is to be sampled for the random-sample testing of national animal disease surveillance, and it checks the number of samples per holding.
-        Identitas AG developed RiBeS on behalf of the FSVO and provides the infrastructure for it; the FSVO owns the software.
-        """@en,
-        """
-        RiBeS est le système d'information pour l'échantillonnage des bovins à l'abattoir.
-        Il indique aux vétérinaires officiels de l'abattoir si un bovin doit faire l'objet d'un prélèvement pour les examens par sondage de la surveillance nationale des épizooties et contrôle le nombre d'échantillons par exploitation.
-        Identitas AG a développé RiBeS sur mandat de l'OSAV et en fournit l'infrastructure ; l'OSAV est propriétaire du logiciel.
-        """@fr,
-        """
-        RiBeS è il sistema d'informazione per il campionamento dei bovini al macello.
-        Indica ai veterinari ufficiali del macello se un bovino deve essere campionato per gli esami a campione della sorveglianza nazionale delle epizoozie e controlla il numero di campioni per azienda.
-        Identitas AG ha sviluppato RiBeS su incarico dell'USAV e ne mette a disposizione l'infrastruttura; l'USAV è proprietario del software.
-        """@it ;
-    schema:keywords keyword:animalhealth,
-        keyword:epizooticdiseases ;
-    schema:url <https://www.identitas.ch/produkte/ribes> ;
-    systemmap:abbreviation "RiBeS"@de,
-        "RiBeS"@en,
-        "RiBeS"@fr,
-        "RiBeS"@it ;
-    systemmap:developedBy zefix:449781 ;
-    systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN .
-
 systemmap:SE5DY78J7vgfoiDLj a schema:SoftwareApplication ;
     schema:name "Protection Variété"@de,
         "Protection Variété"@en,
@@ -2276,8 +2218,7 @@ systemmap:SZGxBgE7K8mCyneq9 a service:Service ;
         "ASA2011-ESB"@en,
         "ASA2011-ESB"@fr,
         "ASA2011-ESB"@it ;
-    service:consumedBy systemmap:SE3m83KovBQ0twdyd,
-        systemmap:SU88cJmqj8nBRl2KZ ;
+    service:consumedBy systemmap:SU88cJmqj8nBRl2KZ ;
     service:consumes systemmap:S0Lmke4SLG60txfuI,
         systemmap:SJieGEHDWcCIlHrag,
         systemmap:SK6JOIUV1UjrOYD7f ;
@@ -3965,27 +3906,6 @@ systemmap:SZBHsREMx369FArg a dcat:Dataset ;
         <https://www.blw.admin.ch/de/duenger> ;
     systemmap:containedIn systemmap:SHEaRYIgvZ3xrDLo .
 
-systemmap:SaAFsBrqZsU4IN9py a dcat:Dataset ;
-    schema:name "Tierverkehrsrelevante Daten für isVet"@de,
-        "Animal traffic data for isVet"@en,
-        "Données relatives au trafic des animaux pour isVet"@fr,
-        "Dati sul traffico di animali per isVet"@it ;
-    schema:description """
-        Tierverkehrsrelevante Daten, welche die TVD für die Verwendung im isVet zur Verfügung stellt.
-        """@de,
-        """
-        Animal traffic data that the TVD makes available for use in isVet.
-        """@en,
-        """
-        Données relatives au trafic des animaux que la BDTA met à disposition pour être utilisées dans isVet.
-        """@fr,
-        """
-        Dati sul traffico di animali che la BDTA mette a disposizione per l'utilizzo in isVet.
-        """@it ;
-    schema:keywords keyword:animaltraceability ;
-    prov:wasDerivedFrom systemmap:S7mhWQjPZiSFc8dU ;
-    systemmap:containedIn systemmap:SzB95Xoyj1a1EJNBe .
-
 systemmap:SaBrXH2dHae5TTGXD a dcat:Dataset ;
     schema:name "Flächen- und Kulturdaten"@de ;
     dcterms:isPartOf systemmap:SzuDlnYUQMk3HaCb ;
@@ -4084,27 +4004,6 @@ systemmap:ScW9Xs9od9BdpVJs7 a dcat:Dataset ;
         <https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_9>,
         <https://www.fedlex.admin.ch/eli/cc/1999/13/de#art_13>,
         <https://www.fedlex.admin.ch/eli/cc/2013/765/de#art_113> .
-
-systemmap:Scl0iGvcUSNeHN0ag a dcat:Dataset ;
-    schema:name "Daten von Schlachtungen"@de,
-        "Slaughter data"@en,
-        "Données d'abattage"@fr,
-        "Dati di macellazione"@it ;
-    schema:description """
-        Die von RiBeS benötigten Daten von Schlachtungen, die über den ASA2011-ESB an Animal Tracing weitergeleitet werden.
-        """@de,
-        """
-        The slaughter data required by RiBeS, which are forwarded to Animal Tracing via the ASA2011-ESB.
-        """@en,
-        """
-        Les données d'abattage nécessaires à RiBeS, qui sont transmises à Animal Tracing via l'ASA2011-ESB.
-        """@fr,
-        """
-        I dati di macellazione necessari a RiBeS, che vengono inoltrati ad Animal Tracing tramite l'ASA2011-ESB.
-        """@it ;
-    schema:keywords keyword:animaltraceability ;
-    prov:wasDerivedFrom systemmap:S7mhWQjPZiSFc8dU ;
-    systemmap:containedIn systemmap:SE3m83KovBQ0twdyd .
 
 systemmap:Se6Nt3cqogxz2d10g a dcat:Dataset ;
     schema:name "Daten zur Milchproduktion"@de,

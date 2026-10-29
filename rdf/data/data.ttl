@@ -221,22 +221,22 @@ systemmap:StJxbOvze4sBEcRnP a dcmitype:Collection ;
         zefix:449781 .
 
 systemmap:S0Lmke4SLG60txfuI a service:Service ;
-    schema:name "Abfrage von Betriebs- und Personendaten"@de,
-        "Query of holding and person data"@en,
-        "Consultation des données sur les exploitations et les personnes"@fr,
-        "Consultazione dei dati su aziende e persone"@it ;
+    schema:name "AGIS REST API"@de,
+        "AGIS REST API"@en,
+        "AGIS REST API"@fr,
+        "AGIS REST API"@it ;
     service:providedBy systemmap:SvDlxaJ5YMkuZGH6k ;
     schema:description """
-        Dienst von AGIS, über den Abfragen zu Betrieben und Personen beantwortet werden. Abfragen der TVD werden über den ASA2011-ESB an AGIS weitergeleitet.
+        REST-Schnittstelle von AGIS, über die Abfragen zu Betrieben und Personen beantwortet werden. Abfragen der TVD werden über den ASA2011-ESB an AGIS weitergeleitet.
         """@de,
         """
-        AGIS service that answers queries about holdings and persons. TVD queries are forwarded to AGIS via the ASA2011-ESB.
+        REST interface of AGIS that answers queries about holdings and persons. TVD queries are forwarded to AGIS via the ASA2011-ESB.
         """@en,
         """
-        Service d'AGIS qui répond aux requêtes concernant des exploitations et des personnes. Les requêtes de la BDTA sont transmises à AGIS via l'ASA2011-ESB.
+        Interface REST d'AGIS qui répond aux requêtes concernant des exploitations et des personnes. Les requêtes de la BDTA sont transmises à AGIS via l'ASA2011-ESB.
         """@fr,
         """
-        Servizio di AGIS che risponde alle richieste relative ad aziende e persone. Le richieste della BDTA sono inoltrate ad AGIS tramite l'ASA2011-ESB.
+        Interfaccia REST di AGIS che risponde alle richieste relative ad aziende e persone. Le richieste della BDTA sono inoltrate ad AGIS tramite l'ASA2011-ESB.
         """@it .
 
 systemmap:S0hwJxy2kXNPFbl4C a service:Service ;

@@ -450,17 +450,21 @@ systemmap:S3371e59cf6a7c46 a schema:SoftwareApplication ;
     schema:description "VetConnect PLUS ist eine Diagnostik-Plattform, auf der unter anderem Testergebnisse von Untersuchungen, Trends bei wiederholten Untersuchungen oder mögliche Differentialdiagnosen bei abweichenden Testergebnissen dargestellt werden können."@de .
 
 systemmap:SPASZffcsCMdIFEsZ a schema:SoftwareApplication ;
-    schema:name "Fleko"@de,
+    schema:name "FlekoPlus"@de,
+        "FlekoPlus"@en,
+        "FlekoPlus"@fr,
+        "FlekoPlus"@it ;
+    schema:alternateName "Fleko"@de,
         "Fleko"@en,
         "Fleko"@fr,
         "Fleko"@it ;
     service:consumes systemmap:SK6JOIUV1UjrOYD7f ;
-    schema:description "Die Fleischkontrolldatenbank Fleko ist eine Webanwendung zur Erfassung und Verwaltung der Befunde aus der Schlachttier- und Fleischuntersuchung in der Schweiz. Sie dient der Dokumentation der Genusstauglichkeit und ermöglicht die Verwaltung von Gebühren und Leistungen im Bereich der Fleischkontrolle. Die Anwendung wird zentral vom BLV betreut und ist für kantonale Sachbearbeiter, Fleischkontrolleure und Administratoren zugänglich."@de,
-        "Fleko is the Swiss national meat inspection database, a web application used to record and manage findings from slaughter animal and meat inspections. It documents fitness for consumption and allows for the administration of fees and services related to meat inspection. The system is centrally operated by the Federal Food Safety and Veterinary Office (FSVO) and is accessible to cantonal officers, meat inspectors, and administrators."@en,
-        "Fleko est la base de données suisse pour le contrôle des viandes, une application web permettant la saisie et la gestion des résultats des inspections des animaux de boucherie et de la viande. Elle sert à documenter l’aptitude à la consommation et à gérer les taxes et prestations liées au contrôle des viandes. Le système est géré de manière centralisée par l’OSAV et accessible aux collaborateurs cantonaux, contrôleurs des viandes et administrateurs."@fr,
-        "Fleko è la banca dati svizzera per il controllo delle carni, un’applicazione web per la registrazione e la gestione dei risultati delle ispezioni degli animali da macello e delle carni. Serve a documentare l’idoneità al consumo e consente la gestione di tasse e prestazioni nel settore del controllo delle carni. Il sistema è gestito centralmente dall’USAV ed è accessibile a funzionari cantonali, ispettori delle carni e amministratori."@it ;
+    schema:description "Die Fleischkontrolldatenbank FlekoPlus ist eine Webanwendung zur Erfassung und Verwaltung der Befunde aus der Schlachttier- und Fleischuntersuchung in der Schweiz. Sie dient der Dokumentation der Genusstauglichkeit und ermöglicht die Verwaltung von Gebühren und Leistungen im Bereich der Fleischkontrolle. FlekoPlus hat die frühere Fleischkontrolldatenbank Fleko abgelöst und wird von Identitas betrieben. Die Anwendung ist für kantonale Sachbearbeiter, Fleischkontrolleure und Administratoren zugänglich."@de,
+        "FlekoPlus is the Swiss national meat inspection database, a web application used to record and manage findings from slaughter animal and meat inspections. It documents fitness for consumption and allows for the administration of fees and services related to meat inspection. FlekoPlus replaced the former meat inspection database Fleko and is operated by Identitas. It is accessible to cantonal officers, meat inspectors, and administrators."@en,
+        "FlekoPlus est la base de données suisse pour le contrôle des viandes, une application web permettant la saisie et la gestion des résultats des inspections des animaux de boucherie et de la viande. Elle sert à documenter l’aptitude à la consommation et à gérer les taxes et prestations liées au contrôle des viandes. FlekoPlus a remplacé l’ancienne base de données Fleko et est exploité par Identitas. Il est accessible aux collaborateurs cantonaux, contrôleurs des viandes et administrateurs."@fr,
+        "FlekoPlus è la banca dati svizzera per il controllo delle carni, un’applicazione web per la registrazione e la gestione dei risultati delle ispezioni degli animali da macello e delle carni. Serve a documentare l’idoneità al consumo e consente la gestione di tasse e prestazioni nel settore del controllo delle carni. FlekoPlus ha sostituito la precedente banca dati Fleko ed è gestito da Identitas. È accessibile a funzionari cantonali, ispettori delle carni e amministratori."@it ;
     schema:url <https://www.blv.admin.ch/blv/de/home/lebensmittel-und-ernaehrung/lebensmittelsicherheit/verantwortlichkeiten/fleischkontrolle/fleko.html> ;
-    systemmap:operatedBy systemmap:S3Rf79NI3Pm1rfOlN ;
+    systemmap:operatedBy zefix:449781 ;
     systemmap:contains systemmap:SSBg29n8Wei8fxx1a .
 
 systemmap:SP86YzKhzJHZDD9Dj a schema:SoftwareApplication ;

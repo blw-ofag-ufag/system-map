@@ -217,6 +217,8 @@ systemmap:StJxbOvze4sBEcRnP a dcmitype:Collection ;
         systemmap:SvNriWslaOR5xkdw,
         systemmap:SyDlq7oQ0czCgyv61,
         systemmap:SzB95Xoyj1a1EJNBe,
+        systemmap:S00fVJvGUmwXh0cOz,
+        systemmap:SfRN4lDSnLPBPuPsW,
         zefix:165954,
         zefix:449781 .
 
@@ -237,6 +239,27 @@ systemmap:S0Lmke4SLG60txfuI a service:Service ;
         """@fr,
         """
         Interfaccia REST di AGIS che risponde alle richieste relative ad aziende e persone. Le richieste della BDTA sono inoltrate ad AGIS tramite l'ASA2011-ESB.
+        """@it .
+
+systemmap:SfRN4lDSnLPBPuPsW a service:Service ;
+    schema:name "TVD-Datenprodukte für agridata.ch"@de,
+        "TVD data products for agridata.ch"@en,
+        "Produits de données de la BDTA pour agridata.ch"@fr,
+        "Prodotti di dati della BDTA per agridata.ch"@it ;
+    service:providedBy systemmap:SU88cJmqj8nBRl2KZ ;
+    service:consumedBy systemmap:S00fVJvGUmwXh0cOz ;
+    schema:url <https://agridata.ch/cms/data-catalog> ;
+    schema:description """
+        Schnittstelle der TVD, über die agridata.ch Datenprodukte der TVD auf Anfrage an Datenbezüger vermittelt. Die Daten werden nicht auf agridata.ch gespeichert. Laut Datenkatalog von agridata.ch umfasst das Angebot 16 Datenprodukte: Bewirtschafterdaten, Tierhaltungsdaten, Rinderbestand, Rinderdetail, Schafbestand, Schafdetail, Ziegenbestand, Ziegendetail, Equidendetail, Equidendetail Zucht, Equiden Eigentumsliste sowie GVE-Werte für Rinder, Equiden, Schafe, Ziegen und Bison.
+        """@de,
+        """
+        Interface of the TVD through which agridata.ch brokers TVD data products to data consumers on request. The data is not stored on agridata.ch. According to the agridata.ch data catalogue, the offer comprises 16 data products: farm manager data, animal husbandry data, cattle stock, cattle details, sheep stock, sheep details, goat stock, goat details, equine details, equine details for breeding, equine ownership list, and livestock unit values for cattle, equines, sheep, goats and bison.
+        """@en,
+        """
+        Interface de la BDTA par laquelle agridata.ch transmet sur demande des produits de données de la BDTA aux utilisateurs de données. Les données ne sont pas stockées sur agridata.ch. Selon le catalogue de données d'agridata.ch, l'offre comprend 16 produits de données : données de l'exploitant, données de détention d'animaux, effectif bovin, détail bovin, effectif ovin, détail ovin, effectif caprin, détail caprin, détail équidé, détail équidé élevage, liste de propriété des équidés ainsi que les valeurs UGB pour les bovins, les équidés, les ovins, les caprins et les bisons.
+        """@fr,
+        """
+        Interfaccia della BDTA tramite la quale agridata.ch trasmette su richiesta prodotti di dati della BDTA agli utenti dei dati. I dati non vengono memorizzati su agridata.ch. Secondo il catalogo dei dati di agridata.ch, l'offerta comprende 16 prodotti di dati: dati del gestore, dati sulla detenzione di animali, effettivo bovino, dettaglio bovino, effettivo ovino, dettaglio ovino, effettivo caprino, dettaglio caprino, dettaglio equide, dettaglio equide allevamento, elenco di proprietà degli equidi e i valori UBG per bovini, equidi, ovini, caprini e bisonti.
         """@it .
 
 systemmap:S0hwJxy2kXNPFbl4C a service:Service ;

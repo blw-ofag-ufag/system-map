@@ -223,22 +223,22 @@ systemmap:StJxbOvze4sBEcRnP a dcmitype:Collection ;
         zefix:449781 .
 
 systemmap:S0Lmke4SLG60txfuI a service:Service ;
-    schema:name "AGIS REST API"@de,
-        "AGIS REST API"@en,
-        "AGIS REST API"@fr,
-        "AGIS REST API"@it ;
+    schema:name "Agriculture Register API"@de,
+        "Agriculture Register API"@en,
+        "Agriculture Register API"@fr,
+        "Agriculture Register API"@it ;
     service:providedBy systemmap:SvDlxaJ5YMkuZGH6k ;
     schema:description """
-        REST-Schnittstelle von AGIS, über die Abfragen zu Betrieben und Personen beantwortet werden. Abfragen der TVD werden über den ASA2011-ESB an AGIS weitergeleitet.
+        REST-Schnittstelle von AGIS, die Informationen zu den Bewirtschaftenden und Betriebsformen der Schweiz und des Fürstentums Liechtenstein liefert. Abfragen der TVD zu Betrieben und Personen werden über den ASA2011-ESB an diese Schnittstelle weitergeleitet.
         """@de,
         """
-        REST interface of AGIS that answers queries about holdings and persons. TVD queries are forwarded to AGIS via the ASA2011-ESB.
+        REST interface of AGIS that provides information on farm managers and farm types in Switzerland and the Principality of Liechtenstein. TVD queries about holdings and persons are forwarded to this interface via the ASA2011-ESB.
         """@en,
         """
-        Interface REST d'AGIS qui répond aux requêtes concernant des exploitations et des personnes. Les requêtes de la BDTA sont transmises à AGIS via l'ASA2011-ESB.
+        Interface REST d'AGIS qui fournit des informations sur les exploitants et les formes d'exploitation en Suisse et dans la Principauté de Liechtenstein. Les requêtes de la BDTA concernant des exploitations et des personnes sont transmises à cette interface via l'ASA2011-ESB.
         """@fr,
         """
-        Interfaccia REST di AGIS che risponde alle richieste relative ad aziende e persone. Le richieste della BDTA sono inoltrate ad AGIS tramite l'ASA2011-ESB.
+        Interfaccia REST di AGIS che fornisce informazioni sui gestori e sulle forme di azienda in Svizzera e nel Principato del Liechtenstein. Le richieste della BDTA relative ad aziende e persone sono inoltrate a questa interfaccia tramite l'ASA2011-ESB.
         """@it .
 
 systemmap:SfRN4lDSnLPBPuPsW a service:Service ;

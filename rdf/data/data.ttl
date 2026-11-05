@@ -200,7 +200,6 @@ systemmap:StJxbOvze4sBEcRnP a dcmitype:Collection ;
         systemmap:SGdyOoksCnRRZwi2Q,
         systemmap:SJieGEHDWcCIlHrag,
         systemmap:SK6JOIUV1UjrOYD7f,
-        systemmap:SLekJnxsXE7F1IQyK,
         systemmap:SNQSYR7J0IEZpyFT,
         systemmap:SPASZffcsCMdIFEsZ,
         systemmap:SQbNLiw8h9MnSXuyo,
@@ -216,8 +215,8 @@ systemmap:StJxbOvze4sBEcRnP a dcmitype:Collection ;
         systemmap:SvDlxaJ5YMkuZGH6k,
         systemmap:SvNriWslaOR5xkdw,
         systemmap:SyDlq7oQ0czCgyv61,
-        systemmap:SzB95Xoyj1a1EJNBe,
         systemmap:S00fVJvGUmwXh0cOz,
+        systemmap:Sou0GnQeSqCPHGhze,
         systemmap:SfRN4lDSnLPBPuPsW,
         zefix:165954,
         zefix:449781 .
@@ -3515,16 +3514,16 @@ systemmap:S9lxDqxihNEyxJ8kV a dcat:Dataset ;
         "Informations sur la date VTNP"@fr,
         "Informazioni sulla data VTNP"@it ;
     schema:description """
-        Informationen zum VTNP-Datum, welche die Fleko der TVD zur Verfügung stellt.
+        Informationen zum VTNP-Datum, welche FlekoPlus der TVD zur Verfügung stellt.
         """@de,
         """
-        Information on the VTNP date that Fleko makes available to the TVD.
+        Information on the VTNP date that FlekoPlus makes available to the TVD.
         """@en,
         """
-        Informations sur la date VTNP que Fleko met à la disposition de la BDTA.
+        Informations sur la date VTNP que FlekoPlus met à la disposition de la BDTA.
         """@fr,
         """
-        Informazioni sulla data VTNP che Fleko mette a disposizione della BDTA.
+        Informazioni sulla data VTNP che FlekoPlus mette a disposizione della BDTA.
         """@it ;
     schema:keywords keyword:animaltraceability ;
     prov:wasDerivedFrom systemmap:SSBg29n8Wei8fxx1a ;
@@ -4124,16 +4123,16 @@ systemmap:SuRRYaBVLQ4cvFouW a dcat:Dataset ;
         "Données sur les abattoirs"@fr,
         "Dati sui macelli"@it ;
     schema:description """
-        Informationen zu Schlachtbetrieben, welche die TVD der Fleischkontrolldatenbank Fleko zur Verfügung stellt.
+        Informationen zu Schlachtbetrieben, welche die TVD der Fleischkontrolldatenbank FlekoPlus zur Verfügung stellt.
         """@de,
         """
-        Information on slaughterhouses that the TVD makes available to the meat inspection database Fleko.
+        Information on slaughterhouses that the TVD makes available to the meat inspection database FlekoPlus.
         """@en,
         """
-        Informations sur les abattoirs que la BDTA met à la disposition de la banque de données sur le contrôle des viandes Fleko.
+        Informations sur les abattoirs que la BDTA met à la disposition de la banque de données sur le contrôle des viandes FlekoPlus.
         """@fr,
         """
-        Informazioni sui macelli che la BDTA mette a disposizione della banca dati sul controllo delle carni Fleko.
+        Informazioni sui macelli che la BDTA mette a disposizione della banca dati sul controllo delle carni FlekoPlus.
         """@it ;
     schema:keywords keyword:animaltraceability ;
     prov:wasDerivedFrom systemmap:SAUWzyCpeGZ6vVil ;

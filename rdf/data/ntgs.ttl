@@ -764,7 +764,7 @@ systemmap:S6320a5a3f8829b8 a dcat:Dataset ;
     schema:keywords keyword:animalhealth .
 
 systemmap:SSBg29n8Wei8fxx1a a dcat:Dataset ;
-    schema:name "FLEKO Tiergesundheitsdaten"@de ;
+    schema:name "FlekoPlus Tiergesundheitsdaten"@de ;
     schema:description "Beinhaltet unter anderem Befunde aus der Schlachttier- und Fleischuntersuchung von Nutztieren"@de ;
     schema:keywords keyword:animalhealth .
 
